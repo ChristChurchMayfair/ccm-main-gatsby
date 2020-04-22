@@ -6,6 +6,17 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-typescript`,
+        {
+            resolve: `gatsby-plugin-typegen`,
+            options: {
+                emitSchema: {
+                    "src/__generated__/gatsby-introspection.json": true,
+                },
+                emitPluginDocuments: {
+                    "src/__generated__/gatsby-plugin-documents.graphql": true,
+                },
+            },
+        },
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
