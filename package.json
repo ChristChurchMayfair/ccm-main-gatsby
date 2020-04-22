@@ -22,6 +22,12 @@
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
     "@types/react-helmet": "^5.0.15",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
     "gatsby-plugin-typegen": "^2.1.0",
     "gatsby-plugin-typescript": "^2.3.3",
     "prettier": "2.0.4",
@@ -41,6 +47,7 @@
     "type-check:watch": "tsc --noEmit --watch",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "lint": "yarn eslint src --ext .js,.jsx,.ts,.tsx",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
