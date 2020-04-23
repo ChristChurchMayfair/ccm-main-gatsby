@@ -1,3 +1,4 @@
+// We only have this file to make the apollo vscode extension work.
 module.exports = {
     client: {
         name: "ccm-site",
