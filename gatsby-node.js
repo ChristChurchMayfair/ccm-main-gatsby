@@ -5,6 +5,8 @@
  */
 
 const path = require("path")
+const remark = require("remark")
+const remarkHTML = require("remark-html")
 
 // You can delete this file if you're not using it
 exports.createPages = async ({ actions, graphql, reporter }) => {
