@@ -1,6 +1,7 @@
 import React from "react"
-import Img from "gatsby-image/withIEPolyfill"
 import { FluidObject } from "gatsby-image"
+
+import Img from "./img"
 
 interface Props {
     people: Array<{
@@ -27,19 +28,16 @@ const Bio: React.FC<Props> = ({ people, descriptionHtml }) => {
                         <div className="person" key={person.name}>
                             <div
                                 className="photo"
-                                style={{
-                                    position: "relative",
-                                }}
+                                style={{ position: "relative" }}
                             >
                                 <Img
                                     style={{
                                         position: "absolute",
                                         top: 0,
-                                        bottom: 0,
                                         left: 0,
+                                        bottom: 0,
                                         right: 0,
                                     }}
-                                    // @ts-ignore SanityImageFluid isn't quite compatible but it actually works fine
                                     fluid={person.headshot}
                                     objectFit="contain"
                                     objectPosition="left center"

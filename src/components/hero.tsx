@@ -1,6 +1,6 @@
 import React from "react"
-import Img from "gatsby-image/withIEPolyfill"
-import type { FluidObject } from "gatsby-image"
+
+import Img, { FluidObject } from "./img"
 
 interface Props {
     sectionId: string
