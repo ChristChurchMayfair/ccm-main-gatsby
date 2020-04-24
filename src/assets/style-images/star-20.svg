@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45">
+    <defs>
+        <style>.cls-1{fill:#d5ad82;}</style>
+    </defs>
+    <title>Asset 1</title>
+    <g transform="rotate(20,22.5 ,22.5)" id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <path class="cls-1" d="M34.84,41,21.53,34,8.22,41l2.55-14.81L0,15.64l14.88-2.16L21.53,0l6.65,13.48,14.88,2.16L32.3,26.14ZM6.45,17.74,14,25.09,12.21,35.47l9.32-4.9,9.32,4.9L29.07,25.09l7.55-7.35L26.19,16.22,21.53,6.78l-4.66,9.44Z"/>
+        </g>
+    </g>
+</svg>

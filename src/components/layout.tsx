@@ -6,42 +6,34 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 
+import Head from "./head"
 import Header from "./header"
-import "./layout.css"
+import Footer from "./footer"
+import CookieNotice from "./cookie-notice"
+import "../assets/css/style.css"
 
 interface Props {
     children: React.ReactNode
+    title: string | undefined
+    description?: string | undefined
+    meta?: Array<{ name: string; content: string }>
+    headerColour?: string
 }
-const Layout: React.FC<Props> = ({ children }) => {
-    const data = useStaticQuery<GatsbyTypes.SiteTitleQueryQuery>(graphql`
-        query SiteTitleQuery {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
-        }
-    `)
-
+const Layout: React.FC<Props> = ({
+    headerColour,
+    children,
+    title,
+    description,
+    meta,
+}) => {
     return (
         <>
-            <Header siteTitle={data.site?.siteMetadata?.title ?? ""} />
-            <div
-                style={{
-                    margin: `0 auto`,
-                    maxWidth: 960,
-                    padding: `0 1.0875rem 1.45rem`,
-                }}
-            >
-                <main>{children}</main>
-                <footer>
-                    © {new Date().getFullYear()}, Built with
-                    {` `}
-                    <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </footer>
-            </div>
+            <Head title={title} description={description} meta={meta} />
+            <Header headerColour={headerColour} />
+            <main>{children}</main>
+            <Footer />
+            <CookieNotice />
         </>
     )
 }

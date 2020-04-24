@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+version="1.1"
+baseProfile="tiny"
+id="mappin"
+x="0px"
+y="0px"
+viewBox="0 0 100 100"
+xml:space="preserve">
+<g transform="translate(0,0)">
+    <path fill-rule="evenodd" d="M75,36.848C75,22.785,64.188,11,50.02,11S25,22.793,25,36.859   C25,41.5,25.648,45,27.846,49h-0.041l21.391,41.242c0.805,1.102,1.648-0.064,1.648-0.064C50.119,91.26,72.232,49,72.232,49h-0.018   C74.391,45,75,41.492,75,36.848z M38.502,36.057c0-6.635,5.158-12.008,11.518-12.008c6.357,0,11.52,5.373,11.52,12.008   s-5.162,12.01-11.52,12.01C43.66,48.066,38.502,42.691,38.502,36.057z"/>
+</g>
+<!-- <text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Icomatic</text>
+<text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text> -->
+</svg>

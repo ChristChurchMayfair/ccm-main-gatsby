@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640px" height="520px" viewBox="0 0 640 520" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="roundel" transform="translate(0.000000, 45.000000)" stroke-width="90">
+        <path d="M0,215 L640,215" id="Shape"></path>
+        <circle id="Oval" cx="320" cy="215" r="215" fill="none"></circle>
+    </g>
+</svg>
