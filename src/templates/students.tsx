@@ -5,6 +5,7 @@ import Img from "gatsby-image/withIEPolyfill"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Bio from "../components/bio"
+import { sortedWithPriority } from "../utils"
 
 const Students: React.FC<{ data: GatsbyTypes.StudentTemplateQuery }> = ({
     data,
@@ -12,6 +13,22 @@ const Students: React.FC<{ data: GatsbyTypes.StudentTemplateQuery }> = ({
     const fluid =
         data.mainContent?.frontmatter?.mainImage?.childImageSharp?.fluid
 
+    const studentWorkers = data?.studentWorkers?.nodes.flatMap(person => {
+        const hs = person.headshot?.asset?.fluid
+        if (hs == null) {
+            return []
+        }
+
+        return [
+            {
+                name: person.name ?? "",
+                titleRole: person.job_title ?? "",
+                email: person.email ?? "",
+                phoneNumber: person.phone,
+                headshot: hs,
+            },
+        ]
+    })
     return (
         <Layout
             headerColour="black"
@@ -61,22 +78,10 @@ const Students: React.FC<{ data: GatsbyTypes.StudentTemplateQuery }> = ({
                 </div>
             </section>
             <Bio
-                people={data?.studentWorkers?.nodes.flatMap(person => {
-                    const hs = person.headshot?.asset?.fluid
-                    if (hs == null) {
-                        return []
-                    }
-
-                    return [
-                        {
-                            name: person.name ?? "",
-                            titleRole: person.job_title ?? "",
-                            email: person.email ?? "",
-                            phoneNumber: person.phone,
-                            headshot: hs,
-                        },
-                    ]
-                })}
+                people={sortedWithPriority(studentWorkers, s => s.email, [
+                    "scott@christchurchmayfair.org",
+                    "ellie.page@christchurchmayfair.org",
+                ])}
                 descriptionHtml={
                     data?.mainContent?.fields?.frontmattermd?.findOutMoreText
                         ?.html ?? ""
