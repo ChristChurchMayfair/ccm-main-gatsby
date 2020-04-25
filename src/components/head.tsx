@@ -27,14 +27,14 @@ const Head: React.FC<Props> = ({ title, description, meta = [] }) => {
     const metadata = site?.siteMetadata
 
     const metaDescription = description ?? metadata?.description
+    const siteTitle = site?.siteMetadata?.title ?? ""
 
     return (
         <Helmet
             htmlAttributes={{
                 lang: "en",
             }}
-            title={title}
-            titleTemplate={`%s - ${site?.siteMetadata?.title}`}
+            title={title != null ? `${title} - ${siteTitle}` : siteTitle}
             meta={[
                 {
                     name: `description`,
