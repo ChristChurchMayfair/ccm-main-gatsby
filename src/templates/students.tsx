@@ -11,9 +11,6 @@ const Students: React.FC<{ data: GatsbyTypes.StudentTemplateQuery }> = ({
 }) => {
     const fluid =
         data.mainContent?.frontmatter?.mainImage?.childImageSharp?.fluid
-    console.log(
-        data.extraContent?.frontmatter?.mainImage?.childImageSharp?.fluid
-    )
 
     return (
         <Layout
