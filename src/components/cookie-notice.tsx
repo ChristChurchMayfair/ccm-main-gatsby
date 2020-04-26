@@ -34,7 +34,7 @@ const CookieNotice = () => {
         <div
             id="cookie-notice"
             className="cookie-notice"
-            style={{ bottom: consentResponse != null ? undefined : 0 }}
+            style={consentResponse == null ? { bottom: 0 } : undefined}
         >
             <div className="notice">
                 {data?.site?.siteMetadata?.cookie_notice}
