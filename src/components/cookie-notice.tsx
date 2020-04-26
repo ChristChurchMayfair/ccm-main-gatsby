@@ -35,6 +35,7 @@ const CookieNotice = () => {
             id="cookie-notice"
             className="cookie-notice"
             style={consentResponse == null ? { bottom: 0 } : undefined}
+            aria-hidden={consentResponse != null}
         >
             <div className="notice">
                 {data?.site?.siteMetadata?.cookie_notice}
