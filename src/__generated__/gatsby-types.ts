@@ -692,6 +692,11 @@ enum FileFieldsEnum {
   internal___type = 'internal.type',
   childMarkdownRemark___id = 'childMarkdownRemark.id',
   childMarkdownRemark___frontmatter___title = 'childMarkdownRemark.frontmatter.title',
+  childMarkdownRemark___frontmatter___carouselImages = 'childMarkdownRemark.frontmatter.carouselImages',
+  childMarkdownRemark___frontmatter___carouselImages___position = 'childMarkdownRemark.frontmatter.carouselImages.position',
+  childMarkdownRemark___frontmatter___overlayCaption = 'childMarkdownRemark.frontmatter.overlayCaption',
+  childMarkdownRemark___frontmatter___headerColour = 'childMarkdownRemark.frontmatter.headerColour',
+  childMarkdownRemark___frontmatter___findOutMoreText = 'childMarkdownRemark.frontmatter.findOutMoreText',
   childMarkdownRemark___frontmatter___mainImage___sourceInstanceName = 'childMarkdownRemark.frontmatter.mainImage.sourceInstanceName',
   childMarkdownRemark___frontmatter___mainImage___absolutePath = 'childMarkdownRemark.frontmatter.mainImage.absolutePath',
   childMarkdownRemark___frontmatter___mainImage___relativePath = 'childMarkdownRemark.frontmatter.mainImage.relativePath',
@@ -770,9 +775,7 @@ enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___showInMenu = 'childMarkdownRemark.frontmatter.showInMenu',
   childMarkdownRemark___frontmatter___menuOrder = 'childMarkdownRemark.frontmatter.menuOrder',
   childMarkdownRemark___frontmatter___mobileImage = 'childMarkdownRemark.frontmatter.mobileImage',
-  childMarkdownRemark___frontmatter___overlayCaption = 'childMarkdownRemark.frontmatter.overlayCaption',
   childMarkdownRemark___frontmatter___captionPosition = 'childMarkdownRemark.frontmatter.captionPosition',
-  childMarkdownRemark___frontmatter___findOutMoreText = 'childMarkdownRemark.frontmatter.findOutMoreText',
   childMarkdownRemark___frontmatter___dayOfWeek = 'childMarkdownRemark.frontmatter.dayOfWeek',
   childMarkdownRemark___frontmatter___timeOfDay = 'childMarkdownRemark.frontmatter.timeOfDay',
   childMarkdownRemark___frontmatter___type = 'childMarkdownRemark.frontmatter.type',
@@ -797,19 +800,16 @@ enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___features___buttonText = 'childMarkdownRemark.frontmatter.features.buttonText',
   childMarkdownRemark___frontmatter___features___buttonLink = 'childMarkdownRemark.frontmatter.features.buttonLink',
   childMarkdownRemark___frontmatter___tagLine = 'childMarkdownRemark.frontmatter.tagLine',
-  childMarkdownRemark___frontmatter___leader = 'childMarkdownRemark.frontmatter.leader',
-  childMarkdownRemark___frontmatter___findOutMoreLink = 'childMarkdownRemark.frontmatter.findOutMoreLink',
   childMarkdownRemark___frontmatter___eventDate = 'childMarkdownRemark.frontmatter.eventDate',
   childMarkdownRemark___frontmatter___price = 'childMarkdownRemark.frontmatter.price',
   childMarkdownRemark___frontmatter___signUpEmail = 'childMarkdownRemark.frontmatter.signUpEmail',
+  childMarkdownRemark___frontmatter___leader = 'childMarkdownRemark.frontmatter.leader',
   childMarkdownRemark___frontmatter___people = 'childMarkdownRemark.frontmatter.people',
   childMarkdownRemark___frontmatter___people___name = 'childMarkdownRemark.frontmatter.people.name',
   childMarkdownRemark___frontmatter___people___title = 'childMarkdownRemark.frontmatter.people.title',
   childMarkdownRemark___frontmatter___people___photo = 'childMarkdownRemark.frontmatter.people.photo',
   childMarkdownRemark___frontmatter___people___headshot_position = 'childMarkdownRemark.frontmatter.people.headshot_position',
-  childMarkdownRemark___frontmatter___carouselImages = 'childMarkdownRemark.frontmatter.carouselImages',
-  childMarkdownRemark___frontmatter___carouselImages___position = 'childMarkdownRemark.frontmatter.carouselImages.position',
-  childMarkdownRemark___frontmatter___headerColour = 'childMarkdownRemark.frontmatter.headerColour',
+  childMarkdownRemark___frontmatter___findOutMoreLink = 'childMarkdownRemark.frontmatter.findOutMoreLink',
   childMarkdownRemark___excerpt = 'childMarkdownRemark.excerpt',
   childMarkdownRemark___rawMarkdownBody = 'childMarkdownRemark.rawMarkdownBody',
   childMarkdownRemark___fileAbsolutePath = 'childMarkdownRemark.fileAbsolutePath',
@@ -877,7 +877,42 @@ enum FileFieldsEnum {
   childMarkdownRemark___childFrontmatterMarkdownFile___internal___type = 'childMarkdownRemark.childFrontmatterMarkdownFile.internal.type',
   childMarkdownRemark___childFrontmatterMarkdownFile___sourceInstanceName = 'childMarkdownRemark.childFrontmatterMarkdownFile.sourceInstanceName',
   childMarkdownRemark___childFrontmatterMarkdownFile___absolutePath = 'childMarkdownRemark.childFrontmatterMarkdownFile.absolutePath',
-  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___sourceInstanceName = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.sourceInstanceName',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___absolutePath = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.absolutePath',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___relativePath = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.relativePath',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___extension = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.extension',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___size = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.size',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___prettySize = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.prettySize',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___modifiedTime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.modifiedTime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___accessTime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.accessTime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___changeTime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.changeTime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___birthTime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.birthTime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___root = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.root',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___dir = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.dir',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___base = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.base',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___ext = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.ext',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___name = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.name',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___relativeDirectory = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.relativeDirectory',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___dev = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.dev',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___mode = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.mode',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___nlink = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.nlink',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___uid = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.uid',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___gid = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.gid',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___rdev = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.rdev',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___ino = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.ino',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___atimeMs = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.atimeMs',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___mtimeMs = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.mtimeMs',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___ctimeMs = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.ctimeMs',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___atime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.atime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___mtime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.mtime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___ctime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.ctime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___birthtime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.birthtime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___birthtimeMs = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.birthtimeMs',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___blksize = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.blksize',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___blocks = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.blocks',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___publicURL = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.publicURL',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___id = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.id',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___children = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.children',
   childMarkdownRemark___childFrontmatterMarkdownFile___extension = 'childMarkdownRemark.childFrontmatterMarkdownFile.extension',
   childMarkdownRemark___childFrontmatterMarkdownFile___size = 'childMarkdownRemark.childFrontmatterMarkdownFile.size',
   childMarkdownRemark___childFrontmatterMarkdownFile___prettySize = 'childMarkdownRemark.childFrontmatterMarkdownFile.prettySize',
@@ -1033,7 +1068,7 @@ type FrontmatterMarkdownFile = Node & {
   readonly internal: Internal;
   readonly sourceInstanceName: Maybe<Scalars['String']>;
   readonly absolutePath: Maybe<Scalars['String']>;
-  readonly relativePath: Maybe<Scalars['String']>;
+  readonly relativePath: Maybe<File>;
   readonly extension: Maybe<Scalars['String']>;
   readonly size: Maybe<Scalars['Int']>;
   readonly prettySize: Maybe<Scalars['String']>;
@@ -1249,7 +1284,240 @@ enum FrontmatterMarkdownFileFieldsEnum {
   internal___type = 'internal.type',
   sourceInstanceName = 'sourceInstanceName',
   absolutePath = 'absolutePath',
-  relativePath = 'relativePath',
+  relativePath___sourceInstanceName = 'relativePath.sourceInstanceName',
+  relativePath___absolutePath = 'relativePath.absolutePath',
+  relativePath___relativePath = 'relativePath.relativePath',
+  relativePath___extension = 'relativePath.extension',
+  relativePath___size = 'relativePath.size',
+  relativePath___prettySize = 'relativePath.prettySize',
+  relativePath___modifiedTime = 'relativePath.modifiedTime',
+  relativePath___accessTime = 'relativePath.accessTime',
+  relativePath___changeTime = 'relativePath.changeTime',
+  relativePath___birthTime = 'relativePath.birthTime',
+  relativePath___root = 'relativePath.root',
+  relativePath___dir = 'relativePath.dir',
+  relativePath___base = 'relativePath.base',
+  relativePath___ext = 'relativePath.ext',
+  relativePath___name = 'relativePath.name',
+  relativePath___relativeDirectory = 'relativePath.relativeDirectory',
+  relativePath___dev = 'relativePath.dev',
+  relativePath___mode = 'relativePath.mode',
+  relativePath___nlink = 'relativePath.nlink',
+  relativePath___uid = 'relativePath.uid',
+  relativePath___gid = 'relativePath.gid',
+  relativePath___rdev = 'relativePath.rdev',
+  relativePath___ino = 'relativePath.ino',
+  relativePath___atimeMs = 'relativePath.atimeMs',
+  relativePath___mtimeMs = 'relativePath.mtimeMs',
+  relativePath___ctimeMs = 'relativePath.ctimeMs',
+  relativePath___atime = 'relativePath.atime',
+  relativePath___mtime = 'relativePath.mtime',
+  relativePath___ctime = 'relativePath.ctime',
+  relativePath___birthtime = 'relativePath.birthtime',
+  relativePath___birthtimeMs = 'relativePath.birthtimeMs',
+  relativePath___blksize = 'relativePath.blksize',
+  relativePath___blocks = 'relativePath.blocks',
+  relativePath___publicURL = 'relativePath.publicURL',
+  relativePath___childImageSharp___fixed___base64 = 'relativePath.childImageSharp.fixed.base64',
+  relativePath___childImageSharp___fixed___tracedSVG = 'relativePath.childImageSharp.fixed.tracedSVG',
+  relativePath___childImageSharp___fixed___aspectRatio = 'relativePath.childImageSharp.fixed.aspectRatio',
+  relativePath___childImageSharp___fixed___width = 'relativePath.childImageSharp.fixed.width',
+  relativePath___childImageSharp___fixed___height = 'relativePath.childImageSharp.fixed.height',
+  relativePath___childImageSharp___fixed___src = 'relativePath.childImageSharp.fixed.src',
+  relativePath___childImageSharp___fixed___srcSet = 'relativePath.childImageSharp.fixed.srcSet',
+  relativePath___childImageSharp___fixed___srcWebp = 'relativePath.childImageSharp.fixed.srcWebp',
+  relativePath___childImageSharp___fixed___srcSetWebp = 'relativePath.childImageSharp.fixed.srcSetWebp',
+  relativePath___childImageSharp___fixed___originalName = 'relativePath.childImageSharp.fixed.originalName',
+  relativePath___childImageSharp___resolutions___base64 = 'relativePath.childImageSharp.resolutions.base64',
+  relativePath___childImageSharp___resolutions___tracedSVG = 'relativePath.childImageSharp.resolutions.tracedSVG',
+  relativePath___childImageSharp___resolutions___aspectRatio = 'relativePath.childImageSharp.resolutions.aspectRatio',
+  relativePath___childImageSharp___resolutions___width = 'relativePath.childImageSharp.resolutions.width',
+  relativePath___childImageSharp___resolutions___height = 'relativePath.childImageSharp.resolutions.height',
+  relativePath___childImageSharp___resolutions___src = 'relativePath.childImageSharp.resolutions.src',
+  relativePath___childImageSharp___resolutions___srcSet = 'relativePath.childImageSharp.resolutions.srcSet',
+  relativePath___childImageSharp___resolutions___srcWebp = 'relativePath.childImageSharp.resolutions.srcWebp',
+  relativePath___childImageSharp___resolutions___srcSetWebp = 'relativePath.childImageSharp.resolutions.srcSetWebp',
+  relativePath___childImageSharp___resolutions___originalName = 'relativePath.childImageSharp.resolutions.originalName',
+  relativePath___childImageSharp___fluid___base64 = 'relativePath.childImageSharp.fluid.base64',
+  relativePath___childImageSharp___fluid___tracedSVG = 'relativePath.childImageSharp.fluid.tracedSVG',
+  relativePath___childImageSharp___fluid___aspectRatio = 'relativePath.childImageSharp.fluid.aspectRatio',
+  relativePath___childImageSharp___fluid___src = 'relativePath.childImageSharp.fluid.src',
+  relativePath___childImageSharp___fluid___srcSet = 'relativePath.childImageSharp.fluid.srcSet',
+  relativePath___childImageSharp___fluid___srcWebp = 'relativePath.childImageSharp.fluid.srcWebp',
+  relativePath___childImageSharp___fluid___srcSetWebp = 'relativePath.childImageSharp.fluid.srcSetWebp',
+  relativePath___childImageSharp___fluid___sizes = 'relativePath.childImageSharp.fluid.sizes',
+  relativePath___childImageSharp___fluid___originalImg = 'relativePath.childImageSharp.fluid.originalImg',
+  relativePath___childImageSharp___fluid___originalName = 'relativePath.childImageSharp.fluid.originalName',
+  relativePath___childImageSharp___fluid___presentationWidth = 'relativePath.childImageSharp.fluid.presentationWidth',
+  relativePath___childImageSharp___fluid___presentationHeight = 'relativePath.childImageSharp.fluid.presentationHeight',
+  relativePath___childImageSharp___sizes___base64 = 'relativePath.childImageSharp.sizes.base64',
+  relativePath___childImageSharp___sizes___tracedSVG = 'relativePath.childImageSharp.sizes.tracedSVG',
+  relativePath___childImageSharp___sizes___aspectRatio = 'relativePath.childImageSharp.sizes.aspectRatio',
+  relativePath___childImageSharp___sizes___src = 'relativePath.childImageSharp.sizes.src',
+  relativePath___childImageSharp___sizes___srcSet = 'relativePath.childImageSharp.sizes.srcSet',
+  relativePath___childImageSharp___sizes___srcWebp = 'relativePath.childImageSharp.sizes.srcWebp',
+  relativePath___childImageSharp___sizes___srcSetWebp = 'relativePath.childImageSharp.sizes.srcSetWebp',
+  relativePath___childImageSharp___sizes___sizes = 'relativePath.childImageSharp.sizes.sizes',
+  relativePath___childImageSharp___sizes___originalImg = 'relativePath.childImageSharp.sizes.originalImg',
+  relativePath___childImageSharp___sizes___originalName = 'relativePath.childImageSharp.sizes.originalName',
+  relativePath___childImageSharp___sizes___presentationWidth = 'relativePath.childImageSharp.sizes.presentationWidth',
+  relativePath___childImageSharp___sizes___presentationHeight = 'relativePath.childImageSharp.sizes.presentationHeight',
+  relativePath___childImageSharp___original___width = 'relativePath.childImageSharp.original.width',
+  relativePath___childImageSharp___original___height = 'relativePath.childImageSharp.original.height',
+  relativePath___childImageSharp___original___src = 'relativePath.childImageSharp.original.src',
+  relativePath___childImageSharp___resize___src = 'relativePath.childImageSharp.resize.src',
+  relativePath___childImageSharp___resize___tracedSVG = 'relativePath.childImageSharp.resize.tracedSVG',
+  relativePath___childImageSharp___resize___width = 'relativePath.childImageSharp.resize.width',
+  relativePath___childImageSharp___resize___height = 'relativePath.childImageSharp.resize.height',
+  relativePath___childImageSharp___resize___aspectRatio = 'relativePath.childImageSharp.resize.aspectRatio',
+  relativePath___childImageSharp___resize___originalName = 'relativePath.childImageSharp.resize.originalName',
+  relativePath___childImageSharp___id = 'relativePath.childImageSharp.id',
+  relativePath___childImageSharp___parent___id = 'relativePath.childImageSharp.parent.id',
+  relativePath___childImageSharp___parent___children = 'relativePath.childImageSharp.parent.children',
+  relativePath___childImageSharp___children = 'relativePath.childImageSharp.children',
+  relativePath___childImageSharp___children___id = 'relativePath.childImageSharp.children.id',
+  relativePath___childImageSharp___children___children = 'relativePath.childImageSharp.children.children',
+  relativePath___childImageSharp___internal___content = 'relativePath.childImageSharp.internal.content',
+  relativePath___childImageSharp___internal___contentDigest = 'relativePath.childImageSharp.internal.contentDigest',
+  relativePath___childImageSharp___internal___description = 'relativePath.childImageSharp.internal.description',
+  relativePath___childImageSharp___internal___fieldOwners = 'relativePath.childImageSharp.internal.fieldOwners',
+  relativePath___childImageSharp___internal___ignoreType = 'relativePath.childImageSharp.internal.ignoreType',
+  relativePath___childImageSharp___internal___mediaType = 'relativePath.childImageSharp.internal.mediaType',
+  relativePath___childImageSharp___internal___owner = 'relativePath.childImageSharp.internal.owner',
+  relativePath___childImageSharp___internal___type = 'relativePath.childImageSharp.internal.type',
+  relativePath___id = 'relativePath.id',
+  relativePath___parent___id = 'relativePath.parent.id',
+  relativePath___parent___parent___id = 'relativePath.parent.parent.id',
+  relativePath___parent___parent___children = 'relativePath.parent.parent.children',
+  relativePath___parent___children = 'relativePath.parent.children',
+  relativePath___parent___children___id = 'relativePath.parent.children.id',
+  relativePath___parent___children___children = 'relativePath.parent.children.children',
+  relativePath___parent___internal___content = 'relativePath.parent.internal.content',
+  relativePath___parent___internal___contentDigest = 'relativePath.parent.internal.contentDigest',
+  relativePath___parent___internal___description = 'relativePath.parent.internal.description',
+  relativePath___parent___internal___fieldOwners = 'relativePath.parent.internal.fieldOwners',
+  relativePath___parent___internal___ignoreType = 'relativePath.parent.internal.ignoreType',
+  relativePath___parent___internal___mediaType = 'relativePath.parent.internal.mediaType',
+  relativePath___parent___internal___owner = 'relativePath.parent.internal.owner',
+  relativePath___parent___internal___type = 'relativePath.parent.internal.type',
+  relativePath___children = 'relativePath.children',
+  relativePath___children___id = 'relativePath.children.id',
+  relativePath___children___parent___id = 'relativePath.children.parent.id',
+  relativePath___children___parent___children = 'relativePath.children.parent.children',
+  relativePath___children___children = 'relativePath.children.children',
+  relativePath___children___children___id = 'relativePath.children.children.id',
+  relativePath___children___children___children = 'relativePath.children.children.children',
+  relativePath___children___internal___content = 'relativePath.children.internal.content',
+  relativePath___children___internal___contentDigest = 'relativePath.children.internal.contentDigest',
+  relativePath___children___internal___description = 'relativePath.children.internal.description',
+  relativePath___children___internal___fieldOwners = 'relativePath.children.internal.fieldOwners',
+  relativePath___children___internal___ignoreType = 'relativePath.children.internal.ignoreType',
+  relativePath___children___internal___mediaType = 'relativePath.children.internal.mediaType',
+  relativePath___children___internal___owner = 'relativePath.children.internal.owner',
+  relativePath___children___internal___type = 'relativePath.children.internal.type',
+  relativePath___internal___content = 'relativePath.internal.content',
+  relativePath___internal___contentDigest = 'relativePath.internal.contentDigest',
+  relativePath___internal___description = 'relativePath.internal.description',
+  relativePath___internal___fieldOwners = 'relativePath.internal.fieldOwners',
+  relativePath___internal___ignoreType = 'relativePath.internal.ignoreType',
+  relativePath___internal___mediaType = 'relativePath.internal.mediaType',
+  relativePath___internal___owner = 'relativePath.internal.owner',
+  relativePath___internal___type = 'relativePath.internal.type',
+  relativePath___childMarkdownRemark___id = 'relativePath.childMarkdownRemark.id',
+  relativePath___childMarkdownRemark___frontmatter___title = 'relativePath.childMarkdownRemark.frontmatter.title',
+  relativePath___childMarkdownRemark___frontmatter___carouselImages = 'relativePath.childMarkdownRemark.frontmatter.carouselImages',
+  relativePath___childMarkdownRemark___frontmatter___overlayCaption = 'relativePath.childMarkdownRemark.frontmatter.overlayCaption',
+  relativePath___childMarkdownRemark___frontmatter___headerColour = 'relativePath.childMarkdownRemark.frontmatter.headerColour',
+  relativePath___childMarkdownRemark___frontmatter___findOutMoreText = 'relativePath.childMarkdownRemark.frontmatter.findOutMoreText',
+  relativePath___childMarkdownRemark___frontmatter___template = 'relativePath.childMarkdownRemark.frontmatter.template',
+  relativePath___childMarkdownRemark___frontmatter___path = 'relativePath.childMarkdownRemark.frontmatter.path',
+  relativePath___childMarkdownRemark___frontmatter___showInFooter = 'relativePath.childMarkdownRemark.frontmatter.showInFooter',
+  relativePath___childMarkdownRemark___frontmatter___showInMenu = 'relativePath.childMarkdownRemark.frontmatter.showInMenu',
+  relativePath___childMarkdownRemark___frontmatter___menuOrder = 'relativePath.childMarkdownRemark.frontmatter.menuOrder',
+  relativePath___childMarkdownRemark___frontmatter___mobileImage = 'relativePath.childMarkdownRemark.frontmatter.mobileImage',
+  relativePath___childMarkdownRemark___frontmatter___captionPosition = 'relativePath.childMarkdownRemark.frontmatter.captionPosition',
+  relativePath___childMarkdownRemark___frontmatter___dayOfWeek = 'relativePath.childMarkdownRemark.frontmatter.dayOfWeek',
+  relativePath___childMarkdownRemark___frontmatter___timeOfDay = 'relativePath.childMarkdownRemark.frontmatter.timeOfDay',
+  relativePath___childMarkdownRemark___frontmatter___type = 'relativePath.childMarkdownRemark.frontmatter.type',
+  relativePath___childMarkdownRemark___frontmatter___time = 'relativePath.childMarkdownRemark.frontmatter.time',
+  relativePath___childMarkdownRemark___frontmatter___name = 'relativePath.childMarkdownRemark.frontmatter.name',
+  relativePath___childMarkdownRemark___frontmatter___status = 'relativePath.childMarkdownRemark.frontmatter.status',
+  relativePath___childMarkdownRemark___frontmatter___backgroundColour = 'relativePath.childMarkdownRemark.frontmatter.backgroundColour',
+  relativePath___childMarkdownRemark___frontmatter___textColour = 'relativePath.childMarkdownRemark.frontmatter.textColour',
+  relativePath___childMarkdownRemark___frontmatter___eventType = 'relativePath.childMarkdownRemark.frontmatter.eventType',
+  relativePath___childMarkdownRemark___frontmatter___events = 'relativePath.childMarkdownRemark.frontmatter.events',
+  relativePath___childMarkdownRemark___frontmatter___order = 'relativePath.childMarkdownRemark.frontmatter.order',
+  relativePath___childMarkdownRemark___frontmatter___lastUpdated = 'relativePath.childMarkdownRemark.frontmatter.lastUpdated',
+  relativePath___childMarkdownRemark___frontmatter___features = 'relativePath.childMarkdownRemark.frontmatter.features',
+  relativePath___childMarkdownRemark___frontmatter___tagLine = 'relativePath.childMarkdownRemark.frontmatter.tagLine',
+  relativePath___childMarkdownRemark___frontmatter___eventDate = 'relativePath.childMarkdownRemark.frontmatter.eventDate',
+  relativePath___childMarkdownRemark___frontmatter___price = 'relativePath.childMarkdownRemark.frontmatter.price',
+  relativePath___childMarkdownRemark___frontmatter___signUpEmail = 'relativePath.childMarkdownRemark.frontmatter.signUpEmail',
+  relativePath___childMarkdownRemark___frontmatter___leader = 'relativePath.childMarkdownRemark.frontmatter.leader',
+  relativePath___childMarkdownRemark___frontmatter___people = 'relativePath.childMarkdownRemark.frontmatter.people',
+  relativePath___childMarkdownRemark___frontmatter___findOutMoreLink = 'relativePath.childMarkdownRemark.frontmatter.findOutMoreLink',
+  relativePath___childMarkdownRemark___excerpt = 'relativePath.childMarkdownRemark.excerpt',
+  relativePath___childMarkdownRemark___rawMarkdownBody = 'relativePath.childMarkdownRemark.rawMarkdownBody',
+  relativePath___childMarkdownRemark___fileAbsolutePath = 'relativePath.childMarkdownRemark.fileAbsolutePath',
+  relativePath___childMarkdownRemark___html = 'relativePath.childMarkdownRemark.html',
+  relativePath___childMarkdownRemark___htmlAst = 'relativePath.childMarkdownRemark.htmlAst',
+  relativePath___childMarkdownRemark___excerptAst = 'relativePath.childMarkdownRemark.excerptAst',
+  relativePath___childMarkdownRemark___headings = 'relativePath.childMarkdownRemark.headings',
+  relativePath___childMarkdownRemark___headings___value = 'relativePath.childMarkdownRemark.headings.value',
+  relativePath___childMarkdownRemark___headings___depth = 'relativePath.childMarkdownRemark.headings.depth',
+  relativePath___childMarkdownRemark___timeToRead = 'relativePath.childMarkdownRemark.timeToRead',
+  relativePath___childMarkdownRemark___tableOfContents = 'relativePath.childMarkdownRemark.tableOfContents',
+  relativePath___childMarkdownRemark___wordCount___paragraphs = 'relativePath.childMarkdownRemark.wordCount.paragraphs',
+  relativePath___childMarkdownRemark___wordCount___sentences = 'relativePath.childMarkdownRemark.wordCount.sentences',
+  relativePath___childMarkdownRemark___wordCount___words = 'relativePath.childMarkdownRemark.wordCount.words',
+  relativePath___childMarkdownRemark___parent___id = 'relativePath.childMarkdownRemark.parent.id',
+  relativePath___childMarkdownRemark___parent___children = 'relativePath.childMarkdownRemark.parent.children',
+  relativePath___childMarkdownRemark___children = 'relativePath.childMarkdownRemark.children',
+  relativePath___childMarkdownRemark___children___id = 'relativePath.childMarkdownRemark.children.id',
+  relativePath___childMarkdownRemark___children___children = 'relativePath.childMarkdownRemark.children.children',
+  relativePath___childMarkdownRemark___internal___content = 'relativePath.childMarkdownRemark.internal.content',
+  relativePath___childMarkdownRemark___internal___contentDigest = 'relativePath.childMarkdownRemark.internal.contentDigest',
+  relativePath___childMarkdownRemark___internal___description = 'relativePath.childMarkdownRemark.internal.description',
+  relativePath___childMarkdownRemark___internal___fieldOwners = 'relativePath.childMarkdownRemark.internal.fieldOwners',
+  relativePath___childMarkdownRemark___internal___ignoreType = 'relativePath.childMarkdownRemark.internal.ignoreType',
+  relativePath___childMarkdownRemark___internal___mediaType = 'relativePath.childMarkdownRemark.internal.mediaType',
+  relativePath___childMarkdownRemark___internal___owner = 'relativePath.childMarkdownRemark.internal.owner',
+  relativePath___childMarkdownRemark___internal___type = 'relativePath.childMarkdownRemark.internal.type',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___id = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.id',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___children = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.children',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___sourceInstanceName = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.sourceInstanceName',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___absolutePath = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.absolutePath',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___extension = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.extension',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___size = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.size',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___prettySize = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.prettySize',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___modifiedTime = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.modifiedTime',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___accessTime = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.accessTime',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___changeTime = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.changeTime',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___birthTime = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.birthTime',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___root = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.root',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___dir = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.dir',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___ext = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.ext',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___name = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.name',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___relativeDirectory = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.relativeDirectory',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___dev = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.dev',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___mode = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.mode',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___nlink = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.nlink',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___uid = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.uid',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___gid = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.gid',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___rdev = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.rdev',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___blksize = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.blksize',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___ino = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.ino',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___blocks = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.blocks',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___atimeMs = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.atimeMs',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___mtimeMs = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.mtimeMs',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___ctimeMs = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.ctimeMs',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___birthtimeMs = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.birthtimeMs',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___atime = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.atime',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___mtime = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.mtime',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___ctime = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.ctime',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___birthtime = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.birthtime',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___frontmatterField = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.frontmatterField',
+  relativePath___childMarkdownRemark___childFrontmatterMarkdownFile___frontmatterValue = 'relativePath.childMarkdownRemark.childFrontmatterMarkdownFile.frontmatterValue',
   extension = 'extension',
   size = 'size',
   prettySize = 'prettySize',
@@ -1400,15 +1668,17 @@ enum FrontmatterMarkdownFileFieldsEnum {
   base___internal___type = 'base.internal.type',
   base___childMarkdownRemark___id = 'base.childMarkdownRemark.id',
   base___childMarkdownRemark___frontmatter___title = 'base.childMarkdownRemark.frontmatter.title',
+  base___childMarkdownRemark___frontmatter___carouselImages = 'base.childMarkdownRemark.frontmatter.carouselImages',
+  base___childMarkdownRemark___frontmatter___overlayCaption = 'base.childMarkdownRemark.frontmatter.overlayCaption',
+  base___childMarkdownRemark___frontmatter___headerColour = 'base.childMarkdownRemark.frontmatter.headerColour',
+  base___childMarkdownRemark___frontmatter___findOutMoreText = 'base.childMarkdownRemark.frontmatter.findOutMoreText',
   base___childMarkdownRemark___frontmatter___template = 'base.childMarkdownRemark.frontmatter.template',
   base___childMarkdownRemark___frontmatter___path = 'base.childMarkdownRemark.frontmatter.path',
   base___childMarkdownRemark___frontmatter___showInFooter = 'base.childMarkdownRemark.frontmatter.showInFooter',
   base___childMarkdownRemark___frontmatter___showInMenu = 'base.childMarkdownRemark.frontmatter.showInMenu',
   base___childMarkdownRemark___frontmatter___menuOrder = 'base.childMarkdownRemark.frontmatter.menuOrder',
   base___childMarkdownRemark___frontmatter___mobileImage = 'base.childMarkdownRemark.frontmatter.mobileImage',
-  base___childMarkdownRemark___frontmatter___overlayCaption = 'base.childMarkdownRemark.frontmatter.overlayCaption',
   base___childMarkdownRemark___frontmatter___captionPosition = 'base.childMarkdownRemark.frontmatter.captionPosition',
-  base___childMarkdownRemark___frontmatter___findOutMoreText = 'base.childMarkdownRemark.frontmatter.findOutMoreText',
   base___childMarkdownRemark___frontmatter___dayOfWeek = 'base.childMarkdownRemark.frontmatter.dayOfWeek',
   base___childMarkdownRemark___frontmatter___timeOfDay = 'base.childMarkdownRemark.frontmatter.timeOfDay',
   base___childMarkdownRemark___frontmatter___type = 'base.childMarkdownRemark.frontmatter.type',
@@ -1423,14 +1693,12 @@ enum FrontmatterMarkdownFileFieldsEnum {
   base___childMarkdownRemark___frontmatter___lastUpdated = 'base.childMarkdownRemark.frontmatter.lastUpdated',
   base___childMarkdownRemark___frontmatter___features = 'base.childMarkdownRemark.frontmatter.features',
   base___childMarkdownRemark___frontmatter___tagLine = 'base.childMarkdownRemark.frontmatter.tagLine',
-  base___childMarkdownRemark___frontmatter___leader = 'base.childMarkdownRemark.frontmatter.leader',
-  base___childMarkdownRemark___frontmatter___findOutMoreLink = 'base.childMarkdownRemark.frontmatter.findOutMoreLink',
   base___childMarkdownRemark___frontmatter___eventDate = 'base.childMarkdownRemark.frontmatter.eventDate',
   base___childMarkdownRemark___frontmatter___price = 'base.childMarkdownRemark.frontmatter.price',
   base___childMarkdownRemark___frontmatter___signUpEmail = 'base.childMarkdownRemark.frontmatter.signUpEmail',
+  base___childMarkdownRemark___frontmatter___leader = 'base.childMarkdownRemark.frontmatter.leader',
   base___childMarkdownRemark___frontmatter___people = 'base.childMarkdownRemark.frontmatter.people',
-  base___childMarkdownRemark___frontmatter___carouselImages = 'base.childMarkdownRemark.frontmatter.carouselImages',
-  base___childMarkdownRemark___frontmatter___headerColour = 'base.childMarkdownRemark.frontmatter.headerColour',
+  base___childMarkdownRemark___frontmatter___findOutMoreLink = 'base.childMarkdownRemark.frontmatter.findOutMoreLink',
   base___childMarkdownRemark___excerpt = 'base.childMarkdownRemark.excerpt',
   base___childMarkdownRemark___rawMarkdownBody = 'base.childMarkdownRemark.rawMarkdownBody',
   base___childMarkdownRemark___fileAbsolutePath = 'base.childMarkdownRemark.fileAbsolutePath',
@@ -1462,7 +1730,6 @@ enum FrontmatterMarkdownFileFieldsEnum {
   base___childMarkdownRemark___childFrontmatterMarkdownFile___children = 'base.childMarkdownRemark.childFrontmatterMarkdownFile.children',
   base___childMarkdownRemark___childFrontmatterMarkdownFile___sourceInstanceName = 'base.childMarkdownRemark.childFrontmatterMarkdownFile.sourceInstanceName',
   base___childMarkdownRemark___childFrontmatterMarkdownFile___absolutePath = 'base.childMarkdownRemark.childFrontmatterMarkdownFile.absolutePath',
-  base___childMarkdownRemark___childFrontmatterMarkdownFile___relativePath = 'base.childMarkdownRemark.childFrontmatterMarkdownFile.relativePath',
   base___childMarkdownRemark___childFrontmatterMarkdownFile___extension = 'base.childMarkdownRemark.childFrontmatterMarkdownFile.extension',
   base___childMarkdownRemark___childFrontmatterMarkdownFile___size = 'base.childMarkdownRemark.childFrontmatterMarkdownFile.size',
   base___childMarkdownRemark___childFrontmatterMarkdownFile___prettySize = 'base.childMarkdownRemark.childFrontmatterMarkdownFile.prettySize',
@@ -1518,6 +1785,11 @@ enum FrontmatterMarkdownFileFieldsEnum {
   frontmatterValue = 'frontmatterValue',
   childMarkdownRemark___id = 'childMarkdownRemark.id',
   childMarkdownRemark___frontmatter___title = 'childMarkdownRemark.frontmatter.title',
+  childMarkdownRemark___frontmatter___carouselImages = 'childMarkdownRemark.frontmatter.carouselImages',
+  childMarkdownRemark___frontmatter___carouselImages___position = 'childMarkdownRemark.frontmatter.carouselImages.position',
+  childMarkdownRemark___frontmatter___overlayCaption = 'childMarkdownRemark.frontmatter.overlayCaption',
+  childMarkdownRemark___frontmatter___headerColour = 'childMarkdownRemark.frontmatter.headerColour',
+  childMarkdownRemark___frontmatter___findOutMoreText = 'childMarkdownRemark.frontmatter.findOutMoreText',
   childMarkdownRemark___frontmatter___mainImage___sourceInstanceName = 'childMarkdownRemark.frontmatter.mainImage.sourceInstanceName',
   childMarkdownRemark___frontmatter___mainImage___absolutePath = 'childMarkdownRemark.frontmatter.mainImage.absolutePath',
   childMarkdownRemark___frontmatter___mainImage___relativePath = 'childMarkdownRemark.frontmatter.mainImage.relativePath',
@@ -1596,9 +1868,7 @@ enum FrontmatterMarkdownFileFieldsEnum {
   childMarkdownRemark___frontmatter___showInMenu = 'childMarkdownRemark.frontmatter.showInMenu',
   childMarkdownRemark___frontmatter___menuOrder = 'childMarkdownRemark.frontmatter.menuOrder',
   childMarkdownRemark___frontmatter___mobileImage = 'childMarkdownRemark.frontmatter.mobileImage',
-  childMarkdownRemark___frontmatter___overlayCaption = 'childMarkdownRemark.frontmatter.overlayCaption',
   childMarkdownRemark___frontmatter___captionPosition = 'childMarkdownRemark.frontmatter.captionPosition',
-  childMarkdownRemark___frontmatter___findOutMoreText = 'childMarkdownRemark.frontmatter.findOutMoreText',
   childMarkdownRemark___frontmatter___dayOfWeek = 'childMarkdownRemark.frontmatter.dayOfWeek',
   childMarkdownRemark___frontmatter___timeOfDay = 'childMarkdownRemark.frontmatter.timeOfDay',
   childMarkdownRemark___frontmatter___type = 'childMarkdownRemark.frontmatter.type',
@@ -1623,19 +1893,16 @@ enum FrontmatterMarkdownFileFieldsEnum {
   childMarkdownRemark___frontmatter___features___buttonText = 'childMarkdownRemark.frontmatter.features.buttonText',
   childMarkdownRemark___frontmatter___features___buttonLink = 'childMarkdownRemark.frontmatter.features.buttonLink',
   childMarkdownRemark___frontmatter___tagLine = 'childMarkdownRemark.frontmatter.tagLine',
-  childMarkdownRemark___frontmatter___leader = 'childMarkdownRemark.frontmatter.leader',
-  childMarkdownRemark___frontmatter___findOutMoreLink = 'childMarkdownRemark.frontmatter.findOutMoreLink',
   childMarkdownRemark___frontmatter___eventDate = 'childMarkdownRemark.frontmatter.eventDate',
   childMarkdownRemark___frontmatter___price = 'childMarkdownRemark.frontmatter.price',
   childMarkdownRemark___frontmatter___signUpEmail = 'childMarkdownRemark.frontmatter.signUpEmail',
+  childMarkdownRemark___frontmatter___leader = 'childMarkdownRemark.frontmatter.leader',
   childMarkdownRemark___frontmatter___people = 'childMarkdownRemark.frontmatter.people',
   childMarkdownRemark___frontmatter___people___name = 'childMarkdownRemark.frontmatter.people.name',
   childMarkdownRemark___frontmatter___people___title = 'childMarkdownRemark.frontmatter.people.title',
   childMarkdownRemark___frontmatter___people___photo = 'childMarkdownRemark.frontmatter.people.photo',
   childMarkdownRemark___frontmatter___people___headshot_position = 'childMarkdownRemark.frontmatter.people.headshot_position',
-  childMarkdownRemark___frontmatter___carouselImages = 'childMarkdownRemark.frontmatter.carouselImages',
-  childMarkdownRemark___frontmatter___carouselImages___position = 'childMarkdownRemark.frontmatter.carouselImages.position',
-  childMarkdownRemark___frontmatter___headerColour = 'childMarkdownRemark.frontmatter.headerColour',
+  childMarkdownRemark___frontmatter___findOutMoreLink = 'childMarkdownRemark.frontmatter.findOutMoreLink',
   childMarkdownRemark___excerpt = 'childMarkdownRemark.excerpt',
   childMarkdownRemark___rawMarkdownBody = 'childMarkdownRemark.rawMarkdownBody',
   childMarkdownRemark___fileAbsolutePath = 'childMarkdownRemark.fileAbsolutePath',
@@ -1703,7 +1970,42 @@ enum FrontmatterMarkdownFileFieldsEnum {
   childMarkdownRemark___childFrontmatterMarkdownFile___internal___type = 'childMarkdownRemark.childFrontmatterMarkdownFile.internal.type',
   childMarkdownRemark___childFrontmatterMarkdownFile___sourceInstanceName = 'childMarkdownRemark.childFrontmatterMarkdownFile.sourceInstanceName',
   childMarkdownRemark___childFrontmatterMarkdownFile___absolutePath = 'childMarkdownRemark.childFrontmatterMarkdownFile.absolutePath',
-  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___sourceInstanceName = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.sourceInstanceName',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___absolutePath = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.absolutePath',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___relativePath = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.relativePath',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___extension = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.extension',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___size = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.size',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___prettySize = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.prettySize',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___modifiedTime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.modifiedTime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___accessTime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.accessTime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___changeTime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.changeTime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___birthTime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.birthTime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___root = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.root',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___dir = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.dir',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___base = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.base',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___ext = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.ext',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___name = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.name',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___relativeDirectory = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.relativeDirectory',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___dev = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.dev',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___mode = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.mode',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___nlink = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.nlink',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___uid = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.uid',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___gid = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.gid',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___rdev = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.rdev',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___ino = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.ino',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___atimeMs = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.atimeMs',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___mtimeMs = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.mtimeMs',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___ctimeMs = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.ctimeMs',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___atime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.atime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___mtime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.mtime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___ctime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.ctime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___birthtime = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.birthtime',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___birthtimeMs = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.birthtimeMs',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___blksize = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.blksize',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___blocks = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.blocks',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___publicURL = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.publicURL',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___id = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.id',
+  childMarkdownRemark___childFrontmatterMarkdownFile___relativePath___children = 'childMarkdownRemark.childFrontmatterMarkdownFile.relativePath.children',
   childMarkdownRemark___childFrontmatterMarkdownFile___extension = 'childMarkdownRemark.childFrontmatterMarkdownFile.extension',
   childMarkdownRemark___childFrontmatterMarkdownFile___size = 'childMarkdownRemark.childFrontmatterMarkdownFile.size',
   childMarkdownRemark___childFrontmatterMarkdownFile___prettySize = 'childMarkdownRemark.childFrontmatterMarkdownFile.prettySize',
@@ -1791,7 +2093,7 @@ type FrontmatterMarkdownFileFilterInput = {
   readonly internal: Maybe<InternalFilterInput>;
   readonly sourceInstanceName: Maybe<StringQueryOperatorInput>;
   readonly absolutePath: Maybe<StringQueryOperatorInput>;
-  readonly relativePath: Maybe<StringQueryOperatorInput>;
+  readonly relativePath: Maybe<FileFilterInput>;
   readonly extension: Maybe<StringQueryOperatorInput>;
   readonly size: Maybe<IntQueryOperatorInput>;
   readonly prettySize: Maybe<StringQueryOperatorInput>;
@@ -2494,6 +2796,47 @@ type MarkdownRemarkFields = {
 enum MarkdownRemarkFieldsEnum {
   id = 'id',
   frontmatter___title = 'frontmatter.title',
+  frontmatter___carouselImages = 'frontmatter.carouselImages',
+  frontmatter___carouselImages___mainImage___sourceInstanceName = 'frontmatter.carouselImages.mainImage.sourceInstanceName',
+  frontmatter___carouselImages___mainImage___absolutePath = 'frontmatter.carouselImages.mainImage.absolutePath',
+  frontmatter___carouselImages___mainImage___relativePath = 'frontmatter.carouselImages.mainImage.relativePath',
+  frontmatter___carouselImages___mainImage___extension = 'frontmatter.carouselImages.mainImage.extension',
+  frontmatter___carouselImages___mainImage___size = 'frontmatter.carouselImages.mainImage.size',
+  frontmatter___carouselImages___mainImage___prettySize = 'frontmatter.carouselImages.mainImage.prettySize',
+  frontmatter___carouselImages___mainImage___modifiedTime = 'frontmatter.carouselImages.mainImage.modifiedTime',
+  frontmatter___carouselImages___mainImage___accessTime = 'frontmatter.carouselImages.mainImage.accessTime',
+  frontmatter___carouselImages___mainImage___changeTime = 'frontmatter.carouselImages.mainImage.changeTime',
+  frontmatter___carouselImages___mainImage___birthTime = 'frontmatter.carouselImages.mainImage.birthTime',
+  frontmatter___carouselImages___mainImage___root = 'frontmatter.carouselImages.mainImage.root',
+  frontmatter___carouselImages___mainImage___dir = 'frontmatter.carouselImages.mainImage.dir',
+  frontmatter___carouselImages___mainImage___base = 'frontmatter.carouselImages.mainImage.base',
+  frontmatter___carouselImages___mainImage___ext = 'frontmatter.carouselImages.mainImage.ext',
+  frontmatter___carouselImages___mainImage___name = 'frontmatter.carouselImages.mainImage.name',
+  frontmatter___carouselImages___mainImage___relativeDirectory = 'frontmatter.carouselImages.mainImage.relativeDirectory',
+  frontmatter___carouselImages___mainImage___dev = 'frontmatter.carouselImages.mainImage.dev',
+  frontmatter___carouselImages___mainImage___mode = 'frontmatter.carouselImages.mainImage.mode',
+  frontmatter___carouselImages___mainImage___nlink = 'frontmatter.carouselImages.mainImage.nlink',
+  frontmatter___carouselImages___mainImage___uid = 'frontmatter.carouselImages.mainImage.uid',
+  frontmatter___carouselImages___mainImage___gid = 'frontmatter.carouselImages.mainImage.gid',
+  frontmatter___carouselImages___mainImage___rdev = 'frontmatter.carouselImages.mainImage.rdev',
+  frontmatter___carouselImages___mainImage___ino = 'frontmatter.carouselImages.mainImage.ino',
+  frontmatter___carouselImages___mainImage___atimeMs = 'frontmatter.carouselImages.mainImage.atimeMs',
+  frontmatter___carouselImages___mainImage___mtimeMs = 'frontmatter.carouselImages.mainImage.mtimeMs',
+  frontmatter___carouselImages___mainImage___ctimeMs = 'frontmatter.carouselImages.mainImage.ctimeMs',
+  frontmatter___carouselImages___mainImage___atime = 'frontmatter.carouselImages.mainImage.atime',
+  frontmatter___carouselImages___mainImage___mtime = 'frontmatter.carouselImages.mainImage.mtime',
+  frontmatter___carouselImages___mainImage___ctime = 'frontmatter.carouselImages.mainImage.ctime',
+  frontmatter___carouselImages___mainImage___birthtime = 'frontmatter.carouselImages.mainImage.birthtime',
+  frontmatter___carouselImages___mainImage___birthtimeMs = 'frontmatter.carouselImages.mainImage.birthtimeMs',
+  frontmatter___carouselImages___mainImage___blksize = 'frontmatter.carouselImages.mainImage.blksize',
+  frontmatter___carouselImages___mainImage___blocks = 'frontmatter.carouselImages.mainImage.blocks',
+  frontmatter___carouselImages___mainImage___publicURL = 'frontmatter.carouselImages.mainImage.publicURL',
+  frontmatter___carouselImages___mainImage___id = 'frontmatter.carouselImages.mainImage.id',
+  frontmatter___carouselImages___mainImage___children = 'frontmatter.carouselImages.mainImage.children',
+  frontmatter___carouselImages___position = 'frontmatter.carouselImages.position',
+  frontmatter___overlayCaption = 'frontmatter.overlayCaption',
+  frontmatter___headerColour = 'frontmatter.headerColour',
+  frontmatter___findOutMoreText = 'frontmatter.findOutMoreText',
   frontmatter___mainImage___sourceInstanceName = 'frontmatter.mainImage.sourceInstanceName',
   frontmatter___mainImage___absolutePath = 'frontmatter.mainImage.absolutePath',
   frontmatter___mainImage___relativePath = 'frontmatter.mainImage.relativePath',
@@ -2622,9 +2965,7 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___showInMenu = 'frontmatter.showInMenu',
   frontmatter___menuOrder = 'frontmatter.menuOrder',
   frontmatter___mobileImage = 'frontmatter.mobileImage',
-  frontmatter___overlayCaption = 'frontmatter.overlayCaption',
   frontmatter___captionPosition = 'frontmatter.captionPosition',
-  frontmatter___findOutMoreText = 'frontmatter.findOutMoreText',
   frontmatter___dayOfWeek = 'frontmatter.dayOfWeek',
   frontmatter___timeOfDay = 'frontmatter.timeOfDay',
   frontmatter___type = 'frontmatter.type',
@@ -2651,55 +2992,16 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___features___buttonText = 'frontmatter.features.buttonText',
   frontmatter___features___buttonLink = 'frontmatter.features.buttonLink',
   frontmatter___tagLine = 'frontmatter.tagLine',
-  frontmatter___leader = 'frontmatter.leader',
-  frontmatter___findOutMoreLink = 'frontmatter.findOutMoreLink',
   frontmatter___eventDate = 'frontmatter.eventDate',
   frontmatter___price = 'frontmatter.price',
   frontmatter___signUpEmail = 'frontmatter.signUpEmail',
+  frontmatter___leader = 'frontmatter.leader',
   frontmatter___people = 'frontmatter.people',
   frontmatter___people___name = 'frontmatter.people.name',
   frontmatter___people___title = 'frontmatter.people.title',
   frontmatter___people___photo = 'frontmatter.people.photo',
   frontmatter___people___headshot_position = 'frontmatter.people.headshot_position',
-  frontmatter___carouselImages = 'frontmatter.carouselImages',
-  frontmatter___carouselImages___mainImage___sourceInstanceName = 'frontmatter.carouselImages.mainImage.sourceInstanceName',
-  frontmatter___carouselImages___mainImage___absolutePath = 'frontmatter.carouselImages.mainImage.absolutePath',
-  frontmatter___carouselImages___mainImage___relativePath = 'frontmatter.carouselImages.mainImage.relativePath',
-  frontmatter___carouselImages___mainImage___extension = 'frontmatter.carouselImages.mainImage.extension',
-  frontmatter___carouselImages___mainImage___size = 'frontmatter.carouselImages.mainImage.size',
-  frontmatter___carouselImages___mainImage___prettySize = 'frontmatter.carouselImages.mainImage.prettySize',
-  frontmatter___carouselImages___mainImage___modifiedTime = 'frontmatter.carouselImages.mainImage.modifiedTime',
-  frontmatter___carouselImages___mainImage___accessTime = 'frontmatter.carouselImages.mainImage.accessTime',
-  frontmatter___carouselImages___mainImage___changeTime = 'frontmatter.carouselImages.mainImage.changeTime',
-  frontmatter___carouselImages___mainImage___birthTime = 'frontmatter.carouselImages.mainImage.birthTime',
-  frontmatter___carouselImages___mainImage___root = 'frontmatter.carouselImages.mainImage.root',
-  frontmatter___carouselImages___mainImage___dir = 'frontmatter.carouselImages.mainImage.dir',
-  frontmatter___carouselImages___mainImage___base = 'frontmatter.carouselImages.mainImage.base',
-  frontmatter___carouselImages___mainImage___ext = 'frontmatter.carouselImages.mainImage.ext',
-  frontmatter___carouselImages___mainImage___name = 'frontmatter.carouselImages.mainImage.name',
-  frontmatter___carouselImages___mainImage___relativeDirectory = 'frontmatter.carouselImages.mainImage.relativeDirectory',
-  frontmatter___carouselImages___mainImage___dev = 'frontmatter.carouselImages.mainImage.dev',
-  frontmatter___carouselImages___mainImage___mode = 'frontmatter.carouselImages.mainImage.mode',
-  frontmatter___carouselImages___mainImage___nlink = 'frontmatter.carouselImages.mainImage.nlink',
-  frontmatter___carouselImages___mainImage___uid = 'frontmatter.carouselImages.mainImage.uid',
-  frontmatter___carouselImages___mainImage___gid = 'frontmatter.carouselImages.mainImage.gid',
-  frontmatter___carouselImages___mainImage___rdev = 'frontmatter.carouselImages.mainImage.rdev',
-  frontmatter___carouselImages___mainImage___ino = 'frontmatter.carouselImages.mainImage.ino',
-  frontmatter___carouselImages___mainImage___atimeMs = 'frontmatter.carouselImages.mainImage.atimeMs',
-  frontmatter___carouselImages___mainImage___mtimeMs = 'frontmatter.carouselImages.mainImage.mtimeMs',
-  frontmatter___carouselImages___mainImage___ctimeMs = 'frontmatter.carouselImages.mainImage.ctimeMs',
-  frontmatter___carouselImages___mainImage___atime = 'frontmatter.carouselImages.mainImage.atime',
-  frontmatter___carouselImages___mainImage___mtime = 'frontmatter.carouselImages.mainImage.mtime',
-  frontmatter___carouselImages___mainImage___ctime = 'frontmatter.carouselImages.mainImage.ctime',
-  frontmatter___carouselImages___mainImage___birthtime = 'frontmatter.carouselImages.mainImage.birthtime',
-  frontmatter___carouselImages___mainImage___birthtimeMs = 'frontmatter.carouselImages.mainImage.birthtimeMs',
-  frontmatter___carouselImages___mainImage___blksize = 'frontmatter.carouselImages.mainImage.blksize',
-  frontmatter___carouselImages___mainImage___blocks = 'frontmatter.carouselImages.mainImage.blocks',
-  frontmatter___carouselImages___mainImage___publicURL = 'frontmatter.carouselImages.mainImage.publicURL',
-  frontmatter___carouselImages___mainImage___id = 'frontmatter.carouselImages.mainImage.id',
-  frontmatter___carouselImages___mainImage___children = 'frontmatter.carouselImages.mainImage.children',
-  frontmatter___carouselImages___position = 'frontmatter.carouselImages.position',
-  frontmatter___headerColour = 'frontmatter.headerColour',
+  frontmatter___findOutMoreLink = 'frontmatter.findOutMoreLink',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
@@ -2850,7 +3152,67 @@ enum MarkdownRemarkFieldsEnum {
   childFrontmatterMarkdownFile___internal___type = 'childFrontmatterMarkdownFile.internal.type',
   childFrontmatterMarkdownFile___sourceInstanceName = 'childFrontmatterMarkdownFile.sourceInstanceName',
   childFrontmatterMarkdownFile___absolutePath = 'childFrontmatterMarkdownFile.absolutePath',
-  childFrontmatterMarkdownFile___relativePath = 'childFrontmatterMarkdownFile.relativePath',
+  childFrontmatterMarkdownFile___relativePath___sourceInstanceName = 'childFrontmatterMarkdownFile.relativePath.sourceInstanceName',
+  childFrontmatterMarkdownFile___relativePath___absolutePath = 'childFrontmatterMarkdownFile.relativePath.absolutePath',
+  childFrontmatterMarkdownFile___relativePath___relativePath = 'childFrontmatterMarkdownFile.relativePath.relativePath',
+  childFrontmatterMarkdownFile___relativePath___extension = 'childFrontmatterMarkdownFile.relativePath.extension',
+  childFrontmatterMarkdownFile___relativePath___size = 'childFrontmatterMarkdownFile.relativePath.size',
+  childFrontmatterMarkdownFile___relativePath___prettySize = 'childFrontmatterMarkdownFile.relativePath.prettySize',
+  childFrontmatterMarkdownFile___relativePath___modifiedTime = 'childFrontmatterMarkdownFile.relativePath.modifiedTime',
+  childFrontmatterMarkdownFile___relativePath___accessTime = 'childFrontmatterMarkdownFile.relativePath.accessTime',
+  childFrontmatterMarkdownFile___relativePath___changeTime = 'childFrontmatterMarkdownFile.relativePath.changeTime',
+  childFrontmatterMarkdownFile___relativePath___birthTime = 'childFrontmatterMarkdownFile.relativePath.birthTime',
+  childFrontmatterMarkdownFile___relativePath___root = 'childFrontmatterMarkdownFile.relativePath.root',
+  childFrontmatterMarkdownFile___relativePath___dir = 'childFrontmatterMarkdownFile.relativePath.dir',
+  childFrontmatterMarkdownFile___relativePath___base = 'childFrontmatterMarkdownFile.relativePath.base',
+  childFrontmatterMarkdownFile___relativePath___ext = 'childFrontmatterMarkdownFile.relativePath.ext',
+  childFrontmatterMarkdownFile___relativePath___name = 'childFrontmatterMarkdownFile.relativePath.name',
+  childFrontmatterMarkdownFile___relativePath___relativeDirectory = 'childFrontmatterMarkdownFile.relativePath.relativeDirectory',
+  childFrontmatterMarkdownFile___relativePath___dev = 'childFrontmatterMarkdownFile.relativePath.dev',
+  childFrontmatterMarkdownFile___relativePath___mode = 'childFrontmatterMarkdownFile.relativePath.mode',
+  childFrontmatterMarkdownFile___relativePath___nlink = 'childFrontmatterMarkdownFile.relativePath.nlink',
+  childFrontmatterMarkdownFile___relativePath___uid = 'childFrontmatterMarkdownFile.relativePath.uid',
+  childFrontmatterMarkdownFile___relativePath___gid = 'childFrontmatterMarkdownFile.relativePath.gid',
+  childFrontmatterMarkdownFile___relativePath___rdev = 'childFrontmatterMarkdownFile.relativePath.rdev',
+  childFrontmatterMarkdownFile___relativePath___ino = 'childFrontmatterMarkdownFile.relativePath.ino',
+  childFrontmatterMarkdownFile___relativePath___atimeMs = 'childFrontmatterMarkdownFile.relativePath.atimeMs',
+  childFrontmatterMarkdownFile___relativePath___mtimeMs = 'childFrontmatterMarkdownFile.relativePath.mtimeMs',
+  childFrontmatterMarkdownFile___relativePath___ctimeMs = 'childFrontmatterMarkdownFile.relativePath.ctimeMs',
+  childFrontmatterMarkdownFile___relativePath___atime = 'childFrontmatterMarkdownFile.relativePath.atime',
+  childFrontmatterMarkdownFile___relativePath___mtime = 'childFrontmatterMarkdownFile.relativePath.mtime',
+  childFrontmatterMarkdownFile___relativePath___ctime = 'childFrontmatterMarkdownFile.relativePath.ctime',
+  childFrontmatterMarkdownFile___relativePath___birthtime = 'childFrontmatterMarkdownFile.relativePath.birthtime',
+  childFrontmatterMarkdownFile___relativePath___birthtimeMs = 'childFrontmatterMarkdownFile.relativePath.birthtimeMs',
+  childFrontmatterMarkdownFile___relativePath___blksize = 'childFrontmatterMarkdownFile.relativePath.blksize',
+  childFrontmatterMarkdownFile___relativePath___blocks = 'childFrontmatterMarkdownFile.relativePath.blocks',
+  childFrontmatterMarkdownFile___relativePath___publicURL = 'childFrontmatterMarkdownFile.relativePath.publicURL',
+  childFrontmatterMarkdownFile___relativePath___childImageSharp___id = 'childFrontmatterMarkdownFile.relativePath.childImageSharp.id',
+  childFrontmatterMarkdownFile___relativePath___childImageSharp___children = 'childFrontmatterMarkdownFile.relativePath.childImageSharp.children',
+  childFrontmatterMarkdownFile___relativePath___id = 'childFrontmatterMarkdownFile.relativePath.id',
+  childFrontmatterMarkdownFile___relativePath___parent___id = 'childFrontmatterMarkdownFile.relativePath.parent.id',
+  childFrontmatterMarkdownFile___relativePath___parent___children = 'childFrontmatterMarkdownFile.relativePath.parent.children',
+  childFrontmatterMarkdownFile___relativePath___children = 'childFrontmatterMarkdownFile.relativePath.children',
+  childFrontmatterMarkdownFile___relativePath___children___id = 'childFrontmatterMarkdownFile.relativePath.children.id',
+  childFrontmatterMarkdownFile___relativePath___children___children = 'childFrontmatterMarkdownFile.relativePath.children.children',
+  childFrontmatterMarkdownFile___relativePath___internal___content = 'childFrontmatterMarkdownFile.relativePath.internal.content',
+  childFrontmatterMarkdownFile___relativePath___internal___contentDigest = 'childFrontmatterMarkdownFile.relativePath.internal.contentDigest',
+  childFrontmatterMarkdownFile___relativePath___internal___description = 'childFrontmatterMarkdownFile.relativePath.internal.description',
+  childFrontmatterMarkdownFile___relativePath___internal___fieldOwners = 'childFrontmatterMarkdownFile.relativePath.internal.fieldOwners',
+  childFrontmatterMarkdownFile___relativePath___internal___ignoreType = 'childFrontmatterMarkdownFile.relativePath.internal.ignoreType',
+  childFrontmatterMarkdownFile___relativePath___internal___mediaType = 'childFrontmatterMarkdownFile.relativePath.internal.mediaType',
+  childFrontmatterMarkdownFile___relativePath___internal___owner = 'childFrontmatterMarkdownFile.relativePath.internal.owner',
+  childFrontmatterMarkdownFile___relativePath___internal___type = 'childFrontmatterMarkdownFile.relativePath.internal.type',
+  childFrontmatterMarkdownFile___relativePath___childMarkdownRemark___id = 'childFrontmatterMarkdownFile.relativePath.childMarkdownRemark.id',
+  childFrontmatterMarkdownFile___relativePath___childMarkdownRemark___excerpt = 'childFrontmatterMarkdownFile.relativePath.childMarkdownRemark.excerpt',
+  childFrontmatterMarkdownFile___relativePath___childMarkdownRemark___rawMarkdownBody = 'childFrontmatterMarkdownFile.relativePath.childMarkdownRemark.rawMarkdownBody',
+  childFrontmatterMarkdownFile___relativePath___childMarkdownRemark___fileAbsolutePath = 'childFrontmatterMarkdownFile.relativePath.childMarkdownRemark.fileAbsolutePath',
+  childFrontmatterMarkdownFile___relativePath___childMarkdownRemark___html = 'childFrontmatterMarkdownFile.relativePath.childMarkdownRemark.html',
+  childFrontmatterMarkdownFile___relativePath___childMarkdownRemark___htmlAst = 'childFrontmatterMarkdownFile.relativePath.childMarkdownRemark.htmlAst',
+  childFrontmatterMarkdownFile___relativePath___childMarkdownRemark___excerptAst = 'childFrontmatterMarkdownFile.relativePath.childMarkdownRemark.excerptAst',
+  childFrontmatterMarkdownFile___relativePath___childMarkdownRemark___headings = 'childFrontmatterMarkdownFile.relativePath.childMarkdownRemark.headings',
+  childFrontmatterMarkdownFile___relativePath___childMarkdownRemark___timeToRead = 'childFrontmatterMarkdownFile.relativePath.childMarkdownRemark.timeToRead',
+  childFrontmatterMarkdownFile___relativePath___childMarkdownRemark___tableOfContents = 'childFrontmatterMarkdownFile.relativePath.childMarkdownRemark.tableOfContents',
+  childFrontmatterMarkdownFile___relativePath___childMarkdownRemark___children = 'childFrontmatterMarkdownFile.relativePath.childMarkdownRemark.children',
   childFrontmatterMarkdownFile___extension = 'childFrontmatterMarkdownFile.extension',
   childFrontmatterMarkdownFile___size = 'childFrontmatterMarkdownFile.size',
   childFrontmatterMarkdownFile___prettySize = 'childFrontmatterMarkdownFile.prettySize',
@@ -2945,15 +3307,17 @@ enum MarkdownRemarkFieldsEnum {
   childFrontmatterMarkdownFile___frontmatterValue = 'childFrontmatterMarkdownFile.frontmatterValue',
   childFrontmatterMarkdownFile___childMarkdownRemark___id = 'childFrontmatterMarkdownFile.childMarkdownRemark.id',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___title = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.title',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___carouselImages = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.carouselImages',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___overlayCaption = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.overlayCaption',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___headerColour = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.headerColour',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreText = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.findOutMoreText',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___template = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.template',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___path = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.path',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___showInFooter = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.showInFooter',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___showInMenu = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.showInMenu',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___menuOrder = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.menuOrder',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___mobileImage = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.mobileImage',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___overlayCaption = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.overlayCaption',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___captionPosition = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.captionPosition',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreText = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.findOutMoreText',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___dayOfWeek = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.dayOfWeek',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___timeOfDay = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.timeOfDay',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___type = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.type',
@@ -2968,14 +3332,12 @@ enum MarkdownRemarkFieldsEnum {
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___lastUpdated = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.lastUpdated',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___features = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.features',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___tagLine = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.tagLine',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___leader = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.leader',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreLink = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.findOutMoreLink',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___eventDate = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.eventDate',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___price = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.price',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___signUpEmail = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.signUpEmail',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___leader = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.leader',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___people = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.people',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___carouselImages = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.carouselImages',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___headerColour = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.headerColour',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreLink = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.findOutMoreLink',
   childFrontmatterMarkdownFile___childMarkdownRemark___excerpt = 'childFrontmatterMarkdownFile.childMarkdownRemark.excerpt',
   childFrontmatterMarkdownFile___childMarkdownRemark___rawMarkdownBody = 'childFrontmatterMarkdownFile.childMarkdownRemark.rawMarkdownBody',
   childFrontmatterMarkdownFile___childMarkdownRemark___fileAbsolutePath = 'childFrontmatterMarkdownFile.childMarkdownRemark.fileAbsolutePath',
@@ -3007,7 +3369,6 @@ enum MarkdownRemarkFieldsEnum {
   childFrontmatterMarkdownFile___childMarkdownRemark___childFrontmatterMarkdownFile___children = 'childFrontmatterMarkdownFile.childMarkdownRemark.childFrontmatterMarkdownFile.children',
   childFrontmatterMarkdownFile___childMarkdownRemark___childFrontmatterMarkdownFile___sourceInstanceName = 'childFrontmatterMarkdownFile.childMarkdownRemark.childFrontmatterMarkdownFile.sourceInstanceName',
   childFrontmatterMarkdownFile___childMarkdownRemark___childFrontmatterMarkdownFile___absolutePath = 'childFrontmatterMarkdownFile.childMarkdownRemark.childFrontmatterMarkdownFile.absolutePath',
-  childFrontmatterMarkdownFile___childMarkdownRemark___childFrontmatterMarkdownFile___relativePath = 'childFrontmatterMarkdownFile.childMarkdownRemark.childFrontmatterMarkdownFile.relativePath',
   childFrontmatterMarkdownFile___childMarkdownRemark___childFrontmatterMarkdownFile___extension = 'childFrontmatterMarkdownFile.childMarkdownRemark.childFrontmatterMarkdownFile.extension',
   childFrontmatterMarkdownFile___childMarkdownRemark___childFrontmatterMarkdownFile___size = 'childFrontmatterMarkdownFile.childMarkdownRemark.childFrontmatterMarkdownFile.size',
   childFrontmatterMarkdownFile___childMarkdownRemark___childFrontmatterMarkdownFile___prettySize = 'childFrontmatterMarkdownFile.childMarkdownRemark.childFrontmatterMarkdownFile.prettySize',
@@ -3075,6 +3436,10 @@ type MarkdownRemarkFilterInput = {
 
 type MarkdownRemarkFrontmatter = {
   readonly title: Maybe<Scalars['String']>;
+  readonly carouselImages: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterCarouselImages>>>;
+  readonly overlayCaption: Maybe<Scalars['String']>;
+  readonly headerColour: Maybe<Scalars['String']>;
+  readonly findOutMoreText: Maybe<Scalars['String']>;
   readonly mainImage: Maybe<File>;
   readonly image: Maybe<File>;
   readonly template: Maybe<Scalars['String']>;
@@ -3083,9 +3448,7 @@ type MarkdownRemarkFrontmatter = {
   readonly showInMenu: Maybe<Scalars['Boolean']>;
   readonly menuOrder: Maybe<Scalars['Int']>;
   readonly mobileImage: Maybe<Scalars['String']>;
-  readonly overlayCaption: Maybe<Scalars['String']>;
   readonly captionPosition: Maybe<Scalars['String']>;
-  readonly findOutMoreText: Maybe<Scalars['String']>;
   readonly dayOfWeek: Maybe<Scalars['String']>;
   readonly timeOfDay: Maybe<Scalars['String']>;
   readonly type: Maybe<Scalars['String']>;
@@ -3100,14 +3463,12 @@ type MarkdownRemarkFrontmatter = {
   readonly lastUpdated: Maybe<Scalars['String']>;
   readonly features: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterFeatures>>>;
   readonly tagLine: Maybe<Scalars['String']>;
-  readonly leader: Maybe<Scalars['String']>;
-  readonly findOutMoreLink: Maybe<Scalars['String']>;
   readonly eventDate: Maybe<Scalars['String']>;
   readonly price: Maybe<Scalars['String']>;
   readonly signUpEmail: Maybe<Scalars['String']>;
+  readonly leader: Maybe<Scalars['String']>;
   readonly people: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterPeople>>>;
-  readonly carouselImages: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterCarouselImages>>>;
-  readonly headerColour: Maybe<Scalars['String']>;
+  readonly findOutMoreLink: Maybe<Scalars['String']>;
 };
 
 type MarkdownRemarkFrontmatterCarouselImages = {
@@ -3186,6 +3547,10 @@ type MarkdownRemarkFrontmatterFeaturesFilterListInput = {
 
 type MarkdownRemarkFrontmatterFilterInput = {
   readonly title: Maybe<StringQueryOperatorInput>;
+  readonly carouselImages: Maybe<MarkdownRemarkFrontmatterCarouselImagesFilterListInput>;
+  readonly overlayCaption: Maybe<StringQueryOperatorInput>;
+  readonly headerColour: Maybe<StringQueryOperatorInput>;
+  readonly findOutMoreText: Maybe<StringQueryOperatorInput>;
   readonly mainImage: Maybe<FileFilterInput>;
   readonly image: Maybe<FileFilterInput>;
   readonly template: Maybe<StringQueryOperatorInput>;
@@ -3194,9 +3559,7 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly showInMenu: Maybe<BooleanQueryOperatorInput>;
   readonly menuOrder: Maybe<IntQueryOperatorInput>;
   readonly mobileImage: Maybe<StringQueryOperatorInput>;
-  readonly overlayCaption: Maybe<StringQueryOperatorInput>;
   readonly captionPosition: Maybe<StringQueryOperatorInput>;
-  readonly findOutMoreText: Maybe<StringQueryOperatorInput>;
   readonly dayOfWeek: Maybe<StringQueryOperatorInput>;
   readonly timeOfDay: Maybe<StringQueryOperatorInput>;
   readonly type: Maybe<StringQueryOperatorInput>;
@@ -3211,14 +3574,12 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly lastUpdated: Maybe<StringQueryOperatorInput>;
   readonly features: Maybe<MarkdownRemarkFrontmatterFeaturesFilterListInput>;
   readonly tagLine: Maybe<StringQueryOperatorInput>;
-  readonly leader: Maybe<StringQueryOperatorInput>;
-  readonly findOutMoreLink: Maybe<StringQueryOperatorInput>;
   readonly eventDate: Maybe<StringQueryOperatorInput>;
   readonly price: Maybe<StringQueryOperatorInput>;
   readonly signUpEmail: Maybe<StringQueryOperatorInput>;
+  readonly leader: Maybe<StringQueryOperatorInput>;
   readonly people: Maybe<MarkdownRemarkFrontmatterPeopleFilterListInput>;
-  readonly carouselImages: Maybe<MarkdownRemarkFrontmatterCarouselImagesFilterListInput>;
-  readonly headerColour: Maybe<StringQueryOperatorInput>;
+  readonly findOutMoreLink: Maybe<StringQueryOperatorInput>;
 };
 
 type MarkdownRemarkFrontmatterPeople = {
@@ -3682,7 +4043,7 @@ type Query_frontmatterMarkdownFileArgs = {
   internal: Maybe<InternalFilterInput>;
   sourceInstanceName: Maybe<StringQueryOperatorInput>;
   absolutePath: Maybe<StringQueryOperatorInput>;
-  relativePath: Maybe<StringQueryOperatorInput>;
+  relativePath: Maybe<FileFilterInput>;
   extension: Maybe<StringQueryOperatorInput>;
   size: Maybe<IntQueryOperatorInput>;
   prettySize: Maybe<StringQueryOperatorInput>;
@@ -5764,6 +6125,7 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___emitPluginDocuments___src___generated___gatsby_plugin_documents_graphql = 'pluginCreator.pluginOptions.emitPluginDocuments.src___generated___gatsby_plugin_documents_graphql',
   pluginCreator___pluginOptions___name = 'pluginCreator.pluginOptions.name',
   pluginCreator___pluginOptions___path = 'pluginCreator.pluginOptions.path',
+  pluginCreator___pluginOptions___useMozJpeg = 'pluginCreator.pluginOptions.useMozJpeg',
   pluginCreator___pluginOptions___projectId = 'pluginCreator.pluginOptions.projectId',
   pluginCreator___pluginOptions___dataset = 'pluginCreator.pluginOptions.dataset',
   pluginCreator___pluginOptions___whitelist = 'pluginCreator.pluginOptions.whitelist',
@@ -5963,6 +6325,7 @@ enum SitePluginFieldsEnum {
   pluginOptions___emitPluginDocuments___src___generated___gatsby_plugin_documents_graphql = 'pluginOptions.emitPluginDocuments.src___generated___gatsby_plugin_documents_graphql',
   pluginOptions___name = 'pluginOptions.name',
   pluginOptions___path = 'pluginOptions.path',
+  pluginOptions___useMozJpeg = 'pluginOptions.useMozJpeg',
   pluginOptions___projectId = 'pluginOptions.projectId',
   pluginOptions___dataset = 'pluginOptions.dataset',
   pluginOptions___whitelist = 'pluginOptions.whitelist',
@@ -6088,6 +6451,7 @@ type SitePluginPluginOptions = {
   readonly emitPluginDocuments: Maybe<SitePluginPluginOptionsEmitPluginDocuments>;
   readonly name: Maybe<Scalars['String']>;
   readonly path: Maybe<Scalars['String']>;
+  readonly useMozJpeg: Maybe<Scalars['Boolean']>;
   readonly projectId: Maybe<Scalars['String']>;
   readonly dataset: Maybe<Scalars['String']>;
   readonly whitelist: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
@@ -6119,6 +6483,7 @@ type SitePluginPluginOptionsFilterInput = {
   readonly emitPluginDocuments: Maybe<SitePluginPluginOptionsEmitPluginDocumentsFilterInput>;
   readonly name: Maybe<StringQueryOperatorInput>;
   readonly path: Maybe<StringQueryOperatorInput>;
+  readonly useMozJpeg: Maybe<BooleanQueryOperatorInput>;
   readonly projectId: Maybe<StringQueryOperatorInput>;
   readonly dataset: Maybe<StringQueryOperatorInput>;
   readonly whitelist: Maybe<StringQueryOperatorInput>;
@@ -6298,33 +6663,11 @@ type ServicesQueryVariables = {};
 
 type ServicesQuery = { readonly am: Maybe<ServiceFragment>, readonly pm: Maybe<ServiceFragment> };
 
-type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
 type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
-type StudentTemplateQueryVariables = {
-  remarkId: Scalars['String'];
-};
-
-
-type StudentTemplateQuery = { readonly studentWorkers: { readonly nodes: ReadonlyArray<(
-      Pick<SanityStaff, 'name' | 'email' | 'job_title' | 'phone'>
-      & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
-    )> }, readonly mainContent: Maybe<(
-    Pick<MarkdownRemark, 'html'>
-    & { readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }>, readonly frontmatter: Maybe<(
-      Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption'>
-      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
-    )> }
-  )>, readonly extraContent: Maybe<(
-    Pick<MarkdownRemark, 'html'>
-    & { readonly frontmatter: Maybe<(
-      Pick<MarkdownRemarkFrontmatter, 'title'>
-      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
-    )> }
-  )> };
-
 type SanityHeadshotFragment = { readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> };
+
+type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type HomepageQueryVariables = {};
 
@@ -6346,6 +6689,28 @@ type HomepageQuery = { readonly mainInfo: Maybe<(
     & { readonly frontmatter: Maybe<(
       Pick<MarkdownRemarkFrontmatter, 'title'>
       & { readonly image: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+    )> }
+  )> };
+
+type StudentTemplateQueryVariables = {
+  remarkId: Scalars['String'];
+};
+
+
+type StudentTemplateQuery = { readonly studentWorkers: { readonly nodes: ReadonlyArray<(
+      Pick<SanityStaff, 'name' | 'email' | 'job_title' | 'phone'>
+      & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
+    )> }, readonly mainContent: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }>, readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption'>
+      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+    )> }
+  )>, readonly extraContent: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'title'>
+      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
     )> }
   )> };
 

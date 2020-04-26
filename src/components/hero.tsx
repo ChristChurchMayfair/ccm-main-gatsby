@@ -32,6 +32,8 @@ const Hero: React.FC<Props> = ({
                     bottom: 0,
                     right: 0,
                 }}
+                loading="eager"
+                fadeIn={false}
                 fluid={fluid}
                 objectFit="cover"
                 objectPosition="center top"
