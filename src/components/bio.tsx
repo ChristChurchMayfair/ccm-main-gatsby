@@ -1,20 +1,28 @@
 import React from "react"
-import { FluidObject } from "gatsby-image"
+import { graphql } from "gatsby"
 
 import Img from "./img"
+import { sortedWithPriority } from "../utils"
 
 interface Props {
-    people: Array<{
-        name: string
-        titleRole: string
-        email: string
-        phoneNumber: string | undefined
-        headshot: FluidObject | GatsbyTypes.SanityImageFluid
-    }>
+    people:
+        | ReadonlyArray<GatsbyTypes.StaffProfileFragment | undefined>
+        | undefined
+    peoplePrecedenceByEmail?: Array<string> | undefined
     descriptionHtml: string
 }
 
-const Bio: React.FC<Props> = ({ people, descriptionHtml }) => {
+const Bio: React.FC<Props> = ({
+    people: peopleNullable,
+    descriptionHtml,
+    peoplePrecedenceByEmail,
+}) => {
+    const people = sortedWithPriority(
+        peopleNullable ?? [],
+        s => s?.email,
+        peoplePrecedenceByEmail ?? []
+    )
+
     return (
         <section className="find-out-more">
             <h1>Find out more</h1>
@@ -24,6 +32,9 @@ const Bio: React.FC<Props> = ({ people, descriptionHtml }) => {
             />
             <div className="people">
                 {people.map(person => {
+                    if (person == null) {
+                        return null
+                    }
                     return (
                         <div className="person" key={person.name}>
                             <div
@@ -38,24 +49,26 @@ const Bio: React.FC<Props> = ({ people, descriptionHtml }) => {
                                         bottom: 0,
                                         right: 0,
                                     }}
-                                    fluid={person.headshot}
+                                    fluid={person?.headshot?.asset?.fluid}
                                     objectFit="contain"
                                     objectPosition="left center"
                                 />
                             </div>
                             <div className="info">
                                 <div className="name">{person.name}</div>
-                                <div className="role">{person.titleRole}</div>
+                                <div className="role">{person?.job_title}</div>
                                 <div className="email">
                                     <a href={`mailto:${person.email}`}>
                                         {person.email}
                                     </a>
                                 </div>
-                                <div className="phone">
-                                    <a href={`tel:${person.phoneNumber}`}>
-                                        {person.phoneNumber}
-                                    </a>
-                                </div>
+                                {person?.phone != null && (
+                                    <div className="phone">
+                                        <a href={`tel:${person.phone}`}>
+                                            {person.phone}
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     )
@@ -64,5 +77,21 @@ const Bio: React.FC<Props> = ({ people, descriptionHtml }) => {
         </section>
     )
 }
+
+export const fragments = graphql`
+    fragment StaffProfile on SanityStaff {
+        name
+        email
+        job_title
+        phone
+        headshot {
+            asset {
+                fluid(maxWidth: 400) {
+                    ...GatsbySanityImageFluid
+                }
+            }
+        }
+    }
+`
 
 export default Bio

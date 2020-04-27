@@ -183,25 +183,12 @@ const IndexPage = () => {
             <FindUs />
 
             <Bio
-                people={data?.administrators?.nodes?.flatMap(node => {
-                    const hs = node.headshot?.asset?.fluid
-                    if (hs == null) {
-                        return []
-                    }
-                    return {
-                        name: node.name ?? "",
-                        email: node.email ?? "",
-                        phoneNumber: node.phone,
-                        headshot: hs,
-                        titleRole: node.job_title ?? "",
-                    }
-                })}
+                people={data?.administrators?.nodes}
                 descriptionHtml={
                     data?.mainInfo?.fields?.frontmattermd?.findOutMoreText
                         ?.html ?? ""
                 }
             />
-            {/* <script src="/assets/javascript/carousel.js"></script> */}
         </Layout>
     )
 }

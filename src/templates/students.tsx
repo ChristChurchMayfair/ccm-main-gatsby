@@ -5,7 +5,6 @@ import Img from "gatsby-image/withIEPolyfill"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Bio from "../components/bio"
-import { sortedWithPriority } from "../utils"
 
 const Students: React.FC<{ data: GatsbyTypes.StudentTemplateQuery }> = ({
     data,
@@ -13,22 +12,6 @@ const Students: React.FC<{ data: GatsbyTypes.StudentTemplateQuery }> = ({
     const fluid =
         data.mainContent?.frontmatter?.mainImage?.childImageSharp?.fluid
 
-    const studentWorkers = data?.studentWorkers?.nodes.flatMap(person => {
-        const hs = person.headshot?.asset?.fluid
-        if (hs == null) {
-            return []
-        }
-
-        return [
-            {
-                name: person.name ?? "",
-                titleRole: person.job_title ?? "",
-                email: person.email ?? "",
-                phoneNumber: person.phone,
-                headshot: hs,
-            },
-        ]
-    })
     return (
         <Layout
             headerColour="black"
@@ -78,10 +61,11 @@ const Students: React.FC<{ data: GatsbyTypes.StudentTemplateQuery }> = ({
                 </div>
             </section>
             <Bio
-                people={sortedWithPriority(studentWorkers, s => s.email, [
+                people={data.studentWorkers?.nodes}
+                peoplePrecedenceByEmail={[
                     "scott@christchurchmayfair.org",
                     "ellie.page@christchurchmayfair.org",
-                ])}
+                ]}
                 descriptionHtml={
                     data?.mainContent?.fields?.frontmattermd?.findOutMoreText
                         ?.html ?? ""
@@ -96,17 +80,7 @@ export const pageQuery = graphql`
             filter: { roles: { elemMatch: { slug: { eq: "student_worker" } } } }
         ) {
             nodes {
-                name
-                email
-                job_title
-                phone
-                headshot {
-                    asset {
-                        fluid(maxWidth: 400) {
-                            ...GatsbySanityImageFluid
-                        }
-                    }
-                }
+                ...StaffProfile
             }
         }
         mainContent: markdownRemark(id: { eq: $remarkId }) {

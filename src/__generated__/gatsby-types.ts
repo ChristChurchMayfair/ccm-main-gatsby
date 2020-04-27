@@ -6610,6 +6610,11 @@ type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>;
 };
 
+type StaffProfileFragment = (
+  Pick<SanityStaff, 'name' | 'email' | 'job_title' | 'phone'>
+  & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
+);
+
 type CookieNoticeQueryVariables = {};
 
 
@@ -6697,10 +6702,7 @@ type StudentTemplateQueryVariables = {
 };
 
 
-type StudentTemplateQuery = { readonly studentWorkers: { readonly nodes: ReadonlyArray<(
-      Pick<SanityStaff, 'name' | 'email' | 'job_title' | 'phone'>
-      & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
-    )> }, readonly mainContent: Maybe<(
+type StudentTemplateQuery = { readonly studentWorkers: { readonly nodes: ReadonlyArray<StaffProfileFragment> }, readonly mainContent: Maybe<(
     Pick<MarkdownRemark, 'html'>
     & { readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }>, readonly frontmatter: Maybe<(
       Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption'>

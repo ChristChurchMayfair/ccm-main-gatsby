@@ -6,9 +6,9 @@
  *
  */
 export const sortedWithPriority = <T, K>(
-    array: Array<T>,
+    array: ReadonlyArray<T>,
     keyExtractor: (_: T) => K,
-    priorities: Array<K>
+    priorities: ReadonlyArray<K>
 ): Array<T> => {
     // Make a copy so we can mutate
     const copy = array.slice(0)
