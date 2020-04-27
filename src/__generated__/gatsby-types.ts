@@ -6668,11 +6668,13 @@ type ServicesQueryVariables = {};
 
 type ServicesQuery = { readonly am: Maybe<ServiceFragment>, readonly pm: Maybe<ServiceFragment> };
 
-type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type SanityHeadshotFragment = { readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> };
 
 type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type HomepageQueryVariables = {};
 
@@ -6683,7 +6685,7 @@ type HomepageQuery = { readonly mainInfo: Maybe<(
       Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption' | 'headerColour'>
       & { readonly carouselImages: Maybe<ReadonlyArray<Maybe<(
         Pick<MarkdownRemarkFrontmatterCarouselImages, 'position'>
-        & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+        & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }> }
       )>>> }
     )>, readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }> }
   )>, readonly administrators: { readonly nodes: ReadonlyArray<(
@@ -6706,7 +6708,7 @@ type StudentTemplateQuery = { readonly studentWorkers: { readonly nodes: Readonl
     Pick<MarkdownRemark, 'html'>
     & { readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }>, readonly frontmatter: Maybe<(
       Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption'>
-      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }> }
     )> }
   )>, readonly extraContent: Maybe<(
     Pick<MarkdownRemark, 'html'>
@@ -6747,8 +6749,6 @@ type GatsbyImageSharpFluid_tracedSVGFragment = Pick<ImageSharpFluid, 'tracedSVG'
 type GatsbyImageSharpFluid_withWebpFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 

@@ -23,7 +23,7 @@ const IndexPage = () => {
                         mainImage {
                             childImageSharp {
                                 fluid(maxWidth: 1920) {
-                                    ...GatsbyImageSharpFluid
+                                    ...GatsbyImageSharpFluid_noBase64
                                 }
                             }
                         }
@@ -115,6 +115,8 @@ const IndexPage = () => {
                                         image?.mainImage?.childImageSharp?.fluid
                                     }
                                     objectPosition={`center ${image.position}`}
+                                    fadeIn={false}
+                                    loading={i === 0 ? "eager" : "lazy"}
                                 />
                             </div>
                         )
