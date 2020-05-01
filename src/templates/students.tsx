@@ -9,20 +9,18 @@ import Bio from "../components/bio"
 const Students: React.FC<{ data: GatsbyTypes.StudentTemplateQuery }> = ({
     data,
 }) => {
-    const fluid =
-        data.mainContent?.frontmatter?.mainImage?.childImageSharp?.fluid
+    const fluid = data.mainContent!.frontmatter!.mainImage!.childImageSharp!
+        .fluid
 
     return (
         <Layout
             headerColour="black"
-            title={data.mainContent?.frontmatter?.title}
+            title={data.mainContent!.frontmatter!.title}
             description={undefined}
         >
             <Hero
                 sectionId="students-hero"
-                overlayCaption={
-                    data.mainContent?.frontmatter?.overlayCaption ?? ""
-                }
+                overlayCaption={data.mainContent!.frontmatter!.overlayCaption!}
                 sectionClass="left bottom"
                 fluid={fluid}
             />
@@ -30,16 +28,16 @@ const Students: React.FC<{ data: GatsbyTypes.StudentTemplateQuery }> = ({
                 <div
                     className="text"
                     dangerouslySetInnerHTML={{
-                        __html: data?.mainContent?.html ?? "",
+                        __html: data.mainContent!.html!,
                     }}
                 />
             </section>
             <section className="info-panel dark image-right">
                 <div className="text">
-                    <h1>{data.extraContent?.frontmatter?.title}</h1>
+                    <h1>{data.extraContent!.frontmatter!.title}</h1>
                     <div
                         dangerouslySetInnerHTML={{
-                            __html: data.extraContent?.html ?? "",
+                            __html: data.extraContent!.html!,
                         }}
                     />
                 </div>
@@ -53,22 +51,22 @@ const Students: React.FC<{ data: GatsbyTypes.StudentTemplateQuery }> = ({
                             right: 0,
                         }}
                         fluid={
-                            data.extraContent?.frontmatter?.mainImage
-                                ?.childImageSharp?.fluid
+                            data.extraContent!.frontmatter!.mainImage!
+                                .childImageSharp!.fluid
                         }
                         objectPosition="top center"
                     />
                 </div>
             </section>
             <Bio
-                people={data.studentWorkers?.nodes}
+                people={data.studentWorkers.nodes}
                 peoplePrecedenceByEmail={[
                     "scott@christchurchmayfair.org",
                     "ellie.page@christchurchmayfair.org",
                 ]}
                 descriptionHtml={
-                    data?.mainContent?.fields?.frontmattermd?.findOutMoreText
-                        ?.html ?? ""
+                    data.mainContent!.fields!.frontmattermd!.findOutMoreText!
+                        .html!
                 }
             />
         </Layout>

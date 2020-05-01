@@ -73,7 +73,7 @@ const IndexPage = () => {
 
     const [visibleHeroIndex, setVisibleHeroIndex] = useState(0)
 
-    const carouselImages = data.mainInfo?.frontmatter?.carouselImages ?? []
+    const carouselImages = data.mainInfo!.frontmatter!.carouselImages!
     useEffect(() => {
         const id = setInterval(() => {
             setVisibleHeroIndex(i => (i + 1) % carouselImages.length)
@@ -87,7 +87,7 @@ const IndexPage = () => {
         <Layout title={undefined} headerColour="light">
             <section id="home-hero" className="hero left bottom">
                 <div className="carousel-overlay">
-                    <h1>{data?.mainInfo?.frontmatter?.overlayCaption}</h1>
+                    <h1>{data.mainInfo!.frontmatter!.overlayCaption}</h1>
                 </div>
                 <div className="carousel-images">
                     {carouselImages.map((image, i) => {
@@ -112,7 +112,7 @@ const IndexPage = () => {
                                         right: 0,
                                     }}
                                     fluid={
-                                        image?.mainImage?.childImageSharp?.fluid
+                                        image.mainImage!.childImageSharp!.fluid
                                     }
                                     objectPosition={`center ${image.position}`}
                                     fadeIn={false}
@@ -128,7 +128,7 @@ const IndexPage = () => {
                 <div
                     className="text"
                     dangerouslySetInnerHTML={{
-                        __html: data?.mainInfo?.html ?? "",
+                        __html: data.mainInfo!.html!,
                     }}
                 />
                 <a
@@ -159,8 +159,8 @@ const IndexPage = () => {
                 >
                     <Img
                         fluid={
-                            data.midweek?.frontmatter?.image?.childImageSharp
-                                ?.fluid
+                            data.midweek!.frontmatter!.image!.childImageSharp!
+                                .fluid
                         }
                         style={{
                             position: "absolute",
@@ -173,10 +173,10 @@ const IndexPage = () => {
                     />
                 </div>
                 <div className="text">
-                    <h1>{data.midweek?.frontmatter?.title}</h1>
+                    <h1>{data.midweek!.frontmatter!.title}</h1>
                     <div
                         dangerouslySetInnerHTML={{
-                            __html: data.midweek?.html ?? "",
+                            __html: data.midweek!.html!,
                         }}
                     />
                 </div>
@@ -185,10 +185,9 @@ const IndexPage = () => {
             <FindUs />
 
             <Bio
-                people={data?.administrators?.nodes}
+                people={data.administrators.nodes}
                 descriptionHtml={
-                    data?.mainInfo?.fields?.frontmattermd?.findOutMoreText
-                        ?.html ?? ""
+                    data.mainInfo!.fields!.frontmattermd!.findOutMoreText!.html!
                 }
             />
         </Layout>

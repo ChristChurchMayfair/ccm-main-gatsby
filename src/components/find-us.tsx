@@ -24,14 +24,12 @@ const FindUs = () => {
                     <use xlinkHref={`${mappin}#mappin`} />
                 </svg>
                 <div className="address">
-                    {(data.site?.siteMetadata?.church_address ?? []).map(
-                        (line, i) => (
-                            <Fragment key={i}>
-                                {line}
-                                <br />
-                            </Fragment>
-                        )
-                    )}
+                    {data.site!.siteMetadata!.church_address!.map((line, i) => (
+                        <Fragment key={i}>
+                            {line}
+                            <br />
+                        </Fragment>
+                    ))}
                 </div>
                 <svg className="roundel" viewBox="0 0 640 520">
                     <use xlinkHref={`${roundel}#roundel`} />
@@ -40,10 +38,9 @@ const FindUs = () => {
                     Nearest tube stations:
                     <br />
                     <span className="tube-station">
-                        {(
-                            data?.site?.siteMetadata?.nearest_tube_stations ??
-                            []
-                        ).join(" or ")}
+                        {data.site!.siteMetadata!.nearest_tube_stations!.join(
+                            " or "
+                        )}
                     </span>
                 </div>
             </div>
@@ -93,7 +90,7 @@ const FindUs = () => {
                     frameBorder="0"
                     style={{ border: 0 }}
                     src={
-                        data.site?.siteMetadata?.google_map_embedded_iframe_url
+                        data.site!.siteMetadata!.google_map_embedded_iframe_url
                     }
                     allowFullScreen
                 ></iframe>

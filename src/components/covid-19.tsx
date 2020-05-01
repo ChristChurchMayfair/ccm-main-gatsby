@@ -22,19 +22,17 @@ const Covid19 = () => {
         }
     `)
 
-    const features = covid?.frontmatter?.features ?? []
+    const features = covid!.frontmatter!.features!
     return (
         <section className="promotion full-bleed important-notice">
             <div>
-                <h1>{covid?.frontmatter?.name}</h1>
+                <h1>{covid!.frontmatter!.name}</h1>
                 <div className="text">
-                    <div
-                        dangerouslySetInnerHTML={{ __html: covid?.html ?? "" }}
-                    />
-                    {covid?.frontmatter?.lastUpdated != null && (
+                    <div dangerouslySetInnerHTML={{ __html: covid!.html! }} />
+                    {covid!.frontmatter!.lastUpdated != null && (
                         <p className="last-updated" style={{ fontWeight: 300 }}>
                             This was last updated at{" "}
-                            {covid?.frontmatter?.lastUpdated}.
+                            {covid!.frontmatter!.lastUpdated}.
                         </p>
                     )}
                 </div>

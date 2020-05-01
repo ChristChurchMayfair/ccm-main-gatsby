@@ -24,10 +24,10 @@ const Head: React.FC<Props> = ({ title, description, meta = [] }) => {
             }
         `
     )
-    const metadata = site?.siteMetadata
+    const metadata = site!.siteMetadata
 
-    const metaDescription = description ?? metadata?.description
-    const siteTitle = site?.siteMetadata?.title ?? ""
+    const metaDescription = description ?? metadata!.description!
+    const siteTitle = site!.siteMetadata!.title!
 
     return (
         <Helmet
@@ -46,7 +46,7 @@ const Head: React.FC<Props> = ({ title, description, meta = [] }) => {
                 },
                 {
                     property: "og:site_name",
-                    content: metadata?.title,
+                    content: metadata!.title,
                 },
                 {
                     property: `og:description`,
@@ -61,8 +61,8 @@ const Head: React.FC<Props> = ({ title, description, meta = [] }) => {
             <link
                 type="application/rss+xml"
                 rel="alternate"
-                title={metadata?.podcast?.title}
-                href={metadata?.podcast?.url}
+                title={metadata!.podcast!.title}
+                href={metadata!.podcast!.url}
             />
         </Helmet>
     )

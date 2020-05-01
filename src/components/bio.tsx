@@ -5,9 +5,7 @@ import Img from "./img"
 import { sortedWithPriority } from "../utils"
 
 interface Props {
-    people:
-        | ReadonlyArray<GatsbyTypes.StaffProfileFragment | undefined>
-        | undefined
+    people: ReadonlyArray<GatsbyTypes.StaffProfileFragment>
     peoplePrecedenceByEmail?: Array<string> | undefined
     descriptionHtml: string
 }
@@ -18,8 +16,8 @@ const Bio: React.FC<Props> = ({
     peoplePrecedenceByEmail,
 }) => {
     const people = sortedWithPriority(
-        peopleNullable ?? [],
-        s => s?.email,
+        peopleNullable,
+        s => s.email!,
         peoplePrecedenceByEmail ?? []
     )
 
@@ -49,20 +47,20 @@ const Bio: React.FC<Props> = ({
                                         bottom: 0,
                                         right: 0,
                                     }}
-                                    fluid={person?.headshot?.asset?.fluid}
+                                    fluid={person.headshot!.asset!.fluid}
                                     objectFit="contain"
                                     objectPosition="left center"
                                 />
                             </div>
                             <div className="info">
                                 <div className="name">{person.name}</div>
-                                <div className="role">{person?.job_title}</div>
+                                <div className="role">{person.job_title}</div>
                                 <div className="email">
                                     <a href={`mailto:${person.email}`}>
                                         {person.email}
                                     </a>
                                 </div>
-                                {person?.phone != null && (
+                                {person.phone != null && (
                                     <div className="phone">
                                         <a href={`tel:${person.phone}`}>
                                             {person.phone}

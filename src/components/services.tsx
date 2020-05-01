@@ -55,19 +55,19 @@ const Services = () => {
                                     bottom: 0,
                                 }}
                                 fluid={
-                                    service.frontmatter?.mainImage
-                                        ?.childImageSharp?.fluid
+                                    service.frontmatter!.mainImage!
+                                        .childImageSharp!.fluid
                                 }
                             />
                         </div>
                         <div className="title">
-                            {service.frontmatter?.title}
+                            {service.frontmatter!.title}
                         </div>
-                        <div className="time">{service.frontmatter?.time}</div>
+                        <div className="time">{service.frontmatter!.time}</div>
                         <div
                             className="info"
                             dangerouslySetInnerHTML={{
-                                __html: service.html ?? "",
+                                __html: service.html!,
                             }}
                         />
                     </div>

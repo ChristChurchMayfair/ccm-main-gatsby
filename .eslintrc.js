@@ -29,6 +29,7 @@ module.exports = {
         "@typescript-eslint/switch-exhaustiveness-check": 2,
         "@typescript-eslint/restrict-plus-operands": 2,
         "@typescript-eslint/ban-ts-ignore": 0,
+        "@typescript-eslint/no-non-null-assertion": 0,
         "react/prop-types": 0,
         "no-empty": 0,
         "no-console": 1,

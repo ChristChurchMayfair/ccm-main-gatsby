@@ -43,22 +43,22 @@ const Footer = () => {
         `
     )
 
-    const metadata = site?.siteMetadata
-    const officePhoneNumber = metadata?.office_phone_number ?? ""
-    const email = metadata?.email ?? ""
-    const smallPrint = metadata?.footer?.smallprint ?? []
+    const metadata = site!.siteMetadata
+    const officePhoneNumber = metadata!.office_phone_number!
+    const email = metadata!.email!
+    const smallPrint = metadata!.footer!.smallprint!
     const allFooterLinks: Array<{ path: string; title: string }> = [
-        ...footerLinks?.nodes.flatMap(link => {
-            const url = link?.frontmatter?.path
-            const title = link?.frontmatter?.title
+        ...footerLinks.nodes.flatMap(link => {
+            const url = link.frontmatter!.path
+            const title = link.frontmatter!.title
             if (url == null || title == null) {
                 return []
             }
             return [{ path: url, title }]
         }),
-        ...(metadata?.footer?.extra_links ?? []).flatMap(link => {
-            const url = link?.url
-            const title = link?.title
+        ...metadata!.footer!.extra_links!.flatMap(link => {
+            const url = link!.url
+            const title = link!.title
             if (url == null || title == null) {
                 return []
             }
@@ -74,8 +74,8 @@ const Footer = () => {
                     </svg>
                 </div>
                 <address>
-                    <a href={metadata?.office_maps_link}>
-                        {metadata?.church_address?.map((line, i) => (
+                    <a href={metadata!.office_maps_link}>
+                        {metadata!.church_address!.map((line, i) => (
                             <Fragment key={i}>
                                 {i !== 0 && <br />}
                                 {line}

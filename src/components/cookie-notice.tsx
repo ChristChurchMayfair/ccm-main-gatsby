@@ -38,7 +38,7 @@ const CookieNotice = () => {
             aria-hidden={consentResponse != null}
         >
             <div className="notice">
-                {data?.site?.siteMetadata?.cookie_notice}
+                {data.site!.siteMetadata!.cookie_notice!}
             </div>
             <a
                 id="decline-cookie-button"
