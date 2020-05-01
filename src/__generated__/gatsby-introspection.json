@@ -5200,7 +5200,51 @@
             "defaultValue": null
           },
           {
+<<<<<<< HEAD
             "name": "template",
+=======
+            "name": "layout",
+>>>>>>> Adding page for staff
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "section",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "mainImage",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "FileFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "overlayCaption",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "findOutMoreText",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -5240,6 +5284,9 @@
             "defaultValue": null
           },
           {
+<<<<<<< HEAD
+            "name": "layout",
+=======
             "name": "secondIntroImage",
             "description": "",
             "type": {
@@ -5250,47 +5297,8 @@
             "defaultValue": null
           },
           {
-            "name": "overlayCaption",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "captionPosition",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "findOutMoreText",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "layout",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "section",
+>>>>>>> Adding page for staff
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -5310,16 +5318,6 @@
             "defaultValue": null
           },
           {
-            "name": "carouselImages",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "MarkdownRemarkFrontmatterCarouselImagesFilterListInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "sitemap",
             "description": "",
             "type": {
@@ -5330,7 +5328,31 @@
             "defaultValue": null
           },
           {
+<<<<<<< HEAD
+            "name": "carouselImages",
+=======
             "name": "image_alignment_classes",
+>>>>>>> Adding page for staff
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "MarkdownRemarkFrontmatterCarouselImagesFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "carouselImages",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "MarkdownRemarkFrontmatterCarouselImagesFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "mobileImage",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -10888,7 +10910,71 @@
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "template",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "showInMenu",
+=======
+            "name": "layout",
+>>>>>>> Adding page for staff
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "section",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "mainImage",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "File",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "overlayCaption",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "findOutMoreText",
             "description": null,
             "args": [],
             "type": {
@@ -10924,6 +11010,9 @@
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "layout",
+=======
             "name": "firstIntroImage",
             "description": null,
             "args": [],
@@ -10937,6 +11026,7 @@
           },
           {
             "name": "secondIntroImage",
+>>>>>>> Adding page for staff
             "description": null,
             "args": [],
             "type": {
@@ -10948,55 +11038,7 @@
             "deprecationReason": null
           },
           {
-            "name": "overlayCaption",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "captionPosition",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "findOutMoreText",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "layout",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "section",
             "description": null,
             "args": [],
             "type": {
@@ -11020,6 +11062,7 @@
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "carouselImages",
             "description": null,
             "args": [],
@@ -11031,11 +11074,7 @@
                 "name": "MarkdownRemarkFrontmatterCarouselImages",
                 "ofType": null
               }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
+=======
             "name": "sitemap",
             "description": null,
             "args": [],
@@ -11043,6 +11082,7 @@
               "kind": "SCALAR",
               "name": "Boolean",
               "ofType": null
+>>>>>>> Adding page for staff
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -11057,6 +11097,22 @@
               "ofType": {
                 "kind": "SCALAR",
                 "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "carouselImages",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "MarkdownRemarkFrontmatterCarouselImages",
                 "ofType": null
               }
             },
@@ -14124,6 +14180,45 @@
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+=======
+            "name": "childMarkdownRemark___frontmatter___path",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___showInFooter",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___headerColour",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___template",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___layout",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___section",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+>>>>>>> Adding page for staff
             "name": "childMarkdownRemark___frontmatter___mainImage___sourceInstanceName",
             "description": null,
             "isDeprecated": false,
@@ -14340,12 +14435,17 @@
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "childMarkdownRemark___frontmatter___path",
+=======
+            "name": "childMarkdownRemark___frontmatter___overlayCaption",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "childMarkdownRemark___frontmatter___showInFooter",
             "description": null,
             "isDeprecated": false,
@@ -14359,6 +14459,9 @@
           },
           {
             "name": "childMarkdownRemark___frontmatter___template",
+=======
+            "name": "childMarkdownRemark___frontmatter___findOutMoreText",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -14808,18 +14911,13 @@
             "deprecationReason": null
           },
           {
-            "name": "childMarkdownRemark___frontmatter___overlayCaption",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "childMarkdownRemark___frontmatter___captionPosition",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "childMarkdownRemark___frontmatter___findOutMoreText",
             "description": null,
             "isDeprecated": false,
@@ -14838,6 +14936,8 @@
             "deprecationReason": null
           },
           {
+=======
+>>>>>>> Adding page for staff
             "name": "childMarkdownRemark___frontmatter___image___sourceInstanceName",
             "description": null,
             "isDeprecated": false,
@@ -15054,6 +15154,28 @@
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "childMarkdownRemark___frontmatter___carouselImages",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___carouselImages___position",
+=======
+            "name": "childMarkdownRemark___frontmatter___sitemap",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___image_alignment_classes",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "childMarkdownRemark___frontmatter___carouselImages",
             "description": null,
             "isDeprecated": false,
@@ -15066,13 +15188,7 @@
             "deprecationReason": null
           },
           {
-            "name": "childMarkdownRemark___frontmatter___sitemap",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "childMarkdownRemark___frontmatter___image_alignment_classes",
+            "name": "childMarkdownRemark___frontmatter___mobileImage",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -25736,6 +25852,45 @@
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+=======
+            "name": "frontmatter___path",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "frontmatter___showInFooter",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "frontmatter___headerColour",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "frontmatter___template",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "frontmatter___layout",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "frontmatter___section",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+>>>>>>> Adding page for staff
             "name": "frontmatter___mainImage___sourceInstanceName",
             "description": null,
             "isDeprecated": false,
@@ -26102,12 +26257,17 @@
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
             "name": "frontmatter___path",
+=======
+            "name": "frontmatter___overlayCaption",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "frontmatter___showInFooter",
             "description": null,
             "isDeprecated": false,
@@ -26121,6 +26281,9 @@
           },
           {
             "name": "frontmatter___template",
+=======
+            "name": "frontmatter___findOutMoreText",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -26870,31 +27033,7 @@
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
-            "name": "frontmatter___overlayCaption",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "frontmatter___captionPosition",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "frontmatter___findOutMoreText",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "frontmatter___layout",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "frontmatter___section",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -26912,426 +27051,747 @@
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___layout",
+=======
             "name": "frontmatter___image___relativePath",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___section",
+=======
             "name": "frontmatter___image___extension",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___sourceInstanceName",
+=======
             "name": "frontmatter___image___size",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___absolutePath",
+=======
             "name": "frontmatter___image___prettySize",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___relativePath",
+=======
             "name": "frontmatter___image___modifiedTime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___extension",
+=======
             "name": "frontmatter___image___accessTime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___size",
+=======
             "name": "frontmatter___image___changeTime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___prettySize",
+=======
             "name": "frontmatter___image___birthTime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___modifiedTime",
+=======
             "name": "frontmatter___image___root",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___accessTime",
+=======
             "name": "frontmatter___image___dir",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___changeTime",
+=======
             "name": "frontmatter___image___base",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___birthTime",
+=======
             "name": "frontmatter___image___ext",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___root",
+=======
             "name": "frontmatter___image___name",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___dir",
+=======
             "name": "frontmatter___image___relativeDirectory",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___base",
+=======
             "name": "frontmatter___image___dev",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___ext",
+=======
             "name": "frontmatter___image___mode",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___name",
+=======
             "name": "frontmatter___image___nlink",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___relativeDirectory",
+=======
             "name": "frontmatter___image___uid",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___dev",
+=======
             "name": "frontmatter___image___gid",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___mode",
+=======
             "name": "frontmatter___image___rdev",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___nlink",
+=======
             "name": "frontmatter___image___ino",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___uid",
+=======
             "name": "frontmatter___image___atimeMs",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___gid",
+=======
             "name": "frontmatter___image___mtimeMs",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___rdev",
+=======
             "name": "frontmatter___image___ctimeMs",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___ino",
+=======
             "name": "frontmatter___image___atime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___atimeMs",
+=======
             "name": "frontmatter___image___mtime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___mtimeMs",
+=======
             "name": "frontmatter___image___ctime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___ctimeMs",
+=======
             "name": "frontmatter___image___birthtime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___atime",
+=======
             "name": "frontmatter___image___birthtimeMs",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___mtime",
+=======
             "name": "frontmatter___image___blksize",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___ctime",
+=======
             "name": "frontmatter___image___blocks",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___birthtime",
+=======
             "name": "frontmatter___image___publicURL",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___birthtimeMs",
+=======
             "name": "frontmatter___image___childImageSharp___id",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___blksize",
+=======
             "name": "frontmatter___image___childImageSharp___children",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___blocks",
+=======
             "name": "frontmatter___image___id",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___publicURL",
+=======
             "name": "frontmatter___image___parent___id",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childImageSharp___id",
+=======
             "name": "frontmatter___image___parent___children",
+>>>>>>> Adding page for staff
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childImageSharp___children",
+=======
             "name": "frontmatter___image___children",
+>>>>>>> Adding page for staff
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___id",
+=======
             "name": "frontmatter___image___children___id",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___parent___id",
+=======
             "name": "frontmatter___image___children___children",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___parent___children",
+=======
             "name": "frontmatter___image___internal___content",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___children",
+=======
             "name": "frontmatter___image___internal___contentDigest",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___children___id",
+=======
             "name": "frontmatter___image___internal___description",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___children___children",
+=======
             "name": "frontmatter___image___internal___fieldOwners",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___internal___content",
+=======
             "name": "frontmatter___image___internal___ignoreType",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___internal___contentDigest",
+=======
             "name": "frontmatter___image___internal___mediaType",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___internal___description",
+=======
             "name": "frontmatter___image___internal___owner",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___internal___fieldOwners",
+=======
             "name": "frontmatter___image___internal___type",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___internal___ignoreType",
+=======
             "name": "frontmatter___image___childMarkdownRemark___id",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___internal___mediaType",
+=======
             "name": "frontmatter___image___childMarkdownRemark___excerpt",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___internal___owner",
+=======
             "name": "frontmatter___image___childMarkdownRemark___rawMarkdownBody",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___internal___type",
+=======
             "name": "frontmatter___image___childMarkdownRemark___fileAbsolutePath",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childMarkdownRemark___id",
+=======
             "name": "frontmatter___image___childMarkdownRemark___html",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childMarkdownRemark___excerpt",
+=======
             "name": "frontmatter___image___childMarkdownRemark___htmlAst",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childMarkdownRemark___rawMarkdownBody",
+=======
             "name": "frontmatter___image___childMarkdownRemark___excerptAst",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childMarkdownRemark___fileAbsolutePath",
+=======
             "name": "frontmatter___image___childMarkdownRemark___headings",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childMarkdownRemark___html",
+=======
             "name": "frontmatter___image___childMarkdownRemark___timeToRead",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childMarkdownRemark___htmlAst",
+=======
             "name": "frontmatter___image___childMarkdownRemark___tableOfContents",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childMarkdownRemark___excerptAst",
+=======
             "name": "frontmatter___image___childMarkdownRemark___children",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childMarkdownRemark___headings",
+=======
+            "name": "frontmatter___sitemap",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+          },
+          {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childMarkdownRemark___timeToRead",
+=======
+            "name": "frontmatter___image_alignment_classes",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+          },
+          {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childMarkdownRemark___tableOfContents",
+=======
             "name": "frontmatter___carouselImages",
+>>>>>>> Adding page for staff
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___image___childMarkdownRemark___children",
+=======
             "name": "frontmatter___carouselImages___mainImage___sourceInstanceName",
+>>>>>>> Adding page for staff
             "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___carouselImages",
+=======
             "name": "frontmatter___carouselImages___mainImage___absolutePath",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___carouselImages___mainImage___sourceInstanceName",
+=======
             "name": "frontmatter___carouselImages___mainImage___relativePath",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___carouselImages___mainImage___absolutePath",
+=======
             "name": "frontmatter___carouselImages___mainImage___extension",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___carouselImages___mainImage___relativePath",
+=======
             "name": "frontmatter___carouselImages___mainImage___size",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___carouselImages___mainImage___extension",
+=======
             "name": "frontmatter___carouselImages___mainImage___prettySize",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___carouselImages___mainImage___size",
+=======
             "name": "frontmatter___carouselImages___mainImage___modifiedTime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___carouselImages___mainImage___prettySize",
+=======
             "name": "frontmatter___carouselImages___mainImage___accessTime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___carouselImages___mainImage___modifiedTime",
+=======
             "name": "frontmatter___carouselImages___mainImage___changeTime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___carouselImages___mainImage___accessTime",
+=======
             "name": "frontmatter___carouselImages___mainImage___birthTime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "frontmatter___carouselImages___mainImage___changeTime",
+=======
+            "name": "frontmatter___carouselImages___mainImage___root",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+<<<<<<< HEAD
+            "name": "frontmatter___carouselImages___mainImage___birthTime",
+=======
+            "name": "frontmatter___carouselImages___mainImage___dir",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+<<<<<<< HEAD
             "name": "frontmatter___carouselImages___mainImage___root",
             "description": null,
             "isDeprecated": false,
@@ -27344,6 +27804,8 @@
             "deprecationReason": null
           },
           {
+=======
+>>>>>>> Adding page for staff
             "name": "frontmatter___carouselImages___mainImage___base",
             "description": null,
             "isDeprecated": false,
@@ -27435,6 +27897,7 @@
           },
           {
             "name": "frontmatter___carouselImages___mainImage___mtime",
+<<<<<<< HEAD
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -27447,60 +27910,98 @@
           },
           {
             "name": "frontmatter___carouselImages___mainImage___birthtime",
+=======
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "frontmatter___carouselImages___mainImage___birthtimeMs",
+=======
+            "name": "frontmatter___carouselImages___mainImage___ctime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "frontmatter___carouselImages___mainImage___blksize",
+=======
+            "name": "frontmatter___carouselImages___mainImage___birthtime",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "frontmatter___carouselImages___mainImage___blocks",
+=======
+            "name": "frontmatter___carouselImages___mainImage___birthtimeMs",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "frontmatter___carouselImages___mainImage___publicURL",
+=======
+            "name": "frontmatter___carouselImages___mainImage___blksize",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "frontmatter___carouselImages___mainImage___id",
+=======
+            "name": "frontmatter___carouselImages___mainImage___blocks",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "frontmatter___carouselImages___mainImage___children",
+=======
+            "name": "frontmatter___carouselImages___mainImage___publicURL",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "frontmatter___carouselImages___position",
+=======
+            "name": "frontmatter___carouselImages___mainImage___id",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "frontmatter___sitemap",
+=======
+            "name": "frontmatter___carouselImages___mainImage___children",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "frontmatter___image_alignment_classes",
+=======
+            "name": "frontmatter___carouselImages___position",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -29624,36 +30125,6 @@
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
-            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___showInMenu",
-            "description": null,
-            "isDeprecated": true,
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
-          },
-          {
-            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___menuOrder",
-            "description": null,
-            "isDeprecated": true,
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
-          },
-          {
-            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___overlayCaption",
-            "description": null,
-            "isDeprecated": true,
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
-          },
-          {
-            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___captionPosition",
-            "description": null,
-            "isDeprecated": true,
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
-          },
-          {
-            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreText",
-            "description": null,
-            "isDeprecated": true,
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
-          },
-          {
             "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___layout",
             "description": null,
             "isDeprecated": true,
@@ -29666,19 +30137,69 @@
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___overlayCaption",
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+          },
+          {
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreText",
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+          },
+          {
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___showInMenu",
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+          },
+          {
+<<<<<<< HEAD
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___layout",
+=======
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___menuOrder",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+          },
+          {
+<<<<<<< HEAD
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___section",
+=======
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___captionPosition",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+          },
+          {
+<<<<<<< HEAD
             "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___carouselImages",
-            "description": null,
-            "isDeprecated": true,
-            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
-          },
-          {
+=======
             "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___sitemap",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+<<<<<<< HEAD
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___sitemap",
+=======
             "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___image_alignment_classes",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+          },
+          {
+<<<<<<< HEAD
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___image_alignment_classes",
+=======
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___carouselImages",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
@@ -42674,36 +43195,6 @@
             "deprecationReason": null
           },
           {
-            "name": "relativePath___childMarkdownRemark___frontmatter___showInMenu",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "relativePath___childMarkdownRemark___frontmatter___menuOrder",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "relativePath___childMarkdownRemark___frontmatter___overlayCaption",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "relativePath___childMarkdownRemark___frontmatter___captionPosition",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "relativePath___childMarkdownRemark___frontmatter___findOutMoreText",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "relativePath___childMarkdownRemark___frontmatter___layout",
             "description": null,
             "isDeprecated": false,
@@ -42716,19 +43207,69 @@
             "deprecationReason": null
           },
           {
+            "name": "relativePath___childMarkdownRemark___frontmatter___overlayCaption",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "relativePath___childMarkdownRemark___frontmatter___findOutMoreText",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "relativePath___childMarkdownRemark___frontmatter___showInMenu",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+<<<<<<< HEAD
+            "name": "relativePath___childMarkdownRemark___frontmatter___layout",
+=======
+            "name": "relativePath___childMarkdownRemark___frontmatter___menuOrder",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+<<<<<<< HEAD
+            "name": "relativePath___childMarkdownRemark___frontmatter___section",
+=======
+            "name": "relativePath___childMarkdownRemark___frontmatter___captionPosition",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+<<<<<<< HEAD
             "name": "relativePath___childMarkdownRemark___frontmatter___carouselImages",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
+=======
             "name": "relativePath___childMarkdownRemark___frontmatter___sitemap",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "relativePath___childMarkdownRemark___frontmatter___sitemap",
+=======
             "name": "relativePath___childMarkdownRemark___frontmatter___image_alignment_classes",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+<<<<<<< HEAD
+            "name": "relativePath___childMarkdownRemark___frontmatter___image_alignment_classes",
+=======
+            "name": "relativePath___childMarkdownRemark___frontmatter___carouselImages",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -44198,36 +44739,6 @@
             "deprecationReason": null
           },
           {
-            "name": "base___childMarkdownRemark___frontmatter___showInMenu",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "base___childMarkdownRemark___frontmatter___menuOrder",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "base___childMarkdownRemark___frontmatter___overlayCaption",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "base___childMarkdownRemark___frontmatter___captionPosition",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "base___childMarkdownRemark___frontmatter___findOutMoreText",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "base___childMarkdownRemark___frontmatter___layout",
             "description": null,
             "isDeprecated": false,
@@ -44240,19 +44751,69 @@
             "deprecationReason": null
           },
           {
+            "name": "base___childMarkdownRemark___frontmatter___overlayCaption",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "base___childMarkdownRemark___frontmatter___findOutMoreText",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "base___childMarkdownRemark___frontmatter___showInMenu",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+<<<<<<< HEAD
+            "name": "base___childMarkdownRemark___frontmatter___layout",
+=======
+            "name": "base___childMarkdownRemark___frontmatter___menuOrder",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+<<<<<<< HEAD
+            "name": "base___childMarkdownRemark___frontmatter___section",
+=======
+            "name": "base___childMarkdownRemark___frontmatter___captionPosition",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+<<<<<<< HEAD
             "name": "base___childMarkdownRemark___frontmatter___carouselImages",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
+=======
             "name": "base___childMarkdownRemark___frontmatter___sitemap",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "base___childMarkdownRemark___frontmatter___sitemap",
+=======
             "name": "base___childMarkdownRemark___frontmatter___image_alignment_classes",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+<<<<<<< HEAD
+            "name": "base___childMarkdownRemark___frontmatter___image_alignment_classes",
+=======
+            "name": "base___childMarkdownRemark___frontmatter___carouselImages",
+>>>>>>> Adding page for staff
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -45182,6 +45743,249 @@
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+=======
+            "name": "childMarkdownRemark___frontmatter___layout",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___section",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___sourceInstanceName",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___absolutePath",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___relativePath",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___extension",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___size",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___prettySize",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___modifiedTime",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___accessTime",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___changeTime",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___birthTime",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___root",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___dir",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___base",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___ext",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___name",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___relativeDirectory",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___dev",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___mode",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___nlink",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___uid",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___gid",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___rdev",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___ino",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___atimeMs",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___mtimeMs",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___ctimeMs",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___atime",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___mtime",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___ctime",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___birthtime",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___birthtimeMs",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___blksize",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___blocks",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___publicURL",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___mainImage___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___overlayCaption",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___findOutMoreText",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+>>>>>>> Adding page for staff
             "name": "childMarkdownRemark___frontmatter___showInMenu",
             "description": null,
             "isDeprecated": false,
@@ -45626,18 +46430,13 @@
             "deprecationReason": null
           },
           {
-            "name": "childMarkdownRemark___frontmatter___overlayCaption",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "childMarkdownRemark___frontmatter___captionPosition",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
             "name": "childMarkdownRemark___frontmatter___findOutMoreText",
             "description": null,
             "isDeprecated": false,
@@ -45656,6 +46455,8 @@
             "deprecationReason": null
           },
           {
+=======
+>>>>>>> Adding page for staff
             "name": "childMarkdownRemark___frontmatter___image___sourceInstanceName",
             "description": null,
             "isDeprecated": false,
@@ -45872,6 +46673,28 @@
             "deprecationReason": null
           },
           {
+<<<<<<< HEAD
+            "name": "childMarkdownRemark___frontmatter___carouselImages",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___carouselImages___position",
+=======
+            "name": "childMarkdownRemark___frontmatter___sitemap",
+>>>>>>> Adding page for staff
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___image_alignment_classes",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "childMarkdownRemark___frontmatter___carouselImages",
             "description": null,
             "isDeprecated": false,
@@ -45884,13 +46707,7 @@
             "deprecationReason": null
           },
           {
-            "name": "childMarkdownRemark___frontmatter___sitemap",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "childMarkdownRemark___frontmatter___image_alignment_classes",
+            "name": "childMarkdownRemark___frontmatter___mobileImage",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

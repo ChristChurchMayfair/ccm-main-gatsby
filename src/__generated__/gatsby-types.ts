@@ -692,6 +692,15 @@ enum FileFieldsEnum {
   internal___type = 'internal.type',
   childMarkdownRemark___id = 'childMarkdownRemark.id',
   childMarkdownRemark___frontmatter___title = 'childMarkdownRemark.frontmatter.title',
+<<<<<<< HEAD
+=======
+  childMarkdownRemark___frontmatter___path = 'childMarkdownRemark.frontmatter.path',
+  childMarkdownRemark___frontmatter___showInFooter = 'childMarkdownRemark.frontmatter.showInFooter',
+  childMarkdownRemark___frontmatter___headerColour = 'childMarkdownRemark.frontmatter.headerColour',
+  childMarkdownRemark___frontmatter___template = 'childMarkdownRemark.frontmatter.template',
+  childMarkdownRemark___frontmatter___layout = 'childMarkdownRemark.frontmatter.layout',
+  childMarkdownRemark___frontmatter___section = 'childMarkdownRemark.frontmatter.section',
+>>>>>>> Adding page for staff
   childMarkdownRemark___frontmatter___mainImage___sourceInstanceName = 'childMarkdownRemark.frontmatter.mainImage.sourceInstanceName',
   childMarkdownRemark___frontmatter___mainImage___absolutePath = 'childMarkdownRemark.frontmatter.mainImage.absolutePath',
   childMarkdownRemark___frontmatter___mainImage___relativePath = 'childMarkdownRemark.frontmatter.mainImage.relativePath',
@@ -728,10 +737,15 @@ enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___mainImage___publicURL = 'childMarkdownRemark.frontmatter.mainImage.publicURL',
   childMarkdownRemark___frontmatter___mainImage___id = 'childMarkdownRemark.frontmatter.mainImage.id',
   childMarkdownRemark___frontmatter___mainImage___children = 'childMarkdownRemark.frontmatter.mainImage.children',
+<<<<<<< HEAD
   childMarkdownRemark___frontmatter___path = 'childMarkdownRemark.frontmatter.path',
   childMarkdownRemark___frontmatter___showInFooter = 'childMarkdownRemark.frontmatter.showInFooter',
   childMarkdownRemark___frontmatter___headerColour = 'childMarkdownRemark.frontmatter.headerColour',
   childMarkdownRemark___frontmatter___template = 'childMarkdownRemark.frontmatter.template',
+=======
+  childMarkdownRemark___frontmatter___overlayCaption = 'childMarkdownRemark.frontmatter.overlayCaption',
+  childMarkdownRemark___frontmatter___findOutMoreText = 'childMarkdownRemark.frontmatter.findOutMoreText',
+>>>>>>> Adding page for staff
   childMarkdownRemark___frontmatter___showInMenu = 'childMarkdownRemark.frontmatter.showInMenu',
   childMarkdownRemark___frontmatter___menuOrder = 'childMarkdownRemark.frontmatter.menuOrder',
   childMarkdownRemark___frontmatter___firstIntroImage___sourceInstanceName = 'childMarkdownRemark.frontmatter.firstIntroImage.sourceInstanceName',
@@ -806,11 +820,13 @@ enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___secondIntroImage___publicURL = 'childMarkdownRemark.frontmatter.secondIntroImage.publicURL',
   childMarkdownRemark___frontmatter___secondIntroImage___id = 'childMarkdownRemark.frontmatter.secondIntroImage.id',
   childMarkdownRemark___frontmatter___secondIntroImage___children = 'childMarkdownRemark.frontmatter.secondIntroImage.children',
-  childMarkdownRemark___frontmatter___overlayCaption = 'childMarkdownRemark.frontmatter.overlayCaption',
   childMarkdownRemark___frontmatter___captionPosition = 'childMarkdownRemark.frontmatter.captionPosition',
+<<<<<<< HEAD
   childMarkdownRemark___frontmatter___findOutMoreText = 'childMarkdownRemark.frontmatter.findOutMoreText',
   childMarkdownRemark___frontmatter___layout = 'childMarkdownRemark.frontmatter.layout',
   childMarkdownRemark___frontmatter___section = 'childMarkdownRemark.frontmatter.section',
+=======
+>>>>>>> Adding page for staff
   childMarkdownRemark___frontmatter___image___sourceInstanceName = 'childMarkdownRemark.frontmatter.image.sourceInstanceName',
   childMarkdownRemark___frontmatter___image___absolutePath = 'childMarkdownRemark.frontmatter.image.absolutePath',
   childMarkdownRemark___frontmatter___image___relativePath = 'childMarkdownRemark.frontmatter.image.relativePath',
@@ -847,10 +863,17 @@ enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___image___publicURL = 'childMarkdownRemark.frontmatter.image.publicURL',
   childMarkdownRemark___frontmatter___image___id = 'childMarkdownRemark.frontmatter.image.id',
   childMarkdownRemark___frontmatter___image___children = 'childMarkdownRemark.frontmatter.image.children',
+<<<<<<< HEAD
   childMarkdownRemark___frontmatter___carouselImages = 'childMarkdownRemark.frontmatter.carouselImages',
   childMarkdownRemark___frontmatter___carouselImages___position = 'childMarkdownRemark.frontmatter.carouselImages.position',
   childMarkdownRemark___frontmatter___sitemap = 'childMarkdownRemark.frontmatter.sitemap',
   childMarkdownRemark___frontmatter___image_alignment_classes = 'childMarkdownRemark.frontmatter.image_alignment_classes',
+=======
+  childMarkdownRemark___frontmatter___sitemap = 'childMarkdownRemark.frontmatter.sitemap',
+  childMarkdownRemark___frontmatter___image_alignment_classes = 'childMarkdownRemark.frontmatter.image_alignment_classes',
+  childMarkdownRemark___frontmatter___carouselImages = 'childMarkdownRemark.frontmatter.carouselImages',
+  childMarkdownRemark___frontmatter___carouselImages___position = 'childMarkdownRemark.frontmatter.carouselImages.position',
+>>>>>>> Adding page for staff
   childMarkdownRemark___frontmatter___mobileImage = 'childMarkdownRemark.frontmatter.mobileImage',
   childMarkdownRemark___frontmatter___dayOfWeek = 'childMarkdownRemark.frontmatter.dayOfWeek',
   childMarkdownRemark___frontmatter___timeOfDay = 'childMarkdownRemark.frontmatter.timeOfDay',
@@ -1512,16 +1535,25 @@ enum FrontmatterMarkdownFileFieldsEnum {
   relativePath___childMarkdownRemark___frontmatter___showInFooter = 'relativePath.childMarkdownRemark.frontmatter.showInFooter',
   relativePath___childMarkdownRemark___frontmatter___headerColour = 'relativePath.childMarkdownRemark.frontmatter.headerColour',
   relativePath___childMarkdownRemark___frontmatter___template = 'relativePath.childMarkdownRemark.frontmatter.template',
+  relativePath___childMarkdownRemark___frontmatter___layout = 'relativePath.childMarkdownRemark.frontmatter.layout',
+  relativePath___childMarkdownRemark___frontmatter___section = 'relativePath.childMarkdownRemark.frontmatter.section',
+  relativePath___childMarkdownRemark___frontmatter___overlayCaption = 'relativePath.childMarkdownRemark.frontmatter.overlayCaption',
+  relativePath___childMarkdownRemark___frontmatter___findOutMoreText = 'relativePath.childMarkdownRemark.frontmatter.findOutMoreText',
   relativePath___childMarkdownRemark___frontmatter___showInMenu = 'relativePath.childMarkdownRemark.frontmatter.showInMenu',
   relativePath___childMarkdownRemark___frontmatter___menuOrder = 'relativePath.childMarkdownRemark.frontmatter.menuOrder',
-  relativePath___childMarkdownRemark___frontmatter___overlayCaption = 'relativePath.childMarkdownRemark.frontmatter.overlayCaption',
   relativePath___childMarkdownRemark___frontmatter___captionPosition = 'relativePath.childMarkdownRemark.frontmatter.captionPosition',
+<<<<<<< HEAD
   relativePath___childMarkdownRemark___frontmatter___findOutMoreText = 'relativePath.childMarkdownRemark.frontmatter.findOutMoreText',
   relativePath___childMarkdownRemark___frontmatter___layout = 'relativePath.childMarkdownRemark.frontmatter.layout',
   relativePath___childMarkdownRemark___frontmatter___section = 'relativePath.childMarkdownRemark.frontmatter.section',
   relativePath___childMarkdownRemark___frontmatter___carouselImages = 'relativePath.childMarkdownRemark.frontmatter.carouselImages',
   relativePath___childMarkdownRemark___frontmatter___sitemap = 'relativePath.childMarkdownRemark.frontmatter.sitemap',
   relativePath___childMarkdownRemark___frontmatter___image_alignment_classes = 'relativePath.childMarkdownRemark.frontmatter.image_alignment_classes',
+=======
+  relativePath___childMarkdownRemark___frontmatter___sitemap = 'relativePath.childMarkdownRemark.frontmatter.sitemap',
+  relativePath___childMarkdownRemark___frontmatter___image_alignment_classes = 'relativePath.childMarkdownRemark.frontmatter.image_alignment_classes',
+  relativePath___childMarkdownRemark___frontmatter___carouselImages = 'relativePath.childMarkdownRemark.frontmatter.carouselImages',
+>>>>>>> Adding page for staff
   relativePath___childMarkdownRemark___frontmatter___mobileImage = 'relativePath.childMarkdownRemark.frontmatter.mobileImage',
   relativePath___childMarkdownRemark___frontmatter___dayOfWeek = 'relativePath.childMarkdownRemark.frontmatter.dayOfWeek',
   relativePath___childMarkdownRemark___frontmatter___timeOfDay = 'relativePath.childMarkdownRemark.frontmatter.timeOfDay',
@@ -1766,16 +1798,25 @@ enum FrontmatterMarkdownFileFieldsEnum {
   base___childMarkdownRemark___frontmatter___showInFooter = 'base.childMarkdownRemark.frontmatter.showInFooter',
   base___childMarkdownRemark___frontmatter___headerColour = 'base.childMarkdownRemark.frontmatter.headerColour',
   base___childMarkdownRemark___frontmatter___template = 'base.childMarkdownRemark.frontmatter.template',
+  base___childMarkdownRemark___frontmatter___layout = 'base.childMarkdownRemark.frontmatter.layout',
+  base___childMarkdownRemark___frontmatter___section = 'base.childMarkdownRemark.frontmatter.section',
+  base___childMarkdownRemark___frontmatter___overlayCaption = 'base.childMarkdownRemark.frontmatter.overlayCaption',
+  base___childMarkdownRemark___frontmatter___findOutMoreText = 'base.childMarkdownRemark.frontmatter.findOutMoreText',
   base___childMarkdownRemark___frontmatter___showInMenu = 'base.childMarkdownRemark.frontmatter.showInMenu',
   base___childMarkdownRemark___frontmatter___menuOrder = 'base.childMarkdownRemark.frontmatter.menuOrder',
-  base___childMarkdownRemark___frontmatter___overlayCaption = 'base.childMarkdownRemark.frontmatter.overlayCaption',
   base___childMarkdownRemark___frontmatter___captionPosition = 'base.childMarkdownRemark.frontmatter.captionPosition',
+<<<<<<< HEAD
   base___childMarkdownRemark___frontmatter___findOutMoreText = 'base.childMarkdownRemark.frontmatter.findOutMoreText',
   base___childMarkdownRemark___frontmatter___layout = 'base.childMarkdownRemark.frontmatter.layout',
   base___childMarkdownRemark___frontmatter___section = 'base.childMarkdownRemark.frontmatter.section',
   base___childMarkdownRemark___frontmatter___carouselImages = 'base.childMarkdownRemark.frontmatter.carouselImages',
   base___childMarkdownRemark___frontmatter___sitemap = 'base.childMarkdownRemark.frontmatter.sitemap',
   base___childMarkdownRemark___frontmatter___image_alignment_classes = 'base.childMarkdownRemark.frontmatter.image_alignment_classes',
+=======
+  base___childMarkdownRemark___frontmatter___sitemap = 'base.childMarkdownRemark.frontmatter.sitemap',
+  base___childMarkdownRemark___frontmatter___image_alignment_classes = 'base.childMarkdownRemark.frontmatter.image_alignment_classes',
+  base___childMarkdownRemark___frontmatter___carouselImages = 'base.childMarkdownRemark.frontmatter.carouselImages',
+>>>>>>> Adding page for staff
   base___childMarkdownRemark___frontmatter___mobileImage = 'base.childMarkdownRemark.frontmatter.mobileImage',
   base___childMarkdownRemark___frontmatter___dayOfWeek = 'base.childMarkdownRemark.frontmatter.dayOfWeek',
   base___childMarkdownRemark___frontmatter___timeOfDay = 'base.childMarkdownRemark.frontmatter.timeOfDay',
@@ -1890,6 +1931,15 @@ enum FrontmatterMarkdownFileFieldsEnum {
   frontmatterValue = 'frontmatterValue',
   childMarkdownRemark___id = 'childMarkdownRemark.id',
   childMarkdownRemark___frontmatter___title = 'childMarkdownRemark.frontmatter.title',
+<<<<<<< HEAD
+=======
+  childMarkdownRemark___frontmatter___path = 'childMarkdownRemark.frontmatter.path',
+  childMarkdownRemark___frontmatter___showInFooter = 'childMarkdownRemark.frontmatter.showInFooter',
+  childMarkdownRemark___frontmatter___headerColour = 'childMarkdownRemark.frontmatter.headerColour',
+  childMarkdownRemark___frontmatter___template = 'childMarkdownRemark.frontmatter.template',
+  childMarkdownRemark___frontmatter___layout = 'childMarkdownRemark.frontmatter.layout',
+  childMarkdownRemark___frontmatter___section = 'childMarkdownRemark.frontmatter.section',
+>>>>>>> Adding page for staff
   childMarkdownRemark___frontmatter___mainImage___sourceInstanceName = 'childMarkdownRemark.frontmatter.mainImage.sourceInstanceName',
   childMarkdownRemark___frontmatter___mainImage___absolutePath = 'childMarkdownRemark.frontmatter.mainImage.absolutePath',
   childMarkdownRemark___frontmatter___mainImage___relativePath = 'childMarkdownRemark.frontmatter.mainImage.relativePath',
@@ -1926,10 +1976,15 @@ enum FrontmatterMarkdownFileFieldsEnum {
   childMarkdownRemark___frontmatter___mainImage___publicURL = 'childMarkdownRemark.frontmatter.mainImage.publicURL',
   childMarkdownRemark___frontmatter___mainImage___id = 'childMarkdownRemark.frontmatter.mainImage.id',
   childMarkdownRemark___frontmatter___mainImage___children = 'childMarkdownRemark.frontmatter.mainImage.children',
+<<<<<<< HEAD
   childMarkdownRemark___frontmatter___path = 'childMarkdownRemark.frontmatter.path',
   childMarkdownRemark___frontmatter___showInFooter = 'childMarkdownRemark.frontmatter.showInFooter',
   childMarkdownRemark___frontmatter___headerColour = 'childMarkdownRemark.frontmatter.headerColour',
   childMarkdownRemark___frontmatter___template = 'childMarkdownRemark.frontmatter.template',
+=======
+  childMarkdownRemark___frontmatter___overlayCaption = 'childMarkdownRemark.frontmatter.overlayCaption',
+  childMarkdownRemark___frontmatter___findOutMoreText = 'childMarkdownRemark.frontmatter.findOutMoreText',
+>>>>>>> Adding page for staff
   childMarkdownRemark___frontmatter___showInMenu = 'childMarkdownRemark.frontmatter.showInMenu',
   childMarkdownRemark___frontmatter___menuOrder = 'childMarkdownRemark.frontmatter.menuOrder',
   childMarkdownRemark___frontmatter___firstIntroImage___sourceInstanceName = 'childMarkdownRemark.frontmatter.firstIntroImage.sourceInstanceName',
@@ -2004,11 +2059,13 @@ enum FrontmatterMarkdownFileFieldsEnum {
   childMarkdownRemark___frontmatter___secondIntroImage___publicURL = 'childMarkdownRemark.frontmatter.secondIntroImage.publicURL',
   childMarkdownRemark___frontmatter___secondIntroImage___id = 'childMarkdownRemark.frontmatter.secondIntroImage.id',
   childMarkdownRemark___frontmatter___secondIntroImage___children = 'childMarkdownRemark.frontmatter.secondIntroImage.children',
-  childMarkdownRemark___frontmatter___overlayCaption = 'childMarkdownRemark.frontmatter.overlayCaption',
   childMarkdownRemark___frontmatter___captionPosition = 'childMarkdownRemark.frontmatter.captionPosition',
+<<<<<<< HEAD
   childMarkdownRemark___frontmatter___findOutMoreText = 'childMarkdownRemark.frontmatter.findOutMoreText',
   childMarkdownRemark___frontmatter___layout = 'childMarkdownRemark.frontmatter.layout',
   childMarkdownRemark___frontmatter___section = 'childMarkdownRemark.frontmatter.section',
+=======
+>>>>>>> Adding page for staff
   childMarkdownRemark___frontmatter___image___sourceInstanceName = 'childMarkdownRemark.frontmatter.image.sourceInstanceName',
   childMarkdownRemark___frontmatter___image___absolutePath = 'childMarkdownRemark.frontmatter.image.absolutePath',
   childMarkdownRemark___frontmatter___image___relativePath = 'childMarkdownRemark.frontmatter.image.relativePath',
@@ -2045,10 +2102,17 @@ enum FrontmatterMarkdownFileFieldsEnum {
   childMarkdownRemark___frontmatter___image___publicURL = 'childMarkdownRemark.frontmatter.image.publicURL',
   childMarkdownRemark___frontmatter___image___id = 'childMarkdownRemark.frontmatter.image.id',
   childMarkdownRemark___frontmatter___image___children = 'childMarkdownRemark.frontmatter.image.children',
+<<<<<<< HEAD
   childMarkdownRemark___frontmatter___carouselImages = 'childMarkdownRemark.frontmatter.carouselImages',
   childMarkdownRemark___frontmatter___carouselImages___position = 'childMarkdownRemark.frontmatter.carouselImages.position',
   childMarkdownRemark___frontmatter___sitemap = 'childMarkdownRemark.frontmatter.sitemap',
   childMarkdownRemark___frontmatter___image_alignment_classes = 'childMarkdownRemark.frontmatter.image_alignment_classes',
+=======
+  childMarkdownRemark___frontmatter___sitemap = 'childMarkdownRemark.frontmatter.sitemap',
+  childMarkdownRemark___frontmatter___image_alignment_classes = 'childMarkdownRemark.frontmatter.image_alignment_classes',
+  childMarkdownRemark___frontmatter___carouselImages = 'childMarkdownRemark.frontmatter.carouselImages',
+  childMarkdownRemark___frontmatter___carouselImages___position = 'childMarkdownRemark.frontmatter.carouselImages.position',
+>>>>>>> Adding page for staff
   childMarkdownRemark___frontmatter___mobileImage = 'childMarkdownRemark.frontmatter.mobileImage',
   childMarkdownRemark___frontmatter___dayOfWeek = 'childMarkdownRemark.frontmatter.dayOfWeek',
   childMarkdownRemark___frontmatter___timeOfDay = 'childMarkdownRemark.frontmatter.timeOfDay',
@@ -2984,6 +3048,15 @@ type MarkdownRemarkFields = {
 enum MarkdownRemarkFieldsEnum {
   id = 'id',
   frontmatter___title = 'frontmatter.title',
+<<<<<<< HEAD
+=======
+  frontmatter___path = 'frontmatter.path',
+  frontmatter___showInFooter = 'frontmatter.showInFooter',
+  frontmatter___headerColour = 'frontmatter.headerColour',
+  frontmatter___template = 'frontmatter.template',
+  frontmatter___layout = 'frontmatter.layout',
+  frontmatter___section = 'frontmatter.section',
+>>>>>>> Adding page for staff
   frontmatter___mainImage___sourceInstanceName = 'frontmatter.mainImage.sourceInstanceName',
   frontmatter___mainImage___absolutePath = 'frontmatter.mainImage.absolutePath',
   frontmatter___mainImage___relativePath = 'frontmatter.mainImage.relativePath',
@@ -3045,10 +3118,15 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___mainImage___childMarkdownRemark___timeToRead = 'frontmatter.mainImage.childMarkdownRemark.timeToRead',
   frontmatter___mainImage___childMarkdownRemark___tableOfContents = 'frontmatter.mainImage.childMarkdownRemark.tableOfContents',
   frontmatter___mainImage___childMarkdownRemark___children = 'frontmatter.mainImage.childMarkdownRemark.children',
+<<<<<<< HEAD
   frontmatter___path = 'frontmatter.path',
   frontmatter___showInFooter = 'frontmatter.showInFooter',
   frontmatter___headerColour = 'frontmatter.headerColour',
   frontmatter___template = 'frontmatter.template',
+=======
+  frontmatter___overlayCaption = 'frontmatter.overlayCaption',
+  frontmatter___findOutMoreText = 'frontmatter.findOutMoreText',
+>>>>>>> Adding page for staff
   frontmatter___showInMenu = 'frontmatter.showInMenu',
   frontmatter___menuOrder = 'frontmatter.menuOrder',
   frontmatter___firstIntroImage___sourceInstanceName = 'frontmatter.firstIntroImage.sourceInstanceName',
@@ -3173,11 +3251,13 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___secondIntroImage___childMarkdownRemark___timeToRead = 'frontmatter.secondIntroImage.childMarkdownRemark.timeToRead',
   frontmatter___secondIntroImage___childMarkdownRemark___tableOfContents = 'frontmatter.secondIntroImage.childMarkdownRemark.tableOfContents',
   frontmatter___secondIntroImage___childMarkdownRemark___children = 'frontmatter.secondIntroImage.childMarkdownRemark.children',
-  frontmatter___overlayCaption = 'frontmatter.overlayCaption',
   frontmatter___captionPosition = 'frontmatter.captionPosition',
+<<<<<<< HEAD
   frontmatter___findOutMoreText = 'frontmatter.findOutMoreText',
   frontmatter___layout = 'frontmatter.layout',
   frontmatter___section = 'frontmatter.section',
+=======
+>>>>>>> Adding page for staff
   frontmatter___image___sourceInstanceName = 'frontmatter.image.sourceInstanceName',
   frontmatter___image___absolutePath = 'frontmatter.image.absolutePath',
   frontmatter___image___relativePath = 'frontmatter.image.relativePath',
@@ -3239,6 +3319,7 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___image___childMarkdownRemark___timeToRead = 'frontmatter.image.childMarkdownRemark.timeToRead',
   frontmatter___image___childMarkdownRemark___tableOfContents = 'frontmatter.image.childMarkdownRemark.tableOfContents',
   frontmatter___image___childMarkdownRemark___children = 'frontmatter.image.childMarkdownRemark.children',
+<<<<<<< HEAD
   frontmatter___carouselImages = 'frontmatter.carouselImages',
   frontmatter___carouselImages___mainImage___sourceInstanceName = 'frontmatter.carouselImages.mainImage.sourceInstanceName',
   frontmatter___carouselImages___mainImage___absolutePath = 'frontmatter.carouselImages.mainImage.absolutePath',
@@ -3279,6 +3360,48 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___carouselImages___position = 'frontmatter.carouselImages.position',
   frontmatter___sitemap = 'frontmatter.sitemap',
   frontmatter___image_alignment_classes = 'frontmatter.image_alignment_classes',
+=======
+  frontmatter___sitemap = 'frontmatter.sitemap',
+  frontmatter___image_alignment_classes = 'frontmatter.image_alignment_classes',
+  frontmatter___carouselImages = 'frontmatter.carouselImages',
+  frontmatter___carouselImages___mainImage___sourceInstanceName = 'frontmatter.carouselImages.mainImage.sourceInstanceName',
+  frontmatter___carouselImages___mainImage___absolutePath = 'frontmatter.carouselImages.mainImage.absolutePath',
+  frontmatter___carouselImages___mainImage___relativePath = 'frontmatter.carouselImages.mainImage.relativePath',
+  frontmatter___carouselImages___mainImage___extension = 'frontmatter.carouselImages.mainImage.extension',
+  frontmatter___carouselImages___mainImage___size = 'frontmatter.carouselImages.mainImage.size',
+  frontmatter___carouselImages___mainImage___prettySize = 'frontmatter.carouselImages.mainImage.prettySize',
+  frontmatter___carouselImages___mainImage___modifiedTime = 'frontmatter.carouselImages.mainImage.modifiedTime',
+  frontmatter___carouselImages___mainImage___accessTime = 'frontmatter.carouselImages.mainImage.accessTime',
+  frontmatter___carouselImages___mainImage___changeTime = 'frontmatter.carouselImages.mainImage.changeTime',
+  frontmatter___carouselImages___mainImage___birthTime = 'frontmatter.carouselImages.mainImage.birthTime',
+  frontmatter___carouselImages___mainImage___root = 'frontmatter.carouselImages.mainImage.root',
+  frontmatter___carouselImages___mainImage___dir = 'frontmatter.carouselImages.mainImage.dir',
+  frontmatter___carouselImages___mainImage___base = 'frontmatter.carouselImages.mainImage.base',
+  frontmatter___carouselImages___mainImage___ext = 'frontmatter.carouselImages.mainImage.ext',
+  frontmatter___carouselImages___mainImage___name = 'frontmatter.carouselImages.mainImage.name',
+  frontmatter___carouselImages___mainImage___relativeDirectory = 'frontmatter.carouselImages.mainImage.relativeDirectory',
+  frontmatter___carouselImages___mainImage___dev = 'frontmatter.carouselImages.mainImage.dev',
+  frontmatter___carouselImages___mainImage___mode = 'frontmatter.carouselImages.mainImage.mode',
+  frontmatter___carouselImages___mainImage___nlink = 'frontmatter.carouselImages.mainImage.nlink',
+  frontmatter___carouselImages___mainImage___uid = 'frontmatter.carouselImages.mainImage.uid',
+  frontmatter___carouselImages___mainImage___gid = 'frontmatter.carouselImages.mainImage.gid',
+  frontmatter___carouselImages___mainImage___rdev = 'frontmatter.carouselImages.mainImage.rdev',
+  frontmatter___carouselImages___mainImage___ino = 'frontmatter.carouselImages.mainImage.ino',
+  frontmatter___carouselImages___mainImage___atimeMs = 'frontmatter.carouselImages.mainImage.atimeMs',
+  frontmatter___carouselImages___mainImage___mtimeMs = 'frontmatter.carouselImages.mainImage.mtimeMs',
+  frontmatter___carouselImages___mainImage___ctimeMs = 'frontmatter.carouselImages.mainImage.ctimeMs',
+  frontmatter___carouselImages___mainImage___atime = 'frontmatter.carouselImages.mainImage.atime',
+  frontmatter___carouselImages___mainImage___mtime = 'frontmatter.carouselImages.mainImage.mtime',
+  frontmatter___carouselImages___mainImage___ctime = 'frontmatter.carouselImages.mainImage.ctime',
+  frontmatter___carouselImages___mainImage___birthtime = 'frontmatter.carouselImages.mainImage.birthtime',
+  frontmatter___carouselImages___mainImage___birthtimeMs = 'frontmatter.carouselImages.mainImage.birthtimeMs',
+  frontmatter___carouselImages___mainImage___blksize = 'frontmatter.carouselImages.mainImage.blksize',
+  frontmatter___carouselImages___mainImage___blocks = 'frontmatter.carouselImages.mainImage.blocks',
+  frontmatter___carouselImages___mainImage___publicURL = 'frontmatter.carouselImages.mainImage.publicURL',
+  frontmatter___carouselImages___mainImage___id = 'frontmatter.carouselImages.mainImage.id',
+  frontmatter___carouselImages___mainImage___children = 'frontmatter.carouselImages.mainImage.children',
+  frontmatter___carouselImages___position = 'frontmatter.carouselImages.position',
+>>>>>>> Adding page for staff
   frontmatter___mobileImage = 'frontmatter.mobileImage',
   frontmatter___dayOfWeek = 'frontmatter.dayOfWeek',
   frontmatter___timeOfDay = 'frontmatter.timeOfDay',
@@ -3632,16 +3755,25 @@ enum MarkdownRemarkFieldsEnum {
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___showInFooter = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.showInFooter',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___headerColour = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.headerColour',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___template = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.template',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___layout = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.layout',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___section = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.section',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___overlayCaption = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.overlayCaption',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreText = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.findOutMoreText',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___showInMenu = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.showInMenu',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___menuOrder = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.menuOrder',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___overlayCaption = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.overlayCaption',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___captionPosition = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.captionPosition',
+<<<<<<< HEAD
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreText = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.findOutMoreText',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___layout = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.layout',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___section = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.section',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___carouselImages = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.carouselImages',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___sitemap = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.sitemap',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___image_alignment_classes = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.image_alignment_classes',
+=======
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___sitemap = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.sitemap',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___image_alignment_classes = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.image_alignment_classes',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___carouselImages = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.carouselImages',
+>>>>>>> Adding page for staff
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___mobileImage = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.mobileImage',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___dayOfWeek = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.dayOfWeek',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___timeOfDay = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.timeOfDay',
@@ -3773,12 +3905,20 @@ type MarkdownRemarkFrontmatter = {
   readonly showInFooter: Maybe<Scalars['Boolean']>;
   readonly headerColour: Maybe<Scalars['String']>;
   readonly template: Maybe<Scalars['String']>;
+<<<<<<< HEAD
+=======
+  readonly layout: Maybe<Scalars['String']>;
+  readonly section: Maybe<Scalars['String']>;
+  readonly mainImage: Maybe<File>;
+  readonly overlayCaption: Maybe<Scalars['String']>;
+  readonly findOutMoreText: Maybe<Scalars['String']>;
+>>>>>>> Adding page for staff
   readonly showInMenu: Maybe<Scalars['Boolean']>;
   readonly menuOrder: Maybe<Scalars['Int']>;
   readonly firstIntroImage: Maybe<File>;
   readonly secondIntroImage: Maybe<File>;
-  readonly overlayCaption: Maybe<Scalars['String']>;
   readonly captionPosition: Maybe<Scalars['String']>;
+<<<<<<< HEAD
   readonly findOutMoreText: Maybe<Scalars['String']>;
   readonly layout: Maybe<Scalars['String']>;
   readonly section: Maybe<Scalars['String']>;
@@ -3786,6 +3926,12 @@ type MarkdownRemarkFrontmatter = {
   readonly carouselImages: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterCarouselImages>>>;
   readonly sitemap: Maybe<Scalars['Boolean']>;
   readonly image_alignment_classes: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+=======
+  readonly image: Maybe<File>;
+  readonly sitemap: Maybe<Scalars['Boolean']>;
+  readonly image_alignment_classes: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly carouselImages: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterCarouselImages>>>;
+>>>>>>> Adding page for staff
   readonly mobileImage: Maybe<Scalars['String']>;
   readonly dayOfWeek: Maybe<Scalars['String']>;
   readonly timeOfDay: Maybe<Scalars['String']>;
@@ -3897,12 +4043,20 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly showInFooter: Maybe<BooleanQueryOperatorInput>;
   readonly headerColour: Maybe<StringQueryOperatorInput>;
   readonly template: Maybe<StringQueryOperatorInput>;
+<<<<<<< HEAD
+=======
+  readonly layout: Maybe<StringQueryOperatorInput>;
+  readonly section: Maybe<StringQueryOperatorInput>;
+  readonly mainImage: Maybe<FileFilterInput>;
+  readonly overlayCaption: Maybe<StringQueryOperatorInput>;
+  readonly findOutMoreText: Maybe<StringQueryOperatorInput>;
+>>>>>>> Adding page for staff
   readonly showInMenu: Maybe<BooleanQueryOperatorInput>;
   readonly menuOrder: Maybe<IntQueryOperatorInput>;
   readonly firstIntroImage: Maybe<FileFilterInput>;
   readonly secondIntroImage: Maybe<FileFilterInput>;
-  readonly overlayCaption: Maybe<StringQueryOperatorInput>;
   readonly captionPosition: Maybe<StringQueryOperatorInput>;
+<<<<<<< HEAD
   readonly findOutMoreText: Maybe<StringQueryOperatorInput>;
   readonly layout: Maybe<StringQueryOperatorInput>;
   readonly section: Maybe<StringQueryOperatorInput>;
@@ -3910,6 +4064,12 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly carouselImages: Maybe<MarkdownRemarkFrontmatterCarouselImagesFilterListInput>;
   readonly sitemap: Maybe<BooleanQueryOperatorInput>;
   readonly image_alignment_classes: Maybe<StringQueryOperatorInput>;
+=======
+  readonly image: Maybe<FileFilterInput>;
+  readonly sitemap: Maybe<BooleanQueryOperatorInput>;
+  readonly image_alignment_classes: Maybe<StringQueryOperatorInput>;
+  readonly carouselImages: Maybe<MarkdownRemarkFrontmatterCarouselImagesFilterListInput>;
+>>>>>>> Adding page for staff
   readonly mobileImage: Maybe<StringQueryOperatorInput>;
   readonly dayOfWeek: Maybe<StringQueryOperatorInput>;
   readonly timeOfDay: Maybe<StringQueryOperatorInput>;
@@ -6956,16 +7116,12 @@ type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>;
 };
 
-type StaffProfileFragment = (
-  Pick<SanityStaff, 'name' | 'email' | 'job_title' | 'phone'>
-  & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
-);
-
 type CookieNoticeQueryVariables = {};
 
 
 type CookieNoticeQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'cookie_notice'>> }> };
 
+<<<<<<< HEAD
 type HeadQueryVariables = {};
 
 
@@ -6978,6 +7134,12 @@ type FindUsQueryVariables = {};
 
 
 type FindUsQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'church_address' | 'nearest_tube_stations' | 'google_map_embedded_iframe_url'>> }> };
+=======
+type StaffProfileFragment = (
+  Pick<SanityStaff, 'name' | 'email' | 'job_title' | 'phone'>
+  & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
+);
+>>>>>>> Adding page for staff
 
 type CovidNoticeQueryVariables = {};
 
@@ -6990,6 +7152,11 @@ type CovidNoticeQuery = { readonly covid: Maybe<(
     )> }
   )> };
 
+type FindUsQueryVariables = {};
+
+
+type FindUsQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'church_address' | 'nearest_tube_stations' | 'google_map_embedded_iframe_url'>> }> };
+
 type FooterQueryVariables = {};
 
 
@@ -7001,6 +7168,7 @@ type FooterQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
       )> }
     )> }> };
 
+<<<<<<< HEAD
 type ServiceFragment = (
   Pick<MarkdownRemark, 'id' | 'html'>
   & { readonly frontmatter: Maybe<(
@@ -7015,6 +7183,28 @@ type ServicesQueryVariables = {};
 type ServicesQuery = { readonly am: Maybe<ServiceFragment>, readonly pm: Maybe<ServiceFragment> };
 
 type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+=======
+type HeadQueryVariables = {};
+
+
+type HeadQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
+      Pick<SiteSiteMetadata, 'title' | 'description'>
+      & { readonly podcast: Maybe<Pick<SiteSiteMetadataPodcast, 'title' | 'url'>> }
+    )> }> };
+
+type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+type AboutUsQueryVariables = {};
+
+
+type AboutUsQuery = { readonly page: Maybe<{ readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }> }>, readonly aboutUsSections: { readonly nodes: ReadonlyArray<(
+      Pick<MarkdownRemark, 'id' | 'html'>
+      & { readonly frontmatter: Maybe<(
+        Pick<MarkdownRemarkFrontmatter, 'title' | 'style_classes' | 'fullBleed' | 'imageObjectPosition'>
+        & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+      )> }
+    )> } };
+>>>>>>> Adding page for staff
 
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
@@ -7048,7 +7238,22 @@ type AboutUsQuery = { readonly page: Maybe<{ readonly fields: Maybe<{ readonly f
       )> }
     )> } };
 
+<<<<<<< HEAD
 type SanityHeadshotFragment = { readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> };
+=======
+type ServiceFragment = (
+  Pick<MarkdownRemark, 'id' | 'html'>
+  & { readonly frontmatter: Maybe<(
+    Pick<MarkdownRemarkFrontmatter, 'title' | 'time'>
+    & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+  )> }
+);
+
+type ServicesQueryVariables = {};
+
+
+type ServicesQuery = { readonly am: Maybe<ServiceFragment>, readonly pm: Maybe<ServiceFragment> };
+>>>>>>> Adding page for staff
 
 type HomepageQueryVariables = {};
 
@@ -7073,6 +7278,7 @@ type HomepageQuery = { readonly mainInfo: Maybe<(
     )> }
   )> };
 
+<<<<<<< HEAD
 type FamiliesQueryVariables = {};
 
 
@@ -7098,6 +7304,15 @@ type FamiliesQuery = { readonly mainContent: Maybe<(
       Pick<SanityStaff, 'name' | 'job_title' | 'email' | 'phone'>
       & { readonly headshot: Maybe<SanityHeadshotFragment> }
     )> }, readonly littleLambsWorker: { readonly nodes: ReadonlyArray<(
+=======
+type StaffQueryVariables = {};
+
+
+type StaffQuery = { readonly mainInfo: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'headerColour'>> }
+  )>, readonly staff: { readonly nodes: ReadonlyArray<(
+>>>>>>> Adding page for staff
       Pick<SanityStaff, 'name' | 'job_title' | 'email' | 'phone'>
       & { readonly headshot: Maybe<SanityHeadshotFragment> }
     )> } };
@@ -7127,6 +7342,7 @@ type GatsbySanityImageFluid_withWebpFragment = Pick<SanityImageFluid, 'base64' |
 
 type GatsbySanityImageFluid_withWebp_noBase64Fragment = Pick<SanityImageFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
+<<<<<<< HEAD
 type BasicPageQueryVariables = {
   id: Scalars['String'];
 };
@@ -7135,6 +7351,23 @@ type BasicPageQueryVariables = {
 type BasicPageQuery = { readonly mainInfo: Maybe<(
     Pick<MarkdownRemark, 'html'>
     & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }
+=======
+type StudentTemplateQueryVariables = {};
+
+
+type StudentTemplateQuery = { readonly studentWorkers: { readonly nodes: ReadonlyArray<StaffProfileFragment> }, readonly mainContent: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }>, readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption'>
+      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }> }
+    )> }
+  )>, readonly extraContent: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'title'>
+      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+    )> }
+>>>>>>> Adding page for staff
   )> };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;

@@ -70,7 +70,7 @@ const IndexPage = () => {
             }
         }
     `)
-
+    
     const [visibleHeroIndex, setVisibleHeroIndex] = useState(0)
 
     const carouselImages = data.mainInfo!.frontmatter!.carouselImages!
