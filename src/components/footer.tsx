@@ -3,27 +3,26 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 import ccmLogo from "../content/assets/images/ccm-logo-full.svg"
 
+const links: Array<{ path: string; title: string }> = [
+    { path: "/littlelambs", title: "Little Lambs" },
+    { path: "/covid19", title: "Covid-19" },
+    { path: "/our-beliefs", title: "Our Beliefs" },
+    { path: "/talks", title: "Talks" },
+    { path: "/privacy-notice", title: "Privacy Notice" },
+    { path: "/music", title: "Music" },
+    { path: "/families", title: "Families" },
+    { path: "/safeguarding", title: "Safeguarding" },
+    { path: "/students", title: "Students" },
+    { path: "/aboutus", title: "About Us" },
+    { path: "/accessibility", title: "Accessibility" },
+    { path: "/staff", title: "Staff" },
+    { path: "/blog", title: "Blog" },
+]
+
 const Footer = () => {
-    const { site, footerLinks } = useStaticQuery<GatsbyTypes.FooterQuery>(
+    const { site } = useStaticQuery<GatsbyTypes.FooterQuery>(
         graphql`
             query Footer {
-                footerLinks: allMarkdownRemark(
-                    filter: {
-                        frontmatter: {
-                            showInFooter: { eq: true }
-                            path: { ne: null }
-                            title: { ne: null }
-                        }
-                    }
-                ) {
-                    nodes {
-                        frontmatter {
-                            title
-                            path
-                            showInFooter
-                        }
-                    }
-                }
                 site {
                     siteMetadata {
                         church_address
@@ -47,24 +46,6 @@ const Footer = () => {
     const officePhoneNumber = metadata!.office_phone_number!
     const email = metadata!.email!
     const smallPrint = metadata!.footer!.smallprint!
-    const allFooterLinks: Array<{ path: string; title: string }> = [
-        ...footerLinks.nodes.flatMap(link => {
-            const url = link.frontmatter!.path
-            const title = link.frontmatter!.title
-            if (url == null || title == null) {
-                return []
-            }
-            return [{ path: url, title }]
-        }),
-        ...metadata!.footer!.extra_links!.flatMap(link => {
-            const url = link!.url
-            const title = link!.title
-            if (url == null || title == null) {
-                return []
-            }
-            return [{ path: url, title }]
-        }),
-    ]
     return (
         <footer>
             <div className="contact">
@@ -91,7 +72,7 @@ const Footer = () => {
                 </a>
             </div>
             <div className="all-links">
-                {allFooterLinks.map(({ path, title }) => {
+                {links.map(({ path, title }) => {
                     return (
                         <Link key={path} to={path}>
                             {title}
