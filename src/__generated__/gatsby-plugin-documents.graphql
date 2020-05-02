@@ -355,10 +355,3 @@ fragment GatsbySanityImageFluid_withWebp_noBase64 on SanityImageFluid {
   srcSetWebp
   sizes
 }
-query PagesQuery {
-  allSitePage(filter: { path: { ne: "/dev-404-page/" } }) {
-    nodes {
-      path
-    }
-  }
-}

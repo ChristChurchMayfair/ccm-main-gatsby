@@ -15,9 +15,18 @@ const CookieNotice = () => {
         }
     `)
 
-    const [consentResponse, setConsentResponse] = useState<string | undefined>(
-        () => Cookies.get(COOKIE_CONSENT_KEY)
-    )
+    const [consentResponse, setConsentResponse] = useState<
+        "accepted" | "declined" | undefined
+    >(undefined)
+    const [isInitialCookieLoaded, setIsInitialCookieLoaded] = useState(false)
+    useEffect(() => {
+        // @ts-ignore
+        const cookie: "accepted" | "declined" | undefined = Cookies.get(
+            COOKIE_CONSENT_KEY
+        )
+        setConsentResponse(cookie)
+        setIsInitialCookieLoaded(true)
+    }, [])
 
     useEffect(() => {
         if (consentResponse != null) {
@@ -30,12 +39,15 @@ const CookieNotice = () => {
         }
     }, [consentResponse])
 
+    // We don't want to show the notice until we've had a chance to read the
+    // cookie, otherwise we will get jank from the notice briefly flashing up.
+    const showNotice = consentResponse == null && isInitialCookieLoaded === true
     return (
         <div
             id="cookie-notice"
             className="cookie-notice"
-            style={consentResponse == null ? { bottom: 0 } : undefined}
-            aria-hidden={consentResponse != null}
+            style={showNotice ? { bottom: 0 } : undefined}
+            aria-hidden={showNotice === false}
         >
             <div className="notice">
                 {data.site!.siteMetadata!.cookie_notice!}
