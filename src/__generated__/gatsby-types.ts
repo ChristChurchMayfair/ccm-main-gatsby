@@ -776,6 +776,7 @@ enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___menuOrder = 'childMarkdownRemark.frontmatter.menuOrder',
   childMarkdownRemark___frontmatter___mobileImage = 'childMarkdownRemark.frontmatter.mobileImage',
   childMarkdownRemark___frontmatter___captionPosition = 'childMarkdownRemark.frontmatter.captionPosition',
+  childMarkdownRemark___frontmatter___layout = 'childMarkdownRemark.frontmatter.layout',
   childMarkdownRemark___frontmatter___dayOfWeek = 'childMarkdownRemark.frontmatter.dayOfWeek',
   childMarkdownRemark___frontmatter___timeOfDay = 'childMarkdownRemark.frontmatter.timeOfDay',
   childMarkdownRemark___frontmatter___type = 'childMarkdownRemark.frontmatter.type',
@@ -810,6 +811,9 @@ enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___people___photo = 'childMarkdownRemark.frontmatter.people.photo',
   childMarkdownRemark___frontmatter___people___headshot_position = 'childMarkdownRemark.frontmatter.people.headshot_position',
   childMarkdownRemark___frontmatter___findOutMoreLink = 'childMarkdownRemark.frontmatter.findOutMoreLink',
+  childMarkdownRemark___frontmatter___style_classes = 'childMarkdownRemark.frontmatter.style_classes',
+  childMarkdownRemark___frontmatter___imageObjectPosition = 'childMarkdownRemark.frontmatter.imageObjectPosition',
+  childMarkdownRemark___frontmatter___fullBleed = 'childMarkdownRemark.frontmatter.fullBleed',
   childMarkdownRemark___excerpt = 'childMarkdownRemark.excerpt',
   childMarkdownRemark___rawMarkdownBody = 'childMarkdownRemark.rawMarkdownBody',
   childMarkdownRemark___fileAbsolutePath = 'childMarkdownRemark.fileAbsolutePath',
@@ -1436,6 +1440,7 @@ enum FrontmatterMarkdownFileFieldsEnum {
   relativePath___childMarkdownRemark___frontmatter___menuOrder = 'relativePath.childMarkdownRemark.frontmatter.menuOrder',
   relativePath___childMarkdownRemark___frontmatter___mobileImage = 'relativePath.childMarkdownRemark.frontmatter.mobileImage',
   relativePath___childMarkdownRemark___frontmatter___captionPosition = 'relativePath.childMarkdownRemark.frontmatter.captionPosition',
+  relativePath___childMarkdownRemark___frontmatter___layout = 'relativePath.childMarkdownRemark.frontmatter.layout',
   relativePath___childMarkdownRemark___frontmatter___dayOfWeek = 'relativePath.childMarkdownRemark.frontmatter.dayOfWeek',
   relativePath___childMarkdownRemark___frontmatter___timeOfDay = 'relativePath.childMarkdownRemark.frontmatter.timeOfDay',
   relativePath___childMarkdownRemark___frontmatter___type = 'relativePath.childMarkdownRemark.frontmatter.type',
@@ -1456,6 +1461,9 @@ enum FrontmatterMarkdownFileFieldsEnum {
   relativePath___childMarkdownRemark___frontmatter___leader = 'relativePath.childMarkdownRemark.frontmatter.leader',
   relativePath___childMarkdownRemark___frontmatter___people = 'relativePath.childMarkdownRemark.frontmatter.people',
   relativePath___childMarkdownRemark___frontmatter___findOutMoreLink = 'relativePath.childMarkdownRemark.frontmatter.findOutMoreLink',
+  relativePath___childMarkdownRemark___frontmatter___style_classes = 'relativePath.childMarkdownRemark.frontmatter.style_classes',
+  relativePath___childMarkdownRemark___frontmatter___imageObjectPosition = 'relativePath.childMarkdownRemark.frontmatter.imageObjectPosition',
+  relativePath___childMarkdownRemark___frontmatter___fullBleed = 'relativePath.childMarkdownRemark.frontmatter.fullBleed',
   relativePath___childMarkdownRemark___excerpt = 'relativePath.childMarkdownRemark.excerpt',
   relativePath___childMarkdownRemark___rawMarkdownBody = 'relativePath.childMarkdownRemark.rawMarkdownBody',
   relativePath___childMarkdownRemark___fileAbsolutePath = 'relativePath.childMarkdownRemark.fileAbsolutePath',
@@ -1679,6 +1687,7 @@ enum FrontmatterMarkdownFileFieldsEnum {
   base___childMarkdownRemark___frontmatter___menuOrder = 'base.childMarkdownRemark.frontmatter.menuOrder',
   base___childMarkdownRemark___frontmatter___mobileImage = 'base.childMarkdownRemark.frontmatter.mobileImage',
   base___childMarkdownRemark___frontmatter___captionPosition = 'base.childMarkdownRemark.frontmatter.captionPosition',
+  base___childMarkdownRemark___frontmatter___layout = 'base.childMarkdownRemark.frontmatter.layout',
   base___childMarkdownRemark___frontmatter___dayOfWeek = 'base.childMarkdownRemark.frontmatter.dayOfWeek',
   base___childMarkdownRemark___frontmatter___timeOfDay = 'base.childMarkdownRemark.frontmatter.timeOfDay',
   base___childMarkdownRemark___frontmatter___type = 'base.childMarkdownRemark.frontmatter.type',
@@ -1699,6 +1708,9 @@ enum FrontmatterMarkdownFileFieldsEnum {
   base___childMarkdownRemark___frontmatter___leader = 'base.childMarkdownRemark.frontmatter.leader',
   base___childMarkdownRemark___frontmatter___people = 'base.childMarkdownRemark.frontmatter.people',
   base___childMarkdownRemark___frontmatter___findOutMoreLink = 'base.childMarkdownRemark.frontmatter.findOutMoreLink',
+  base___childMarkdownRemark___frontmatter___style_classes = 'base.childMarkdownRemark.frontmatter.style_classes',
+  base___childMarkdownRemark___frontmatter___imageObjectPosition = 'base.childMarkdownRemark.frontmatter.imageObjectPosition',
+  base___childMarkdownRemark___frontmatter___fullBleed = 'base.childMarkdownRemark.frontmatter.fullBleed',
   base___childMarkdownRemark___excerpt = 'base.childMarkdownRemark.excerpt',
   base___childMarkdownRemark___rawMarkdownBody = 'base.childMarkdownRemark.rawMarkdownBody',
   base___childMarkdownRemark___fileAbsolutePath = 'base.childMarkdownRemark.fileAbsolutePath',
@@ -1869,6 +1881,7 @@ enum FrontmatterMarkdownFileFieldsEnum {
   childMarkdownRemark___frontmatter___menuOrder = 'childMarkdownRemark.frontmatter.menuOrder',
   childMarkdownRemark___frontmatter___mobileImage = 'childMarkdownRemark.frontmatter.mobileImage',
   childMarkdownRemark___frontmatter___captionPosition = 'childMarkdownRemark.frontmatter.captionPosition',
+  childMarkdownRemark___frontmatter___layout = 'childMarkdownRemark.frontmatter.layout',
   childMarkdownRemark___frontmatter___dayOfWeek = 'childMarkdownRemark.frontmatter.dayOfWeek',
   childMarkdownRemark___frontmatter___timeOfDay = 'childMarkdownRemark.frontmatter.timeOfDay',
   childMarkdownRemark___frontmatter___type = 'childMarkdownRemark.frontmatter.type',
@@ -1903,6 +1916,9 @@ enum FrontmatterMarkdownFileFieldsEnum {
   childMarkdownRemark___frontmatter___people___photo = 'childMarkdownRemark.frontmatter.people.photo',
   childMarkdownRemark___frontmatter___people___headshot_position = 'childMarkdownRemark.frontmatter.people.headshot_position',
   childMarkdownRemark___frontmatter___findOutMoreLink = 'childMarkdownRemark.frontmatter.findOutMoreLink',
+  childMarkdownRemark___frontmatter___style_classes = 'childMarkdownRemark.frontmatter.style_classes',
+  childMarkdownRemark___frontmatter___imageObjectPosition = 'childMarkdownRemark.frontmatter.imageObjectPosition',
+  childMarkdownRemark___frontmatter___fullBleed = 'childMarkdownRemark.frontmatter.fullBleed',
   childMarkdownRemark___excerpt = 'childMarkdownRemark.excerpt',
   childMarkdownRemark___rawMarkdownBody = 'childMarkdownRemark.rawMarkdownBody',
   childMarkdownRemark___fileAbsolutePath = 'childMarkdownRemark.fileAbsolutePath',
@@ -2966,6 +2982,7 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___menuOrder = 'frontmatter.menuOrder',
   frontmatter___mobileImage = 'frontmatter.mobileImage',
   frontmatter___captionPosition = 'frontmatter.captionPosition',
+  frontmatter___layout = 'frontmatter.layout',
   frontmatter___dayOfWeek = 'frontmatter.dayOfWeek',
   frontmatter___timeOfDay = 'frontmatter.timeOfDay',
   frontmatter___type = 'frontmatter.type',
@@ -3002,6 +3019,9 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___people___photo = 'frontmatter.people.photo',
   frontmatter___people___headshot_position = 'frontmatter.people.headshot_position',
   frontmatter___findOutMoreLink = 'frontmatter.findOutMoreLink',
+  frontmatter___style_classes = 'frontmatter.style_classes',
+  frontmatter___imageObjectPosition = 'frontmatter.imageObjectPosition',
+  frontmatter___fullBleed = 'frontmatter.fullBleed',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
@@ -3318,6 +3338,7 @@ enum MarkdownRemarkFieldsEnum {
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___menuOrder = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.menuOrder',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___mobileImage = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.mobileImage',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___captionPosition = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.captionPosition',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___layout = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.layout',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___dayOfWeek = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.dayOfWeek',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___timeOfDay = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.timeOfDay',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___type = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.type',
@@ -3338,6 +3359,9 @@ enum MarkdownRemarkFieldsEnum {
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___leader = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.leader',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___people = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.people',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreLink = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.findOutMoreLink',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___style_classes = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.style_classes',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___imageObjectPosition = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.imageObjectPosition',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___fullBleed = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.fullBleed',
   childFrontmatterMarkdownFile___childMarkdownRemark___excerpt = 'childFrontmatterMarkdownFile.childMarkdownRemark.excerpt',
   childFrontmatterMarkdownFile___childMarkdownRemark___rawMarkdownBody = 'childFrontmatterMarkdownFile.childMarkdownRemark.rawMarkdownBody',
   childFrontmatterMarkdownFile___childMarkdownRemark___fileAbsolutePath = 'childFrontmatterMarkdownFile.childMarkdownRemark.fileAbsolutePath',
@@ -3449,6 +3473,7 @@ type MarkdownRemarkFrontmatter = {
   readonly menuOrder: Maybe<Scalars['Int']>;
   readonly mobileImage: Maybe<Scalars['String']>;
   readonly captionPosition: Maybe<Scalars['String']>;
+  readonly layout: Maybe<Scalars['String']>;
   readonly dayOfWeek: Maybe<Scalars['String']>;
   readonly timeOfDay: Maybe<Scalars['String']>;
   readonly type: Maybe<Scalars['String']>;
@@ -3469,6 +3494,9 @@ type MarkdownRemarkFrontmatter = {
   readonly leader: Maybe<Scalars['String']>;
   readonly people: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterPeople>>>;
   readonly findOutMoreLink: Maybe<Scalars['String']>;
+  readonly style_classes: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly imageObjectPosition: Maybe<Scalars['String']>;
+  readonly fullBleed: Maybe<Scalars['Boolean']>;
 };
 
 type MarkdownRemarkFrontmatterCarouselImages = {
@@ -3560,6 +3588,7 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly menuOrder: Maybe<IntQueryOperatorInput>;
   readonly mobileImage: Maybe<StringQueryOperatorInput>;
   readonly captionPosition: Maybe<StringQueryOperatorInput>;
+  readonly layout: Maybe<StringQueryOperatorInput>;
   readonly dayOfWeek: Maybe<StringQueryOperatorInput>;
   readonly timeOfDay: Maybe<StringQueryOperatorInput>;
   readonly type: Maybe<StringQueryOperatorInput>;
@@ -3580,6 +3609,9 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly leader: Maybe<StringQueryOperatorInput>;
   readonly people: Maybe<MarkdownRemarkFrontmatterPeopleFilterListInput>;
   readonly findOutMoreLink: Maybe<StringQueryOperatorInput>;
+  readonly style_classes: Maybe<StringQueryOperatorInput>;
+  readonly imageObjectPosition: Maybe<StringQueryOperatorInput>;
+  readonly fullBleed: Maybe<BooleanQueryOperatorInput>;
 };
 
 type MarkdownRemarkFrontmatterPeople = {
@@ -3834,6 +3866,8 @@ type Query_allSitePageArgs = {
 type Query_siteArgs = {
   buildTime: Maybe<DateQueryOperatorInput>;
   siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
+  port: Maybe<IntQueryOperatorInput>;
+  host: Maybe<StringQueryOperatorInput>;
   polyfill: Maybe<BooleanQueryOperatorInput>;
   pathPrefix: Maybe<StringQueryOperatorInput>;
   id: Maybe<StringQueryOperatorInput>;
@@ -5593,6 +5627,8 @@ type SanityStaffSortInput = {
 type Site = Node & {
   readonly buildTime: Maybe<Scalars['Date']>;
   readonly siteMetadata: Maybe<SiteSiteMetadata>;
+  readonly port: Maybe<Scalars['Int']>;
+  readonly host: Maybe<Scalars['String']>;
   readonly polyfill: Maybe<Scalars['Boolean']>;
   readonly pathPrefix: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
@@ -5815,6 +5851,8 @@ enum SiteFieldsEnum {
   siteMetadata___music_team_info_google_sheet___id = 'siteMetadata.music_team_info_google_sheet.id',
   siteMetadata___music_team_info_google_sheet___morning_sheet_number = 'siteMetadata.music_team_info_google_sheet.morning_sheet_number',
   siteMetadata___music_team_info_google_sheet___evening_sheet_number = 'siteMetadata.music_team_info_google_sheet.evening_sheet_number',
+  port = 'port',
+  host = 'host',
   polyfill = 'polyfill',
   pathPrefix = 'pathPrefix',
   id = 'id',
@@ -5908,6 +5946,8 @@ enum SiteFieldsEnum {
 type SiteFilterInput = {
   readonly buildTime: Maybe<DateQueryOperatorInput>;
   readonly siteMetadata: Maybe<SiteSiteMetadataFilterInput>;
+  readonly port: Maybe<IntQueryOperatorInput>;
+  readonly host: Maybe<StringQueryOperatorInput>;
   readonly polyfill: Maybe<BooleanQueryOperatorInput>;
   readonly pathPrefix: Maybe<StringQueryOperatorInput>;
   readonly id: Maybe<StringQueryOperatorInput>;
@@ -6595,6 +6635,16 @@ type StaffProfileFragment = (
   & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
 );
 
+type CookieNoticeQueryVariables = {};
+
+
+type CookieNoticeQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'cookie_notice'>> }> };
+
+type FindUsQueryVariables = {};
+
+
+type FindUsQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'church_address' | 'nearest_tube_stations' | 'google_map_embedded_iframe_url'>> }> };
+
 type CovidNoticeQueryVariables = {};
 
 
@@ -6605,16 +6655,6 @@ type CovidNoticeQuery = { readonly covid: Maybe<(
       & { readonly features: Maybe<ReadonlyArray<Maybe<Pick<MarkdownRemarkFrontmatterFeatures, 'title' | 'description' | 'buttonText' | 'buttonLink'>>>> }
     )> }
   )> };
-
-type CookieNoticeQueryVariables = {};
-
-
-type CookieNoticeQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'cookie_notice'>> }> };
-
-type FindUsQueryVariables = {};
-
-
-type FindUsQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'church_address' | 'nearest_tube_stations' | 'google_map_embedded_iframe_url'>> }> };
 
 type HeadQueryVariables = {};
 
@@ -6627,7 +6667,7 @@ type HeadQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
 type FooterQueryVariables = {};
 
 
-type FooterQuery = { readonly footerLinks: { readonly nodes: ReadonlyArray<{ readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'path' | 'showInFooter'>> }> }, readonly site: Maybe<{ readonly siteMetadata: Maybe<(
+type FooterQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
       Pick<SiteSiteMetadata, 'church_address' | 'office_maps_link' | 'office_phone_number' | 'email'>
       & { readonly footer: Maybe<(
         Pick<SiteSiteMetadataFooter, 'smallprint'>
@@ -6647,6 +6687,14 @@ type ServicesQueryVariables = {};
 
 
 type ServicesQuery = { readonly am: Maybe<ServiceFragment>, readonly pm: Maybe<ServiceFragment> };
+
+type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+type SanityHeadshotFragment = { readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> };
+
+type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type HomepageQueryVariables = {};
 
@@ -6671,7 +6719,16 @@ type HomepageQuery = { readonly mainInfo: Maybe<(
     )> }
   )> };
 
-type SanityHeadshotFragment = { readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> };
+type AboutUsQueryVariables = {};
+
+
+type AboutUsQuery = { readonly page: Maybe<{ readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }> }>, readonly aboutUsSections: { readonly nodes: ReadonlyArray<(
+      Pick<MarkdownRemark, 'id' | 'html'>
+      & { readonly frontmatter: Maybe<(
+        Pick<MarkdownRemarkFrontmatter, 'title' | 'style_classes' | 'fullBleed' | 'imageObjectPosition'>
+        & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+      )> }
+    )> } };
 
 type StudentTemplateQueryVariables = {};
 
@@ -6698,8 +6755,6 @@ type GatsbySanityImageFixed_withWebpFragment = Pick<SanityImageFixed, 'base64' |
 
 type GatsbySanityImageFixed_withWebp_noBase64Fragment = Pick<SanityImageFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
 
-type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
 type GatsbySanityImageFluid_noBase64Fragment = Pick<SanityImageFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbySanityImageFluid_withWebpFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
@@ -6718,15 +6773,11 @@ type GatsbyImageSharpFixed_noBase64Fragment = Pick<ImageSharpFixed, 'width' | 'h
 
 type GatsbyImageSharpFixed_withWebp_noBase64Fragment = Pick<ImageSharpFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
 
-type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
-
 type GatsbyImageSharpFluid_tracedSVGFragment = Pick<ImageSharpFluid, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebpFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
@@ -6753,5 +6804,10 @@ type GatsbyImageSharpSizes_withWebp_tracedSVGFragment = Pick<ImageSharpSizes, 't
 type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type PagesQueryQueryVariables = {};
+
+
+type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
 }

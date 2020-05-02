@@ -1146,6 +1146,26 @@
                 "defaultValue": null
               },
               {
+                "name": "port",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "IntQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "host",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "StringQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
                 "name": "polyfill",
                 "description": "",
                 "type": {
@@ -5270,6 +5290,16 @@
             "defaultValue": null
           },
           {
+            "name": "layout",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "dayOfWeek",
             "description": "",
             "type": {
@@ -5465,6 +5495,36 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "style_classes",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "imageObjectPosition",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "fullBleed",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "BooleanQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null
@@ -10850,6 +10910,18 @@
             "deprecationReason": null
           },
           {
+            "name": "layout",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "dayOfWeek",
             "description": null,
             "args": [],
@@ -11096,6 +11168,46 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "style_classes",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "imageObjectPosition",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "fullBleed",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
               "ofType": null
             },
             "isDeprecated": false,
@@ -14314,6 +14426,12 @@
             "deprecationReason": null
           },
           {
+            "name": "childMarkdownRemark___frontmatter___layout",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "childMarkdownRemark___frontmatter___dayOfWeek",
             "description": null,
             "isDeprecated": false,
@@ -14513,6 +14631,24 @@
           },
           {
             "name": "childMarkdownRemark___frontmatter___findOutMoreLink",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___style_classes",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___imageObjectPosition",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___fullBleed",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -21880,6 +22016,30 @@
             "deprecationReason": null
           },
           {
+            "name": "port",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "host",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "polyfill",
             "description": null,
             "args": [],
@@ -22426,6 +22586,26 @@
             "defaultValue": null
           },
           {
+            "name": "port",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "IntQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "host",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "polyfill",
             "description": "",
             "type": {
@@ -22671,6 +22851,18 @@
           },
           {
             "name": "siteMetadata___music_team_info_google_sheet___evening_sheet_number",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "port",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "host",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -25888,6 +26080,12 @@
             "deprecationReason": null
           },
           {
+            "name": "frontmatter___layout",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "frontmatter___dayOfWeek",
             "description": null,
             "isDeprecated": false,
@@ -26099,6 +26297,24 @@
           },
           {
             "name": "frontmatter___findOutMoreLink",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "frontmatter___style_classes",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "frontmatter___imageObjectPosition",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "frontmatter___fullBleed",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -28000,6 +28216,12 @@
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
           },
           {
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___layout",
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+          },
+          {
             "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___dayOfWeek",
             "description": null,
             "isDeprecated": true,
@@ -28115,6 +28337,24 @@
           },
           {
             "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreLink",
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+          },
+          {
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___style_classes",
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+          },
+          {
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___imageObjectPosition",
+            "description": null,
+            "isDeprecated": true,
+            "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
+          },
+          {
+            "name": "childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___fullBleed",
             "description": null,
             "isDeprecated": true,
             "deprecationReason": "Sorting on fields that need arguments to resolve is deprecated."
@@ -40984,6 +41224,12 @@
             "deprecationReason": null
           },
           {
+            "name": "relativePath___childMarkdownRemark___frontmatter___layout",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "relativePath___childMarkdownRemark___frontmatter___dayOfWeek",
             "description": null,
             "isDeprecated": false,
@@ -41099,6 +41345,24 @@
           },
           {
             "name": "relativePath___childMarkdownRemark___frontmatter___findOutMoreLink",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "relativePath___childMarkdownRemark___frontmatter___style_classes",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "relativePath___childMarkdownRemark___frontmatter___imageObjectPosition",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "relativePath___childMarkdownRemark___frontmatter___fullBleed",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -42442,6 +42706,12 @@
             "deprecationReason": null
           },
           {
+            "name": "base___childMarkdownRemark___frontmatter___layout",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "base___childMarkdownRemark___frontmatter___dayOfWeek",
             "description": null,
             "isDeprecated": false,
@@ -42557,6 +42827,24 @@
           },
           {
             "name": "base___childMarkdownRemark___frontmatter___findOutMoreLink",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "base___childMarkdownRemark___frontmatter___style_classes",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "base___childMarkdownRemark___frontmatter___imageObjectPosition",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "base___childMarkdownRemark___frontmatter___fullBleed",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -43582,6 +43870,12 @@
             "deprecationReason": null
           },
           {
+            "name": "childMarkdownRemark___frontmatter___layout",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "childMarkdownRemark___frontmatter___dayOfWeek",
             "description": null,
             "isDeprecated": false,
@@ -43781,6 +44075,24 @@
           },
           {
             "name": "childMarkdownRemark___frontmatter___findOutMoreLink",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___style_classes",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___imageObjectPosition",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childMarkdownRemark___frontmatter___fullBleed",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
