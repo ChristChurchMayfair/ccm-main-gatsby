@@ -1026,16 +1026,6 @@
                 "defaultValue": null
               },
               {
-                "name": "context",
-                "description": "",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "SitePageContextFilterInput",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
                 "name": "pluginCreator",
                 "description": "",
                 "type": {
@@ -18511,27 +18501,6 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "SitePageContextFilterInput",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "remarkId",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
         "name": "SitePluginFilterInput",
         "description": null,
         "fields": null,
@@ -19273,18 +19242,6 @@
             "deprecationReason": null
           },
           {
-            "name": "context",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "SitePageContext",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "pluginCreator",
             "description": null,
             "args": [],
@@ -19329,29 +19286,6 @@
             "ofType": null
           }
         ],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "SitePageContext",
-        "description": null,
-        "fields": [
-          {
-            "name": "remarkId",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "SCALAR",
-              "name": "String",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
         "enumValues": null,
         "possibleTypes": null
       },
@@ -20124,16 +20058,6 @@
             "defaultValue": null
           },
           {
-            "name": "context",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "SitePageContextFilterInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "pluginCreator",
             "description": "",
             "type": {
@@ -20763,12 +20687,6 @@
           },
           {
             "name": "isCreatedByStatefulCreatePages",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "context___remarkId",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

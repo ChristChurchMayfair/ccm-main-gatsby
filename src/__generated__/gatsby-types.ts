@@ -3817,7 +3817,6 @@ type Query_sitePageArgs = {
   children: Maybe<NodeFilterListInput>;
   internal: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages: Maybe<BooleanQueryOperatorInput>;
-  context: Maybe<SitePageContextFilterInput>;
   pluginCreator: Maybe<SitePluginFilterInput>;
   pluginCreatorId: Maybe<StringQueryOperatorInput>;
   componentPath: Maybe<StringQueryOperatorInput>;
@@ -5945,7 +5944,6 @@ type SitePage = Node & {
   readonly children: ReadonlyArray<Node>;
   readonly internal: Internal;
   readonly isCreatedByStatefulCreatePages: Maybe<Scalars['Boolean']>;
-  readonly context: Maybe<SitePageContext>;
   readonly pluginCreator: Maybe<SitePlugin>;
   readonly pluginCreatorId: Maybe<Scalars['String']>;
   readonly componentPath: Maybe<Scalars['String']>;
@@ -5970,14 +5968,6 @@ type SitePageConnection_groupArgs = {
   skip: Maybe<Scalars['Int']>;
   limit: Maybe<Scalars['Int']>;
   field: SitePageFieldsEnum;
-};
-
-type SitePageContext = {
-  readonly remarkId: Maybe<Scalars['String']>;
-};
-
-type SitePageContextFilterInput = {
-  readonly remarkId: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePageEdge = {
@@ -6079,7 +6069,6 @@ enum SitePageFieldsEnum {
   internal___owner = 'internal.owner',
   internal___type = 'internal.type',
   isCreatedByStatefulCreatePages = 'isCreatedByStatefulCreatePages',
-  context___remarkId = 'context.remarkId',
   pluginCreator___id = 'pluginCreator.id',
   pluginCreator___parent___id = 'pluginCreator.parent.id',
   pluginCreator___parent___parent___id = 'pluginCreator.parent.parent.id',
@@ -6168,7 +6157,6 @@ type SitePageFilterInput = {
   readonly children: Maybe<NodeFilterListInput>;
   readonly internal: Maybe<InternalFilterInput>;
   readonly isCreatedByStatefulCreatePages: Maybe<BooleanQueryOperatorInput>;
-  readonly context: Maybe<SitePageContextFilterInput>;
   readonly pluginCreator: Maybe<SitePluginFilterInput>;
   readonly pluginCreatorId: Maybe<StringQueryOperatorInput>;
   readonly componentPath: Maybe<StringQueryOperatorInput>;
@@ -6610,15 +6598,15 @@ type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>;
 };
 
-type CookieNoticeQueryVariables = {};
-
-
-type CookieNoticeQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'cookie_notice'>> }> };
-
 type StaffProfileFragment = (
   Pick<SanityStaff, 'name' | 'email' | 'job_title' | 'phone'>
   & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
 );
+
+type CookieNoticeQueryVariables = {};
+
+
+type CookieNoticeQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'cookie_notice'>> }> };
 
 type CovidNoticeQueryVariables = {};
 
@@ -6699,9 +6687,7 @@ type HomepageQuery = { readonly mainInfo: Maybe<(
     )> }
   )> };
 
-type StudentTemplateQueryVariables = {
-  remarkId: Scalars['String'];
-};
+type StudentTemplateQueryVariables = {};
 
 
 type StudentTemplateQuery = { readonly studentWorkers: { readonly nodes: ReadonlyArray<StaffProfileFragment> }, readonly mainContent: Maybe<(

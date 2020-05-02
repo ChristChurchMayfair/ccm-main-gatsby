@@ -1,14 +1,63 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image/withIEPolyfill"
 
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Bio from "../components/bio"
 
-const Students: React.FC<{ data: GatsbyTypes.StudentTemplateQuery }> = ({
-    data,
-}) => {
+const Students: React.FC<{}> = () => {
+    const data = useStaticQuery<GatsbyTypes.StudentTemplateQuery>(graphql`
+        query StudentTemplate {
+            studentWorkers: allSanityStaff(
+                filter: {
+                    roles: { elemMatch: { slug: { eq: "student_worker" } } }
+                }
+            ) {
+                nodes {
+                    ...StaffProfile
+                }
+            }
+            mainContent: markdownRemark(
+                fileAbsolutePath: { regex: "/students/index.md$/" }
+            ) {
+                html
+                fields {
+                    frontmattermd {
+                        findOutMoreText {
+                            html
+                        }
+                    }
+                }
+                frontmatter {
+                    title
+                    mainImage {
+                        childImageSharp {
+                            fluid(maxWidth: 1920) {
+                                ...GatsbyImageSharpFluid_noBase64
+                            }
+                        }
+                    }
+                    overlayCaption
+                }
+            }
+            extraContent: markdownRemark(
+                fileAbsolutePath: { regex: "/extra_student_section.md$/" }
+            ) {
+                html
+                frontmatter {
+                    mainImage {
+                        childImageSharp {
+                            fluid(maxWidth: 1200) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
+                    title
+                }
+            }
+        }
+    `)
     const fluid = data.mainContent!.frontmatter!.mainImage!.childImageSharp!
         .fluid
 
@@ -72,51 +121,5 @@ const Students: React.FC<{ data: GatsbyTypes.StudentTemplateQuery }> = ({
         </Layout>
     )
 }
-export const pageQuery = graphql`
-    query StudentTemplate($remarkId: String!) {
-        studentWorkers: allSanityStaff(
-            filter: { roles: { elemMatch: { slug: { eq: "student_worker" } } } }
-        ) {
-            nodes {
-                ...StaffProfile
-            }
-        }
-        mainContent: markdownRemark(id: { eq: $remarkId }) {
-            html
-            fields {
-                frontmattermd {
-                    findOutMoreText {
-                        html
-                    }
-                }
-            }
-            frontmatter {
-                title
-                mainImage {
-                    childImageSharp {
-                        fluid(maxWidth: 1920) {
-                            ...GatsbyImageSharpFluid_noBase64
-                        }
-                    }
-                }
-                overlayCaption
-            }
-        }
-        extraContent: markdownRemark(
-            fileAbsolutePath: { regex: "/extra_student_section.md$/" }
-        ) {
-            html
-            frontmatter {
-                mainImage {
-                    childImageSharp {
-                        fluid(maxWidth: 1200) {
-                            ...GatsbyImageSharpFluid
-                        }
-                    }
-                }
-                title
-            }
-        }
-    }
-`
+
 export default Students
