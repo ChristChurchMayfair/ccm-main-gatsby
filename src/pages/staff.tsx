@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Img from "../components/img"
 import { sortedWithPriority } from "../utils"
 
-const IndexPage = () => {
+const StaffPage = () => {
     const data = useStaticQuery<GatsbyTypes.StaffQuery>(graphql`
         query Staff {
             mainInfo: markdownRemark(
@@ -108,7 +108,7 @@ const IndexPage = () => {
     )
 }
 
-export default IndexPage
+export default StaffPage
 
 // I wish gatsby gave us a way to specify this in the config file or something. For now, let's keep it here.
 export const globallyReusableFragments = graphql`

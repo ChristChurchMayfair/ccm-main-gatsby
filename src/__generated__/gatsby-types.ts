@@ -7141,6 +7141,19 @@ type StaffProfileFragment = (
 );
 >>>>>>> Adding page for staff
 
+type HeadQueryVariables = {};
+
+
+type HeadQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
+      Pick<SiteSiteMetadata, 'title' | 'description'>
+      & { readonly podcast: Maybe<Pick<SiteSiteMetadataPodcast, 'title' | 'url'>> }
+    )> }> };
+
+type FindUsQueryVariables = {};
+
+
+type FindUsQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'church_address' | 'nearest_tube_stations' | 'google_map_embedded_iframe_url'>> }> };
+
 type CovidNoticeQueryVariables = {};
 
 
@@ -7151,11 +7164,6 @@ type CovidNoticeQuery = { readonly covid: Maybe<(
       & { readonly features: Maybe<ReadonlyArray<Maybe<Pick<MarkdownRemarkFrontmatterFeatures, 'title' | 'description' | 'buttonText' | 'buttonLink'>>>> }
     )> }
   )> };
-
-type FindUsQueryVariables = {};
-
-
-type FindUsQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'church_address' | 'nearest_tube_stations' | 'google_map_embedded_iframe_url'>> }> };
 
 type FooterQueryVariables = {};
 
@@ -7169,6 +7177,9 @@ type FooterQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
     )> }> };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Tweaks based on feedback
 type ServiceFragment = (
   Pick<MarkdownRemark, 'id' | 'html'>
   & { readonly frontmatter: Maybe<(
@@ -7176,6 +7187,7 @@ type ServiceFragment = (
     & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
   )> }
 );
+<<<<<<< HEAD
 
 type ServicesQueryVariables = {};
 
@@ -7185,12 +7197,13 @@ type ServicesQuery = { readonly am: Maybe<ServiceFragment>, readonly pm: Maybe<S
 type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 =======
 type HeadQueryVariables = {};
+=======
+>>>>>>> Tweaks based on feedback
+
+type ServicesQueryVariables = {};
 
 
-type HeadQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
-      Pick<SiteSiteMetadata, 'title' | 'description'>
-      & { readonly podcast: Maybe<Pick<SiteSiteMetadataPodcast, 'title' | 'url'>> }
-    )> }> };
+type ServicesQuery = { readonly am: Maybe<ServiceFragment>, readonly pm: Maybe<ServiceFragment> };
 
 type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
@@ -7239,6 +7252,7 @@ type AboutUsQuery = { readonly page: Maybe<{ readonly fields: Maybe<{ readonly f
     )> } };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 type SanityHeadshotFragment = { readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> };
 =======
 type ServiceFragment = (
@@ -7248,12 +7262,39 @@ type ServiceFragment = (
     & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
   )> }
 );
+=======
+type BasicPageQueryVariables = {
+  id: Scalars['String'];
+};
+>>>>>>> Tweaks based on feedback
 
-type ServicesQueryVariables = {};
 
+type BasicPageQuery = { readonly mainInfo: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }
+  )> };
 
+type StudentTemplateQueryVariables = {};
+
+<<<<<<< HEAD
 type ServicesQuery = { readonly am: Maybe<ServiceFragment>, readonly pm: Maybe<ServiceFragment> };
 >>>>>>> Adding page for staff
+=======
+
+type StudentTemplateQuery = { readonly studentWorkers: { readonly nodes: ReadonlyArray<StaffProfileFragment> }, readonly mainContent: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }>, readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption'>
+      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }> }
+    )> }
+  )>, readonly extraContent: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'title'>
+      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+    )> }
+  )> };
+>>>>>>> Tweaks based on feedback
 
 type HomepageQueryVariables = {};
 
@@ -7317,6 +7358,7 @@ type StaffQuery = { readonly mainInfo: Maybe<(
       & { readonly headshot: Maybe<SanityHeadshotFragment> }
     )> } };
 
+<<<<<<< HEAD
 type TalksPageQueryVariables = {};
 
 
@@ -7328,6 +7370,8 @@ type TalksPageQuery = { readonly markdownRemark: Maybe<(
     )> }
   )> };
 
+=======
+>>>>>>> Tweaks based on feedback
 type GatsbySanityImageFixedFragment = Pick<SanityImageFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
 
 type GatsbySanityImageFixed_noBase64Fragment = Pick<SanityImageFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
@@ -7342,6 +7386,7 @@ type GatsbySanityImageFluid_withWebpFragment = Pick<SanityImageFluid, 'base64' |
 
 type GatsbySanityImageFluid_withWebp_noBase64Fragment = Pick<SanityImageFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 type BasicPageQueryVariables = {
   id: Scalars['String'];
@@ -7370,6 +7415,8 @@ type StudentTemplateQuery = { readonly studentWorkers: { readonly nodes: Readonl
 >>>>>>> Adding page for staff
   )> };
 
+=======
+>>>>>>> Tweaks based on feedback
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
 type GatsbyImageSharpFixed_tracedSVGFragment = Pick<ImageSharpFixed, 'tracedSVG' | 'width' | 'height' | 'src' | 'srcSet'>;

@@ -29,7 +29,7 @@ const Layout: React.FC<Props> = ({
 }) => {
     return (
         <>
-            <Head title={title ?? "Untitled Page"} description={description} meta={meta} />
+            <Head title={title} description={description} meta={meta} />
             <Header headerColour={headerColour} />
             <main>{children}</main>
             <Footer />
