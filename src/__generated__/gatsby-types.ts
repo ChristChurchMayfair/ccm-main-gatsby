@@ -7141,4 +7141,44 @@ type PagesQueryQueryVariables = {};
 
 type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
 
+type AccessibilityPageQueryVariables = {};
+
+
+type AccessibilityPageQuery = { readonly mainInfo: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption' | 'headerColour'>> }
+  )> };
+
+type Covid19PageQueryVariables = {};
+
+
+type Covid19PageQuery = { readonly mainInfo: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption' | 'headerColour'>> }
+  )> };
+
+type PrivacyNoticePageQueryVariables = {};
+
+
+type PrivacyNoticePageQuery = { readonly mainInfo: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption' | 'headerColour'>> }
+  )> };
+
+type SafeguardingPageQueryVariables = {};
+
+
+type SafeguardingPageQuery = { readonly mainInfo: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption' | 'headerColour'>> }
+  )> };
+
+type OurBeliefsPageQueryVariables = {};
+
+
+type OurBeliefsPageQuery = { readonly mainInfo: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption' | 'headerColour'>> }
+  )> };
+
 }
