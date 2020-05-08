@@ -69,7 +69,7 @@ const Students: React.FC<{}> = () => {
         >
             <Hero
                 sectionId="students-hero"
-                overlayCaption={data.mainContent!.frontmatter!.overlayCaption!}
+                overlayCaption={data.mainContent!.frontmatter!.overlayCaption}
                 sectionClass="left bottom"
                 fluid={fluid}
             />
