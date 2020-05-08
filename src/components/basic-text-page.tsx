@@ -9,14 +9,11 @@ const BasicText: React.FC<Props> = (props) => {
         <>
             <section className="header-underlay" />
             <section>
-                <article>
-                    <div
-                        className="text"
+                <article
                         dangerouslySetInnerHTML={{
                             __html: props.html ?? "Missing content",
                         }}
-                    />
-                </article>
+                />
             </section>
         </>
     )

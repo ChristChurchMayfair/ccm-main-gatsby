@@ -3,6 +3,7 @@ path: /safeguarding
 title: Safeguarding
 showInFooter: true
 headerColour: dark
+template: basic
 ---
 Safeguarding at Christ Church
 =========================================

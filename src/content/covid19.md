@@ -3,6 +3,7 @@ title: Covid-19
 path: /covid19
 showInFooter: true
 headerColour: dark
+template: basic
 ---
 # Responding to Coronavirus
 

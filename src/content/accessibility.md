@@ -3,6 +3,7 @@ title: Accessibility
 path: /accessibility
 showInFooter: true
 headerColour: dark
+template: basic
 ---
 Accessibility at Christ Church
 ==============================
