@@ -54,19 +54,19 @@ const Bio: React.FC<Props> = ({
                             </div>
                             <div className="info">
                                 <div className="name">{person.name}</div>
-                                <div className="role">{person.job_title}</div>
+                                <div className="role">{person.jobTitle}</div>
                                 <div className="email">
                                     <a href={`mailto:${person.email}`}>
                                         {person.email}
                                     </a>
                                 </div>
-                                {person.phone != null && (
+                                {/* {person.phone != null && (
                                     <div className="phone">
                                         <a href={`tel:${person.phone}`}>
                                             {person.phone}
                                         </a>
                                     </div>
-                                )}
+                                )} */}
                             </div>
                         </div>
                     )
@@ -77,10 +77,10 @@ const Bio: React.FC<Props> = ({
 }
 
 export const fragments = graphql`
-    fragment StaffProfile on SanityStaff {
+    fragment StaffProfile on SanityPerson {
         name
         email
-        job_title
+        jobTitle
         phone
         headshot {
             asset {

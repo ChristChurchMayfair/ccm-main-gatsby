@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Img from "../components/img"
 import { sortedWithPriority } from "../utils"
+const BlockContent = require('@sanity/block-content-to-react')
 
 const StaffPage = () => {
     const data = useStaticQuery<GatsbyTypes.StaffQuery>(graphql`
@@ -17,21 +18,42 @@ const StaffPage = () => {
                     headerColour
                 }
             }
-            staff: allSanityStaff {
+            staff: allSanityPerson(
+                filter: {
+                    roles: { elemMatch: { slug: { current: { eq: "staff" } } } }
+                }
+            ) {
                 nodes {
+                    id
                     name
-                    job_title
+                    jobTitle
                     email
-                    phone
+                    _rawBio
                     headshot {
-                        ...SanityHeadshot
+                        asset {
+                            fluid(maxWidth: 400) {
+                                ...GatsbySanityImageFluid
+                            }
+                        }
                     }
                 }
             }
         }
     `)
 
-    const staffNamesOrder = ["Matt Fuller", "Phil Allcock", "Scott Furey", "Nick Ashton", "Sharon Walsh", "Ali Davies", "Ben Slee"]
+    const staffNamesOrder = [
+        "Matt Fuller",
+        "Phil Allcock",
+        "Scott Furey",
+        "Nick Ashton",
+        "Sharon Walsh",
+        "Ali Davies",
+        "Ben Slee",
+        "Ellie Page",
+        "James Kight",
+        "Liz Hayden",
+        "Sarah Farrar-Bell"
+    ]
 
     const people = sortedWithPriority(
         data.staff!.nodes,
@@ -42,47 +64,28 @@ const StaffPage = () => {
     const allStaff = people.map(person => {
         const email = person!.email
         return (
-            <div className="person">
-                <div className="photo">
-                    <Img fluid={person.headshot!.asset!.fluid} />
+            <div key={person.id} className="person">
+                <div className="photo" style={{position:"relative"}}>
+                    <Img style={{
+                                        position: "absolute",
+                                        top: 0,
+                                        left: 0,
+                                        bottom: 0,
+                                        right: 0,
+                                    }} fluid={person.headshot?.asset?.fluid} />
                 </div>
                 <div className="info">
                     <div className="name">{person!.name!}</div>
-                    <div className="title">{person!.job_title!}</div>
+                    <div className="title">{person!.jobTitle!}</div>
                     {email != null && (
                         <div className="email">
                             <a href={`mailto:${email}`}>{email}</a>
                         </div>
                     )}
                     <div className="bio">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Nam iaculis risus sit amet ante congue, ut
-                            dignissim libero gravida. Duis et diam ut mi
-                            pharetra ornare eu ac felis. Morbi urna turpis,
-                            cursus nec tincidunt non, facilisis non libero.
-                            Vestibulum non ante id mauris tempus elementum.
-                            Integer ac tempus nulla. Curabitur porta tortor ac
-                            elit vestibulum, vel tempus risus sagittis. Fusce
-                            vitae sapien id leo tempor volutpat ut quis metus.
-                            Nunc id dui eu enim molestie euismod sit amet
-                            hendrerit erat. Nam ullamcorper eros in mi mollis, a
-                            viverra mauris scelerisque. Nunc volutpat maximus mi
-                            finibus consequat.
-                        </p>
-                        <p>
-                            Suspendisse tincidunt mattis ligula. Aliquam
-                            vestibulum urna ac vehicula porta. Nulla venenatis
-                            malesuada sapien, in tristique magna pharetra at.
-                            Vivamus lacinia neque eget mauris molestie, sit amet
-                            scelerisque diam condimentum. Suspendisse eu
-                            placerat elit. Proin interdum, sem eget aliquet
-                            vestibulum, ligula neque ullamcorper dui, eu
-                            dignissim diam lorem sit amet neque. Class aptent
-                            taciti sociosqu ad litora torquent per conubia
-                            nostra, per inceptos himenaeos. Sed sed arcu
-                            volutpat, blandit mi sed, facilisis odio.
-                        </p>
+                        <BlockContent
+                            blocks={person._rawBio}
+                        />
                     </div>
                 </div>
             </div>

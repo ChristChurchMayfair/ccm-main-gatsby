@@ -84,14 +84,18 @@ const Families: React.FC<{}> = () => {
                     title
                 }
             }
-            childrensWorkers: allSanityStaff(
+            childrensWorkers: allSanityPerson(
                 filter: {
-                    roles: { elemMatch: { slug: { eq: "childrens_worker" } } }
+                    roles: {
+                        elemMatch: {
+                            slug: { current: { eq: "childrens_worker" } }
+                        }
+                    }
                 }
             ) {
                 nodes {
                     name
-                    job_title
+                    jobTitle
                     email
                     phone
                     headshot {
@@ -99,14 +103,16 @@ const Families: React.FC<{}> = () => {
                     }
                 }
             }
-            littleLambsWorker: allSanityStaff(
+            littleLambsWorker: allSanityPerson(
                 filter: {
-                    roles: { elemMatch: { slug: { eq: "little_lambs" } } }
+                    roles: {
+                        elemMatch: { slug: { current: { eq: "little_lambs" } } }
+                    }
                 }
             ) {
                 nodes {
                     name
-                    job_title
+                    jobTitle
                     email
                     phone
                     headshot {
@@ -217,9 +223,7 @@ const Families: React.FC<{}> = () => {
                         position: "relative",
                     }}
                 >
-                    <h1>
-                        {data.littleLambs!.frontmatter!.title!}
-                    </h1>
+                    <h1>{data.littleLambs!.frontmatter!.title!}</h1>
                     <div
                         dangerouslySetInnerHTML={{
                             __html: data.littleLambs!.html!,

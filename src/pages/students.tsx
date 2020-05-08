@@ -9,9 +9,13 @@ import Bio from "../components/bio"
 const Students: React.FC<{}> = () => {
     const data = useStaticQuery<GatsbyTypes.StudentTemplateQuery>(graphql`
         query StudentTemplate {
-            studentWorkers: allSanityStaff(
+            studentWorkers: allSanityPerson(
                 filter: {
-                    roles: { elemMatch: { slug: { eq: "student_worker" } } }
+                    roles: {
+                        elemMatch: {
+                            slug: { current: { eq: "student_worker" } }
+                        }
+                    }
                 }
             ) {
                 nodes {

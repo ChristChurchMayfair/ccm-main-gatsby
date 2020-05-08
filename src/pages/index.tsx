@@ -38,18 +38,26 @@ const IndexPage = () => {
                     }
                 }
             }
-            administrators: allSanityStaff(
+            administrators: allSanityPerson(
                 filter: {
-                    roles: { elemMatch: { slug: { eq: "administrator" } } }
+                    roles: {
+                        elemMatch: {
+                            slug: { current: { eq: "administrator" } }
+                        }
+                    }
                 }
             ) {
                 nodes {
                     name
-                    job_title
+                    jobTitle
                     email
                     phone
                     headshot {
-                        ...SanityHeadshot
+                        asset {
+                            fluid(maxWidth: 400) {
+                                ...GatsbySanityImageFluid
+                            }
+                        }
                     }
                 }
             }
@@ -70,7 +78,7 @@ const IndexPage = () => {
             }
         }
     `)
-    
+
     const [visibleHeroIndex, setVisibleHeroIndex] = useState(0)
 
     const carouselImages = data.mainInfo!.frontmatter!.carouselImages!
