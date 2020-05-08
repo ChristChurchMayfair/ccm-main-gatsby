@@ -89,6 +89,8 @@ const AboutUs = () => {
                             </div>
                             <div
                                 className="text"
+                                // We need this to ensure the text appears
+                                // on top of the image.
                                 style={{ position: "relative" }}
                             >
                                 <h1>{section.frontmatter!.title}</h1>

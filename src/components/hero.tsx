@@ -5,7 +5,7 @@ import Img, { FluidObject } from "./img"
 interface Props {
     sectionId: string
     sectionClass: string
-    overlayCaption: string
+    overlayCaption?: string
     fluid: FluidObject | undefined
 }
 
