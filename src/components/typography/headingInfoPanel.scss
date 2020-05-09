@@ -1,0 +1,21 @@
+@import "typography";
+
+h1.heading-info-panel {
+    @include typography;
+
+    color: var(--dark-colour);
+    font-size: 5.5em;
+    line-height: 0.9em;
+    padding: 40px 0px 10px 0px;
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    font-weight: 200;
+
+    &--dark {
+        color: var(--light-colour);
+    }
+
+    @media only screen and (max-width: 968px) {
+        font-size: 3em;
+    }
+}

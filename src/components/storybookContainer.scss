@@ -1,0 +1,20 @@
+.storybook-container {
+    &--dark {
+        background-color: var(--dark-colour);
+    }
+
+    &--show-spacing {
+        border: 1px solid var(--dark-gray);
+    }
+}
+
+.storybook-container-spacing-viewer-label {
+    background-color: var(--dark-gray);
+    color: var(--light-colour);
+    padding: 2px 10px;
+    text-align: right;
+    font-family: var(--body-font);
+    display: block;
+    float: right;
+    border-radius: 0 0 4px 4px;
+}
