@@ -11,7 +11,9 @@ const StudentsPageQuery = graphql`
         studentWorkers: allSanityPerson(
             filter: {
                 roles: {
-                    elemMatch: { slug: { current: { eq: "student-worker" } } }
+                    elemMatch: { 
+                        slug: { current: { eq: "student-worker" } }
+                    }
                 }
             }
         ) {
