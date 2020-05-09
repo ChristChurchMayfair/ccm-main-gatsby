@@ -11,7 +11,7 @@ interface Props {
 const BasicPage: React.FC<Props> = ({ data }) => {
     return (
         <Layout title={data.mainInfo!.frontmatter!.title} headerColour="dark">
-            <BasicText html={data.mainInfo!.html!} />
+            <BasicText html={data.mainInfo!.html} />
         </Layout>
     )
 }

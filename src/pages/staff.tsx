@@ -56,13 +56,13 @@ const Staff = () => {
     ]
 
     const people = sortedWithPriority(
-        data.staff!.nodes,
+        data.staff.nodes,
         s => s.name!,
         staffNamesOrder
     )
 
     const allStaff = people.map(person => {
-        const email = person!.email
+        const email = person.email
         return (
             <div key={person.id} className="person">
                 <div className="photo" style={{ position: "relative" }}>
@@ -78,8 +78,8 @@ const Staff = () => {
                     />
                 </div>
                 <div className="info">
-                    <div className="name">{person!.name!}</div>
-                    <div className="title">{person!.jobTitle!}</div>
+                    <div className="name">{person.name!}</div>
+                    <div className="title">{person.jobTitle!}</div>
                     {email != null && (
                         <div className="email">
                             <a href={`mailto:${email}`}>{email}</a>
