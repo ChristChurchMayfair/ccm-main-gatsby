@@ -13,12 +13,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions
     const result = await graphql(`
         {
-            allMarkdownRemark {
+            allMarkdownRemark(
+                filter: { frontmatter: { template: { eq: "basic" } } }
+            ) {
                 nodes {
                     id
                     frontmatter {
-                        template
                         path
+                        title
                     }
                 }
             }
@@ -28,5 +30,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     if (result.errors) {
         reporter.panicOnBuild(`Error while running GraphQL query.`)
         return
+    }
+
+    for (const page of result.data.allMarkdownRemark.nodes) {
+        createPage({
+            path: page.frontmatter.path,
+            component: path.resolve("src/templates/basic.tsx"),
+            context: {
+                id: page.id,
+            },
+        })
     }
 }
