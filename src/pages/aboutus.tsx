@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import Img from "../components/img"
 
 const AboutUsPageQuery = graphql`
-    query AboutUs {
+    query AboutUsPage {
         page: markdownRemark(
             fileAbsolutePath: { regex: "/aboutus/index.md$/" }
         ) {
