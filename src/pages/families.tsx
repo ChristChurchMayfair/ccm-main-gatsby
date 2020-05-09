@@ -86,7 +86,9 @@ const FamiliesPageQuery = graphql`
         childrensWorkers: allSanityPerson(
             filter: {
                 roles: {
-                    elemMatch: { slug: { current: { eq: "childrens-worker" } } }
+                    elemMatch: {
+                        slug: { current: { eq: "childrens-worker" } }
+                    }
                 }
             }
         ) {
