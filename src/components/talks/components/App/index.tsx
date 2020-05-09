@@ -4,7 +4,7 @@ import Spinner from "react-spinkit"
 import format from "date-fns/format"
 
 import SeriesList from "../SeriesList"
-import { WithSeriesesFromSanity } from "../WithSerieses"
+import WithSeriesesFromSanity from "../WithSerieses"
 import Modal from "../Modal"
 import SeriesDetail from "../SeriesDetail"
 import Filters from "../Filters"

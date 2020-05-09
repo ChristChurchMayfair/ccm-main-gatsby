@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import BasicText from "../components/basic-text-page"
@@ -10,7 +10,7 @@ interface Props {
 
 const BasicPage: React.FC<Props> = ({ data }) => {
     return (
-        <Layout title={data!.mainInfo!.frontmatter!.title} headerColour="dark">
+        <Layout title={data.mainInfo!.frontmatter!.title} headerColour="dark">
             <BasicText html={data.mainInfo!.html!} />
         </Layout>
     )
