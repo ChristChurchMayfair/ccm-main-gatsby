@@ -5,30 +5,32 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import { useStaticQuery, graphql } from "gatsby"
 
-const TalksPage = () => {
-    const data = useStaticQuery<GatsbyTypes.TalksPageQuery>(graphql`
-        query TalksPage {
-            markdownRemark(fileAbsolutePath: { regex: "/talks/index.md$/" }) {
-                frontmatter {
-                    title
-                    overlayCaption
-                    itunesPodcastURL
-                    podcastURL
-                    iosAppStoreLink
-                    playStoreLink
-                    headerColour
-                    mainImage {
-                        childImageSharp {
-                            fluid(maxWidth: 1920) {
-                                ...GatsbyImageSharpFluid
-                            }
+const TalksPageQuery = graphql`
+    query TalksPage {
+        markdownRemark(fileAbsolutePath: { regex: "/talks/index.md$/" }) {
+            frontmatter {
+                title
+                overlayCaption
+                itunesPodcastURL
+                podcastURL
+                iosAppStoreLink
+                playStoreLink
+                headerColour
+                mainImage {
+                    childImageSharp {
+                        fluid(maxWidth: 1920) {
+                            ...GatsbyImageSharpFluid
                         }
                     }
                 }
-                html
             }
+            html
         }
-    `)
+    }
+`
+
+const TalksPage = () => {
+    const data = useStaticQuery<GatsbyTypes.TalksPageQuery>(TalksPageQuery)
     const meta = data.markdownRemark!.frontmatter!
     return (
         <Layout title="Talks" headerColour={meta.headerColour}>

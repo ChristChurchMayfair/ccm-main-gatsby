@@ -8,76 +8,74 @@ import Img from "../components/img"
 import Services from "../components/services"
 import Covid19 from "../components/covid-19"
 
-const IndexPage = () => {
-    const data = useStaticQuery<GatsbyTypes.HomepageQuery>(graphql`
-        query Homepage {
-            mainInfo: markdownRemark(
-                fileAbsolutePath: { regex: "/homepage.md$/" }
-            ) {
-                html
-                frontmatter {
-                    title
-                    overlayCaption
-                    headerColour
-                    carouselImages {
-                        mainImage {
-                            childImageSharp {
-                                fluid(maxWidth: 1920) {
-                                    ...GatsbyImageSharpFluid_noBase64
-                                }
-                            }
-                        }
-                        position
-                    }
-                }
-                fields {
-                    frontmattermd {
-                        findOutMoreText {
-                            html
-                        }
-                    }
-                }
-            }
-            administrators: allSanityPerson(
-                filter: {
-                    roles: {
-                        elemMatch: {
-                            slug: { current: { eq: "administrator" } }
-                        }
-                    }
-                }
-            ) {
-                nodes {
-                    name
-                    jobTitle
-                    email
-                    phone
-                    headshot {
-                        asset {
-                            fluid(maxWidth: 400) {
-                                ...GatsbySanityImageFluid
-                            }
-                        }
-                    }
-                }
-            }
-            midweek: markdownRemark(
-                fileAbsolutePath: { regex: "/midweek.md$/" }
-            ) {
-                frontmatter {
-                    title
-                    image {
+const IndexPageQuery = graphql`
+    query Homepage {
+        mainInfo: markdownRemark(
+            fileAbsolutePath: { regex: "/homepage.md$/" }
+        ) {
+            html
+            frontmatter {
+                title
+                overlayCaption
+                headerColour
+                carouselImages {
+                    mainImage {
                         childImageSharp {
-                            fluid(maxWidth: 1000) {
-                                ...GatsbyImageSharpFluid
+                            fluid(maxWidth: 1920) {
+                                ...GatsbyImageSharpFluid_noBase64
                             }
                         }
                     }
+                    position
                 }
-                html
+            }
+            fields {
+                frontmattermd {
+                    findOutMoreText {
+                        html
+                    }
+                }
             }
         }
-    `)
+        administrators: allSanityPerson(
+            filter: {
+                roles: {
+                    elemMatch: { slug: { current: { eq: "administrator" } } }
+                }
+            }
+        ) {
+            nodes {
+                name
+                jobTitle
+                email
+                phone
+                headshot {
+                    asset {
+                        fluid(maxWidth: 400) {
+                            ...GatsbySanityImageFluid
+                        }
+                    }
+                }
+            }
+        }
+        midweek: markdownRemark(fileAbsolutePath: { regex: "/midweek.md$/" }) {
+            frontmatter {
+                title
+                image {
+                    childImageSharp {
+                        fluid(maxWidth: 1000) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+            html
+        }
+    }
+`
+
+const IndexPage = () => {
+    const data = useStaticQuery<GatsbyTypes.HomepageQuery>(IndexPageQuery)
 
     const [visibleHeroIndex, setVisibleHeroIndex] = useState(0)
 

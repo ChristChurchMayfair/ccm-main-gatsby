@@ -4,42 +4,42 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Img from "../components/img"
 import { sortedWithPriority } from "../utils"
-const BlockContent = require('@sanity/block-content-to-react')
+const BlockContent = require("@sanity/block-content-to-react")
 
-const StaffPage = () => {
-    const data = useStaticQuery<GatsbyTypes.StaffQuery>(graphql`
-        query Staff {
-            mainInfo: markdownRemark(
-                fileAbsolutePath: { regex: "/staff.md$/" }
-            ) {
-                html
-                frontmatter {
-                    title
-                    headerColour
-                }
+const StaffPageQuery = graphql`
+    query StaffPage {
+        mainInfo: markdownRemark(fileAbsolutePath: { regex: "/staff.md$/" }) {
+            html
+            frontmatter {
+                title
+                headerColour
             }
-            staff: allSanityPerson(
-                filter: {
-                    roles: { elemMatch: { slug: { current: { eq: "staff" } } } }
-                }
-            ) {
-                nodes {
-                    id
-                    name
-                    jobTitle
-                    email
-                    _rawBio
-                    headshot {
-                        asset {
-                            fluid(maxWidth: 400) {
-                                ...GatsbySanityImageFluid
-                            }
+        }
+        staff: allSanityPerson(
+            filter: {
+                roles: { elemMatch: { slug: { current: { eq: "staff" } } } }
+            }
+        ) {
+            nodes {
+                id
+                name
+                jobTitle
+                email
+                _rawBio
+                headshot {
+                    asset {
+                        fluid(maxWidth: 400) {
+                            ...GatsbySanityImageFluid
                         }
                     }
                 }
             }
         }
-    `)
+    }
+`
+
+const Staff = () => {
+    const data = useStaticQuery<GatsbyTypes.StaffPageQuery>(StaffPageQuery)
 
     const staffNamesOrder = [
         "Matt Fuller",
@@ -52,7 +52,7 @@ const StaffPage = () => {
         "Ellie Page",
         "James Kight",
         "Liz Hayden",
-        "Sarah Farrar-Bell"
+        "Sarah Farrar-Bell",
     ]
 
     const people = sortedWithPriority(
@@ -65,14 +65,17 @@ const StaffPage = () => {
         const email = person!.email
         return (
             <div key={person.id} className="person">
-                <div className="photo" style={{position:"relative"}}>
-                    <Img style={{
-                                        position: "absolute",
-                                        top: 0,
-                                        left: 0,
-                                        bottom: 0,
-                                        right: 0,
-                                    }} fluid={person.headshot?.asset?.fluid} />
+                <div className="photo" style={{ position: "relative" }}>
+                    <Img
+                        style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            bottom: 0,
+                            right: 0,
+                        }}
+                        fluid={person.headshot?.asset?.fluid}
+                    />
                 </div>
                 <div className="info">
                     <div className="name">{person!.name!}</div>
@@ -83,9 +86,7 @@ const StaffPage = () => {
                         </div>
                     )}
                     <div className="bio">
-                        <BlockContent
-                            blocks={person._rawBio}
-                        />
+                        <BlockContent blocks={person._rawBio} />
                     </div>
                 </div>
             </div>
@@ -111,7 +112,7 @@ const StaffPage = () => {
     )
 }
 
-export default StaffPage
+export default Staff
 
 // I wish gatsby gave us a way to specify this in the config file or something. For now, let's keep it here.
 export const globallyReusableFragments = graphql`

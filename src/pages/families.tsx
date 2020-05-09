@@ -6,122 +6,124 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Bio from "../components/bio"
 
-const Families: React.FC<{}> = () => {
-    const data = useStaticQuery<GatsbyTypes.FamiliesQuery>(graphql`
-        query Families {
-            mainContent: markdownRemark(
-                fileAbsolutePath: { regex: "/families.md$/" }
-            ) {
-                html
-                fields {
-                    frontmattermd {
-                        findOutMoreText {
-                            html
-                        }
-                    }
-                }
-                frontmatter {
-                    title
-                    mainImage {
-                        childImageSharp {
-                            fluid(maxWidth: 1920) {
-                                ...GatsbyImageSharpFluid_noBase64
-                            }
-                        }
-                    }
-                    firstIntroImage {
-                        childImageSharp {
-                            fluid(maxWidth: 1920) {
-                                ...GatsbyImageSharpFluid_noBase64
-                            }
-                        }
-                    }
-                    secondIntroImage {
-                        childImageSharp {
-                            fluid(maxWidth: 1920) {
-                                ...GatsbyImageSharpFluid_noBase64
-                            }
-                        }
-                    }
-                    overlayCaption
-                    headerColour
-                }
-            }
-            youthContent: markdownRemark(
-                fileAbsolutePath: { regex: "/youth.md$/" }
-            ) {
-                html
-                frontmatter {
-                    mainImage {
-                        childImageSharp {
-                            fluid(maxWidth: 1200) {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
-                    }
-                    title
-                }
-            }
-            littleLambs: markdownRemark(
-                fileAbsolutePath: { regex: "/littlelambs.md$/" }
-            ) {
-                html
-                fields {
-                    frontmattermd {
-                        findOutMoreText {
-                            html
-                        }
-                    }
-                }
-                frontmatter {
-                    mainImage {
-                        childImageSharp {
-                            fluid(maxWidth: 1200) {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
-                    }
-                    title
-                }
-            }
-            childrensWorkers: allSanityPerson(
-                filter: {
-                    roles: {
-                        elemMatch: {
-                            slug: { current: { eq: "childrens_worker" } }
-                        }
-                    }
-                }
-            ) {
-                nodes {
-                    name
-                    jobTitle
-                    email
-                    phone
-                    headshot {
-                        ...SanityHeadshot
+const FamiliesPageQuery = graphql`
+    query FamiliesPage {
+        mainContent: markdownRemark(
+            fileAbsolutePath: { regex: "/families.md$/" }
+        ) {
+            html
+            fields {
+                frontmattermd {
+                    findOutMoreText {
+                        html
                     }
                 }
             }
-            littleLambsWorker: allSanityPerson(
-                filter: {
-                    roles: {
-                        elemMatch: { slug: { current: { eq: "little_lambs" } } }
+            frontmatter {
+                title
+                mainImage {
+                    childImageSharp {
+                        fluid(maxWidth: 1920) {
+                            ...GatsbyImageSharpFluid_noBase64
+                        }
                     }
                 }
-            ) {
-                nodes {
-                    name
-                    jobTitle
-                    email
-                    phone
-                    headshot {
-                        ...SanityHeadshot
+                firstIntroImage {
+                    childImageSharp {
+                        fluid(maxWidth: 1920) {
+                            ...GatsbyImageSharpFluid_noBase64
+                        }
                     }
+                }
+                secondIntroImage {
+                    childImageSharp {
+                        fluid(maxWidth: 1920) {
+                            ...GatsbyImageSharpFluid_noBase64
+                        }
+                    }
+                }
+                overlayCaption
+                headerColour
+            }
+        }
+        youthContent: markdownRemark(
+            fileAbsolutePath: { regex: "/youth.md$/" }
+        ) {
+            html
+            frontmatter {
+                mainImage {
+                    childImageSharp {
+                        fluid(maxWidth: 1200) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                title
+            }
+        }
+        littleLambs: markdownRemark(
+            fileAbsolutePath: { regex: "/littlelambs.md$/" }
+        ) {
+            html
+            fields {
+                frontmattermd {
+                    findOutMoreText {
+                        html
+                    }
+                }
+            }
+            frontmatter {
+                mainImage {
+                    childImageSharp {
+                        fluid(maxWidth: 1200) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                title
+            }
+        }
+        childrensWorkers: allSanityPerson(
+            filter: {
+                roles: {
+                    elemMatch: { slug: { current: { eq: "childrens_worker" } } }
+                }
+            }
+        ) {
+            nodes {
+                name
+                jobTitle
+                email
+                phone
+                headshot {
+                    ...SanityHeadshot
                 }
             }
         }
-    `)
+        littleLambsWorker: allSanityPerson(
+            filter: {
+                roles: {
+                    elemMatch: { slug: { current: { eq: "little_lambs" } } }
+                }
+            }
+        ) {
+            nodes {
+                name
+                jobTitle
+                email
+                phone
+                headshot {
+                    ...SanityHeadshot
+                }
+            }
+        }
+    }
+`
+
+const Families: React.FC<{}> = () => {
+    const data = useStaticQuery<GatsbyTypes.FamiliesPageQuery>(
+        FamiliesPageQuery
+    )
 
     const mainImageFluid = data.mainContent!.frontmatter!.mainImage!
         .childImageSharp!.fluid

@@ -5,44 +5,46 @@ import classnames from "classnames"
 import Layout from "../components/layout"
 import Img from "../components/img"
 
-const AboutUs = () => {
-    const data = useStaticQuery<GatsbyTypes.AboutUsQuery>(graphql`
-        query AboutUs {
-            page: markdownRemark(
-                fileAbsolutePath: { regex: "/aboutus/index.md$/" }
-            ) {
-                fields {
-                    frontmattermd {
-                        findOutMoreText {
-                            html
-                        }
+const AboutUsPageQuery = graphql`
+    query AboutUs {
+        page: markdownRemark(
+            fileAbsolutePath: { regex: "/aboutus/index.md$/" }
+        ) {
+            fields {
+                frontmattermd {
+                    findOutMoreText {
+                        html
                     }
-                }
-            }
-            aboutUsSections: allMarkdownRemark(
-                filter: { fileAbsolutePath: { regex: "/_about_us/.*.md$/" } }
-                sort: { fields: frontmatter___order, order: ASC }
-            ) {
-                nodes {
-                    id
-                    frontmatter {
-                        title
-                        style_classes
-                        mainImage {
-                            childImageSharp {
-                                fluid(maxWidth: 1920) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
-                        }
-                        fullBleed
-                        imageObjectPosition
-                    }
-                    html
                 }
             }
         }
-    `)
+        aboutUsSections: allMarkdownRemark(
+            filter: { fileAbsolutePath: { regex: "/_about_us/.*.md$/" } }
+            sort: { fields: frontmatter___order, order: ASC }
+        ) {
+            nodes {
+                id
+                frontmatter {
+                    title
+                    style_classes
+                    mainImage {
+                        childImageSharp {
+                            fluid(maxWidth: 1920) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
+                    fullBleed
+                    imageObjectPosition
+                }
+                html
+            }
+        }
+    }
+`
+
+const AboutUs = () => {
+    const data = useStaticQuery<GatsbyTypes.AboutUsPageQuery>(AboutUsPageQuery)
     return (
         <Layout title="About us" headerColour="dark">
             <section className="header-underlay"></section>

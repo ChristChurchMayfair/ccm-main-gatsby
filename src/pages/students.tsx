@@ -6,62 +6,64 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Bio from "../components/bio"
 
-const Students: React.FC<{}> = () => {
-    const data = useStaticQuery<GatsbyTypes.StudentTemplateQuery>(graphql`
-        query StudentTemplate {
-            studentWorkers: allSanityPerson(
-                filter: {
-                    roles: {
-                        elemMatch: {
-                            slug: { current: { eq: "student_worker" } }
-                        }
-                    }
-                }
-            ) {
-                nodes {
-                    ...StaffProfile
+const StudentsPageQuery = graphql`
+    query StudentsPage {
+        studentWorkers: allSanityPerson(
+            filter: {
+                roles: {
+                    elemMatch: { slug: { current: { eq: "student-worker" } } }
                 }
             }
-            mainContent: markdownRemark(
-                fileAbsolutePath: { regex: "/students/index.md$/" }
-            ) {
-                html
-                fields {
-                    frontmattermd {
-                        findOutMoreText {
-                            html
-                        }
-                    }
-                }
-                frontmatter {
-                    title
-                    mainImage {
-                        childImageSharp {
-                            fluid(maxWidth: 1920) {
-                                ...GatsbyImageSharpFluid_noBase64
-                            }
-                        }
-                    }
-                    overlayCaption
-                }
-            }
-            extraContent: markdownRemark(
-                fileAbsolutePath: { regex: "/extra_student_section.md$/" }
-            ) {
-                html
-                frontmatter {
-                    mainImage {
-                        childImageSharp {
-                            fluid(maxWidth: 1200) {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
-                    }
-                    title
-                }
+        ) {
+            nodes {
+                ...StaffProfile
             }
         }
-    `)
+        mainContent: markdownRemark(
+            fileAbsolutePath: { regex: "/students/index.md$/" }
+        ) {
+            html
+            fields {
+                frontmattermd {
+                    findOutMoreText {
+                        html
+                    }
+                }
+            }
+            frontmatter {
+                title
+                mainImage {
+                    childImageSharp {
+                        fluid(maxWidth: 1920) {
+                            ...GatsbyImageSharpFluid_noBase64
+                        }
+                    }
+                }
+                overlayCaption
+            }
+        }
+        extraContent: markdownRemark(
+            fileAbsolutePath: { regex: "/extra_student_section.md$/" }
+        ) {
+            html
+            frontmatter {
+                mainImage {
+                    childImageSharp {
+                        fluid(maxWidth: 1200) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                title
+            }
+        }
+    }
+`
+
+const Students: React.FC<{}> = () => {
+    const data = useStaticQuery<GatsbyTypes.StudentsPageQuery>(
+        StudentsPageQuery
+    )
     const fluid = data.mainContent!.frontmatter!.mainImage!.childImageSharp!
         .fluid
 
