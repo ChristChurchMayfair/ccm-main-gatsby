@@ -902,7 +902,7 @@ section.music-resources {
     grid-area: title;
 }
 
-.music-resources > p {
+.music-resources div.text {
     grid-area: text;
 }
 
