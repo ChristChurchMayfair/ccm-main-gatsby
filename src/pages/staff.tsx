@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Img from "../components/img"
 import { sortedWithPriority } from "../utils"
-const BlockContent = require("@sanity/block-content-to-react")
 
 const StaffPageQuery = graphql`
     query StaffPage {
@@ -25,7 +24,7 @@ const StaffPageQuery = graphql`
                 name
                 jobTitle
                 email
-                _rawBio
+                bioHtml
                 headshot {
                     asset {
                         fluid(maxWidth: 400) {
@@ -63,6 +62,7 @@ const Staff = () => {
 
     const allStaff = people.map(person => {
         const email = person.email
+
         return (
             <div key={person.id} className="person">
                 <div className="photo" style={{ position: "relative" }}>
@@ -85,9 +85,10 @@ const Staff = () => {
                             <a href={`mailto:${email}`}>{email}</a>
                         </div>
                     )}
-                    <div className="bio">
-                        <BlockContent blocks={person._rawBio} />
-                    </div>
+                    <div
+                        className="bio"
+                        dangerouslySetInnerHTML={{ __html: person.bioHtml! }}
+                    />
                 </div>
             </div>
         )
