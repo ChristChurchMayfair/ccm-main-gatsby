@@ -199,7 +199,8 @@ const MusicPage: React.FC<{}> = () => {
 
             <section className="music-resources">
                 <h1>{data.resources!.frontmatter!.title}</h1>
-                <div className="text"
+                <div
+                    className="text"
                     dangerouslySetInnerHTML={{
                         __html: data.resources!.html!,
                     }}

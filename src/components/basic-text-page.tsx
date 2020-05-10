@@ -4,15 +4,15 @@ type Props = {
     html?: string
 }
 
-const BasicText: React.FC<Props> = (props) => {
+const BasicText: React.FC<Props> = props => {
     return (
         <>
             <section className="header-underlay" />
             <section>
                 <article
-                        dangerouslySetInnerHTML={{
-                            __html: props.html ?? "Missing content",
-                        }}
+                    dangerouslySetInnerHTML={{
+                        __html: props.html ?? "Missing content",
+                    }}
                 />
             </section>
         </>

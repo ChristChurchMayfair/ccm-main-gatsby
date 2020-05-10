@@ -84,8 +84,7 @@ const AboutUs = () => {
                                     }
                                     objectFit="cover"
                                     objectPosition={
-                                        section.frontmatter!
-                                            .imageObjectPosition
+                                        section.frontmatter!.imageObjectPosition
                                     }
                                 />
                             </div>

@@ -279,9 +279,9 @@ a:hover {
     height: var(--hero-height);
     min-height: var(--min-hero-height);
     max-height: var(--max-hero-height);
-    grid-template-columns: calc(
-            var(--left-body-margin) - var(--general-padding)
-        ) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr calc(
+    grid-template-columns:
+        calc(var(--left-body-margin) - var(--general-padding))
+        1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr calc(
             var(--right-body-margin) - var(--general-padding)
         );
     grid-template-areas: ". text text text text text text text text text text text text .";
@@ -350,9 +350,9 @@ header,
     /* PROPORTIONAL SIDE MARGINS */
     /* grid-template-columns: calc(var(--body-margin) - var(--general-padding)) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr calc(var(--body-margin) - var(--general-padding)); */
     /* FIXED CENTRE WIDTH */
-    grid-template-columns: calc(
-            var(--left-body-margin) - var(--general-padding)
-        ) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr calc(
+    grid-template-columns:
+        calc(var(--left-body-margin) - var(--general-padding))
+        1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr calc(
             var(--right-body-margin) - var(--general-padding)
         );
 
