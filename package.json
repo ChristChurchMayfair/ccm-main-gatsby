@@ -69,6 +69,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "yarn eslint src --ext .js,.jsx,.ts,.tsx",
+    "prettier-check": "yarn prettier 'src/**/*.{ts,tsx,js,jsx,css}' --list-different",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
