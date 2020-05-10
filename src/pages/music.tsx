@@ -6,6 +6,9 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Bio from "../components/bio"
 
+import SpotifyBadge from '../assets/badges/Listen_on_spotify.inline.svg'
+import AppleMusicBadge from '../assets/badges/music-lrg.inline.svg'
+
 const MusicPage: React.FC<{}> = () => {
     const data = useStaticQuery<GatsbyTypes.MusicQuery>(graphql`
         query Music {
@@ -100,14 +103,18 @@ const MusicPage: React.FC<{}> = () => {
             <a
                 className="music-service-link apple-music-link"
                 href={release!.appleMusicLink}
-            ></a>
+            >
+                <AppleMusicBadge />
+            </a>
         ) : undefined
 
         const spotifyLink = release!.spotifyLink ? (
             <a
                 className="music-service-link spotify-link"
                 href={release!.spotifyLink}
-            ></a>
+            >
+                <SpotifyBadge />
+            </a>
         ) : undefined
 
         return (

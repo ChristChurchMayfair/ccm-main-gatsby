@@ -1,8 +1,8 @@
 import React, { Fragment } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
-import mappin from "../assets/icons/mappin.svg"
-import roundel from "../assets/icons/roundel2.svg"
+import MapPin from "../assets/icons/mappin.inline.svg"
+import Roundel from "../assets/icons/roundel2.inline.svg"
 
 const FindUs = () => {
     const data = useStaticQuery<GatsbyTypes.FindUsQuery>(graphql`
@@ -20,9 +20,7 @@ const FindUs = () => {
         <section id="find-us" className="find-us">
             <h1>Find Us</h1>
             <div className="location">
-                <svg className="pin" viewBox="0 0 100 100">
-                    <use xlinkHref={`${mappin}#mappin`} />
-                </svg>
+                <MapPin className="pin" viewBox="0 0 100 100"/>
                 <div className="address">
                     {data.site!.siteMetadata!.church_address!.map((line, i) => (
                         <Fragment key={i}>
@@ -31,9 +29,7 @@ const FindUs = () => {
                         </Fragment>
                     ))}
                 </div>
-                <svg className="roundel" viewBox="0 0 640 520">
-                    <use xlinkHref={`${roundel}#roundel`} />
-                </svg>
+                <Roundel className="roundel"/>
                 <div className="tube-stations">
                     Nearest tube stations:
                     <br />

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-import ccmLogo from "../content/assets/images/ccm-logo-full.svg"
+import CcmLogo from "../content/assets/images/ccm-logo-full.inline.svg"
 
 const links: Array<{ path: string; title: string }> = [
     { path: "/littlelambs", title: "Little Lambs" },
@@ -50,9 +50,7 @@ const Footer = () => {
         <footer>
             <div className="contact">
                 <div className="logo">
-                    <svg viewBox="0 0 720 162">
-                        <use xlinkHref={`${ccmLogo}#full-logo`} />
-                    </svg>
+                    <CcmLogo/>
                 </div>
                 <address>
                     <a href={metadata!.office_maps_link}>
