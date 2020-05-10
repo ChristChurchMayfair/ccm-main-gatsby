@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 
-import ccmLogoFull from "../content/assets/images/ccm-logo-full.svg"
-import closeMenuButton from "../content/assets/images/close-menu-button.svg"
-import hamburger from "../content/assets/images/hamburger.svg"
+import CcmLogoFull from "../content/assets/images/ccm-logo-full.inline.svg"
+import CloseMenuButton from "../content/assets/images/close-menu-button.inline.svg"
+import Hamburger from "../content/assets/images/hamburger.inline.svg"
 
 const MAX_WIDTH_MOBILE_HEADER = 968
 
@@ -27,9 +27,7 @@ const Header: React.FC<Props> = ({ headerColour }) => {
         <>
             <nav id="menu" style={isMenuOpen ? { visibility: "visible" } : {}}>
                 <Link className="logo" to="/">
-                    <svg viewBox="0 0 720 162">
-                        <use xlinkHref={`${ccmLogoFull}#full-logo`} />
-                    </svg>
+                    <CcmLogoFull/>
                 </Link>
                 <a
                     id="close-menu"
@@ -38,9 +36,7 @@ const Header: React.FC<Props> = ({ headerColour }) => {
                         setIsMenuOpen(false)
                     }}
                 >
-                    <svg id="close-menu-icon" viewBox="0 0 100 100">
-                        <use xlinkHref={`${closeMenuButton}#close-button`} />
-                    </svg>
+                    <CloseMenuButton/>
                 </a>
                 <div id="menu-content">
                     <Link to="/aboutus">About Us</Link>
@@ -58,9 +54,7 @@ const Header: React.FC<Props> = ({ headerColour }) => {
                 style={isMenuOpen ? { display: "none" } : {}}
             >
                 <Link className="logo" to="/">
-                    <svg viewBox="0 0 720 162">
-                        <use xlinkHref={`${ccmLogoFull}#full-logo`} />
-                    </svg>
+                    <CcmLogoFull/>
                 </Link>
                 <a
                     id="open-menu"
@@ -69,9 +63,7 @@ const Header: React.FC<Props> = ({ headerColour }) => {
                         setIsMenuOpen(true)
                     }}
                 >
-                    <svg id="open-menu-icon" viewBox="0 0 100 100">
-                        <use xlinkHref={`${hamburger}#hamburger`} />
-                    </svg>
+                    <Hamburger/>
                 </a>
             </header>
 
@@ -80,9 +72,7 @@ const Header: React.FC<Props> = ({ headerColour }) => {
                 className={`header desktop-header ${headerColour}`}
             >
                 <Link className="logo" to="/">
-                    <svg viewBox="0 0 720 162">
-                        <use xlinkHref={`${ccmLogoFull}#full-logo`} />
-                    </svg>
+                    <CcmLogoFull/>
                 </Link>
                 <div id="menu-content">
                     <Link to="/aboutus">About Us</Link>

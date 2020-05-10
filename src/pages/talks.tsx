@@ -5,6 +5,11 @@ import Layout from "../components/layout"
 import Hero from "../components/hero"
 import { useStaticQuery, graphql } from "gatsby"
 
+import ApplePodcastsBadge from "../assets/badges/US_UK_Apple_Podcasts_Listen_Color_Lockup_RGB_Wht_Type.inline.svg"
+// import GooglePodcastsBadge from
+
+import AppleAppStoreBadge from "../assets/badges/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.inline.svg"
+
 const TalksPageQuery = graphql`
     query TalksPage {
         markdownRemark(fileAbsolutePath: { regex: "/talks/index.md$/" }) {
@@ -51,14 +56,11 @@ const TalksPage = () => {
                     id="apple-podcast-link"
                     className="podcast-link"
                     href={meta.itunesPodcastURL}
-                    style={{
-                        background:
-                            "url(/assets/badges/US_UK_Apple_Podcasts_Listen_Color_Lockup_RGB_Wht_Type.svg) no-repeat",
-                        height: 34,
-                        backgroundSize: "contain",
-                        width: 190,
-                    }}
-                ></a>
+                >
+                    <ApplePodcastsBadge
+                        style={{ height: "34px", width: "190px" }}
+                    />
+                </a>
                 <a
                     id="google-podcast-link"
                     className="podcast-link"
@@ -75,13 +77,9 @@ const TalksPage = () => {
                     id="apple-appstore-link"
                     className="appstore-link"
                     href={meta.iosAppStoreLink}
-                    style={{
-                        background:
-                            "url(/assets/badges/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg) no-repeat",
-                        backgroundSize: "contain",
-                        width: 120,
-                    }}
-                ></a>
+                >
+                    <AppleAppStoreBadge  style={{width: 120}}/>
+                </a>
                 <a
                     id="google-playstore-link"
                     className="appstore-link"

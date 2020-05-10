@@ -442,6 +442,10 @@ nav #close-menu {
     transition: transform, 0.1s;
 }
 
+nav #close-menu svg {
+    width: calc(var(--menu-button-size) - 10px);
+}
+
 /* nav #close-menu-icon {
 
 } */
@@ -1740,6 +1744,11 @@ section.music-release {
     height: 50px;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.music-service-link svg {
+    width: 130px;
+    height: 50px;
 }
 
 .spotify-link {
