@@ -732,6 +732,48 @@ enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___mainImage___publicURL = 'childMarkdownRemark.frontmatter.mainImage.publicURL',
   childMarkdownRemark___frontmatter___mainImage___id = 'childMarkdownRemark.frontmatter.mainImage.id',
   childMarkdownRemark___frontmatter___mainImage___children = 'childMarkdownRemark.frontmatter.mainImage.children',
+  childMarkdownRemark___frontmatter___image___sourceInstanceName = 'childMarkdownRemark.frontmatter.image.sourceInstanceName',
+  childMarkdownRemark___frontmatter___image___absolutePath = 'childMarkdownRemark.frontmatter.image.absolutePath',
+  childMarkdownRemark___frontmatter___image___relativePath = 'childMarkdownRemark.frontmatter.image.relativePath',
+  childMarkdownRemark___frontmatter___image___extension = 'childMarkdownRemark.frontmatter.image.extension',
+  childMarkdownRemark___frontmatter___image___size = 'childMarkdownRemark.frontmatter.image.size',
+  childMarkdownRemark___frontmatter___image___prettySize = 'childMarkdownRemark.frontmatter.image.prettySize',
+  childMarkdownRemark___frontmatter___image___modifiedTime = 'childMarkdownRemark.frontmatter.image.modifiedTime',
+  childMarkdownRemark___frontmatter___image___accessTime = 'childMarkdownRemark.frontmatter.image.accessTime',
+  childMarkdownRemark___frontmatter___image___changeTime = 'childMarkdownRemark.frontmatter.image.changeTime',
+  childMarkdownRemark___frontmatter___image___birthTime = 'childMarkdownRemark.frontmatter.image.birthTime',
+  childMarkdownRemark___frontmatter___image___root = 'childMarkdownRemark.frontmatter.image.root',
+  childMarkdownRemark___frontmatter___image___dir = 'childMarkdownRemark.frontmatter.image.dir',
+  childMarkdownRemark___frontmatter___image___base = 'childMarkdownRemark.frontmatter.image.base',
+  childMarkdownRemark___frontmatter___image___ext = 'childMarkdownRemark.frontmatter.image.ext',
+  childMarkdownRemark___frontmatter___image___name = 'childMarkdownRemark.frontmatter.image.name',
+  childMarkdownRemark___frontmatter___image___relativeDirectory = 'childMarkdownRemark.frontmatter.image.relativeDirectory',
+  childMarkdownRemark___frontmatter___image___dev = 'childMarkdownRemark.frontmatter.image.dev',
+  childMarkdownRemark___frontmatter___image___mode = 'childMarkdownRemark.frontmatter.image.mode',
+  childMarkdownRemark___frontmatter___image___nlink = 'childMarkdownRemark.frontmatter.image.nlink',
+  childMarkdownRemark___frontmatter___image___uid = 'childMarkdownRemark.frontmatter.image.uid',
+  childMarkdownRemark___frontmatter___image___gid = 'childMarkdownRemark.frontmatter.image.gid',
+  childMarkdownRemark___frontmatter___image___rdev = 'childMarkdownRemark.frontmatter.image.rdev',
+  childMarkdownRemark___frontmatter___image___ino = 'childMarkdownRemark.frontmatter.image.ino',
+  childMarkdownRemark___frontmatter___image___atimeMs = 'childMarkdownRemark.frontmatter.image.atimeMs',
+  childMarkdownRemark___frontmatter___image___mtimeMs = 'childMarkdownRemark.frontmatter.image.mtimeMs',
+  childMarkdownRemark___frontmatter___image___ctimeMs = 'childMarkdownRemark.frontmatter.image.ctimeMs',
+  childMarkdownRemark___frontmatter___image___atime = 'childMarkdownRemark.frontmatter.image.atime',
+  childMarkdownRemark___frontmatter___image___mtime = 'childMarkdownRemark.frontmatter.image.mtime',
+  childMarkdownRemark___frontmatter___image___ctime = 'childMarkdownRemark.frontmatter.image.ctime',
+  childMarkdownRemark___frontmatter___image___birthtime = 'childMarkdownRemark.frontmatter.image.birthtime',
+  childMarkdownRemark___frontmatter___image___birthtimeMs = 'childMarkdownRemark.frontmatter.image.birthtimeMs',
+  childMarkdownRemark___frontmatter___image___blksize = 'childMarkdownRemark.frontmatter.image.blksize',
+  childMarkdownRemark___frontmatter___image___blocks = 'childMarkdownRemark.frontmatter.image.blocks',
+  childMarkdownRemark___frontmatter___image___publicURL = 'childMarkdownRemark.frontmatter.image.publicURL',
+  childMarkdownRemark___frontmatter___image___id = 'childMarkdownRemark.frontmatter.image.id',
+  childMarkdownRemark___frontmatter___image___children = 'childMarkdownRemark.frontmatter.image.children',
+  childMarkdownRemark___frontmatter___layout = 'childMarkdownRemark.frontmatter.layout',
+  childMarkdownRemark___frontmatter___section = 'childMarkdownRemark.frontmatter.section',
+  childMarkdownRemark___frontmatter___overlayCaption = 'childMarkdownRemark.frontmatter.overlayCaption',
+  childMarkdownRemark___frontmatter___findOutMoreText = 'childMarkdownRemark.frontmatter.findOutMoreText',
+  childMarkdownRemark___frontmatter___carouselImages = 'childMarkdownRemark.frontmatter.carouselImages',
+  childMarkdownRemark___frontmatter___carouselImages___position = 'childMarkdownRemark.frontmatter.carouselImages.position',
   childMarkdownRemark___frontmatter___showInMenu = 'childMarkdownRemark.frontmatter.showInMenu',
   childMarkdownRemark___frontmatter___menuOrder = 'childMarkdownRemark.frontmatter.menuOrder',
   childMarkdownRemark___frontmatter___firstIntroImage___sourceInstanceName = 'childMarkdownRemark.frontmatter.firstIntroImage.sourceInstanceName',
@@ -806,60 +848,27 @@ enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___secondIntroImage___publicURL = 'childMarkdownRemark.frontmatter.secondIntroImage.publicURL',
   childMarkdownRemark___frontmatter___secondIntroImage___id = 'childMarkdownRemark.frontmatter.secondIntroImage.id',
   childMarkdownRemark___frontmatter___secondIntroImage___children = 'childMarkdownRemark.frontmatter.secondIntroImage.children',
-  childMarkdownRemark___frontmatter___overlayCaption = 'childMarkdownRemark.frontmatter.overlayCaption',
   childMarkdownRemark___frontmatter___captionPosition = 'childMarkdownRemark.frontmatter.captionPosition',
-  childMarkdownRemark___frontmatter___findOutMoreText = 'childMarkdownRemark.frontmatter.findOutMoreText',
-  childMarkdownRemark___frontmatter___layout = 'childMarkdownRemark.frontmatter.layout',
-  childMarkdownRemark___frontmatter___section = 'childMarkdownRemark.frontmatter.section',
-  childMarkdownRemark___frontmatter___carouselImages = 'childMarkdownRemark.frontmatter.carouselImages',
-  childMarkdownRemark___frontmatter___carouselImages___position = 'childMarkdownRemark.frontmatter.carouselImages.position',
-  childMarkdownRemark___frontmatter___image___sourceInstanceName = 'childMarkdownRemark.frontmatter.image.sourceInstanceName',
-  childMarkdownRemark___frontmatter___image___absolutePath = 'childMarkdownRemark.frontmatter.image.absolutePath',
-  childMarkdownRemark___frontmatter___image___relativePath = 'childMarkdownRemark.frontmatter.image.relativePath',
-  childMarkdownRemark___frontmatter___image___extension = 'childMarkdownRemark.frontmatter.image.extension',
-  childMarkdownRemark___frontmatter___image___size = 'childMarkdownRemark.frontmatter.image.size',
-  childMarkdownRemark___frontmatter___image___prettySize = 'childMarkdownRemark.frontmatter.image.prettySize',
-  childMarkdownRemark___frontmatter___image___modifiedTime = 'childMarkdownRemark.frontmatter.image.modifiedTime',
-  childMarkdownRemark___frontmatter___image___accessTime = 'childMarkdownRemark.frontmatter.image.accessTime',
-  childMarkdownRemark___frontmatter___image___changeTime = 'childMarkdownRemark.frontmatter.image.changeTime',
-  childMarkdownRemark___frontmatter___image___birthTime = 'childMarkdownRemark.frontmatter.image.birthTime',
-  childMarkdownRemark___frontmatter___image___root = 'childMarkdownRemark.frontmatter.image.root',
-  childMarkdownRemark___frontmatter___image___dir = 'childMarkdownRemark.frontmatter.image.dir',
-  childMarkdownRemark___frontmatter___image___base = 'childMarkdownRemark.frontmatter.image.base',
-  childMarkdownRemark___frontmatter___image___ext = 'childMarkdownRemark.frontmatter.image.ext',
-  childMarkdownRemark___frontmatter___image___name = 'childMarkdownRemark.frontmatter.image.name',
-  childMarkdownRemark___frontmatter___image___relativeDirectory = 'childMarkdownRemark.frontmatter.image.relativeDirectory',
-  childMarkdownRemark___frontmatter___image___dev = 'childMarkdownRemark.frontmatter.image.dev',
-  childMarkdownRemark___frontmatter___image___mode = 'childMarkdownRemark.frontmatter.image.mode',
-  childMarkdownRemark___frontmatter___image___nlink = 'childMarkdownRemark.frontmatter.image.nlink',
-  childMarkdownRemark___frontmatter___image___uid = 'childMarkdownRemark.frontmatter.image.uid',
-  childMarkdownRemark___frontmatter___image___gid = 'childMarkdownRemark.frontmatter.image.gid',
-  childMarkdownRemark___frontmatter___image___rdev = 'childMarkdownRemark.frontmatter.image.rdev',
-  childMarkdownRemark___frontmatter___image___ino = 'childMarkdownRemark.frontmatter.image.ino',
-  childMarkdownRemark___frontmatter___image___atimeMs = 'childMarkdownRemark.frontmatter.image.atimeMs',
-  childMarkdownRemark___frontmatter___image___mtimeMs = 'childMarkdownRemark.frontmatter.image.mtimeMs',
-  childMarkdownRemark___frontmatter___image___ctimeMs = 'childMarkdownRemark.frontmatter.image.ctimeMs',
-  childMarkdownRemark___frontmatter___image___atime = 'childMarkdownRemark.frontmatter.image.atime',
-  childMarkdownRemark___frontmatter___image___mtime = 'childMarkdownRemark.frontmatter.image.mtime',
-  childMarkdownRemark___frontmatter___image___ctime = 'childMarkdownRemark.frontmatter.image.ctime',
-  childMarkdownRemark___frontmatter___image___birthtime = 'childMarkdownRemark.frontmatter.image.birthtime',
-  childMarkdownRemark___frontmatter___image___birthtimeMs = 'childMarkdownRemark.frontmatter.image.birthtimeMs',
-  childMarkdownRemark___frontmatter___image___blksize = 'childMarkdownRemark.frontmatter.image.blksize',
-  childMarkdownRemark___frontmatter___image___blocks = 'childMarkdownRemark.frontmatter.image.blocks',
-  childMarkdownRemark___frontmatter___image___publicURL = 'childMarkdownRemark.frontmatter.image.publicURL',
-  childMarkdownRemark___frontmatter___image___id = 'childMarkdownRemark.frontmatter.image.id',
-  childMarkdownRemark___frontmatter___image___children = 'childMarkdownRemark.frontmatter.image.children',
-  childMarkdownRemark___frontmatter___sitemap = 'childMarkdownRemark.frontmatter.sitemap',
-  childMarkdownRemark___frontmatter___image_alignment_classes = 'childMarkdownRemark.frontmatter.image_alignment_classes',
+  childMarkdownRemark___frontmatter___mobileImage = 'childMarkdownRemark.frontmatter.mobileImage',
   childMarkdownRemark___frontmatter___itunesPodcastURL = 'childMarkdownRemark.frontmatter.itunesPodcastURL',
   childMarkdownRemark___frontmatter___podcastURL = 'childMarkdownRemark.frontmatter.podcastURL',
   childMarkdownRemark___frontmatter___iosAppStoreLink = 'childMarkdownRemark.frontmatter.iosAppStoreLink',
   childMarkdownRemark___frontmatter___playStoreLink = 'childMarkdownRemark.frontmatter.playStoreLink',
-  childMarkdownRemark___frontmatter___mobileImage = 'childMarkdownRemark.frontmatter.mobileImage',
+  childMarkdownRemark___frontmatter___sitemap = 'childMarkdownRemark.frontmatter.sitemap',
+  childMarkdownRemark___frontmatter___image_alignment_classes = 'childMarkdownRemark.frontmatter.image_alignment_classes',
+  childMarkdownRemark___frontmatter___resources = 'childMarkdownRemark.frontmatter.resources',
+  childMarkdownRemark___frontmatter___resources___title = 'childMarkdownRemark.frontmatter.resources.title',
+  childMarkdownRemark___frontmatter___resources___files = 'childMarkdownRemark.frontmatter.resources.files',
+  childMarkdownRemark___frontmatter___releases = 'childMarkdownRemark.frontmatter.releases',
+  childMarkdownRemark___frontmatter___releases___title = 'childMarkdownRemark.frontmatter.releases.title',
+  childMarkdownRemark___frontmatter___releases___type = 'childMarkdownRemark.frontmatter.releases.type',
+  childMarkdownRemark___frontmatter___releases___date = 'childMarkdownRemark.frontmatter.releases.date',
+  childMarkdownRemark___frontmatter___releases___appleMusicLink = 'childMarkdownRemark.frontmatter.releases.appleMusicLink',
+  childMarkdownRemark___frontmatter___releases___spotifyLink = 'childMarkdownRemark.frontmatter.releases.spotifyLink',
   childMarkdownRemark___frontmatter___dayOfWeek = 'childMarkdownRemark.frontmatter.dayOfWeek',
-  childMarkdownRemark___frontmatter___timeOfDay = 'childMarkdownRemark.frontmatter.timeOfDay',
   childMarkdownRemark___frontmatter___type = 'childMarkdownRemark.frontmatter.type',
   childMarkdownRemark___frontmatter___time = 'childMarkdownRemark.frontmatter.time',
+  childMarkdownRemark___frontmatter___timeOfDay = 'childMarkdownRemark.frontmatter.timeOfDay',
   childMarkdownRemark___frontmatter___name = 'childMarkdownRemark.frontmatter.name',
   childMarkdownRemark___frontmatter___status = 'childMarkdownRemark.frontmatter.status',
   childMarkdownRemark___frontmatter___backgroundColour = 'childMarkdownRemark.frontmatter.backgroundColour',
@@ -879,7 +888,6 @@ enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___features___description = 'childMarkdownRemark.frontmatter.features.description',
   childMarkdownRemark___frontmatter___features___buttonText = 'childMarkdownRemark.frontmatter.features.buttonText',
   childMarkdownRemark___frontmatter___features___buttonLink = 'childMarkdownRemark.frontmatter.features.buttonLink',
-  childMarkdownRemark___frontmatter___tagLine = 'childMarkdownRemark.frontmatter.tagLine',
   childMarkdownRemark___frontmatter___eventDate = 'childMarkdownRemark.frontmatter.eventDate',
   childMarkdownRemark___frontmatter___price = 'childMarkdownRemark.frontmatter.price',
   childMarkdownRemark___frontmatter___signUpEmail = 'childMarkdownRemark.frontmatter.signUpEmail',
@@ -889,9 +897,10 @@ enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___people___title = 'childMarkdownRemark.frontmatter.people.title',
   childMarkdownRemark___frontmatter___people___photo = 'childMarkdownRemark.frontmatter.people.photo',
   childMarkdownRemark___frontmatter___people___headshot_position = 'childMarkdownRemark.frontmatter.people.headshot_position',
-  childMarkdownRemark___frontmatter___findOutMoreLink = 'childMarkdownRemark.frontmatter.findOutMoreLink',
+  childMarkdownRemark___frontmatter___tagLine = 'childMarkdownRemark.frontmatter.tagLine',
   childMarkdownRemark___frontmatter___style_classes = 'childMarkdownRemark.frontmatter.style_classes',
   childMarkdownRemark___frontmatter___imageObjectPosition = 'childMarkdownRemark.frontmatter.imageObjectPosition',
+  childMarkdownRemark___frontmatter___findOutMoreLink = 'childMarkdownRemark.frontmatter.findOutMoreLink',
   childMarkdownRemark___frontmatter___fullBleed = 'childMarkdownRemark.frontmatter.fullBleed',
   childMarkdownRemark___excerpt = 'childMarkdownRemark.excerpt',
   childMarkdownRemark___rawMarkdownBody = 'childMarkdownRemark.rawMarkdownBody',
@@ -1512,25 +1521,27 @@ enum FrontmatterMarkdownFileFieldsEnum {
   relativePath___childMarkdownRemark___frontmatter___showInFooter = 'relativePath.childMarkdownRemark.frontmatter.showInFooter',
   relativePath___childMarkdownRemark___frontmatter___headerColour = 'relativePath.childMarkdownRemark.frontmatter.headerColour',
   relativePath___childMarkdownRemark___frontmatter___template = 'relativePath.childMarkdownRemark.frontmatter.template',
-  relativePath___childMarkdownRemark___frontmatter___showInMenu = 'relativePath.childMarkdownRemark.frontmatter.showInMenu',
-  relativePath___childMarkdownRemark___frontmatter___menuOrder = 'relativePath.childMarkdownRemark.frontmatter.menuOrder',
-  relativePath___childMarkdownRemark___frontmatter___overlayCaption = 'relativePath.childMarkdownRemark.frontmatter.overlayCaption',
-  relativePath___childMarkdownRemark___frontmatter___captionPosition = 'relativePath.childMarkdownRemark.frontmatter.captionPosition',
-  relativePath___childMarkdownRemark___frontmatter___findOutMoreText = 'relativePath.childMarkdownRemark.frontmatter.findOutMoreText',
   relativePath___childMarkdownRemark___frontmatter___layout = 'relativePath.childMarkdownRemark.frontmatter.layout',
   relativePath___childMarkdownRemark___frontmatter___section = 'relativePath.childMarkdownRemark.frontmatter.section',
+  relativePath___childMarkdownRemark___frontmatter___overlayCaption = 'relativePath.childMarkdownRemark.frontmatter.overlayCaption',
+  relativePath___childMarkdownRemark___frontmatter___findOutMoreText = 'relativePath.childMarkdownRemark.frontmatter.findOutMoreText',
   relativePath___childMarkdownRemark___frontmatter___carouselImages = 'relativePath.childMarkdownRemark.frontmatter.carouselImages',
-  relativePath___childMarkdownRemark___frontmatter___sitemap = 'relativePath.childMarkdownRemark.frontmatter.sitemap',
-  relativePath___childMarkdownRemark___frontmatter___image_alignment_classes = 'relativePath.childMarkdownRemark.frontmatter.image_alignment_classes',
+  relativePath___childMarkdownRemark___frontmatter___showInMenu = 'relativePath.childMarkdownRemark.frontmatter.showInMenu',
+  relativePath___childMarkdownRemark___frontmatter___menuOrder = 'relativePath.childMarkdownRemark.frontmatter.menuOrder',
+  relativePath___childMarkdownRemark___frontmatter___captionPosition = 'relativePath.childMarkdownRemark.frontmatter.captionPosition',
+  relativePath___childMarkdownRemark___frontmatter___mobileImage = 'relativePath.childMarkdownRemark.frontmatter.mobileImage',
   relativePath___childMarkdownRemark___frontmatter___itunesPodcastURL = 'relativePath.childMarkdownRemark.frontmatter.itunesPodcastURL',
   relativePath___childMarkdownRemark___frontmatter___podcastURL = 'relativePath.childMarkdownRemark.frontmatter.podcastURL',
   relativePath___childMarkdownRemark___frontmatter___iosAppStoreLink = 'relativePath.childMarkdownRemark.frontmatter.iosAppStoreLink',
   relativePath___childMarkdownRemark___frontmatter___playStoreLink = 'relativePath.childMarkdownRemark.frontmatter.playStoreLink',
-  relativePath___childMarkdownRemark___frontmatter___mobileImage = 'relativePath.childMarkdownRemark.frontmatter.mobileImage',
+  relativePath___childMarkdownRemark___frontmatter___sitemap = 'relativePath.childMarkdownRemark.frontmatter.sitemap',
+  relativePath___childMarkdownRemark___frontmatter___image_alignment_classes = 'relativePath.childMarkdownRemark.frontmatter.image_alignment_classes',
+  relativePath___childMarkdownRemark___frontmatter___resources = 'relativePath.childMarkdownRemark.frontmatter.resources',
+  relativePath___childMarkdownRemark___frontmatter___releases = 'relativePath.childMarkdownRemark.frontmatter.releases',
   relativePath___childMarkdownRemark___frontmatter___dayOfWeek = 'relativePath.childMarkdownRemark.frontmatter.dayOfWeek',
-  relativePath___childMarkdownRemark___frontmatter___timeOfDay = 'relativePath.childMarkdownRemark.frontmatter.timeOfDay',
   relativePath___childMarkdownRemark___frontmatter___type = 'relativePath.childMarkdownRemark.frontmatter.type',
   relativePath___childMarkdownRemark___frontmatter___time = 'relativePath.childMarkdownRemark.frontmatter.time',
+  relativePath___childMarkdownRemark___frontmatter___timeOfDay = 'relativePath.childMarkdownRemark.frontmatter.timeOfDay',
   relativePath___childMarkdownRemark___frontmatter___name = 'relativePath.childMarkdownRemark.frontmatter.name',
   relativePath___childMarkdownRemark___frontmatter___status = 'relativePath.childMarkdownRemark.frontmatter.status',
   relativePath___childMarkdownRemark___frontmatter___backgroundColour = 'relativePath.childMarkdownRemark.frontmatter.backgroundColour',
@@ -1540,15 +1551,15 @@ enum FrontmatterMarkdownFileFieldsEnum {
   relativePath___childMarkdownRemark___frontmatter___order = 'relativePath.childMarkdownRemark.frontmatter.order',
   relativePath___childMarkdownRemark___frontmatter___lastUpdated = 'relativePath.childMarkdownRemark.frontmatter.lastUpdated',
   relativePath___childMarkdownRemark___frontmatter___features = 'relativePath.childMarkdownRemark.frontmatter.features',
-  relativePath___childMarkdownRemark___frontmatter___tagLine = 'relativePath.childMarkdownRemark.frontmatter.tagLine',
   relativePath___childMarkdownRemark___frontmatter___eventDate = 'relativePath.childMarkdownRemark.frontmatter.eventDate',
   relativePath___childMarkdownRemark___frontmatter___price = 'relativePath.childMarkdownRemark.frontmatter.price',
   relativePath___childMarkdownRemark___frontmatter___signUpEmail = 'relativePath.childMarkdownRemark.frontmatter.signUpEmail',
   relativePath___childMarkdownRemark___frontmatter___leader = 'relativePath.childMarkdownRemark.frontmatter.leader',
   relativePath___childMarkdownRemark___frontmatter___people = 'relativePath.childMarkdownRemark.frontmatter.people',
-  relativePath___childMarkdownRemark___frontmatter___findOutMoreLink = 'relativePath.childMarkdownRemark.frontmatter.findOutMoreLink',
+  relativePath___childMarkdownRemark___frontmatter___tagLine = 'relativePath.childMarkdownRemark.frontmatter.tagLine',
   relativePath___childMarkdownRemark___frontmatter___style_classes = 'relativePath.childMarkdownRemark.frontmatter.style_classes',
   relativePath___childMarkdownRemark___frontmatter___imageObjectPosition = 'relativePath.childMarkdownRemark.frontmatter.imageObjectPosition',
+  relativePath___childMarkdownRemark___frontmatter___findOutMoreLink = 'relativePath.childMarkdownRemark.frontmatter.findOutMoreLink',
   relativePath___childMarkdownRemark___frontmatter___fullBleed = 'relativePath.childMarkdownRemark.frontmatter.fullBleed',
   relativePath___childMarkdownRemark___excerpt = 'relativePath.childMarkdownRemark.excerpt',
   relativePath___childMarkdownRemark___rawMarkdownBody = 'relativePath.childMarkdownRemark.rawMarkdownBody',
@@ -1766,25 +1777,27 @@ enum FrontmatterMarkdownFileFieldsEnum {
   base___childMarkdownRemark___frontmatter___showInFooter = 'base.childMarkdownRemark.frontmatter.showInFooter',
   base___childMarkdownRemark___frontmatter___headerColour = 'base.childMarkdownRemark.frontmatter.headerColour',
   base___childMarkdownRemark___frontmatter___template = 'base.childMarkdownRemark.frontmatter.template',
-  base___childMarkdownRemark___frontmatter___showInMenu = 'base.childMarkdownRemark.frontmatter.showInMenu',
-  base___childMarkdownRemark___frontmatter___menuOrder = 'base.childMarkdownRemark.frontmatter.menuOrder',
-  base___childMarkdownRemark___frontmatter___overlayCaption = 'base.childMarkdownRemark.frontmatter.overlayCaption',
-  base___childMarkdownRemark___frontmatter___captionPosition = 'base.childMarkdownRemark.frontmatter.captionPosition',
-  base___childMarkdownRemark___frontmatter___findOutMoreText = 'base.childMarkdownRemark.frontmatter.findOutMoreText',
   base___childMarkdownRemark___frontmatter___layout = 'base.childMarkdownRemark.frontmatter.layout',
   base___childMarkdownRemark___frontmatter___section = 'base.childMarkdownRemark.frontmatter.section',
+  base___childMarkdownRemark___frontmatter___overlayCaption = 'base.childMarkdownRemark.frontmatter.overlayCaption',
+  base___childMarkdownRemark___frontmatter___findOutMoreText = 'base.childMarkdownRemark.frontmatter.findOutMoreText',
   base___childMarkdownRemark___frontmatter___carouselImages = 'base.childMarkdownRemark.frontmatter.carouselImages',
-  base___childMarkdownRemark___frontmatter___sitemap = 'base.childMarkdownRemark.frontmatter.sitemap',
-  base___childMarkdownRemark___frontmatter___image_alignment_classes = 'base.childMarkdownRemark.frontmatter.image_alignment_classes',
+  base___childMarkdownRemark___frontmatter___showInMenu = 'base.childMarkdownRemark.frontmatter.showInMenu',
+  base___childMarkdownRemark___frontmatter___menuOrder = 'base.childMarkdownRemark.frontmatter.menuOrder',
+  base___childMarkdownRemark___frontmatter___captionPosition = 'base.childMarkdownRemark.frontmatter.captionPosition',
+  base___childMarkdownRemark___frontmatter___mobileImage = 'base.childMarkdownRemark.frontmatter.mobileImage',
   base___childMarkdownRemark___frontmatter___itunesPodcastURL = 'base.childMarkdownRemark.frontmatter.itunesPodcastURL',
   base___childMarkdownRemark___frontmatter___podcastURL = 'base.childMarkdownRemark.frontmatter.podcastURL',
   base___childMarkdownRemark___frontmatter___iosAppStoreLink = 'base.childMarkdownRemark.frontmatter.iosAppStoreLink',
   base___childMarkdownRemark___frontmatter___playStoreLink = 'base.childMarkdownRemark.frontmatter.playStoreLink',
-  base___childMarkdownRemark___frontmatter___mobileImage = 'base.childMarkdownRemark.frontmatter.mobileImage',
+  base___childMarkdownRemark___frontmatter___sitemap = 'base.childMarkdownRemark.frontmatter.sitemap',
+  base___childMarkdownRemark___frontmatter___image_alignment_classes = 'base.childMarkdownRemark.frontmatter.image_alignment_classes',
+  base___childMarkdownRemark___frontmatter___resources = 'base.childMarkdownRemark.frontmatter.resources',
+  base___childMarkdownRemark___frontmatter___releases = 'base.childMarkdownRemark.frontmatter.releases',
   base___childMarkdownRemark___frontmatter___dayOfWeek = 'base.childMarkdownRemark.frontmatter.dayOfWeek',
-  base___childMarkdownRemark___frontmatter___timeOfDay = 'base.childMarkdownRemark.frontmatter.timeOfDay',
   base___childMarkdownRemark___frontmatter___type = 'base.childMarkdownRemark.frontmatter.type',
   base___childMarkdownRemark___frontmatter___time = 'base.childMarkdownRemark.frontmatter.time',
+  base___childMarkdownRemark___frontmatter___timeOfDay = 'base.childMarkdownRemark.frontmatter.timeOfDay',
   base___childMarkdownRemark___frontmatter___name = 'base.childMarkdownRemark.frontmatter.name',
   base___childMarkdownRemark___frontmatter___status = 'base.childMarkdownRemark.frontmatter.status',
   base___childMarkdownRemark___frontmatter___backgroundColour = 'base.childMarkdownRemark.frontmatter.backgroundColour',
@@ -1794,15 +1807,15 @@ enum FrontmatterMarkdownFileFieldsEnum {
   base___childMarkdownRemark___frontmatter___order = 'base.childMarkdownRemark.frontmatter.order',
   base___childMarkdownRemark___frontmatter___lastUpdated = 'base.childMarkdownRemark.frontmatter.lastUpdated',
   base___childMarkdownRemark___frontmatter___features = 'base.childMarkdownRemark.frontmatter.features',
-  base___childMarkdownRemark___frontmatter___tagLine = 'base.childMarkdownRemark.frontmatter.tagLine',
   base___childMarkdownRemark___frontmatter___eventDate = 'base.childMarkdownRemark.frontmatter.eventDate',
   base___childMarkdownRemark___frontmatter___price = 'base.childMarkdownRemark.frontmatter.price',
   base___childMarkdownRemark___frontmatter___signUpEmail = 'base.childMarkdownRemark.frontmatter.signUpEmail',
   base___childMarkdownRemark___frontmatter___leader = 'base.childMarkdownRemark.frontmatter.leader',
   base___childMarkdownRemark___frontmatter___people = 'base.childMarkdownRemark.frontmatter.people',
-  base___childMarkdownRemark___frontmatter___findOutMoreLink = 'base.childMarkdownRemark.frontmatter.findOutMoreLink',
+  base___childMarkdownRemark___frontmatter___tagLine = 'base.childMarkdownRemark.frontmatter.tagLine',
   base___childMarkdownRemark___frontmatter___style_classes = 'base.childMarkdownRemark.frontmatter.style_classes',
   base___childMarkdownRemark___frontmatter___imageObjectPosition = 'base.childMarkdownRemark.frontmatter.imageObjectPosition',
+  base___childMarkdownRemark___frontmatter___findOutMoreLink = 'base.childMarkdownRemark.frontmatter.findOutMoreLink',
   base___childMarkdownRemark___frontmatter___fullBleed = 'base.childMarkdownRemark.frontmatter.fullBleed',
   base___childMarkdownRemark___excerpt = 'base.childMarkdownRemark.excerpt',
   base___childMarkdownRemark___rawMarkdownBody = 'base.childMarkdownRemark.rawMarkdownBody',
@@ -1930,6 +1943,48 @@ enum FrontmatterMarkdownFileFieldsEnum {
   childMarkdownRemark___frontmatter___mainImage___publicURL = 'childMarkdownRemark.frontmatter.mainImage.publicURL',
   childMarkdownRemark___frontmatter___mainImage___id = 'childMarkdownRemark.frontmatter.mainImage.id',
   childMarkdownRemark___frontmatter___mainImage___children = 'childMarkdownRemark.frontmatter.mainImage.children',
+  childMarkdownRemark___frontmatter___image___sourceInstanceName = 'childMarkdownRemark.frontmatter.image.sourceInstanceName',
+  childMarkdownRemark___frontmatter___image___absolutePath = 'childMarkdownRemark.frontmatter.image.absolutePath',
+  childMarkdownRemark___frontmatter___image___relativePath = 'childMarkdownRemark.frontmatter.image.relativePath',
+  childMarkdownRemark___frontmatter___image___extension = 'childMarkdownRemark.frontmatter.image.extension',
+  childMarkdownRemark___frontmatter___image___size = 'childMarkdownRemark.frontmatter.image.size',
+  childMarkdownRemark___frontmatter___image___prettySize = 'childMarkdownRemark.frontmatter.image.prettySize',
+  childMarkdownRemark___frontmatter___image___modifiedTime = 'childMarkdownRemark.frontmatter.image.modifiedTime',
+  childMarkdownRemark___frontmatter___image___accessTime = 'childMarkdownRemark.frontmatter.image.accessTime',
+  childMarkdownRemark___frontmatter___image___changeTime = 'childMarkdownRemark.frontmatter.image.changeTime',
+  childMarkdownRemark___frontmatter___image___birthTime = 'childMarkdownRemark.frontmatter.image.birthTime',
+  childMarkdownRemark___frontmatter___image___root = 'childMarkdownRemark.frontmatter.image.root',
+  childMarkdownRemark___frontmatter___image___dir = 'childMarkdownRemark.frontmatter.image.dir',
+  childMarkdownRemark___frontmatter___image___base = 'childMarkdownRemark.frontmatter.image.base',
+  childMarkdownRemark___frontmatter___image___ext = 'childMarkdownRemark.frontmatter.image.ext',
+  childMarkdownRemark___frontmatter___image___name = 'childMarkdownRemark.frontmatter.image.name',
+  childMarkdownRemark___frontmatter___image___relativeDirectory = 'childMarkdownRemark.frontmatter.image.relativeDirectory',
+  childMarkdownRemark___frontmatter___image___dev = 'childMarkdownRemark.frontmatter.image.dev',
+  childMarkdownRemark___frontmatter___image___mode = 'childMarkdownRemark.frontmatter.image.mode',
+  childMarkdownRemark___frontmatter___image___nlink = 'childMarkdownRemark.frontmatter.image.nlink',
+  childMarkdownRemark___frontmatter___image___uid = 'childMarkdownRemark.frontmatter.image.uid',
+  childMarkdownRemark___frontmatter___image___gid = 'childMarkdownRemark.frontmatter.image.gid',
+  childMarkdownRemark___frontmatter___image___rdev = 'childMarkdownRemark.frontmatter.image.rdev',
+  childMarkdownRemark___frontmatter___image___ino = 'childMarkdownRemark.frontmatter.image.ino',
+  childMarkdownRemark___frontmatter___image___atimeMs = 'childMarkdownRemark.frontmatter.image.atimeMs',
+  childMarkdownRemark___frontmatter___image___mtimeMs = 'childMarkdownRemark.frontmatter.image.mtimeMs',
+  childMarkdownRemark___frontmatter___image___ctimeMs = 'childMarkdownRemark.frontmatter.image.ctimeMs',
+  childMarkdownRemark___frontmatter___image___atime = 'childMarkdownRemark.frontmatter.image.atime',
+  childMarkdownRemark___frontmatter___image___mtime = 'childMarkdownRemark.frontmatter.image.mtime',
+  childMarkdownRemark___frontmatter___image___ctime = 'childMarkdownRemark.frontmatter.image.ctime',
+  childMarkdownRemark___frontmatter___image___birthtime = 'childMarkdownRemark.frontmatter.image.birthtime',
+  childMarkdownRemark___frontmatter___image___birthtimeMs = 'childMarkdownRemark.frontmatter.image.birthtimeMs',
+  childMarkdownRemark___frontmatter___image___blksize = 'childMarkdownRemark.frontmatter.image.blksize',
+  childMarkdownRemark___frontmatter___image___blocks = 'childMarkdownRemark.frontmatter.image.blocks',
+  childMarkdownRemark___frontmatter___image___publicURL = 'childMarkdownRemark.frontmatter.image.publicURL',
+  childMarkdownRemark___frontmatter___image___id = 'childMarkdownRemark.frontmatter.image.id',
+  childMarkdownRemark___frontmatter___image___children = 'childMarkdownRemark.frontmatter.image.children',
+  childMarkdownRemark___frontmatter___layout = 'childMarkdownRemark.frontmatter.layout',
+  childMarkdownRemark___frontmatter___section = 'childMarkdownRemark.frontmatter.section',
+  childMarkdownRemark___frontmatter___overlayCaption = 'childMarkdownRemark.frontmatter.overlayCaption',
+  childMarkdownRemark___frontmatter___findOutMoreText = 'childMarkdownRemark.frontmatter.findOutMoreText',
+  childMarkdownRemark___frontmatter___carouselImages = 'childMarkdownRemark.frontmatter.carouselImages',
+  childMarkdownRemark___frontmatter___carouselImages___position = 'childMarkdownRemark.frontmatter.carouselImages.position',
   childMarkdownRemark___frontmatter___showInMenu = 'childMarkdownRemark.frontmatter.showInMenu',
   childMarkdownRemark___frontmatter___menuOrder = 'childMarkdownRemark.frontmatter.menuOrder',
   childMarkdownRemark___frontmatter___firstIntroImage___sourceInstanceName = 'childMarkdownRemark.frontmatter.firstIntroImage.sourceInstanceName',
@@ -2004,60 +2059,27 @@ enum FrontmatterMarkdownFileFieldsEnum {
   childMarkdownRemark___frontmatter___secondIntroImage___publicURL = 'childMarkdownRemark.frontmatter.secondIntroImage.publicURL',
   childMarkdownRemark___frontmatter___secondIntroImage___id = 'childMarkdownRemark.frontmatter.secondIntroImage.id',
   childMarkdownRemark___frontmatter___secondIntroImage___children = 'childMarkdownRemark.frontmatter.secondIntroImage.children',
-  childMarkdownRemark___frontmatter___overlayCaption = 'childMarkdownRemark.frontmatter.overlayCaption',
   childMarkdownRemark___frontmatter___captionPosition = 'childMarkdownRemark.frontmatter.captionPosition',
-  childMarkdownRemark___frontmatter___findOutMoreText = 'childMarkdownRemark.frontmatter.findOutMoreText',
-  childMarkdownRemark___frontmatter___layout = 'childMarkdownRemark.frontmatter.layout',
-  childMarkdownRemark___frontmatter___section = 'childMarkdownRemark.frontmatter.section',
-  childMarkdownRemark___frontmatter___carouselImages = 'childMarkdownRemark.frontmatter.carouselImages',
-  childMarkdownRemark___frontmatter___carouselImages___position = 'childMarkdownRemark.frontmatter.carouselImages.position',
-  childMarkdownRemark___frontmatter___image___sourceInstanceName = 'childMarkdownRemark.frontmatter.image.sourceInstanceName',
-  childMarkdownRemark___frontmatter___image___absolutePath = 'childMarkdownRemark.frontmatter.image.absolutePath',
-  childMarkdownRemark___frontmatter___image___relativePath = 'childMarkdownRemark.frontmatter.image.relativePath',
-  childMarkdownRemark___frontmatter___image___extension = 'childMarkdownRemark.frontmatter.image.extension',
-  childMarkdownRemark___frontmatter___image___size = 'childMarkdownRemark.frontmatter.image.size',
-  childMarkdownRemark___frontmatter___image___prettySize = 'childMarkdownRemark.frontmatter.image.prettySize',
-  childMarkdownRemark___frontmatter___image___modifiedTime = 'childMarkdownRemark.frontmatter.image.modifiedTime',
-  childMarkdownRemark___frontmatter___image___accessTime = 'childMarkdownRemark.frontmatter.image.accessTime',
-  childMarkdownRemark___frontmatter___image___changeTime = 'childMarkdownRemark.frontmatter.image.changeTime',
-  childMarkdownRemark___frontmatter___image___birthTime = 'childMarkdownRemark.frontmatter.image.birthTime',
-  childMarkdownRemark___frontmatter___image___root = 'childMarkdownRemark.frontmatter.image.root',
-  childMarkdownRemark___frontmatter___image___dir = 'childMarkdownRemark.frontmatter.image.dir',
-  childMarkdownRemark___frontmatter___image___base = 'childMarkdownRemark.frontmatter.image.base',
-  childMarkdownRemark___frontmatter___image___ext = 'childMarkdownRemark.frontmatter.image.ext',
-  childMarkdownRemark___frontmatter___image___name = 'childMarkdownRemark.frontmatter.image.name',
-  childMarkdownRemark___frontmatter___image___relativeDirectory = 'childMarkdownRemark.frontmatter.image.relativeDirectory',
-  childMarkdownRemark___frontmatter___image___dev = 'childMarkdownRemark.frontmatter.image.dev',
-  childMarkdownRemark___frontmatter___image___mode = 'childMarkdownRemark.frontmatter.image.mode',
-  childMarkdownRemark___frontmatter___image___nlink = 'childMarkdownRemark.frontmatter.image.nlink',
-  childMarkdownRemark___frontmatter___image___uid = 'childMarkdownRemark.frontmatter.image.uid',
-  childMarkdownRemark___frontmatter___image___gid = 'childMarkdownRemark.frontmatter.image.gid',
-  childMarkdownRemark___frontmatter___image___rdev = 'childMarkdownRemark.frontmatter.image.rdev',
-  childMarkdownRemark___frontmatter___image___ino = 'childMarkdownRemark.frontmatter.image.ino',
-  childMarkdownRemark___frontmatter___image___atimeMs = 'childMarkdownRemark.frontmatter.image.atimeMs',
-  childMarkdownRemark___frontmatter___image___mtimeMs = 'childMarkdownRemark.frontmatter.image.mtimeMs',
-  childMarkdownRemark___frontmatter___image___ctimeMs = 'childMarkdownRemark.frontmatter.image.ctimeMs',
-  childMarkdownRemark___frontmatter___image___atime = 'childMarkdownRemark.frontmatter.image.atime',
-  childMarkdownRemark___frontmatter___image___mtime = 'childMarkdownRemark.frontmatter.image.mtime',
-  childMarkdownRemark___frontmatter___image___ctime = 'childMarkdownRemark.frontmatter.image.ctime',
-  childMarkdownRemark___frontmatter___image___birthtime = 'childMarkdownRemark.frontmatter.image.birthtime',
-  childMarkdownRemark___frontmatter___image___birthtimeMs = 'childMarkdownRemark.frontmatter.image.birthtimeMs',
-  childMarkdownRemark___frontmatter___image___blksize = 'childMarkdownRemark.frontmatter.image.blksize',
-  childMarkdownRemark___frontmatter___image___blocks = 'childMarkdownRemark.frontmatter.image.blocks',
-  childMarkdownRemark___frontmatter___image___publicURL = 'childMarkdownRemark.frontmatter.image.publicURL',
-  childMarkdownRemark___frontmatter___image___id = 'childMarkdownRemark.frontmatter.image.id',
-  childMarkdownRemark___frontmatter___image___children = 'childMarkdownRemark.frontmatter.image.children',
-  childMarkdownRemark___frontmatter___sitemap = 'childMarkdownRemark.frontmatter.sitemap',
-  childMarkdownRemark___frontmatter___image_alignment_classes = 'childMarkdownRemark.frontmatter.image_alignment_classes',
+  childMarkdownRemark___frontmatter___mobileImage = 'childMarkdownRemark.frontmatter.mobileImage',
   childMarkdownRemark___frontmatter___itunesPodcastURL = 'childMarkdownRemark.frontmatter.itunesPodcastURL',
   childMarkdownRemark___frontmatter___podcastURL = 'childMarkdownRemark.frontmatter.podcastURL',
   childMarkdownRemark___frontmatter___iosAppStoreLink = 'childMarkdownRemark.frontmatter.iosAppStoreLink',
   childMarkdownRemark___frontmatter___playStoreLink = 'childMarkdownRemark.frontmatter.playStoreLink',
-  childMarkdownRemark___frontmatter___mobileImage = 'childMarkdownRemark.frontmatter.mobileImage',
+  childMarkdownRemark___frontmatter___sitemap = 'childMarkdownRemark.frontmatter.sitemap',
+  childMarkdownRemark___frontmatter___image_alignment_classes = 'childMarkdownRemark.frontmatter.image_alignment_classes',
+  childMarkdownRemark___frontmatter___resources = 'childMarkdownRemark.frontmatter.resources',
+  childMarkdownRemark___frontmatter___resources___title = 'childMarkdownRemark.frontmatter.resources.title',
+  childMarkdownRemark___frontmatter___resources___files = 'childMarkdownRemark.frontmatter.resources.files',
+  childMarkdownRemark___frontmatter___releases = 'childMarkdownRemark.frontmatter.releases',
+  childMarkdownRemark___frontmatter___releases___title = 'childMarkdownRemark.frontmatter.releases.title',
+  childMarkdownRemark___frontmatter___releases___type = 'childMarkdownRemark.frontmatter.releases.type',
+  childMarkdownRemark___frontmatter___releases___date = 'childMarkdownRemark.frontmatter.releases.date',
+  childMarkdownRemark___frontmatter___releases___appleMusicLink = 'childMarkdownRemark.frontmatter.releases.appleMusicLink',
+  childMarkdownRemark___frontmatter___releases___spotifyLink = 'childMarkdownRemark.frontmatter.releases.spotifyLink',
   childMarkdownRemark___frontmatter___dayOfWeek = 'childMarkdownRemark.frontmatter.dayOfWeek',
-  childMarkdownRemark___frontmatter___timeOfDay = 'childMarkdownRemark.frontmatter.timeOfDay',
   childMarkdownRemark___frontmatter___type = 'childMarkdownRemark.frontmatter.type',
   childMarkdownRemark___frontmatter___time = 'childMarkdownRemark.frontmatter.time',
+  childMarkdownRemark___frontmatter___timeOfDay = 'childMarkdownRemark.frontmatter.timeOfDay',
   childMarkdownRemark___frontmatter___name = 'childMarkdownRemark.frontmatter.name',
   childMarkdownRemark___frontmatter___status = 'childMarkdownRemark.frontmatter.status',
   childMarkdownRemark___frontmatter___backgroundColour = 'childMarkdownRemark.frontmatter.backgroundColour',
@@ -2077,7 +2099,6 @@ enum FrontmatterMarkdownFileFieldsEnum {
   childMarkdownRemark___frontmatter___features___description = 'childMarkdownRemark.frontmatter.features.description',
   childMarkdownRemark___frontmatter___features___buttonText = 'childMarkdownRemark.frontmatter.features.buttonText',
   childMarkdownRemark___frontmatter___features___buttonLink = 'childMarkdownRemark.frontmatter.features.buttonLink',
-  childMarkdownRemark___frontmatter___tagLine = 'childMarkdownRemark.frontmatter.tagLine',
   childMarkdownRemark___frontmatter___eventDate = 'childMarkdownRemark.frontmatter.eventDate',
   childMarkdownRemark___frontmatter___price = 'childMarkdownRemark.frontmatter.price',
   childMarkdownRemark___frontmatter___signUpEmail = 'childMarkdownRemark.frontmatter.signUpEmail',
@@ -2087,9 +2108,10 @@ enum FrontmatterMarkdownFileFieldsEnum {
   childMarkdownRemark___frontmatter___people___title = 'childMarkdownRemark.frontmatter.people.title',
   childMarkdownRemark___frontmatter___people___photo = 'childMarkdownRemark.frontmatter.people.photo',
   childMarkdownRemark___frontmatter___people___headshot_position = 'childMarkdownRemark.frontmatter.people.headshot_position',
-  childMarkdownRemark___frontmatter___findOutMoreLink = 'childMarkdownRemark.frontmatter.findOutMoreLink',
+  childMarkdownRemark___frontmatter___tagLine = 'childMarkdownRemark.frontmatter.tagLine',
   childMarkdownRemark___frontmatter___style_classes = 'childMarkdownRemark.frontmatter.style_classes',
   childMarkdownRemark___frontmatter___imageObjectPosition = 'childMarkdownRemark.frontmatter.imageObjectPosition',
+  childMarkdownRemark___frontmatter___findOutMoreLink = 'childMarkdownRemark.frontmatter.findOutMoreLink',
   childMarkdownRemark___frontmatter___fullBleed = 'childMarkdownRemark.frontmatter.fullBleed',
   childMarkdownRemark___excerpt = 'childMarkdownRemark.excerpt',
   childMarkdownRemark___rawMarkdownBody = 'childMarkdownRemark.rawMarkdownBody',
@@ -3049,6 +3071,109 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___mainImage___childMarkdownRemark___timeToRead = 'frontmatter.mainImage.childMarkdownRemark.timeToRead',
   frontmatter___mainImage___childMarkdownRemark___tableOfContents = 'frontmatter.mainImage.childMarkdownRemark.tableOfContents',
   frontmatter___mainImage___childMarkdownRemark___children = 'frontmatter.mainImage.childMarkdownRemark.children',
+  frontmatter___image___sourceInstanceName = 'frontmatter.image.sourceInstanceName',
+  frontmatter___image___absolutePath = 'frontmatter.image.absolutePath',
+  frontmatter___image___relativePath = 'frontmatter.image.relativePath',
+  frontmatter___image___extension = 'frontmatter.image.extension',
+  frontmatter___image___size = 'frontmatter.image.size',
+  frontmatter___image___prettySize = 'frontmatter.image.prettySize',
+  frontmatter___image___modifiedTime = 'frontmatter.image.modifiedTime',
+  frontmatter___image___accessTime = 'frontmatter.image.accessTime',
+  frontmatter___image___changeTime = 'frontmatter.image.changeTime',
+  frontmatter___image___birthTime = 'frontmatter.image.birthTime',
+  frontmatter___image___root = 'frontmatter.image.root',
+  frontmatter___image___dir = 'frontmatter.image.dir',
+  frontmatter___image___base = 'frontmatter.image.base',
+  frontmatter___image___ext = 'frontmatter.image.ext',
+  frontmatter___image___name = 'frontmatter.image.name',
+  frontmatter___image___relativeDirectory = 'frontmatter.image.relativeDirectory',
+  frontmatter___image___dev = 'frontmatter.image.dev',
+  frontmatter___image___mode = 'frontmatter.image.mode',
+  frontmatter___image___nlink = 'frontmatter.image.nlink',
+  frontmatter___image___uid = 'frontmatter.image.uid',
+  frontmatter___image___gid = 'frontmatter.image.gid',
+  frontmatter___image___rdev = 'frontmatter.image.rdev',
+  frontmatter___image___ino = 'frontmatter.image.ino',
+  frontmatter___image___atimeMs = 'frontmatter.image.atimeMs',
+  frontmatter___image___mtimeMs = 'frontmatter.image.mtimeMs',
+  frontmatter___image___ctimeMs = 'frontmatter.image.ctimeMs',
+  frontmatter___image___atime = 'frontmatter.image.atime',
+  frontmatter___image___mtime = 'frontmatter.image.mtime',
+  frontmatter___image___ctime = 'frontmatter.image.ctime',
+  frontmatter___image___birthtime = 'frontmatter.image.birthtime',
+  frontmatter___image___birthtimeMs = 'frontmatter.image.birthtimeMs',
+  frontmatter___image___blksize = 'frontmatter.image.blksize',
+  frontmatter___image___blocks = 'frontmatter.image.blocks',
+  frontmatter___image___publicURL = 'frontmatter.image.publicURL',
+  frontmatter___image___childImageSharp___id = 'frontmatter.image.childImageSharp.id',
+  frontmatter___image___childImageSharp___children = 'frontmatter.image.childImageSharp.children',
+  frontmatter___image___id = 'frontmatter.image.id',
+  frontmatter___image___parent___id = 'frontmatter.image.parent.id',
+  frontmatter___image___parent___children = 'frontmatter.image.parent.children',
+  frontmatter___image___children = 'frontmatter.image.children',
+  frontmatter___image___children___id = 'frontmatter.image.children.id',
+  frontmatter___image___children___children = 'frontmatter.image.children.children',
+  frontmatter___image___internal___content = 'frontmatter.image.internal.content',
+  frontmatter___image___internal___contentDigest = 'frontmatter.image.internal.contentDigest',
+  frontmatter___image___internal___description = 'frontmatter.image.internal.description',
+  frontmatter___image___internal___fieldOwners = 'frontmatter.image.internal.fieldOwners',
+  frontmatter___image___internal___ignoreType = 'frontmatter.image.internal.ignoreType',
+  frontmatter___image___internal___mediaType = 'frontmatter.image.internal.mediaType',
+  frontmatter___image___internal___owner = 'frontmatter.image.internal.owner',
+  frontmatter___image___internal___type = 'frontmatter.image.internal.type',
+  frontmatter___image___childMarkdownRemark___id = 'frontmatter.image.childMarkdownRemark.id',
+  frontmatter___image___childMarkdownRemark___excerpt = 'frontmatter.image.childMarkdownRemark.excerpt',
+  frontmatter___image___childMarkdownRemark___rawMarkdownBody = 'frontmatter.image.childMarkdownRemark.rawMarkdownBody',
+  frontmatter___image___childMarkdownRemark___fileAbsolutePath = 'frontmatter.image.childMarkdownRemark.fileAbsolutePath',
+  frontmatter___image___childMarkdownRemark___html = 'frontmatter.image.childMarkdownRemark.html',
+  frontmatter___image___childMarkdownRemark___htmlAst = 'frontmatter.image.childMarkdownRemark.htmlAst',
+  frontmatter___image___childMarkdownRemark___excerptAst = 'frontmatter.image.childMarkdownRemark.excerptAst',
+  frontmatter___image___childMarkdownRemark___headings = 'frontmatter.image.childMarkdownRemark.headings',
+  frontmatter___image___childMarkdownRemark___timeToRead = 'frontmatter.image.childMarkdownRemark.timeToRead',
+  frontmatter___image___childMarkdownRemark___tableOfContents = 'frontmatter.image.childMarkdownRemark.tableOfContents',
+  frontmatter___image___childMarkdownRemark___children = 'frontmatter.image.childMarkdownRemark.children',
+  frontmatter___layout = 'frontmatter.layout',
+  frontmatter___section = 'frontmatter.section',
+  frontmatter___overlayCaption = 'frontmatter.overlayCaption',
+  frontmatter___findOutMoreText = 'frontmatter.findOutMoreText',
+  frontmatter___carouselImages = 'frontmatter.carouselImages',
+  frontmatter___carouselImages___mainImage___sourceInstanceName = 'frontmatter.carouselImages.mainImage.sourceInstanceName',
+  frontmatter___carouselImages___mainImage___absolutePath = 'frontmatter.carouselImages.mainImage.absolutePath',
+  frontmatter___carouselImages___mainImage___relativePath = 'frontmatter.carouselImages.mainImage.relativePath',
+  frontmatter___carouselImages___mainImage___extension = 'frontmatter.carouselImages.mainImage.extension',
+  frontmatter___carouselImages___mainImage___size = 'frontmatter.carouselImages.mainImage.size',
+  frontmatter___carouselImages___mainImage___prettySize = 'frontmatter.carouselImages.mainImage.prettySize',
+  frontmatter___carouselImages___mainImage___modifiedTime = 'frontmatter.carouselImages.mainImage.modifiedTime',
+  frontmatter___carouselImages___mainImage___accessTime = 'frontmatter.carouselImages.mainImage.accessTime',
+  frontmatter___carouselImages___mainImage___changeTime = 'frontmatter.carouselImages.mainImage.changeTime',
+  frontmatter___carouselImages___mainImage___birthTime = 'frontmatter.carouselImages.mainImage.birthTime',
+  frontmatter___carouselImages___mainImage___root = 'frontmatter.carouselImages.mainImage.root',
+  frontmatter___carouselImages___mainImage___dir = 'frontmatter.carouselImages.mainImage.dir',
+  frontmatter___carouselImages___mainImage___base = 'frontmatter.carouselImages.mainImage.base',
+  frontmatter___carouselImages___mainImage___ext = 'frontmatter.carouselImages.mainImage.ext',
+  frontmatter___carouselImages___mainImage___name = 'frontmatter.carouselImages.mainImage.name',
+  frontmatter___carouselImages___mainImage___relativeDirectory = 'frontmatter.carouselImages.mainImage.relativeDirectory',
+  frontmatter___carouselImages___mainImage___dev = 'frontmatter.carouselImages.mainImage.dev',
+  frontmatter___carouselImages___mainImage___mode = 'frontmatter.carouselImages.mainImage.mode',
+  frontmatter___carouselImages___mainImage___nlink = 'frontmatter.carouselImages.mainImage.nlink',
+  frontmatter___carouselImages___mainImage___uid = 'frontmatter.carouselImages.mainImage.uid',
+  frontmatter___carouselImages___mainImage___gid = 'frontmatter.carouselImages.mainImage.gid',
+  frontmatter___carouselImages___mainImage___rdev = 'frontmatter.carouselImages.mainImage.rdev',
+  frontmatter___carouselImages___mainImage___ino = 'frontmatter.carouselImages.mainImage.ino',
+  frontmatter___carouselImages___mainImage___atimeMs = 'frontmatter.carouselImages.mainImage.atimeMs',
+  frontmatter___carouselImages___mainImage___mtimeMs = 'frontmatter.carouselImages.mainImage.mtimeMs',
+  frontmatter___carouselImages___mainImage___ctimeMs = 'frontmatter.carouselImages.mainImage.ctimeMs',
+  frontmatter___carouselImages___mainImage___atime = 'frontmatter.carouselImages.mainImage.atime',
+  frontmatter___carouselImages___mainImage___mtime = 'frontmatter.carouselImages.mainImage.mtime',
+  frontmatter___carouselImages___mainImage___ctime = 'frontmatter.carouselImages.mainImage.ctime',
+  frontmatter___carouselImages___mainImage___birthtime = 'frontmatter.carouselImages.mainImage.birthtime',
+  frontmatter___carouselImages___mainImage___birthtimeMs = 'frontmatter.carouselImages.mainImage.birthtimeMs',
+  frontmatter___carouselImages___mainImage___blksize = 'frontmatter.carouselImages.mainImage.blksize',
+  frontmatter___carouselImages___mainImage___blocks = 'frontmatter.carouselImages.mainImage.blocks',
+  frontmatter___carouselImages___mainImage___publicURL = 'frontmatter.carouselImages.mainImage.publicURL',
+  frontmatter___carouselImages___mainImage___id = 'frontmatter.carouselImages.mainImage.id',
+  frontmatter___carouselImages___mainImage___children = 'frontmatter.carouselImages.mainImage.children',
+  frontmatter___carouselImages___position = 'frontmatter.carouselImages.position',
   frontmatter___showInMenu = 'frontmatter.showInMenu',
   frontmatter___menuOrder = 'frontmatter.menuOrder',
   frontmatter___firstIntroImage___sourceInstanceName = 'frontmatter.firstIntroImage.sourceInstanceName',
@@ -3173,121 +3298,65 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___secondIntroImage___childMarkdownRemark___timeToRead = 'frontmatter.secondIntroImage.childMarkdownRemark.timeToRead',
   frontmatter___secondIntroImage___childMarkdownRemark___tableOfContents = 'frontmatter.secondIntroImage.childMarkdownRemark.tableOfContents',
   frontmatter___secondIntroImage___childMarkdownRemark___children = 'frontmatter.secondIntroImage.childMarkdownRemark.children',
-  frontmatter___overlayCaption = 'frontmatter.overlayCaption',
   frontmatter___captionPosition = 'frontmatter.captionPosition',
-  frontmatter___findOutMoreText = 'frontmatter.findOutMoreText',
-  frontmatter___layout = 'frontmatter.layout',
-  frontmatter___section = 'frontmatter.section',
-  frontmatter___carouselImages = 'frontmatter.carouselImages',
-  frontmatter___carouselImages___mainImage___sourceInstanceName = 'frontmatter.carouselImages.mainImage.sourceInstanceName',
-  frontmatter___carouselImages___mainImage___absolutePath = 'frontmatter.carouselImages.mainImage.absolutePath',
-  frontmatter___carouselImages___mainImage___relativePath = 'frontmatter.carouselImages.mainImage.relativePath',
-  frontmatter___carouselImages___mainImage___extension = 'frontmatter.carouselImages.mainImage.extension',
-  frontmatter___carouselImages___mainImage___size = 'frontmatter.carouselImages.mainImage.size',
-  frontmatter___carouselImages___mainImage___prettySize = 'frontmatter.carouselImages.mainImage.prettySize',
-  frontmatter___carouselImages___mainImage___modifiedTime = 'frontmatter.carouselImages.mainImage.modifiedTime',
-  frontmatter___carouselImages___mainImage___accessTime = 'frontmatter.carouselImages.mainImage.accessTime',
-  frontmatter___carouselImages___mainImage___changeTime = 'frontmatter.carouselImages.mainImage.changeTime',
-  frontmatter___carouselImages___mainImage___birthTime = 'frontmatter.carouselImages.mainImage.birthTime',
-  frontmatter___carouselImages___mainImage___root = 'frontmatter.carouselImages.mainImage.root',
-  frontmatter___carouselImages___mainImage___dir = 'frontmatter.carouselImages.mainImage.dir',
-  frontmatter___carouselImages___mainImage___base = 'frontmatter.carouselImages.mainImage.base',
-  frontmatter___carouselImages___mainImage___ext = 'frontmatter.carouselImages.mainImage.ext',
-  frontmatter___carouselImages___mainImage___name = 'frontmatter.carouselImages.mainImage.name',
-  frontmatter___carouselImages___mainImage___relativeDirectory = 'frontmatter.carouselImages.mainImage.relativeDirectory',
-  frontmatter___carouselImages___mainImage___dev = 'frontmatter.carouselImages.mainImage.dev',
-  frontmatter___carouselImages___mainImage___mode = 'frontmatter.carouselImages.mainImage.mode',
-  frontmatter___carouselImages___mainImage___nlink = 'frontmatter.carouselImages.mainImage.nlink',
-  frontmatter___carouselImages___mainImage___uid = 'frontmatter.carouselImages.mainImage.uid',
-  frontmatter___carouselImages___mainImage___gid = 'frontmatter.carouselImages.mainImage.gid',
-  frontmatter___carouselImages___mainImage___rdev = 'frontmatter.carouselImages.mainImage.rdev',
-  frontmatter___carouselImages___mainImage___ino = 'frontmatter.carouselImages.mainImage.ino',
-  frontmatter___carouselImages___mainImage___atimeMs = 'frontmatter.carouselImages.mainImage.atimeMs',
-  frontmatter___carouselImages___mainImage___mtimeMs = 'frontmatter.carouselImages.mainImage.mtimeMs',
-  frontmatter___carouselImages___mainImage___ctimeMs = 'frontmatter.carouselImages.mainImage.ctimeMs',
-  frontmatter___carouselImages___mainImage___atime = 'frontmatter.carouselImages.mainImage.atime',
-  frontmatter___carouselImages___mainImage___mtime = 'frontmatter.carouselImages.mainImage.mtime',
-  frontmatter___carouselImages___mainImage___ctime = 'frontmatter.carouselImages.mainImage.ctime',
-  frontmatter___carouselImages___mainImage___birthtime = 'frontmatter.carouselImages.mainImage.birthtime',
-  frontmatter___carouselImages___mainImage___birthtimeMs = 'frontmatter.carouselImages.mainImage.birthtimeMs',
-  frontmatter___carouselImages___mainImage___blksize = 'frontmatter.carouselImages.mainImage.blksize',
-  frontmatter___carouselImages___mainImage___blocks = 'frontmatter.carouselImages.mainImage.blocks',
-  frontmatter___carouselImages___mainImage___publicURL = 'frontmatter.carouselImages.mainImage.publicURL',
-  frontmatter___carouselImages___mainImage___id = 'frontmatter.carouselImages.mainImage.id',
-  frontmatter___carouselImages___mainImage___children = 'frontmatter.carouselImages.mainImage.children',
-  frontmatter___carouselImages___position = 'frontmatter.carouselImages.position',
-  frontmatter___image___sourceInstanceName = 'frontmatter.image.sourceInstanceName',
-  frontmatter___image___absolutePath = 'frontmatter.image.absolutePath',
-  frontmatter___image___relativePath = 'frontmatter.image.relativePath',
-  frontmatter___image___extension = 'frontmatter.image.extension',
-  frontmatter___image___size = 'frontmatter.image.size',
-  frontmatter___image___prettySize = 'frontmatter.image.prettySize',
-  frontmatter___image___modifiedTime = 'frontmatter.image.modifiedTime',
-  frontmatter___image___accessTime = 'frontmatter.image.accessTime',
-  frontmatter___image___changeTime = 'frontmatter.image.changeTime',
-  frontmatter___image___birthTime = 'frontmatter.image.birthTime',
-  frontmatter___image___root = 'frontmatter.image.root',
-  frontmatter___image___dir = 'frontmatter.image.dir',
-  frontmatter___image___base = 'frontmatter.image.base',
-  frontmatter___image___ext = 'frontmatter.image.ext',
-  frontmatter___image___name = 'frontmatter.image.name',
-  frontmatter___image___relativeDirectory = 'frontmatter.image.relativeDirectory',
-  frontmatter___image___dev = 'frontmatter.image.dev',
-  frontmatter___image___mode = 'frontmatter.image.mode',
-  frontmatter___image___nlink = 'frontmatter.image.nlink',
-  frontmatter___image___uid = 'frontmatter.image.uid',
-  frontmatter___image___gid = 'frontmatter.image.gid',
-  frontmatter___image___rdev = 'frontmatter.image.rdev',
-  frontmatter___image___ino = 'frontmatter.image.ino',
-  frontmatter___image___atimeMs = 'frontmatter.image.atimeMs',
-  frontmatter___image___mtimeMs = 'frontmatter.image.mtimeMs',
-  frontmatter___image___ctimeMs = 'frontmatter.image.ctimeMs',
-  frontmatter___image___atime = 'frontmatter.image.atime',
-  frontmatter___image___mtime = 'frontmatter.image.mtime',
-  frontmatter___image___ctime = 'frontmatter.image.ctime',
-  frontmatter___image___birthtime = 'frontmatter.image.birthtime',
-  frontmatter___image___birthtimeMs = 'frontmatter.image.birthtimeMs',
-  frontmatter___image___blksize = 'frontmatter.image.blksize',
-  frontmatter___image___blocks = 'frontmatter.image.blocks',
-  frontmatter___image___publicURL = 'frontmatter.image.publicURL',
-  frontmatter___image___childImageSharp___id = 'frontmatter.image.childImageSharp.id',
-  frontmatter___image___childImageSharp___children = 'frontmatter.image.childImageSharp.children',
-  frontmatter___image___id = 'frontmatter.image.id',
-  frontmatter___image___parent___id = 'frontmatter.image.parent.id',
-  frontmatter___image___parent___children = 'frontmatter.image.parent.children',
-  frontmatter___image___children = 'frontmatter.image.children',
-  frontmatter___image___children___id = 'frontmatter.image.children.id',
-  frontmatter___image___children___children = 'frontmatter.image.children.children',
-  frontmatter___image___internal___content = 'frontmatter.image.internal.content',
-  frontmatter___image___internal___contentDigest = 'frontmatter.image.internal.contentDigest',
-  frontmatter___image___internal___description = 'frontmatter.image.internal.description',
-  frontmatter___image___internal___fieldOwners = 'frontmatter.image.internal.fieldOwners',
-  frontmatter___image___internal___ignoreType = 'frontmatter.image.internal.ignoreType',
-  frontmatter___image___internal___mediaType = 'frontmatter.image.internal.mediaType',
-  frontmatter___image___internal___owner = 'frontmatter.image.internal.owner',
-  frontmatter___image___internal___type = 'frontmatter.image.internal.type',
-  frontmatter___image___childMarkdownRemark___id = 'frontmatter.image.childMarkdownRemark.id',
-  frontmatter___image___childMarkdownRemark___excerpt = 'frontmatter.image.childMarkdownRemark.excerpt',
-  frontmatter___image___childMarkdownRemark___rawMarkdownBody = 'frontmatter.image.childMarkdownRemark.rawMarkdownBody',
-  frontmatter___image___childMarkdownRemark___fileAbsolutePath = 'frontmatter.image.childMarkdownRemark.fileAbsolutePath',
-  frontmatter___image___childMarkdownRemark___html = 'frontmatter.image.childMarkdownRemark.html',
-  frontmatter___image___childMarkdownRemark___htmlAst = 'frontmatter.image.childMarkdownRemark.htmlAst',
-  frontmatter___image___childMarkdownRemark___excerptAst = 'frontmatter.image.childMarkdownRemark.excerptAst',
-  frontmatter___image___childMarkdownRemark___headings = 'frontmatter.image.childMarkdownRemark.headings',
-  frontmatter___image___childMarkdownRemark___timeToRead = 'frontmatter.image.childMarkdownRemark.timeToRead',
-  frontmatter___image___childMarkdownRemark___tableOfContents = 'frontmatter.image.childMarkdownRemark.tableOfContents',
-  frontmatter___image___childMarkdownRemark___children = 'frontmatter.image.childMarkdownRemark.children',
-  frontmatter___sitemap = 'frontmatter.sitemap',
-  frontmatter___image_alignment_classes = 'frontmatter.image_alignment_classes',
+  frontmatter___mobileImage = 'frontmatter.mobileImage',
   frontmatter___itunesPodcastURL = 'frontmatter.itunesPodcastURL',
   frontmatter___podcastURL = 'frontmatter.podcastURL',
   frontmatter___iosAppStoreLink = 'frontmatter.iosAppStoreLink',
   frontmatter___playStoreLink = 'frontmatter.playStoreLink',
-  frontmatter___mobileImage = 'frontmatter.mobileImage',
+  frontmatter___sitemap = 'frontmatter.sitemap',
+  frontmatter___image_alignment_classes = 'frontmatter.image_alignment_classes',
+  frontmatter___resources = 'frontmatter.resources',
+  frontmatter___resources___title = 'frontmatter.resources.title',
+  frontmatter___resources___files = 'frontmatter.resources.files',
+  frontmatter___resources___files___name = 'frontmatter.resources.files.name',
+  frontmatter___resources___files___url = 'frontmatter.resources.files.url',
+  frontmatter___releases = 'frontmatter.releases',
+  frontmatter___releases___title = 'frontmatter.releases.title',
+  frontmatter___releases___type = 'frontmatter.releases.type',
+  frontmatter___releases___date = 'frontmatter.releases.date',
+  frontmatter___releases___coverImage___sourceInstanceName = 'frontmatter.releases.coverImage.sourceInstanceName',
+  frontmatter___releases___coverImage___absolutePath = 'frontmatter.releases.coverImage.absolutePath',
+  frontmatter___releases___coverImage___relativePath = 'frontmatter.releases.coverImage.relativePath',
+  frontmatter___releases___coverImage___extension = 'frontmatter.releases.coverImage.extension',
+  frontmatter___releases___coverImage___size = 'frontmatter.releases.coverImage.size',
+  frontmatter___releases___coverImage___prettySize = 'frontmatter.releases.coverImage.prettySize',
+  frontmatter___releases___coverImage___modifiedTime = 'frontmatter.releases.coverImage.modifiedTime',
+  frontmatter___releases___coverImage___accessTime = 'frontmatter.releases.coverImage.accessTime',
+  frontmatter___releases___coverImage___changeTime = 'frontmatter.releases.coverImage.changeTime',
+  frontmatter___releases___coverImage___birthTime = 'frontmatter.releases.coverImage.birthTime',
+  frontmatter___releases___coverImage___root = 'frontmatter.releases.coverImage.root',
+  frontmatter___releases___coverImage___dir = 'frontmatter.releases.coverImage.dir',
+  frontmatter___releases___coverImage___base = 'frontmatter.releases.coverImage.base',
+  frontmatter___releases___coverImage___ext = 'frontmatter.releases.coverImage.ext',
+  frontmatter___releases___coverImage___name = 'frontmatter.releases.coverImage.name',
+  frontmatter___releases___coverImage___relativeDirectory = 'frontmatter.releases.coverImage.relativeDirectory',
+  frontmatter___releases___coverImage___dev = 'frontmatter.releases.coverImage.dev',
+  frontmatter___releases___coverImage___mode = 'frontmatter.releases.coverImage.mode',
+  frontmatter___releases___coverImage___nlink = 'frontmatter.releases.coverImage.nlink',
+  frontmatter___releases___coverImage___uid = 'frontmatter.releases.coverImage.uid',
+  frontmatter___releases___coverImage___gid = 'frontmatter.releases.coverImage.gid',
+  frontmatter___releases___coverImage___rdev = 'frontmatter.releases.coverImage.rdev',
+  frontmatter___releases___coverImage___ino = 'frontmatter.releases.coverImage.ino',
+  frontmatter___releases___coverImage___atimeMs = 'frontmatter.releases.coverImage.atimeMs',
+  frontmatter___releases___coverImage___mtimeMs = 'frontmatter.releases.coverImage.mtimeMs',
+  frontmatter___releases___coverImage___ctimeMs = 'frontmatter.releases.coverImage.ctimeMs',
+  frontmatter___releases___coverImage___atime = 'frontmatter.releases.coverImage.atime',
+  frontmatter___releases___coverImage___mtime = 'frontmatter.releases.coverImage.mtime',
+  frontmatter___releases___coverImage___ctime = 'frontmatter.releases.coverImage.ctime',
+  frontmatter___releases___coverImage___birthtime = 'frontmatter.releases.coverImage.birthtime',
+  frontmatter___releases___coverImage___birthtimeMs = 'frontmatter.releases.coverImage.birthtimeMs',
+  frontmatter___releases___coverImage___blksize = 'frontmatter.releases.coverImage.blksize',
+  frontmatter___releases___coverImage___blocks = 'frontmatter.releases.coverImage.blocks',
+  frontmatter___releases___coverImage___publicURL = 'frontmatter.releases.coverImage.publicURL',
+  frontmatter___releases___coverImage___id = 'frontmatter.releases.coverImage.id',
+  frontmatter___releases___coverImage___children = 'frontmatter.releases.coverImage.children',
+  frontmatter___releases___appleMusicLink = 'frontmatter.releases.appleMusicLink',
+  frontmatter___releases___spotifyLink = 'frontmatter.releases.spotifyLink',
   frontmatter___dayOfWeek = 'frontmatter.dayOfWeek',
-  frontmatter___timeOfDay = 'frontmatter.timeOfDay',
   frontmatter___type = 'frontmatter.type',
   frontmatter___time = 'frontmatter.time',
+  frontmatter___timeOfDay = 'frontmatter.timeOfDay',
   frontmatter___name = 'frontmatter.name',
   frontmatter___status = 'frontmatter.status',
   frontmatter___backgroundColour = 'frontmatter.backgroundColour',
@@ -3309,7 +3378,6 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___features___description = 'frontmatter.features.description',
   frontmatter___features___buttonText = 'frontmatter.features.buttonText',
   frontmatter___features___buttonLink = 'frontmatter.features.buttonLink',
-  frontmatter___tagLine = 'frontmatter.tagLine',
   frontmatter___eventDate = 'frontmatter.eventDate',
   frontmatter___price = 'frontmatter.price',
   frontmatter___signUpEmail = 'frontmatter.signUpEmail',
@@ -3319,9 +3387,10 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___people___title = 'frontmatter.people.title',
   frontmatter___people___photo = 'frontmatter.people.photo',
   frontmatter___people___headshot_position = 'frontmatter.people.headshot_position',
-  frontmatter___findOutMoreLink = 'frontmatter.findOutMoreLink',
+  frontmatter___tagLine = 'frontmatter.tagLine',
   frontmatter___style_classes = 'frontmatter.style_classes',
   frontmatter___imageObjectPosition = 'frontmatter.imageObjectPosition',
+  frontmatter___findOutMoreLink = 'frontmatter.findOutMoreLink',
   frontmatter___fullBleed = 'frontmatter.fullBleed',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
@@ -3632,25 +3701,27 @@ enum MarkdownRemarkFieldsEnum {
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___showInFooter = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.showInFooter',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___headerColour = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.headerColour',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___template = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.template',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___showInMenu = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.showInMenu',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___menuOrder = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.menuOrder',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___overlayCaption = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.overlayCaption',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___captionPosition = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.captionPosition',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreText = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.findOutMoreText',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___layout = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.layout',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___section = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.section',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___overlayCaption = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.overlayCaption',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreText = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.findOutMoreText',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___carouselImages = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.carouselImages',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___sitemap = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.sitemap',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___image_alignment_classes = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.image_alignment_classes',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___showInMenu = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.showInMenu',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___menuOrder = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.menuOrder',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___captionPosition = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.captionPosition',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___mobileImage = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.mobileImage',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___itunesPodcastURL = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.itunesPodcastURL',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___podcastURL = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.podcastURL',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___iosAppStoreLink = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.iosAppStoreLink',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___playStoreLink = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.playStoreLink',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___mobileImage = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.mobileImage',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___sitemap = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.sitemap',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___image_alignment_classes = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.image_alignment_classes',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___resources = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.resources',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___releases = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.releases',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___dayOfWeek = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.dayOfWeek',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___timeOfDay = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.timeOfDay',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___type = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.type',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___time = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.time',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___timeOfDay = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.timeOfDay',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___name = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.name',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___status = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.status',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___backgroundColour = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.backgroundColour',
@@ -3660,15 +3731,15 @@ enum MarkdownRemarkFieldsEnum {
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___order = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.order',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___lastUpdated = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.lastUpdated',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___features = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.features',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___tagLine = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.tagLine',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___eventDate = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.eventDate',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___price = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.price',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___signUpEmail = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.signUpEmail',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___leader = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.leader',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___people = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.people',
-  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreLink = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.findOutMoreLink',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___tagLine = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.tagLine',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___style_classes = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.style_classes',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___imageObjectPosition = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.imageObjectPosition',
+  childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___findOutMoreLink = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.findOutMoreLink',
   childFrontmatterMarkdownFile___childMarkdownRemark___frontmatter___fullBleed = 'childFrontmatterMarkdownFile.childMarkdownRemark.frontmatter.fullBleed',
   childFrontmatterMarkdownFile___childMarkdownRemark___excerpt = 'childFrontmatterMarkdownFile.childMarkdownRemark.excerpt',
   childFrontmatterMarkdownFile___childMarkdownRemark___rawMarkdownBody = 'childFrontmatterMarkdownFile.childMarkdownRemark.rawMarkdownBody',
@@ -3773,28 +3844,30 @@ type MarkdownRemarkFrontmatter = {
   readonly headerColour: Maybe<Scalars['String']>;
   readonly template: Maybe<Scalars['String']>;
   readonly mainImage: Maybe<File>;
+  readonly image: Maybe<File>;
+  readonly layout: Maybe<Scalars['String']>;
+  readonly section: Maybe<Scalars['String']>;
+  readonly overlayCaption: Maybe<Scalars['String']>;
+  readonly findOutMoreText: Maybe<Scalars['String']>;
+  readonly carouselImages: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterCarouselImages>>>;
   readonly showInMenu: Maybe<Scalars['Boolean']>;
   readonly menuOrder: Maybe<Scalars['Int']>;
   readonly firstIntroImage: Maybe<File>;
   readonly secondIntroImage: Maybe<File>;
-  readonly overlayCaption: Maybe<Scalars['String']>;
   readonly captionPosition: Maybe<Scalars['String']>;
-  readonly findOutMoreText: Maybe<Scalars['String']>;
-  readonly layout: Maybe<Scalars['String']>;
-  readonly section: Maybe<Scalars['String']>;
-  readonly carouselImages: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterCarouselImages>>>;
-  readonly image: Maybe<File>;
-  readonly sitemap: Maybe<Scalars['Boolean']>;
-  readonly image_alignment_classes: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly mobileImage: Maybe<Scalars['String']>;
   readonly itunesPodcastURL: Maybe<Scalars['String']>;
   readonly podcastURL: Maybe<Scalars['String']>;
   readonly iosAppStoreLink: Maybe<Scalars['String']>;
   readonly playStoreLink: Maybe<Scalars['String']>;
-  readonly mobileImage: Maybe<Scalars['String']>;
+  readonly sitemap: Maybe<Scalars['Boolean']>;
+  readonly image_alignment_classes: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
+  readonly resources: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterResources>>>;
+  readonly releases: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterReleases>>>;
   readonly dayOfWeek: Maybe<Scalars['String']>;
-  readonly timeOfDay: Maybe<Scalars['String']>;
   readonly type: Maybe<Scalars['String']>;
   readonly time: Maybe<Scalars['String']>;
+  readonly timeOfDay: Maybe<Scalars['String']>;
   readonly name: Maybe<Scalars['String']>;
   readonly status: Maybe<Scalars['String']>;
   readonly backgroundColour: Maybe<Scalars['String']>;
@@ -3804,15 +3877,15 @@ type MarkdownRemarkFrontmatter = {
   readonly order: Maybe<Scalars['Int']>;
   readonly lastUpdated: Maybe<Scalars['String']>;
   readonly features: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterFeatures>>>;
-  readonly tagLine: Maybe<Scalars['String']>;
   readonly eventDate: Maybe<Scalars['String']>;
   readonly price: Maybe<Scalars['String']>;
   readonly signUpEmail: Maybe<Scalars['String']>;
   readonly leader: Maybe<Scalars['String']>;
   readonly people: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterPeople>>>;
-  readonly findOutMoreLink: Maybe<Scalars['String']>;
+  readonly tagLine: Maybe<Scalars['String']>;
   readonly style_classes: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly imageObjectPosition: Maybe<Scalars['String']>;
+  readonly findOutMoreLink: Maybe<Scalars['String']>;
   readonly fullBleed: Maybe<Scalars['Boolean']>;
 };
 
@@ -3897,28 +3970,30 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly headerColour: Maybe<StringQueryOperatorInput>;
   readonly template: Maybe<StringQueryOperatorInput>;
   readonly mainImage: Maybe<FileFilterInput>;
+  readonly image: Maybe<FileFilterInput>;
+  readonly layout: Maybe<StringQueryOperatorInput>;
+  readonly section: Maybe<StringQueryOperatorInput>;
+  readonly overlayCaption: Maybe<StringQueryOperatorInput>;
+  readonly findOutMoreText: Maybe<StringQueryOperatorInput>;
+  readonly carouselImages: Maybe<MarkdownRemarkFrontmatterCarouselImagesFilterListInput>;
   readonly showInMenu: Maybe<BooleanQueryOperatorInput>;
   readonly menuOrder: Maybe<IntQueryOperatorInput>;
   readonly firstIntroImage: Maybe<FileFilterInput>;
   readonly secondIntroImage: Maybe<FileFilterInput>;
-  readonly overlayCaption: Maybe<StringQueryOperatorInput>;
   readonly captionPosition: Maybe<StringQueryOperatorInput>;
-  readonly findOutMoreText: Maybe<StringQueryOperatorInput>;
-  readonly layout: Maybe<StringQueryOperatorInput>;
-  readonly section: Maybe<StringQueryOperatorInput>;
-  readonly carouselImages: Maybe<MarkdownRemarkFrontmatterCarouselImagesFilterListInput>;
-  readonly image: Maybe<FileFilterInput>;
-  readonly sitemap: Maybe<BooleanQueryOperatorInput>;
-  readonly image_alignment_classes: Maybe<StringQueryOperatorInput>;
+  readonly mobileImage: Maybe<StringQueryOperatorInput>;
   readonly itunesPodcastURL: Maybe<StringQueryOperatorInput>;
   readonly podcastURL: Maybe<StringQueryOperatorInput>;
   readonly iosAppStoreLink: Maybe<StringQueryOperatorInput>;
   readonly playStoreLink: Maybe<StringQueryOperatorInput>;
-  readonly mobileImage: Maybe<StringQueryOperatorInput>;
+  readonly sitemap: Maybe<BooleanQueryOperatorInput>;
+  readonly image_alignment_classes: Maybe<StringQueryOperatorInput>;
+  readonly resources: Maybe<MarkdownRemarkFrontmatterResourcesFilterListInput>;
+  readonly releases: Maybe<MarkdownRemarkFrontmatterReleasesFilterListInput>;
   readonly dayOfWeek: Maybe<StringQueryOperatorInput>;
-  readonly timeOfDay: Maybe<StringQueryOperatorInput>;
   readonly type: Maybe<StringQueryOperatorInput>;
   readonly time: Maybe<StringQueryOperatorInput>;
+  readonly timeOfDay: Maybe<StringQueryOperatorInput>;
   readonly name: Maybe<StringQueryOperatorInput>;
   readonly status: Maybe<StringQueryOperatorInput>;
   readonly backgroundColour: Maybe<StringQueryOperatorInput>;
@@ -3928,15 +4003,15 @@ type MarkdownRemarkFrontmatterFilterInput = {
   readonly order: Maybe<IntQueryOperatorInput>;
   readonly lastUpdated: Maybe<StringQueryOperatorInput>;
   readonly features: Maybe<MarkdownRemarkFrontmatterFeaturesFilterListInput>;
-  readonly tagLine: Maybe<StringQueryOperatorInput>;
   readonly eventDate: Maybe<StringQueryOperatorInput>;
   readonly price: Maybe<StringQueryOperatorInput>;
   readonly signUpEmail: Maybe<StringQueryOperatorInput>;
   readonly leader: Maybe<StringQueryOperatorInput>;
   readonly people: Maybe<MarkdownRemarkFrontmatterPeopleFilterListInput>;
-  readonly findOutMoreLink: Maybe<StringQueryOperatorInput>;
+  readonly tagLine: Maybe<StringQueryOperatorInput>;
   readonly style_classes: Maybe<StringQueryOperatorInput>;
   readonly imageObjectPosition: Maybe<StringQueryOperatorInput>;
+  readonly findOutMoreLink: Maybe<StringQueryOperatorInput>;
   readonly fullBleed: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -3956,6 +4031,64 @@ type MarkdownRemarkFrontmatterPeopleFilterInput = {
 
 type MarkdownRemarkFrontmatterPeopleFilterListInput = {
   readonly elemMatch: Maybe<MarkdownRemarkFrontmatterPeopleFilterInput>;
+};
+
+type MarkdownRemarkFrontmatterReleases = {
+  readonly title: Maybe<Scalars['String']>;
+  readonly type: Maybe<Scalars['String']>;
+  readonly date: Maybe<Scalars['Date']>;
+  readonly coverImage: Maybe<File>;
+  readonly appleMusicLink: Maybe<Scalars['String']>;
+  readonly spotifyLink: Maybe<Scalars['String']>;
+};
+
+
+type MarkdownRemarkFrontmatterReleases_dateArgs = {
+  formatString: Maybe<Scalars['String']>;
+  fromNow: Maybe<Scalars['Boolean']>;
+  difference: Maybe<Scalars['String']>;
+  locale: Maybe<Scalars['String']>;
+};
+
+type MarkdownRemarkFrontmatterReleasesFilterInput = {
+  readonly title: Maybe<StringQueryOperatorInput>;
+  readonly type: Maybe<StringQueryOperatorInput>;
+  readonly date: Maybe<DateQueryOperatorInput>;
+  readonly coverImage: Maybe<FileFilterInput>;
+  readonly appleMusicLink: Maybe<StringQueryOperatorInput>;
+  readonly spotifyLink: Maybe<StringQueryOperatorInput>;
+};
+
+type MarkdownRemarkFrontmatterReleasesFilterListInput = {
+  readonly elemMatch: Maybe<MarkdownRemarkFrontmatterReleasesFilterInput>;
+};
+
+type MarkdownRemarkFrontmatterResources = {
+  readonly title: Maybe<Scalars['String']>;
+  readonly files: Maybe<ReadonlyArray<Maybe<MarkdownRemarkFrontmatterResourcesFiles>>>;
+};
+
+type MarkdownRemarkFrontmatterResourcesFiles = {
+  readonly name: Maybe<Scalars['String']>;
+  readonly url: Maybe<Scalars['String']>;
+};
+
+type MarkdownRemarkFrontmatterResourcesFilesFilterInput = {
+  readonly name: Maybe<StringQueryOperatorInput>;
+  readonly url: Maybe<StringQueryOperatorInput>;
+};
+
+type MarkdownRemarkFrontmatterResourcesFilesFilterListInput = {
+  readonly elemMatch: Maybe<MarkdownRemarkFrontmatterResourcesFilesFilterInput>;
+};
+
+type MarkdownRemarkFrontmatterResourcesFilterInput = {
+  readonly title: Maybe<StringQueryOperatorInput>;
+  readonly files: Maybe<MarkdownRemarkFrontmatterResourcesFilesFilterListInput>;
+};
+
+type MarkdownRemarkFrontmatterResourcesFilterListInput = {
+  readonly elemMatch: Maybe<MarkdownRemarkFrontmatterResourcesFilterInput>;
 };
 
 type MarkdownRemarkGroupConnection = {
@@ -4185,6 +4318,7 @@ type Query_sitePageArgs = {
   children: Maybe<NodeFilterListInput>;
   internal: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages: Maybe<BooleanQueryOperatorInput>;
+  context: Maybe<SitePageContextFilterInput>;
   pluginCreator: Maybe<SitePluginFilterInput>;
   pluginCreatorId: Maybe<StringQueryOperatorInput>;
   componentPath: Maybe<StringQueryOperatorInput>;
@@ -7978,6 +8112,7 @@ type SitePage = Node & {
   readonly children: ReadonlyArray<Node>;
   readonly internal: Internal;
   readonly isCreatedByStatefulCreatePages: Maybe<Scalars['Boolean']>;
+  readonly context: Maybe<SitePageContext>;
   readonly pluginCreator: Maybe<SitePlugin>;
   readonly pluginCreatorId: Maybe<Scalars['String']>;
   readonly componentPath: Maybe<Scalars['String']>;
@@ -8002,6 +8137,14 @@ type SitePageConnection_groupArgs = {
   skip: Maybe<Scalars['Int']>;
   limit: Maybe<Scalars['Int']>;
   field: SitePageFieldsEnum;
+};
+
+type SitePageContext = {
+  readonly id: Maybe<Scalars['String']>;
+};
+
+type SitePageContextFilterInput = {
+  readonly id: Maybe<StringQueryOperatorInput>;
 };
 
 type SitePageEdge = {
@@ -8103,6 +8246,7 @@ enum SitePageFieldsEnum {
   internal___owner = 'internal.owner',
   internal___type = 'internal.type',
   isCreatedByStatefulCreatePages = 'isCreatedByStatefulCreatePages',
+  context___id = 'context.id',
   pluginCreator___id = 'pluginCreator.id',
   pluginCreator___parent___id = 'pluginCreator.parent.id',
   pluginCreator___parent___parent___id = 'pluginCreator.parent.parent.id',
@@ -8146,9 +8290,9 @@ enum SitePageFieldsEnum {
   pluginCreator___version = 'pluginCreator.version',
   pluginCreator___pluginOptions___emitSchema___src___generated___gatsby_introspection_json = 'pluginCreator.pluginOptions.emitSchema.src___generated___gatsby_introspection_json',
   pluginCreator___pluginOptions___emitPluginDocuments___src___generated___gatsby_plugin_documents_graphql = 'pluginCreator.pluginOptions.emitPluginDocuments.src___generated___gatsby_plugin_documents_graphql',
+  pluginCreator___pluginOptions___useMozJpeg = 'pluginCreator.pluginOptions.useMozJpeg',
   pluginCreator___pluginOptions___name = 'pluginCreator.pluginOptions.name',
   pluginCreator___pluginOptions___path = 'pluginCreator.pluginOptions.path',
-  pluginCreator___pluginOptions___useMozJpeg = 'pluginCreator.pluginOptions.useMozJpeg',
   pluginCreator___pluginOptions___projectId = 'pluginCreator.pluginOptions.projectId',
   pluginCreator___pluginOptions___dataset = 'pluginCreator.pluginOptions.dataset',
   pluginCreator___pluginOptions___whitelist = 'pluginCreator.pluginOptions.whitelist',
@@ -8191,6 +8335,7 @@ type SitePageFilterInput = {
   readonly children: Maybe<NodeFilterListInput>;
   readonly internal: Maybe<InternalFilterInput>;
   readonly isCreatedByStatefulCreatePages: Maybe<BooleanQueryOperatorInput>;
+  readonly context: Maybe<SitePageContextFilterInput>;
   readonly pluginCreator: Maybe<SitePluginFilterInput>;
   readonly pluginCreatorId: Maybe<StringQueryOperatorInput>;
   readonly componentPath: Maybe<StringQueryOperatorInput>;
@@ -8345,9 +8490,9 @@ enum SitePluginFieldsEnum {
   version = 'version',
   pluginOptions___emitSchema___src___generated___gatsby_introspection_json = 'pluginOptions.emitSchema.src___generated___gatsby_introspection_json',
   pluginOptions___emitPluginDocuments___src___generated___gatsby_plugin_documents_graphql = 'pluginOptions.emitPluginDocuments.src___generated___gatsby_plugin_documents_graphql',
+  pluginOptions___useMozJpeg = 'pluginOptions.useMozJpeg',
   pluginOptions___name = 'pluginOptions.name',
   pluginOptions___path = 'pluginOptions.path',
-  pluginOptions___useMozJpeg = 'pluginOptions.useMozJpeg',
   pluginOptions___projectId = 'pluginOptions.projectId',
   pluginOptions___dataset = 'pluginOptions.dataset',
   pluginOptions___whitelist = 'pluginOptions.whitelist',
@@ -8471,9 +8616,9 @@ type SitePluginPackageJsonPeerDependenciesFilterListInput = {
 type SitePluginPluginOptions = {
   readonly emitSchema: Maybe<SitePluginPluginOptionsEmitSchema>;
   readonly emitPluginDocuments: Maybe<SitePluginPluginOptionsEmitPluginDocuments>;
+  readonly useMozJpeg: Maybe<Scalars['Boolean']>;
   readonly name: Maybe<Scalars['String']>;
   readonly path: Maybe<Scalars['String']>;
-  readonly useMozJpeg: Maybe<Scalars['Boolean']>;
   readonly projectId: Maybe<Scalars['String']>;
   readonly dataset: Maybe<Scalars['String']>;
   readonly whitelist: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
@@ -8503,9 +8648,9 @@ type SitePluginPluginOptionsEmitSchemaFilterInput = {
 type SitePluginPluginOptionsFilterInput = {
   readonly emitSchema: Maybe<SitePluginPluginOptionsEmitSchemaFilterInput>;
   readonly emitPluginDocuments: Maybe<SitePluginPluginOptionsEmitPluginDocumentsFilterInput>;
+  readonly useMozJpeg: Maybe<BooleanQueryOperatorInput>;
   readonly name: Maybe<StringQueryOperatorInput>;
   readonly path: Maybe<StringQueryOperatorInput>;
-  readonly useMozJpeg: Maybe<BooleanQueryOperatorInput>;
   readonly projectId: Maybe<StringQueryOperatorInput>;
   readonly dataset: Maybe<StringQueryOperatorInput>;
   readonly whitelist: Maybe<StringQueryOperatorInput>;
@@ -8632,21 +8777,6 @@ type StringQueryOperatorInput = {
   readonly glob: Maybe<Scalars['String']>;
 };
 
-type CookieNoticeQueryVariables = {};
-
-
-type CookieNoticeQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'cookie_notice'>> }> };
-
-type StaffProfileFragment = (
-  Pick<SanityPerson, 'name' | 'email' | 'jobTitle' | 'phone'>
-  & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
-);
-
-type FindUsQueryVariables = {};
-
-
-type FindUsQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'church_address' | 'nearest_tube_stations' | 'google_map_embedded_iframe_url'>> }> };
-
 type CovidNoticeQueryVariables = {};
 
 
@@ -8658,13 +8788,15 @@ type CovidNoticeQuery = { readonly covid: Maybe<(
     )> }
   )> };
 
-type HeadQueryVariables = {};
+type CookieNoticeQueryVariables = {};
 
 
-type HeadQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
-      Pick<SiteSiteMetadata, 'title' | 'description'>
-      & { readonly podcast: Maybe<Pick<SiteSiteMetadataPodcast, 'title' | 'url'>> }
-    )> }> };
+type CookieNoticeQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'cookie_notice'>> }> };
+
+type FindUsQueryVariables = {};
+
+
+type FindUsQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'church_address' | 'nearest_tube_stations' | 'google_map_embedded_iframe_url'>> }> };
 
 type FooterQueryVariables = {};
 
@@ -8690,41 +8822,55 @@ type ServicesQueryVariables = {};
 
 type ServicesQuery = { readonly am: Maybe<ServiceFragment>, readonly pm: Maybe<ServiceFragment> };
 
+type StaffProfileFragment = (
+  Pick<SanityPerson, 'name' | 'email' | 'jobTitle' | 'phone'>
+  & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
+);
+
+type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
 type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
-type SanityHeadshotFragment = { readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> };
-
-type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type FamiliesQueryVariables = {};
+type MusicQueryVariables = {};
 
 
-type FamiliesQuery = { readonly mainContent: Maybe<(
+type MusicQuery = { readonly musicians: { readonly nodes: ReadonlyArray<StaffProfileFragment> }, readonly mainContent: Maybe<(
     Pick<MarkdownRemark, 'html'>
     & { readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }>, readonly frontmatter: Maybe<(
-      Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption' | 'headerColour'>
-      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }>, readonly firstIntroImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }>, readonly secondIntroImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }> }
+      Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption'>
+      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }> }
     )> }
-  )>, readonly youthContent: Maybe<(
+  )>, readonly extraContent: Maybe<(
     Pick<MarkdownRemark, 'html'>
     & { readonly frontmatter: Maybe<(
       Pick<MarkdownRemarkFrontmatter, 'title'>
       & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
     )> }
-  )>, readonly littleLambs: Maybe<(
+  )>, readonly releases: Maybe<{ readonly frontmatter: Maybe<{ readonly releases: Maybe<ReadonlyArray<Maybe<(
+        Pick<MarkdownRemarkFrontmatterReleases, 'type' | 'title' | 'appleMusicLink' | 'spotifyLink'>
+        & { readonly coverImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+      )>>> }> }>, readonly resources: Maybe<(
     Pick<MarkdownRemark, 'html'>
-    & { readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }>, readonly frontmatter: Maybe<(
+    & { readonly frontmatter: Maybe<(
       Pick<MarkdownRemarkFrontmatter, 'title'>
-      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+      & { readonly resources: Maybe<ReadonlyArray<Maybe<(
+        Pick<MarkdownRemarkFrontmatterResources, 'title'>
+        & { readonly files: Maybe<ReadonlyArray<Maybe<Pick<MarkdownRemarkFrontmatterResourcesFiles, 'name' | 'url'>>>> }
+      )>>> }
     )> }
-  )>, readonly childrensWorkers: { readonly nodes: ReadonlyArray<(
-      Pick<SanityPerson, 'name' | 'jobTitle' | 'email' | 'phone'>
-      & { readonly headshot: Maybe<SanityHeadshotFragment> }
-    )> }, readonly littleLambsWorker: { readonly nodes: ReadonlyArray<(
-      Pick<SanityPerson, 'name' | 'jobTitle' | 'email' | 'phone'>
-      & { readonly headshot: Maybe<SanityHeadshotFragment> }
+  )> };
+
+type AboutUsPageQueryVariables = {};
+
+
+type AboutUsPageQuery = { readonly page: Maybe<{ readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }> }>, readonly aboutUsSections: { readonly nodes: ReadonlyArray<(
+      Pick<MarkdownRemark, 'id' | 'html'>
+      & { readonly frontmatter: Maybe<(
+        Pick<MarkdownRemarkFrontmatter, 'title' | 'style_classes' | 'fullBleed' | 'imageObjectPosition'>
+        & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+      )> }
     )> } };
 
 type HomepageQueryVariables = {};
@@ -8750,32 +8896,10 @@ type HomepageQuery = { readonly mainInfo: Maybe<(
     )> }
   )> };
 
-type AboutUsQueryVariables = {};
+type StudentsPageQueryVariables = {};
 
 
-type AboutUsQuery = { readonly page: Maybe<{ readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }> }>, readonly aboutUsSections: { readonly nodes: ReadonlyArray<(
-      Pick<MarkdownRemark, 'id' | 'html'>
-      & { readonly frontmatter: Maybe<(
-        Pick<MarkdownRemarkFrontmatter, 'title' | 'style_classes' | 'fullBleed' | 'imageObjectPosition'>
-        & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
-      )> }
-    )> } };
-
-type StaffQueryVariables = {};
-
-
-type StaffQuery = { readonly mainInfo: Maybe<(
-    Pick<MarkdownRemark, 'html'>
-    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'headerColour'>> }
-  )>, readonly staff: { readonly nodes: ReadonlyArray<(
-      Pick<SanityPerson, 'id' | 'name' | 'jobTitle' | 'email' | '_rawBio'>
-      & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
-    )> } };
-
-type StudentTemplateQueryVariables = {};
-
-
-type StudentTemplateQuery = { readonly studentWorkers: { readonly nodes: ReadonlyArray<StaffProfileFragment> }, readonly mainContent: Maybe<(
+type StudentsPageQuery = { readonly studentWorkers: { readonly nodes: ReadonlyArray<StaffProfileFragment> }, readonly mainContent: Maybe<(
     Pick<MarkdownRemark, 'html'>
     & { readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }>, readonly frontmatter: Maybe<(
       Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption'>
@@ -8788,6 +8912,55 @@ type StudentTemplateQuery = { readonly studentWorkers: { readonly nodes: Readonl
       & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
     )> }
   )> };
+
+type SanityHeadshotFragment = { readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> };
+
+type FamiliesPageQueryVariables = {};
+
+
+type FamiliesPageQuery = { readonly mainContent: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }>, readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption' | 'headerColour'>
+      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }>, readonly firstIntroImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }>, readonly secondIntroImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }> }
+    )> }
+  )>, readonly youthContent: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'title'>
+      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+    )> }
+  )>, readonly littleLambs: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }>, readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'title'>
+      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+    )> }
+  )>, readonly childrensWorkers: { readonly nodes: ReadonlyArray<(
+      Pick<SanityPerson, 'name' | 'jobTitle' | 'email' | 'phone'>
+      & { readonly headshot: Maybe<SanityHeadshotFragment> }
+    )> }, readonly littleLambsWorker: { readonly nodes: ReadonlyArray<(
+      Pick<SanityPerson, 'name' | 'jobTitle' | 'email' | 'phone'>
+      & { readonly headshot: Maybe<SanityHeadshotFragment> }
+    )> } };
+
+type BasicPageQueryVariables = {
+  id: Scalars['String'];
+};
+
+
+type BasicPageQuery = { readonly mainInfo: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }
+  )> };
+
+type HeadQueryVariables = {};
+
+
+type HeadQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
+      Pick<SiteSiteMetadata, 'title' | 'description'>
+      & { readonly podcast: Maybe<Pick<SiteSiteMetadataPodcast, 'title' | 'url'>> }
+    )> }> };
 
 type TalksPageQueryVariables = {};
 
@@ -8813,16 +8986,6 @@ type GatsbySanityImageFluid_noBase64Fragment = Pick<SanityImageFluid, 'aspectRat
 type GatsbySanityImageFluid_withWebpFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbySanityImageFluid_withWebp_noBase64Fragment = Pick<SanityImageFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type BasicPageQueryVariables = {
-  id: Scalars['String'];
-};
-
-
-type BasicPageQuery = { readonly mainInfo: Maybe<(
-    Pick<MarkdownRemark, 'html'>
-    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }
-  )> };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
@@ -8872,5 +9035,16 @@ type PagesQueryQueryVariables = {};
 
 
 type PagesQueryQuery = { readonly allSitePage: { readonly nodes: ReadonlyArray<Pick<SitePage, 'path'>> } };
+
+type StaffPageQueryVariables = {};
+
+
+type StaffPageQuery = { readonly mainInfo: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'headerColour'>> }
+  )>, readonly staff: { readonly nodes: ReadonlyArray<(
+      Pick<SanityPerson, 'id' | 'name' | 'jobTitle' | 'email' | '_rawBio'>
+      & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
+    )> } };
 
 }
