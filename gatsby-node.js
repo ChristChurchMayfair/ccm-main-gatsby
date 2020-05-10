@@ -11,7 +11,7 @@ const remarkHTML = require("remark-html")
 // You can delete this file if you're not using it
 exports.createPages = async ({ actions, graphql, reporter }) => {
     const { createPage } = actions
-    const result = await graphql(`
+    const basicPages = await graphql(`
         {
             allMarkdownRemark(
                 filter: { frontmatter: { template: { eq: "basic" } } }
@@ -27,15 +27,47 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
     `)
     // Handle errors
-    if (result.errors) {
+    if (basicPages.errors) {
         reporter.panicOnBuild(`Error while running GraphQL query.`)
         return
     }
 
-    for (const page of result.data.allMarkdownRemark.nodes) {
+    for (const page of basicPages.data.allMarkdownRemark.nodes) {
         createPage({
             path: page.frontmatter.path,
             component: path.resolve("src/templates/basic.tsx"),
+            context: {
+                id: page.id,
+            },
+        })
+    }
+
+
+    const mailchimpSignUpPages = await graphql(`
+        {
+            allMarkdownRemark(
+                filter: { frontmatter: { template: { eq: "mailchimpsignup" } } }
+            ) {
+                nodes {
+                    id
+                    frontmatter {
+                        path
+                        title
+                    }
+                }
+            }
+        }
+    `)
+    // Handle errors
+    if (mailchimpSignUpPages.errors) {
+        reporter.panicOnBuild(`Error while running GraphQL query.`)
+        return
+    }
+
+    for (const page of mailchimpSignUpPages.data.allMarkdownRemark.nodes) {
+        createPage({
+            path: page.frontmatter.path,
+            component: path.resolve("src/templates/mailchimpsignup.tsx"),
             context: {
                 id: page.id,
             },
