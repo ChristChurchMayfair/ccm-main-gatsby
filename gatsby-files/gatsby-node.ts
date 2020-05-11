@@ -6,6 +6,9 @@
 
 import path from "path"
 import { GatsbyNode } from "gatsby"
+import { GraphQLString } from "graphql"
+// @ts-ignore
+import blocksToHtml from "@sanity/block-content-to-html"
 
 // You can delete this file if you're not using it
 export const createPages: GatsbyNode["createPages"] = async ({
@@ -78,4 +81,22 @@ export const createPages: GatsbyNode["createPages"] = async ({
             },
         })
     }
+}
+
+// @ts-ignore
+export const setFieldsOnGraphQLNodeType = ({ type }) => {
+    if (type.name === `SanityPerson`) {
+        return {
+            bioHtml: {
+                type: GraphQLString,
+                // @ts-ignore
+                resolve: source => {
+                    return blocksToHtml({ blocks: source.bio })
+                },
+            },
+        }
+    }
+
+    // by default return empty object
+    return {}
 }
