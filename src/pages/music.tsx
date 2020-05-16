@@ -99,19 +99,19 @@ const MusicPage: React.FC<{}> = () => {
         .fluid
 
     const releases = data.releases!.frontmatter!.releases!.map(release => {
-        const appleLink = release!.appleMusicLink ? (
+        const appleLink = typeof release?.appleMusicLink !== 'undefined' ? (
             <a
                 className="music-service-link apple-music-link"
-                href={release!.appleMusicLink}
+                href={release.appleMusicLink}
             >
                 <AppleMusicBadge />
             </a>
         ) : undefined
 
-        const spotifyLink = release!.spotifyLink ? (
+        const spotifyLink = typeof release?.spotifyLink !== 'undefined' ? (
             <a
                 className="music-service-link spotify-link"
-                href={release!.spotifyLink}
+                href={release.spotifyLink}
             >
                 <SpotifyBadge />
             </a>
