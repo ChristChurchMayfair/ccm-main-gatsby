@@ -76,6 +76,7 @@ export const plugins: GatsbyConfig["plugins"] = [
             path: `src/content`,
         },
     },
+    `gatsby-source-local-git`,
     {
         resolve: `gatsby-source-sanity`,
         options: {
