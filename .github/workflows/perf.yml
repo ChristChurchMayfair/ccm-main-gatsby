@@ -13,11 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - run: |
-          echo ${{ github.ref }}
-          echo ${{ github.head_ref }}
-          echo ${{ github.base_ref }}
-      - run: ./scripts/wait_for_url.sh "${COMMIT_PREVIEW_URL}/__buildmeta/$(git rev-list -n 1 ${{ github.head_ref }})"
+        with:
+          ref: ${{ github.head_ref }}
+      - run: ./scripts/wait_for_url.sh "${COMMIT_PREVIEW_URL}/__buildmeta/$(git rev-parse HEAD)"
         timeout-minutes: 10
       # - run: mkdir /tmp/artifacts
       # - name: Run Lighthouse
