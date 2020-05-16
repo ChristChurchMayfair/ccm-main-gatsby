@@ -29,12 +29,12 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                 <article>
                     <div
                         dangerouslySetInnerHTML={{
-                            __html: data.mainInfo.html ?? "Missing content",
+                            __html: data.mainInfo?.html ?? "Missing content",
                         }}
                     />
                     <div id="mc_embed_signup">
                         <form
-                            action={data.mainInfo!.frontmatter!.action!}
+                            action={data.mainInfo?.frontmatter?.action}
                             method="post"
                             id="mc-embedded-subscribe-form"
                             name="mc-embedded-subscribe-form"
@@ -49,7 +49,7 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                                     name="EMAIL"
                                     className="email"
                                     id="mce-EMAIL"
-                                    placeholder={data.mainInfo.frontmatter.signupPlaceholder}
+                                    placeholder={data.mainInfo?.frontmatter?.signupPlaceholder}
                                     required={true}
                                 />
                                 <div
@@ -61,7 +61,7 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                                 >
                                     <input
                                         type="text"
-                                        name={data.mainInfo.frontmatter.hiddenValue}
+                                        name={data.mainInfo?.frontmatter?.hiddenValue}
                                         tabIndex={-1}
                                         value=""
                                     />
