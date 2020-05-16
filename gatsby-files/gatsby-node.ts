@@ -81,6 +81,23 @@ export const createPages: GatsbyNode["createPages"] = async ({
             },
         })
     }
+
+    // Create a dummy page with the git hash in the path so that our
+    // CI knows when the deploy preview is ready. Bit hacky.
+    const hashQuery = await graphql(`
+        {
+            gitCommit(latest: { eq: true }) {
+                hash
+            }
+        }
+    `)
+    // @ts-ignore
+    const currentCommitHash: string = hashQuery.data.gitCommit.hash
+    createPage({
+        path: `/__buildmeta/${currentCommitHash}`,
+        component: path.resolve("src/templates/empty.tsx"),
+        context: {},
+    })
 }
 
 // @ts-ignore
