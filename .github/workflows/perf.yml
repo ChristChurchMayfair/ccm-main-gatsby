@@ -28,7 +28,7 @@ jobs:
           author: ${{ github.actor }}
           branch: ${{ github.ref }}
           outputDirectory: /tmp/artifacts
-          urls: "${COMMIT_PREVIEW_URL}"
+          urls: ${{ env.COMMIT_PREVIEW_URL }}
           sha: $(git rev-parse HEAD)
       - name: Upload artifacts
         uses: actions/upload-artifact@master
