@@ -3,7 +3,7 @@
 
 name: Perf auditing
 env:
-  COMMIT_PREVIEW_URL: ${{ github.event.number != "" "https://deploy-preview-${{ github.event.number }}--ccm-gatsby-test.netlify.app"
+  COMMIT_PREVIEW_URL: "https://deploy-preview-${{ github.event.number }}--ccm-gatsby-test.netlify.app"
 on:
   pull_request:
     branches: [ master ]
