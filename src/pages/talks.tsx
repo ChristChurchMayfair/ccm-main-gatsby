@@ -6,9 +6,9 @@ import Hero from "../components/hero"
 import { useStaticQuery, graphql } from "gatsby"
 
 import ApplePodcastsBadge from "../assets/badges/US_UK_Apple_Podcasts_Listen_Color_Lockup_RGB_Wht_Type.inline.svg"
-// import GooglePodcastsBadge from
-
 import AppleAppStoreBadge from "../assets/badges/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.inline.svg"
+import GooglePlayStoreBadge from "../assets/badges/google_play_en_badge_web_generic.png"
+import GooglePodcastBadge from "../assets/badges/google_podcasts_badge@2x.png"
 
 const TalksPageQuery = graphql`
     query TalksPage {
@@ -65,14 +65,10 @@ const TalksPage = () => {
                     id="google-podcast-link"
                     className="podcast-link"
                     href={meta.podcastURL}
-                    style={{
-                        background:
-                            "url(/assets/badges/google_podcasts_badge@2x.png) no-repeat",
-                        height: 34,
-                        backgroundSize: "contain",
-                        width: 160,
-                    }}
-                ></a>
+                    
+                >
+                    <img src={GooglePodcastBadge} alt="Google Podcast Badge" style={{height: 34}}/>
+                </a>
                 <a
                     id="apple-appstore-link"
                     className="appstore-link"
@@ -84,13 +80,9 @@ const TalksPage = () => {
                     id="google-playstore-link"
                     className="appstore-link"
                     href={meta.playStoreLink}
-                    style={{
-                        background:
-                            "url(/assets/badges/google_play_en_badge_web_generic.png) no-repeat",
-                        backgroundSize: "contain",
-                        width: 135,
-                    }}
-                ></a>
+                >
+                    <img src={GooglePlayStoreBadge} alt="Google Play Store Badge" style={{width: 135}}/>
+                </a>
             </section>
             <section className="talks-react-app">
                 <noscript>
