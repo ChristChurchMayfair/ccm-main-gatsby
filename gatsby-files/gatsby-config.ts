@@ -1,50 +1,42 @@
 import { GatsbyConfig } from "gatsby"
 
 export const siteMetadata: GatsbyConfig["siteMetadata"] = {
-    title: "Christ Church Mayfair",
+    // Basic HTML tags, SEO
     url: "https://christchurchmayfair.org",
     description:
         "We are a dynamic Central London church family committed to making disciples for Jesus Christ.",
+    robots: "index,follow",
+
+    // Google Analytics
     googleAnalyticsTrackingID: "UA-39016872-2",
+
+    // Site data
+    title: "Christ Church Mayfair",
     email: "info@christchurchmayfair.org",
-    office_phone_number: "+44 (0) 207 629 5885",
-    office_maps_link:
-        "https://www.google.com/maps/place/Interpark+House/@51.5053727,-0.1506296,17z/data=!3m1!4b1!4m5!3m4!1s0x4876052f699cfa11:0x474e34fb6ba3f010!8m2!3d51.5053727!4d-0.1484409",
-    ccm_charity_number: "1092036",
-    office_address: [
-        "Lower Ground Floor",
-        "Interpark House",
-        "7 Down Street",
-        "London",
-        "W1J 7AJ",
-    ],
-    google_map_embedded_iframe_url:
+    officePhoneNumber: "+44 (0) 207 629 5885",
+    churchMapsLink: "https://goo.gl/maps/4FMKFMJVoVR46WSA7",
+    googleMapEmbeddedIFrameURL:
         "https://maps.google.com/maps?q=Christ%20Church%20Mayfair&t=&z=15&ie=UTF8&iwloc=&output=embed&z=14",
-    nearest_tube_stations: ["Green Park", "Hyde Park Corner"],
-    church_address: [
+    nearestTubeStations: ["Green Park", "Hyde Park Corner"],
+    churchAddress: [
         "Christ Church Mayfair",
         "Down Street",
         "London",
         "W1J 7AN",
     ],
     footer: {
-        extra_links: [{ title: "Blog", url: "/blog" }],
+        extraLinks: [{ title: "Blog", url: "/blog" }],
         smallprint: [
             `Christ Church Mayfair is a Church of England church and a member of the Co-Mission church planting network.`,
             `We're a registered charitable company named "Christ Church Mayfair", and our charity number is 1152061.`,
             `This website is © Copyright Christ Church Mayfair 2019. All Rights Reserved.`,
         ],
     },
-    cookie_notice:
+    cookieNotice:
         "This site uses cookies in order to determine usage patterns to help us make improvements.",
     podcast: {
         title: "Christ Church Mayfair - Podcast",
         url: "https://rss.christchurchmayfair.org",
-    },
-    music_team_info_google_sheet: {
-        id: "1BNfhAFMDq25GHh9KiPx0IYv7ktdooDW-LIR1uLSWv2w",
-        morning_sheet_number: 1,
-        evening_sheet_number: 2,
     },
 }
 

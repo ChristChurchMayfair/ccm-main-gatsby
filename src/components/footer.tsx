@@ -25,12 +25,12 @@ const Footer = () => {
             query Footer {
                 site {
                     siteMetadata {
-                        church_address
-                        office_maps_link
-                        office_phone_number
+                        churchAddress
+                        churchMapsLink
+                        officePhoneNumber
                         footer {
                             smallprint
-                            extra_links {
+                            extraLinks {
                                 title
                                 url
                             }
@@ -43,7 +43,7 @@ const Footer = () => {
     )
 
     const metadata = site!.siteMetadata
-    const officePhoneNumber = metadata!.office_phone_number!
+    const officePhoneNumber = metadata!.officePhoneNumber!
     const email = metadata!.email!
     const smallPrint = metadata!.footer!.smallprint!
     return (
@@ -53,8 +53,8 @@ const Footer = () => {
                     <CcmLogo />
                 </div>
                 <address>
-                    <a href={metadata!.office_maps_link}>
-                        {metadata!.church_address!.map((line, i) => (
+                    <a href={metadata!.churchMapsLink}>
+                        {metadata!.churchAddress!.map((line, i) => (
                             <Fragment key={i}>
                                 {i !== 0 && <br />}
                                 {line}

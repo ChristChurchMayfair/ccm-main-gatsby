@@ -9,7 +9,7 @@ const CookieNotice = () => {
         query CookieNotice {
             site {
                 siteMetadata {
-                    cookie_notice
+                    cookieNotice
                 }
             }
         }
@@ -50,7 +50,7 @@ const CookieNotice = () => {
             aria-hidden={showNotice === false}
         >
             <div className="notice">
-                {data.site!.siteMetadata!.cookie_notice!}
+                {data.site!.siteMetadata!.cookieNotice!}
             </div>
             <a
                 id="decline-cookie-button"

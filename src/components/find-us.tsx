@@ -9,9 +9,9 @@ const FindUs = () => {
         query FindUs {
             site {
                 siteMetadata {
-                    church_address
-                    nearest_tube_stations
-                    google_map_embedded_iframe_url
+                    churchAddress
+                    nearestTubeStations
+                    googleMapEmbeddedIFrameURL
                 }
             }
         }
@@ -22,7 +22,7 @@ const FindUs = () => {
             <div className="location">
                 <MapPin className="pin" viewBox="0 0 100 100" />
                 <div className="address">
-                    {data.site!.siteMetadata!.church_address!.map((line, i) => (
+                    {data.site!.siteMetadata!.churchAddress!.map((line, i) => (
                         <Fragment key={i}>
                             {line}
                             <br />
@@ -34,7 +34,7 @@ const FindUs = () => {
                     Nearest tube stations:
                     <br />
                     <span className="tube-station">
-                        {data.site!.siteMetadata!.nearest_tube_stations!.join(
+                        {data.site!.siteMetadata!.nearestTubeStations!.join(
                             " or "
                         )}
                     </span>
@@ -85,9 +85,7 @@ const FindUs = () => {
                 <iframe
                     frameBorder="0"
                     style={{ border: 0 }}
-                    src={
-                        data.site!.siteMetadata!.google_map_embedded_iframe_url
-                    }
+                    src={data.site!.siteMetadata!.googleMapEmbeddedIFrameURL}
                     allowFullScreen
                 ></iframe>
             </div>
