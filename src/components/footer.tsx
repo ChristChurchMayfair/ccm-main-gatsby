@@ -50,7 +50,7 @@ const Footer = () => {
         <footer>
             <div className="contact">
                 <div className="logo">
-                    <CcmLogo/>
+                    <CcmLogo />
                 </div>
                 <address>
                     <a href={metadata!.office_maps_link}>

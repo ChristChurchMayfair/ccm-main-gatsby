@@ -27,7 +27,7 @@ const Header: React.FC<Props> = ({ headerColour }) => {
         <>
             <nav id="menu" style={isMenuOpen ? { visibility: "visible" } : {}}>
                 <Link className="logo" to="/">
-                    <CcmLogoFull/>
+                    <CcmLogoFull />
                 </Link>
                 <a
                     id="close-menu"
@@ -36,7 +36,7 @@ const Header: React.FC<Props> = ({ headerColour }) => {
                         setIsMenuOpen(false)
                     }}
                 >
-                    <CloseMenuButton/>
+                    <CloseMenuButton />
                 </a>
                 <div id="menu-content">
                     <Link to="/aboutus">About Us</Link>
@@ -54,7 +54,7 @@ const Header: React.FC<Props> = ({ headerColour }) => {
                 style={isMenuOpen ? { display: "none" } : {}}
             >
                 <Link className="logo" to="/">
-                    <CcmLogoFull/>
+                    <CcmLogoFull />
                 </Link>
                 <a
                     id="open-menu"
@@ -63,7 +63,7 @@ const Header: React.FC<Props> = ({ headerColour }) => {
                         setIsMenuOpen(true)
                     }}
                 >
-                    <Hamburger/>
+                    <Hamburger />
                 </a>
             </header>
 
@@ -72,7 +72,7 @@ const Header: React.FC<Props> = ({ headerColour }) => {
                 className={`header desktop-header ${headerColour}`}
             >
                 <Link className="logo" to="/">
-                    <CcmLogoFull/>
+                    <CcmLogoFull />
                 </Link>
                 <div id="menu-content">
                     <Link to="/aboutus">About Us</Link>

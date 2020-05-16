@@ -20,7 +20,7 @@ const FindUs = () => {
         <section id="find-us" className="find-us">
             <h1>Find Us</h1>
             <div className="location">
-                <MapPin className="pin" viewBox="0 0 100 100"/>
+                <MapPin className="pin" viewBox="0 0 100 100" />
                 <div className="address">
                     {data.site!.siteMetadata!.church_address!.map((line, i) => (
                         <Fragment key={i}>
@@ -29,7 +29,7 @@ const FindUs = () => {
                         </Fragment>
                     ))}
                 </div>
-                <Roundel className="roundel"/>
+                <Roundel className="roundel" />
                 <div className="tube-stations">
                     Nearest tube stations:
                     <br />

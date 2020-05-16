@@ -49,7 +49,10 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                                     name="EMAIL"
                                     className="email"
                                     id="mce-EMAIL"
-                                    placeholder={data.mainInfo?.frontmatter?.signupPlaceholder}
+                                    placeholder={
+                                        data.mainInfo?.frontmatter
+                                            ?.signupPlaceholder
+                                    }
                                     required={true}
                                 />
                                 <div
@@ -61,7 +64,10 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                                 >
                                     <input
                                         type="text"
-                                        name={data.mainInfo?.frontmatter?.hiddenValue}
+                                        name={
+                                            data.mainInfo?.frontmatter
+                                                ?.hiddenValue
+                                        }
                                         tabIndex={-1}
                                         value=""
                                     />
