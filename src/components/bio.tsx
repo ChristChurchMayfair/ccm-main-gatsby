@@ -60,13 +60,13 @@ const Bio: React.FC<Props> = ({
                                         {person.email}
                                     </a>
                                 </div>
-                                {/* {person.phone != null && (
+                                {person.phone != null && (
                                     <div className="phone">
                                         <a href={`tel:${person.phone}`}>
                                             {person.phone}
                                         </a>
                                     </div>
-                                )} */}
+                                )}
                             </div>
                         </div>
                     )
