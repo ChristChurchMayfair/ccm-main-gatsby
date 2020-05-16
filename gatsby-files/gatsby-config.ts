@@ -3,7 +3,8 @@ import { GatsbyConfig } from "gatsby"
 export const siteMetadata: GatsbyConfig["siteMetadata"] = {
     title: "Christ Church Mayfair",
     url: "https://christchurchmayfair.org",
-    description: "",
+    description:
+        "We are a dynamic Central London church family committed to making disciples for Jesus Christ.",
     googleAnalyticsTrackingID: "UA-39016872-2",
     email: "info@christchurchmayfair.org",
     office_phone_number: "+44 (0) 207 629 5885",
