@@ -25,11 +25,13 @@ jobs:
       - name: Run Lighthouse
         uses: foo-software/lighthouse-check-action@master
         with:
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
           author: ${{ github.actor }}
           branch: ${{ github.ref }}
           outputDirectory: /tmp/artifacts
           urls: ${{ env.COMMIT_PREVIEW_URL }}
           sha: $(git rev-parse HEAD)
+          prCommentSaveOld: true
       - name: Upload artifacts
         uses: actions/upload-artifact@master
         with:
