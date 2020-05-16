@@ -4,7 +4,7 @@
 name: Perf auditing
 env:
   PR_NUMBER: $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
-  COMMIT_PREVIEW_URL: "https://deploy-preview-${PR_NUMBER}--ccm-gatsby-test.netlify.app"
+  COMMIT_PREVIEW_URL: $(echo -n "https://deploy-preview-${PR_NUMBER}--ccm-gatsby-test.netlify.app")
 on:
   push:
     branches: [ master ]
