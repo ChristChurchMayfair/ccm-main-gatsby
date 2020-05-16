@@ -1,0 +1,40 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Perf auditing
+env:
+  PR_NUMBER: $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
+  COMMIT_PREVIEW_URL: https://deploy-preview-${PR_NUMBER}--ccm-gatsby-test.netlify.app
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  lighthouse-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - run: ./scripts/wait_for_url.sh "${COMMIT_PREVIEW_URL}/__buildmeta/${GITHUB_SHA}"
+        timeout-minutes: 10
+      # - run: mkdir /tmp/artifacts
+      # - name: Run Lighthouse
+      #   uses: foo-software/lighthouse-check-action@master
+      #   with:
+      #     accessToken: ${{ secrets.LIGHTHOUSE_CHECK_GITHUB_ACCESS_TOKEN }}
+      #     author: ${{ github.actor }}
+      #     awsAccessKeyId: ${{ secrets.LIGHTHOUSE_CHECK_AWS_ACCESS_KEY_ID }}
+      #     awsBucket: ${{ secrets.LIGHTHOUSE_CHECK_AWS_BUCKET }}
+      #     awsRegion: ${{ secrets.LIGHTHOUSE_CHECK_AWS_REGION }}
+      #     awsSecretAccessKey: ${{ secrets.LIGHTHOUSE_CHECK_AWS_SECRET_ACCESS_KEY }}
+      #     branch: ${{ github.ref }}
+      #     outputDirectory: /tmp/artifacts
+      #     urls: 'https://www.foo.software,https://www.foo.software/contact'
+      #     sha: ${{ github.sha }}
+      #     slackWebhookUrl: ${{ secrets.LIGHTHOUSE_CHECK_WEBHOOK_URL }}
+      # - name: Upload artifacts
+      #   uses: actions/upload-artifact@master
+      #   with:
+      #     name: Lighthouse reports
+      #     path: /tmp/artifacts
