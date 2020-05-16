@@ -3,10 +3,10 @@ import React from "react"
 import Layout from "../components/layout"
 
 const NotFoundPage = () => (
-    <Layout title="Page Not Found" description={undefined}>
+    <Layout title="Page Not Found" description={undefined} headerColour="dark">
         <section className="header-underlay"></section>
-        <section className="intro">
-            <div className="text">
+        <section>
+            <article>
                 <h1>Error: Page not found</h1>
                 <p>
                     Sorry. The page you were looking for couldn&apos;t be found.
@@ -18,7 +18,7 @@ const NotFoundPage = () => (
                     can&apos;t find what you&apos;re looking for then get in
                     touch with us and we&apos;ll try to help
                 </p>
-            </div>
+            </article>
         </section>
     </Layout>
 )
