@@ -9,6 +9,6 @@ do
     if [ $status_code == "200" ]; then
         break
     fi
-    echo "Waiting 5 seconds..."
-    sleep 5
+    echo "Waiting 10 seconds..."
+    sleep 10
 done
