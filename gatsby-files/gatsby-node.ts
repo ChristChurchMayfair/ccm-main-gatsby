@@ -10,6 +10,13 @@ import { GraphQLString } from "graphql"
 // @ts-ignore
 import blocksToHtml from "@sanity/block-content-to-html"
 
+export const onPostBootstrap: GatsbyNode["onPostBootstrap"] = async () => {
+    // @ts-ignore
+    if (process.env.ABORT_AFTER_BOOTSTRAP != null) {
+        process.exit(0)
+    }
+}
+
 // You can delete this file if you're not using it
 export const createPages: GatsbyNode["createPages"] = async ({
     actions,

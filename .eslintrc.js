@@ -31,6 +31,7 @@ module.exports = {
         "@typescript-eslint/ban-ts-ignore": 0,
         "@typescript-eslint/no-non-null-assertion": 0,
         "@typescript-eslint/no-empty-interface": 0,
+        "@typescript-eslint/require-await": 0,
         "react/prop-types": 0,
         "no-empty": 0,
         "no-console": 1,
