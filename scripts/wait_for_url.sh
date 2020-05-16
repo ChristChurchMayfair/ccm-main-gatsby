@@ -6,7 +6,7 @@ while true
 do
     status_code="$(curl -s -o /dev/null -w "%{http_code}" $url)"
     echo "Got status code ${status_code}"
-    if [ $status_code == "200" ]; then
+    if [ $status_code -lt 400 ]; then
         break
     fi
     echo "Waiting 10 seconds..."
