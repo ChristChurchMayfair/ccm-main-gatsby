@@ -65,23 +65,30 @@ const TalksPage = () => {
                     id="google-podcast-link"
                     className="podcast-link"
                     href={meta.podcastURL}
-                    
                 >
-                    <img src={GooglePodcastBadge} alt="Google Podcast Badge" style={{height: 34}}/>
+                    <img
+                        src={GooglePodcastBadge}
+                        alt="Google Podcast Badge"
+                        style={{ height: 34 }}
+                    />
                 </a>
                 <a
                     id="apple-appstore-link"
                     className="appstore-link"
                     href={meta.iosAppStoreLink}
                 >
-                    <AppleAppStoreBadge  style={{width: 120}}/>
+                    <AppleAppStoreBadge style={{ width: 120 }} />
                 </a>
                 <a
                     id="google-playstore-link"
                     className="appstore-link"
                     href={meta.playStoreLink}
                 >
-                    <img src={GooglePlayStoreBadge} alt="Google Play Store Badge" style={{width: 135}}/>
+                    <img
+                        src={GooglePlayStoreBadge}
+                        alt="Google Play Store Badge"
+                        style={{ width: 135 }}
+                    />
                 </a>
             </section>
             <section className="talks-react-app">
