@@ -37,23 +37,15 @@ const IndexPageQuery = graphql`
                 }
             }
         }
-        administrators: allSanityPerson(
-            filter: {
-                roles: {
-                    elemMatch: { slug: { current: { eq: "administrator" } } }
-                }
-            }
-        ) {
-            nodes {
-                name
-                jobTitle
-                email
-                phone
-                headshot {
-                    asset {
-                        fluid(maxWidth: 400) {
-                            ...GatsbySanityImageFluid
-                        }
+        administrator: sanityPerson(name: { eq: "Sharon Walsh" }) {
+            name
+            jobTitle
+            email
+            phone
+            headshot {
+                asset {
+                    fluid(maxWidth: 400) {
+                        ...GatsbySanityImageFluid
                     }
                 }
             }
@@ -191,7 +183,7 @@ const IndexPage = () => {
             <FindUs />
 
             <Bio
-                people={data.administrators.nodes}
+                people={[data.administrator]}
                 descriptionHtml={
                     data.mainInfo!.fields!.frontmattermd!.findOutMoreText!.html!
                 }
