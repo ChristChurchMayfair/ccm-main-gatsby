@@ -9417,6 +9417,16 @@ type CovidNoticeQuery = { readonly covid: Maybe<(
     )> }
   )> };
 
+type CookieNoticeQueryVariables = {};
+
+
+type CookieNoticeQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'cookie_notice'>> }> };
+
+type FindUsQueryVariables = {};
+
+
+type FindUsQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'church_address' | 'nearest_tube_stations' | 'google_map_embedded_iframe_url'>> }> };
+
 type FooterQueryVariables = {};
 
 
@@ -9436,16 +9446,6 @@ type HeadQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<(
       & { readonly podcast: Maybe<Pick<SiteSiteMetadataPodcast, 'title' | 'url'>> }
     )> }> };
 
-type FindUsQueryVariables = {};
-
-
-type FindUsQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'church_address' | 'nearest_tube_stations' | 'google_map_embedded_iframe_url'>> }> };
-
-type CookieNoticeQueryVariables = {};
-
-
-type CookieNoticeQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'cookie_notice'>> }> };
-
 type ServiceFragment = (
   Pick<MarkdownRemark, 'id' | 'html'>
   & { readonly frontmatter: Maybe<(
@@ -9459,13 +9459,41 @@ type ServicesQueryVariables = {};
 
 type ServicesQuery = { readonly am: Maybe<ServiceFragment>, readonly pm: Maybe<ServiceFragment> };
 
-type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+type HomepageQueryVariables = {};
 
-type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
+type HomepageQuery = { readonly mainInfo: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption' | 'headerColour'>
+      & { readonly carouselImages: Maybe<ReadonlyArray<Maybe<(
+        Pick<MarkdownRemarkFrontmatterCarouselImages, 'position'>
+        & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }> }
+      )>>> }
+    )>, readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }> }
+  )>, readonly administrators: { readonly nodes: ReadonlyArray<(
+      Pick<SanityPerson, 'name' | 'jobTitle' | 'email' | 'phone'>
+      & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
+    )> }, readonly midweek: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'title'>
+      & { readonly image: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+    )> }
+  )> };
 
 type SanityHeadshotFragment = { readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> };
 
-type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+type AboutUsPageQueryVariables = {};
+
+
+type AboutUsPageQuery = { readonly page: Maybe<{ readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }> }>, readonly aboutUsSections: { readonly nodes: ReadonlyArray<(
+      Pick<MarkdownRemark, 'id' | 'html'>
+      & { readonly frontmatter: Maybe<(
+        Pick<MarkdownRemarkFrontmatter, 'title' | 'style_classes' | 'fullBleed' | 'imageObjectPosition'>
+        & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+      )> }
+    )> } };
 
 type FamiliesPageQueryVariables = {};
 
@@ -9496,62 +9524,6 @@ type FamiliesPageQuery = { readonly mainContent: Maybe<(
       & { readonly headshot: Maybe<SanityHeadshotFragment> }
     )> } };
 
-type AboutUsPageQueryVariables = {};
-
-
-type AboutUsPageQuery = { readonly page: Maybe<{ readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }> }>, readonly aboutUsSections: { readonly nodes: ReadonlyArray<(
-      Pick<MarkdownRemark, 'id' | 'html'>
-      & { readonly frontmatter: Maybe<(
-        Pick<MarkdownRemarkFrontmatter, 'title' | 'style_classes' | 'fullBleed' | 'imageObjectPosition'>
-        & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
-      )> }
-    )> } };
-
-type HomepageQueryVariables = {};
-
-
-type HomepageQuery = { readonly mainInfo: Maybe<(
-    Pick<MarkdownRemark, 'html'>
-    & { readonly frontmatter: Maybe<(
-      Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption' | 'headerColour'>
-      & { readonly carouselImages: Maybe<ReadonlyArray<Maybe<(
-        Pick<MarkdownRemarkFrontmatterCarouselImages, 'position'>
-        & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluid_noBase64Fragment> }> }> }
-      )>>> }
-    )>, readonly fields: Maybe<{ readonly frontmattermd: Maybe<{ readonly findOutMoreText: Maybe<Pick<MarkdownRemark, 'html'>> }> }> }
-  )>, readonly administrators: { readonly nodes: ReadonlyArray<(
-      Pick<SanityPerson, 'name' | 'jobTitle' | 'email' | 'phone'>
-      & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
-    )> }, readonly midweek: Maybe<(
-    Pick<MarkdownRemark, 'html'>
-    & { readonly frontmatter: Maybe<(
-      Pick<MarkdownRemarkFrontmatter, 'title'>
-      & { readonly image: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
-    )> }
-  )> };
-
-type StaffPageQueryVariables = {};
-
-
-type StaffPageQuery = { readonly mainInfo: Maybe<(
-    Pick<MarkdownRemark, 'html'>
-    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'headerColour'>> }
-  )>, readonly staff: { readonly nodes: ReadonlyArray<(
-      Pick<SanityPerson, 'id' | 'name' | 'jobTitle' | 'email' | 'bioHtml'>
-      & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
-    )> } };
-
-type TalksPageQueryVariables = {};
-
-
-type TalksPageQuery = { readonly markdownRemark: Maybe<(
-    Pick<MarkdownRemark, 'html'>
-    & { readonly frontmatter: Maybe<(
-      Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption' | 'itunesPodcastURL' | 'podcastURL' | 'iosAppStoreLink' | 'playStoreLink' | 'headerColour'>
-      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
-    )> }
-  )> };
-
 type MusicQueryVariables = {};
 
 
@@ -9581,6 +9553,28 @@ type MusicQuery = { readonly musicians: { readonly nodes: ReadonlyArray<StaffPro
     )> }
   )> };
 
+type StaffPageQueryVariables = {};
+
+
+type StaffPageQuery = { readonly mainInfo: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'headerColour'>> }
+  )>, readonly staff: { readonly nodes: ReadonlyArray<(
+      Pick<SanityPerson, 'id' | 'name' | 'jobTitle' | 'email' | 'bioHtml'>
+      & { readonly headshot: Maybe<{ readonly asset: Maybe<{ readonly fluid: Maybe<GatsbySanityImageFluidFragment> }> }> }
+    )> } };
+
+type TalksPageQueryVariables = {};
+
+
+type TalksPageQuery = { readonly markdownRemark: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'title' | 'overlayCaption' | 'itunesPodcastURL' | 'podcastURL' | 'iosAppStoreLink' | 'playStoreLink' | 'headerColour'>
+      & { readonly mainImage: Maybe<{ readonly childImageSharp: Maybe<{ readonly fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> }
+    )> }
+  )> };
+
 type StudentsPageQueryVariables = {};
 
 
@@ -9598,16 +9592,6 @@ type StudentsPageQuery = { readonly studentWorkers: { readonly nodes: ReadonlyAr
     )> }
   )> };
 
-type BasicPageQueryVariables = {
-  id: Scalars['String'];
-};
-
-
-type BasicPageQuery = { readonly mainInfo: Maybe<(
-    Pick<MarkdownRemark, 'html'>
-    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }
-  )> };
-
 type GatsbySanityImageFixedFragment = Pick<SanityImageFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
 
 type GatsbySanityImageFixed_noBase64Fragment = Pick<SanityImageFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
@@ -9616,20 +9600,22 @@ type GatsbySanityImageFixed_withWebpFragment = Pick<SanityImageFixed, 'base64' |
 
 type GatsbySanityImageFixed_withWebp_noBase64Fragment = Pick<SanityImageFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
 
+type GatsbySanityImageFluidFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
 type GatsbySanityImageFluid_noBase64Fragment = Pick<SanityImageFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbySanityImageFluid_withWebpFragment = Pick<SanityImageFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbySanityImageFluid_withWebp_noBase64Fragment = Pick<SanityImageFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
-type MailchimpSignUpPageQueryVariables = {
+type BasicPageQueryVariables = {
   id: Scalars['String'];
 };
 
 
-type MailchimpSignUpPageQuery = { readonly mainInfo: Maybe<(
+type BasicPageQuery = { readonly mainInfo: Maybe<(
     Pick<MarkdownRemark, 'html'>
-    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'hiddenValue' | 'action' | 'signupPlaceholder'>> }
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }
   )> };
 
 type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
@@ -9644,11 +9630,15 @@ type GatsbyImageSharpFixed_noBase64Fragment = Pick<ImageSharpFixed, 'width' | 'h
 
 type GatsbyImageSharpFixed_withWebp_noBase64Fragment = Pick<ImageSharpFixed, 'width' | 'height' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp'>;
 
+type GatsbyImageSharpFluidFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
+
 type GatsbyImageSharpFluid_tracedSVGFragment = Pick<ImageSharpFluid, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebpFragment = Pick<ImageSharpFluid, 'base64' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = Pick<ImageSharpFluid, 'tracedSVG' | 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type GatsbyImageSharpFluid_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpFluid_withWebp_noBase64Fragment = Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
 
@@ -9675,6 +9665,16 @@ type GatsbyImageSharpSizes_withWebp_tracedSVGFragment = Pick<ImageSharpSizes, 't
 type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
+
+type MailchimpSignUpPageQueryVariables = {
+  id: Scalars['String'];
+};
+
+
+type MailchimpSignUpPageQuery = { readonly mainInfo: Maybe<(
+    Pick<MarkdownRemark, 'html'>
+    & { readonly frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'hiddenValue' | 'action' | 'signupPlaceholder'>> }
+  )> };
 
 type PagesQueryQueryVariables = {};
 
