@@ -115,6 +115,14 @@ export const plugins: GatsbyConfig["plugins"] = [
             },
         },
     },
+    {
+        resolve: `gatsby-plugin-netlify`,
+        options: {
+            headers: {
+                "/page-data/*": ["Cache-Control: public, max-age=0, must-revalidate"],
+            },
+        },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
