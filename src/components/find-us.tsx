@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react"
+import React, { Fragment } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import MapPin from "../assets/icons/mappin.inline.svg"
@@ -16,19 +16,6 @@ const FindUs = () => {
             }
         }
     `)
-
-    // Defer loading the maps iframe until the initial rehydrate is done.
-    const hardcodedIframeUrl = data.site!.siteMetadata!
-        .googleMapEmbeddedIFrameURL!
-    const [iframeUrl, setIframeUrl] = useState<string | undefined>(undefined)
-    useEffect(() => {
-        const id = setTimeout(() => {
-            setIframeUrl(hardcodedIframeUrl)
-        })
-        return () => {
-            clearTimeout(id)
-        }
-    }, [hardcodedIframeUrl])
 
     return (
         <section id="find-us" className="find-us">
@@ -99,7 +86,7 @@ const FindUs = () => {
                 <iframe
                     frameBorder="0"
                     style={{ border: 0 }}
-                    src={iframeUrl}
+                    src={undefined}
                     allowFullScreen
                 ></iframe>
             </div>
