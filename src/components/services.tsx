@@ -11,7 +11,10 @@ const Services = () => {
                 time
                 mainImage {
                     childImageSharp {
-                        fluid(maxWidth: 1000) {
+                        fluid(
+                            maxWidth: 1000
+                            sizes: "(max-width: 950px) 100vw, 40vw"
+                        ) {
                             ...GatsbyImageSharpFluid
                         }
                     }

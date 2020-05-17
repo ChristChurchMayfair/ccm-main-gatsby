@@ -114,14 +114,3 @@ const Staff = () => {
 }
 
 export default Staff
-
-// I wish gatsby gave us a way to specify this in the config file or something. For now, let's keep it here.
-export const globallyReusableFragments = graphql`
-    fragment SanityHeadshot on SanityImage {
-        asset {
-            fluid(maxWidth: 400) {
-                ...GatsbySanityImageFluid
-            }
-        }
-    }
-`
