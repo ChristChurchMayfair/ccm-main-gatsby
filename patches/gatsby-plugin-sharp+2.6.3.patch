@@ -1,0 +1,24 @@
+diff --git a/node_modules/gatsby-plugin-sharp/index.js b/node_modules/gatsby-plugin-sharp/index.js
+index ce52971..2110459 100644
+--- a/node_modules/gatsby-plugin-sharp/index.js
++++ b/node_modules/gatsby-plugin-sharp/index.js
+@@ -521,7 +521,9 @@ async function fluid({
+   if (!options.srcSetBreakpoints || !options.srcSetBreakpoints.length) {
+     fluidSizes.push(options[fixedDimension] / 4);
+     fluidSizes.push(options[fixedDimension] / 2);
++    fluidSizes.push(options[fixedDimension] * 1.25);
+     fluidSizes.push(options[fixedDimension] * 1.5);
++    fluidSizes.push(options[fixedDimension] * 1.75);
+     fluidSizes.push(options[fixedDimension] * 2);
+   } else {
+     options.srcSetBreakpoints.forEach(breakpoint => {
+@@ -542,7 +544,8 @@ async function fluid({
+   // is available for small images. Also so we can link to
+   // the original image.
+ 
+-  filteredSizes.push(fixedDimension === `maxWidth` ? width : height); // Queue sizes for processing.
++  // Gatsby adds the original image for some reason. This is bizarre so I'm removing that line.
++  // filteredSizes.push(fixedDimension === `maxWidth` ? width : height); // Queue sizes for processing.
+ 
+   const dimensionAttr = fixedDimension === `maxWidth` ? `width` : `height`;
+   const otherDimensionAttr = fixedDimension === `maxWidth` ? `height` : `width`; // Sort sizes for prettiness.
