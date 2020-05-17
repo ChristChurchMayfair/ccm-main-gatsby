@@ -14,13 +14,19 @@ type ConsentCookieReturnValue = ConsentCookieValue | "unset" | undefined
  * "unset" or, while the value is being read, undefined. The consent cookie can be set to one of
  * two values - "accepted" or "declined".
  */
-const useConsentCookie = (): [
+const useConsentCookie = (googleAnalyticsTrackingID: string): [
     ConsentCookieReturnValue,
     (cookie: ConsentCookieValue) => void
 ] => {
     const [consentCookieReturnValue, setConsentCookieReturnValue] = useState<
         ConsentCookieReturnValue
     >(undefined)
+
+    const disableGoogleAnalyticsKey = `ga-disable-${googleAnalyticsTrackingID}`
+    //Disable the tracking by default until we get explicit user choice
+    console.log("Disabling Google Analytics Tracking")
+    // @ts-ignore - we can do this.
+    window[disableGoogleAnalyticsKey] = true
 
     useEffect(() => {
         const cookie: ConsentCookieValue = Cookies.get(
@@ -36,9 +42,13 @@ const useConsentCookie = (): [
         setConsentCookieReturnValue(cookie)
 
         if (cookie === "accepted") {
-            // TODO: enable Google Analytics
+            // Enable Google Analytics
+            // @ts-ignore - we can do this.
+            window[disableGoogleAnalyticsKey] = false
         } else {
-            // TODO: disable Google Analytics
+            // Disable Google Analytics
+            // @ts-ignore - we can do this.
+            window[disableGoogleAnalyticsKey] = true
         }
     }
 

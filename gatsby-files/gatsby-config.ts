@@ -7,6 +7,8 @@ export const siteMetadata: GatsbyConfig["siteMetadata"] = {
         "We are a dynamic Central London church family committed to making disciples for Jesus Christ.",
     robots: "index,follow",
 
+    googleAnalyticsTrackingID: "UA-39016872-2",
+
     // Site data
     title: "Christ Church Mayfair",
     email: "info@christchurchmayfair.org",
@@ -136,7 +138,7 @@ export const plugins: GatsbyConfig["plugins"] = [
         resolve: `gatsby-plugin-google-analytics`,
         options: {
           // The property ID; the tracking code won't be generated without it
-          trackingId: "UA-39016872-2",
+          trackingId: siteMetadata.googleAnalyticsTrackingID,
           respectDNT: true,
         },
       },

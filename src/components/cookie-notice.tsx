@@ -5,6 +5,8 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import styles from "./cookie-notice.module.scss"
 import useConsentCookie from "./hooks/useConsentCookie"
 
+type CCMTrackingConsentCookie = "accepted" | "declined" | undefined
+
 const CookieNotice = () => {
     const data = useStaticQuery<GatsbyTypes.CookieNoticeQuery>(graphql`
         query CookieNotice {
@@ -12,14 +14,16 @@ const CookieNotice = () => {
                 siteMetadata {
                     cookieNotice
                     cookieNoticePrivacyPolicyLinkText
+                    googleAnalyticsTrackingID
                 }
             }
         }
     `)
 
-    const [consentCookie, setConsentCookie] = useConsentCookie()
+    const [consentCookie, setConsentCookie] = useConsentCookie(data.site?.siteMetadata?.googleAnalyticsTrackingID)
 
     const showNotice = consentCookie === "unset"
+
 
     return (
         <div
