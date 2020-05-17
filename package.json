@@ -44,7 +44,7 @@
     "gatsby-plugin-manifest": "^2.4.1",
     "gatsby-plugin-offline": "^3.2.0",
     "gatsby-plugin-react-helmet": "^3.3.0",
-    "gatsby-plugin-sharp": "^2.6.0",
+    "gatsby-plugin-sharp": "^2.6.3",
     "gatsby-plugin-typegen": "^2.1.0",
     "gatsby-plugin-typescript": "^2.4.0",
     "gatsby-source-filesystem": "^2.3.0",
@@ -55,6 +55,8 @@
     "gatsby-transformer-sharp": "^2.5.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^25.5.3",
+    "patch-package": "^6.2.2",
+    "postinstall-postinstall": "^2.1.0",
     "prettier": "2.0.5",
     "remark-html": "^11.0.1",
     "ts-node": "^8.9.1",
@@ -76,7 +78,8 @@
     "clean": "gatsby clean",
     "lint": "yarn eslint src --ext .js,.jsx,.ts,.tsx",
     "prettier-check": "yarn prettier 'src/**/*.{ts,tsx,js,jsx,css}' --list-different",
-    "test": "yarn jest"
+    "test": "yarn jest",
+    "postinstall": "patch-package"
   },
   "repository": {
     "type": "git",
