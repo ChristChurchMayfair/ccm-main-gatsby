@@ -9,6 +9,7 @@
     "classnames": "^2.2.6",
     "gatsby": "^2.21.7",
     "gatsby-image": "^2.4.0",
+    "gatsby-plugin-google-analytics": "^2.3.1",
     "gatsby-plugin-netlify": "^2.3.2",
     "gatsby-plugin-react-svg": "^3.0.0",
     "js-cookie": "^2.2.1",
