@@ -22,11 +22,10 @@ const useConsentCookie = (googleAnalyticsTrackingID: string): [
         ConsentCookieReturnValue
     >(undefined)
 
-    const disableGoogleAnalyticsKey = `ga-disable-${googleAnalyticsTrackingID}`
+    const disableGoogleAnalyticsKey = `ga-disable-${googleAnalyticsTrackingID}`;
     //Disable the tracking by default until we get explicit user choice
-    console.log("Disabling Google Analytics Tracking")
-    // @ts-ignore - we can do this.
-    window[disableGoogleAnalyticsKey] = true
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (window as any)[disableGoogleAnalyticsKey] = true
 
     useEffect(() => {
         const cookie: ConsentCookieValue = Cookies.get(
@@ -43,12 +42,11 @@ const useConsentCookie = (googleAnalyticsTrackingID: string): [
 
         if (cookie === "accepted") {
             // Enable Google Analytics
-            // @ts-ignore - we can do this.
-            window[disableGoogleAnalyticsKey] = false
+            (window as any)[disableGoogleAnalyticsKey] = false
         } else {
             // Disable Google Analytics
             // @ts-ignore - we can do this.
-            window[disableGoogleAnalyticsKey] = true
+            (window as any)[disableGoogleAnalyticsKey] = true
         }
     }
 
