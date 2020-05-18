@@ -23,7 +23,7 @@ const CookieNotice = () => {
     const [consentCookie, setConsentCookie] = useConsentCookie(data.site?.siteMetadata?.googleAnalyticsTrackingID!)
 
     const showNotice = consentCookie === "unset"
-
+    
     return (
         <div
             id="cookie-notice"

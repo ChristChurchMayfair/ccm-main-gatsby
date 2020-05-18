@@ -42,11 +42,11 @@ const useConsentCookie = (googleAnalyticsTrackingID: string): [
 
         if (cookie === "accepted") {
             // Enable Google Analytics
-            (window as any)[disableGoogleAnalyticsKey] = false
+            ;(window as any)[disableGoogleAnalyticsKey] = false
         } else {
             // Disable Google Analytics
             // @ts-ignore - we can do this.
-            (window as any)[disableGoogleAnalyticsKey] = true
+            ;(window as any)[disableGoogleAnalyticsKey] = true
         }
     }
 
