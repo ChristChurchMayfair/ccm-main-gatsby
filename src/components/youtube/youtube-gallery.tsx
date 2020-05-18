@@ -12,10 +12,15 @@ interface VideoInfo {
     description?: string
 }
 
-interface Props {
-    videoIds: VideoInfo[]
+export interface VideoSection {
+    title: string
+    videos: VideoInfo[]
 }
-const YouTubeGallery: React.FC<Props> = ({ videoIds }) => {
+
+interface Props {
+    videoSections: VideoSection[]
+}
+const YouTubeGallery: React.FC<Props> = ({ videoSections }) => {
     const [selectedVideo, setSelectedVideo] = useState<VideoInfo | undefined>(
         undefined
     )
@@ -27,36 +32,57 @@ const YouTubeGallery: React.FC<Props> = ({ videoIds }) => {
 
     return (
         <div className={styles.gallery}>
-            <div
-                className={classNames(styles.thumbnails, {
-                    [styles.thumbnailsVisible]: !showPlayer,
-                })}
-            >
-                {videoIds.map(videoInfo => {
-                    return (
-                        <div
-                            key={videoInfo.id}
-                            className={styles.videoInfo}
-                            onClick={() => setSelectedVideo(videoInfo)}
-                        >
-                            <h2>{videoInfo.title}</h2>
-                            <div className={styles.videoDescription}>
-                                {videoInfo.description}
-                            </div>
-                            <div className={styles.videoThumbnailImage}>
-                                <img
-                                    src={`https://img.youtube.com/vi/${
-                                        videoInfo.id
-                                    }/${0}.jpg`}
-                                />
-                                <div className={styles.playIconContainer}>
-                                    <PlayIcon />
-                                </div>
-                            </div>
+            {videoSections.map(videoSection => {
+                return (
+                    <div
+                        key={videoSection.title}
+                        className={classNames(styles.gallerySection, {
+                            [styles.gallerySectionVisible]:
+                                showPlayer === false,
+                        })}
+                    >
+                        <h2>{videoSection.title}</h2>
+                        <div className={styles.thumbnails}>
+                            {videoSection.videos.map((videoInfo: VideoInfo) => {
+                                return (
+                                    <div
+                                        key={videoInfo.id}
+                                        className={styles.videoInfo}
+                                        onClick={() =>
+                                            setSelectedVideo(videoInfo)
+                                        }
+                                    >
+                                        <h3>{videoInfo.title}</h3>
+                                        <div
+                                            className={styles.videoDescription}
+                                        >
+                                            {videoInfo.description}
+                                        </div>
+                                        <div
+                                            className={
+                                                styles.videoThumbnailImage
+                                            }
+                                        >
+                                            <img
+                                                src={`https://img.youtube.com/vi/${
+                                                    videoInfo.id
+                                                }/${0}.jpg`}
+                                            />
+                                            <div
+                                                className={
+                                                    styles.playIconContainer
+                                                }
+                                            >
+                                                <PlayIcon />
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })}
                         </div>
-                    )
-                })}
-            </div>
+                    </div>
+                )
+            })}
             <div
                 className={classNames(styles.player, {
                     [styles.playerVisible]: showPlayer,

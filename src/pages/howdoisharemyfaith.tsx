@@ -1,16 +1,18 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import Styles from "../components/lockdownoutreach.module.scss"
+import Styles from "../components/howdoisharemyfaith.module.scss"
 import Bio from "../components/bio"
 import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
 import SectionText from "../components/section-text"
-import YouTubeGallery from "../components/youtube/youtube-gallery"
+import YouTubeGallery, {
+    VideoSection,
+} from "../components/youtube/youtube-gallery"
 
-const MusicPage: React.FC<{}> = () => {
-    const data = useStaticQuery<GatsbyTypes.LockdownOutreachQuery>(graphql`
-        query LockdownOutreach {
+const HowDoIShareMyFaithPage: React.FC<{}> = () => {
+    const data = useStaticQuery<GatsbyTypes.HowDoIShareMyFaithQuery>(graphql`
+        query HowDoIShareMyFaith {
             evangelists: allSanityPerson(
                 filter: {
                     roles: {
@@ -23,7 +25,7 @@ const MusicPage: React.FC<{}> = () => {
                 }
             }
             intro: markdownRemark(
-                fileAbsolutePath: { regex: "/lockdownoutreach/intro.md$/" }
+                fileAbsolutePath: { regex: "/howdoisharemyfaith/intro.md$/" }
             ) {
                 html
                 fields {
@@ -35,21 +37,24 @@ const MusicPage: React.FC<{}> = () => {
                 }
             }
             videos: markdownRemark(
-                fileAbsolutePath: { regex: "/lockdownoutreach/videos.md$/" }
+                fileAbsolutePath: { regex: "/howdoisharemyfaith/videos.md$/" }
             ) {
                 html
                 frontmatter {
-                    videos {
-                        id
+                    sections {
                         title
-                        description
+                        videos {
+                            id
+                            title
+                            description
+                        }
                     }
                 }
             }
             resources: allMarkdownRemark(
                 filter: {
                     fileAbsolutePath: {
-                        regex: "/.*lockdownoutreach/resources/.*.md/"
+                        regex: "/.*howdoisharemyfaith/resources/.*.md/"
                     }
                 }
             ) {
@@ -64,26 +69,30 @@ const MusicPage: React.FC<{}> = () => {
                 }
             }
             stories: markdownRemark(
-                fileAbsolutePath: { regex: "/lockdownoutreach/stories.md$/" }
+                fileAbsolutePath: { regex: "/howdoisharemyfaith/stories.md$/" }
             ) {
                 html
                 frontmatter {
-                    videos {
-                        id
+                    sections {
                         title
+                        videos {
+                            id
+                            title
+                            description
+                        }
                     }
                 }
             }
         }
     `)
 
-    const resources = data.resources!.edges!.map(resource => {
+    const resources = data.resources.edges.map(resource => {
         return (
             <div key={resource.node.id} className={Styles.resource}>
-                <h2>{resource.node.frontmatter.title}</h2>
+                <h2>{resource.node.frontmatter!.title}</h2>
                 <div
                     dangerouslySetInnerHTML={{
-                        __html: resource.node.html,
+                        __html: resource.node.html!,
                     }}
                 />
             </div>
@@ -93,7 +102,7 @@ const MusicPage: React.FC<{}> = () => {
     return (
         <Layout
             headerColour="dark"
-            title={"Lockdown Outreach"}
+            title={"How Do I Share My Faith?"}
             description={undefined}
         >
             <HeaderUnderlay />
@@ -104,20 +113,20 @@ const MusicPage: React.FC<{}> = () => {
                     dark
                     className={"text"}
                     dangerouslySetInnerHTML={{
-                        __html: data.intro?.html,
+                        __html: data.intro!.html!,
                     }}
                 />
             </Section>
             <Section intro className={"intro"}>
                 <a
-                    // id="find-us-button"
+                    id="resources-button"
                     className="button index-top-section-btn"
                     href="#resources"
                 >
                     Resources
                 </a>
                 <a
-                    // id="services-button"
+                    id="stories-button"
                     className="button index-top-section-btn"
                     href="#stories"
                 >
@@ -133,7 +142,11 @@ const MusicPage: React.FC<{}> = () => {
                 />
             </Section>
             <Section>
-                <YouTubeGallery videoIds={data.videos?.frontmatter?.videos} />
+                <YouTubeGallery
+                    videoSections={
+                        data.videos!.frontmatter!.sections as VideoSection[]
+                    }
+                />
             </Section>
 
             <Section id={"resources"}>
@@ -143,15 +156,19 @@ const MusicPage: React.FC<{}> = () => {
                 </div>
             </Section>
 
-            <Section>
+            <Section id={"stories"}>
                 <article
                     dangerouslySetInnerHTML={{
                         __html: data.stories?.html ?? "Missing content",
                     }}
                 />
             </Section>
-            <Section id={"stories"}>
-                <YouTubeGallery videoIds={data.stories?.frontmatter?.videos} />
+            <Section>
+                <YouTubeGallery
+                    videoSections={
+                        data.stories!.frontmatter!.sections! as VideoSection[]
+                    }
+                />
             </Section>
 
             <Bio
@@ -165,4 +182,4 @@ const MusicPage: React.FC<{}> = () => {
     )
 }
 
-export default MusicPage
+export default HowDoIShareMyFaithPage

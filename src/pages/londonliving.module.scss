@@ -53,21 +53,12 @@ section.london-living a {
 
     .header {
         grid-area: header;
-<<<<<<< HEAD
-=======
-        svg {
-            width: 100%;
-        }
->>>>>>> Add london living page back to the site
     }
 
     .blurb {
         grid-area: blurb;
     }
-<<<<<<< HEAD
     
-=======
->>>>>>> Add london living page back to the site
     .links {
         grid-area: links;
         display: grid;
@@ -124,10 +115,6 @@ section.london-living a {
         "episodes episodes episodes episodes episodes episodes episodes episodes episodes episodes episodes episodes ";
     h1 {
         grid-area: header;
-<<<<<<< HEAD
-=======
-        margin-bottom: -0.2em;
->>>>>>> Add london living page back to the site
     }
 
     .blurb {
@@ -216,28 +203,15 @@ section.london-living a {
                 width: 100%;
             }
         }
-<<<<<<< HEAD
 
         .video {
             width: 100%;
         }
-=======
->>>>>>> Add london living page back to the site
     }
 
     .image {
         grid-area: image;
-<<<<<<< HEAD
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // background-position-x: center;
-
         overflow: hidden;
-=======
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position-x: center;
->>>>>>> Add london living page back to the site
 
         img {
             width: 100%;

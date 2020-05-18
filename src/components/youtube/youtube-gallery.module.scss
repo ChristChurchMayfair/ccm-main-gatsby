@@ -13,15 +13,23 @@
 }
 
 .thumbnails {
-    display: none;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: var(--general-padding);
     row-gap: var(--general-padding);
     width: 100%;
 }
+.gallerySection {
+    display: none;
+    margin-bottom: calc(var(--general-padding) * 2);
 
-.thumbnailsVisible {
-    display: grid;
+    h2 {
+        margin-bottom: var(--general-padding);
+    }
+}
+
+.gallerySectionVisible {
+    display: block;
 }
 
 @media only screen and (max-width: 968px) {
@@ -33,7 +41,7 @@
 .videoInfo {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 80px;
+    grid-template-rows: minmax(30px, auto) auto 80px;
     grid-template-areas:
         "title"
         "thumbnail"
