@@ -1960,6 +1960,8 @@ section.find-us h1 {
     margin-right: 0px;
     padding: 0px;
     grid-area: map;
+    width: 100%;
+    height: 100%;
 }
 
 .map iframe {

@@ -1,5 +1,6 @@
-import React, { Fragment } from "react"
+import React, { useState, Fragment } from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { InView } from "react-intersection-observer"
 
 import MapPin from "../assets/icons/mappin.inline.svg"
 import Roundel from "../assets/icons/roundel2.inline.svg"
@@ -16,6 +17,9 @@ const FindUs = () => {
             }
         }
     `)
+
+    const [mapHasBeenInView, setMapHasBeenInView] = useState(false)
+
     return (
         <section id="find-us" className="find-us">
             <h1>Find Us</h1>
@@ -81,14 +85,32 @@ const FindUs = () => {
             >
                 Citymapper
             </a>
-            <div className="map">
-                <iframe
-                    frameBorder="0"
-                    style={{ border: 0 }}
-                    src={data.site!.siteMetadata!.googleMapEmbeddedIFrameURL}
-                    allowFullScreen
-                ></iframe>
-            </div>
+            <InView
+                rootMargin="0px 0px 3000px 0px"
+                onChange={inView => {
+                    if (inView === true) {
+                        setMapHasBeenInView(true)
+                    }
+                }}
+            >
+                {({ ref }) => {
+                    return (
+                        <div ref={ref} className="map">
+                            <iframe
+                                frameBorder="0"
+                                style={{ border: 0 }}
+                                src={
+                                    mapHasBeenInView
+                                        ? data.site!.siteMetadata!
+                                              .googleMapEmbeddedIFrameURL
+                                        : undefined
+                                }
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    )
+                }}
+            </InView>
         </section>
     )
 }
