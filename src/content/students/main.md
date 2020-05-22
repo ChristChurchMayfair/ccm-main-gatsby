@@ -6,7 +6,6 @@ showInFooter: true
 showInMenu: true
 menuOrder: 2
 mainImage: ../assets/images/desktop/StudentBanner.jpg
-mobileImage: ../assets/images/mobile/StudentBanner.jpg
 overlayCaption: Students at CCM
 captionPosition: bottom-left
 findOutMoreText: |-2
