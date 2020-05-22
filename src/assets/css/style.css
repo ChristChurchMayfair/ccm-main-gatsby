@@ -945,7 +945,7 @@ section.music-resources {
     order: 1;
     flex-grow: 1;
     align-self: flex-end;
-    padding-left: var(--general-padding);
+    padding-left: 20px;
 }
 
 @media only screen and (max-width: 968px) {
