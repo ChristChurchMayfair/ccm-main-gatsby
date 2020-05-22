@@ -1,0 +1,13 @@
+diff --git a/node_modules/gatsby-image/index.js b/node_modules/gatsby-image/index.js
+index 7554e83..37991ba 100644
+--- a/node_modules/gatsby-image/index.js
++++ b/node_modules/gatsby-image/index.js
+@@ -149,7 +149,7 @@ var activateCacheForImage = function activateCacheForImage(props) {
+ }; // Native lazy-loading support: https://addyosmani.com/blog/lazy-loading/
+ 
+ 
+-var hasNativeLazyLoadSupport = typeof HTMLImageElement !== "undefined" && "loading" in HTMLImageElement.prototype;
++var hasNativeLazyLoadSupport = false;
+ var isBrowser = typeof window !== "undefined";
+ var hasIOSupport = isBrowser && window.IntersectionObserver;
+ var io;
