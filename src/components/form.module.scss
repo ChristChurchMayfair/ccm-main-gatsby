@@ -1,0 +1,175 @@
+.givingForm {
+    --form-width: 100%;
+}
+
+.formItemSingle {
+    display: grid;
+    grid-column-gap: var(--general-padding);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "label label label input input input input input error error error error";
+}
+
+@media only screen and (max-width: 968px) {
+    .formItemSingle {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+            "label label label label label label"
+            "input input input input input input"
+            "error error error error error error";
+    }
+}
+
+.formItemLabel {
+    grid-area: label;
+}
+
+.formItemInput {
+    grid-area: input;
+    width: 100%;
+}
+
+.formItemError {
+    grid-area: error;
+    color: red;
+}
+
+.formItemMultipleChoice {
+    display: grid;
+    grid-column-gap: var(--general-padding);
+    grid-row-gap: var(--general-padding);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "label label label choices choices choices choices choices error error error error";
+}
+
+@media only screen and (max-width: 968px) {
+    .formItemMultipleChoice {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+            "label label label label label label"
+            "choices choices choices choices choices choices"
+            "error error error error error error";
+    }
+}
+
+.formItemMultipleChoiceChoices {
+    display: grid;
+    grid-area: choices;
+    grid-template-columns: 1fr;
+    grid-row-gap: var(--general-padding);
+}
+
+.accountDetails {
+    display: grid;
+    grid-column-gap: var(--general-padding);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "label label label info info info info info . . . .";
+    margin-bottom: var(--general-padding);
+}
+
+@media only screen and (max-width: 968px) {
+    .accountDetails {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "label label label info info info";
+    }
+}
+
+.accountDetailLabel {
+    grid-area: label;
+}
+
+.accountDetailInfo {
+    grid-area: info;
+    font-style: italic;
+}
+
+.givingForm input[type="text"],
+.givingForm input[type="email"],
+.givingForm input[type="date"] {
+    border-color: var(--dark-gray);
+    border-width: 1px;
+    border-style: solid;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    /* width: 400px; */
+    box-sizing: content-box;
+    line-height: var(--button-height);
+    margin-bottom: 1em;
+    /* margin-right: var(--general-padding); */
+    box-sizing: border-box;
+}
+
+.givingForm input[type="checkbox"] {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.givingForm input[type="checkbox"]:checked  + label{
+    background-color: green;
+}
+
+.givingForm input[type="radio"] {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.givingForm input[type="radio"] + label {
+    background-color: var(--dark-colour);
+}
+
+.givingForm input[type="radio"]:checked + label {
+    background-color: green;
+}
+
+.givingForm input.addressline {
+    display: block;
+    width: 386px;
+}
+
+.givingForm input.postcode {
+    width: 120px;
+}
+
+.givingForm input.telephone {
+    display: block;
+}
+
+.givingForm input.email {
+    display: block;
+}
+
+.selectableButton {
+    display: block;
+    color: var(--button-text-colour);
+    background-color: var(--button-colour);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: var(--button-height);
+    align-content: center;
+    justify-content: center;
+    font-family: var(--body-font);
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    line-height: var(--button-height);
+    transition: transform 0.05s, background-color 0.05s;
+    -webkit-transition: transform 0.05s, background-color 0.05s;
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.submitButton {
+    background-color: var(--dark-colour);
+    color: var(--light-colour);
+}
+
+.submitButton:disabled {
+    background-color: darkgray;
+    color: gray;
+}
+
+.error {
+    color: red;
+}
