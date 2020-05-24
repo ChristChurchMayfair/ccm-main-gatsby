@@ -16,7 +16,6 @@ const links: Array<{ path: string; title: string }> = [
     { path: "/aboutus", title: "About Us" },
     { path: "/accessibility", title: "Accessibility" },
     { path: "/staff", title: "Staff" },
-    { path: "/blog", title: "Blog" },
 ]
 
 const Footer = () => {
@@ -30,10 +29,6 @@ const Footer = () => {
                         officePhoneNumber
                         footer {
                             smallprint
-                            extraLinks {
-                                title
-                                url
-                            }
                         }
                         email
                     }
@@ -77,6 +72,7 @@ const Footer = () => {
                         </Link>
                     )
                 })}
+                <a href="http://blog.christchurchmayfair.org">Blog</a>
             </div>
             <div className="smallprint">
                 {smallPrint.map(line => (
