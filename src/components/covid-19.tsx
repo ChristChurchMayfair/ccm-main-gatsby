@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Covid19 = () => {
     const { covid } = useStaticQuery<GatsbyTypes.CovidNoticeQuery>(graphql`
@@ -14,7 +14,6 @@ const Covid19 = () => {
                         title
                         description
                         buttonText
-                        buttonLink
                     }
                 }
                 html
@@ -58,12 +57,12 @@ const Covid19 = () => {
                                         </div>
                                         {feature.buttonText != null &&
                                             feature.buttonLink != null && (
-                                                <Link
+                                                <a
                                                     className="button"
-                                                    to={feature.buttonLink}
+                                                    href="http://blog.christchurchmayfair.org"
                                                 >
                                                     {feature.buttonText}
-                                                </Link>
+                                                </a>
                                             )}
                                     </div>
                                 )

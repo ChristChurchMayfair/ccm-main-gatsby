@@ -25,7 +25,6 @@ export const siteMetadata: GatsbyConfig["siteMetadata"] = {
         "W1J 7AN",
     ],
     footer: {
-        extraLinks: [{ title: "Blog", url: "/blog" }],
         smallprint: [
             `Christ Church Mayfair is a Church of England church and a member of the Co-Mission church planting network.`,
             `We're a registered charitable company named "Christ Church Mayfair", and our charity number is 1152061.`,
@@ -113,7 +112,9 @@ export const plugins: GatsbyConfig["plugins"] = [
         resolve: `gatsby-plugin-netlify`,
         options: {
             headers: {
-                "/page-data/*": ["Cache-Control: public, max-age=0, must-revalidate"],
+                "/page-data/*": [
+                    "Cache-Control: public, max-age=0, must-revalidate",
+                ],
             },
         },
     },

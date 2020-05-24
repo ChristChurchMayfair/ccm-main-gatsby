@@ -9,7 +9,6 @@ features:
     description: |
       You can also check out our blog for some daily encouragement.
     buttonText: CCM Blog
-    buttonLink: "/blog/"
   - title: Some further comments
     description: |
       Read some more detailed comments on the coronavirus situation from Matt Fuller.
