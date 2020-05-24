@@ -55,15 +55,14 @@ const Covid19 = () => {
                                         <div className="description">
                                             <p>{feature.description}</p>
                                         </div>
-                                        {feature.buttonText != null &&
-                                            feature.buttonLink != null && (
-                                                <a
-                                                    className="button"
-                                                    href="http://blog.christchurchmayfair.org"
-                                                >
-                                                    {feature.buttonText}
-                                                </a>
-                                            )}
+                                        {feature.buttonText != null && (
+                                            <a
+                                                className="button"
+                                                href="http://blog.christchurchmayfair.org"
+                                            >
+                                                {feature.buttonText}
+                                            </a>
+                                        )}
                                     </div>
                                 )
                             })}
