@@ -7,6 +7,7 @@ import FindUs from "../components/find-us"
 import Img from "../components/img"
 import Services from "../components/services"
 import Covid19 from "../components/covid-19"
+import MountAfter from "../components/mount-after"
 
 const IndexPageQuery = graphql`
     query Homepage {
@@ -74,6 +75,8 @@ const IndexPageQuery = graphql`
     }
 `
 
+const CAROUSEL_INTERVAL = 5000
+
 const IndexPage = () => {
     const data = useStaticQuery<GatsbyTypes.HomepageQuery>(IndexPageQuery)
 
@@ -83,7 +86,7 @@ const IndexPage = () => {
     useEffect(() => {
         const id = setInterval(() => {
             setVisibleHeroIndex(i => (i + 1) % carouselImages.length)
-        }, 5000)
+        }, CAROUSEL_INTERVAL)
         return () => {
             clearInterval(id)
         }
@@ -100,7 +103,21 @@ const IndexPage = () => {
                         if (image == null) {
                             throw new Error("Impossible")
                         }
-
+                        const imageEl = (
+                            <Img
+                                style={{
+                                    position: "absolute",
+                                    top: 0,
+                                    left: 0,
+                                    bottom: 0,
+                                    right: 0,
+                                }}
+                                fluid={image.mainImage!.childImageSharp!.fluid}
+                                objectPosition={`center ${image.position}`}
+                                fadeIn={false}
+                                loading="eager"
+                            />
+                        )
                         return (
                             <div
                                 key={i}
@@ -109,21 +126,18 @@ const IndexPage = () => {
                                     opacity: visibleHeroIndex === i ? 1 : 0,
                                 }}
                             >
-                                <Img
-                                    style={{
-                                        position: "absolute",
-                                        top: 0,
-                                        left: 0,
-                                        bottom: 0,
-                                        right: 0,
-                                    }}
-                                    fluid={
-                                        image.mainImage!.childImageSharp!.fluid
-                                    }
-                                    objectPosition={`center ${image.position}`}
-                                    fadeIn={false}
-                                    loading={i === 0 ? "eager" : "lazy"}
-                                />
+                                {i === 0 ? (
+                                    imageEl
+                                ) : (
+                                    <MountAfter
+                                        delayMs={
+                                            i * CAROUSEL_INTERVAL -
+                                            0.8 * CAROUSEL_INTERVAL
+                                        }
+                                    >
+                                        {imageEl}
+                                    </MountAfter>
+                                )}
                             </div>
                         )
                     })}
