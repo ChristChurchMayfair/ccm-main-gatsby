@@ -1,6 +1,6 @@
 import classnames from "classnames"
 import React, { useState, useEffect } from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import Cookies from "js-cookie"
 
 import styles from "./cookie-notice.module.scss"
@@ -15,6 +15,7 @@ const CookieNotice = () => {
             site {
                 siteMetadata {
                     cookieNotice
+                    cookieNoticePrivacyPolicyLinkText
                 }
             }
         }
@@ -56,7 +57,13 @@ const CookieNotice = () => {
             aria-hidden={!showNotice}
         >
             <div className={styles.notice}>
-                {data.site!.siteMetadata!.cookieNotice!}
+                {data.site!.siteMetadata!.cookieNotice!}{" "}
+                <Link to="/privacy-notice/">
+                    {
+                        data.site!.siteMetadata!
+                            .cookieNoticePrivacyPolicyLinkText!
+                    }
+                </Link>
             </div>
             <a
                 id="decline-cookie-button"

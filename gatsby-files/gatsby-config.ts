@@ -33,6 +33,8 @@ export const siteMetadata: GatsbyConfig["siteMetadata"] = {
     },
     cookieNotice:
         "This site uses cookies in order to determine usage patterns to help us make improvements.",
+    cookieNoticePrivacyPolicyLinkText:
+        "You can read our Privacy Notice by clicking here.",
     podcast: {
         title: "Christ Church Mayfair - Podcast",
         url: "https://rss.christchurchmayfair.org",
