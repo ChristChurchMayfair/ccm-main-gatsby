@@ -118,7 +118,14 @@ export const plugins: GatsbyConfig["plugins"] = [
             },
         },
     },
-    `gatsby-plugin-sass`,
+    {
+        resolve: `gatsby-plugin-sass`,
+        options: {
+            cssLoaderOptions: {
+                camelCase: false,
+            },
+        },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

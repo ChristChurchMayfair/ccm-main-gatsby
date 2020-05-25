@@ -51,7 +51,7 @@ const CookieNotice = () => {
         <div
             id="cookie-notice"
             className={classnames(styles.cookieNotice, {
-                [styles.showNotice]: showNotice,
+                [styles["cookieNotice--show"]]: showNotice,
             })}
             aria-hidden={!showNotice}
         >
@@ -60,7 +60,7 @@ const CookieNotice = () => {
             </div>
             <a
                 id="decline-cookie-button"
-                className={classnames(styles.button, styles.decline)}
+                className={classnames(styles.button, styles["button--decline"])}
                 href="#"
                 onClick={() => {
                     setConsentResponse("declined")
@@ -70,7 +70,7 @@ const CookieNotice = () => {
             </a>
             <a
                 id="accept-cookie-button"
-                className={classnames(styles.button, styles.accept)}
+                className={classnames(styles.button, styles["button--accept"])}
                 href="#"
                 onClick={() => {
                     setConsentResponse("accepted")
