@@ -20,7 +20,7 @@ const StudentsPageQuery = graphql`
             }
         }
         mainContent: markdownRemark(
-            fileAbsolutePath: { regex: "/students/index.md$/" }
+            fileAbsolutePath: { regex: "/students/main.md$/" }
         ) {
             html
             fields {
@@ -43,7 +43,7 @@ const StudentsPageQuery = graphql`
             }
         }
         extraContent: markdownRemark(
-            fileAbsolutePath: { regex: "/extra_student_section.md$/" }
+            fileAbsolutePath: { regex: "/students/extra.md$/" }
         ) {
             html
             frontmatter {
