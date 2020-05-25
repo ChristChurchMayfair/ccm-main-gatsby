@@ -1,0 +1,20 @@
+@mixin full-width {
+    display: grid;
+    grid-template-columns:
+        calc(var(--left-body-margin) - var(--general-padding))
+        1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr calc(
+            var(--right-body-margin) - var(--general-padding)
+        );
+    grid-template-areas: ". content content content content content content content content content content content content .";
+    grid-column-gap: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        grid-template-columns: 0 1fr 1fr 1fr 1fr 0;
+
+        @supports (grid-template-columns: env(safe-area-inset-left)) {
+            grid-template-columns: env(safe-area-inset-left) 1fr 1fr 1fr 1fr env(
+                    safe-area-inset-right
+                );
+        }
+    }
+}

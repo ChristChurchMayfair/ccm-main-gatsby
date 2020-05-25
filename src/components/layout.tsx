@@ -11,6 +11,7 @@ import Head from "./head"
 import Header from "./header"
 import Footer from "./footer"
 import CookieNotice from "./cookie-notice"
+import "../assets/css/global.scss"
 import "../assets/css/style.css"
 
 interface Props {

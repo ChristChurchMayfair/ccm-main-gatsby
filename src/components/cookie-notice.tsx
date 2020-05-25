@@ -1,8 +1,13 @@
+import classnames from "classnames"
 import React, { useState, useEffect } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Cookies from "js-cookie"
 
+import styles from "./cookie-notice.module.scss"
+
 const COOKIE_CONSENT_KEY = "ccm_cookie_consent"
+
+type ConsentResponse = "accepted" | "declined" | undefined
 
 const CookieNotice = () => {
     const data = useStaticQuery<GatsbyTypes.CookieNoticeQuery>(graphql`
@@ -15,15 +20,14 @@ const CookieNotice = () => {
         }
     `)
 
-    const [consentResponse, setConsentResponse] = useState<
-        "accepted" | "declined" | undefined
-    >(undefined)
+    const [consentResponse, setConsentResponse] = useState<ConsentResponse>(
+        undefined
+    )
     const [isInitialCookieLoaded, setIsInitialCookieLoaded] = useState(false)
     useEffect(() => {
-        // @ts-ignore
-        const cookie: "accepted" | "declined" | undefined = Cookies.get(
+        const cookie: ConsentResponse = Cookies.get(
             COOKIE_CONSENT_KEY
-        )
+        ) as ConsentResponse
         setConsentResponse(cookie)
         setIsInitialCookieLoaded(true)
     }, [])
@@ -41,20 +45,22 @@ const CookieNotice = () => {
 
     // We don't want to show the notice until we've had a chance to read the
     // cookie, otherwise we will get jank from the notice briefly flashing up.
-    const showNotice = consentResponse == null && isInitialCookieLoaded === true
+    const showNotice = consentResponse == null && isInitialCookieLoaded
+
     return (
         <div
             id="cookie-notice"
-            className="cookie-notice"
-            style={showNotice ? { bottom: 0 } : undefined}
-            aria-hidden={showNotice === false}
+            className={classnames(styles.cookieNotice, {
+                [styles.showNotice]: showNotice,
+            })}
+            aria-hidden={!showNotice}
         >
-            <div className="notice">
+            <div className={styles.notice}>
                 {data.site!.siteMetadata!.cookieNotice!}
             </div>
             <a
                 id="decline-cookie-button"
-                className="button decline"
+                className={classnames(styles.button, styles.decline)}
                 href="#"
                 onClick={() => {
                     setConsentResponse("declined")
@@ -64,7 +70,7 @@ const CookieNotice = () => {
             </a>
             <a
                 id="accept-cookie-button"
-                className="button accept"
+                className={classnames(styles.button, styles.accept)}
                 href="#"
                 onClick={() => {
                     setConsentResponse("accepted")

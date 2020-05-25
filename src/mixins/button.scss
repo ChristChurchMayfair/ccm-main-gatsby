@@ -1,0 +1,24 @@
+@mixin button {
+    display: block;
+    color: var(--button-text-colour);
+    background-color: var(--button-colour);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: var(--button-height);
+    align-content: center;
+    justify-content: center;
+    font-family: var(--body-font);
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    line-height: var(--button-height);
+    transition: transform 0.05s, background-color 0.05s;
+    -webkit-transition: transform 0.05s, background-color 0.05s;
+    box-sizing: content-box;
+
+    @media only screen and (max-width: 968px) {
+        font-size: 0.9em;
+        padding: 4px 0px;
+    }
+}

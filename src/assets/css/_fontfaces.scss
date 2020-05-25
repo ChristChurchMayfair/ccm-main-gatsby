@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "Klinic Slab";
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/KlinicSlabMedium.otf);
+}
+
+@font-face {
+    font-family: "Klinic Slab";
+    font-style: italic;
+    font-weight: normal;
+    src: url(../fonts/KlinicSlabMediumIt.otf);
+}
+
+@font-face {
+    font-family: "Klinic Slab";
+    font-style: normal;
+    font-weight: bold;
+    src: url(../fonts/KlinicSlabBold.otf);
+}
+
+@font-face {
+    font-family: "Klinic Slab";
+    font-style: italic;
+    font-weight: bold;
+    src: url(../fonts/KlinicSlabBoldIt.otf);
+}
+
+@font-face {
+    font-family: "Klinic Slab";
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/KlinicSlabBook.otf);
+}
+
+@font-face {
+    font-family: "Klinic Slab";
+    font-style: italic;
+    font-weight: 300;
+    src: url(../fonts/KlinicSlabBookIt.otf);
+}
+
+@font-face {
+    font-family: "Klinic Slab";
+    font-style: normal;
+    font-weight: 200;
+    src: url(../fonts/KlinicSlabLight.otf);
+}
+
+@font-face {
+    font-family: "Klinic Slab";
+    font-style: italic;
+    font-weight: 200;
+    src: url(../fonts/KlinicSlabLightIt.otf);
+}
+
+@font-face {
+    font-family: "Franchise";
+    src: url(../fonts/Franchise-Bold-hinted.ttf);
+}
+
+@font-face {
+    font-family: "OstrichProper-SemiBold";
+    src: url("../fonts/ostrichproper-semibold/38195C_0_0.eot");
+    src: url("../fonts/ostrichproper-semibold/38195C_0_0.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/ostrichproper-semibold/38195C_0_0.woff2") format("woff2"),
+        url("../fonts/ostrichproper-semibold/38195C_0_0.woff") format("woff"),
+        url("../fonts/ostrichproper-semibold/38195C_0_0.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "MissionScript";
+    src: url("../fonts/subset-Mission-Script.woff2") format("woff2"),
+        url("../fonts/subset-Mission-Script.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "archiabold";
+    src: url("../fonts/archia/archia-bold-webfont.eot");
+    src: url("../fonts/archia/archia-bold-webfont.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/archia/archia-bold-webfont.woff2") format("woff2"),
+        url("../fonts/archia/archia-bold-webfont.woff") format("woff"),
+        url("../fonts/archia/archia-bold-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
