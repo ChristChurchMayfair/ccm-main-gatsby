@@ -1,0 +1,41 @@
+@import "variables";
+@import "fontfaces";
+
+body {
+    margin: 0;
+    width: 100vw;
+    min-width: 320px;
+    font-family: var(--body-font);
+    font-size: var(--base-font-size);
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--dark-colour);
+    display: grid;
+    background-color: var(--light-colour);
+    grid-template-rows: auto var(--footer-height);
+    text-align: left;
+
+    &:after {
+        display: none;
+        content: "Work in Progress";
+        position: fixed;
+        z-index: 3;
+        width: 180;
+        height: 25px;
+        background: var(--beta-banner-colour);
+        top: 40px;
+        left: -45px;
+        text-align: center;
+        font-size: 13px;
+        font-family: Kl;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: var(--light-colour);
+        line-height: 27px;
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

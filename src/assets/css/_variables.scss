@@ -1,0 +1,89 @@
+/*
+We use CSS variables in this project, not Sass varaibles
+*/
+
+:root {
+    --section-columns: repeat(12, 1fr);
+
+    --logo-height: 60px;
+
+    --text-margin-bottom: calc(2 * var(--general-padding));
+
+    --hero-height: 60vh;
+    --min-hero-height: 450px;
+    --max-hero-height: 700px;
+    --hero-font-size: 5.6em;
+
+    --general-padding: 32px;
+    --header-vertical-padding: var(--general-padding);
+
+    --intro-text-margin-bottom: 0px;
+
+    --ios-bottom-furniture-padding: 140px; /*This is tuned for iPhone X only!*/
+
+    --next-section-peek: 175px;
+
+    --body-margin: 11vw;
+    --fixed-content-width: 936px;
+    --body-margin: calc(calc(100vw - var(--fixed-content-width)) / 2);
+    --left-body-margin: var(--body-margin);
+    --right-body-margin: var(--body-margin);
+
+    --info-section-height: 60vh;
+    --person-height: 40vh;
+
+    --menu-button-size: 55px;
+    --header-height: var(--menu-button-size);
+    --nav-height: auto;
+    --footer-height: auto;
+    --button-height: 30px;
+
+    --base-font-size: 22px;
+
+    --standard-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+
+    --dark-colour: rgba(36, 50, 70, 1);
+    --light-colour: white;
+    --knockout-background-colour: #656565;
+    --dark-gray: rgb(150, 150, 150);
+    --mid-gray: rgb(230, 230, 230);
+    --header-background-colour: rgba(16, 14, 40, 0.5);
+    --multiply-colour: rgb(150, 150, 150);
+    --cookie-notice-background: var(--mid-gray);
+    --cookie-notice-foreground: var(--dark-gray);
+
+    --navigation-background-colour: rgba(246, 246, 255, 0.95);
+
+    --button-colour: var(--dark-colour);
+    --button-text-colour: var(--light-colour);
+    --alternate-tabular-highlight: rgba(16, 14, 40, 0.03);
+    --button-push-colour: rgb(200, 200, 200);
+    --theme-colour: rgba(74, 127, 197, 1);
+
+    --highlight-colour: rgb(78, 167, 203);
+
+    --menu-transition-time: 0.2s;
+
+    --beta-banner-colour: rgba(244, 66, 92, 0.5);
+    --holiday-club-red: rgba(232, 81, 81, 1);
+    --holiday-club-texture-opacity: 0.7;
+    --holiday-club-price-size: 4em;
+
+    --heading-font: "Franchise";
+    --body-font: "Klinic Slab";
+
+    @media only screen and (max-width: 968px) {
+        --body-margin: var(--general-padding);
+        --logo-height: 15vw;
+        --hero-height: 55vh;
+        --min-hero-height: 100px;
+        --max-hero-height: 500px;
+        --hero-font-size: 3em;
+        --general-padding: 15px;
+        --text-margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: 422px) {
+        --logo-height: 10vw;
+    }
+}

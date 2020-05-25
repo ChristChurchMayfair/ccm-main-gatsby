@@ -1,208 +1,8 @@
-:root {
-    --section-columns: repeat(12, 1fr);
+/*
+DEPRECATED - do not add styles to this file as we are in the process of migrating everything to Sass 
+*/
 
-    --logo-height: 60px;
-
-    --text-margin-bottom: calc(2 * var(--general-padding));
-
-    --hero-height: 60vh;
-    --min-hero-height: 450px;
-    --max-hero-height: 700px;
-    --hero-font-size: 5.6em;
-
-    --general-padding: 32px;
-    --header-vertical-padding: var(--general-padding);
-
-    --intro-text-margin-bottom: 0px;
-
-    --ios-bottom-furniture-padding: 140px; /*This is tuned for iPhone X only!*/
-
-    --next-section-peek: 175px;
-
-    --body-margin: 11vw;
-    --fixed-content-width: 936px;
-    --body-margin: calc(calc(100vw - var(--fixed-content-width)) / 2);
-    --left-body-margin: var(--body-margin);
-    --right-body-margin: var(--body-margin);
-
-    --info-section-height: 60vh;
-    --person-height: 40vh;
-
-    --menu-button-size: 55px;
-    --header-height: var(--menu-button-size);
-    --nav-height: auto;
-    --footer-height: auto;
-    --button-height: 30px;
-
-    --base-font-size: 22px;
-
-    --standard-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
-
-    --dark-colour: rgba(36, 50, 70, 1);
-    --light-colour: white;
-    --knockout-background-colour: #656565;
-    --dark-gray: rgb(150, 150, 150);
-    --mid-gray: rgb(230, 230, 230);
-    --header-background-colour: rgba(16, 14, 40, 0.5);
-    --multiply-colour: rgb(150, 150, 150);
-    --cookie-notice-background: var(--mid-gray);
-    --cookie-notice-foreground: var(--dark-gray);
-
-    --navigation-background-colour: rgba(246, 246, 255, 0.95);
-
-    --button-colour: var(--dark-colour);
-    --button-text-colour: var(--light-colour);
-    --alternate-tabular-highlight: rgba(16, 14, 40, 0.03);
-    --button-push-colour: rgb(200, 200, 200);
-    --theme-colour: rgba(74, 127, 197, 1);
-
-    --highlight-colour: rgb(78, 167, 203);
-
-    --menu-transition-time: 0.2s;
-
-    --beta-banner-colour: rgba(244, 66, 92, 0.5);
-    --holiday-club-red: rgba(232, 81, 81, 1);
-    --holiday-club-texture-opacity: 0.7;
-    --holiday-club-price-size: 4em;
-
-    --heading-font: "Franchise";
-    --body-font: "Klinic Slab";
-}
-
-@media only screen and (max-width: 968px) {
-    :root {
-        --body-margin: var(--general-padding);
-        --logo-height: 15vw;
-        --hero-height: 55vh;
-        --min-hero-height: 100px;
-        --max-hero-height: 500px;
-        --hero-font-size: 3em;
-        --general-padding: 15px;
-        --text-margin-bottom: 0;
-    }
-}
-
-@media only screen and (max-width: 422px) {
-    :root {
-        --logo-height: 10vw;
-    }
-}
-
-@font-face {
-    font-family: "Klinic Slab";
-    font-style: normal;
-    font-weight: normal;
-    src: url(../fonts/KlinicSlabMedium.otf);
-}
-
-@font-face {
-    font-family: "Klinic Slab";
-    font-style: italic;
-    font-weight: normal;
-    src: url(../fonts/KlinicSlabMediumIt.otf);
-}
-
-@font-face {
-    font-family: "Klinic Slab";
-    font-style: normal;
-    font-weight: bold;
-    src: url(../fonts/KlinicSlabBold.otf);
-}
-
-@font-face {
-    font-family: "Klinic Slab";
-    font-style: italic;
-    font-weight: bold;
-    src: url(../fonts/KlinicSlabBoldIt.otf);
-}
-
-@font-face {
-    font-family: "Klinic Slab";
-    font-style: normal;
-    font-weight: 300;
-    src: url(../fonts/KlinicSlabBook.otf);
-}
-
-@font-face {
-    font-family: "Klinic Slab";
-    font-style: italic;
-    font-weight: 300;
-    src: url(../fonts/KlinicSlabBookIt.otf);
-}
-
-@font-face {
-    font-family: "Klinic Slab";
-    font-style: normal;
-    font-weight: 200;
-    src: url(../fonts/KlinicSlabLight.otf);
-}
-
-@font-face {
-    font-family: "Klinic Slab";
-    font-style: italic;
-    font-weight: 200;
-    src: url(../fonts/KlinicSlabLightIt.otf);
-}
-
-@font-face {
-    font-family: "Franchise";
-    src: url(../fonts/Franchise-Bold-hinted.ttf);
-}
-
-@font-face {
-    font-family: "OstrichProper-SemiBold";
-    src: url("../fonts/ostrichproper-semibold/38195C_0_0.eot");
-    src: url("../fonts/ostrichproper-semibold/38195C_0_0.eot?#iefix")
-            format("embedded-opentype"),
-        url("../fonts/ostrichproper-semibold/38195C_0_0.woff2") format("woff2"),
-        url("../fonts/ostrichproper-semibold/38195C_0_0.woff") format("woff"),
-        url("../fonts/ostrichproper-semibold/38195C_0_0.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "MissionScript";
-    src: url("../fonts/subset-Mission-Script.woff2") format("woff2"),
-        url("../fonts/subset-Mission-Script.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "archiabold";
-    src: url("../fonts/archia/archia-bold-webfont.eot");
-    src: url("../fonts/archia/archia-bold-webfont.eot?#iefix")
-            format("embedded-opentype"),
-        url("../fonts/archia/archia-bold-webfont.woff2") format("woff2"),
-        url("../fonts/archia/archia-bold-webfont.woff") format("woff"),
-        url("../fonts/archia/archia-bold-webfont.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-body:after {
-    display: none;
-    content: "Work in Progress";
-    position: fixed;
-    z-index: 3;
-    width: 180;
-    height: 25px;
-    background: var(--beta-banner-colour);
-    top: 40px;
-    left: -45px;
-    text-align: center;
-    font-size: 13px;
-    font-family: Kl;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: var(--light-colour);
-    line-height: 27px;
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
+/* TODO: check if it is safe to delete this */
 #viewsizedebug {
     display: none;
     position: fixed;
@@ -210,21 +10,6 @@ body:after {
     bottom: 0;
     background-color: red;
     color: white;
-}
-
-body {
-    margin: 0;
-    width: 100vw;
-    min-width: 320px;
-    font-family: var(--body-font);
-    font-size: var(--base-font-size);
-    font-weight: 300;
-    line-height: 1.5;
-    color: var(--dark-colour);
-    display: grid;
-    background-color: var(--light-colour);
-    grid-template-rows: auto var(--footer-height);
-    text-align: left;
 }
 
 h1,
@@ -342,10 +127,10 @@ a:hover {
     max-width: 100vw;
 }
 
+/* Migrated to full-width SCSS mixin */
 footer,
 section,
-header,
-.cookie-notice {
+header {
     display: grid;
     /* PROPORTIONAL SIDE MARGINS */
     /* grid-template-columns: calc(var(--body-margin) - var(--general-padding)) 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr calc(var(--body-margin) - var(--general-padding)); */
@@ -672,12 +457,12 @@ section.highlight {
     background-color: var(--highlight-colour);
 }
 
+/* Migrated to full-width SCSS mixin */
 @media only screen and (max-width: 968px) {
     section,
     footer,
     header,
-    nav,
-    .cookie-notice {
+    nav {
         grid-template-columns: 0 1fr 1fr 1fr 1fr 0;
     }
 
@@ -685,8 +470,7 @@ section.highlight {
         footer,
         header,
         section,
-        nav,
-        .cookie-notice {
+        nav {
             grid-template-columns: env(safe-area-inset-left) 1fr 1fr 1fr 1fr env(
                     safe-area-inset-right
                 );
@@ -1081,9 +865,6 @@ section.services {
     }
 }
 
-.service .time {
-}
-
 .service .info {
     grid-area: info;
     padding: 20px 0px 0px 0px;
@@ -1224,13 +1005,11 @@ button,
     -webkit-appearance: button;
 }
 
+/* Migrated to button SCSS mixin */
 .button {
     display: block;
     color: var(--button-text-colour);
     background-color: var(--button-colour);
-    /* min-width: 100px; */
-    /* padding-left: var(--general-padding);
-  padding-right: var(--general-padding); */
     padding-top: 8px;
     padding-bottom: 8px;
     height: var(--button-height);
@@ -1247,6 +1026,7 @@ button,
     box-sizing: content-box;
 }
 
+/* Migrated to button SCSS mixin */
 @media only screen and (max-width: 968px) {
     .button {
         font-size: 0.9em;
@@ -2138,60 +1918,6 @@ section article h2 {
     font-size: 1.6em;
     text-transform: none;
     font-weight: 400;
-}
-
-.cookie-notice {
-    position: fixed;
-    left: 0px;
-    bottom: -300px;
-    background-color: var(--cookie-notice-background);
-    color: var(--cookie-notice-foreground);
-    width: 100%;
-    padding-top: var(--general-padding);
-    padding-bottom: var(--general-padding);
-
-    font-size: 0.9em;
-
-    display: grid;
-    grid-template-areas: ". text text text text text text text text decline decline accept accept .";
-    transition: bottom 0.5s ease-in-out;
-    align-items: center;
-    grid-row-gap: var(--general-padding);
-
-    -webkit-box-shadow: 0px 0px 68px -20px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 0px 68px -20px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 68px -20px rgba(0, 0, 0, 0.5);
-}
-
-.cookie-notice .notice {
-    grid-area: text;
-}
-
-.cookie-notice .button.accept {
-    grid-area: accept;
-    background: var(--cookie-notice-foreground);
-    color: var(--cookie-notice-background);
-}
-
-.cookie-notice .button.decline {
-    grid-area: decline;
-    background-color: transparent;
-    border-width: 2px;
-    border-color: var(--cookie-notice-foreground);
-    color: var(--cookie-notice-foreground);
-    border-style: solid;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    height: 2.2em;
-}
-
-@media only screen and (max-width: 968px) {
-    .cookie-notice {
-        grid-template-areas:
-            ". text text text text ."
-            ". decline decline accept accept .";
-    }
 }
 
 /* Desktop positioning of home hero image */
