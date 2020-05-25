@@ -1,0 +1,53 @@
+.talksContainer .talks {
+    grid-template-areas:
+        ". content content content content content content content content . . . . ."
+        ". podcast1 podcast1 podcast1 podcast2 podcast2 podcast2 app1 app1 app1 app2 app2 app2 .";
+    grid-row-gap: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            ". content content content content ."
+            ". podcast1 podcast1 podcast2 podcast2 ."
+            ". app1 app1 app2 app2 .";
+    }
+}
+
+.externalMediaLink {
+    height: 2em;
+    display: inline-block;
+    overflow: hidden;
+    background-size: contain;
+    padding-top: var(--general-padding);
+}
+
+.applePodcast {
+    grid-area: podcast1;
+    justify-self: left;
+}
+
+.googlePodcast {
+    grid-area: podcast2;
+    justify-self: right;
+}
+
+.appleAppStore {
+    grid-area: app1;
+    justify-self: left;
+}
+
+.googlePlayStore {
+    grid-area: app2;
+    justify-self: right;
+}
+
+.talksReactApp {
+    > div {
+        grid-area: content;
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

@@ -1,0 +1,207 @@
+@import "../mixins/full-width";
+
+.section {
+    @include full-width;
+
+    padding-top: var(--general-padding);
+    padding-bottom: var(--general-padding);
+    background-color: var(--light-colour);
+    overflow: hidden;
+
+    @media only screen and (max-width: 968px) {
+        p {
+            font-size: 0.9em;
+        }
+    }
+
+    article {
+        grid-area: content;
+
+        h1 {
+            font-size: 3em;
+
+            @media only screen and (max-width: 968px) {
+                font-size: 2em;
+            }
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--body-font);
+            text-transform: none;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 1.6em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+        }
+
+        h4 {
+            font-size: 1.2em;
+        }
+
+        h5 {
+            font-size: 1.1em;
+        }
+
+        h6 {
+            font-size: 1em;
+        }
+    }
+
+    &--intro {
+        grid-template-areas:
+            ". content content content content content content content alt alt alt alt alt ."
+            ". leftbutton leftbutton leftbutton rightbutton rightbutton rightbutton . . . . . . .";
+        padding: 40px 0px;
+
+        @media only screen and (max-width: 968px) {
+            padding: 20px 0px;
+            grid-template-areas:
+                ". content content content content ."
+                ". leftbutton leftbutton rightbutton rightbutton .";
+        }
+    }
+
+    &--wider-intro {
+        grid-template-areas: ". content content content content content content content content content . . . .";
+
+        @media only screen and (max-width: 968px) {
+            grid-template-areas: ". content content content content .";
+        }
+    }
+
+    &--dark {
+        background-color: var(--dark-colour);
+        color: var(--light-colour);
+    }
+
+    &--info-panel {
+        padding: 0;
+        min-height: var(--info-section-height);
+
+        @media only screen and (max-width: 968px) {
+            height: auto;
+        }
+
+        h1 {
+            font-size: 5.5em;
+            line-height: 0.9em;
+            padding: 40px 0px 10px 0px;
+
+            @media only screen and (max-width: 968px) {
+                font-size: 3em;
+            }
+        }
+    }
+
+    &--image-right {
+        grid-template-areas: ". text text text text text . image image image image image image image";
+
+        @media only screen and (max-width: 968px) {
+            grid-template-areas: "image image image image image image" ". text text text text .";
+        }
+    }
+
+    &--image-left {
+        grid-template-areas: "image image image image image image image text text text text text text .";
+
+        @media only screen and (max-width: 968px) {
+            grid-template-areas: "image image image image image image" ". text text text text .";
+        }
+    }
+
+    &--mobile-image-text-swap {
+        @media only screen and (max-width: 968px) {
+            grid-template-areas: ". text text text text ." "image image image image image image";
+        }
+    }
+
+    &--full-bleed {
+        grid-template-areas: ". text text text text text text . . . . . . .";
+        padding: 0;
+        color: var(--light-colour);
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+
+        @media only screen and (max-width: 968px) {
+            grid-template-areas: ". text text text text .";
+            min-height: 200px;
+        }
+    }
+
+    &--no-image-on-mobile {
+        @media only screen and (max-width: 968px) {
+            background-image: none !important;
+            background-color: var(--dark-gray);
+
+            .infoPanelImageContainer {
+                display: none;
+            }
+        }
+    }
+}
+
+.infoPanelImageContainer {
+    position: relative;
+    grid-area: image;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    background-size: cover;
+
+    @media only screen and (max-width: 968px) {
+        height: 300px;
+    }
+
+    img,
+    picture {
+        height: var(--info-section-height);
+        @media only screen and (max-width: 968px) {
+            max-width: 100vw;
+            height: auto;
+            min-width: 20em;
+        }
+    }
+
+    &--full-bleed {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+
+        @media only screen and (max-width: 968px) {
+            height: auto;
+        }
+    }
+
+    &--right {
+        background-position: right;
+    }
+
+    &--left {
+        background-position: left;
+    }
+
+    &--centre {
+        background-position: center;
+    }
+
+    &--top-center {
+        background-position: top center;
+    }
+
+    &--bottom-centre {
+        background-position: center bottom;
+    }
+}

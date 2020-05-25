@@ -55,48 +55,7 @@ a:hover {
     display: block;
 }
 
-.hero .carousel-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: grid;
-    width: 100vw;
-    height: var(--hero-height);
-    min-height: var(--min-hero-height);
-    max-height: var(--max-hero-height);
-    grid-template-columns:
-        calc(var(--left-body-margin) - var(--general-padding))
-        1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr calc(
-            var(--right-body-margin) - var(--general-padding)
-        );
-    grid-template-areas: ". text text text text text text text text text text text text .";
-    grid-column-gap: var(--general-padding);
-    align-content: end;
-    z-index: 1;
-}
-
-@media only screen and (max-width: 968px) {
-    .hero .carousel-overlay {
-        grid-template-columns: 0 1fr 1fr 1fr 1fr 0;
-        grid-template-areas: ". text text text text .";
-    }
-
-    @supports (grid-template-columns: env(safe-area-inset-left)) {
-        .hero .carousel-overlay {
-            grid-template-columns: env(safe-area-inset-left) 1fr 1fr 1fr 1fr env(
-                    safe-area-inset-right
-                );
-        }
-    }
-}
-
-.carousel-overlay h1 {
-    grid-area: caption;
-    justify-self: left;
-    align-self: baseline;
-}
-
-.hero .carousel-images {
+.carousel-images {
     overflow: hidden;
     top: 0;
     left: 0;
@@ -129,7 +88,6 @@ a:hover {
 
 /* Migrated to full-width SCSS mixin */
 footer,
-section,
 header {
     display: grid;
     /* PROPORTIONAL SIDE MARGINS */
@@ -143,15 +101,6 @@ header {
 
     grid-template-areas: ". content content content content content content content content content content content content .";
     grid-column-gap: var(--general-padding);
-}
-
-section {
-    padding-top: var(--general-padding);
-    padding-bottom: var(--general-padding);
-
-    background-color: var(--light-colour);
-
-    overflow: hidden;
 }
 
 /* NAVIGATION */
@@ -422,32 +371,8 @@ nav {
     padding-bottom: var(--general-padding);
 }
 
-section .text {
-    margin-bottom: var(--text-margin-bottom);
-}
-
-section.intro .text {
-    margin-bottom: var(--intro-text-margin-bottom);
-}
-
-@media only screen and (max-width: 968px) {
-    section.intro .text h1 {
-        margin-bottom: calc(var(--general-padding) * 2);
-    }
-}
-
-section.header-underlay {
-    height: var(--header-height);
-    background-color: var(--light-colour);
-}
-
 section.vertical-centred h1 {
     align-self: center;
-}
-
-section.bottom-left h1 {
-    align-self: bottom;
-    justify-self: left;
 }
 
 section.vertical-bottom h1 {
@@ -455,17 +380,12 @@ section.vertical-bottom h1 {
     margin-bottom: -20px;
 }
 
-/* section>div {
-  grid-area: content;
-} */
-
 section.highlight {
     background-color: var(--highlight-colour);
 }
 
 /* Migrated to full-width SCSS mixin */
 @media only screen and (max-width: 968px) {
-    section,
     footer,
     header,
     nav {
@@ -475,7 +395,6 @@ section.highlight {
     @supports (grid-template-columns: env(safe-area-inset-left)) {
         footer,
         header,
-        section,
         nav {
             grid-template-columns: env(safe-area-inset-left) 1fr 1fr 1fr 1fr env(
                     safe-area-inset-right
@@ -486,167 +405,6 @@ section.highlight {
 
 #full-page {
     height: 100vh;
-}
-
-/* Special first one with padding to pull content below the header */
-/* and padding to pull action buttons up so they are not hidden by iOS furniture!*/
-/* section:first-of-type {
-  padding: 0;
-} */
-
-section.intro {
-    grid-template-areas:
-        ". content content content content content content content alt alt alt alt alt ."
-        ". leftbutton leftbutton leftbutton rightbutton rightbutton rightbutton . . . . . . .";
-    padding: 40px 0px;
-}
-
-@media only screen and (max-width: 968px) {
-    section.intro {
-        padding: 20px 0px;
-    }
-}
-
-.text p:nth-of-type(1) {
-    font-weight: 400;
-}
-
-.find-out-more .text p:nth-of-type(1) {
-    font-weight: 300;
-}
-
-section.intro.wider {
-    grid-template-areas: ". content content content content content content content content content . . . .";
-}
-
-@media only screen and (max-width: 968px) {
-    section.intro.wider {
-        grid-template-areas: ". content content content content .";
-    }
-}
-
-@media only screen and (max-width: 968px) {
-    section.intro {
-        grid-template-areas:
-            ". content content content content ."
-            ". leftbutton leftbutton rightbutton rightbutton .";
-    }
-}
-
-.intro .text {
-    grid-area: content;
-    font-size: 1.2em;
-    line-height: 1.2em;
-    font-weight: 300;
-}
-
-@media only screen and (max-width: 968px) {
-    .intro .text {
-        font-size: 1em;
-    }
-}
-
-section.double-image.right {
-    grid-template-areas:
-        ". content content content content content content topimage topimage topimage topimage topimage topimage ."
-        ". content content content content content content bottomimage bottomimage bottomimage bottomimage bottomimage bottomimage .";
-    padding: 40px 0px;
-    grid-row-gap: var(--general-padding);
-}
-
-section.double-image.left {
-    grid-template-areas:
-        ". topimage topimage topimage topimage topimage topimage content content content content content content ."
-        ". bottomimage bottomimage bottomimage bottomimage bottomimage bottomimage content content content content content content .";
-    padding: 40px 0px;
-    grid-row-gap: var(--general-padding);
-}
-
-@media only screen and (max-width: 968px) {
-    section.double-image.left,
-    section.double-image.right {
-        grid-template-areas:
-            ". content content content content ."
-            ". topimage topimage bottomimage bottomimage .";
-    }
-}
-
-@media only screen and (max-width: 694px) {
-    section.double-image.left,
-    section.double-image.right {
-        grid-template-areas:
-            ". content content content content ."
-            ". topimage topimage topimage topimage ."
-            ". bottomimage bottomimage bottomimage bottomimage .";
-    }
-}
-
-section.double-image .text {
-    grid-area: content;
-}
-
-section.double-image .photo {
-    height: 300px;
-    background-size: cover;
-}
-
-section.double-image .photo.topimage {
-    grid-area: topimage;
-}
-
-section.double-image .photo.bottomimage {
-    grid-area: bottomimage;
-}
-
-.hero {
-    /* padding-top: calc(var(--header-height) + calc(var(--header-vertical-padding) * 2) + var(--general-padding)); */
-    display: block;
-    width: 100vw;
-    padding-top: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: var(--hero-height);
-    min-height: var(--min-hero-height);
-    max-height: var(--max-hero-height);
-    grid-template-areas: ". text text text text text text text text text text text text .";
-}
-
-@media only screen and (max-width: 968px) {
-    .hero {
-        grid-template-areas: ". text text text text .";
-    }
-}
-
-.hero h1 {
-    grid-area: text;
-    color: var(--light-colour);
-    font-size: var(--hero-font-size);
-    text-align: left;
-    line-height: 1em;
-    /* position: absolute;
-  /* This is lame and needs fixing! */
-    /* top: calc(var(--hero-height) - calc(var(--hero-font-size) / 3));*/
-}
-
-@media only screen and (max-width: 968px) {
-    .hero h1 {
-        line-height: 0.9em;
-    }
-}
-
-.hero.centred {
-    grid-template-areas: ". text text text text text text text text text text text text .";
-    justify-items: center;
-}
-
-.hero.left.bottom {
-    grid-template-areas: ". text text text text text text text text text text text text .";
-    align-content: end;
-}
-
-.hero.bottom h1 {
-    margin-bottom: calc(30px - var(--general-padding));
-    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
 }
 
 section.lightBlend {
@@ -676,141 +434,12 @@ section p {
     grid-column: 1/-1;
 }
 
-@media only screen and (max-width: 968px) {
-    section p {
-        font-size: 0.9em;
-    }
-    .find-out-more section p {
-        margin-top: 10px;
-    }
-}
-
-section.music-resources {
-    grid-template-areas:
-        ". title title title title title title title title title title title title ."
-        ". text text text text text text text text text text text text ."
-        ". links links links links links links links links links links links links .";
-}
-
-.music-resources > h1 {
-    grid-area: title;
-}
-
-.music-resources div.text {
-    grid-area: text;
-}
-
-.resources {
-    grid-area: links;
-}
-
-.resources .track {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: baseline;
-    padding-top: var(--general-padding);
-}
-
-@media only screen and (max-width: 968px) {
-    .resources .track {
-        flex-direction: column;
-    }
-}
-
-.track .title {
-    order: 0;
-    flex-grow: 1000;
-    font-size: 1.3em;
-    font-weight: 300;
-}
-
-@media only screen and (max-width: 968px) {
-    .track .title {
-        font-size: 1em;
-    }
-}
-
-.track a {
-    order: 1;
-    flex-grow: 1;
-    align-self: flex-end;
-    padding-left: 20px;
-}
-
-@media only screen and (max-width: 968px) {
-    .track a {
-        align-self: flex-start;
-    }
-}
-
-.music-resource {
-    display: grid;
-    grid-template-columns: 1fr 1.618fr;
-    grid-template-areas: "title resources";
-    border-width: 1px;
-    border-color: red;
-    border-style: solid;
-}
-
-.music-resource h2 {
-    grid-area: title;
-}
-
-.music-resource .downloads {
-    display: grid;
-    grid-template-columns: auto;
-    border-width: 1px;
-    border-color: blue;
-    border-style: solid;
-}
-
-.music-resource .downloads .download {
-    display: block;
-}
-
-/* SERVICES */
-
-section.services {
-    height: auto;
-    grid-template-areas:
-        ". title title title title title title title title title title title title ."
-        ". left left left left left left right right right right right right .";
-    grid-auto-rows: auto auto;
-    background-color: var(--dark-colour);
-}
-
-@media only screen and (max-width: 968px) {
-    section.services {
-        grid-template-areas:
-            ". title title title title ."
-            ". left left left left ."
-            ". right right right right .";
-    }
-}
-
 .service:nth-of-type(1) {
     grid-area: left;
 }
 
 .service:nth-of-type(2) {
     grid-area: right;
-}
-
-.services > h1 {
-    grid-area: title;
-    color: var(--light-colour);
-    padding-bottom: 0.1em;
-    border-width: 0px;
-    border-bottom-width: 2px;
-    border-color: var(--light-colour);
-    border-style: solid;
-}
-
-@media only screen and (max-width: 968px) {
-    .services > h1 {
-        padding: 20px 0px 5px 0px;
-    }
 }
 
 .service {
@@ -1083,56 +712,9 @@ input.email {
 
 /* ABOUT US */
 
-section.info-panel {
-    padding: 0;
-    min-height: var(--info-section-height);
-    /* min-height:840px; */
-}
-
-@media only screen and (max-width: 968px) {
-    section.info-panel {
-        height: auto;
-    }
-
-    section.info-panel h1 {
-        font-size: 3em;
-    }
-}
-
-section.dark {
-    background-color: var(--dark-colour);
-    color: var(--light-colour);
-}
-
 section.dark .button {
     color: var(--dark-colour);
     background-color: var(--light-colour);
-}
-
-section.image-right {
-    grid-template-areas: ". text text text text text . image image image image image image image";
-}
-
-@media only screen and (max-width: 968px) {
-    section.image-right {
-        grid-template-areas: "image image image image image image" ". text text text text .";
-    }
-}
-
-section.image-left {
-    grid-template-areas: "image image image image image image image text text text text text text .";
-}
-
-@media only screen and (max-width: 968px) {
-    section.image-left {
-        grid-template-areas: "image image image image image image" ". text text text text .";
-    }
-}
-
-@media only screen and (max-width: 968px) {
-    .info-panel.dark.image-right.mobile-image-text-swap {
-        grid-template-areas: ". text text text text ." "image image image image image image";
-    }
 }
 
 @media only screen and (max-width: 968px) {
@@ -1143,76 +725,13 @@ section.image-left {
     }
 }
 
-.info-panel h1 {
-    font-size: 5.5em;
-    line-height: 0.9em;
-    padding: 40px 0px 10px 0px;
-}
-
-.info-panel .text {
-    grid-area: text;
-    font-weight: 300;
-}
-
-.info-panel.dark .text,
 .info-panel.full-bleed.darken .text {
     font-weight: 200;
 }
 
 @media only screen and (max-width: 968px) {
-    .info-panel .text,
-    .info-panel.dark .text,
     .info-panel.full-bleed.darken .text {
         margin: 0 0 0.5em 0;
-    }
-}
-
-.info-panel .photo {
-    grid-area: image;
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    height: auto;
-    background-size: cover;
-}
-
-@media only screen and (max-width: 968px) {
-    .info-panel .photo {
-        height: 300px;
-    }
-}
-
-.photo.right {
-    background-position: right;
-}
-
-.photo.left {
-    background-position: left;
-}
-
-.photo.centre {
-    background-position: center;
-}
-
-.photo.top-center {
-    background-position: top center;
-}
-
-.photo.centre.bottom {
-    background-position: center bottom;
-}
-
-.info-panel .photo img,
-.info-panel .photo picture {
-    height: var(--info-section-height);
-}
-
-@media only screen and (max-width: 968px) {
-    .info-panel .photo img,
-    .info-panel .photo picture {
-        max-width: 100vw;
-        height: auto;
-        min-width: 20em;
     }
 }
 
@@ -1221,46 +740,7 @@ section.image-left {
     background-blend-mode: multiply;
 }
 
-@media only screen and (max-width: 968px) {
-    .mobile-darken {
-        background-color: var(--multiply-colour);
-        background-blend-mode: multiply;
-    }
-}
-
-section.full-bleed {
-    grid-template-areas: ". text text text text text text . . . . . . .";
-    padding: 0;
-    color: var(--light-colour);
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
-}
-
-@media only screen and (max-width: 968px) {
-    section.full-bleed {
-        grid-template-areas: ". text text text text .";
-        min-height: 200px;
-    }
-}
-
-.full-bleed .text {
-    grid-area: text;
-}
-
 /* PROMOTIONAL */
-
-.promotion.full-bleed {
-    grid-template-areas:
-        ". text text text text text text text text text text text text ."
-        ". button button button . . . . . . . . . .";
-    padding-top: var(--general-padding);
-    padding-bottom: var(--general-padding);
-}
-
-.promotion > div {
-    grid-area: text;
-}
 
 .promotion h1 {
     font-size: 5em;
@@ -1290,300 +770,6 @@ section.full-bleed {
     .promotion a.button {
         margin-bottom: 0.5em;
     }
-}
-
-/* STAFF */
-
-section.staff > div {
-    grid-area: content;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: calc(var(--general-padding) * 2);
-}
-
-@media screen and (max-width: 968px) {
-    section.staff > div {
-        grid-row-gap: var(--general-padding);
-    }
-}
-
-.staff .person {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "photo info";
-    grid-column-gap: var(--general-padding);
-    background-color: var(--light-colour);
-    overflow: hidden;
-    border-style: solid;
-    border-width: 0px 0px 2px 0px;
-    padding-top: 0.4em;
-    padding-bottom: 3.4em;
-}
-
-.staff .person:nth-last-of-type(1) {
-    border: none;
-}
-
-@media screen and (max-width: 968px) {
-    .staff .person {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-areas: "photo info";
-        grid-column-gap: var(--general-padding);
-        background-color: var(--light-colour);
-        overflow: hidden;
-        border-style: solid;
-        border-width: 0px 0px 2px 0px;
-        padding-top: 0.4em;
-        padding-bottom: 0;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .staff .person {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas:
-            "name"
-            "title"
-            "email"
-            "photo"
-            "info";
-        grid-column-gap: var(--general-padding);
-        background-color: var(--light-colour);
-        overflow: hidden;
-        border-style: solid;
-        border-width: 0px 0px 2px 0px;
-        padding-top: 0.4em;
-        padding-bottom: 0;
-    }
-}
-
-.staff .person .photo {
-    grid-area: photo;
-    object-fit: contain;
-    overflow: hidden;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: top;
-    width: 100%;
-    height: 0;
-    padding-top: 130%;
-}
-
-@media screen and (min-width: 650px) and (max-width: 968px) {
-    .staff .person .photo {
-        margin-bottom: 1em;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .staff .person .photo {
-        background-size: 50%;
-        padding-top: 68%;
-    }
-}
-
-.staff .person .info {
-    grid-area: info;
-}
-
-.staff .person .name {
-    font-weight: 600;
-    font-size: 1.6em;
-    margin-bottom: 0.1em;
-}
-
-.staff .person .title {
-    font-weight: 300;
-    font-size: 1.2em;
-    margin-bottom: 0.4em;
-}
-
-.staff .person .bio {
-    font-size: 0.8em;
-}
-
-.staff .person .email {
-    margin-bottom: 1em;
-}
-
-/* SERMONS/TALKS */
-
-section.intro.talks {
-    grid-template-areas:
-        ". content content content content content content content content . . . . ."
-        ". podcast1 podcast1 podcast1 podcast2 podcast2 podcast2 app1 app1 app1 app2 app2 app2 .";
-    grid-row-gap: var(--general-padding);
-}
-
-@media only screen and (max-width: 968px) {
-    section.intro.talks {
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-            ". content content content content ."
-            ". podcast1 podcast1 podcast2 podcast2 ."
-            ". app1 app1 app2 app2 .";
-    }
-}
-
-a.podcast-link,
-a.appstore-link {
-    height: 2em;
-    display: inline-block;
-    overflow: hidden;
-    background-size: contain;
-    padding-top: var(--general-padding);
-}
-
-#apple-podcast-link {
-    grid-area: podcast1;
-    justify-self: left;
-}
-
-#google-podcast-link {
-    grid-area: podcast2;
-    justify-self: right;
-}
-
-#apple-appstore-link {
-    grid-area: app1;
-    justify-self: left;
-}
-
-#google-playstore-link {
-    grid-area: app2;
-    justify-self: right;
-}
-
-section.talks-react-app > div {
-    grid-area: content;
-    font-size: 2em;
-}
-
-/* MUSIC RELEASES */
-
-section.music-release {
-    height: 40vh;
-}
-
-.music-releases > div {
-    grid-area: content;
-}
-
-.music-release-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: var(--general-padding);
-    grid-template-rows: auto auto;
-    grid-row-gap: 100px;
-}
-
-@media only screen and (max-width: 968px) {
-    .music-release-list {
-        grid-template-columns: 1fr;
-    }
-}
-
-.music-release {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(40px, 70px) auto auto;
-    grid-column-gap: var(--general-padding);
-    grid-row-gap: var(--general-padding);
-    grid-template-areas:
-        "title"
-        "cover"
-        "links";
-}
-
-.music-release-cover {
-    grid-area: cover;
-    width: 100%;
-    border-color: var(--dark-colour);
-    border-style: solid;
-    border-width: 1px;
-    justify-self: center;
-    align-content: center;
-    justify-content: center;
-}
-
-.music-release-title {
-    grid-area: title;
-    font-weight: 700;
-}
-
-.music-service-links {
-    grid-area: links;
-    display: grid;
-    grid-column-gap: var(--general-padding);
-    grid-auto-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-auto-flow: column;
-}
-
-.music-service-link {
-    display: inline-block;
-    overflow: hidden;
-    width: 130px;
-    height: 50px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.music-service-link svg {
-    width: 130px;
-    height: 50px;
-}
-
-.spotify-link {
-    background-image: url(/assets/badges/Listen_on_spotify.svg);
-    justify-self: center;
-}
-
-.apple-music-link {
-    background-image: url(/assets/badges/music-lrg.svg);
-    justify-self: center;
-}
-
-.music-release-description {
-    grid-area: details;
-}
-
-.music-release-details p {
-    font-size: 0.8em;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-@media only screen and (max-width: 860px) {
-    .music-release,
-    .music-release:nth-of-type(even) {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-            "title"
-            "cover"
-            "links";
-    }
-
-    .music-release-description {
-        display: none;
-    }
-
-    /* .music-service-link {
-    width:40px;
-    height:40px;
-  } */
-
-    /* .apple-music-link {
-    background: url(https://tools.applemusic.com/embed/v1/app-icon.svg) no-repeat;
-  }
-
-  .spotify-link {
-    background: url(../images/spotify_small.svg) no-repeat;
-  } */
 }
 
 /* MUSIC TRAINING VIDEOS */
@@ -1618,284 +804,6 @@ section.music-release {
 
 /* FIND US */
 
-section.find-us {
-    background-color: var(--dark-colour);
-    grid-template-areas:
-        ". title title title title title title title title title title title title ."
-        ". address address address address address address map map map map map map ."
-        ". buttonleft buttonleft buttonleft buttonright buttonright buttonright map map map map map map .";
-    padding-bottom: calc(var(--general-padding) + 40px);
-}
-
-.find-us .location {
-    grid-area: address;
-    background-color: var(--light-colour);
-    display: block;
-    padding: var(--general-padding);
-    margin-bottom: var(--general-padding);
-
-    line-height: 1.2em;
-
-    display: grid;
-    grid-gap: var(--general-padding);
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 4% 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "pin address address address address address "
-        "roundel tube tube tube tube tube";
-}
-
-@media only screen and (max-width: 968px) {
-    section.find-us {
-        grid-template-areas:
-            ". title title title title ."
-            ". address address address address ."
-            ". buttonleft buttonleft buttonright buttonright ."
-            "map map map map map map";
-        padding-bottom: 0px;
-    }
-
-    .find-us .location {
-        grid-template-columns: 1fr 3fr 3fr 3fr 3fr 3fr;
-        height: 180px;
-    }
-
-    .pin,
-    .roundel {
-        justify-self: right;
-    }
-}
-
-/*Increased element height to account for text wrap on v.small mobile screens*/
-
-@media only screen and (max-width: 400px) {
-    .find-us .location {
-        height: 200px;
-    }
-}
-
-.find-us h1 {
-    color: var(--light-colour);
-    grid-area: title;
-
-    padding-bottom: 0.1em;
-    border-width: 0px;
-    border-bottom-width: 2px;
-    border-color: var(--light-colour);
-    border-style: solid;
-}
-
-@media only screen and (max-width: 968px) {
-    .find-us h1 {
-        padding: 20px 0px 5px 0px;
-    }
-}
-
-.pin {
-    height: 30px;
-    width: 30px;
-    stroke: var(--dark-colour);
-    fill: var(--dark-colour);
-}
-
-.roundel {
-    height: 25px;
-    width: 25px;
-    stroke: var(--dark-colour);
-    fill: var(--dark-colour);
-    grid-area: roundel;
-}
-
-.find-us .location .address {
-    grid-area: address;
-    font-weight: 400;
-}
-
-.find-us .location .tube-stations {
-    grid-area: tube;
-}
-
-.find-us .location .tube-stations .tube-station {
-    font-weight: 400;
-}
-
-.find-us .button {
-    align-self: auto;
-    color: var(--dark-colour);
-    background-color: var(--light-colour);
-}
-
-.find-us .button:nth-of-type(1) {
-    grid-area: buttonleft;
-}
-
-.find-us .button:nth-of-type(2) {
-    grid-area: buttonright;
-}
-
-section.find-us h1 {
-    grid-area: title;
-}
-
-#address {
-    grid-area: address;
-}
-
-.map {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding: 0px;
-    grid-area: map;
-    width: 100%;
-    height: 100%;
-}
-
-.map iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-@media only screen and (max-width: 968px) {
-    .map iframe {
-        padding: 30px 0px 0px 0px;
-        height: 20vh;
-        margin-bottom: -12px;
-    }
-}
-
-/* FIND OUT MORE */
-
-section.find-out-more {
-    display: grid;
-    grid-template-areas:
-        ". title title title title title title title title title title title title ."
-        ". people people people people people people text text text text text text .";
-}
-
-section.find-out-more.no-bio {
-    display: grid;
-    grid-template-areas:
-        ". title title title title title title title title title title title title ."
-        ". text text text text text text text text text text text text .";
-}
-
-.find-out-more h1 {
-    padding-bottom: 0.1em;
-    border-width: 0px;
-    border-bottom-width: 2px;
-    border-color: var(--dark-colour);
-    border-style: solid;
-}
-
-@media only screen and (max-width: 968px) {
-    section.find-out-more {
-        grid-template-areas:
-            ". title title title title ."
-            ". text text text text ."
-            ". people people people people .";
-    }
-
-    section.find-out-more.no-bio {
-        grid-template-areas:
-            ". title title title title ."
-            ". text text text text .";
-    }
-
-    .find-out-more h1 {
-        padding: 20px 0px 5px 0px;
-    }
-}
-
-.find-out-more .text {
-    grid-area: text;
-}
-
-.find-out-more .people {
-    grid-area: people;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: var(--general-padding);
-    grid-row-gap: var(--general-padding);
-}
-
-.find-out-more .person {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto auto auto;
-    grid-column-gap: var(--general-padding);
-    grid-template-areas:
-        "photo info"
-        "photo info"
-        "photo info"
-        "photo info";
-    font-size: 1.1em;
-}
-
-@media only screen and (max-width: 968px) {
-    .find-out-more .person {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        grid-column-gap: var(--general-padding);
-        grid-template-areas:
-            "photo"
-            "info";
-        font-size: 1.1em;
-    }
-}
-
-.find-out-more .person .photo {
-    grid-area: photo;
-    object-fit: contain;
-    height: 200px;
-    overflow: hidden;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100%;
-    background-position-y: top;
-}
-
-.find-out-more .person .photo img {
-    height: 100%;
-}
-
-.find-out-more .person .info {
-    grid-area: info;
-}
-
-.find-out-more .person .info .name {
-    font-weight: bold;
-}
-
-.find-out-more .person .info .email {
-    font-size: 0.8em;
-    hyphens: auto;
-    -webkit-hyphens: auto;
-}
-
-.find-out-more .person .info .phone {
-    font-size: 0.8em;
-}
-
-@media only screen and (max-width: 968px) {
-    .find-out-more .person .info {
-        padding-top: 10px;
-    }
-}
-
-.find-out-more h1 {
-    grid-area: title;
-}
-
-.find-out-more .info {
-    grid-area: info;
-}
-
-.find-out-more .photo {
-    grid-area: photo;
-}
-
 #home p {
     font-size: 1.4em;
     line-height: 2em;
@@ -1903,49 +811,6 @@ section.find-out-more.no-bio {
 
 #home strong {
     color: var(--highlight-colour);
-}
-
-section article {
-    grid-area: content;
-}
-
-section article h1 {
-    font-size: 3em;
-}
-
-@media only screen and (max-width: 968px) {
-    section article h1 {
-        font-size: 2em;
-    }
-}
-
-section article h2,
-section article h3,
-section article h4,
-section article h5,
-section article h6 {
-    font-family: var(--body-font);
-    text-transform: none;
-    font-weight: 400;
-}
-
-section article h2 {
-    font-size: 1.6em;
-}
-
-section article h3 {
-    font-size: 1.4em;
-}
-section article h4 {
-    font-size: 1.2em;
-}
-
-section article h5 {
-    font-size: 1.1em;
-}
-
-section article h6 {
-    font-size: 1em;
 }
 
 /* Desktop positioning of home hero image */
@@ -1964,23 +829,6 @@ section article h6 {
 @media only screen and (max-width: 460px) {
     #home-hero h1 {
         font-size: 3em;
-    }
-}
-
-/* Talks react app heading size fix */
-.talks-react-app h1 {
-    font-size: 2em;
-}
-
-/* image background position code */
-
-#midweek-photo-right {
-    background-position: right center;
-}
-
-@media only screen and (max-width: 1220px) and (min-width: 968px) {
-    #midweek-photo-right {
-        background-position: 600px center;
     }
 }
 
@@ -2020,26 +868,6 @@ section article h6 {
 
 #talks-hero {
     background-position: center;
-}
-
-@media only screen and (max-width: 968px) {
-    .info-panel.full-bleed .photo {
-        height: auto;
-    }
-}
-
-/* Growing Together section mobile height fix */
-/* I'M SORRY THIS IS THE WORST HACK OF ALL TIME */
-@media only screen and (max-width: 968px) {
-    .info-panel.full-bleed.mobile-height-fix .photo {
-        display: none;
-    }
-
-    .info-panel.full-bleed.mobile-height-fix {
-        /* Keep an eye on this, it's very important */
-        background-image: none !important;
-        background-color: var(--dark-gray);
-    }
 }
 
 section.promotion.carols {
@@ -2587,68 +1415,6 @@ section.promotion.easter .when {
 section.promotion.easter .where {
     font-family: "Lato", sans-serif;
     color: var(--light-colour);
-}
-
-/* Important Notice */
-
-section.promotion.important-notice {
-    background-color: var(--light-colour);
-    color: var(--dark-colour);
-    text-align: center;
-    border-top-color: var(--dark-colour);
-    border-top-style: solid;
-    border-top-width: 1px;
-}
-
-@media only screen and (max-width: 968px) {
-    section.promotion.important-notice {
-        font-size: 0.9em;
-    }
-}
-
-section.promotion.important-notice h1 {
-    color: red;
-    font-size: 2em;
-    line-height: 1.5em;
-    letter-spacing: 0.2em;
-    margin-bottom: var(--general-padding);
-    margin-top: var(--general-padding);
-}
-
-section.promotion.important-notice .text p.last-updated {
-    font-size: 0.7em;
-}
-
-@media only screen and (max-width: 968px) {
-    section.promotion.important-notice h1 {
-        font-size: 2.5em;
-        margin-top: calc(var(--general-padding) * 2);
-    }
-}
-
-section.promotion.important-notice hr.separator {
-    color: var(--mid-gray);
-    margin: 0 var(--general-padding);
-    border-top: 1px solid;
-}
-
-section.promotion.important-notice .features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: var(--text-margin-bottom);
-}
-
-@media only screen and (max-width: 968px) {
-    section.promotion.important-notice .features {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-section.promotion.important-notice .features a.button {
-    color: var(--button-text-colour);
-    background-color: var(--button-colour);
-    margin-left: var(--general-padding);
-    margin-right: var(--general-padding);
 }
 
 /* London Living */

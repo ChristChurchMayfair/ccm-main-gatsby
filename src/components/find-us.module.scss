@@ -1,0 +1,136 @@
+@import "../mixins/button";
+
+.findUsContainer {
+    .findUs {
+        background-color: var(--dark-colour);
+        grid-template-areas:
+            ". title title title title title title title title title title title title ."
+            ". address address address address address address map map map map map map ."
+            ". buttonleft buttonleft buttonleft buttonright buttonright buttonright map map map map map map .";
+        padding-bottom: calc(var(--general-padding) + 40px);
+
+        @media only screen and (max-width: 968px) {
+            grid-template-areas:
+                ". title title title title ."
+                ". address address address address ."
+                ". buttonleft buttonleft buttonright buttonright ."
+                "map map map map map map";
+            padding-bottom: 0;
+        }
+    }
+}
+
+.title {
+    color: var(--light-colour);
+    grid-area: title;
+
+    padding-bottom: 0.1em;
+    border-width: 0px;
+    border-bottom-width: 2px;
+    border-color: var(--light-colour);
+    border-style: solid;
+
+    @media only screen and (max-width: 968px) {
+        padding: 20px 0px 5px 0px;
+    }
+}
+
+.location {
+    grid-area: address;
+    background-color: var(--light-colour);
+    display: block;
+    padding: var(--general-padding);
+    margin-bottom: var(--general-padding);
+
+    line-height: 1.2em;
+
+    display: grid;
+    grid-gap: var(--general-padding);
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 4% 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "pin address address address address address "
+        "roundel tube tube tube tube tube";
+
+    @media only screen and (max-width: 968px) {
+        grid-template-columns: 1fr 3fr 3fr 3fr 3fr 3fr;
+        height: 180px;
+    }
+
+    @media only screen and (max-width: 400px) {
+        height: 200px;
+    }
+}
+
+.address {
+    grid-area: address;
+    font-weight: 400;
+}
+
+.pin {
+    height: 30px;
+    width: 30px;
+    stroke: var(--dark-colour);
+    fill: var(--dark-colour);
+
+    @media only screen and (max-width: 968px) {
+        justify-self: right;
+    }
+}
+
+.roundel {
+    height: 25px;
+    width: 25px;
+    stroke: var(--dark-colour);
+    fill: var(--dark-colour);
+    grid-area: roundel;
+
+    @media only screen and (max-width: 968px) {
+        justify-self: right;
+    }
+}
+
+.tubeStations {
+    grid-area: tube;
+}
+
+.tubeStation {
+    font-weight: 400;
+}
+
+.button {
+    @include button;
+
+    align-self: auto;
+    color: var(--dark-colour);
+    background-color: var(--light-colour);
+
+    &:nth-of-type(1) {
+        grid-area: buttonleft;
+    }
+
+    &:nth-of-type(2) {
+        grid-area: buttonright;
+    }
+}
+
+.map {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    grid-area: map;
+    width: 100%;
+    height: 100%;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+
+        @media only screen and (max-width: 968px) {
+            padding: 30px 0px 0px 0px;
+            height: 20vh;
+            margin-bottom: -12px;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.staffMember {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "photo info";
+    grid-column-gap: var(--general-padding);
+    background-color: var(--light-colour);
+    overflow: hidden;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+    padding-top: 0.4em;
+    padding-bottom: 3.4em;
+
+    &:nth-last-of-type(1) {
+        border: none;
+    }
+
+    @media screen and (max-width: 968px) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: "photo info";
+        grid-column-gap: var(--general-padding);
+        background-color: var(--light-colour);
+        overflow: hidden;
+        border-style: solid;
+        border-width: 0px 0px 2px 0px;
+        padding-top: 0.4em;
+        padding-bottom: 0;
+    }
+
+    @media screen and (max-width: 650px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "name"
+            "title"
+            "email"
+            "photo"
+            "info";
+        grid-column-gap: var(--general-padding);
+        background-color: var(--light-colour);
+        overflow: hidden;
+        border-style: solid;
+        border-width: 0px 0px 2px 0px;
+        padding-top: 0.4em;
+        padding-bottom: 0;
+    }
+}
+
+.photo {
+    grid-area: photo;
+    object-fit: contain;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    width: 100%;
+    height: 0;
+    padding-top: 130%;
+
+    @media screen and (min-width: 650px) and (max-width: 968px) {
+        margin-bottom: 1em;
+    }
+
+    @media screen and (max-width: 650px) {
+        background-size: 50%;
+        padding-top: 68%;
+    }
+}
+
+.info {
+    grid-area: info;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 1.6em;
+    margin-bottom: 0.1em;
+}
+
+.title {
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-bottom: 0.4em;
+}
+
+.bio {
+    font-size: 0.8em;
+}
+
+.email {
+    margin-bottom: 1em;
+}

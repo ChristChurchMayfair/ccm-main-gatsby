@@ -1,3 +1,4 @@
+import classnames from "classnames"
 import React from "react"
 
 import Talks from "../components/talks"
@@ -9,6 +10,10 @@ import ApplePodcastsBadge from "../assets/badges/US_UK_Apple_Podcasts_Listen_Col
 import AppleAppStoreBadge from "../assets/badges/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.inline.svg"
 import GooglePlayStoreBadge from "../assets/badges/google_play_en_badge_web_generic.png"
 import GooglePodcastBadge from "../assets/badges/google_podcasts_badge@2x.png"
+
+import styles from "./talks.module.scss"
+import Section from "../components/section"
+import SectionText from "../components/section-text"
 
 const TalksPageQuery = graphql`
     query TalksPage {
@@ -41,62 +46,72 @@ const TalksPage = () => {
         <Layout title="Talks" headerColour={meta.headerColour}>
             <Hero
                 sectionId="talks-hero"
-                sectionClass="left bottom"
-                fluid={meta.mainImage!.childImageSharp!.fluid}
+                singleImageFluid={meta.mainImage!.childImageSharp!.fluid}
                 overlayCaption={meta.overlayCaption}
             />
-            <section className="intro talks dark">
-                <div
-                    className="text"
-                    dangerouslySetInnerHTML={{
-                        __html: data.markdownRemark!.html!,
-                    }}
-                />
-                <a
-                    id="apple-podcast-link"
-                    className="podcast-link"
-                    href={meta.itunesPodcastURL}
-                >
-                    <ApplePodcastsBadge
-                        style={{ height: "34px", width: "190px" }}
+            <div className={styles.talksContainer}>
+                <Section intro dark className={styles.talks}>
+                    <SectionText
+                        intro
+                        dark
+                        dangerouslySetInnerHTML={{
+                            __html: data.markdownRemark!.html!,
+                        }}
                     />
-                </a>
-                <a
-                    id="google-podcast-link"
-                    className="podcast-link"
-                    href={meta.podcastURL}
-                >
-                    <img
-                        src={GooglePodcastBadge}
-                        alt="Google Podcast Badge"
-                        style={{ height: 34 }}
-                    />
-                </a>
-                <a
-                    id="apple-appstore-link"
-                    className="appstore-link"
-                    href={meta.iosAppStoreLink}
-                >
-                    <AppleAppStoreBadge style={{ width: 120 }} />
-                </a>
-                <a
-                    id="google-playstore-link"
-                    className="appstore-link"
-                    href={meta.playStoreLink}
-                >
-                    <img
-                        src={GooglePlayStoreBadge}
-                        alt="Google Play Store Badge"
-                        style={{ width: 135 }}
-                    />
-                </a>
-            </section>
-            <section className="talks-react-app">
-                <noscript>
-                    You need to enable JavaScript to run this app.
-                </noscript>
-                <Talks />
-            </section>
+                    <a
+                        className={classnames(
+                            styles.externalMediaLink,
+                            styles.applePodcast
+                        )}
+                        href={meta.itunesPodcastURL}
+                    >
+                        <ApplePodcastsBadge
+                            style={{ height: "34px", width: "190px" }}
+                        />
+                    </a>
+                    <a
+                        className={classnames(
+                            styles.externalMediaLink,
+                            styles.googlePodcast
+                        )}
+                        href={meta.podcastURL}
+                    >
+                        <img
+                            src={GooglePodcastBadge}
+                            alt="Google Podcast Badge"
+                            style={{ height: 34 }}
+                        />
+                    </a>
+                    <a
+                        className={classnames(
+                            styles.externalMediaLink,
+                            styles.appleAppStore
+                        )}
+                        href={meta.iosAppStoreLink}
+                    >
+                        <AppleAppStoreBadge style={{ width: 120 }} />
+                    </a>
+                    <a
+                        className={classnames(
+                            styles.externalMediaLink,
+                            styles.googlePlayStore
+                        )}
+                        href={meta.playStoreLink}
+                    >
+                        <img
+                            src={GooglePlayStoreBadge}
+                            alt="Google Play Store Badge"
+                            style={{ width: 135 }}
+                        />
+                    </a>
+                </Section>
+                <Section className={styles.talksReactApp}>
+                    <noscript>
+                        You need to enable JavaScript to run this app.
+                    </noscript>
+                    <Talks />
+                </Section>
+            </div>
         </Layout>
     )
 }

@@ -4,6 +4,10 @@ import { graphql } from "gatsby"
 import Img from "./img"
 import { sortedWithPriority } from "../utils"
 
+import styles from "./bio.module.scss"
+import FindOutMore from "./find-out-more"
+import FindOutMoreText from "./find-out-more-text"
+
 interface Props {
     people: ReadonlyArray<GatsbyTypes.StaffProfileFragment>
     peoplePrecedenceByEmail?: Array<string> | undefined
@@ -22,57 +26,61 @@ const Bio: React.FC<Props> = ({
     )
 
     return (
-        <section className="find-out-more">
-            <h1>Find out more</h1>
-            <div
-                className="text"
-                dangerouslySetInnerHTML={{ __html: descriptionHtml }}
-            />
-            <div className="people">
-                {people.map(person => {
-                    if (person == null) {
-                        return null
-                    }
-                    return (
-                        <div className="person" key={person.name}>
-                            <div
-                                className="photo"
-                                style={{ position: "relative" }}
-                            >
-                                <Img
-                                    style={{
-                                        position: "absolute",
-                                        top: 0,
-                                        left: 0,
-                                        bottom: 0,
-                                        right: 0,
-                                    }}
-                                    fluid={person.headshot!.asset!.fluid}
-                                    objectFit="contain"
-                                    objectPosition="left center"
-                                />
-                            </div>
-                            <div className="info">
-                                <div className="name">{person.name}</div>
-                                <div className="role">{person.jobTitle}</div>
-                                <div className="email">
-                                    <a href={`mailto:${person.email}`}>
-                                        {person.email}
-                                    </a>
+        <div className={styles.bioContainer}>
+            <FindOutMore className={styles.bio}>
+                <FindOutMoreText
+                    dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+                />
+                <div className={styles.people}>
+                    {people.map(person => {
+                        if (person == null) {
+                            return null
+                        }
+                        return (
+                            <div className={styles.person} key={person.name}>
+                                <div
+                                    className={styles.photo}
+                                    style={{ position: "relative" }}
+                                >
+                                    <Img
+                                        style={{
+                                            position: "absolute",
+                                            top: 0,
+                                            left: 0,
+                                            bottom: 0,
+                                            right: 0,
+                                        }}
+                                        fluid={person.headshot!.asset!.fluid}
+                                        objectFit="contain"
+                                        objectPosition="left center"
+                                    />
                                 </div>
-                                {/* {person.phone != null && (
-                                    <div className="phone">
-                                        <a href={`tel:${person.phone}`}>
-                                            {person.phone}
+                                <div className={styles.info}>
+                                    <div className={styles.name}>
+                                        {person.name}
+                                    </div>
+                                    <div className={styles.role}>
+                                        {person.jobTitle}
+                                    </div>
+                                    <div className={styles.email}>
+                                        <a href={`mailto:${person.email}`}>
+                                            {person.email}
                                         </a>
                                     </div>
-                                )} */}
+                                    {/* {person.phone != null && (
+                            <div className="phone">
+                                <a href={`tel:${person.phone}`}>
+                                    {person.phone}
+                                </a>
                             </div>
-                        </div>
-                    )
-                })}
-            </div>
-        </section>
+                        )} */}
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
+            </FindOutMore>
+        </div>
     )
 }
 

@@ -1,45 +1,45 @@
 import React from "react"
 
 import Img, { FluidObject } from "./img"
+import styles from "./hero.module.scss"
+import Section from "./section"
 
-interface Props {
+interface HeroProps {
     sectionId: string
-    sectionClass: string
     overlayCaption?: string
-    fluid: FluidObject | undefined
+    singleImageFluid?: FluidObject
 }
 
-const Hero: React.FC<Props> = ({
+const Hero: React.FC<HeroProps> = ({
     sectionId,
-    sectionClass,
     overlayCaption,
-    fluid,
-}) => {
-    return (
-        <section
-            id={sectionId}
-            className={`hero ${sectionClass}`}
-            style={{ position: "relative" }}
-        >
-            <div className="carousel-overlay">
-                <h1>{overlayCaption}</h1>
+    singleImageFluid,
+    children,
+}) => (
+    <div className={styles.heroContainer}>
+        <Section id={sectionId} className={styles.hero}>
+            <div className={styles.carouselOverlay}>
+                <h1 className={styles.overlayCaption}>{overlayCaption}</h1>
             </div>
-            <Img
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    bottom: 0,
-                    right: 0,
-                }}
-                loading="eager"
-                fadeIn={false}
-                fluid={fluid}
-                objectFit="cover"
-                objectPosition="center top"
-            />
-        </section>
-    )
-}
+            {singleImageFluid !== undefined && (
+                <Img
+                    style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        bottom: 0,
+                        right: 0,
+                    }}
+                    loading="eager"
+                    fadeIn={false}
+                    fluid={singleImageFluid}
+                    objectFit="cover"
+                    objectPosition="center top"
+                />
+            )}
+            {children}
+        </Section>
+    </div>
+)
 
 export default Hero

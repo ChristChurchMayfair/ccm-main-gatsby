@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import ImportantNotice, { Feature } from "./important-notice"
 
 const Covid19 = () => {
     const { covid } = useStaticQuery<GatsbyTypes.CovidNoticeQuery>(graphql`
@@ -14,6 +15,7 @@ const Covid19 = () => {
                         title
                         description
                         buttonText
+                        buttonHref
                     }
                 }
                 html
@@ -23,54 +25,14 @@ const Covid19 = () => {
 
     const features = covid!.frontmatter!.features!
     return (
-        <section className="promotion full-bleed important-notice">
-            <div>
-                <h1>{covid!.frontmatter!.name}</h1>
-                <div className="text">
-                    <div dangerouslySetInnerHTML={{ __html: covid!.html! }} />
-                    {covid!.frontmatter!.lastUpdated != null && (
-                        <p className="last-updated" style={{ fontWeight: 300 }}>
-                            This was last updated at{" "}
-                            {covid!.frontmatter!.lastUpdated}.
-                        </p>
-                    )}
-                </div>
-                {features.length > 0 && (
-                    <>
-                        <hr className="separator" />
-                        <div className="features">
-                            {features.map(feature => {
-                                if (feature == null) {
-                                    return null
-                                }
-
-                                return (
-                                    <div
-                                        key={feature.title}
-                                        className="feature"
-                                    >
-                                        <h2 className="title">
-                                            {feature.title}
-                                        </h2>
-                                        <div className="description">
-                                            <p>{feature.description}</p>
-                                        </div>
-                                        {feature.buttonText != null && (
-                                            <a
-                                                className="button"
-                                                href="http://blog.christchurchmayfair.org"
-                                            >
-                                                {feature.buttonText}
-                                            </a>
-                                        )}
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </>
-                )}
-            </div>
-        </section>
+        <ImportantNotice
+            title={covid!.frontmatter!.name!}
+            lastUpdated={covid!.frontmatter!.lastUpdated}
+            features={features as Feature[]}
+        >
+            <div dangerouslySetInnerHTML={{ __html: covid!.html! }} />
+        </ImportantNotice>
     )
 }
+
 export default Covid19

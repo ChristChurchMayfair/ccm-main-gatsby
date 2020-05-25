@@ -2,6 +2,9 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "./img"
 
+import styles from "./services.module.scss"
+import Section from "./section"
+
 const Services = () => {
     const data = useStaticQuery<GatsbyTypes.ServicesQuery>(graphql`
         fragment Service on MarkdownRemark {
@@ -36,8 +39,8 @@ const Services = () => {
         }
     `)
     return (
-        <section id="services" className="services">
-            <h1>Our Sunday Services</h1>
+        <Section id="services" className={styles.services}>
+            <h1 className={styles.heading}>Our Sunday Services</h1>
             {[data.am, data.pm].map(service => {
                 if (service == null) {
                     throw new Error("Impossible")
@@ -76,7 +79,7 @@ const Services = () => {
                     </div>
                 )
             })}
-        </section>
+        </Section>
     )
 }
 

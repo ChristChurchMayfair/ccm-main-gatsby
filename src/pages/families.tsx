@@ -5,6 +5,9 @@ import Img from "gatsby-image/withIEPolyfill"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Bio from "../components/bio"
+import SectionText from "../components/section-text"
+import DoubleImageSection from "../components/double-image-section"
+import Section from "../components/section"
 
 const FamiliesPageQuery = graphql`
     query FamiliesPage {
@@ -145,35 +148,24 @@ const Families: React.FC<{}> = () => {
             <Hero
                 sectionId="familes-hero"
                 overlayCaption={data.mainContent!.frontmatter!.overlayCaption}
-                sectionClass="left bottom"
-                fluid={mainImageFluid}
+                singleImageFluid={mainImageFluid}
             />
 
-            <section className="double-image left">
-                <div
-                    className="text"
+            <DoubleImageSection
+                imagesPosition="left"
+                topImage={<Img fluid={firstIntroImageFluid} />}
+                bottomImage={<Img fluid={secondIntroImageFluid} />}
+            >
+                <SectionText
                     dangerouslySetInnerHTML={{
                         __html: data.mainContent!.html!,
                     }}
                 />
-                <div className="photo topimage">
-                    <Img fluid={firstIntroImageFluid} />
-                </div>
-                <div className="photo bottomimage">
-                    <Img fluid={secondIntroImageFluid} />
-                </div>
-            </section>
+            </DoubleImageSection>
 
-            <section className="info-panel dark image-right mobile-image-text-swap">
-                <div className="text">
-                    <h1>{data.youthContent!.frontmatter!.title!}</h1>
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: data.youthContent!.html!,
-                        }}
-                    />
-                </div>
-                <div className="photo right" style={{ position: "relative" }}>
+            <Section
+                infoPanel
+                infoPanelImage={
                     <Img
                         fluid={youthImageFluid}
                         style={{
@@ -184,8 +176,21 @@ const Families: React.FC<{}> = () => {
                         objectFit={"cover"}
                         objectPosition={"right"}
                     />
-                </div>
-            </section>
+                }
+                imagePosition="right"
+                imageBackgroundPosition="right"
+                dark
+                mobileImageTextSwap
+            >
+                <SectionText infoPanel dark>
+                    <h1>{data.youthContent!.frontmatter!.title!}</h1>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: data.youthContent!.html!,
+                        }}
+                    />
+                </SectionText>
+            </Section>
             <Bio
                 people={data.childrensWorkers.nodes}
                 peoplePrecedenceByEmail={["james@christchurchmayfair.org"]}
@@ -195,13 +200,9 @@ const Families: React.FC<{}> = () => {
                 }
             />
 
-            <section
-                className="info-panel full-bleed mobile-darken"
-                style={{
-                    position: "relative",
-                }}
-            >
-                <div className="photo">
+            <Section
+                infoPanel
+                infoPanelImage={
                     <Img
                         style={{
                             position: "absolute",
@@ -216,9 +217,16 @@ const Families: React.FC<{}> = () => {
                         objectFit="cover"
                         objectPosition="center top"
                     />
-                </div>
-                <div
-                    className="text"
+                }
+                fullBleed
+                noImageOnMobile
+                style={{
+                    position: "relative",
+                }}
+            >
+                <SectionText
+                    infoPanel
+                    fullBleed
                     // We need this to ensure the text appears
                     // on top of the image.
                     style={{
@@ -231,8 +239,8 @@ const Families: React.FC<{}> = () => {
                             __html: data.littleLambs!.html!,
                         }}
                     />
-                </div>
-            </section>
+                </SectionText>
+            </Section>
 
             <Bio
                 people={data.littleLambsWorker.nodes}

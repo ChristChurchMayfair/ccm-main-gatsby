@@ -1,0 +1,68 @@
+@import "../mixins/button";
+
+.importantNoticeContainer .importantNotice {
+    grid-template-areas:
+        ". text text text text text text text text text text text text ."
+        ". button button button . . . . . . . . . .";
+    padding-top: var(--general-padding);
+    padding-bottom: var(--general-padding);
+    background-color: var(--light-colour);
+    color: var(--dark-colour);
+    text-align: center;
+    border-top-color: var(--dark-colour);
+    border-top-style: solid;
+    border-top-width: 1px;
+
+    @media only screen and (max-width: 968px) {
+        font-size: 0.9em;
+    }
+}
+
+.content {
+    grid-area: text;
+}
+
+.title {
+    color: red;
+    font-size: 2em;
+    line-height: 1.5em;
+    letter-spacing: 0.2em;
+    margin-bottom: var(--general-padding);
+    margin-top: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        font-size: 2.5em;
+        margin-top: calc(var(--general-padding) * 2);
+    }
+}
+
+.lastUpdated {
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+.separator {
+    color: var(--mid-gray);
+    margin: 0 var(--general-padding);
+    border-top: 1px solid;
+}
+
+.featuresContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: var(--text-margin-bottom);
+
+    @media only screen and (max-width: 968px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.featureLinkButton {
+    @include button;
+
+    color: var(--button-text-colour);
+    background-color: var(--button-colour);
+    margin-left: var(--general-padding);
+    margin-right: var(--general-padding);
+    grid-area: button;
+}

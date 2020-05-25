@@ -1,22 +1,23 @@
 import React from "react"
 
-type Props = {
+import HeaderUnderlay from "./header-underlay"
+import Section from "./section"
+
+type BasicTextProps = {
     html?: string
 }
 
-const BasicText: React.FC<Props> = props => {
-    return (
-        <>
-            <section className="header-underlay" />
-            <section>
-                <article
-                    dangerouslySetInnerHTML={{
-                        __html: props.html ?? "Missing content",
-                    }}
-                />
-            </section>
-        </>
-    )
-}
+const BasicText: React.FC<BasicTextProps> = props => (
+    <>
+        <HeaderUnderlay />
+        <Section>
+            <article
+                dangerouslySetInnerHTML={{
+                    __html: props.html ?? "Missing content",
+                }}
+            />
+        </Section>
+    </>
+)
 
 export default BasicText

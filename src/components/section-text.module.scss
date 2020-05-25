@@ -1,0 +1,44 @@
+.sectionText {
+    margin-bottom: var(--text-margin-bottom);
+
+    p:nth-of-type(1) {
+        font-weight: 400;
+    }
+
+    &--intro {
+        margin-bottom: var(--intro-text-margin-bottom);
+        grid-area: content;
+        font-size: 1.2em;
+        line-height: 1.2em;
+        font-weight: 300;
+
+        @media only screen and (max-width: 968px) {
+            font-size: 1em;
+
+            h1 {
+                margin-bottom: calc(var(--general-padding) * 2);
+            }
+        }
+    }
+
+    &--info-panel {
+        grid-area: text;
+        font-weight: 300;
+
+        @media only screen and (max-width: 968px) {
+            margin: 0 0 0.5em 0;
+        }
+    }
+
+    &--full-bleed {
+        grid-area: text;
+    }
+
+    &--dark-info-panel {
+        font-weight: 200;
+
+        @media only screen and (max-width: 968px) {
+            margin: 0 0 0.5em 0;
+        }
+    }
+}

@@ -1,11 +1,13 @@
 import React from "react"
 
 import Layout from "../components/layout"
+import HeaderUnderlay from "../components/header-underlay"
+import Section from "../components/section"
 
 const NotFoundPage = () => (
     <Layout title="Page Not Found" description={undefined} headerColour="dark">
-        <section className="header-underlay"></section>
-        <section>
+        <HeaderUnderlay />
+        <Section>
             <article>
                 <h1>Error: Page not found</h1>
                 <p>
@@ -19,7 +21,7 @@ const NotFoundPage = () => (
                     touch with us and we&apos;ll try to help
                 </p>
             </article>
-        </section>
+        </Section>
     </Layout>
 )
 
