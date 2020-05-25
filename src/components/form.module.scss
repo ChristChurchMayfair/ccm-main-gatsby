@@ -1,3 +1,5 @@
+@import "../mixins/button";
+
 .givingForm {
     --form-width: 100%;
 }
@@ -6,7 +8,7 @@
     display: grid;
     grid-column-gap: var(--general-padding);
     grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: "label label label input input input input input error error error error";
+    grid-template-areas: "label label label input input input input input context context context context";
 }
 
 @media only screen and (max-width: 968px) {
@@ -15,7 +17,7 @@
         grid-template-areas:
             "label label label label label label"
             "input input input input input input"
-            "error error error error error error";
+            "context context context context context context";
     }
 }
 
@@ -29,8 +31,14 @@
 }
 
 .formItemError {
-    grid-area: error;
+    grid-area: context;
     color: red;
+}
+
+.formItemContextualHelp {
+    grid-area: context;
+    font-style: italic;
+    font-size: 0.8em;
 }
 
 .formItemMultipleChoice {
@@ -38,7 +46,7 @@
     grid-column-gap: var(--general-padding);
     grid-row-gap: var(--general-padding);
     grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: "label label label choices choices choices choices choices error error error error";
+    grid-template-areas: "label label label choices choices choices choices choices context context context context";
 }
 
 @media only screen and (max-width: 968px) {
@@ -47,7 +55,7 @@
         grid-template-areas:
             "label label label label label label"
             "choices choices choices choices choices choices"
-            "error error error error error error";
+            "context context context context context context";
     }
 }
 
@@ -92,26 +100,18 @@
     padding-bottom: 8px;
     padding-left: 8px;
     padding-right: 8px;
-    /* width: 400px; */
     box-sizing: content-box;
     line-height: var(--button-height);
     margin-bottom: 1em;
-    /* margin-right: var(--general-padding); */
     box-sizing: border-box;
 }
 
-.givingForm input[type="checkbox"] {
-    -webkit-appearance: none;
+.givingForm input[type="checkbox"], .givingForm input[type="radio"] {
     display: none;
 }
 
 .givingForm input[type="checkbox"]:checked  + label{
     background-color: green;
-}
-
-.givingForm input[type="radio"] {
-    -webkit-appearance: none;
-    display: none;
 }
 
 .givingForm input[type="radio"] + label {
@@ -122,54 +122,12 @@
     background-color: green;
 }
 
-.givingForm input.addressline {
-    display: block;
-    width: 386px;
-}
-
-.givingForm input.postcode {
-    width: 120px;
-}
-
-.givingForm input.telephone {
-    display: block;
-}
-
-.givingForm input.email {
-    display: block;
-}
-
 .selectableButton {
-    display: block;
-    color: var(--button-text-colour);
-    background-color: var(--button-colour);
-    padding-top: 8px;
-    padding-bottom: 8px;
-    height: var(--button-height);
-    align-content: center;
-    justify-content: center;
-    font-family: var(--body-font);
-    font-size: 1em;
-    font-weight: 300;
-    text-align: center;
-    text-decoration: none;
-    line-height: var(--button-height);
-    transition: transform 0.05s, background-color 0.05s;
-    -webkit-transition: transform 0.05s, background-color 0.05s;
-    box-sizing: content-box;
+    @include button;
     width: 100%;
 }
 
 .submitButton {
-    background-color: var(--dark-colour);
-    color: var(--light-colour);
-}
-
-.submitButton:disabled {
-    background-color: darkgray;
-    color: gray;
-}
-
-.error {
-    color: red;
+    @include button;
+    width: 300px;
 }

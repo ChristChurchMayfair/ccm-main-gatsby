@@ -256,6 +256,7 @@ const GivingFormPage: React.FC = () => {
                                         ref={register}
                                         autoComplete={"honorific-prefix"}
                                     />
+                                    <div className={formStyles.formItemContextualHelp}>Optional. Mr, Mrs, Miss, Dr, Revd, etc</div>
                                 </div>
                                 <div className={formStyles.formItemSingle}>
                                     <label className={formStyles.formItemLabel}>
@@ -272,6 +273,7 @@ const GivingFormPage: React.FC = () => {
                                         ref={register({ required: true })}
                                         autoComplete={"given-name"}
                                     />
+                                    <div className={formStyles.formItemContextualHelp}>Required</div>
                                 </div>
                                 <div className={formStyles.formItemSingle}>
                                     <label className={formStyles.formItemLabel}>
@@ -288,6 +290,7 @@ const GivingFormPage: React.FC = () => {
                                         placeholder={"Family Name"}
                                         autoComplete={"family-name"}
                                     />
+                                    <div className={formStyles.formItemContextualHelp}>Required</div>
                                 </div>
                             </div>
                             <div className="contact">
@@ -307,6 +310,7 @@ const GivingFormPage: React.FC = () => {
                                             placeholder={"Street Address"}
                                             autoComplete={"street-address"}
                                         />
+                                        <div className={formStyles.formItemContextualHelp}>Required</div>
                                     </div>
                                     <div className={formStyles.formItemSingle}>
                                         <label
@@ -322,6 +326,7 @@ const GivingFormPage: React.FC = () => {
                                             placeholder={"Street Address"}
                                             autoComplete={"address-line1"}
                                         />
+                                        <div className={formStyles.formItemContextualHelp}>Flat No. etc</div>
                                     </div>
                                     <div className={formStyles.formItemSingle}>
                                         <label
@@ -337,6 +342,7 @@ const GivingFormPage: React.FC = () => {
                                             placeholder={"Town/City"}
                                             autoComplete={"address-level1"}
                                         />
+                                        <div className={formStyles.formItemContextualHelp}>Required</div>
                                     </div>
                                     <div className={formStyles.formItemSingle}>
                                         <label
@@ -352,6 +358,7 @@ const GivingFormPage: React.FC = () => {
                                             placeholder={"Post Code"}
                                             autoComplete={"postal-code"}
                                         />
+                                        <div className={formStyles.formItemContextualHelp}>Required</div>
                                     </div>
                                 </div>
                                 <h3>Optional Contact Information</h3>
@@ -367,12 +374,13 @@ const GivingFormPage: React.FC = () => {
                                         type="text"
                                         className={formStyles.formItemInput}
                                         placeholder={
-                                            "Telephone (mobile/daytime)"
+                                            "Telephone"
                                         }
                                         autoComplete="tel"
                                         name="telephoneNumber"
                                         ref={register}
                                     />
+                                    <div className={formStyles.formItemContextualHelp}>Optional. A daytime or mobile number</div>
                                 </div>
                                 <div className={formStyles.formItemSingle}>
                                     <label className={formStyles.formItemLabel}>
@@ -401,6 +409,7 @@ const GivingFormPage: React.FC = () => {
                                                 address.
                                             </div>
                                         )}
+                                    <div className={formStyles.formItemContextualHelp}>Optional.</div>
                                 </div>
                             </div>
                             <div>
@@ -443,7 +452,7 @@ const GivingFormPage: React.FC = () => {
                                 </div>
                                 <div className={formStyles.formItemSingle}>
                                     <label className={formStyles.formItemLabel}>
-                                        Gift Amount in GBP
+                                        Gift Amount
                                     </label>
                                     <input
                                         type="text"
@@ -465,6 +474,7 @@ const GivingFormPage: React.FC = () => {
                                                 two decimal places.
                                             </div>
                                         )}
+                                    <div className={formStyles.formItemContextualHelp}>In GBP</div>
                                 </div>
                                 <div
                                     className={
@@ -494,7 +504,7 @@ const GivingFormPage: React.FC = () => {
                                                     formStyles.selectableButton
                                                 )}
                                             >
-                                                One Off
+                                                One-Off
                                             </label>
                                         </div>
                                         <div>
