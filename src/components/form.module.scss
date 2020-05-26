@@ -1,14 +1,15 @@
 @import "../mixins/button";
 
-.givingForm {
-    --form-width: 100%;
-}
+// .givingForm {
+//     --form-width: 100%;
+// }
 
 .formItemSingle {
     display: grid;
     grid-column-gap: var(--general-padding);
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: "label label label input input input input input context context context context";
+    padding-bottom: var(--general-padding);
 }
 
 @media only screen and (max-width: 968px) {
@@ -21,13 +22,22 @@
     }
 }
 
+.calendar {
+    // display: inline-block;
+    background-color: red;
+}
+
+.datePicker {
+    // font-size: 0.5em;
+}
+
 .formItemLabel {
     grid-area: label;
 }
 
 .formItemInput {
     grid-area: input;
-    width: 100%;
+    // width: 100%;
 }
 
 .formItemError {
@@ -47,6 +57,7 @@
     grid-row-gap: var(--general-padding);
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: "label label label choices choices choices choices choices context context context context";
+    padding-bottom: var(--general-padding);
 }
 
 @media only screen and (max-width: 968px) {
@@ -102,7 +113,7 @@
     padding-right: 8px;
     box-sizing: content-box;
     line-height: var(--button-height);
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     box-sizing: border-box;
 }
 

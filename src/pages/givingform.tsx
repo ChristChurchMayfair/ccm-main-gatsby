@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { useForm } from "react-hook-form"
+import { useForm, Controller } from "react-hook-form"
 import classNames from "classnames"
+import DatePicker from "react-datepicker"
+import { format, parseISO } from "date-fns"
 
 import Layout from "../components/layout"
 import formStyles from "../components/form.module.scss"
@@ -55,7 +57,7 @@ type GiftFormData = {
     giftType: "Standing Order" | "One Off" | "Give as you earn"
     regularGiftFrequency?: string
     otherRegularGiftRequency: string
-    regularGiftCommencementDate?: string
+    regularGiftCommencementDate?: Date
     thisGiftIsEligibleForGiftAid: boolean
     allFutureGiftsAreEligibleForGiftAid: boolean
     retrospectivelyReclaimGiftAidForFourYears: boolean
@@ -118,7 +120,10 @@ function convertPayloadToGoogleFormUrl(
     formParts.push(
         encodeStringField(
             "regularGiftCommencementDate",
-            giftFormData.regularGiftCommencementDate
+            format(
+                giftFormData.regularGiftCommencementDate ?? new Date(),
+                "yyyy-MM-dd"
+            )
         )
     )
 
@@ -175,7 +180,9 @@ const GivingFormPage: React.FC = () => {
         }
     `)
 
-    const { register, handleSubmit, watch, errors } = useForm<GiftFormData>()
+    const { register, handleSubmit, watch, errors, control } = useForm<
+        GiftFormData
+    >()
 
     const postDataToGoogleFormApi = (data: GiftFormData) => {
         const googleSubmitFormUrl = convertPayloadToGoogleFormUrl(
@@ -256,7 +263,13 @@ const GivingFormPage: React.FC = () => {
                                         ref={register}
                                         autoComplete={"honorific-prefix"}
                                     />
-                                    <div className={formStyles.formItemContextualHelp}>Optional. Mr, Mrs, Miss, Dr, Revd, etc</div>
+                                    <div
+                                        className={
+                                            formStyles.formItemContextualHelp
+                                        }
+                                    >
+                                        Optional. Mr, Mrs, Miss, Dr, Revd, etc
+                                    </div>
                                 </div>
                                 <div className={formStyles.formItemSingle}>
                                     <label className={formStyles.formItemLabel}>
@@ -273,7 +286,13 @@ const GivingFormPage: React.FC = () => {
                                         ref={register({ required: true })}
                                         autoComplete={"given-name"}
                                     />
-                                    <div className={formStyles.formItemContextualHelp}>Required</div>
+                                    <div
+                                        className={
+                                            formStyles.formItemContextualHelp
+                                        }
+                                    >
+                                        Required
+                                    </div>
                                 </div>
                                 <div className={formStyles.formItemSingle}>
                                     <label className={formStyles.formItemLabel}>
@@ -290,7 +309,13 @@ const GivingFormPage: React.FC = () => {
                                         placeholder={"Family Name"}
                                         autoComplete={"family-name"}
                                     />
-                                    <div className={formStyles.formItemContextualHelp}>Required</div>
+                                    <div
+                                        className={
+                                            formStyles.formItemContextualHelp
+                                        }
+                                    >
+                                        Required
+                                    </div>
                                 </div>
                             </div>
                             <div className="contact">
@@ -310,7 +335,13 @@ const GivingFormPage: React.FC = () => {
                                             placeholder={"Street Address"}
                                             autoComplete={"street-address"}
                                         />
-                                        <div className={formStyles.formItemContextualHelp}>Required</div>
+                                        <div
+                                            className={
+                                                formStyles.formItemContextualHelp
+                                            }
+                                        >
+                                            Required
+                                        </div>
                                     </div>
                                     <div className={formStyles.formItemSingle}>
                                         <label
@@ -326,7 +357,13 @@ const GivingFormPage: React.FC = () => {
                                             placeholder={"Street Address"}
                                             autoComplete={"address-line1"}
                                         />
-                                        <div className={formStyles.formItemContextualHelp}>Flat No. etc</div>
+                                        <div
+                                            className={
+                                                formStyles.formItemContextualHelp
+                                            }
+                                        >
+                                            Flat No. etc
+                                        </div>
                                     </div>
                                     <div className={formStyles.formItemSingle}>
                                         <label
@@ -342,7 +379,13 @@ const GivingFormPage: React.FC = () => {
                                             placeholder={"Town/City"}
                                             autoComplete={"address-level1"}
                                         />
-                                        <div className={formStyles.formItemContextualHelp}>Required</div>
+                                        <div
+                                            className={
+                                                formStyles.formItemContextualHelp
+                                            }
+                                        >
+                                            Required
+                                        </div>
                                     </div>
                                     <div className={formStyles.formItemSingle}>
                                         <label
@@ -358,7 +401,13 @@ const GivingFormPage: React.FC = () => {
                                             placeholder={"Post Code"}
                                             autoComplete={"postal-code"}
                                         />
-                                        <div className={formStyles.formItemContextualHelp}>Required</div>
+                                        <div
+                                            className={
+                                                formStyles.formItemContextualHelp
+                                            }
+                                        >
+                                            Required
+                                        </div>
                                     </div>
                                 </div>
                                 <h3>Optional Contact Information</h3>
@@ -373,14 +422,18 @@ const GivingFormPage: React.FC = () => {
                                     <input
                                         type="text"
                                         className={formStyles.formItemInput}
-                                        placeholder={
-                                            "Telephone"
-                                        }
+                                        placeholder={"Telephone"}
                                         autoComplete="tel"
                                         name="telephoneNumber"
                                         ref={register}
                                     />
-                                    <div className={formStyles.formItemContextualHelp}>Optional. A daytime or mobile number</div>
+                                    <div
+                                        className={
+                                            formStyles.formItemContextualHelp
+                                        }
+                                    >
+                                        Optional. A daytime or mobile number
+                                    </div>
                                 </div>
                                 <div className={formStyles.formItemSingle}>
                                     <label className={formStyles.formItemLabel}>
@@ -409,7 +462,13 @@ const GivingFormPage: React.FC = () => {
                                                 address.
                                             </div>
                                         )}
-                                    <div className={formStyles.formItemContextualHelp}>Optional.</div>
+                                    <div
+                                        className={
+                                            formStyles.formItemContextualHelp
+                                        }
+                                    >
+                                        Optional.
+                                    </div>
                                 </div>
                             </div>
                             <div>
@@ -474,7 +533,13 @@ const GivingFormPage: React.FC = () => {
                                                 two decimal places.
                                             </div>
                                         )}
-                                    <div className={formStyles.formItemContextualHelp}>In GBP</div>
+                                    <div
+                                        className={
+                                            formStyles.formItemContextualHelp
+                                        }
+                                    >
+                                        In GBP
+                                    </div>
                                 </div>
                                 <div
                                     className={
@@ -544,6 +609,13 @@ const GivingFormPage: React.FC = () => {
                                                 Give-As-You-Earn (GAYE)
                                             </label>
                                         </div>
+                                    </div>
+                                    <div
+                                        className={
+                                            formStyles.formItemContextualHelp
+                                        }
+                                    >
+                                        Select one.
                                     </div>
                                 </div>
                                 {showRegularGivingInputs ? (
@@ -624,7 +696,7 @@ const GivingFormPage: React.FC = () => {
                                             >
                                                 Commencing from
                                             </label>
-                                            <input
+                                            {/* <input
                                                 className={
                                                     formStyles.formItemInput
                                                 }
@@ -634,6 +706,27 @@ const GivingFormPage: React.FC = () => {
                                                 ref={register({
                                                     pattern: datePattern,
                                                 })}
+                                            /> */}
+                                            <Controller
+                                                as={DatePicker}
+                                                control={control}
+                                                wrapperClassName={classNames(
+                                                    formStyles.formItemInput,
+                                                    formStyles.datePicker
+                                                )}
+                                                dateFormat="yyyy-MM-dd"
+                                                popperClassName={
+                                                    formStyles.datePicker
+                                                }
+                                                calendarClassName={
+                                                    formStyles.calendar
+                                                }
+                                                valueName="selected" // DateSelect value's name is selected
+                                                onChange={([selected]) =>
+                                                    selected
+                                                }
+                                                name="regularGiftCommencementDate"
+                                                placeholderText="Select date"
                                             />
                                             {errors.regularGiftCommencementDate !==
                                                 undefined &&
