@@ -58,7 +58,7 @@ const CookieNotice = () => {
         >
             <div className={styles.notice}>
                 {data.site!.siteMetadata!.cookieNotice!}{" "}
-                <Link to="/privacy-notice/">
+                <Link to="/privacy-notice/#cookies">
                     {
                         data.site!.siteMetadata!
                             .cookieNoticePrivacyPolicyLinkText!
