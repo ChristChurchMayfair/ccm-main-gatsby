@@ -139,8 +139,6 @@ You can contact the Information Commissioners Office on 0303 123 1113 or via ema
 
 A cookie consists of information sent by a web server to a web browser, and stored by the browser. The information is then sent back to the server each time the browser requests a page from the server. This enables the web server to identify and track the web browser.
 
-We may use “session” cookies on the website. We will use the session cookies to keep track of you whilst you navigate the website. Session cookies will be deleted from your computer when you close your browser.
-
 We use Google Analytics to analyse the use of this website. Google Analytics generates statistical and other information about website use by means of cookies, which are stored on users’ computers. The information generated relating to our website is used to create reports about the use of the website. Google will store this information. Google’s privacy policy is available at: <http://www.google.com/privacypolicy.html>.
 
 Most browsers allow you to reject all cookies, whilst some browsers allow you to reject just third party cookies. For example, in Internet Explorer you can refuse all cookies by clicking “Tools”, “Internet Options”, “Privacy”, and selecting “Block all cookies” using the sliding selector. Blocking all cookies will, however, have a negative impact upon the usability of many websites.
