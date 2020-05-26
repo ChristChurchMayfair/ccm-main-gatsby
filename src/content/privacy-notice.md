@@ -135,7 +135,7 @@ Email: <mailto:info@christchurchmayfair.org>
 
 You can contact the Information Commissioners Office on 0303 123 1113 or via email <https://ico.org.uk/global/contact-us/email/> or at the Information Commissioner's Office, Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF.
 
-## Use of Cookies
+## <a name="cookies"></a> Use of Cookies
 
 A cookie consists of information sent by a web server to a web browser, and stored by the browser. The information is then sent back to the server each time the browser requests a page from the server. This enables the web server to identify and track the web browser.
 
