@@ -1,27 +1,5 @@
 @import "../mixins/button";
 
-// .givingForm {
-//     --form-width: 100%;
-// }
-
-.formItemSingle {
-    display: grid;
-    grid-column-gap: var(--general-padding);
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: "label label label input input input input input context context context context";
-    padding-bottom: var(--general-padding);
-}
-
-@media only screen and (max-width: 968px) {
-    .formItemSingle {
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas:
-            "label label label label label label"
-            "input input input input input input"
-            "context context context context context context";
-    }
-}
-
 .calendar {
     // display: inline-block;
     background-color: red;
@@ -31,43 +9,9 @@
     // font-size: 0.5em;
 }
 
-.formItemLabel {
-    grid-area: label;
-}
-
 .formItemInput {
     grid-area: input;
     // width: 100%;
-}
-
-.formItemError {
-    grid-area: context;
-    color: red;
-}
-
-.formItemContextualHelp {
-    grid-area: context;
-    font-style: italic;
-    font-size: 0.8em;
-}
-
-.formItemMultipleChoice {
-    display: grid;
-    grid-column-gap: var(--general-padding);
-    grid-row-gap: var(--general-padding);
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: "label label label choices choices choices choices choices context context context context";
-    padding-bottom: var(--general-padding);
-}
-
-@media only screen and (max-width: 968px) {
-    .formItemMultipleChoice {
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas:
-            "label label label label label label"
-            "choices choices choices choices choices choices"
-            "context context context context context context";
-    }
 }
 
 .formItemMultipleChoiceChoices {
@@ -117,11 +61,12 @@
     box-sizing: border-box;
 }
 
-.givingForm input[type="checkbox"], .givingForm input[type="radio"] {
+.givingForm input[type="checkbox"],
+.givingForm input[type="radio"] {
     display: none;
 }
 
-.givingForm input[type="checkbox"]:checked  + label{
+.givingForm input[type="checkbox"]:checked + label {
     background-color: green;
 }
 

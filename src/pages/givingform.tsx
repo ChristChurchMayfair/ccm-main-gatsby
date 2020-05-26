@@ -3,10 +3,11 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useForm, Controller } from "react-hook-form"
 import classNames from "classnames"
 import DatePicker from "react-datepicker"
-import { format, parseISO } from "date-fns"
+import { format } from "date-fns"
 
 import Layout from "../components/layout"
 import formStyles from "../components/form.module.scss"
+import Field from "../components/field"
 
 const googleFormId = "1FAIpQLSeED6ffZVCYFG5amGWUtTGWkr8EI-rbPO2i_f-z0Ur6XvTNTw"
 
@@ -164,7 +165,9 @@ type PageState = "filling" | "submitting" | "submitted" | "error"
 
 const GivingFormPage: React.FC = () => {
     const [pageState, setPageState] = useState<PageState>("filling")
-    const [submissionError, setSubmissionError] = useState(undefined)
+    const [submissionError, setSubmissionError] = useState<Error | undefined>(
+        undefined
+    )
 
     const data = useStaticQuery<GatsbyTypes.GivingFormQuery>(graphql`
         query GivingForm {
@@ -248,10 +251,11 @@ const GivingFormPage: React.FC = () => {
                         <div>
                             <h3>Name</h3>
                             <div className="name">
-                                <div className={formStyles.formItemSingle}>
-                                    <label className={formStyles.formItemLabel}>
-                                        Title
-                                    </label>
+                                <Field
+                                    labelText="Title"
+                                    labelFor="title"
+                                    contextualHelp="Optional. Mr, Mrs, Miss, Dr, Revd, etc"
+                                >
                                     <input
                                         type="text"
                                         name="title"
@@ -259,22 +263,16 @@ const GivingFormPage: React.FC = () => {
                                             formStyles.title,
                                             formStyles.formItemInput
                                         )}
-                                        placeholder={"Title"}
+                                        placeholder="Title"
                                         ref={register}
-                                        autoComplete={"honorific-prefix"}
+                                        autoComplete="honorific-prefix"
                                     />
-                                    <div
-                                        className={
-                                            formStyles.formItemContextualHelp
-                                        }
-                                    >
-                                        Optional. Mr, Mrs, Miss, Dr, Revd, etc
-                                    </div>
-                                </div>
-                                <div className={formStyles.formItemSingle}>
-                                    <label className={formStyles.formItemLabel}>
-                                        Given Name
-                                    </label>
+                                </Field>
+                                <Field
+                                    labelText="Given Name"
+                                    labelFor="givenName"
+                                    contextualHelp="Required"
+                                >
                                     <input
                                         type="text"
                                         name="givenName"
@@ -286,18 +284,12 @@ const GivingFormPage: React.FC = () => {
                                         ref={register({ required: true })}
                                         autoComplete={"given-name"}
                                     />
-                                    <div
-                                        className={
-                                            formStyles.formItemContextualHelp
-                                        }
-                                    >
-                                        Required
-                                    </div>
-                                </div>
-                                <div className={formStyles.formItemSingle}>
-                                    <label className={formStyles.formItemLabel}>
-                                        Family Name
-                                    </label>
+                                </Field>
+                                <Field
+                                    labelText="Family Name"
+                                    labelFor="familyName"
+                                    contextualHelp="Required"
+                                >
                                     <input
                                         type="text"
                                         name="familyName"
@@ -306,27 +298,19 @@ const GivingFormPage: React.FC = () => {
                                             formStyles.forname,
                                             formStyles.formItemInput
                                         )}
-                                        placeholder={"Family Name"}
-                                        autoComplete={"family-name"}
+                                        placeholder="Family Name"
+                                        autoComplete="family-name"
                                     />
-                                    <div
-                                        className={
-                                            formStyles.formItemContextualHelp
-                                        }
-                                    >
-                                        Required
-                                    </div>
-                                </div>
+                                </Field>
                             </div>
                             <div className="contact">
                                 <h3>Address</h3>
                                 <div className="address">
-                                    <div className={formStyles.formItemSingle}>
-                                        <label
-                                            className={formStyles.formItemLabel}
-                                        >
-                                            Street Address
-                                        </label>
+                                    <Field
+                                        labelText="Street Address"
+                                        labelFor="streetAddress"
+                                        contextualHelp="Required"
+                                    >
                                         <input
                                             type="text"
                                             name="streetAddress"
@@ -335,64 +319,40 @@ const GivingFormPage: React.FC = () => {
                                             placeholder={"Street Address"}
                                             autoComplete={"street-address"}
                                         />
-                                        <div
-                                            className={
-                                                formStyles.formItemContextualHelp
-                                            }
-                                        >
-                                            Required
-                                        </div>
-                                    </div>
-                                    <div className={formStyles.formItemSingle}>
-                                        <label
-                                            className={formStyles.formItemLabel}
-                                        >
-                                            Extra Address Info.
-                                        </label>
+                                    </Field>
+                                    <Field
+                                        labelText="Extra Address Info"
+                                        labelFor="etraAddressLine"
+                                        contextualHelp="Flat No. etc"
+                                    >
                                         <input
                                             type="text"
                                             name="extraAddressLine"
                                             ref={register}
                                             className={formStyles.formItemInput}
-                                            placeholder={"Street Address"}
+                                            placeholder="Extra Address info"
                                             autoComplete={"address-line1"}
                                         />
-                                        <div
-                                            className={
-                                                formStyles.formItemContextualHelp
-                                            }
-                                        >
-                                            Flat No. etc
-                                        </div>
-                                    </div>
-                                    <div className={formStyles.formItemSingle}>
-                                        <label
-                                            className={formStyles.formItemLabel}
-                                        >
-                                            Town or City
-                                        </label>
+                                    </Field>
+                                    <Field
+                                        labelText="Town or City"
+                                        labelFor="townCity"
+                                        contextualHelp="Required"
+                                    >
                                         <input
                                             type="text"
                                             name="townCity"
                                             ref={register({ required: true })}
                                             className={formStyles.formItemInput}
-                                            placeholder={"Town/City"}
-                                            autoComplete={"address-level1"}
+                                            placeholder="Town/City"
+                                            autoComplete="address-level1"
                                         />
-                                        <div
-                                            className={
-                                                formStyles.formItemContextualHelp
-                                            }
-                                        >
-                                            Required
-                                        </div>
-                                    </div>
-                                    <div className={formStyles.formItemSingle}>
-                                        <label
-                                            className={formStyles.formItemLabel}
-                                        >
-                                            Post Code
-                                        </label>
+                                    </Field>
+                                    <Field
+                                        labelText="Post Code"
+                                        contextualHelp="Required"
+                                        labelFor="postCode"
+                                    >
                                         <input
                                             type="text"
                                             name="postCode"
@@ -401,24 +361,18 @@ const GivingFormPage: React.FC = () => {
                                             placeholder={"Post Code"}
                                             autoComplete={"postal-code"}
                                         />
-                                        <div
-                                            className={
-                                                formStyles.formItemContextualHelp
-                                            }
-                                        >
-                                            Required
-                                        </div>
-                                    </div>
+                                    </Field>
                                 </div>
                                 <h3>Optional Contact Information</h3>
                                 <p>
                                     We may use this information to contact you
                                     in case we have any questions.
                                 </p>
-                                <div className={formStyles.formItemSingle}>
-                                    <label className={formStyles.formItemLabel}>
-                                        Telephone Number
-                                    </label>
+                                <Field
+                                    labelText="Telephone Number"
+                                    labelFor="telephoneNumber"
+                                    contextualHelp="Optional. A daytime or mobile number"
+                                >
                                     <input
                                         type="text"
                                         className={formStyles.formItemInput}
@@ -427,18 +381,18 @@ const GivingFormPage: React.FC = () => {
                                         name="telephoneNumber"
                                         ref={register}
                                     />
-                                    <div
-                                        className={
-                                            formStyles.formItemContextualHelp
-                                        }
-                                    >
-                                        Optional. A daytime or mobile number
-                                    </div>
-                                </div>
-                                <div className={formStyles.formItemSingle}>
-                                    <label className={formStyles.formItemLabel}>
-                                        Email Address
-                                    </label>
+                                </Field>
+                                <Field
+                                    labelText="Email Address"
+                                    contextualHelp="Optional"
+                                    labelFor="emailAddress"
+                                    error={
+                                        errors.emailAddress !== undefined &&
+                                        errors.emailAddress.type === "pattern"
+                                            ? "Please enter a valid email address."
+                                            : undefined
+                                    }
+                                >
                                     <input
                                         type="text"
                                         className={formStyles.formItemInput}
@@ -450,40 +404,14 @@ const GivingFormPage: React.FC = () => {
                                             required: false,
                                         })}
                                     />
-                                    {errors.emailAddress !== undefined &&
-                                        errors.emailAddress.type ===
-                                            "pattern" && (
-                                            <div
-                                                className={
-                                                    formStyles.formItemError
-                                                }
-                                            >
-                                                Please enter a valid email
-                                                address.
-                                            </div>
-                                        )}
-                                    <div
-                                        className={
-                                            formStyles.formItemContextualHelp
-                                        }
-                                    >
-                                        Optional.
-                                    </div>
-                                </div>
+                                </Field>
                             </div>
                             <div>
                                 <h2>Gift Details</h2>
                                 <div>
                                     Our account details for BACS transfers or
                                     standing orders are:
-                                    <div className={formStyles.accountDetails}>
-                                        <div
-                                            className={
-                                                formStyles.accountDetailLabel
-                                            }
-                                        >
-                                            Account Number
-                                        </div>
+                                    <Field labelText="Account Number">
                                         <div
                                             className={
                                                 formStyles.accountDetailInfo
@@ -491,15 +419,8 @@ const GivingFormPage: React.FC = () => {
                                         >
                                             00099436
                                         </div>
-                                    </div>
-                                    <div className={formStyles.accountDetails}>
-                                        <div
-                                            className={
-                                                formStyles.accountDetailLabel
-                                            }
-                                        >
-                                            Sort Code
-                                        </div>
+                                    </Field>
+                                    <Field labelText="Sort Code">
                                         <div
                                             className={
                                                 formStyles.accountDetailInfo
@@ -507,12 +428,19 @@ const GivingFormPage: React.FC = () => {
                                         >
                                             40-52-40
                                         </div>
-                                    </div>
+                                    </Field>
                                 </div>
-                                <div className={formStyles.formItemSingle}>
-                                    <label className={formStyles.formItemLabel}>
-                                        Gift Amount
-                                    </label>
+                                <Field
+                                    labelText="Gift Amount"
+                                    contextualHelp="In GBP"
+                                    error={
+                                        errors.giftAmountInGBP !== undefined &&
+                                        errors.giftAmountInGBP.type ===
+                                            "pattern"
+                                            ? "Please enter a valid gift amount. Non negative. Maximum two decimal places."
+                                            : undefined
+                                    }
+                                >
                                     <input
                                         type="text"
                                         className={formStyles.formItemInput}
@@ -524,31 +452,11 @@ const GivingFormPage: React.FC = () => {
                                             ),
                                         })}
                                     />
-                                    {errors.giftAmountInGBP !== undefined &&
-                                        errors.giftAmountInGBP.type ===
-                                            "pattern" && (
-                                            <div className={formStyles.error}>
-                                                Please enter a valid gift
-                                                amount. Non negative. Maximum
-                                                two decimal places.
-                                            </div>
-                                        )}
-                                    <div
-                                        className={
-                                            formStyles.formItemContextualHelp
-                                        }
-                                    >
-                                        In GBP
-                                    </div>
-                                </div>
-                                <div
-                                    className={
-                                        formStyles.formItemMultipleChoice
-                                    }
+                                </Field>
+                                <Field
+                                    labelText="Gift Type"
+                                    contextualHelp="Select one."
                                 >
-                                    <label className={formStyles.formItemLabel}>
-                                        Gift Type
-                                    </label>
                                     <div
                                         className={
                                             formStyles.formItemMultipleChoiceChoices
@@ -610,28 +518,10 @@ const GivingFormPage: React.FC = () => {
                                             </label>
                                         </div>
                                     </div>
-                                    <div
-                                        className={
-                                            formStyles.formItemContextualHelp
-                                        }
-                                    >
-                                        Select one.
-                                    </div>
-                                </div>
+                                </Field>
                                 {showRegularGivingInputs ? (
                                     <div>
-                                        <div
-                                            className={
-                                                formStyles.formItemSingle
-                                            }
-                                        >
-                                            <label
-                                                className={
-                                                    formStyles.formItemLabel
-                                                }
-                                            >
-                                                Gift Frequency
-                                            </label>
+                                        <Field labelText="Gift Frequency">
                                             <select
                                                 className={
                                                     formStyles.formItemInput
@@ -655,20 +545,12 @@ const GivingFormPage: React.FC = () => {
                                                     Other
                                                 </option>
                                             </select>
-                                        </div>
+                                        </Field>
                                         {showOtherFrequencyInput ? (
-                                            <div
-                                                className={
-                                                    formStyles.formItemSingle
-                                                }
+                                            <Field
+                                                labelText="Commencing from"
+                                                labelFor="otherRegularGiftRequency"
                                             >
-                                                <label
-                                                    className={
-                                                        formStyles.formItemLabel
-                                                    }
-                                                >
-                                                    Commencing from
-                                                </label>
                                                 <input
                                                     type="text"
                                                     className={
@@ -680,33 +562,21 @@ const GivingFormPage: React.FC = () => {
                                                     name="otherRegularGiftRequency"
                                                     ref={register}
                                                 />
-                                            </div>
-                                        ) : (
-                                            <></>
-                                        )}
-                                        <div
-                                            className={
-                                                formStyles.formItemSingle
+                                            </Field>
+                                        ) : null}
+                                        <Field
+                                            labelText="Commencing from"
+                                            labelFor="regularGiftCommencementDate"
+                                            error={
+                                                errors.regularGiftCommencementDate !==
+                                                    undefined &&
+                                                errors
+                                                    .regularGiftCommencementDate
+                                                    .type === "pattern"
+                                                    ? `You must enter a valid date of the form ${datePattern.toString()}`
+                                                    : undefined
                                             }
                                         >
-                                            <label
-                                                className={
-                                                    formStyles.formItemLabel
-                                                }
-                                            >
-                                                Commencing from
-                                            </label>
-                                            {/* <input
-                                                className={
-                                                    formStyles.formItemInput
-                                                }
-                                                type="date"
-                                                placeholder={"yyyy-mm-dd"}
-                                                name="regularGiftCommencementDate"
-                                                ref={register({
-                                                    pattern: datePattern,
-                                                })}
-                                            /> */}
                                             <Controller
                                                 as={DatePicker}
                                                 control={control}
@@ -728,22 +598,9 @@ const GivingFormPage: React.FC = () => {
                                                 name="regularGiftCommencementDate"
                                                 placeholderText="Select date"
                                             />
-                                            {errors.regularGiftCommencementDate !==
-                                                undefined &&
-                                                errors
-                                                    .regularGiftCommencementDate
-                                                    .type === "pattern" && (
-                                                    <div className="error">
-                                                        Your must enter a valid
-                                                        date of the form{" "}
-                                                        {datePattern.toString()}
-                                                    </div>
-                                                )}
-                                        </div>
+                                        </Field>
                                     </div>
-                                ) : (
-                                    <> </>
-                                )}
+                                ) : null}
                             </div>
                             <div>
                                 <h2>Gift Aid</h2>
@@ -766,14 +623,7 @@ const GivingFormPage: React.FC = () => {
                                         difference.
                                     </p>
                                 </div>
-                                <div
-                                    className={
-                                        formStyles.formItemMultipleChoice
-                                    }
-                                >
-                                    <div className={formStyles.formItemLabel}>
-                                        Please select all that apply:
-                                    </div>
+                                <Field labelText="Please select all that apply:">
                                     <div
                                         className={
                                             formStyles.formItemMultipleChoiceChoices
@@ -837,7 +687,7 @@ const GivingFormPage: React.FC = () => {
                                             </label>
                                         </div>
                                     </div>
-                                </div>
+                                </Field>
                             </div>
                         </div>
                         <input
@@ -897,7 +747,7 @@ const GivingFormPage: React.FC = () => {
                 Sorry - there was an error submitting the gift form. If this
                 problem persists please contact us.
                 <pre>
-                    {submissionError !== undefined
+                    {submissionError != null
                         ? submissionError.toString()
                         : "unable to display the error message"}
                 </pre>
