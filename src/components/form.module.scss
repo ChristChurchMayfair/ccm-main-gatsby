@@ -1,12 +1,22 @@
 @import "../mixins/button";
 
+.givingForm h1,
+.givingForm h2,
+.givingForm h3 {
+    font-family: var(--body-font);
+}
+
+.givingForm h3 {
+    text-transform: none;
+    font-weight: 400;
+}
+
 .calendar {
-    // display: inline-block;
-    background-color: red;
+
 }
 
 .datePicker {
-    // font-size: 0.5em;
+
 }
 
 .formItemInput {

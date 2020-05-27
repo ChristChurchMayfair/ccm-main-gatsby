@@ -41,7 +41,8 @@ const fieldNameToEntryId: { [fieldName: string]: string } = {
     regularGiftCommencementDate: "825676099",
     thisGiftIsEligibleForGiftAid: "567316447",
     allFutureGiftsAreEligibleForGiftAid: "518456171",
-    retrospectivelyReclaimGiftAidForFourYears: "1656623006",
+    retrospectivelyReclaimGiftAid: "1656623006",
+    retrospectiveGiftAidClaimStartDate: "546486386",
 }
 
 type GiftFormData = {
@@ -61,7 +62,8 @@ type GiftFormData = {
     regularGiftCommencementDate?: Date
     thisGiftIsEligibleForGiftAid: boolean
     allFutureGiftsAreEligibleForGiftAid: boolean
-    retrospectivelyReclaimGiftAidForFourYears: boolean
+    retrospectivelyReclaimGiftAid: boolean
+    retrospectiveGiftAidClaimStartDate?: Date
 }
 
 const emailAddressPattern = new RegExp(
@@ -145,9 +147,17 @@ function convertPayloadToGoogleFormUrl(
     formParts.push(
         encodeStringField(
             "retrospectivelyReclaimGiftAidForFourYears",
-            giftFormData.retrospectivelyReclaimGiftAidForFourYears
-                ? "true"
-                : "false"
+            giftFormData.retrospectivelyReclaimGiftAid ? "true" : "false"
+        )
+    )
+
+    formParts.push(
+        encodeStringField(
+            "regularGiftCommencementDate",
+            format(
+                giftFormData.retrospectiveGiftAidClaimStartDate ?? new Date(),
+                "yyyy-MM-dd"
+            )
         )
     )
 
@@ -179,6 +189,11 @@ const GivingFormPage: React.FC = () => {
                     title
                     headerColour
                 }
+            }
+            notes: markdownRemark(
+                fileAbsolutePath: { regex: "/givingformnotes.md$/" }
+            ) {
+                html
             }
         }
     `)
@@ -213,6 +228,7 @@ const GivingFormPage: React.FC = () => {
         false
     )
     useEffect(() => {
+        console.log(`Show date thing ${giftType}`)
         setShowRegularGivingInputs(
             giftType === "Standing Order" || giftType === "Give as you earn"
         )
@@ -225,6 +241,15 @@ const GivingFormPage: React.FC = () => {
     useEffect(() => {
         setShowOtherFrequencyInput(regularGiftFrequency === "other")
     }, [regularGiftFrequency])
+
+    const retrospectivelyReclaimGiftAid = watch("retrospectivelyReclaimGiftAid")
+    const [
+        showRetrospectiveGiftAidDatePicker,
+        setShowRetrospectiveGiftAidDatePicker,
+    ] = useState(false)
+    useEffect(() => {
+        setShowRetrospectiveGiftAidDatePicker(retrospectivelyReclaimGiftAid)
+    }, [retrospectivelyReclaimGiftAid])
 
     const form = (
         <section>
@@ -243,10 +268,10 @@ const GivingFormPage: React.FC = () => {
                         target="_blank"
                         noValidate={false}
                     >
-                        <h3>Mandatory Contact Information</h3>
+                        <h3>Contact Information</h3>
                         <p>
-                            We need this information to help us claim gift aid
-                            for your donations.
+                            <em>We need this information to help us claim gift aid
+                            for your donations.</em>
                         </p>
                         <div>
                             <h3>Name</h3>
@@ -304,7 +329,7 @@ const GivingFormPage: React.FC = () => {
                                 </Field>
                             </div>
                             <div className="contact">
-                                <h3>Address</h3>
+                                <h3>Postal Address</h3>
                                 <div className="address">
                                     <Field
                                         labelText="Street Address"
@@ -323,7 +348,7 @@ const GivingFormPage: React.FC = () => {
                                     <Field
                                         labelText="Extra Address Info"
                                         labelFor="etraAddressLine"
-                                        contextualHelp="Flat No. etc"
+                                        contextualHelp="Optional. Flat No. etc"
                                     >
                                         <input
                                             type="text"
@@ -363,10 +388,9 @@ const GivingFormPage: React.FC = () => {
                                         />
                                     </Field>
                                 </div>
-                                <h3>Optional Contact Information</h3>
                                 <p>
-                                    We may use this information to contact you
-                                    in case we have any questions.
+                                    <em>In case we need to contact you with a query,
+                                    please provide either email or phone number.</em>
                                 </p>
                                 <Field
                                     labelText="Telephone Number"
@@ -376,7 +400,7 @@ const GivingFormPage: React.FC = () => {
                                     <input
                                         type="text"
                                         className={formStyles.formItemInput}
-                                        placeholder={"Telephone"}
+                                        placeholder={"Telephone Number"}
                                         autoComplete="tel"
                                         name="telephoneNumber"
                                         ref={register}
@@ -455,7 +479,7 @@ const GivingFormPage: React.FC = () => {
                                 </Field>
                                 <Field
                                     labelText="Gift Type"
-                                    contextualHelp="Select one."
+                                    contextualHelp="Required. Select one."
                                 >
                                     <div
                                         className={
@@ -521,7 +545,10 @@ const GivingFormPage: React.FC = () => {
                                 </Field>
                                 {showRegularGivingInputs ? (
                                     <div>
-                                        <Field labelText="Gift Frequency">
+                                        <Field
+                                            labelText="Gift Frequency"
+                                            contextualHelp="Required."
+                                        >
                                             <select
                                                 className={
                                                     formStyles.formItemInput
@@ -548,8 +575,9 @@ const GivingFormPage: React.FC = () => {
                                         </Field>
                                         {showOtherFrequencyInput ? (
                                             <Field
-                                                labelText="Commencing from"
+                                                labelText="Frequency"
                                                 labelFor="otherRegularGiftRequency"
+                                                contextualHelp="Required."
                                             >
                                                 <input
                                                     type="text"
@@ -567,6 +595,7 @@ const GivingFormPage: React.FC = () => {
                                         <Field
                                             labelText="Commencing from"
                                             labelFor="regularGiftCommencementDate"
+                                            contextualHelp="Required."
                                             error={
                                                 errors.regularGiftCommencementDate !==
                                                     undefined &&
@@ -581,16 +610,16 @@ const GivingFormPage: React.FC = () => {
                                                 as={DatePicker}
                                                 control={control}
                                                 wrapperClassName={classNames(
-                                                    formStyles.formItemInput,
-                                                    formStyles.datePicker
+                                                    formStyles.formItemInput
+                                                    //formStyles.datePicker
                                                 )}
                                                 dateFormat="yyyy-MM-dd"
-                                                popperClassName={
-                                                    formStyles.datePicker
-                                                }
-                                                calendarClassName={
-                                                    formStyles.calendar
-                                                }
+                                                // popperClassName={
+                                                //     //formStyles.datePicker
+                                                // }
+                                                // calendarClassName={
+                                                //     //formStyles.calendar
+                                                // }
                                                 valueName="selected" // DateSelect value's name is selected
                                                 onChange={([selected]) =>
                                                     selected
@@ -614,13 +643,16 @@ const GivingFormPage: React.FC = () => {
                                         Thank you.
                                     </p>
                                     <h3>Gift Aid declaration</h3>
+                                    <p>You declare that:</p>
                                     <p>
+                                    <em>
                                         I am a UK taxpayer and understand that
                                         if I pay less Income Tax and/or Capital
                                         Gains Tax than the amount of Gift Aid
                                         claimed on all my donations in that tax
                                         year it is my responsibility to pay any
                                         difference.
+                                        </em>
                                     </p>
                                 </div>
                                 <Field labelText="Please select all that apply:">
@@ -671,12 +703,12 @@ const GivingFormPage: React.FC = () => {
                                         <div>
                                             <input
                                                 type="checkbox"
-                                                name="retrospectivelyReclaimGiftAidForFourYears"
-                                                id="retrospectivelyReclaimGiftAidForFourYears"
+                                                name="retrospectivelyReclaimGiftAid"
+                                                id="retrospectivelyReclaimGiftAid"
                                                 ref={register}
                                             />
                                             <label
-                                                htmlFor="retrospectivelyReclaimGiftAidForFourYears"
+                                                htmlFor="retrospectivelyReclaimGiftAid"
                                                 className={classNames(
                                                     formStyles.detailLabel,
                                                     formStyles.selectableButton,
@@ -688,6 +720,35 @@ const GivingFormPage: React.FC = () => {
                                         </div>
                                     </div>
                                 </Field>
+                                {showRetrospectiveGiftAidDatePicker ? (
+                                    <Field
+                                        labelText="Claim Gift Aid back to"
+                                        labelFor="regularGiftCommencementDate"
+                                        error={
+                                            errors.regularGiftCommencementDate !==
+                                                undefined &&
+                                            errors.regularGiftCommencementDate
+                                                .type === "pattern"
+                                                ? `You must enter a valid date of the form ${datePattern.toString()}`
+                                                : undefined
+                                        }
+                                        contextualHelp="How far back can we retrospectively claim gift aid for your gifts?"
+                                    >
+                                        <Controller
+                                            as={DatePicker}
+                                            control={control}
+                                            wrapperClassName={classNames(
+                                                formStyles.formItemInput
+                                            )}
+                                            dateFormat="yyyy-MM-dd"
+                                            maxDate={new Date()} //Can't select beyond today
+                                            valueName="selected" // DateSelect value's name is selected
+                                            onChange={([selected]) => selected}
+                                            name="retrospectiveGiftAidClaimStartDate"
+                                            placeholderText="Select date"
+                                        />
+                                    </Field>
+                                ) : null}
                             </div>
                         </div>
                         <input
@@ -700,37 +761,11 @@ const GivingFormPage: React.FC = () => {
                             )}
                         />
                     </form>
-                    <div>
-                        <h2>Notes</h2>
-                        <ol>
-                            <li>
-                                Please notify the{" "}
-                                <a href="mailto:treasurer@christchurchmayfair.org">
-                                    Treasurer
-                                </a>{" "}
-                                if you:
-                                <ul>
-                                    <li>Want to cancel this declaration</li>
-                                    <li>Change your name or home address</li>
-                                    <li>
-                                        No longer pay sufficient tax on your
-                                        income and/or capital gains. Gift Aid is
-                                        linked to basic rate tax, currently 20%,
-                                        which allows charities to reclaim 25p
-                                        for every £1 donated.
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                If you pay Income Tax at the higher or
-                                additional rate and want to receive the
-                                additional tax relief due to you, you must
-                                include all your Gift Aid donations on your
-                                Self-Assessment tax return or ask HM Revenue and
-                                Customs to adjust your tax code.
-                            </li>
-                        </ol>
-                    </div>
+                    <div
+                    dangerouslySetInnerHTML={{
+                        __html: data.notes?.html ?? "No Content!",
+                    }}
+                />
                 </div>
             </article>
         </section>
