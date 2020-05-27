@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-hook-form/dist/types.d.ts b/node_modules/react-hook-form/dist/types.d.ts
+index 0a3d663..37d4073 100644
+--- a/node_modules/react-hook-form/dist/types.d.ts
++++ b/node_modules/react-hook-form/dist/types.d.ts
+@@ -53,7 +53,7 @@ export declare type MutationWatcher = {
+     disconnect: VoidFunction;
+     observe?: any;
+ };
+-export declare type Message = string | React.ReactElement;
++export declare type Message = string;
+ export declare type ValidationValue = boolean | number | string | RegExp;
+ export declare type ValidationOption<Value extends ValidationValue = ValidationValue> = Value | ValidationValueMessage<Value>;
+ export declare type ValidationValueMessage<Value extends ValidationValue = ValidationValue> = {

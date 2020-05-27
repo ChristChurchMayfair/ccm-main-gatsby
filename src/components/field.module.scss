@@ -2,14 +2,16 @@
     display: grid;
     grid-column-gap: var(--general-padding);
     grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: "label label label input input input input input context context context context";
+    grid-template-areas: "label label label input input input input input context context context context"
+    "label label label input input input input input errors errors errors errors";
     padding-bottom: var(--general-padding);
     @media only screen and (max-width: 968px) {
         grid-template-columns: repeat(6, 1fr);
         grid-template-areas:
             "label label label label label label"
             "input input input input input input"
-            "context context context context context context";
+            "context context context context context context"
+            "errors errors errors errors errors errors"
     }
 }
 
@@ -28,6 +30,7 @@
 }
 
 .error {
-    grid-area: context;
+    grid-area: errors;
     color: red;
+    font-size: 0.8em;
 }

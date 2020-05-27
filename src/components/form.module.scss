@@ -54,6 +54,15 @@
     font-style: italic;
 }
 
+.sectionInfo {
+    margin-bottom: var(--general-padding);
+}
+
+.declaration {
+    font-style: italic;
+    margin-bottom: var(--general-padding);
+}
+
 .givingForm input[type="text"],
 .givingForm input[type="email"],
 .givingForm input[type="date"] {
@@ -75,13 +84,22 @@
     display: none;
 }
 
+
+.givingForm input[type="radio"] + label, .givingForm input[type="checkbox"] + label{
+    background-color: var(--light-colour);
+    color: var(--dark-colour);
+    border-color: var(--dark-colour);
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+
 .givingForm input[type="checkbox"]:checked + label,
 .givingForm input[type="radio"]:checked + label {
     background-color: green;
-}
-
-.givingForm input[type="radio"] + label {
-    background-color: var(--dark-colour);
+    color: var(--light-colour);
+    border-color: green;
 }
 
 .selectableButton {
@@ -91,5 +109,14 @@
 
 .submitButton {
     @include button;
-    width: 300px;
+    width: 100%;
+    margin-top: var(--general-padding);
+    cursor: pointer;
+}
+
+.formSubmissionError {
+    color: red;
+    font-weight: 500;
+    margin-top: var(--general-padding);
+    font-size: 0.8em;
 }
