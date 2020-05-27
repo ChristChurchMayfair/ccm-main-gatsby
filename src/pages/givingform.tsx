@@ -237,11 +237,6 @@ const GivingFormPage: React.FC = () => {
     const form = (
         <section>
             <article>
-                <div
-                    dangerouslySetInnerHTML={{
-                        __html: data.mainInfo?.html ?? "No Content!",
-                    }}
-                />
                 {developmentWarning}
                 <div className={formStyles.givingForm}>
                     <form
@@ -372,6 +367,18 @@ const GivingFormPage: React.FC = () => {
                                             autoComplete={"postal-code"}
                                         />
                                     </Field>
+                                    <Field labelText="Country"
+                                        contextualHelp="We only support declarations for residents of the UK. See Notes below.">
+                                        <div
+                                            className={
+                                                formStyles.accountDetailInfo
+                                            }
+                                        >
+                                            United Kingdom
+                                        </div>
+
+                                    </Field>
+                                    
                                 </div>
                                 <p>
                                     <em>
@@ -750,11 +757,6 @@ const GivingFormPage: React.FC = () => {
                             )}
                         />
                     </form>
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: data.notes?.html ?? "No Content!",
-                        }}
-                    />
                 </div>
             </article>
         </section>
@@ -790,10 +792,27 @@ const GivingFormPage: React.FC = () => {
             headerColour={data.mainInfo!.frontmatter!.headerColour}
         >
             <section className="header-underlay" />
+            <section className="intro wider dark">
+                <div
+                    className="text"
+                    dangerouslySetInnerHTML={{
+                        __html: data.mainInfo?.html ?? "No Content!",
+                    }}
+                />
+            </section>
+
             {pageState === "filling" && form}
             {pageState === "submitting" && submitting}
             {pageState === "submitted" && submitted}
             {pageState === "error" && formSubmissionErrorMessage}
+
+            <section id="notes">
+                <article
+                    dangerouslySetInnerHTML={{
+                        __html: data.notes?.html ?? "No Content!",
+                    }}
+                />
+            </section>
         </Layout>
     )
 }

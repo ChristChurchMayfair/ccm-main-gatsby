@@ -12,11 +12,9 @@
 }
 
 .calendar {
-
 }
 
 .datePicker {
-
 }
 
 .formItemInput {
@@ -76,16 +74,13 @@
     display: none;
 }
 
-.givingForm input[type="checkbox"]:checked + label {
+.givingForm input[type="checkbox"]:checked + label,
+.givingForm input[type="radio"]:checked + label {
     background-color: green;
 }
 
 .givingForm input[type="radio"] + label {
     background-color: var(--dark-colour);
-}
-
-.givingForm input[type="radio"]:checked + label {
-    background-color: green;
 }
 
 .selectableButton {

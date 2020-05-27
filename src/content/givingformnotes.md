@@ -21,7 +21,7 @@ This information is sent, encrypted using HTTPS, to CCM's GSuite (an online serv
 
 ### Your Privacy
 
-We will keep your details safe and never share them with anyone else unless required by statutory bodies such as HMRC. You can find more in our Privacy Notice.
+We will keep your details safe and never share them with anyone else unless required by statutory bodies such as HMRC. You can find more in our [Privacy Notice](/privacy-notice).
 
 ### Confidentiality
 
