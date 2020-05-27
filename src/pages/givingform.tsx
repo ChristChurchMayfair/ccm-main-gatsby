@@ -608,7 +608,7 @@ const GivingFormPage: React.FC = () => {
                                 by 25p for every £1 given at no extra cost to
                                 you or us. Thank you.
                             </div>
-                            <h3>Gift Aid declaration</h3>
+                            <h3>Your Declaration</h3>
                             <div className={formStyles.declaration}>
                                 I am a UK taxpayer and understand that if I pay
                                 less Income Tax and/or Capital Gains Tax than
@@ -636,7 +636,7 @@ const GivingFormPage: React.FC = () => {
                                                 formStyles.selectableButton
                                             )}
                                         >
-                                            My gift is eligible for gift aid
+                                            Claim Gift Aid On <strong>This</strong> Gift
                                         </label>
                                     </div>
 
@@ -655,7 +655,7 @@ const GivingFormPage: React.FC = () => {
                                                 "button"
                                             )}
                                         >
-                                            Please treat all future donations
+                                            Claim Gift Aid On <strong>Future</strong> Gifts
                                         </label>
                                     </div>
 
@@ -674,7 +674,7 @@ const GivingFormPage: React.FC = () => {
                                                 "button"
                                             )}
                                         >
-                                            Retrospectively claim gift aid
+                                            Claim Gift Aid On <strong>Previous</strong> Gifts
                                         </label>
                                     </div>
                                 </div>
@@ -691,7 +691,7 @@ const GivingFormPage: React.FC = () => {
                                             ? `You must enter a valid date of the form ${datePattern.toString()}`
                                             : undefined
                                     }
-                                    contextualHelp="Required. How far back can we retrospectively claim gift aid for your gifts?"
+                                    contextualHelp="Required. How far back can we retrospectively claim gift aid for your previous gifts?"
                                 >
                                     <Controller
                                         as={DatePicker}
@@ -738,27 +738,12 @@ const GivingFormPage: React.FC = () => {
         </section>
     )
 
-    const submitting = (
-        <section>
-            <article>Your gift infomation is being submitted.</article>
-        </section>
-    )
-    const formSubmissionErrorMessage = (
-        <section>
-            <article>
-                Sorry - there was an error submitting the gift form. If this
-                problem persists please contact us.
-                <pre>
-                    {submissionError != null
-                        ? submissionError.toString()
-                        : "unable to display the error message"}
-                </pre>
-            </article>
-        </section>
-    )
     const submitted = (
         <section>
-            <article>Your gift form was submitted successfully.</article>
+            <article>
+                <p>Your gift form was submitted successfully.</p>
+                <p>Thank you.</p>
+                </article>
         </section>
     )
 
