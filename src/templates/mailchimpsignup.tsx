@@ -45,7 +45,7 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                             <div id="mc_embed_signup_scroll">
                                 <input
                                     type="email"
-                                    value=""
+                                    defaultValue=""
                                     name="EMAIL"
                                     className="email"
                                     id="mce-EMAIL"
