@@ -4,6 +4,7 @@ import { useForm, Controller } from "react-hook-form"
 import classNames from "classnames"
 import DatePicker from "react-datepicker"
 import { format } from "date-fns"
+import "react-datepicker/dist/react-datepicker.css"
 
 import Layout from "../components/layout"
 import formStyles from "../components/form.module.scss"
@@ -604,9 +605,8 @@ const GivingFormPage: React.FC = () => {
                                             <Controller
                                                 as={DatePicker}
                                                 control={control}
-                                                wrapperClassName={classNames(
-                                                    formStyles.formItemInput
-                                                    //formStyles.datePicker
+                                                calendarClassName={classNames(
+                                                    formStyles.datePicker
                                                 )}
                                                 dateFormat="yyyy-MM-dd"
                                                 // popperClassName={
