@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useForm, Controller } from "react-hook-form"
 import classNames from "classnames"
@@ -224,32 +224,15 @@ const GivingFormPage: React.FC = () => {
     }
 
     const giftType = watch("giftType")
-    const [showRegularGivingInputs, setShowRegularGivingInputs] = useState(
-        false
-    )
-    useEffect(() => {
-        console.log(`Show date thing ${giftType}`)
-        setShowRegularGivingInputs(
-            giftType === "Standing Order" || giftType === "Give as you earn"
-        )
-    }, [giftType])
+    const showRegularGivingInputs =
+        giftType === "Standing Order" || giftType === "Give as you earn"
 
     const regularGiftFrequency = watch("regularGiftFrequency")
-    const [showOtherFrequencyInput, setShowOtherFrequencyInput] = useState(
-        false
-    )
-    useEffect(() => {
-        setShowOtherFrequencyInput(regularGiftFrequency === "other")
-    }, [regularGiftFrequency])
+
+    const showOtherFrequencyInput = regularGiftFrequency === "other"
 
     const retrospectivelyReclaimGiftAid = watch("retrospectivelyReclaimGiftAid")
-    const [
-        showRetrospectiveGiftAidDatePicker,
-        setShowRetrospectiveGiftAidDatePicker,
-    ] = useState(false)
-    useEffect(() => {
-        setShowRetrospectiveGiftAidDatePicker(retrospectivelyReclaimGiftAid)
-    }, [retrospectivelyReclaimGiftAid])
+    const showRetrospectiveGiftAidDatePicker = retrospectivelyReclaimGiftAid
 
     const form = (
         <section>
@@ -270,8 +253,10 @@ const GivingFormPage: React.FC = () => {
                     >
                         <h3>Contact Information</h3>
                         <p>
-                            <em>We need this information to help us claim gift aid
-                            for your donations.</em>
+                            <em>
+                                We need this information to help us claim gift
+                                aid for your donations.
+                            </em>
                         </p>
                         <div>
                             <h3>Name</h3>
@@ -389,8 +374,11 @@ const GivingFormPage: React.FC = () => {
                                     </Field>
                                 </div>
                                 <p>
-                                    <em>In case we need to contact you with a query,
-                                    please provide either email or phone number.</em>
+                                    <em>
+                                        In case we need to contact you with a
+                                        query, please provide either email or
+                                        phone number.
+                                    </em>
                                 </p>
                                 <Field
                                     labelText="Telephone Number"
@@ -645,13 +633,14 @@ const GivingFormPage: React.FC = () => {
                                     <h3>Gift Aid declaration</h3>
                                     <p>You declare that:</p>
                                     <p>
-                                    <em>
-                                        I am a UK taxpayer and understand that
-                                        if I pay less Income Tax and/or Capital
-                                        Gains Tax than the amount of Gift Aid
-                                        claimed on all my donations in that tax
-                                        year it is my responsibility to pay any
-                                        difference.
+                                        <em>
+                                            I am a UK taxpayer and understand
+                                            that if I pay less Income Tax and/or
+                                            Capital Gains Tax than the amount of
+                                            Gift Aid claimed on all my donations
+                                            in that tax year it is my
+                                            responsibility to pay any
+                                            difference.
                                         </em>
                                     </p>
                                 </div>
@@ -762,10 +751,10 @@ const GivingFormPage: React.FC = () => {
                         />
                     </form>
                     <div
-                    dangerouslySetInnerHTML={{
-                        __html: data.notes?.html ?? "No Content!",
-                    }}
-                />
+                        dangerouslySetInnerHTML={{
+                            __html: data.notes?.html ?? "No Content!",
+                        }}
+                    />
                 </div>
             </article>
         </section>
