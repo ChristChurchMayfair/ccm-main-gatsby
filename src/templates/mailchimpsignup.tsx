@@ -69,7 +69,7 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                                                 ?.hiddenValue
                                         }
                                         tabIndex={-1}
-                                        value=""
+                                        defaultValue=""
                                     />
                                 </div>
                                 <input
