@@ -163,9 +163,6 @@ type PageState = "filling" | "submitting" | "submitted" | "error"
 
 const GivingFormPage: React.FC = () => {
     const [formState, setPageState] = useState<PageState>("filling")
-    const [submissionError, setSubmissionError] = useState<Error | undefined>(
-        undefined
-    )
 
     const data = useStaticQuery<GatsbyTypes.GivingFormQuery>(graphql`
         query GivingForm {
@@ -209,8 +206,7 @@ const GivingFormPage: React.FC = () => {
             .then(() => {
                 setPageState("submitted")
             })
-            .catch(error => {
-                setSubmissionError(error)
+            .catch(() => {
                 setPageState("error")
             })
     }
@@ -255,6 +251,7 @@ const GivingFormPage: React.FC = () => {
                                 <input
                                     type="text"
                                     name="title"
+                                    id="title"
                                     className={classNames(
                                         formStyles.title,
                                         formStyles.formItemInput
@@ -273,16 +270,17 @@ const GivingFormPage: React.FC = () => {
                                 <input
                                     type="text"
                                     name="givenName"
+                                    id="givenName"
                                     className={classNames(
                                         formStyles.forname,
                                         formStyles.formItemInput
                                     )}
-                                    placeholder={"Given Name"}
+                                    placeholder="Given Name"
                                     ref={register({
                                         required:
                                             "You must provide a given name.",
                                     })}
-                                    autoComplete={"given-name"}
+                                    autoComplete="given-name"
                                 />
                             </Field>
                             <Field
@@ -294,6 +292,7 @@ const GivingFormPage: React.FC = () => {
                                 <input
                                     type="text"
                                     name="familyName"
+                                    id="familyName"
                                     ref={register({
                                         required:
                                             "You must provide a family name.",
@@ -318,28 +317,30 @@ const GivingFormPage: React.FC = () => {
                                     <input
                                         type="text"
                                         name="streetAddress"
+                                        id="streetAddress"
                                         ref={register({
                                             required:
                                                 "You must provide a street address.",
                                         })}
                                         className={formStyles.formItemInput}
-                                        placeholder={"Street Address"}
-                                        autoComplete={"street-address"}
+                                        placeholder="Street Address"
+                                        autoComplete="street-address"
                                     />
                                 </Field>
                                 <Field
                                     labelText="Extra Address Info"
-                                    labelFor="etraAddressLine"
+                                    labelFor="extraAddressLine"
                                     contextualHelp="Optional. Flat No. etc"
                                     error={errors?.extraAddressLine?.message}
                                 >
                                     <input
                                         type="text"
                                         name="extraAddressLine"
+                                        id="extraAddressLine"
                                         ref={register}
                                         className={formStyles.formItemInput}
                                         placeholder="Extra Address info"
-                                        autoComplete={"address-line1"}
+                                        autoComplete="address-line1"
                                     />
                                 </Field>
                                 <Field
@@ -351,6 +352,7 @@ const GivingFormPage: React.FC = () => {
                                     <input
                                         type="text"
                                         name="townCity"
+                                        id="townCity"
                                         ref={register({
                                             required:
                                                 "You must provide a town or city.",
@@ -369,13 +371,14 @@ const GivingFormPage: React.FC = () => {
                                     <input
                                         type="text"
                                         name="postCode"
+                                        id="postCode"
                                         ref={register({
                                             required:
                                                 "You must enter a postcode.",
                                         })}
                                         className={formStyles.formItemInput}
-                                        placeholder={"Post Code"}
-                                        autoComplete={"postal-code"}
+                                        placeholder="Post Code"
+                                        autoComplete="postal-code"
                                     />
                                 </Field>
                                 <Field
@@ -405,9 +408,10 @@ const GivingFormPage: React.FC = () => {
                                 <input
                                     type="text"
                                     className={formStyles.formItemInput}
-                                    placeholder={"Telephone Number"}
+                                    placeholder="Telephone Number"
                                     autoComplete="tel"
                                     name="telephoneNumber"
+                                    id="telephoneNumber"
                                     ref={register}
                                 />
                             </Field>
@@ -425,9 +429,10 @@ const GivingFormPage: React.FC = () => {
                                 <input
                                     type="text"
                                     className={formStyles.formItemInput}
-                                    placeholder={"Email Address"}
+                                    placeholder="Email Address"
                                     autoComplete="email"
                                     name="emailAddress"
+                                    id="emailAddress"
                                     ref={register({
                                         pattern: emailAddressPattern,
                                         required: false,
@@ -440,6 +445,7 @@ const GivingFormPage: React.FC = () => {
                             </div>
                             <Field
                                 labelText="Gift Amount"
+                                labelFor="giftAmountInGBP"
                                 contextualHelp="In GBP. Find our bank account details in the Notes below."
                                 error={
                                     errors.giftAmountInGBP !== undefined &&
@@ -451,8 +457,9 @@ const GivingFormPage: React.FC = () => {
                                 <input
                                     type="text"
                                     className={formStyles.formItemInput}
-                                    placeholder={"Gift amount in £"}
+                                    placeholder="Gift amount in £"
                                     name="giftAmountInGBP"
+                                    id="giftAmountInGBP"
                                     ref={register({
                                         pattern: {
                                             value: new RegExp(
@@ -549,6 +556,7 @@ const GivingFormPage: React.FC = () => {
                                         <select
                                             className={formStyles.formItemInput}
                                             name="regularGiftFrequency"
+                                            id="regularGiftFrequency"
                                             ref={register({
                                                 required: true,
                                             })}
@@ -583,8 +591,9 @@ const GivingFormPage: React.FC = () => {
                                                 className={
                                                     formStyles.formItemInput
                                                 }
-                                                placeholder={"Other Frequency"}
+                                                placeholder="Other Frequency"
                                                 name="otherRegularGiftRequency"
+                                                id="otherRegularGiftRequency"
                                                 ref={register}
                                             />
                                         </Field>
@@ -612,6 +621,7 @@ const GivingFormPage: React.FC = () => {
                                             valueName="selected"
                                             onChange={([selected]) => selected}
                                             name="regularGiftCommencementDate"
+                                            id="regularGiftCommencementDate"
                                             placeholderText="Select date"
                                         />
                                     </Field>
@@ -730,6 +740,7 @@ const GivingFormPage: React.FC = () => {
                                         valueName="selected" // DateSelect value's name is selected
                                         onChange={([selected]) => selected}
                                         name="retrospectiveGiftAidClaimStartDate"
+                                        id="retrospectiveGiftAidClaimStartDate"
                                         placeholderText="Select date"
                                     />
                                 </Field>
@@ -744,6 +755,7 @@ const GivingFormPage: React.FC = () => {
                                         : "Submit"
                                 }
                                 name="submit"
+                                id="submit"
                                 className={classNames(
                                     formStyles.submitButton,
                                     "button"
@@ -775,7 +787,7 @@ const GivingFormPage: React.FC = () => {
 
     return (
         <Layout
-            title={"Giving Form"}
+            title="Giving Form"
             headerColour={data.mainInfo!.frontmatter!.headerColour}
         >
             <section className="header-underlay" />
