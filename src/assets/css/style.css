@@ -430,6 +430,12 @@ section.intro .text {
     margin-bottom: var(--intro-text-margin-bottom);
 }
 
+@media only screen and (max-width: 968px) {
+    section.intro .text h1 {
+        margin-bottom: calc(var(--general-padding) * 2);
+    }
+}
+
 section.header-underlay {
     height: var(--header-height);
     background-color: var(--light-colour);
