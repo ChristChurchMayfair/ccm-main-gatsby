@@ -9,7 +9,6 @@ import queryString from "query-string"
 
 import Layout from "../components/layout"
 import formStyles from "../components/form.module.scss"
-import fieldStyles from "../components/field.module.scss"
 import Field from "../components/field"
 
 const developmentWarning = (
@@ -251,6 +250,7 @@ const GivingFormPage: React.FC = () => {
                                 labelText="Title"
                                 labelFor="title"
                                 contextualHelp="Optional. Mr, Mrs, Miss, Dr, Revd, etc"
+                                error={errors.title?.message}
                             >
                                 <input
                                     type="text"
@@ -331,6 +331,7 @@ const GivingFormPage: React.FC = () => {
                                     labelText="Extra Address Info"
                                     labelFor="etraAddressLine"
                                     contextualHelp="Optional. Flat No. etc"
+                                    error={errors?.extraAddressLine?.message}
                                 >
                                     <input
                                         type="text"
@@ -345,6 +346,7 @@ const GivingFormPage: React.FC = () => {
                                     labelText="Town or City"
                                     labelFor="townCity"
                                     contextualHelp="Required"
+                                    error={errors?.townCity?.message}
                                 >
                                     <input
                                         type="text"
@@ -362,6 +364,7 @@ const GivingFormPage: React.FC = () => {
                                     labelText="Post Code"
                                     contextualHelp="Required"
                                     labelFor="postCode"
+                                    error={errors?.postCode?.message}
                                 >
                                     <input
                                         type="text"
@@ -378,6 +381,7 @@ const GivingFormPage: React.FC = () => {
                                 <Field
                                     labelText="Country"
                                     contextualHelp="We only support declarations for residents of the UK. See Notes below."
+                                    error={undefined}
                                 >
                                     <div
                                         className={formStyles.accountDetailInfo}
@@ -396,6 +400,7 @@ const GivingFormPage: React.FC = () => {
                                 labelText="Telephone Number"
                                 labelFor="telephoneNumber"
                                 contextualHelp="Optional. A daytime or mobile number"
+                                error={errors?.telephoneNumber?.message}
                             >
                                 <input
                                     type="text"
@@ -475,7 +480,9 @@ const GivingFormPage: React.FC = () => {
                                             id="oneoff"
                                             value="One Off"
                                             name="giftType"
-                                            ref={register()}
+                                            ref={register({
+                                                required: true,
+                                            })}
                                         />
                                         <label
                                             htmlFor="oneoff"
@@ -534,11 +541,17 @@ const GivingFormPage: React.FC = () => {
                                     <Field
                                         labelText="Gift Frequency"
                                         contextualHelp="Required."
+                                        error={
+                                            errors?.regularGiftFrequency
+                                                ?.message
+                                        }
                                     >
                                         <select
                                             className={formStyles.formItemInput}
                                             name="regularGiftFrequency"
-                                            ref={register}
+                                            ref={register({
+                                                required: true,
+                                            })}
                                         >
                                             <option value="weekly">
                                                 Weekly
@@ -560,6 +573,10 @@ const GivingFormPage: React.FC = () => {
                                             labelText="Frequency"
                                             labelFor="otherRegularGiftRequency"
                                             contextualHelp="Required."
+                                            error={
+                                                errors?.otherRegularGiftRequency
+                                                    ?.message
+                                            }
                                         >
                                             <input
                                                 type="text"
@@ -616,7 +633,13 @@ const GivingFormPage: React.FC = () => {
                                 donations in that tax year it is my
                                 responsibility to pay any difference.
                             </div>
-                            <Field labelText="Please select all that apply:">
+                            <Field
+                                labelText="Please select all that apply:"
+                                error={
+                                    errors?.thisGiftIsEligibleForGiftAid
+                                        ?.message
+                                }
+                            >
                                 <div
                                     className={
                                         formStyles.formItemMultipleChoiceChoices
@@ -636,7 +659,8 @@ const GivingFormPage: React.FC = () => {
                                                 formStyles.selectableButton
                                             )}
                                         >
-                                            Claim Gift Aid On <strong>This</strong> Gift
+                                            Claim Gift Aid On{" "}
+                                            <strong>This</strong> Gift
                                         </label>
                                     </div>
 
@@ -655,7 +679,8 @@ const GivingFormPage: React.FC = () => {
                                                 "button"
                                             )}
                                         >
-                                            Claim Gift Aid On <strong>Future</strong> Gifts
+                                            Claim Gift Aid On{" "}
+                                            <strong>Future</strong> Gifts
                                         </label>
                                     </div>
 
@@ -674,7 +699,8 @@ const GivingFormPage: React.FC = () => {
                                                 "button"
                                             )}
                                         >
-                                            Claim Gift Aid On <strong>Previous</strong> Gifts
+                                            Claim Gift Aid On{" "}
+                                            <strong>Previous</strong> Gifts
                                         </label>
                                     </div>
                                 </div>
@@ -709,7 +735,7 @@ const GivingFormPage: React.FC = () => {
                                 </Field>
                             ) : null}
                         </div>
-                        <Field>
+                        <Field error={undefined}>
                             <input
                                 type="submit"
                                 value={
@@ -743,7 +769,7 @@ const GivingFormPage: React.FC = () => {
             <article>
                 <p>Your gift form was submitted successfully.</p>
                 <p>Thank you.</p>
-                </article>
+            </article>
         </section>
     )
 
