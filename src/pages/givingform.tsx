@@ -111,14 +111,14 @@ function convertPayloadToGoogleFormUrl(
     options[convertNameToQueryParamName("giftType", lookup)] =
         giftFormData.giftType
     options[convertNameToQueryParamName("regularGiftFrequency", lookup)] =
-        giftFormData.regularGiftFrequency !== null &&
+        giftFormData.regularGiftFrequency != null &&
         giftFormData.regularGiftFrequency === "other"
             ? giftFormData.otherRegularGiftRequency
             : giftFormData.regularGiftFrequency ?? ""
     options[
         convertNameToQueryParamName("regularGiftCommencementDate", lookup)
     ] =
-        giftFormData.regularGiftCommencementDate !== null
+        giftFormData.regularGiftCommencementDate != null
             ? format(
                   giftFormData.regularGiftCommencementDate,
                   googleFormsDateFormat
@@ -142,7 +142,7 @@ function convertPayloadToGoogleFormUrl(
             lookup
         )
     ] =
-        giftFormData.retrospectiveGiftAidClaimStartDate !== null
+        giftFormData.retrospectiveGiftAidClaimStartDate != null
             ? format(
                   giftFormData.retrospectiveGiftAidClaimStartDate,
                   googleFormsDateFormat
