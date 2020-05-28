@@ -4,8 +4,9 @@
 
 ### Our Bank Details
 
-Our account details for BACS transfers or standing orders are:
+Our account details for BACS transfers or Standing Orders are:
 
+* Transaction Reference: **Your Name** - *required for tracking purposes.*
 * Bank: **CAF Bank Limited**
 * Account Number: **00099436**
 * Sort Code: **40-52-40**
