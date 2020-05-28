@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image/withIEPolyfill"
 
 import Layout from "../components/layout"
 import Hero from "../components/hero"

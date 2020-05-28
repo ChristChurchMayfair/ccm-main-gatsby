@@ -1,7 +1,6 @@
 import React from "react"
 
 import styles from "./field.module.scss"
-import { ErrorMessage } from "react-hook-form"
 
 interface Props {
     labelText?: string
