@@ -1,8 +1,11 @@
 import React from "react"
 
 import styles from "./field.module.scss"
+import classNames from "classnames"
+
 
 interface Props {
+    className?: string
     labelText?: string
     labelFor?: string
     contextualHelp?: string
@@ -11,6 +14,7 @@ interface Props {
 }
 
 const Field: React.FC<Props> = ({
+    className,
     children,
     error,
     labelText,
@@ -18,7 +22,7 @@ const Field: React.FC<Props> = ({
     contextualHelp,
 }) => {
     return (
-        <div className={styles.main}>
+        <div className={classNames(className,styles.main)}>
             <label className={styles.label} htmlFor={labelFor}>
                 {labelText}
             </label>

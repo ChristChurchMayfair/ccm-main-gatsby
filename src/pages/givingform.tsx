@@ -385,6 +385,7 @@ const GivingFormPage: React.FC = () => {
                                     labelText="Country"
                                     contextualHelp="We only support declarations for residents of the UK. See Notes below."
                                     error={undefined}
+                                    className={formStyles.hideOnMobile}
                                 >
                                     <div
                                         className={formStyles.accountDetailInfo}
@@ -617,6 +618,7 @@ const GivingFormPage: React.FC = () => {
                                             calendarClassName={classNames(
                                                 formStyles.datePicker
                                             )}
+                                            className={formStyles.dateInput}
                                             dateFormat="yyyy-MM-dd"
                                             valueName="selected"
                                             onChange={([selected]) => selected}
@@ -735,6 +737,7 @@ const GivingFormPage: React.FC = () => {
                                         wrapperClassName={classNames(
                                             formStyles.formItemInput
                                         )}
+                                        className={formStyles.dateInput}
                                         dateFormat="yyyy-MM-dd"
                                         maxDate={new Date()} //Can't select beyond today
                                         valueName="selected" // DateSelect value's name is selected
@@ -766,7 +769,8 @@ const GivingFormPage: React.FC = () => {
                                 <div className={formStyles.formSubmissionError}>
                                     There was an error submitting the form.
                                     Please try again and if the problem persists
-                                    contact the technical help as listed below.
+                                    contact the technical help as listed in the
+                                    Notes section at the bottom of the page.
                                 </div>
                             )}
                         </Field>

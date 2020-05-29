@@ -11,9 +11,6 @@
     font-weight: 400;
 }
 
-.calendar {
-}
-
 .datePicker {
     font-family: inherit;
 }
@@ -63,9 +60,20 @@
     margin-bottom: var(--general-padding);
 }
 
+select, .dateInput {
+    -webkit-appearance: none;
+    background-image: url(../content/assets/images/selecthamburger.svg);
+    background-repeat: no-repeat;
+    background-position: top 5px right 8px;
+    background-size: 36px 36px;
+}
+
 .givingForm input[type="text"],
 .givingForm input[type="email"],
-.givingForm input[type="date"] {
+.givingForm input[type="date"],
+.givingForm input[type="radio"] + label,
+.givingForm input[type="checkbox"] + label,
+select {
     border-color: var(--dark-gray);
     border-width: 1px;
     border-style: solid;
@@ -75,8 +83,16 @@
     padding-right: 8px;
     box-sizing: content-box;
     line-height: var(--button-height);
+    font-weight: 300;
     // margin-bottom: 1em;
     box-sizing: border-box;
+    -webkit-appearance: none;
+    border-radius: 0px;
+}
+
+.givingForm input[type="menulist-button"] {
+    border: 1px solid var(--mid-gray);
+    border-radius: 0px;
 }
 
 .givingForm input[type="checkbox"],
@@ -84,14 +100,12 @@
     display: none;
 }
 
-
-.givingForm input[type="radio"] + label, .givingForm input[type="checkbox"] + label{
+.givingForm input[type="radio"] + label,
+.givingForm input[type="checkbox"] + label {
     background-color: var(--light-colour);
     color: var(--dark-colour);
     border-color: var(--dark-colour);
-    border-style: solid;
-    border-width: 1px;
-    box-sizing: content-box;
+    height: calc(var(--button-height) + 18px);
     cursor: pointer;
 }
 
@@ -119,4 +133,10 @@
     font-weight: 500;
     margin-top: var(--general-padding);
     font-size: 0.8em;
+}
+
+@media only screen and (max-width: 968px) {
+    .hideOnMobile {
+        display: none !important; //shudder!
+    }
 }
