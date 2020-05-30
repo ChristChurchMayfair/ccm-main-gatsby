@@ -71,6 +71,8 @@ select, .dateInput {
     background-repeat: no-repeat;
     background-position: top 5px right 8px;
     background-size: 36px 36px;
+    width: 100%;
+    height: calc(var(--button-height) + 18px);
 }
 
 .givingForm input[type="text"],

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useForm, Controller } from "react-hook-form"
 import classNames from "classnames"
 import DatePicker from "react-datepicker"
-import { format } from "date-fns"
+import { format, parse, sub, formatDuration } from "date-fns"
 import "react-datepicker/dist/react-datepicker.css"
 import queryString from "query-string"
 
@@ -273,6 +273,25 @@ const GivingFormPage: React.FC = () => {
 
     const retrospectivelyReclaimGiftAid = watch("retrospectivelyReclaimGiftAid")
     const showRetrospectiveGiftAidDatePicker = retrospectivelyReclaimGiftAid
+
+    const iPodRegExp = /iPod/i
+    const iPhoneRegExp = /iPhone/i
+    const webkitRegExp = /WebKit/i
+    const CriOsRegExp = /CriOS/i
+    const OperaiOSRegExp = /OPiOS/i
+
+    const userAgent = window.navigator.userAgent ?? ""
+    const iPhoneOriPod =
+        (userAgent !== null && iPodRegExp.test(userAgent)) ||
+        iPhoneRegExp.test(userAgent)
+    const webkit = webkitRegExp.test(userAgent)
+    const isiPhoneOriPodSafari =
+        iPhoneOriPod &&
+        webkit &&
+        !CriOsRegExp.test(userAgent) &&
+        !OperaiOSRegExp.test(userAgent)
+
+    const showNativeDatePicker = isiPhoneOriPodSafari
 
     const form = (
         <section>
@@ -654,24 +673,54 @@ const GivingFormPage: React.FC = () => {
                                                 ?.message
                                         }
                                     >
-                                        <Controller
-                                            as={DatePicker}
-                                            control={control}
-                                            calendarClassName={classNames(
-                                                formStyles.datePicker
-                                            )}
-                                            className={formStyles.dateInput}
-                                            dateFormat="yyyy-MM-dd"
-                                            valueName="selected"
-                                            onChange={([selected]) => selected}
-                                            name="regularGiftCommencementDate"
-                                            id="regularGiftCommencementDate"
-                                            placeholderText="Select date"
-                                            rules={{
-                                                required:
-                                                    "You must provide a date.",
-                                            }}
-                                        />
+                                        {showNativeDatePicker ? (
+                                            <Controller
+                                                as="input"
+                                                type="date"
+                                                control={control}
+                                                defaultValue={format(
+                                                    new Date(),
+                                                    "yyyy-MM-dd"
+                                                )}
+                                                rules={{
+                                                    required:
+                                                        "You must provide a date.",
+                                                }}
+                                                name="regularGiftCommencementDate"
+                                                id="regularGiftCommencementDate"
+                                                className={formStyles.dateInput}
+                                                placeholder="Commencement Date"
+                                                valueName="event"
+                                                onChange={([event]) => {
+                                                    return parse(
+                                                        event.target.value,
+                                                        "yyyy-MM-dd",
+                                                        new Date()
+                                                    )
+                                                }}
+                                            />
+                                        ) : (
+                                            <Controller
+                                                as={DatePicker}
+                                                control={control}
+                                                calendarClassName={classNames(
+                                                    formStyles.datePicker
+                                                )}
+                                                className={formStyles.dateInput}
+                                                dateFormat="yyyy-MM-dd"
+                                                valueName="selected"
+                                                onChange={([selected]) =>
+                                                    selected
+                                                }
+                                                name="regularGiftCommencementDate"
+                                                id="regularGiftCommencementDate"
+                                                placeholderText="Select date"
+                                                rules={{
+                                                    required:
+                                                        "You must provide a date.",
+                                                }}
+                                            />
+                                        )}
                                     </Field>
                                 </div>
                             ) : null}
@@ -774,25 +823,52 @@ const GivingFormPage: React.FC = () => {
                                     }
                                     contextualHelp="Required. How far back can we retrospectively claim gift aid for your previous gifts?"
                                 >
-                                    <Controller
-                                        as={DatePicker}
-                                        control={control}
-                                        wrapperClassName={classNames(
-                                            formStyles.formItemInput
-                                        )}
-                                        className={formStyles.dateInput}
-                                        dateFormat="yyyy-MM-dd"
-                                        maxDate={new Date()} //Can't select beyond today
-                                        valueName="selected" // DateSelect value's name is selected
-                                        onChange={([selected]) => selected}
-                                        name="retrospectiveGiftAidClaimStartDate"
-                                        id="retrospectiveGiftAidClaimStartDate"
-                                        placeholderText="Select date"
-                                        rules={{
-                                            required:
-                                                "You must provide a date.",
-                                        }}
-                                    />
+                                    {showNativeDatePicker ? (
+                                        <Controller
+                                            as="input"
+                                            type="date"
+                                            control={control}
+                                            defaultValue={format(
+                                                sub(new Date(),{days: 10}),
+                                                "yyyy-MM-dd"
+                                            )}
+                                            rules={{
+                                                required:
+                                                    "You must provide a date.",
+                                            }}
+                                            name="retrospectiveGiftAidClaimStartDate"
+                                            id="retrospectiveGiftAidClaimStartDate"
+                                            className={formStyles.dateInput}
+                                            valueName="event"
+                                            onChange={([event]) => {
+                                                return parse(
+                                                    event.target.value,
+                                                    "yyyy-MM-dd",
+                                                    new Date()
+                                                )
+                                            }}
+                                        />
+                                    ) : (
+                                        <Controller
+                                            as={DatePicker}
+                                            control={control}
+                                            wrapperClassName={classNames(
+                                                formStyles.formItemInput
+                                            )}
+                                            className={formStyles.dateInput}
+                                            dateFormat="yyyy-MM-dd"
+                                            maxDate={new Date()} //Can't select beyond today
+                                            valueName="selected" // DateSelect value's name is selected
+                                            onChange={([selected]) => selected}
+                                            name="retrospectiveGiftAidClaimStartDate"
+                                            id="retrospectiveGiftAidClaimStartDate"
+                                            placeholderText="Select date"
+                                            rules={{
+                                                required:
+                                                    "You must provide a date.",
+                                            }}
+                                        />
+                                    )}
                                 </Field>
                             ) : null}
                         </div>
