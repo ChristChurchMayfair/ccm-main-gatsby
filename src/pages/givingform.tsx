@@ -26,7 +26,6 @@ const developmentWarning = (
 )
 
 const fieldNameToEntryId: { [fieldName: string]: string } = {
-    title: "1412836924",
     givenName: "403087895",
     familyName: "383939029",
     streetAddress: "2131927972",
@@ -46,7 +45,6 @@ const fieldNameToEntryId: { [fieldName: string]: string } = {
 }
 
 type GiftFormData = {
-    title: string
     givenName: string
     familyName: string
     streetAddress: string
@@ -86,7 +84,6 @@ function convertPayloadToGoogleFormUrl(
 
     const options: { [key: string]: string | null } = {}
 
-    options[convertNameToQueryParamName("title", lookup)] = giftFormData.title
     options[convertNameToQueryParamName("givenName", lookup)] =
         giftFormData.givenName
     options[convertNameToQueryParamName("familyName", lookup)] =
@@ -239,26 +236,6 @@ const GivingFormPage: React.FC = () => {
                         </div>
                         <div>
                             <h3>Name</h3>
-
-                            <Field
-                                labelText="Title"
-                                labelFor="title"
-                                contextualHelp="Optional. Mr, Mrs, Miss, Dr, Revd, etc"
-                                error={errors.title?.message}
-                            >
-                                <input
-                                    type="text"
-                                    name="title"
-                                    id="title"
-                                    className={classNames(
-                                        formStyles.title,
-                                        formStyles.formItemInput
-                                    )}
-                                    placeholder="Title"
-                                    ref={register}
-                                    autoComplete="honorific-prefix"
-                                />
-                            </Field>
                             <Field
                                 labelText="Given Name"
                                 labelFor="givenName"
