@@ -1,5 +1,10 @@
 @import "../mixins/button";
 
+.developmentWarning {
+    background-color: red;
+    color: white;
+}
+
 .givingForm h1,
 .givingForm h2,
 .givingForm h3 {

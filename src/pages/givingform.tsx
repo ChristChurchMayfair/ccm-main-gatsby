@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, ReactElement } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useForm, Controller } from "react-hook-form"
 import classNames from "classnames"
@@ -11,38 +11,92 @@ import Layout from "../components/layout"
 import formStyles from "../components/form.module.scss"
 import Field from "../components/field"
 
-const developmentWarning = (
-    <div>
+const devWarning = (
+    <div className={formStyles.developmentWarning}>
         <em>
-            Warning - this form currently submits to a CCM GSuite Google
-            Spreadsheet owned by{" "}
-            <a href="mailto:tom@christchurchmayfair.org">
-                tom@christchurchmayfair.org
-            </a>{" "}
+            Warning - this form currently submits to a Google Spreadsheet owned
+            by{" "}
+            <a href="mailto:tom.duckering@gmail.com">tom.duckering@gmail.com</a>
             and is only for test purposes. Please do not submit any data that
             you do not wish him to see!
         </em>
     </div>
 )
 
-const fieldNameToEntryId: { [fieldName: string]: string } = {
-    givenName: "403087895",
-    familyName: "383939029",
-    streetAddress: "2131927972",
-    extraAddressLine: "54229700",
-    townCity: "1247583245",
-    postCode: "524386314",
-    telephoneNumber: "899696842",
-    emailAddress: "1518406431",
-    giftAmountInGBP: "710981495",
-    giftType: "1615869123",
-    regularGiftFrequency: "2138441357",
-    regularGiftCommencementDate: "825676099",
-    thisGiftIsEligibleForGiftAid: "567316447",
-    allFutureGiftsAreEligibleForGiftAid: "518456171",
-    retrospectivelyReclaimGiftAid: "1656623006",
-    retrospectiveGiftAidClaimStartDate: "546486386",
+type FormConfig = {
+    googleFormId: string
+    fieldNameToEntryId: {
+        givenName: string
+        familyName: string
+        streetAddress: string
+        extraAddressLine: string
+        townCity: string
+        postCode: string
+        telephoneNumber: string
+        emailAddress: string
+        giftAmountInGBP: string
+        giftType: string
+        regularGiftFrequency: string
+        regularGiftCommencementDate: string
+        thisGiftIsEligibleForGiftAid: string
+        allFutureGiftsAreEligibleForGiftAid: string
+        retrospectivelyReclaimGiftAid: string
+        retrospectiveGiftAidClaimStartDate: string
+    }
+    warning: ReactElement | null
 }
+
+const config: { [configName: string]: FormConfig } = {
+    production: {
+        googleFormId:
+            "1FAIpQLSeED6ffZVCYFG5amGWUtTGWkr8EI-rbPO2i_f-z0Ur6XvTNTw",
+        fieldNameToEntryId: {
+            givenName: "403087895",
+            familyName: "383939029",
+            streetAddress: "2131927972",
+            extraAddressLine: "54229700",
+            townCity: "1247583245",
+            postCode: "524386314",
+            telephoneNumber: "899696842",
+            emailAddress: "1518406431",
+            giftAmountInGBP: "710981495",
+            giftType: "1615869123",
+            regularGiftFrequency: "2138441357",
+            regularGiftCommencementDate: "825676099",
+            thisGiftIsEligibleForGiftAid: "567316447",
+            allFutureGiftsAreEligibleForGiftAid: "518456171",
+            retrospectivelyReclaimGiftAid: "1656623006",
+            retrospectiveGiftAidClaimStartDate: "546486386",
+        },
+        warning: null,
+    },
+    development: {
+        googleFormId:
+            "1FAIpQLSc5aNC3Kfax5kWBRTzQrhuJBehMrQPnwkugkv17k3MeMNtfcQ",
+        fieldNameToEntryId: {
+            givenName: "1341689296",
+            familyName: "2098486112",
+            streetAddress: "1905441603",
+            extraAddressLine: "517339018",
+            townCity: "300162044",
+            postCode: "1869992928",
+            telephoneNumber: "1892238525",
+            emailAddress: "163193888",
+            giftAmountInGBP: "1940242436",
+            giftType: "482226407",
+            regularGiftFrequency: "876322395",
+            regularGiftCommencementDate: "1395887961",
+            thisGiftIsEligibleForGiftAid: "1683708464",
+            allFutureGiftsAreEligibleForGiftAid: "1965645277",
+            retrospectivelyReclaimGiftAid: "633586953",
+            retrospectiveGiftAidClaimStartDate: "1572694217",
+        },
+        warning: devWarning,
+    },
+}
+
+const configName = process.env.GIVING_FORM_CONFIG ?? "production"
+const formConfig = config[configName]
 
 type GiftFormData = {
     givenName: string
@@ -168,7 +222,6 @@ const GivingFormPage: React.FC = () => {
                 frontmatter {
                     title
                     headerColour
-                    googleFormId
                 }
             }
             notes: markdownRemark(
@@ -183,13 +236,11 @@ const GivingFormPage: React.FC = () => {
         GiftFormData
     >()
 
-    const googleFormId = data.mainInfo!.frontmatter!.googleFormId!
-
     const postDataToGoogleFormApi = (data: GiftFormData) => {
         const googleSubmitFormUrl = convertPayloadToGoogleFormUrl(
             data,
-            googleFormId,
-            fieldNameToEntryId
+            formConfig.googleFormId,
+            formConfig.fieldNameToEntryId
         )
         setPageState("submitting")
         fetch(googleSubmitFormUrl, {
@@ -220,7 +271,7 @@ const GivingFormPage: React.FC = () => {
     const form = (
         <section>
             <article>
-                {developmentWarning}
+                {formConfig.warning}
                 <div className={formStyles.givingForm}>
                     <form
                         onSubmit={handleSubmit(postDataToGoogleFormApi)}
@@ -732,7 +783,8 @@ const GivingFormPage: React.FC = () => {
                                         id="retrospectiveGiftAidClaimStartDate"
                                         placeholderText="Select date"
                                         rules={{
-                                            required: "You must provide a date.",
+                                            required:
+                                                "You must provide a date.",
                                         }}
                                     />
                                 </Field>
