@@ -1,0 +1,165 @@
+@import "../mixins/button";
+
+.givingForm h1,
+.givingForm h2,
+.givingForm h3 {
+    font-family: var(--body-font);
+}
+
+.givingForm h3 {
+    text-transform: none;
+    font-weight: 400;
+}
+
+.datePicker {
+    font-family: inherit;
+}
+
+.formItemInput {
+    grid-area: input;
+    width: 100%;
+}
+
+.formItemMultipleChoiceChoices {
+    display: grid;
+    grid-area: choices;
+    grid-template-columns: 1fr;
+    grid-row-gap: var(--general-padding);
+}
+
+.accountDetails {
+    display: grid;
+    grid-column-gap: var(--general-padding);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "label label label info info info info info . . . .";
+    margin-bottom: var(--general-padding);
+}
+
+@media only screen and (max-width: 968px) {
+    .accountDetails {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "label label label info info info";
+    }
+}
+
+.accountDetailLabel {
+    grid-area: label;
+}
+
+.accountDetailInfo {
+    grid-area: info;
+    font-style: italic;
+}
+
+.sectionInfo {
+    margin-bottom: var(--general-padding);
+}
+
+.declaration {
+    font-style: italic;
+    margin-bottom: var(--general-padding);
+}
+
+select, .dateInput {
+    -webkit-appearance: none;
+    background-image: url(../content/assets/images/selecthamburger.svg);
+    background-repeat: no-repeat;
+    background-position: top 5px right 8px;
+    background-size: 36px 36px;
+}
+
+.givingForm input[type="text"],
+.givingForm input[type="email"],
+.givingForm input[type="date"],
+.givingForm input[type="radio"] + label,
+.givingForm input[type="checkbox"] + label,
+select {
+    border-color: var(--dark-gray);
+    border-width: 1px;
+    border-style: solid;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: content-box;
+    line-height: var(--button-height);
+    font-weight: 300;
+    // margin-bottom: 1em;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    border-radius: 0px;
+}
+
+.givingForm input[type="menulist-button"] {
+    border: 1px solid var(--mid-gray);
+    border-radius: 0px;
+}
+
+.givingForm input[type="checkbox"],
+.givingForm input[type="radio"] {
+    display: none;
+}
+
+.givingForm input[type="radio"] + label,
+.givingForm input[type="checkbox"] + label {
+    background-color: var(--light-colour);
+    color: var(--dark-colour);
+    border-color: var(--dark-colour);
+    height: calc(var(--button-height) + 18px);
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+.givingForm input[type="radio"] + label {
+    background-image: url(../content/assets/images/radio-unchecked.svg);
+    background-position: top 12px left 12px;
+    background-size: 21px 21px;
+}
+
+.givingForm input[type="checkbox"] + label {
+    background-image: url(../content/assets/images/checkbox-unchecked.svg);
+    background-position: top 12px left 12px;
+    background-size: 21px 21px;
+}
+
+.givingForm input[type="checkbox"]:checked + label,
+.givingForm input[type="radio"]:checked + label {
+    background-color: green;
+    color: var(--light-colour);
+    border-color: green;
+}
+
+.givingForm input[type="radio"]:checked + label {
+    background-image: url(../content/assets/images/radio-checked.svg);
+}
+
+.givingForm input[type="checkbox"]:checked + label {
+    background-image: url(../content/assets/images/checkbox-checked.svg);
+    background-position: top 7px left 7px;
+    background-size: 33px 33px;
+}
+
+.selectableButton {
+    @include button;
+    width: 100%;
+}
+
+.submitButton {
+    @include button;
+    width: 100%;
+    margin-top: var(--general-padding);
+    cursor: pointer;
+}
+
+.formSubmissionError {
+    color: red;
+    font-weight: 500;
+    margin-top: var(--general-padding);
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 968px) {
+    .hideOnMobile {
+        display: none !important; //shudder!
+    }
+}

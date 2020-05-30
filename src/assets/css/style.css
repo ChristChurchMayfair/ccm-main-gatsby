@@ -430,6 +430,12 @@ section.intro .text {
     margin-bottom: var(--intro-text-margin-bottom);
 }
 
+@media only screen and (max-width: 968px) {
+    section.intro .text h1 {
+        margin-bottom: calc(var(--general-padding) * 2);
+    }
+}
+
 section.header-underlay {
     height: var(--header-height);
     background-color: var(--light-colour);
@@ -1913,11 +1919,33 @@ section article h1 {
     }
 }
 
-section article h2 {
+section article h2,
+section article h3,
+section article h4,
+section article h5,
+section article h6 {
     font-family: var(--body-font);
-    font-size: 1.6em;
     text-transform: none;
     font-weight: 400;
+}
+
+section article h2 {
+    font-size: 1.6em;
+}
+
+section article h3 {
+    font-size: 1.4em;
+}
+section article h4 {
+    font-size: 1.2em;
+}
+
+section article h5 {
+    font-size: 1.1em;
+}
+
+section article h6 {
+    font-size: 1em;
 }
 
 /* Desktop positioning of home hero image */

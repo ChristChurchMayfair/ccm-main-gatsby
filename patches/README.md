@@ -9,3 +9,8 @@ See <https://github.com/ds300/patch-package>. Essentially, it lets us modify the
 The patch file for this has two changes.
 1. By default it always adds the original image resolution to the generated `srcSet`. This is confusing and annoying as it basically means it doesn't respect its own `maxWidth` param, and risks us serving a masssive image to the user when we weren't expecting to. So we remove it.
 2. We globally make `fluid` query generate a couple of extra sizes, so that the browser is more likely to download only exactly the right sized image.
+
+
+### `react-hook-form`
+Bad type def for errors - says it returns string | ReactElement - it should only be string.
+https://github.com/react-hook-form/react-hook-form/issues/1713
