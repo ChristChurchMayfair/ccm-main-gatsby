@@ -107,6 +107,19 @@ select {
     border-color: var(--dark-colour);
     height: calc(var(--button-height) + 18px);
     cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+.givingForm input[type="radio"] + label {
+    background-image: url(../content/assets/images/radio-unchecked.svg);
+    background-position: top 12px left 12px;
+    background-size: 21px 21px;
+}
+
+.givingForm input[type="checkbox"] + label {
+    background-image: url(../content/assets/images/checkbox-unchecked.svg);
+    background-position: top 12px left 12px;
+    background-size: 21px 21px;
 }
 
 .givingForm input[type="checkbox"]:checked + label,
@@ -114,6 +127,16 @@ select {
     background-color: green;
     color: var(--light-colour);
     border-color: green;
+}
+
+.givingForm input[type="radio"]:checked + label {
+    background-image: url(../content/assets/images/radio-checked.svg);
+}
+
+.givingForm input[type="checkbox"]:checked + label {
+    background-image: url(../content/assets/images/checkbox-checked.svg);
+    background-position: top 7px left 7px;
+    background-size: 33px 33px;
 }
 
 .selectableButton {
