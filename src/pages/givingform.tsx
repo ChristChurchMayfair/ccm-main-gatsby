@@ -70,8 +70,6 @@ const emailAddressPattern = new RegExp(
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 )
 
-const datePattern = new RegExp(/\d\d\d\d-\d\d-\d\d/)
-
 function convertNameToQueryParamName(
     fieldName: string,
     lookup: { [fieldName: string]: string }
@@ -420,12 +418,7 @@ const GivingFormPage: React.FC = () => {
                                 labelText="Email Address"
                                 contextualHelp="Optional"
                                 labelFor="emailAddress"
-                                error={
-                                    errors.emailAddress !== undefined &&
-                                    errors.emailAddress.type === "pattern"
-                                        ? "Please enter a valid email address."
-                                        : undefined
-                                }
+                                error={errors.emailAddress?.message}
                             >
                                 <input
                                     type="text"
@@ -435,8 +428,11 @@ const GivingFormPage: React.FC = () => {
                                     name="emailAddress"
                                     id="emailAddress"
                                     ref={register({
-                                        pattern: emailAddressPattern,
-                                        required: false,
+                                        pattern: {
+                                            value: emailAddressPattern,
+                                            message:
+                                                "Please enter a valid email address.",
+                                        },
                                     })}
                                 />
                             </Field>
@@ -448,12 +444,7 @@ const GivingFormPage: React.FC = () => {
                                 labelText="Gift Amount"
                                 labelFor="giftAmountInGBP"
                                 contextualHelp="In GBP. Find our bank account details in the Notes below."
-                                error={
-                                    errors.giftAmountInGBP !== undefined &&
-                                    errors.giftAmountInGBP.type === "pattern"
-                                        ? "Please enter a valid gift amount. Non negative. Maximum two decimal places."
-                                        : undefined
-                                }
+                                error={errors.giftAmountInGBP?.message}
                             >
                                 <input
                                     type="text"
@@ -462,12 +453,30 @@ const GivingFormPage: React.FC = () => {
                                     name="giftAmountInGBP"
                                     id="giftAmountInGBP"
                                     ref={register({
-                                        pattern: {
-                                            value: new RegExp(
-                                                /^£?[0-9]*(.[0-9]{0,2})?$/
-                                            ),
+                                        required: {
+                                            value: true,
                                             message:
-                                                "You must provide a positive currency value.",
+                                                "You must provide a gift amount.",
+                                        },
+                                        validate: {
+                                            mustBeGBPOrPlainNumber: (
+                                                value: string
+                                            ) =>
+                                                value.startsWith("£") ||
+                                                !isNaN(parseFloat(value)) ||
+                                                "The value must be GBP",
+                                            positive: (value: string) =>
+                                                parseFloat(
+                                                    value.replace(/^£/, "")
+                                                ) > 0.0 ||
+                                                "The gift must be a positive number.",
+                                            maxTwoDecimalPlaces: (
+                                                value: string
+                                            ) =>
+                                                !value.includes(".") ||
+                                                value.split(".")[1].length <=
+                                                    2 ||
+                                                "The gift must have, at most, two decimal places",
                                         },
                                     })}
                                 />
@@ -528,7 +537,7 @@ const GivingFormPage: React.FC = () => {
                                             name="giftType"
                                             ref={register({
                                                 required:
-                                                    "Please select a gift type.",
+                                                    "You must select a gift type.",
                                             })}
                                             value="Give as you earn"
                                         />
@@ -595,7 +604,10 @@ const GivingFormPage: React.FC = () => {
                                                 placeholder="Other Frequency"
                                                 name="otherRegularGiftRequency"
                                                 id="otherRegularGiftRequency"
-                                                ref={register}
+                                                ref={register({
+                                                    required:
+                                                        'You must provide an "other" frequency or select a different frequency.',
+                                                })}
                                             />
                                         </Field>
                                     ) : null}
@@ -604,12 +616,8 @@ const GivingFormPage: React.FC = () => {
                                         labelFor="regularGiftCommencementDate"
                                         contextualHelp="Required. The date from which your regular giving began."
                                         error={
-                                            errors.regularGiftCommencementDate !==
-                                                undefined &&
                                             errors.regularGiftCommencementDate
-                                                .type === "pattern"
-                                                ? `You must enter a valid date of the form ${datePattern.toString()}`
-                                                : undefined
+                                                ?.message
                                         }
                                     >
                                         <Controller
@@ -625,6 +633,10 @@ const GivingFormPage: React.FC = () => {
                                             name="regularGiftCommencementDate"
                                             id="regularGiftCommencementDate"
                                             placeholderText="Select date"
+                                            rules={{
+                                                required:
+                                                    "You must provide a date.",
+                                            }}
                                         />
                                     </Field>
                                 </div>
@@ -720,14 +732,11 @@ const GivingFormPage: React.FC = () => {
                             {showRetrospectiveGiftAidDatePicker ? (
                                 <Field
                                     labelText="Claim Gift Aid back to"
-                                    labelFor="regularGiftCommencementDate"
+                                    labelFor="retrospectiveGiftAidClaimStartDate"
                                     error={
-                                        errors.regularGiftCommencementDate !==
-                                            undefined &&
-                                        errors.regularGiftCommencementDate
-                                            .type === "pattern"
-                                            ? `You must enter a valid date of the form ${datePattern.toString()}`
-                                            : undefined
+                                        errors
+                                            .retrospectiveGiftAidClaimStartDate
+                                            ?.message
                                     }
                                     contextualHelp="Required. How far back can we retrospectively claim gift aid for your previous gifts?"
                                 >
@@ -745,6 +754,9 @@ const GivingFormPage: React.FC = () => {
                                         name="retrospectiveGiftAidClaimStartDate"
                                         id="retrospectiveGiftAidClaimStartDate"
                                         placeholderText="Select date"
+                                        rules={{
+                                            required: "You must provide a date.",
+                                        }}
                                     />
                                 </Field>
                             ) : null}
@@ -783,8 +795,12 @@ const GivingFormPage: React.FC = () => {
     const submitted = (
         <section>
             <article>
-                <p>Your gift form was submitted successfully.</p>
-                <p>Thank you.</p>
+                <h2>Giving Form Submitted</h2>
+                <p>Your information was submitted successfully. Thank you.</p>
+                <p>
+                    If you wish to submit this form again, please refresh or
+                    reload the page.
+                </p>
             </article>
         </section>
     )
@@ -804,13 +820,15 @@ const GivingFormPage: React.FC = () => {
                 />
             </section>
             {formState === "submitted" ? submitted : form}
-            <section id="notes">
-                <article
-                    dangerouslySetInnerHTML={{
-                        __html: data.notes?.html ?? "No Content!",
-                    }}
-                />
-            </section>
+            {formState !== "submitted" ? (
+                <section id="notes">
+                    <article
+                        dangerouslySetInnerHTML={{
+                            __html: data.notes?.html ?? "No Content!",
+                        }}
+                    />
+                </section>
+            ) : null}
         </Layout>
     )
 }
