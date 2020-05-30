@@ -4,7 +4,7 @@
 name: Perf auditing
 env:
   # Netlify builds PRs with name deploy-preview-${PR number}
-  COMMIT_PREVIEW_URL: "https://deploy-preview-${{ github.event.number }}--ccm-gatsby-test.netlify.app"
+  COMMIT_PREVIEW_URL: "https://deploy-preview-${{ github.event.number }}--ccm-main-gatsby.netlify.app"
 on:
   pull_request:
     branches: [ master ]
