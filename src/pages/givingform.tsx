@@ -95,8 +95,8 @@ const config: { [configName: string]: FormConfig } = {
     },
 }
 
-const configName = process.env.GIVING_FORM_CONFIG ?? "production"
-const formConfig = config[configName]
+const configName = process.env.GATSBY_GIVING_FORM_CONFIG
+const formConfig = config[configName!] // want to die if this not set properly
 
 type GiftFormData = {
     givenName: string
