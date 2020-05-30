@@ -846,7 +846,7 @@ const GivingFormPage: React.FC = () => {
                 <h2>Form Configuration Error</h2>
                 <p>Sorry. There is a problem with the form configuration.</p>
                 <p>
-                    The config name is: <tt>{process.env.GATSBY_GIVING_FORM_CONFIG ?? "undefined"}</tt>
+                    The config name is: <code>{process.env.GATSBY_GIVING_FORM_CONFIG ?? "undefined"}</code>
                 </p>
                 <p>Please inform the technical contact listed at the bottom of this page.</p>
             </article>
