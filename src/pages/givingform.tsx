@@ -1,4 +1,4 @@
-import React, { useState, ReactElement } from "react"
+import React, { useState, ReactElement, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useForm, Controller } from "react-hook-form"
 import classNames from "classnames"
@@ -208,7 +208,7 @@ function convertPayloadToGoogleFormUrl(
     return url
 }
 
-type PageState = "filling" | "submitting" | "submitted" | "error"
+type PageState = "filling" | "submitting" | "submitted" | "error" | "badconfig"
 
 const GivingFormPage: React.FC = () => {
     const [formState, setPageState] = useState<PageState>("filling")
@@ -231,6 +231,12 @@ const GivingFormPage: React.FC = () => {
             }
         }
     `)
+
+    useEffect(() => {
+        if (formConfig == null) {
+            setPageState("badconfig")
+        }
+    })
 
     const { register, handleSubmit, watch, errors, control } = useForm<
         GiftFormData
@@ -271,7 +277,7 @@ const GivingFormPage: React.FC = () => {
     const form = (
         <section>
             <article>
-                {formConfig.warning}
+                {formConfig?.warning ?? null}
                 <div className={formStyles.givingForm}>
                     <form
                         onSubmit={handleSubmit(postDataToGoogleFormApi)}
@@ -834,6 +840,19 @@ const GivingFormPage: React.FC = () => {
         </section>
     )
 
+    const badlyConfiguredForm = (
+        <section>
+            <article>
+                <h2>Form Configuration Error</h2>
+                <p>Sorry. There is a problem with the form configuration.</p>
+                <p>
+                    The config name is: <tt>{process.env.GATSBY_GIVING_FORM_CONFIG ?? "undefined"}</tt>
+                </p>
+                <p>Please inform the technical contact listed at the bottom of this page.</p>
+            </article>
+        </section>
+    )
+
     return (
         <Layout
             title="Giving Form"
@@ -848,6 +867,7 @@ const GivingFormPage: React.FC = () => {
                     }}
                 />
             </section>
+            {formState === "badconfig" ? badlyConfiguredForm : null}
             {formState === "submitted" ? submitted : form}
             {formState !== "submitted" ? (
                 <section id="notes">
