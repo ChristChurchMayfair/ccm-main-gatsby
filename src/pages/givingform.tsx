@@ -692,7 +692,8 @@ const GivingFormPage: React.FC = () => {
                                 responsibility to pay any difference.
                             </div>
                             <Field
-                                labelText="Please select all that apply:"
+                                labelText="On which of your gifts should we claim Gift Aid?"
+                                contextualHelp="Please select all that apply:"
                                 error={
                                     errors?.thisGiftIsEligibleForGiftAid
                                         ?.message
