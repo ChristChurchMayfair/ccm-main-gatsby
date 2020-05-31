@@ -103,10 +103,9 @@ const AboutUs: React.FC<{}> = () => {
             ))}
             <FindOutMore>
                 <FindOutMoreText
-                    dangerouslySetInnerHTML={{
-                        __html: data.page!.fields!.frontmattermd!
-                            .findOutMoreText!.html!,
-                    }}
+                    innerHTML={
+                        data.page!.fields!.frontmattermd!.findOutMoreText!.html!
+                    }
                 />
             </FindOutMore>
         </Layout>

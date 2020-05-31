@@ -28,9 +28,7 @@ const Bio: React.FC<Props> = ({
     return (
         <div className={styles.bioContainer}>
             <FindOutMore className={styles.bio}>
-                <FindOutMoreText
-                    dangerouslySetInnerHTML={{ __html: descriptionHtml }}
-                />
+                <FindOutMoreText innerHTML={descriptionHtml} />
                 <div className={styles.people}>
                     {people.map(person => {
                         if (person == null) {

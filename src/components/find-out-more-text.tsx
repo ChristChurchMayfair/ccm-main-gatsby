@@ -1,18 +1,15 @@
-import classnames from "classnames"
-import React, { FC, HTMLProps } from "react"
+import React, { FC } from "react"
 
 import styles from "./find-out-more-text.module.scss"
 
-interface FindOutMoreTextProps extends HTMLProps<HTMLDivElement> {}
+interface FindOutMoreTextProps {
+    innerHTML: string
+}
 
-const FindOutMoreText: FC<FindOutMoreTextProps> = ({
-    children,
-    className,
-    ...elementProps
-}) => (
+const FindOutMoreText: FC<FindOutMoreTextProps> = ({ children, innerHTML }) => (
     <div
-        className={classnames(styles.findOutMoreText, className)}
-        {...elementProps}
+        className={styles.findOutMoreText}
+        dangerouslySetInnerHTML={{ __html: innerHTML }}
     >
         {children}
     </div>
