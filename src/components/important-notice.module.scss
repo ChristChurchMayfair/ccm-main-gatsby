@@ -20,6 +20,19 @@
 
 .content {
     grid-area: text;
+
+    @media only screen and (max-width: 968px) {
+        padding: calc(var(--general-padding) * 2) 0px var(--general-padding) 0px;
+
+        p {
+            margin-top: 1.5em;
+        }
+    }
+
+    .text .lastUpdated {
+        font-size: 0.7em;
+        font-weight: 300;
+    }
 }
 
 .title {
@@ -34,11 +47,6 @@
         font-size: 2.5em;
         margin-top: calc(var(--general-padding) * 2);
     }
-}
-
-.lastUpdated {
-    font-size: 0.7em;
-    font-weight: 300;
 }
 
 .separator {
@@ -65,4 +73,8 @@
     margin-left: var(--general-padding);
     margin-right: var(--general-padding);
     grid-area: button;
+
+    @media only screen and (max-width: 968px) {
+        margin-bottom: 0.5em;
+    }
 }

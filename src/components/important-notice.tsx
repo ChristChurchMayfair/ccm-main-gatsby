@@ -27,7 +27,7 @@ const ImportantNotice: FC<ImportantNoticeProps> = ({
         <Section className={styles.importantNotice} fullBleed>
             <div className={styles.content}>
                 <h1 className={styles.title}>{noticeTitle}</h1>
-                <SectionText fullBleed>
+                <SectionText fullBleed className={styles.text}>
                     {children}
                     {lastUpdated !== undefined && (
                         <p
