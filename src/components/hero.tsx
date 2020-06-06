@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import Img, { FluidObject } from "./img"
 import styles from "./hero.module.scss"
@@ -17,6 +18,14 @@ const Hero: React.FC<HeroProps> = ({
     children,
 }) => (
     <div className={styles.heroContainer}>
+        <Helmet>
+            <link
+                rel="preload"
+                as="image"
+                imagesrcset={singleImageFluid?.srcSet}
+                imagesizes={singleImageFluid?.sizes}
+            />
+        </Helmet>
         <Section id={sectionId} className={styles.hero}>
             <div className={styles.carouselOverlay}>
                 <h1 className={styles.overlayCaption}>{overlayCaption}</h1>
