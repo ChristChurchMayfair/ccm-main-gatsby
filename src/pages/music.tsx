@@ -152,11 +152,9 @@ const MusicPage: React.FC<{}> = () => {
         <div key={r?.title} className={styles.track}>
             <div className={styles.trackTitle}>{r!.title}</div>
             {r!.files!.map(f => (
-                <>
-                    <a className={styles.trackLink} href={f!.url}>
-                        {f!.name}
-                    </a>
-                </>
+                <a className={styles.trackLink} href={f!.url} key={f!.name}>
+                    {f!.name}
+                </a>
             ))}
         </div>
     ))
