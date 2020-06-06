@@ -1,0 +1,29 @@
+.findOutMore {
+    display: grid;
+    grid-template-areas:
+        ". title title title title title title title title title title title title ."
+        ". text text text text text text text text text text text text .";
+
+    @media only screen and (max-width: 968px) {
+        grid-template-areas:
+            ". title title title title ."
+            ". text text text text .";
+
+        p {
+            margin-top: 10px;
+        }
+    }
+}
+
+.heading {
+    padding-bottom: 0.1em;
+    border-width: 0px;
+    border-bottom-width: 2px;
+    border-color: var(--dark-colour);
+    border-style: solid;
+    grid-area: title;
+
+    @media only screen and (max-width: 968px) {
+        padding: 20px 0px 5px 0px;
+    }
+}

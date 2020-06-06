@@ -10,13 +10,16 @@ import queryString from "query-string"
 import Layout from "../components/layout"
 import formStyles from "../components/form.module.scss"
 import Field from "../components/field"
+import Section from "../components/section"
+import HeaderUnderlay from "../components/header-underlay"
+import SectionText from "../components/section-text"
 
 const devWarning = (
     <div className={formStyles.developmentWarning}>
         <em>
             Warning - this form currently submits to a Google Spreadsheet owned
             by{" "}
-            <a href="mailto:tom.duckering@gmail.com">tom.duckering@gmail.com</a>
+            <a href="mailto:tom.duckering@gmail.com">tom.duckering@gmail.com</a>{" "}
             and is only for test purposes. Please do not submit any data that
             you do not wish him to see!
         </em>
@@ -275,7 +278,7 @@ const GivingFormPage: React.FC = () => {
     const showRetrospectiveGiftAidDatePicker = retrospectivelyReclaimGiftAid
 
     const form = (
-        <section>
+        <Section>
             <article>
                 {formConfig?.warning ?? null}
                 <div className={formStyles.givingForm}>
@@ -825,11 +828,11 @@ const GivingFormPage: React.FC = () => {
                     </form>
                 </div>
             </article>
-        </section>
+        </Section>
     )
 
     const submitted = (
-        <section>
+        <Section>
             <article>
                 <h2>Giving Form Submitted</h2>
                 <p>Your information was submitted successfully. Thank you.</p>
@@ -838,11 +841,11 @@ const GivingFormPage: React.FC = () => {
                     reload the page.
                 </p>
             </article>
-        </section>
+        </Section>
     )
 
     const badlyConfiguredForm = (
-        <section>
+        <Section>
             <article>
                 <h2>Form Configuration Error</h2>
                 <p>Sorry. There is a problem with the form configuration.</p>
@@ -857,7 +860,7 @@ const GivingFormPage: React.FC = () => {
                     this page.
                 </p>
             </article>
-        </section>
+        </Section>
     )
 
     return (
@@ -865,25 +868,26 @@ const GivingFormPage: React.FC = () => {
             title="Giving Form"
             headerColour={data.mainInfo!.frontmatter!.headerColour}
         >
-            <section className="header-underlay" />
-            <section className="intro wider dark">
-                <div
-                    className="text"
+            <HeaderUnderlay />
+            <Section intro wider dark className="intro wider dark">
+                <SectionText
+                    intro
+                    dark
                     dangerouslySetInnerHTML={{
                         __html: data.mainInfo?.html ?? "No Content!",
                     }}
                 />
-            </section>
+            </Section>
             {formState === "badconfig" ? badlyConfiguredForm : null}
             {formState === "submitted" ? submitted : form}
             {formState !== "submitted" ? (
-                <section id="notes">
+                <Section id="notes">
                     <article
                         dangerouslySetInnerHTML={{
                             __html: data.notes?.html ?? "No Content!",
                         }}
                     />
-                </section>
+                </Section>
             ) : null}
         </Layout>
     )

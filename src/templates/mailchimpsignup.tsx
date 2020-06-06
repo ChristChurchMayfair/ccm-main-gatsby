@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import HeaderUnderlay from "../components/header-underlay"
+import Section from "../components/section"
 
 interface Props {
     data: GatsbyTypes.MailchimpSignUpPageQuery
@@ -24,8 +26,8 @@ export const query = graphql`
 const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
     return (
         <Layout title={data.mainInfo!.frontmatter!.title} headerColour="dark">
-            <section className="header-underlay" />
-            <section>
+            <HeaderUnderlay />
+            <Section>
                 <article>
                     <div
                         dangerouslySetInnerHTML={{
@@ -83,7 +85,7 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                         </form>
                     </div>
                 </article>
-            </section>
+            </Section>
         </Layout>
     )
 }

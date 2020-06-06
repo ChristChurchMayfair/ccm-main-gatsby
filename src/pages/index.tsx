@@ -8,6 +8,9 @@ import Img from "../components/img"
 import Services from "../components/services"
 import Covid19 from "../components/covid-19"
 import MountAfter from "../components/mount-after"
+import Section from "../components/section"
+import SectionText from "../components/section-text"
+import Hero from "../components/hero"
 
 const IndexPageQuery = graphql`
     query Homepage {
@@ -94,10 +97,10 @@ const IndexPage = () => {
 
     return (
         <Layout title={undefined} headerColour="light">
-            <section id="home-hero" className="hero left bottom">
-                <div className="carousel-overlay">
-                    <h1>{data.mainInfo!.frontmatter!.overlayCaption}</h1>
-                </div>
+            <Hero
+                sectionId="home-hero"
+                overlayCaption={data.mainInfo!.frontmatter!.overlayCaption}
+            >
                 <div className="carousel-images">
                     {carouselImages.map((image, i) => {
                         if (image == null) {
@@ -142,11 +145,11 @@ const IndexPage = () => {
                         )
                     })}
                 </div>
-            </section>
+            </Hero>
 
-            <section className="intro">
-                <div
-                    className="text"
+            <Section intro>
+                <SectionText
+                    intro
                     dangerouslySetInnerHTML={{
                         __html: data.mainInfo!.html!,
                     }}
@@ -165,18 +168,16 @@ const IndexPage = () => {
                 >
                     Sunday Services
                 </a>
-            </section>
+            </Section>
 
             <Covid19 />
 
             <Services />
 
-            <section id="midweek" className="info-panel image-right">
-                <div
-                    id="midweek-photo-right"
-                    className="photo right"
-                    style={{ position: "relative" }}
-                >
+            <Section
+                id="midweek"
+                infoPanel
+                infoPanelImage={
                     <Img
                         fluid={
                             data.midweek!.frontmatter!.image!.childImageSharp!
@@ -191,16 +192,19 @@ const IndexPage = () => {
                         }}
                         objectPosition="center right"
                     />
-                </div>
-                <div className="text">
+                }
+                imagePosition="right"
+                imageBackgroundPosition="right"
+            >
+                <SectionText infoPanel>
                     <h1>{data.midweek!.frontmatter!.title}</h1>
                     <div
                         dangerouslySetInnerHTML={{
                             __html: data.midweek!.html!,
                         }}
                     />
-                </div>
-            </section>
+                </SectionText>
+            </Section>
 
             <FindUs />
 

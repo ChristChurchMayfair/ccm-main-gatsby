@@ -1,0 +1,29 @@
+.services {
+    height: auto;
+    grid-template-areas:
+        ". title title title title title title title title title title title title ."
+        ". left left left left left left right right right right right right .";
+    grid-auto-rows: auto auto;
+    background-color: var(--dark-colour);
+
+    @media only screen and (max-width: 968px) {
+        grid-template-areas:
+            ". title title title title ."
+            ". left left left left ."
+            ". right right right right .";
+    }
+}
+
+.heading {
+    grid-area: title;
+    color: var(--light-colour);
+    padding-bottom: 0.1em;
+    border-width: 0px;
+    border-bottom-width: 2px;
+    border-color: var(--light-colour);
+    border-style: solid;
+
+    @media only screen and (max-width: 968px) {
+        padding: 20px 0px 5px 0px;
+    }
+}

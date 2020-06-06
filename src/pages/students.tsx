@@ -5,6 +5,8 @@ import Img from "gatsby-image/withIEPolyfill"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Bio from "../components/bio"
+import Section from "../components/section"
+import SectionText from "../components/section-text"
 
 const StudentsPageQuery = graphql`
     query StudentsPage {
@@ -76,27 +78,19 @@ const Students: React.FC<{}> = () => {
             <Hero
                 sectionId="students-hero"
                 overlayCaption={data.mainContent!.frontmatter!.overlayCaption}
-                sectionClass="left bottom"
-                fluid={fluid}
+                singleImageFluid={fluid}
             />
-            <section className="intro wider">
-                <div
-                    className="text"
+            <Section intro wider>
+                <SectionText
+                    intro
                     dangerouslySetInnerHTML={{
                         __html: data.mainContent!.html!,
                     }}
                 />
-            </section>
-            <section className="info-panel dark image-right">
-                <div className="text">
-                    <h1>{data.extraContent!.frontmatter!.title}</h1>
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: data.extraContent!.html!,
-                        }}
-                    />
-                </div>
-                <div className="photo right" style={{ position: "relative" }}>
+            </Section>
+            <Section
+                infoPanel
+                infoPanelImage={
                     <Img
                         style={{
                             position: "absolute",
@@ -111,8 +105,20 @@ const Students: React.FC<{}> = () => {
                         }
                         objectPosition="top center"
                     />
-                </div>
-            </section>
+                }
+                imagePosition="right"
+                imageBackgroundPosition="right"
+                dark
+            >
+                <SectionText infoPanel dark>
+                    <h1>{data.extraContent!.frontmatter!.title}</h1>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: data.extraContent!.html!,
+                        }}
+                    />
+                </SectionText>
+            </Section>
             <Bio
                 people={data.studentWorkers.nodes}
                 peoplePrecedenceByEmail={[

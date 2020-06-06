@@ -1,0 +1,54 @@
+@mixin mobileLayout {
+    @media only screen and (max-width: 968px) {
+        grid-template-areas:
+            ". content content content content ."
+            ". topimage topimage bottomimage bottomimage .";
+    }
+
+    @media only screen and (max-width: 694px) {
+        grid-template-areas:
+            ". content content content content ."
+            ". topimage topimage topimage topimage ."
+            ". bottomimage bottomimage bottomimage bottomimage .";
+    }
+}
+
+.doubleImageSectionContainer .doubleImageSection {
+    @include mobileLayout;
+
+    &--left {
+        @include mobileLayout;
+
+        grid-template-areas:
+            ". topimage topimage topimage topimage topimage topimage content content content content content content ."
+            ". bottomimage bottomimage bottomimage bottomimage bottomimage bottomimage content content content content content content .";
+        padding: 40px 0px;
+        grid-row-gap: var(--general-padding);
+    }
+
+    &--right {
+        @include mobileLayout;
+
+        grid-template-areas:
+            ". content content content content content content topimage topimage topimage topimage topimage topimage ."
+            ". content content content content content content bottomimage bottomimage bottomimage bottomimage bottomimage bottomimage .";
+        padding: 40px 0px;
+        grid-row-gap: var(--general-padding);
+    }
+}
+
+.topImage {
+    height: 300px;
+    background-size: cover;
+    grid-area: topimage;
+}
+
+.bottomImage {
+    height: 300px;
+    background-size: cover;
+    grid-area: bottomimage;
+}
+
+.content {
+    grid-area: content;
+}

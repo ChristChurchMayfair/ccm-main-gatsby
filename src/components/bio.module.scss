@@ -1,0 +1,88 @@
+.bioContainer .bio {
+    display: grid;
+    grid-template-areas:
+        ". title title title title title title title title title title title title ."
+        ". people people people people people people text text text text text text .";
+
+    @media only screen and (max-width: 968px) {
+        grid-template-areas:
+            ". title title title title ."
+            ". text text text text ."
+            ". people people people people .";
+    }
+}
+
+.people {
+    grid-area: people;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: var(--general-padding);
+    grid-row-gap: var(--general-padding);
+}
+
+.person {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-column-gap: var(--general-padding);
+    grid-template-areas:
+        "photo info"
+        "photo info"
+        "photo info"
+        "photo info";
+    font-size: 1.1em;
+
+    @media only screen and (max-width: 968px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-column-gap: var(--general-padding);
+        grid-template-areas:
+            "photo"
+            "info";
+        font-size: 1.1em;
+    }
+}
+
+.photo {
+    grid-area: photo;
+    object-fit: contain;
+    height: 200px;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position-y: top;
+
+    img {
+        height: 100%;
+    }
+}
+
+.photo {
+    grid-area: photo;
+}
+
+.info {
+    grid-area: info;
+
+    @media only screen and (max-width: 968px) {
+        padding-top: 10px;
+    }
+}
+
+.name {
+    font-weight: bold;
+}
+
+.email {
+    font-size: 0.8em;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+/*
+.phone {
+  font-size: 0.8em;
+}
+*/

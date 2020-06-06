@@ -4,6 +4,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Hero from "../components/hero"
 import Bio from "../components/bio"
+import Section from "../components/section"
+import SectionText from "../components/section-text"
 
 const LittleLambsPageQuery = graphql`
     query LittleLambsPage {
@@ -67,18 +69,17 @@ const Families: React.FC<{}> = () => {
             <Hero
                 sectionId="familes-hero"
                 overlayCaption={data.littleLambs!.frontmatter!.overlayCaption}
-                sectionClass="left bottom"
-                fluid={littleLambsImageFluid}
+                singleImageFluid={littleLambsImageFluid}
             />
 
-            <section className="intro wider">
-                <div
-                    className="text"
+            <Section intro wider>
+                <SectionText
+                    intro
                     dangerouslySetInnerHTML={{
                         __html: data.littleLambs!.html!,
                     }}
-                ></div>
-            </section>
+                />
+            </Section>
 
             <Bio
                 people={data.littleLambsWorker.nodes}
