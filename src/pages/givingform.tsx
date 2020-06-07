@@ -5,7 +5,7 @@ import classNames from "classnames"
 import DatePicker from "react-datepicker"
 import { format } from "date-fns"
 // @ts-ignore
-import datepickerCssUrl from "!file-loader!react-datepicker/dist/react-datepicker.css"
+import datepickerCssUrl from "!file-loader!react-datepicker/dist/react-datepicker.min.css"
 import queryString from "query-string"
 
 import Layout from "../components/layout"
