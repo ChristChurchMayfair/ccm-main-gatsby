@@ -1,11 +1,13 @@
 .socialMediaIcon {
+    display: inline-block;
+
     svg {
-        max-height: 1.6em;
+        height: 1.6em;
         fill: var(--dark-gray);
         transition: 0.2s;
 
         @media only screen and (max-width: 968px) {
-            max-height: 1.2em;
+            height: 1.2em;
         }
 
         &:hover {

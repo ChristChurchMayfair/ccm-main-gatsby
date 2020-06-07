@@ -28,12 +28,11 @@ interface SocialMediaIconProps {
 const SocialMediaIcon: FC<SocialMediaIconProps> = ({ platform, username }) => {
     const Icon = svgForPlatform[platform]
     return (
-        <a
-            href={`${baseUrlForPlatform[platform]}${username}`}
-            className={styles.socialMediaIcon}
-        >
-            <Icon />
-        </a>
+        <div className={styles.socialMediaIcon}>
+            <a href={`${baseUrlForPlatform[platform]}${username}`}>
+                <Icon />
+            </a>
+        </div>
     )
 }
 
