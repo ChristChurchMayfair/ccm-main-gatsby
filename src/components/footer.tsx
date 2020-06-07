@@ -75,19 +75,19 @@ const Footer = () => {
                     <SocialMediaIcon
                         platform="twitter"
                         username={
-                            site!.siteMetadata!.socialMediaAccounts!.twitter
+                            site!.siteMetadata!.socialMediaAccounts!.twitter!
                         }
                     />
                     <SocialMediaIcon
                         platform="instagram"
                         username={
-                            site!.siteMetadata!.socialMediaAccounts!.instagram
+                            site!.siteMetadata!.socialMediaAccounts!.instagram!
                         }
                     />
                     <SocialMediaIcon
                         platform="spotify"
                         username={
-                            site!.siteMetadata!.socialMediaAccounts!.spotify
+                            site!.siteMetadata!.socialMediaAccounts!.spotify!
                         }
                     />
                 </div>
