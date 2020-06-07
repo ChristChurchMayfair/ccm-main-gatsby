@@ -106,7 +106,7 @@ const MusicPage: React.FC<{}> = () => {
     // TODO: extract into component with styles
     const releases = data.releases!.frontmatter!.releases!.map(release => {
         const appleLink =
-            typeof release?.appleMusicLink !== "undefined" ? (
+            release?.appleMusicLink != null ? (
                 <a
                     className={classnames(
                         styles.musicReleaseLink,
@@ -119,7 +119,7 @@ const MusicPage: React.FC<{}> = () => {
             ) : undefined
 
         const spotifyLink =
-            typeof release?.spotifyLink !== "undefined" ? (
+            release?.spotifyLink != null ? (
                 <a
                     className={classnames(
                         styles.musicReleaseLink,
