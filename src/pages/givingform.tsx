@@ -4,7 +4,8 @@ import { useForm, Controller } from "react-hook-form"
 import classNames from "classnames"
 import DatePicker from "react-datepicker"
 import { format } from "date-fns"
-import "react-datepicker/dist/react-datepicker.css"
+// @ts-ignore
+import datepickerCssUrl from "!file-loader!react-datepicker/dist/react-datepicker.min.css"
 import queryString from "query-string"
 
 import Layout from "../components/layout"
@@ -13,6 +14,7 @@ import Field from "../components/field"
 import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
 import SectionText from "../components/section-text"
+import LazyLoadCss from "../components/lazy-load-css"
 
 const devWarning = (
     <div className={formStyles.developmentWarning}>
@@ -279,6 +281,7 @@ const GivingFormPage: React.FC = () => {
 
     const form = (
         <Section>
+            <LazyLoadCss url={datepickerCssUrl} />
             <article>
                 {formConfig?.warning ?? null}
                 <div className={formStyles.givingForm}>
