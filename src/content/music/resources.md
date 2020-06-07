@@ -7,10 +7,10 @@ resources:
     url: /music_resources/Creator God (D).pdf
   - name: Lead Sheet (C)
     url: /music_resources/Creator God (C).pdf
-  - name: Piano Score (C)
-    url: /music_resources/Creator God - Piano Score (C).pdf
   - name: Piano Score (D)
     url: /music_resources/Creator God - Piano Score (D).pdf
+  - name: Piano Score (C)
+    url: /music_resources/Creator God - Piano Score (C).pdf
 - title: Where, O Grave, Is Your Victory?
   files:
   - name: Lead Sheet (A♭)
@@ -35,8 +35,8 @@ resources:
     url: /music_resources/See the bloodstained wooden cross - Lead Sheet.pdf
 - title: Whom Have I Heaven But You
   files:
-  - name: Piano Score (B♭)
-    url: /music_resources/WhomHaveIInHeavenButYou - Full Score.pdf
+  - name: Lead Sheet (B♭)
+    url: /music_resources/WhomHaveIInHeavenButYou - Lead Sheet.pdf
 - title: Wonderful
   files:
   - name: Lead Sheet (G)
