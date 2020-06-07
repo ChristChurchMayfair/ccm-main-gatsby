@@ -1,0 +1,116 @@
+@import "../mixins/full-width.scss";
+@import "../mixins/logo.scss";
+
+.footer {
+    @include full-width;
+
+    grid-row-gap: var(--general-padding);
+    padding-top: calc(2 * var(--general-padding));
+    padding-bottom: calc(2 * var(--general-padding));
+    grid-template-areas:
+        ". contact contact contact contact contact links links links links links links links ."
+        ". contact contact contact contact contact smallprint smallprint smallprint smallprint smallprint smallprint smallprint  .";
+    color: var(--dark-gray);
+    background-color: var(--mid-gray);
+    font-size: 0.7em;
+    font-weight: 300;
+
+    @media only screen and (max-width: 968px) {
+        grid-template-areas:
+            ". contact contact contact contact ."
+            ". links links links links ."
+            ". smallprint smallprint smallprint smallprint .";
+    }
+
+    a {
+        color: var(--dark-gray);
+    }
+}
+
+.logo {
+    @include logo;
+
+    grid-area: logo;
+    margin-bottom: var(--general-padding);
+
+    svg {
+        fill: var(--dark-gray);
+    }
+}
+
+.contact {
+    grid-area: contact;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "logo"
+        "address"
+        "email"
+        "phone"
+        "social-media";
+    font-size: 1.3em;
+    border-right: 1px solid var(--dark-gray);
+
+    @media only screen and (max-width: 968px) {
+        border-right-width: 0px;
+        border-right-style: none;
+        padding-bottom: var(--general-padding);
+        margin-bottom: var(--general-padding);
+        border-bottom: 1px solid var(--dark-gray);
+    }
+}
+
+.address {
+    grid-area: address;
+    margin-bottom: var(--general-padding);
+    font-style: unset;
+}
+
+.email {
+    grid-area: email;
+}
+
+.phone {
+    grid-area: phone;
+    margin-bottom: var(--general-padding);
+}
+
+.socialMedia {
+    grid-area: social-media;
+
+    > *:not(:first-child) {
+        margin-left: var(--general-padding);
+    }
+}
+
+.smallprint {
+    grid-area: smallprint;
+    align-self: end;
+}
+
+.allLinks {
+    grid-area: links;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: var(--general-padding);
+    grid-auto-rows: 1.2em;
+    font-size: 1.3em;
+    grid-row-gap: 10px;
+    margin-left: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        border-right-width: 0px;
+        border-right-style: none;
+        padding-bottom: var(--general-padding);
+        margin-bottom: var(--general-padding);
+        border-bottom: 1px solid var(--dark-gray);
+        margin-left: 0;
+        font-size: 1em;
+    }
+}
+
+.smallPrintItem {
+    @media only screen and (max-width: 968px) {
+        padding-bottom: var(--general-padding);
+    }
+}

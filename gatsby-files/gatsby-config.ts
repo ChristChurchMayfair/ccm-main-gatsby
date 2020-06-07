@@ -31,6 +31,11 @@ export const siteMetadata: GatsbyConfig["siteMetadata"] = {
             `This website is © Copyright Christ Church Mayfair 2019. All Rights Reserved.`,
         ],
     },
+    socialMediaAccounts: {
+        instagram: "christchurchmayfair",
+        spotify: "3VkKw3V7XA5QY06ufnfook",
+        twitter: "CC_Mayfair",
+    },
     cookieNotice:
         "This site uses cookies in order to determine usage patterns to help us make improvements.",
     cookieNoticePrivacyPolicyLinkText:
