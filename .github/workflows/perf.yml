@@ -10,6 +10,18 @@ on:
     branches: [ master ]
 
 jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: |
+            https://example.com/
+            https://example.com/blog
+          budgetPath: ./budget.json # test performance budgets
+          uploadArtifacts: true # save results as an action artifacts
+          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
   lighthouse-check:
     runs-on: ubuntu-latest
     steps:
@@ -21,19 +33,10 @@ jobs:
           ref: ${{ github.head_ref }}
       - run: ./scripts/wait_for_url.sh "${COMMIT_PREVIEW_URL}/__buildmeta/$(git rev-parse HEAD)"
         timeout-minutes: 10
-      - run: mkdir /tmp/artifacts
       - name: Run Lighthouse
-        uses: foo-software/lighthouse-check-action@master
+        uses: treosh/lighthouse-ci-action@v3
         with:
-          accessToken: ${{ secrets.GITHUB_TOKEN }}
-          author: ${{ github.actor }}
-          branch: ${{ github.ref }}
-          outputDirectory: /tmp/artifacts
           urls: ${{ env.COMMIT_PREVIEW_URL }}
-          sha: $(git rev-parse HEAD)
-          prCommentSaveOld: true
-      - name: Upload artifacts
-        uses: actions/upload-artifact@master
-        with:
-          name: Lighthouse reports
-          path: /tmp/artifacts
+          runs: 3
+          uploadArtifacts: true # save results as an action artifacts
+          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
