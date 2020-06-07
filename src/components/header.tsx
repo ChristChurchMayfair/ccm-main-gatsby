@@ -1,3 +1,4 @@
+import classnames from "classnames"
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 
@@ -5,12 +6,16 @@ import CcmLogoFull from "../content/assets/images/ccm-logo-full.inline.svg"
 import CloseMenuButton from "../content/assets/images/close-menu-button.inline.svg"
 import Hamburger from "../content/assets/images/hamburger.inline.svg"
 
+import styles from "./header.module.scss"
+
 const MAX_WIDTH_MOBILE_HEADER = 968
 
-interface Props {
-    headerColour: string | undefined
+export type HeaderColour = "light" | "dark" | "black"
+
+interface HeaderProps {
+    headerColour: HeaderColour | undefined
 }
-const Header: React.FC<Props> = ({ headerColour }) => {
+const Header: React.FC<HeaderProps> = ({ headerColour }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     useEffect(() => {
         const handler = () => {
@@ -23,22 +28,30 @@ const Header: React.FC<Props> = ({ headerColour }) => {
             window.removeEventListener("resize", handler)
         }
     })
+
+    // TODO: add .current class to menuContent <a> it link is for current page
+
     return (
         <>
-            <nav id="menu" style={isMenuOpen ? { visibility: "visible" } : {}}>
-                <Link className="logo" to="/">
+            <nav
+                id="menu"
+                className={classnames(styles.navBar, {
+                    [styles["navBar--hidden"]]: !isMenuOpen,
+                })}
+            >
+                <Link className={styles.navBarLogo} to="/">
                     <CcmLogoFull />
                 </Link>
                 <a
-                    id="close-menu"
                     href="#"
+                    className={styles.closeMenu}
                     onClick={() => {
                         setIsMenuOpen(false)
                     }}
                 >
                     <CloseMenuButton />
                 </a>
-                <div id="menu-content">
+                <div className={styles.menuContent}>
                     <Link to="/aboutus">About Us</Link>
                     <Link to="/#midweek">Midweek</Link>
                     <Link to="/families/">Families</Link>
@@ -49,15 +62,18 @@ const Header: React.FC<Props> = ({ headerColour }) => {
             </nav>
 
             <header
-                id="mobile-header"
-                className={`header mobile-header ${headerColour ?? ""}`}
-                style={isMenuOpen ? { display: "none" } : {}}
+                className={classnames(styles.mobileHeader, {
+                    [styles["mobileHeader--hidden"]]: isMenuOpen,
+                    [styles["mobileHeader--light"]]: headerColour === "light",
+                    [styles["mobileHeader--dark"]]: headerColour === "dark",
+                    [styles["mobileHeader--black"]]: headerColour === "black",
+                })}
             >
-                <Link className="logo" to="/">
+                <Link className={styles.mobileHeaderLogo} to="/">
                     <CcmLogoFull />
                 </Link>
                 <a
-                    id="open-menu"
+                    className={styles.openMenu}
                     href="#"
                     onClick={() => {
                         setIsMenuOpen(true)
@@ -68,13 +84,16 @@ const Header: React.FC<Props> = ({ headerColour }) => {
             </header>
 
             <header
-                id="header"
-                className={`header desktop-header ${headerColour}`}
+                className={classnames(styles.desktopHeader, {
+                    [styles["desktopHeader--light"]]: headerColour === "light",
+                    [styles["desktopHeader--dark"]]: headerColour === "dark",
+                    [styles["desktopHeader--black"]]: headerColour === "black",
+                })}
             >
-                <Link className="logo" to="/">
+                <Link className={styles.desktopHeaderLogo} to="/">
                     <CcmLogoFull />
                 </Link>
-                <div id="menu-content">
+                <div className={styles.menuContent}>
                     <Link to="/aboutus">About Us</Link>
                     <Link to="/#midweek">Midweek</Link>
                     <Link to="/families/">Families</Link>

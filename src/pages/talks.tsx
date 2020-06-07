@@ -14,6 +14,7 @@ import GooglePodcastBadge from "../assets/badges/google_podcasts_badge@2x.png"
 import styles from "./talks.module.scss"
 import Section from "../components/section"
 import SectionText from "../components/section-text"
+import { HeaderColour } from "../components/header"
 
 const TalksPageQuery = graphql`
     query TalksPage {
@@ -43,7 +44,7 @@ const TalksPage = () => {
     const data = useStaticQuery<GatsbyTypes.TalksPageQuery>(TalksPageQuery)
     const meta = data.markdownRemark!.frontmatter!
     return (
-        <Layout title="Talks" headerColour={meta.headerColour}>
+        <Layout title="Talks" headerColour={meta.headerColour as HeaderColour}>
             <Hero
                 sectionId="talks-hero"
                 singleImageFluid={meta.mainImage!.childImageSharp!.fluid}

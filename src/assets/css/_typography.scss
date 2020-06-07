@@ -1,0 +1,36 @@
+@mixin heading {
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+h1 {
+    @include heading;
+
+    font-size: 4em;
+    margin-top: 0em;
+    margin-bottom: 0.2em;
+    line-height: 1.5em;
+
+    @media only screen and (max-width: 968px) {
+        line-height: 0.9;
+        font-size: 3em;
+    }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include heading;
+}
+
+a {
+    color: var(--highlight-colour);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,277 @@
+@import "../mixins/full-width";
+@import "../mixins/logo";
+
+@mixin header {
+    @include full-width;
+
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(var(--header-height) + 50px);
+
+    padding-top: var(--header-vertical-padding);
+    padding-bottom: var(--header-vertical-padding);
+
+    align-content: start;
+    display: grid;
+}
+
+@mixin headerLight {
+    background: linear-gradient(
+        var(--header-background-colour),
+        rgba(0, 0, 0, 0)
+    );
+
+    .menuContent {
+        a.current,
+        a.hover {
+            border-bottom-color: var(--light-colour);
+        }
+    }
+
+    svg {
+        fill: var(--light-colour);
+    }
+}
+
+@mixin headerDark {
+    .menuContent {
+        a.current,
+        a.hover {
+            border-bottom-color: var(--dark-colour);
+        }
+    }
+
+    svg {
+        fill: var(--dark-colour);
+    }
+}
+
+@mixin headerBlack {
+    .menuContent {
+        a.current,
+        a.hover {
+            border-bottom-color: black;
+        }
+    }
+
+    svg {
+        fill: black;
+    }
+}
+
+.navBar {
+    @include full-width;
+
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: var(--nav-height);
+
+    background-color: var(--navigation-background-colour);
+
+    display: grid;
+
+    padding-top: var(--header-vertical-padding);
+    padding-bottom: var(--header-vertical-padding);
+
+    grid-template-columns: auto var(--menu-button-size);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        ". logo logo logo menu-button ."
+        ". menu-content menu-content menu-content menu-content .";
+    column-gap: 15px;
+    grid-row-gap: 15px;
+    align-items: center;
+    /* overflow: hidden; */
+
+    z-index: 2;
+
+    box-shadow: var(--standard-shadow);
+
+    transition: opacity var(--menu-transition-time);
+    -webkit-transition: opacity var(--menu-transition-time);
+
+    svg {
+        fill: var(--dark-colour);
+    }
+
+    a {
+        color: var(--dark-colour);
+    }
+
+    &--hidden {
+        visibility: hidden;
+    }
+}
+
+.navBarLogo {
+    @include logo;
+
+    grid-area: logo;
+}
+
+.mobileHeader {
+    @include header;
+
+    display: none;
+
+    @media only screen and (max-width: 968px) {
+        display: grid;
+        align-items: center;
+        grid-template-areas: ". logo logo logo openmenu .";
+    }
+
+    &--light {
+        @include headerLight;
+    }
+
+    &--dark {
+        @include headerDark;
+    }
+
+    &--black {
+        @include headerBlack;
+    }
+
+    &--hidden {
+        display: none;
+    }
+}
+
+.mobileHeaderLogo {
+    @include logo;
+
+    grid-column: 2;
+}
+
+.desktopHeader {
+    @include header;
+
+    grid-template-areas: ". logo logo logo logo menu-content menu-content menu-content menu-content menu-content menu-content menu-content menu-content .";
+
+    @media only screen and (max-width: 968px) {
+        display: none;
+    }
+
+    &--light {
+        @include headerLight;
+
+        a {
+            color: var(--light-colour);
+        }
+    }
+
+    &--dark {
+        @include headerDark;
+
+        a {
+            color: var(--dark-colour);
+        }
+    }
+
+    &--black {
+        @include headerBlack;
+
+        a {
+            color: black;
+        }
+    }
+}
+
+.desktopHeaderLogo {
+    @include logo;
+
+    grid-area: logo;
+}
+
+.menuContent {
+    font-size: 0.8em;
+    grid-area: menu-content;
+    /* width: calc(100vw - calc(var(--general-padding) * 2)); */
+    justify-items: center;
+
+    margin-top: calc(var(--general-padding) / 2);
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-column-gap: var(--general-padding);
+    grid-row-gap: var(--general-padding);
+
+    @media only screen and (min-width: 900px) {
+        grid-column-gap: var(--general-padding);
+        grid-template-columns: auto auto auto auto auto auto;
+        grid-auto-rows: 40px;
+        align-items: center;
+    }
+
+    @media only screen and (min-width: 640px) and (max-width: 900px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 40px;
+        align-items: center;
+    }
+
+    h2 {
+        display: block;
+        font-size: 1.3em;
+        padding: 0;
+        margin: 0;
+        margin-top: var(--general-padding);
+    }
+
+    a {
+        font-size: 1.3em;
+        font-style: normal;
+        display: block;
+        line-height: 1em;
+        height: 1.2em;
+        border-bottom-style: none;
+        border-bottom-width: 2px;
+
+        .current {
+            border-bottom-style: solid;
+        }
+
+        &:hover {
+            font-size: 1.3em;
+            font-style: normal;
+            display: block;
+            text-decoration: none;
+            border-bottom-style: solid;
+        }
+
+        &:visited {
+            font-size: 1.3em;
+            font-style: normal;
+        }
+    }
+}
+
+.closeMenu {
+    grid-area: menu-button;
+    width: calc(var(--menu-button-size) - 10px);
+    display: block;
+    justify-self: end;
+    fill: var(--dark-colour);
+    transition: transform, 0.1s;
+
+    svg {
+        width: calc(var(--menu-button-size) - 10px);
+    }
+}
+
+.openMenu {
+    grid-area: openmenu;
+    display: block;
+    justify-self: end;
+    transition: transform, 0.1s;
+
+    svg {
+        width: calc(var(--menu-button-size) - 10px);
+        height: calc(var(--menu-button-size) - 10px);
+    }
+}
