@@ -8,7 +8,7 @@
 import React from "react"
 
 import Head from "./head"
-import Header from "./header"
+import Header, { HeaderColour } from "./header"
 import Footer from "./footer"
 import CookieNotice from "./cookie-notice"
 import "../assets/css/global.scss"
@@ -19,7 +19,7 @@ interface Props {
     title: string | undefined
     description?: string | undefined
     meta?: Array<{ name: string; content: string }>
-    headerColour?: string
+    headerColour?: HeaderColour
 }
 const Layout: React.FC<Props> = ({
     headerColour,

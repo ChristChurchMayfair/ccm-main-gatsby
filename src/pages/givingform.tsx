@@ -15,6 +15,7 @@ import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
 import SectionText from "../components/section-text"
 import LazyLoadCss from "../components/lazy-load-css"
+import { HeaderColour } from "../components/header"
 
 const devWarning = (
     <div className={formStyles.developmentWarning}>
@@ -241,7 +242,7 @@ const GivingFormPage: React.FC = () => {
         if (formConfig == null) {
             setPageState("badconfig")
         }
-    })
+    }, [])
 
     const { register, handleSubmit, watch, errors, control } = useForm<
         GiftFormData
@@ -869,7 +870,9 @@ const GivingFormPage: React.FC = () => {
     return (
         <Layout
             title="Giving Form"
-            headerColour={data.mainInfo!.frontmatter!.headerColour}
+            headerColour={
+                data.mainInfo!.frontmatter!.headerColour as HeaderColour
+            }
         >
             <HeaderUnderlay />
             <Section intro wider dark className="intro wider dark">

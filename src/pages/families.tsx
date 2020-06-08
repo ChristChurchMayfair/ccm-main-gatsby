@@ -8,6 +8,7 @@ import Bio from "../components/bio"
 import SectionText from "../components/section-text"
 import DoubleImageSection from "../components/double-image-section"
 import Section from "../components/section"
+import { HeaderColour } from "../components/header"
 
 const FamiliesPageQuery = graphql`
     query FamiliesPage {
@@ -141,7 +142,9 @@ const Families: React.FC<{}> = () => {
 
     return (
         <Layout
-            headerColour={data.mainContent!.frontmatter!.headerColour}
+            headerColour={
+                data.mainContent!.frontmatter!.headerColour as HeaderColour
+            }
             title={data.mainContent!.frontmatter!.title}
             description={undefined}
         >

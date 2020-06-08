@@ -6,6 +6,7 @@ import Hero from "../components/hero"
 import Bio from "../components/bio"
 import Section from "../components/section"
 import SectionText from "../components/section-text"
+import { HeaderColour } from "../components/header"
 
 const LittleLambsPageQuery = graphql`
     query LittleLambsPage {
@@ -62,7 +63,9 @@ const Families: React.FC<{}> = () => {
 
     return (
         <Layout
-            headerColour={data.littleLambs!.frontmatter!.headerColour}
+            headerColour={
+                data.littleLambs!.frontmatter!.headerColour as HeaderColour
+            }
             title={data.littleLambs!.frontmatter!.title}
             description={undefined}
         >
