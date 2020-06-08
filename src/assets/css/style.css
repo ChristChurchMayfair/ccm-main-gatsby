@@ -87,7 +87,6 @@ a:hover {
 }
 
 /* Migrated to full-width SCSS mixin */
-footer,
 header {
     display: grid;
     /* PROPORTIONAL SIDE MARGINS */
@@ -142,6 +141,7 @@ nav svg {
     fill: var(--dark-colour);
 }
 
+/* .logo migrated to logo SCSS mixin */
 .logo svg {
     height: var(--logo-height);
     max-height: 60px;
@@ -386,14 +386,12 @@ section.highlight {
 
 /* Migrated to full-width SCSS mixin */
 @media only screen and (max-width: 968px) {
-    footer,
     header,
     nav {
         grid-template-columns: 0 1fr 1fr 1fr 1fr 0;
     }
 
     @supports (grid-template-columns: env(safe-area-inset-left)) {
-        footer,
         header,
         nav {
             grid-template-columns: env(safe-area-inset-left) 1fr 1fr 1fr 1fr env(
@@ -514,111 +512,6 @@ section p {
     .service .info {
         margin: 0px;
     }
-}
-
-footer {
-    grid-row-gap: var(--general-padding);
-    padding-top: calc(2 * var(--general-padding));
-    padding-bottom: calc(2 * var(--general-padding));
-    grid-template-areas:
-        ". contact contact contact contact contact links links links links links links links ."
-        ". smallprint smallprint smallprint smallprint smallprint smallprint smallprint smallprint smallprint smallprint smallprint smallprint  .";
-    grid-template-areas:
-        ". contact contact contact contact contact links links links links links links links ."
-        ". contact contact contact contact contact smallprint smallprint smallprint smallprint smallprint smallprint smallprint  .";
-    color: var(--dark-gray);
-    background-color: var(--mid-gray);
-    font-size: 0.7em;
-    font-weight: 300;
-}
-
-@media only screen and (max-width: 968px) {
-    footer {
-        grid-template-areas:
-            ". contact contact contact contact ."
-            ". links links links links ."
-            ". smallprint smallprint smallprint smallprint .";
-    }
-}
-
-footer .logo svg {
-    fill: var(--dark-gray);
-}
-
-footer a {
-    color: var(--dark-gray);
-}
-
-footer .contact {
-    grid-area: contact;
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-        "logo"
-        "address"
-        "email"
-        "phone";
-    font-size: 1.3em;
-    border-right: 1px solid var(--dark-gray);
-}
-
-footer .contact address {
-    grid-area: address;
-    margin-bottom: var(--general-padding);
-}
-
-footer .contact .logo {
-    grid-area: logo;
-    margin-bottom: var(--general-padding);
-}
-
-footer .contact .email {
-    grid-area: email;
-}
-
-footer .contact .phone {
-    grid-area: phone;
-}
-
-footer .smallprint {
-    grid-area: smallprint;
-    align-self: end;
-}
-
-footer .all-links {
-    grid-area: links;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: var(--general-padding);
-    grid-auto-rows: 1.2em;
-    font-size: 1.3em;
-    grid-row-gap: 10px;
-    margin-left: var(--general-padding);
-}
-
-@media only screen and (max-width: 968px) {
-    footer .contact,
-    footer .all-links {
-        border-right-width: 0px;
-        border-right-style: none;
-        padding-bottom: var(--general-padding);
-        margin-bottom: var(--general-padding);
-        border-bottom: 1px solid var(--dark-gray);
-    }
-
-    footer .all-links {
-        margin-left: 0;
-        font-size: 1em;
-    }
-
-    footer .smallprint .item {
-        padding-bottom: var(--general-padding);
-    }
-}
-
-address {
-    font-style: unset;
-    display: inline;
 }
 
 button,

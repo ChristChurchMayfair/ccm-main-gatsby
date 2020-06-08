@@ -1,0 +1,14 @@
+@mixin logo {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.1s;
+
+    svg {
+        height: var(--logo-height);
+        max-height: 60px;
+
+        @media only screen and (max-width: 968px) {
+            min-height: 40px;
+        }
+    }
+}

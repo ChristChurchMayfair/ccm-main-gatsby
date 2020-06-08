@@ -3,6 +3,9 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 import CcmLogo from "../content/assets/images/ccm-logo-full.inline.svg"
 
+import styles from "./footer.module.scss"
+import SocialMediaIcon from "./social-media-icon"
+
 const links: Array<{ path: string; title: string }> = [
     { path: "/littlelambs", title: "Little Lambs" },
     { path: "/covid19", title: "Covid-19" },
@@ -30,6 +33,11 @@ const Footer = () => {
                         footer {
                             smallprint
                         }
+                        socialMediaAccounts {
+                            instagram
+                            spotify
+                            twitter
+                        }
                         email
                     }
                 }
@@ -42,12 +50,12 @@ const Footer = () => {
     const email = metadata!.email!
     const smallPrint = metadata!.footer!.smallprint!
     return (
-        <footer>
-            <div className="contact">
-                <div className="logo">
+        <footer className={styles.footer}>
+            <div className={styles.contact}>
+                <div className={styles.logo}>
                     <CcmLogo />
                 </div>
-                <address>
+                <address className={styles.address}>
                     <a href={metadata!.churchMapsLink}>
                         {metadata!.churchAddress!.map((line, i) => (
                             <Fragment key={i}>
@@ -57,26 +65,44 @@ const Footer = () => {
                         ))}
                     </a>
                 </address>
-                <a className="phone" href={`tel:${officePhoneNumber}`}>
+                <a className={styles.phone} href={`tel:${officePhoneNumber}`}>
                     {officePhoneNumber}
                 </a>
-                <a className="email" href={`mailto:${email}`}>
+                <a className={styles.email} href={`mailto:${email}`}>
                     {email}
                 </a>
+                <div className={styles.socialMedia}>
+                    <SocialMediaIcon
+                        platform="twitter"
+                        username={
+                            site!.siteMetadata!.socialMediaAccounts!.twitter!
+                        }
+                    />
+                    <SocialMediaIcon
+                        platform="instagram"
+                        username={
+                            site!.siteMetadata!.socialMediaAccounts!.instagram!
+                        }
+                    />
+                    <SocialMediaIcon
+                        platform="spotify"
+                        username={
+                            site!.siteMetadata!.socialMediaAccounts!.spotify!
+                        }
+                    />
+                </div>
             </div>
-            <div className="all-links">
-                {links.map(({ path, title }) => {
-                    return (
-                        <Link key={path} to={path}>
-                            {title}
-                        </Link>
-                    )
-                })}
+            <div className={styles.allLinks}>
+                {links.map(({ path, title }) => (
+                    <Link key={path} to={path}>
+                        {title}
+                    </Link>
+                ))}
                 <a href="http://blog.christchurchmayfair.org">Blog</a>
             </div>
-            <div className="smallprint">
+            <div className={styles.smallprint}>
                 {smallPrint.map(line => (
-                    <div key={line} className="item">
+                    <div key={line} className={styles.smallPrintItem}>
                         {line}
                     </div>
                 ))}
