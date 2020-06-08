@@ -17,6 +17,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
 import { ValueIn, ValueEqual } from "../components/form/conditional-visibility"
+import SectionText from "../components/section-text"
 
 const devevelopmentEnvironmentWarning = (
     <div>
@@ -188,8 +189,8 @@ const AltGivingFormPage: React.FC = () => {
     return (
         <Layout title="Giving Form" headerColour={"dark"}>
             <HeaderUnderlay />
-            <Section className="intro wider dark">
-                <div
+            <Section intro wider dark className="intro wider dark">
+                <SectionText intro dark
                     className="text"
                     dangerouslySetInnerHTML={{
                         __html: pageData.mainInfo?.html ?? "No Content!",

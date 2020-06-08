@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form"
 import formStyles from "./form.module.scss"
 import classNames from "classnames"
 import { ValidationOptions } from "react-hook-form"
+import Section from "../section"
 
 export function isFieldRequired(
     validationOptions?: ValidationOptions
@@ -149,11 +150,11 @@ export const Form = <DataType,>({
     )
 
     return (
-        <section>
+        <Section>
             <article>
                 {formState === "badconfig" ? badlyConfiguredForm : null}
                 {formState === "submitted" ? submitted : form}
             </article>
-        </section>
+        </Section>
     )
 }
