@@ -1,4 +1,4 @@
-import { ReactElement, useState, PropsWithChildren } from "react"
+import { ReactElement, useState, PropsWithChildren, useEffect } from "react"
 import React from "react"
 import Field from "./field"
 import { useForm } from "react-hook-form"
@@ -41,6 +41,7 @@ export type FormState =
 interface FormProps<DataType> {
     genericSubmissionErrorMessage: string
     doSubmit: (data: DataType) => Promise<void>
+    stateChangeCallback: (state: FormState) => void
 }
 
 export type FormType<DataType> = PropsWithChildren<FormProps<DataType>>
@@ -48,12 +49,17 @@ export type FormType<DataType> = PropsWithChildren<FormProps<DataType>>
 export const Form = <DataType,>({
     genericSubmissionErrorMessage,
     doSubmit,
+    stateChangeCallback,
     children,
 }: PropsWithChildren<FormProps<DataType>>) => {
     const [formState, setFormState] = useState<FormState>("filling")
     const { register, handleSubmit, watch, errors, control } = useForm<
         DataType
     >()
+
+    useEffect(() => {
+        stateChangeCallback(formState)
+    }, [formState, stateChangeCallback])
 
     const fieldsWithFormWiringInjected = React.Children.map(
         children as React.ReactElement,
@@ -115,35 +121,31 @@ export const Form = <DataType,>({
     )
 
     const submitted = (
-        <section>
-            <article>
-                <h2>Form Submitted</h2>
-                <p>Your information was submitted successfully. Thank you.</p>
-                <p>
-                    If you wish to submit this form again, please refresh or
-                    reload the page.
-                </p>
-            </article>
-        </section>
+        <>
+            <h2>Form Submitted</h2>
+            <p>Your information was submitted successfully. Thank you.</p>
+            <p>
+                If you wish to submit this form again, please refresh or reload
+                the page.
+            </p>
+        </>
     )
 
     const badlyConfiguredForm = (
-        <section>
-            <article>
-                <h2>Form Configuration Error</h2>
-                <p>Sorry. There is a problem with the form configuration.</p>
-                <p>
-                    The config name is:{" "}
-                    <code>
-                        {process.env.GATSBY_GIVING_FORM_CONFIG ?? "undefined"}
-                    </code>
-                </p>
-                <p>
-                    Please inform the technical contact listed at the bottom of
-                    this page.
-                </p>
-            </article>
-        </section>
+        <>
+            <h2>Form Configuration Error</h2>
+            <p>Sorry. There is a problem with the form configuration.</p>
+            <p>
+                The config name is:{" "}
+                <code>
+                    {process.env.GATSBY_GIVING_FORM_CONFIG ?? "undefined"}
+                </code>
+            </p>
+            <p>
+                Please inform the technical contact listed at the bottom of this
+                page.
+            </p>
+        </>
     )
 
     return (

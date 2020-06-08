@@ -1,7 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
-import { Form } from "../components/form/form"
-import { ValueIn, ValueEqual } from "../components/form/form-config.types"
+import { Form, FormState } from "../components/form/form"
 import { FormSectionStart } from "../components/form/fields/form-section-start"
 import BasicTextField from "../components/form/fields/basic-text-field"
 import RadioButtonField from "../components/form/fields/radio-button-field"
@@ -17,6 +16,7 @@ import {
 import { useStaticQuery, graphql } from "gatsby"
 import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
+import { ValueIn, ValueEqual } from "../components/form/conditional-visibility"
 
 const devevelopmentEnvironmentWarning = (
     <div>
@@ -151,6 +151,8 @@ const AltGivingFormPage: React.FC = () => {
         }
     `)
 
+    const [givingFormState, setGivingFormState] = useState<FormState | null>(null)
+
     const showGiftFrequencyAndStartDate: ValueIn = {
         type: "valueInList",
         otherFieldName: "giftType",
@@ -208,6 +210,7 @@ const AltGivingFormPage: React.FC = () => {
                     googleFormSubmissionConfig.genericSubmissionError
                 }
                 doSubmit={sendToGoogleFormsApi}
+                stateChangeCallback={setGivingFormState}
             >
                 <FormSectionStart
                     name={"Information About You"}
@@ -356,7 +359,6 @@ const AltGivingFormPage: React.FC = () => {
                             defaultValue: false,
                         },
                     ]}
-                    type={"checkboxes"}
                 />
                 <DateField
                     name="retrospectiveGiftAidClaimStartDate"
@@ -365,13 +367,14 @@ const AltGivingFormPage: React.FC = () => {
                     showWhen={showRetroSpectiveGiftAidClaimDate}
                 />
             </Form>
+            {givingFormState !== "submitted" ?
             <Section id="notes">
-                <article
-                    dangerouslySetInnerHTML={{
-                        __html: pageData.notes?.html ?? "No Content!",
-                    }}
-                />
-            </Section>
+                    <article
+                        dangerouslySetInnerHTML={{
+                            __html: pageData.notes?.html ?? "No Content!",
+                        }}
+                    />
+            </Section> : null}
         </Layout>
     )
 }

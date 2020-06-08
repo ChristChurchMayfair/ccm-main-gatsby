@@ -7,6 +7,9 @@ import { prependRequired } from "../form"
 import { Controller } from "react-hook-form"
 import DatePicker from "react-datepicker"
 import { shouldShowField } from "../conditional-visibility"
+// @ts-ignore
+import datepickerCssUrl from "!file-loader!react-datepicker/dist/react-datepicker.min.css"
+import LazyLoadCss from "../../../components/lazy-load-css"
 
 type DateFieldProps = CommonField & ReactHookFormWiring & {
     placeholder?: string
@@ -32,6 +35,8 @@ const DateField: React.FC<DateFieldProps> = ({
     contextualHelp = prependRequired(validation, contextualHelp)
 
     return (
+        <>
+        <LazyLoadCss url={datepickerCssUrl} />
         <Field
             labelText={label}
             labelFor={name}
@@ -53,6 +58,7 @@ const DateField: React.FC<DateFieldProps> = ({
                 rules={validation}
             />
         </Field>
+        </>
     )
 }
 
