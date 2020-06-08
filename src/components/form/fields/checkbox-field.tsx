@@ -1,11 +1,21 @@
-import { Checkboxes, CommonFormWiring } from "./form-config.types"
-import Field from "./field"
+import { ReactHookFormWiring, CommonField } from "../form-config.types"
+import Field from "../field"
 import React from "react"
 import classNames from "classnames"
-import formStyles from "./form.module.scss"
-import { prependRequired, generateConditional } from "./form"
+import formStyles from "../form.module.scss"
+import { prependRequired } from "../form"
+import { shouldShowField, VisibilityCondition } from "../conditional-visibility"
 
-type CheckBoxFieldProps = Checkboxes & CommonFormWiring
+export type CheckBoxOption = {
+    label: string
+    id: string
+    defaultValue: boolean
+    showWhen?: VisibilityCondition
+}
+
+type CheckBoxFieldProps = CommonField & ReactHookFormWiring & {
+    options: CheckBoxOption[]
+}
 
 const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
     name,
@@ -19,9 +29,9 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
     showWhen
 }) => {
 
-    const shouldDisplayThisField = generateConditional(showWhen, watch)
+    const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
-    if (!shouldDisplayThisField) {
+    if (shouldDisplayThisField === false) {
         return <></>
     }
 

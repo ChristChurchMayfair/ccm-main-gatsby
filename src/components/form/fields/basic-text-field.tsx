@@ -1,11 +1,15 @@
-import Field from "./field"
+import Field from "../field"
 import React from "react"
 import classNames from "classnames"
-import formStyles from "./form.module.scss"
-import { BasicText, CommonFormWiring } from "./form-config.types"
-import { prependRequired, generateConditional } from "./form"
+import formStyles from "../form.module.scss"
+import { ReactHookFormWiring, CommonField } from "../form-config.types"
+import { prependRequired } from "../form"
+import { shouldShowField } from "../conditional-visibility"
 
-type BasicTextFieldProps = BasicText & CommonFormWiring
+type BasicTextFieldProps = CommonField & ReactHookFormWiring & {
+    placeholder?: string
+    autoComplete?: string
+}
 
 const BasicTextField: React.FC<BasicTextFieldProps> = ({
     label,
@@ -20,9 +24,9 @@ const BasicTextField: React.FC<BasicTextFieldProps> = ({
     watch
 }) => {
 
-    const shouldDisplayThisField = generateConditional(showWhen, watch)
+    const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
-    if (!shouldDisplayThisField) {
+    if (shouldDisplayThisField === false) {
         return <></>
     }
 

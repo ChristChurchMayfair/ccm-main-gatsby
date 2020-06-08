@@ -1,14 +1,16 @@
-import Field from "./field"
+import Field from "../field"
 import React from "react"
 import classNames from "classnames"
-import formStyles from "./form.module.scss"
-import { DateFieldConfig, CommonFormWiring } from "./form-config.types"
-import { generateConditional, prependRequired } from "./form"
+import formStyles from "../form.module.scss"
+import { ReactHookFormWiring, CommonField } from "../form-config.types"
+import { prependRequired } from "../form"
 import { Controller } from "react-hook-form"
 import DatePicker from "react-datepicker"
+import { shouldShowField } from "../conditional-visibility"
 
-
-type DateFieldProps = DateFieldConfig & CommonFormWiring
+type DateFieldProps = CommonField & ReactHookFormWiring & {
+    placeholder?: string
+}
 
 const DateField: React.FC<DateFieldProps> = ({
     name,
@@ -21,9 +23,9 @@ const DateField: React.FC<DateFieldProps> = ({
     watch,
     control,
 }) => {
-    const shouldDisplayThisField = generateConditional(showWhen, watch)
+    const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
-    if (!shouldDisplayThisField) {
+    if (shouldDisplayThisField === false) {
         return <></>
     }
 

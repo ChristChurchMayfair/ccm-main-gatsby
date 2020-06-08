@@ -1,11 +1,21 @@
-import { Radio, CommonFormWiring } from "./form-config.types"
-import Field from "./field"
+import { ReactHookFormWiring, CommonField } from "../form-config.types"
+import Field from "../field"
 import React from "react"
 import classNames from "classnames"
-import formStyles from "./form.module.scss"
-import { generateConditional, prependRequired } from "./form"
+import formStyles from "../form.module.scss"
+import { prependRequired } from "../form"
+import { shouldShowField } from "../conditional-visibility"
 
-type RadioButtonFieldProps = Radio & CommonFormWiring
+type RadioOption = {
+    id: string
+    name: string
+}
+
+type Radio = {
+    options: RadioOption[]
+}
+
+type RadioButtonFieldProps = Radio & CommonField & ReactHookFormWiring
 
 const RadioButtonField: React.FC<RadioButtonFieldProps> = ({
     name,
@@ -19,9 +29,9 @@ const RadioButtonField: React.FC<RadioButtonFieldProps> = ({
     validation
 }) => {
 
-    const shouldDisplayThisField = generateConditional(showWhen, watch)
+    const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
-    if (!shouldDisplayThisField) {
+    if (shouldDisplayThisField === false) {
         return <></>
     }
 

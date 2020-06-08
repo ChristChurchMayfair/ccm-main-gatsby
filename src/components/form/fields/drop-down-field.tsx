@@ -1,14 +1,24 @@
-import { DropDown, DropDownChoice } from "./form-config.types"
-import { generateConditional, prependRequired } from "./form"
-import Field from "./field"
+import { ReactHookFormWiring, CommonField } from "../form-config.types"
+import { prependRequired } from "../form"
+import Field from "../field"
 import React from "react"
-import formStyles from "./form.module.scss"
+import formStyles from "../form.module.scss"
+import { shouldShowField } from "../conditional-visibility"
 
-type DropDownFieldProps = DropDown & {
-    errors?: any
-    register?: any
-    watch?: any
+type DropDownChoice = {
+    id: string
+    label: string
 }
+
+type DropDown = {
+    choices: DropDownChoice[]
+    allowOther?: boolean
+    otherOptionLabel?: string
+    otherInputIdSuffix?: string
+    otherInputLabel?: string
+}
+
+type DropDownFieldProps = DropDown & CommonField & ReactHookFormWiring
 
 const DropDownField: React.FC<DropDownFieldProps> = ({
     name,
@@ -25,9 +35,9 @@ const DropDownField: React.FC<DropDownFieldProps> = ({
     errors,
     watch,
 }) => {
-    const shouldDisplayThisField = generateConditional(showWhen, watch)
+    const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
-    if (!shouldDisplayThisField) {
+    if (shouldDisplayThisField === false) {
         return <></>
     }
 

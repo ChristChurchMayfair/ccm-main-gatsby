@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form"
 
 import formStyles from "./form.module.scss"
 import classNames from "classnames"
-import { VisibilityCondition } from "./form-config.types"
 import { ValidationOptions } from "react-hook-form"
 
 export function isFieldRequired(
@@ -30,24 +29,6 @@ export function prependRequired(
         }
     }
     return contextualHelp ?? ""
-}
-
-export function generateConditional(
-    showWhen: VisibilityCondition,
-    watch: any //TODO - use a proper type
-): boolean {
-    if (showWhen === undefined) {
-        return true
-    }
-
-    switch (showWhen.type) {
-        case "valueEqualTo": {
-            return watch(showWhen.otherFieldName) === showWhen.hasValueEqualTo
-        }
-        case "valueInList": {
-            return showWhen.values.includes(watch(showWhen.otherFieldName))
-        }
-    }
 }
 
 export type FormState =

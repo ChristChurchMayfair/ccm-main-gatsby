@@ -1,5 +1,5 @@
 import React from "react"
-import formStyles from "./form.module.scss"
+import formStyles from "../form.module.scss"
 import classNames from "classnames"
 
 type SectionStartProps = {
