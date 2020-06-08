@@ -13,6 +13,7 @@ import LazyLoadCss from "../../../components/lazy-load-css"
 
 type DateFieldProps = CommonField & ReactHookFormWiring & {
     placeholder?: string
+    maxDate?: Date
 }
 
 const DateField: React.FC<DateFieldProps> = ({
@@ -25,6 +26,7 @@ const DateField: React.FC<DateFieldProps> = ({
     errors,
     watch,
     control,
+    maxDate
 }) => {
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
@@ -49,7 +51,7 @@ const DateField: React.FC<DateFieldProps> = ({
                 wrapperClassName={classNames(formStyles.formItemInput)}
                 className={formStyles.dateInput}
                 dateFormat="yyyy-MM-dd"
-                maxDate={new Date()} //Can't select beyond today
+                maxDate={maxDate} // Can't select beyond today
                 valueName="selected" // DateSelect value's name is selected
                 onChange={([selected]) => selected}
                 name={name}

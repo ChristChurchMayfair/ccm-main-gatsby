@@ -363,6 +363,7 @@ const AltGivingFormPage: React.FC = () => {
                 <DateField
                     name="retrospectiveGiftAidClaimStartDate"
                     label="Claim Gift Aid Back Until"
+                    maxDate={new Date()}
                     validation={{ required: "Please select a date." }}
                     showWhen={showRetroSpectiveGiftAidClaimDate}
                 />
