@@ -113,7 +113,7 @@ An example React component extract:
     <div className={styles.songName}>{songName}</div>
     <div className={styles.buttons}>
         <button
-            onClick={() => setPaused(false)}
+            onClick={onPlay}
             className={classnames(styles.playButton, {
                 [styles["playButton--active"]]: isPlaying,
             })}
@@ -121,7 +121,7 @@ An example React component extract:
             Play
         </button>
         <button
-            onClick={() => setPaused(true)}
+            onClick={onPause}
             className={classnames(styles.pauseButton, {
                 [styles["pauseButton--active"]]: isPaused,
             })}
