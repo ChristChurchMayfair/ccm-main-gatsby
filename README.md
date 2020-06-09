@@ -1,4 +1,4 @@
-# CCM Website
+# CCM Website [![GitHub CI Status](https://github.com/ChristChurchMayfair/ccm-main-gatsby/workflows/CI/badge.svg)](https://github.com/ChristChurchMayfair/ccm-main-gatsby/actions?query=workflow%3ACI+branch%3Amaster) [![Netlify Status](https://api.netlify.com/api/v1/badges/9f94acb3-4c23-4021-89b4-4a6bf281ff1b/deploy-status)](https://app.netlify.com/sites/ccm-main-gatsby/deploys)
 
 This is the repo for [Christ Church Mayfair's website](https://christchurchmayfair.org).
 
