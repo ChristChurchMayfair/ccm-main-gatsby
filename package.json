@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "ccm-main-gatsby",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Christ Church Mayfair's website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Tom Duckering <tom@christchurchmayfair.org>",
   "dependencies": {
     "@sanity/client": "^1.149.7",
     "@types/date-fns": "^2.6.0",
@@ -94,9 +94,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/ChristChurchMayfair/ccm-main-gatsby"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/ChristChurchMayfair/ccm-main-gatsby/issues"
   }
 }

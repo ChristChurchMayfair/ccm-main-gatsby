@@ -1,99 +1,174 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# CCM Website [![GitHub CI Status](https://github.com/ChristChurchMayfair/ccm-main-gatsby/workflows/CI/badge.svg)](https://github.com/ChristChurchMayfair/ccm-main-gatsby/actions?query=workflow%3ACI+branch%3Amaster) [![Netlify Status](https://api.netlify.com/api/v1/badges/9f94acb3-4c23-4021-89b4-4a6bf281ff1b/deploy-status)](https://app.netlify.com/sites/ccm-main-gatsby/deploys)
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This is the repo for [Christ Church Mayfair's website](https://christchurchmayfair.org).
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+## Report a problem
 
-## 🚀 Quick start
+If you see something that doesn't look right, <del>text British Transport Police on 61016</del> [create an issue](https://github.com/ChristChurchMayfair/ccm-main-gatsby/issues/new/choose) or [email Tom Duckering](mailto:tom@christchurchmayfair.org).
 
-1.  **Create a Gatsby site.**
+## Contributing
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+The website is built using [Gatsby](https://www.gatsbyjs.org/), a static site generator built on [React](https://reactjs.org/). We use [TypeScript](https://www.typescriptlang.org/), [GraphQL](https://graphql.org/) and [Sass](https://sass-lang.com/).
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+We coordinate and discuss tasks on the #website channel of [our Slack workspace](https://ccm-site.slack.com) - [email Tom Duckering](mailto:tom@christchurchmayfair.org) if you don't already have an account here and want to join.
 
-1.  **Start developing.**
+### Prerequisites
 
-    Navigate into your new site’s directory and start it up.
+-   A basic knowledge of git.
+-   [Yarn](https://classic.yarnpkg.com/en/docs/install) - follow the instructions for your operating system. You may need to install Node.js separately if you are running Windows.
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+### Getting started
 
-1.  **Open the source code and start editing!**
+Clone this repo and then inside the folder:
 
-    Your site is now running at `http://localhost:8000`!
+#### Install Yarn modules
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+```bash
+yarn install
+```
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+#### Run the `develop` script
 
-## 🧐 What's inside?
+```bash
+yarn develop
+```
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+A local version of the website should now be running on port 8000. Open `http://localhost:8000` on your browser.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+### Coding guidelines
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+Please follow all conventions already established in the code. We try to write and structure our code in a way which is as modern and idiomatic as possible, for example:
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+-   `const` and `let` - no `var`s
+-   React hooks wherever possible and required
+-   prefer functional-style Javascript
+-   optional chaining wherever possible and required.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+We use [ESLint](https://eslint.org/) for linting and [Prettier](https://prettier.io/) for formatting. We recommend that you install the plugins for these two tools on your editor of choice.
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+```bash
+# Run the TypeScript type checker
+yarn type-check
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+# Run the lint checker
+yarn lint
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+# Run the formatting checker
+yarn prettier-check
+```
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+### Tests
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+You should write unit tests for any code which performs significant logic. Test files live in a folder named `__tests__` in the same directory as the file to be tested, and should have the `.spec.ts` or `.spec.tsx` extension. For example, if we wanted to write tests for a function in the `numbers.ts` file:
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+```
+mathsUtils/
+    isOdd.ts
+    isThirteen.ts
+    numbers.ts
+    __tests__/
+        isOdd.spec.ts
+        numbers.spec.ts  # tests should be written in here
+```
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+We write tests using the [Jest framework](https://jestjs.io/).
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+```bash
+# Run all tests
+yarn test
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+# Run tests in files whose name contains "filters"
+yarn test filters
+```
 
-## 🎓 Learning Gatsby
+### Repo structure overview
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+Some highlights:
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+```
+.
+├── src/
+│   ├── assets/             # fontfaces, icons etc.
+│   ├── components/         # shared, reusable React components
+│   │   ├── foo.module.scss
+│   │   └── foo.tsx
+│   ├── content/            # Markdown content
+│   ├── mixins/             # Sass mixins
+│   ├── pages/              # React components for pages
+│   ├── templates/          # Page templates
+│   └── utils/              # Common utility functions
+└── static/                 # Static files - downloads
+    └── _redirects          # christchurchmayfair.org/* redirects
+```
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+### Styling (aka. CSS)
 
-## 💫 Deploy
+We uses Sass modules to style each component. Style sheets should be named `component-name.module.scss`. We use [BEM naming rules](http://getbem.com/naming/), but without elements since CSS modules are namespaced (elements follow the same conventions as blocks).
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+An example React component extract:
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
+```tsx
+// music-player.tsx
+<div className={styles.musicPlayer}>
+    <div className={styles.songName}>{songName}</div>
+    <div className={styles.buttons}>
+        <button
+            onClick={onPlay}
+            className={classnames(styles.playButton, {
+                [styles["playButton--active"]]: isPlaying,
+            })}
+        >
+            Play
+        </button>
+        <button
+            onClick={onPause}
+            className={classnames(styles.pauseButton, {
+                [styles["pauseButton--active"]]: isPaused,
+            })}
+        >
+            Pause
+        </button>
+    </div>
+</div>
+```
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+...and its accompanying Sass stylesheet:
+
+```scss
+/* music-player.module.scss */
+.musicPlayer {
+    /* ... */
+
+    @media only screen and (max-width: 968px) {
+        /* ... */
+    }
+}
+
+.songName {
+    /* ... */
+}
+
+.playButton {
+    /* ... */
+
+    &--active {
+        /* ... */
+    }
+}
+
+.pauseButton {
+    /* ... */
+
+    &--active {
+        /* ... */
+    }
+}
+```
+
+Global styles should be written in or referenced from `src/assets/css/global.scss`.
+
+### GraphQL
+
+Gatsby uses GraphQL to fetch data from Markdown content files. We also use it to fetch some data at runtime from [Sanity CMS](https://www.sanity.io/).
+
+You can use the GraphiQL Explorer to test out Gatsby queries - you can access it at http://localhost:8000/___graphql after running `yarn develop`. [Gatsby's website has a guide to using GraphQL.](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)
