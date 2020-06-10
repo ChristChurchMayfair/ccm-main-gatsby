@@ -3,7 +3,7 @@ name: Regarding Coronavirus
 status: live
 eventType: important-notice
 order: 3
-lastUpdated: 15:00 5 Jun 2020
+lastUpdated: 22:00 10 Jun 2020
 features:
     - title: Blog
       description: |
@@ -21,8 +21,8 @@ In the light of Government advice, all Church meetings will now be online.
 
 Our two Sunday services will be streamed each week:
 
-**10:15am** [Facebook Live](https://www.facebook.com/christchurch.mayfair.1) and [YouTube](https://youtu.be/4iizBdBFyR4)
+**10:15am** [Facebook Live](https://www.facebook.com/christchurch.mayfair.1) and [YouTube](https://youtu.be/Of6X9a9AkgM)
 
-**6:00pm** [Facebook Live](https://www.facebook.com/christchurch.mayfair.1) and [YouTube](https://youtu.be/uXEgsfT219w)
+**6:00pm** [Facebook Live](https://www.facebook.com/christchurch.mayfair.1) and [YouTube](https://youtu.be/RMo4Qit8HCQ)
 
 Midweek groups will be contacted by their leaders.
