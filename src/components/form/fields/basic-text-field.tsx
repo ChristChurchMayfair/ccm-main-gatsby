@@ -27,16 +27,14 @@ const BasicTextField: React.FC<BasicTextFieldProps> = ({
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
     if (shouldDisplayThisField === false) {
-        return <></>
+        return null
     }
-
-    contextualHelp = prependRequired(validation, contextualHelp)
 
     return (
         <Field
             key={name}
             labelText={label}
-            contextualHelp={contextualHelp}
+            contextualHelp={prependRequired(validation, contextualHelp)}
             error={errors[name]?.message}
         >
             <input

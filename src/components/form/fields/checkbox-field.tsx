@@ -32,10 +32,8 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
     if (shouldDisplayThisField === false) {
-        return <></>
+        return null
     }
-
-    contextualHelp = prependRequired(validation, contextualHelp)
     
     const inputDivs = options.map(option => {
         return (
@@ -63,7 +61,7 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
         <Field
             key={name}
             labelText={label}
-            contextualHelp={contextualHelp}
+            contextualHelp={prependRequired(validation, contextualHelp)}
             error={errors[name]?.message}
         >
             <div className={formStyles.formItemMultipleChoiceChoices}>

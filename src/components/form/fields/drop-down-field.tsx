@@ -38,10 +38,8 @@ const DropDownField: React.FC<DropDownFieldProps> = ({
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
     if (shouldDisplayThisField === false) {
-        return <></>
+        return null
     }
-
-    contextualHelp = prependRequired(validation, contextualHelp)
 
     const OtherOptionIdAndValue = "other"
     let optionsToRender: DropDownChoice[] = []
@@ -94,7 +92,7 @@ const DropDownField: React.FC<DropDownFieldProps> = ({
         <>
             <Field
                 labelText={label}
-                contextualHelp={contextualHelp}
+                contextualHelp={prependRequired(validation, contextualHelp)}
                 error={errors[name]?.message}
             >
                 <select

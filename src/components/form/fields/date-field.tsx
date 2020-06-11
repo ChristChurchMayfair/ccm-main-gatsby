@@ -31,10 +31,8 @@ const DateField: React.FC<DateFieldProps> = ({
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
     if (shouldDisplayThisField === false) {
-        return <></>
+        return null
     }
-
-    contextualHelp = prependRequired(validation, contextualHelp)
 
     return (
         <>
@@ -43,7 +41,7 @@ const DateField: React.FC<DateFieldProps> = ({
             labelText={label}
             labelFor={name}
             error={errors[name]?.message}
-            contextualHelp={contextualHelp}
+            contextualHelp={prependRequired(validation, contextualHelp)}
         >
             <Controller
                 as={DatePicker}
