@@ -198,13 +198,19 @@ section.london-living a {
                 width: 100%;
             }
         }
+
+        .video {
+            width: 100%;
+        }
     }
 
     .image {
         grid-area: image;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position-x: center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position-x: center;
+
+        overflow: hidden;
 
         img {
             width: 100%;

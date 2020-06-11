@@ -69,7 +69,7 @@ const LondonLivingPage: React.FC<{}> = () => {
                     <p>{episode.blurb}</p>
                 </div>
                 <div className={styles.image}>
-                    <Img fluid={imageFlud} />
+                    <Img fluid={imageFlud} objectFit={"fit"} objectPosition={"top"}/>
                 </div>
                 <div className={styles.media}>
                     <div className={styles.audio}>
@@ -77,9 +77,9 @@ const LondonLivingPage: React.FC<{}> = () => {
                             <source src={episode.audioUrl} type="audio/mpeg" />
                         </audio>
                     </div>
-                    <div className={styles.video}>
+                    <div>
                         {episode.youTubeVideoId != null ? (
-                            <YouTube videoId={episode.youTubeVideoId} />
+                            <YouTube className={styles.video} videoId={episode.youTubeVideoId} />
                         ) : null}
                     </div>
                 </div>
@@ -101,7 +101,12 @@ const LondonLivingPage: React.FC<{}> = () => {
         }
 
         return (
-            <a className={styles.linkBadge} href={link.link} target="_blank" rel="noopener noreferrer">
+            <a
+                className={styles.linkBadge}
+                href={link.link}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 {badge}
             </a>
         )
