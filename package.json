@@ -9,6 +9,7 @@
     "@types/date-fns": "^2.6.0",
     "@types/query-string": "^6.3.0",
     "@types/react-datepicker": "^2.11.0",
+    "@types/react-youtube": "^7.6.2",
     "classnames": "^2.2.6",
     "date-fns": "^2.14.0",
     "gatsby": "^2.21.7",
@@ -27,6 +28,7 @@
     "react-intersection-observer": "^8.26.2",
     "react-modal": "^3.5.1",
     "react-spinkit": "^3.0.0",
+    "react-youtube": "^7.11.2",
     "styled-components": "^5.1.0"
   },
   "devDependencies": {
@@ -82,7 +84,7 @@
     "develop": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "type-check": "tsc --noEmit",
+    "type-check": "tsc --noEmit --skipLibCheck",
     "type-check:watch": "tsc --noEmit --watch",
     "build-to-bootstrap": "ABORT_AFTER_BOOTSTRAP=1 yarn build",
     "serve": "gatsby serve",
@@ -90,7 +92,8 @@
     "lint": "yarn eslint src --ext .js,.jsx,.ts,.tsx",
     "prettier-check": "yarn prettier 'src/**/*.{ts,tsx,js,jsx,css}' --list-different",
     "test": "yarn jest",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "pre-commit-check": "yarn lint && yarn prettier-check && yarn test && yarn type-check"
   },
   "repository": {
     "type": "git",

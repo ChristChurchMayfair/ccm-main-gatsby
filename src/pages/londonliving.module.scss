@@ -1,0 +1,217 @@
+$break: 968px;
+
+.londonLiving {
+    --background-color: rgb(30, 30, 30);
+    --light-color: #faf8df;
+    --highlight-color: #dda443;
+    background-color: var(--background-color);
+    color: var(--light-color);
+
+    a {
+        color: var(--highlight-color);
+    }
+
+    p {
+        font-weight: 200;
+    }
+
+    .content {
+        grid-area: content;
+    }
+}
+
+section.london-living a {
+    color: var(--highlight-color);
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        "blurb blurb blurb blurb blurb blurb blurb . . . . . "
+        "links links links links links links links links links links links links";
+    margin-bottom: calc(var(--general-padding) / 2);
+    row-gap: calc(var(--general-padding) * 2);
+
+    @media only screen and (max-width: $break) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "blurb"
+            "links";
+        margin-bottom: calc(var(--general-padding) * 2);
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .blurb {
+        grid-area: blurb;
+    }
+    
+    .links {
+        grid-area: links;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: var(--general-padding);
+        margin-bottom: 0px;
+        border-bottom-width: 2px;
+        border-bottom-color: var(--light-color);
+        border-bottom-style: solid;
+        padding-bottom: var(--general-padding);
+        height: 50px;
+
+        @media only screen and (max-width: 480px) {
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: calc(var(--general-padding) / 2);
+        }
+
+        @media only screen and (min-width: 480px) and (max-width: 680px) {
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-bottom: calc(var(--general-padding) / 2);
+        }
+
+        .linkBadge {
+            svg {
+                height: 50px;
+            }
+        }
+    }
+}
+
+.podcast-btn {
+    background-repeat: no-repeat;
+    background-size: auto 50px;
+    min-height: 50px;
+    @media only screen and (max-width: $break) {
+        background-size: contain;
+    }
+}
+
+/* podcast link button styling (hacky so needs to be rebuilt using md method) */
+
+.button {
+    margin-top: var(--general-padding);
+    background-color: var(--highlight-color);
+    color: var(--background-color);
+}
+
+.podcast {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        "blurb blurb blurb blurb blurb blurb blurb . . . . . "
+        "episodes episodes episodes episodes episodes episodes episodes episodes episodes episodes episodes episodes ";
+    h1 {
+        grid-area: header;
+        margin-bottom: -0.2em;
+    }
+
+    .blurb {
+        grid-area: blurb;
+        margin-bottom: calc(var(--general-padding) / 3);
+
+        @media only screen and (max-width: $break) {
+            margin-bottom: var(--general-padding);
+        }
+    }
+
+    @media only screen and (max-width: $break) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "blurb"
+            "episodes";
+
+        h1 {
+            margin-bottom: 0.2em;
+        }
+    }
+}
+
+.episodes {
+    grid-area: episodes;
+}
+
+.episode {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: calc(var(--general-padding) / 2);
+    grid-template-rows: auto auto 410px;
+    grid-template-areas:
+        "header header header header header header header header header header header header"
+        "blurb blurb blurb blurb blurb blurb blurb blurb blurb . . . "
+        "image image image image media media media media media media media media "
+        "image image image image media media media media media media media media ";
+    border-width: 2px;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--light-color);
+    border-bottom-style: solid;
+    padding-bottom: var(--general-padding);
+
+    &:nth-of-type(1) {
+        border-width: 2px;
+        border-top-width: 2px;
+        border-top-color: var(--light-color);
+        border-top-style: solid;
+    }
+
+    @media only screen and (max-width: $break) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "blurb"
+            "image"
+            "media";
+    }
+
+    h2 {
+        grid-area: header;
+        font-family: var(--body-font);
+        font-weight: 500;
+        font-size: 1.4em;
+        line-height: 1em;
+        text-transform: none;
+        margin-bottom: 0;
+    }
+
+    .blurb {
+        grid-area: blurb;
+        p {
+            margin-block-end: 0px;
+        }
+    }
+
+    .media {
+        grid-area: media;
+        display: grid;
+        grid-template-rows: auto;
+        grid-row-gap: var(--general-padding);
+
+        .audio {
+            audio {
+                width: 100%;
+            }
+        }
+
+        .video {
+            width: 100%;
+        }
+    }
+
+    .image {
+        grid-area: image;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position-x: center;
+
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+}
