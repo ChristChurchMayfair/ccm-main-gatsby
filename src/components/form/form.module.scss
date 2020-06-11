@@ -1,17 +1,17 @@
-@import "../mixins/button";
+@import "../../mixins/button";
 
 .developmentWarning {
     background-color: red;
     color: white;
 }
 
-.givingForm h1,
-.givingForm h2,
-.givingForm h3 {
+.form h1,
+.form h2,
+.form h3 {
     font-family: var(--body-font);
 }
 
-.givingForm h3 {
+.form h3 {
     text-transform: none;
     font-weight: 400;
 }
@@ -60,24 +60,23 @@
     margin-bottom: var(--general-padding);
 }
 
-.declaration {
+.italicised {
     font-style: italic;
-    margin-bottom: var(--general-padding);
 }
 
 select, .dateInput {
     -webkit-appearance: none;
-    background-image: url(../content/assets/images/selecthamburger.svg);
+    background-image: url(../../content/assets/images/selecthamburger.svg);
     background-repeat: no-repeat;
     background-position: top 5px right 8px;
     background-size: 36px 36px;
 }
 
-.givingForm input[type="text"],
-.givingForm input[type="email"],
-.givingForm input[type="date"],
-.givingForm input[type="radio"] + label,
-.givingForm input[type="checkbox"] + label,
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="date"],
+.form input[type="radio"] + label,
+.form input[type="checkbox"] + label,
 select {
     border-color: var(--dark-gray);
     border-width: 1px;
@@ -95,18 +94,18 @@ select {
     border-radius: 0px;
 }
 
-.givingForm input[type="menulist-button"] {
+.form input[type="menulist-button"] {
     border: 1px solid var(--mid-gray);
     border-radius: 0px;
 }
 
-.givingForm input[type="checkbox"],
-.givingForm input[type="radio"] {
+.form input[type="checkbox"],
+.form input[type="radio"] {
     display: none;
 }
 
-.givingForm input[type="radio"] + label,
-.givingForm input[type="checkbox"] + label {
+.form input[type="radio"] + label,
+.form input[type="checkbox"] + label {
     background-color: var(--light-colour);
     color: var(--dark-colour);
     border-color: var(--dark-colour);
@@ -115,31 +114,31 @@ select {
     background-repeat: no-repeat;
 }
 
-.givingForm input[type="radio"] + label {
-    background-image: url(../content/assets/images/radio-unchecked.svg);
+.form input[type="radio"] + label {
+    background-image: url(../../content/assets/images/radio-unchecked.svg);
     background-position: top 12px left 12px;
     background-size: 21px 21px;
 }
 
-.givingForm input[type="checkbox"] + label {
-    background-image: url(../content/assets/images/checkbox-unchecked.svg);
+.form input[type="checkbox"] + label {
+    background-image: url(../../content/assets/images/checkbox-unchecked.svg);
     background-position: top 12px left 12px;
     background-size: 21px 21px;
 }
 
-.givingForm input[type="checkbox"]:checked + label,
-.givingForm input[type="radio"]:checked + label {
+.form input[type="checkbox"]:checked + label,
+.form input[type="radio"]:checked + label {
     background-color: green;
     color: var(--light-colour);
     border-color: green;
 }
 
-.givingForm input[type="radio"]:checked + label {
-    background-image: url(../content/assets/images/radio-checked.svg);
+.form input[type="radio"]:checked + label {
+    background-image: url(../../content/assets/images/radio-checked.svg);
 }
 
-.givingForm input[type="checkbox"]:checked + label {
-    background-image: url(../content/assets/images/checkbox-checked.svg);
+.form input[type="checkbox"]:checked + label {
+    background-image: url(../../content/assets/images/checkbox-checked.svg);
     background-position: top 7px left 7px;
     background-size: 33px 33px;
 }

@@ -67,7 +67,7 @@
     "gatsby-transformer-remark-frontmatter": "^0.1.0",
     "gatsby-transformer-sharp": "^2.5.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^25.5.3",
+    "jest": "^26.0.1",
     "patch-package": "^6.2.2",
     "postinstall-postinstall": "^2.1.0",
     "prettier": "2.0.5",
