@@ -1,0 +1,50 @@
+.gallery {
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 1fr;
+
+    h3 {
+        font-family: "Klinic Slab";
+        text-transform: none;
+        font-weight: 300;
+    }
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: var(--general-padding);
+}
+
+@media only screen and (max-width: 968px) {
+    .thumbnails {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.playerCloseIcon {
+    cursor: pointer;
+    svg {
+        width: 50px;
+        height: 50px;
+        
+    }
+}
+
+.videoThumbnailImage {
+    width: 100%;
+    cursor: pointer;
+}
+
+.player {
+    display: none;
+}
+
+.playerVisible {
+    display: block;
+}
+
+.youtubePlayer {
+    width: 100%;
+    height: 500px;
+}

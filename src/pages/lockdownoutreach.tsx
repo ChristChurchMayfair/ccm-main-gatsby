@@ -4,17 +4,40 @@ import YouTube from "react-youtube"
 
 import Layout from "../components/layout"
 
-import YouTubeThumbNail from "../components/youtube-thumbnail"
+import YouTubeThumbNail from "../components/youtube/youtube-thumbnail"
 
 import videoStyles from "../components/videos.module.scss"
+import Bio from "../components/bio"
+import Section from "../components/section"
+import HeaderUnderlay from "../components/header-underlay"
+import SectionText from "../components/section-text"
+import YouTubeGallery from "../components/youtube/youtube-gallery"
 
 const MusicPage: React.FC<{}> = () => {
     const data = useStaticQuery<GatsbyTypes.LockdownOutreachQuery>(graphql`
         query LockdownOutreach {
+            evangelists: allSanityPerson(
+                filter: {
+                    roles: {
+                        elemMatch: { slug: { current: { eq: "evangelist" } } }
+                    }
+                }
+            ) {
+                nodes {
+                    ...StaffProfile
+                }
+            }
             intro: markdownRemark(
                 fileAbsolutePath: { regex: "/lockdownoutreach/intro.md$/" }
             ) {
                 html
+                fields {
+                    frontmattermd {
+                        findOutMoreText {
+                            html
+                        }
+                    }
+                }
             }
             videos: markdownRemark(
                 fileAbsolutePath: { regex: "/lockdownoutreach/videos.md$/" }
@@ -27,10 +50,19 @@ const MusicPage: React.FC<{}> = () => {
                     }
                 }
             }
-            resources: markdownRemark(
-                fileAbsolutePath: { regex: "/lockdownoutreach/resources.md$/" }
+            resources: allMarkdownRemark(
+                filter: {
+                    fileAbsolutePath: {
+                        regex: "/lockdownoutreach/resources/*.md/"
+                    }
+                }
             ) {
-                html
+                edges {
+                    node {
+                        id
+                        html
+                    }
+                }
             }
             stories: markdownRemark(
                 fileAbsolutePath: { regex: "/lockdownoutreach/stories.md$/" }
@@ -46,18 +78,20 @@ const MusicPage: React.FC<{}> = () => {
             title={"Lockdown Outreach"}
             description={undefined}
         >
-            <section className="header-underlay" />
+            <HeaderUnderlay />
 
-            <section className="intro wider dark">
-                <div
-                    className="text"
+            <Section intro dark wider className="intro wider dark">
+                <SectionText
+                    intro
+                    dark
+                    className={"text"}
                     dangerouslySetInnerHTML={{
                         __html: data.intro?.html,
                     }}
-                /> 
-            </section>
-            <section className={"intro"}>
-            <a
+                />
+            </Section>
+            <Section intro className={"intro"}>
+                <a
                     // id="find-us-button"
                     className="button index-top-section-btn"
                     href="#resources"
@@ -71,53 +105,38 @@ const MusicPage: React.FC<{}> = () => {
                 >
                     Stories
                 </a>
-            </section>
+            </Section>
 
-            <section>
+            <Section>
                 <article
                     dangerouslySetInnerHTML={{
                         __html: data.videos?.html ?? "Missing content",
                     }}
                 />
-            </section>
-            <section>
-                <div className={videoStyles.videoLinks}>
-                    {data.videos?.frontmatter.videos.map((video: any) => (
-                        <div className={videoStyles.videoThumbnail}>
-                            <h2>{video.title}</h2>
-                            <YouTubeThumbNail
-                                videoId={video.id}
-                                imageIndex={0}
-                            />
-                        </div>
-                    ))}
-                </div>
-            </section>
+            </Section>
+            <Section>
+                <YouTubeGallery videoIds={data.videos?.frontmatter?.videos} />
+            </Section>
 
-            <section id={"resources"}>
-                <article
-                    dangerouslySetInnerHTML={{
-                        __html: data.resources?.html ?? "Missing content",
-                    }}
-                />
-            </section>
+            <Section id={"resources"}>
+                
+            </Section>
 
-            <section id={"stories"}>
+            <Section id={"stories"}>
                 <article
                     dangerouslySetInnerHTML={{
                         __html: data.stories?.html ?? "Missing content",
                     }}
                 />
-            </section>
+            </Section>
 
-            {/* <Bio
-                people={data.musicians.nodes}
-                peoplePrecedenceByEmail={["ben@christchurchmayfair.org"]}
+            <Bio
+                people={data.evangelists.nodes}
+                peoplePrecedenceByEmail={["nick@christchurchmayfair.org"]}
                 descriptionHtml={
-                    data.mainContent!.fields!.frontmattermd!.findOutMoreText!
-                        .html!
+                    data.intro!.fields!.frontmattermd!.findOutMoreText!.html!
                 }
-            /> */}
+            />
         </Layout>
     )
 }
