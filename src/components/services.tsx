@@ -27,12 +27,12 @@ const Services = () => {
         }
         query Services {
             am: markdownRemark(
-                fileAbsolutePath: { regex: "/_services/morning.md$/" }
+                fileAbsolutePath: { regex: "/services/morning.md$/" }
             ) {
                 ...Service
             }
             pm: markdownRemark(
-                fileAbsolutePath: { regex: "/_services/zevening.md$/" }
+                fileAbsolutePath: { regex: "/services/evening.md$/" }
             ) {
                 ...Service
             }
