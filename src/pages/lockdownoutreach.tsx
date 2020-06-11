@@ -1,12 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import YouTube from "react-youtube"
-
 import Layout from "../components/layout"
-
-import YouTubeThumbNail from "../components/youtube/youtube-thumbnail"
-
-import videoStyles from "../components/videos.module.scss"
+import Styles from "../components/lockdownoutreach.module.scss"
 import Bio from "../components/bio"
 import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
@@ -53,7 +48,7 @@ const MusicPage: React.FC<{}> = () => {
             resources: allMarkdownRemark(
                 filter: {
                     fileAbsolutePath: {
-                        regex: "/lockdownoutreach/resources/*.md/"
+                        regex: "/.*lockdownoutreach/resources/.*.md/"
                     }
                 }
             ) {
@@ -61,6 +56,9 @@ const MusicPage: React.FC<{}> = () => {
                     node {
                         id
                         html
+                        frontmatter {
+                            title
+                        }
                     }
                 }
             }
@@ -68,9 +66,28 @@ const MusicPage: React.FC<{}> = () => {
                 fileAbsolutePath: { regex: "/lockdownoutreach/stories.md$/" }
             ) {
                 html
+                frontmatter {
+                    videos {
+                        id
+                        title
+                    }
+                }
             }
         }
     `)
+
+    const resources = data.resources!.edges!.map(resource => {
+        return (
+            <div key={resource.node.id} className={Styles.resource}>
+                <h2>{resource.node.frontmatter.title}</h2>
+                <div
+                    dangerouslySetInnerHTML={{
+                        __html: resource.node.html,
+                    }}
+                />
+            </div>
+        )
+    })
 
     return (
         <Layout
@@ -119,15 +136,21 @@ const MusicPage: React.FC<{}> = () => {
             </Section>
 
             <Section id={"resources"}>
-                
+                <div className={Styles.resourcesContainer}>
+                    <h1>Resources</h1>
+                    <div className={Styles.resources}>{resources}</div>
+                </div>
             </Section>
 
-            <Section id={"stories"}>
+            <Section>
                 <article
                     dangerouslySetInnerHTML={{
                         __html: data.stories?.html ?? "Missing content",
                     }}
                 />
+            </Section>
+            <Section id={"stories"}>
+                <YouTubeGallery videoIds={data.stories?.frontmatter?.videos} />
             </Section>
 
             <Bio

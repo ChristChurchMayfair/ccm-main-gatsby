@@ -31,12 +31,10 @@ const YouTubeGallery: React.FC<Props> = ({ videoIds }) => {
                     return (
                         <div key={videoInfo.id}>
                             <h3>{videoInfo.title}</h3>
-                            <a onClick={() => setSelectedVideoId(videoInfo.id)}>
-                                <img
+                                <img onClick={() => setSelectedVideoId(videoInfo.id)}
                                     className={styles.videoThumbnailImage}
                                     src={`https://img.youtube.com/vi/${videoInfo.id}/${0}.jpg`}
                                 />
-                            </a>
                         </div>
                     )
                 })}
