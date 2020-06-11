@@ -45,14 +45,12 @@ section.london-living a {
 
     .header {
         grid-area: header;
-        svg {
-            width: 100%;
-        }
     }
 
     .blurb {
         grid-area: blurb;
     }
+    
     .links {
         grid-area: links;
         display: grid;

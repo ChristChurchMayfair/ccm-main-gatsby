@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 
 import SpotifyBadge from "../content/londonliving/badges/Listen_on_spotify.inline.svg"
 import ApplePodcastBadge from "../content/londonliving/badges/US_UK_Apple_Podcasts_Listen_Color_Lockup_RGB_Wht_Type.inline.svg"
-import RSSBadge from "../content/londonliving/badges/rss.inline.svg"
 
 import LondonLivingLogo from "../content/londonliving/LL_logo.inline.svg"
 
@@ -59,27 +58,30 @@ const LondonLivingPage: React.FC<{}> = () => {
     `)
 
     const episodes = data.podcast!.frontmatter!.episodes!.map(episode => {
-        const imageFlud = episode.image!.childImageSharp!.fluid
+        const imageFlud = episode!.image!.childImageSharp!.fluid
         return (
-            <div key={episode.title} className={styles.episode}>
+            <div key={episode!.title} className={styles.episode}>
                 <h2>
-                    {episode.title} : {episode.person}
+                    {episode!.title} : {episode!.person}
                 </h2>
                 <div className={styles.blurb}>
-                    <p>{episode.blurb}</p>
+                    <p>{episode!.blurb}</p>
                 </div>
                 <div className={styles.image}>
-                    <Img fluid={imageFlud} objectFit={"fit"} objectPosition={"top"}/>
+                    <Img fluid={imageFlud} />
                 </div>
                 <div className={styles.media}>
                     <div className={styles.audio}>
                         <audio controls={true} preload="metadata">
-                            <source src={episode.audioUrl} type="audio/mpeg" />
+                            <source src={episode!.audioUrl} type="audio/mpeg" />
                         </audio>
                     </div>
                     <div>
-                        {episode.youTubeVideoId != null ? (
-                            <YouTube className={styles.video} videoId={episode.youTubeVideoId} />
+                        {episode!.youTubeVideoId != null ? (
+                            <YouTube
+                                className={styles.video}
+                                videoId={episode!.youTubeVideoId}
+                            />
                         ) : null}
                     </div>
                 </div>
@@ -87,23 +89,21 @@ const LondonLivingPage: React.FC<{}> = () => {
         )
     })
 
-    const links = data.podcast?.frontmatter.links.map(link => {
+    const links = data.podcast!.frontmatter!.links!.map(link => {
         let badge = <></>
 
-        if (link.type === "Spotify") {
+        if (link!.type === "Spotify") {
             badge = <SpotifyBadge />
         }
-        if (link.type === "ApplePodcasts") {
+        if (link!.type === "ApplePodcasts") {
             badge = <ApplePodcastBadge />
-        }
-        if (link.type === "RSS") {
-            badge = <RSSBadge />
         }
 
         return (
             <a
+                key={link!.link}
                 className={styles.linkBadge}
-                href={link.link}
+                href={link!.link}
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -128,7 +128,7 @@ const LondonLivingPage: React.FC<{}> = () => {
                         <div
                             className={styles.blurb}
                             dangerouslySetInnerHTML={{
-                                __html: data.mainContent?.html ?? "No Content!",
+                                __html: data.mainContent!.html!,
                             }}
                         />
 
@@ -138,7 +138,7 @@ const LondonLivingPage: React.FC<{}> = () => {
                     <div className={styles.podcast}>
                         <h1>Episodes</h1>
                         <div className={styles.blurb}>
-                            <p>{data.podcast.frontmatter.blurb}</p>
+                            <p>{data.podcast!.frontmatter!.blurb!}</p>
                         </div>
                         <div className={styles.episodes}>{episodes}</div>
                     </div>

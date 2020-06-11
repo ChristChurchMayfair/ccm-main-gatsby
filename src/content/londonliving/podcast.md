@@ -6,9 +6,6 @@ links:
   - name: Spotify
     link: https://open.spotify.com/show/2e9boaobJtY7rkgLLTmHjO
     type: Spotify
-  - name: RSS Feed
-    link: https://rss.christchurchmayfair.org/londonliving
-    type: RSS
 blurb: Hear from different London voices on their experience of uncertainty and where they find a solid hope.
 episodes:
 - title: Performance & Pressure
