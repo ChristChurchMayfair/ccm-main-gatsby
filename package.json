@@ -11,6 +11,7 @@
     "@types/react-datepicker": "^2.11.0",
     "@types/react-youtube": "^7.6.2",
     "@types/youtube": "0.0.38",
+    "@types/react-youtube": "^7.6.2",
     "classnames": "^2.2.6",
     "date-fns": "^2.14.0",
     "gatsby": "^2.21.7",
