@@ -132,8 +132,8 @@ async function sendToGoogleFormsApi(formData: IndexableFormData) {
     })
 }
 
-const AltGivingFormPage: React.FC = () => {
-    const pageData = useStaticQuery<GatsbyTypes.GivingFormQuery>(graphql`
+const GivingFormPage: React.FC = () => {
+    const data = useStaticQuery<GatsbyTypes.GivingFormQuery>(graphql`
         query GivingForm {
             mainInfo: markdownRemark(
                 fileAbsolutePath: { regex: "/givingform/main.md$/" }
@@ -197,7 +197,7 @@ const AltGivingFormPage: React.FC = () => {
                     dark
                     className="text"
                     dangerouslySetInnerHTML={{
-                        __html: pageData.mainInfo?.html ?? "No Content!",
+                        __html: data.mainInfo?.html ?? "No Content!",
                     }}
                 />
             </Section>
@@ -377,7 +377,7 @@ const AltGivingFormPage: React.FC = () => {
                 <Section id="notes">
                     <article
                         dangerouslySetInnerHTML={{
-                            __html: pageData.notes?.html ?? "No Content!",
+                            __html: data.notes?.html ?? "No Content!",
                         }}
                     />
                 </Section>
@@ -386,4 +386,4 @@ const AltGivingFormPage: React.FC = () => {
     )
 }
 
-export default AltGivingFormPage
+export default GivingFormPage
