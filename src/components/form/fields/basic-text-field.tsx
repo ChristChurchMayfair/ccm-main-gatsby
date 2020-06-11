@@ -6,10 +6,11 @@ import { ReactHookFormWiring, CommonField } from "../form-config.types"
 import { prependRequired } from "../form"
 import { shouldShowField } from "../conditional-visibility"
 
-type BasicTextFieldProps = CommonField & ReactHookFormWiring & {
-    placeholder?: string
-    autoComplete?: string
-}
+type BasicTextFieldProps = CommonField &
+    ReactHookFormWiring & {
+        placeholder?: string
+        autoComplete?: string
+    }
 
 const BasicTextField: React.FC<BasicTextFieldProps> = ({
     label,
@@ -21,9 +22,8 @@ const BasicTextField: React.FC<BasicTextFieldProps> = ({
     errors,
     autoComplete,
     showWhen,
-    watch
+    watch,
 }) => {
-
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
     if (shouldDisplayThisField === false) {

@@ -11,10 +11,11 @@ import { shouldShowField } from "../conditional-visibility"
 import datepickerCssUrl from "!file-loader!react-datepicker/dist/react-datepicker.min.css"
 import LazyLoadCss from "../../../components/lazy-load-css"
 
-type DateFieldProps = CommonField & ReactHookFormWiring & {
-    placeholder?: string
-    maxDate?: Date
-}
+type DateFieldProps = CommonField &
+    ReactHookFormWiring & {
+        placeholder?: string
+        maxDate?: Date
+    }
 
 const DateField: React.FC<DateFieldProps> = ({
     name,
@@ -26,7 +27,7 @@ const DateField: React.FC<DateFieldProps> = ({
     errors,
     watch,
     control,
-    maxDate
+    maxDate,
 }) => {
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
@@ -36,28 +37,28 @@ const DateField: React.FC<DateFieldProps> = ({
 
     return (
         <>
-        <LazyLoadCss url={datepickerCssUrl} />
-        <Field
-            labelText={label}
-            labelFor={name}
-            error={errors[name]?.message}
-            contextualHelp={prependRequired(validation, contextualHelp)}
-        >
-            <Controller
-                as={DatePicker}
-                control={control}
-                wrapperClassName={classNames(formStyles.formItemInput)}
-                className={formStyles.dateInput}
-                dateFormat="yyyy-MM-dd"
-                maxDate={maxDate} // Can't select beyond today
-                valueName="selected" // DateSelect value's name is selected
-                onChange={([selected]) => selected}
-                name={name}
-                id={name}
-                placeholderText={placeholder ?? "Select Date"}
-                rules={validation}
-            />
-        </Field>
+            <LazyLoadCss url={datepickerCssUrl} />
+            <Field
+                labelText={label}
+                labelFor={name}
+                error={errors[name]?.message}
+                contextualHelp={prependRequired(validation, contextualHelp)}
+            >
+                <Controller
+                    as={DatePicker}
+                    control={control}
+                    wrapperClassName={classNames(formStyles.formItemInput)}
+                    className={formStyles.dateInput}
+                    dateFormat="yyyy-MM-dd"
+                    maxDate={maxDate} // Can't select beyond today
+                    valueName="selected" // DateSelect value's name is selected
+                    onChange={([selected]) => selected}
+                    name={name}
+                    id={name}
+                    placeholderText={placeholder ?? "Select Date"}
+                    rules={validation}
+                />
+            </Field>
         </>
     )
 }

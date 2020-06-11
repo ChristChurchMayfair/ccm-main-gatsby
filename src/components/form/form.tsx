@@ -79,8 +79,7 @@ export const Form = <DataType,>({
             .then(() => {
                 setFormState("submitted")
             })
-            .catch(e => {
-                console.log(e)
+            .catch(() => {
                 setFormState("error")
             })
     }

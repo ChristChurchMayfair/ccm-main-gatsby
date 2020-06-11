@@ -16,7 +16,7 @@ test("generates the correct url with string values", () => {
         },
         otherEnabledFields: {},
         warning: null,
-        genericSubmissionError: ""
+        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
@@ -37,7 +37,7 @@ test("generates the correct url with number values", () => {
         },
         otherEnabledFields: {},
         warning: null,
-        genericSubmissionError: ""
+        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
@@ -58,7 +58,7 @@ test("generates the correct url with date values", () => {
         },
         otherEnabledFields: {},
         warning: null,
-        genericSubmissionError: ""
+        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
@@ -79,7 +79,7 @@ test("generates the correct url with boolean values", () => {
         },
         otherEnabledFields: {},
         warning: null,
-        genericSubmissionError: ""
+        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
@@ -98,11 +98,11 @@ test("generates the correct url with string values, omitting nulls", () => {
         formId: "formId",
         fieldNameToEntryId: {
             foo: 123,
-            baz: 456
+            baz: 456,
         },
         otherEnabledFields: {},
         warning: null,
-        genericSubmissionError: ""
+        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
@@ -121,16 +121,16 @@ test("generates the correct url for data where other field is configured", () =>
         formId: "formId",
         fieldNameToEntryId: {
             foo: 123,
-            fooOther: 123
+            fooOther: 123,
         },
         otherEnabledFields: {
             foo: {
                 otherValue: "Other",
-                otherField: "fooOther"
-            }
+                otherField: "fooOther",
+            },
         },
         warning: null,
-        genericSubmissionError: ""
+        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
@@ -148,16 +148,16 @@ test("generates the correct url for data where other field is configured but not
     const config: GoogleFormConfig = {
         formId: "formId",
         fieldNameToEntryId: {
-            foo: 123
+            foo: 123,
         },
         otherEnabledFields: {
             foo: {
                 otherValue: "Other",
-                otherField: "fooOther"
-            }
+                otherField: "fooOther",
+            },
         },
         warning: null,
-        genericSubmissionError: ""
+        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)

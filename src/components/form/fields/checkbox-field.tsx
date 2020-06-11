@@ -13,9 +13,10 @@ export type CheckBoxOption = {
     showWhen?: VisibilityCondition
 }
 
-type CheckBoxFieldProps = CommonField & ReactHookFormWiring & {
-    options: CheckBoxOption[]
-}
+type CheckBoxFieldProps = CommonField &
+    ReactHookFormWiring & {
+        options: CheckBoxOption[]
+    }
 
 const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
     name,
@@ -26,15 +27,14 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
     errors,
     register,
     watch,
-    showWhen
+    showWhen,
 }) => {
-
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
     if (shouldDisplayThisField === false) {
         return null
     }
-    
+
     const inputDivs = options.map(option => {
         return (
             <div key={option.id}>

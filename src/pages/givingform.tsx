@@ -152,7 +152,9 @@ const AltGivingFormPage: React.FC = () => {
         }
     `)
 
-    const [givingFormState, setGivingFormState] = useState<FormState | null>(null)
+    const [givingFormState, setGivingFormState] = useState<FormState | null>(
+        null
+    )
 
     const showGiftFrequencyAndStartDate: ValueIn = {
         type: "valueInList",
@@ -190,7 +192,9 @@ const AltGivingFormPage: React.FC = () => {
         <Layout title="Giving Form" headerColour={"dark"}>
             <HeaderUnderlay />
             <Section intro wider dark className="intro wider dark">
-                <SectionText intro dark
+                <SectionText
+                    intro
+                    dark
                     className="text"
                     dangerouslySetInnerHTML={{
                         __html: pageData.mainInfo?.html ?? "No Content!",
@@ -369,14 +373,15 @@ const AltGivingFormPage: React.FC = () => {
                     showWhen={showRetroSpectiveGiftAidClaimDate}
                 />
             </Form>
-            {givingFormState !== "submitted" ?
-            <Section id="notes">
+            {givingFormState !== "submitted" ? (
+                <Section id="notes">
                     <article
                         dangerouslySetInnerHTML={{
                             __html: pageData.notes?.html ?? "No Content!",
                         }}
                     />
-            </Section> : null}
+                </Section>
+            ) : null}
         </Layout>
     )
 }

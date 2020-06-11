@@ -26,9 +26,8 @@ const RadioButtonField: React.FC<RadioButtonFieldProps> = ({
     errors,
     watch,
     showWhen,
-    validation
+    validation,
 }) => {
-
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
     if (shouldDisplayThisField === false) {
