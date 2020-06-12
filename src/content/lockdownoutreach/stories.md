@@ -7,4 +7,4 @@ videos:
 ---
 # Stories
 
-Some information about these stories.
+Many people at CCM have been faithfully and boldy holding out Gospel hope to those "around" them. We hope these stories of their experience helps inspire you to step out and give it a go.

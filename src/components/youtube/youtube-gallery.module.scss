@@ -1,19 +1,27 @@
 .gallery {
-    display: grid;
     grid-area: content;
-    grid-template-columns: 1fr;
+    width: 100%;
+    position: relative;
 
+    h2,
     h3 {
         font-family: "Klinic Slab";
         text-transform: none;
-        font-weight: 300;
+        font-weight: 400;
+        margin: 0px;
     }
 }
 
 .thumbnails {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
     column-gap: var(--general-padding);
+    row-gap: var(--general-padding);
+    width: 100%;
+}
+
+.thumbnailsVisible {
+    display: grid;
 }
 
 @media only screen and (max-width: 968px) {
@@ -22,29 +30,105 @@
     }
 }
 
+.videoInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 80px;
+    grid-template-areas:
+        "title"
+        "thumbnail"
+        "description";
+    row-gap: calc(var(--general-padding) / 2);
+    width: 100%;
+
+    h3 {
+        grid-area: title;
+        margin: 0px;
+    }
+
+    .description {
+        grid-area: description;
+    }
+}
+
 .playerCloseIcon {
     cursor: pointer;
     svg {
-        width: 50px;
-        height: 50px;
-        
+        width: 40px;
+        height: 40px;
+        :before {
+            content: "Close";
+        }
     }
 }
 
 .videoThumbnailImage {
     width: 100%;
     cursor: pointer;
+    grid-area: thumbnail;
+    position: relative;
+    img {
+        width: 100%;
+    }
+}
+
+.playIconContainer {
+    --play-icon-size: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: red;
+
+    svg {
+        position: absolute;
+        top: calc(50% - calc(var(--play-icon-size) / 2));
+        left: calc(50% - calc(var(--play-icon-size) / 2));
+        display: block;
+        margin: auto;
+        width: var(--play-icon-size);
+        height: auto;
+        color: blue;
+        fill: currentColor;        
+    }
 }
 
 .player {
     display: none;
+    grid-template-columns: auto 40px;
+    grid-template-rows: auto auto;
+    grid-template-areas: "title close "
+    "video video";
+    width: 100%;
+    height: auto;
+    column-gap: var(--general-padding);
+    row-gap: var(--general-padding);
+
+    a {
+        grid-area: close;
+    }
+
+    h3 {
+        grid-area: title;
+    }
+
+    .youtubePlayer {
+        grid-area: video;
+        width: 100%;
+
+        div {
+            width: 100%;
+            iframe {
+                width: 100%;
+                // height: 625px;
+            }
+        }
+    }
+    
 }
 
 .playerVisible {
-    display: block;
+    display: grid;
 }
 
-.youtubePlayer {
-    width: 100%;
-    height: 500px;
-}

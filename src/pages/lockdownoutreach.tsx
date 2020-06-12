@@ -42,6 +42,7 @@ const MusicPage: React.FC<{}> = () => {
                     videos {
                         id
                         title
+                        description
                     }
                 }
             }

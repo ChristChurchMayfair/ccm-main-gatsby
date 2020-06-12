@@ -1,0 +1,12 @@
+
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Play">
+            <circle id="Oval" stroke="#FFFFFF" stroke-width="10" cx="100" cy="100" r="95"></circle>
+            <polygon id="Triangle" fill="#FFFFFF" fill-rule="evenodd" transform="translate(111.250000, 99.750000) rotate(90.000000) translate(-111.250000, -99.750000) " points="111.25 59.0521472 157 140.447853 65.5 140.447853"></polygon>
+        </g>
+    </g>
+</svg>
