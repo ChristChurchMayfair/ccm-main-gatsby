@@ -143,14 +143,14 @@ const MusicPage: React.FC<{}> = () => {
                 </div>
             </Section>
 
-            <Section>
+            <Section id={"stories"}>
                 <article
                     dangerouslySetInnerHTML={{
                         __html: data.stories?.html ?? "Missing content",
                     }}
                 />
             </Section>
-            <Section id={"stories"}>
+            <Section >
                 <YouTubeGallery videoIds={data.stories?.frontmatter?.videos} />
             </Section>
 

@@ -14,8 +14,27 @@
 }
 
 .resource {
-    padding: var(--general-padding);
     border-color: var(--dark-colour);
     border-width: 1px;
     border-style: solid;
+
+    display: grid;
+    grid-template-rows: 50px auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "heading"
+    "content";
+    row-gap: var(--general-padding);
+
+    h2 {
+        grid-area: heading;
+        padding-left: var(--general-padding);
+        padding-right: var(--general-padding);
+    }
+
+    div {
+        grid-area: content;
+        padding-left: var(--general-padding);
+        padding-right: var(--general-padding);
+        padding-bottom: var(--general-padding);
+    }
 }
