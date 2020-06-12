@@ -18,6 +18,14 @@ $break: 968px;
     .content {
         grid-area: content;
     }
+
+    h1 {
+        font-family: var(--body-font);
+        text-transform: none;
+        font-size: 2em;
+        font-weight: 300;
+        margin-bottom: var(--general-padding);
+    }
 }
 
 section.london-living a {
@@ -107,7 +115,6 @@ section.london-living a {
         "episodes episodes episodes episodes episodes episodes episodes episodes episodes episodes episodes episodes ";
     h1 {
         grid-area: header;
-        margin-bottom: -0.2em;
     }
 
     .blurb {
