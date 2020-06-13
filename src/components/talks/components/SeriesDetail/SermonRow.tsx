@@ -30,7 +30,7 @@ export default class SermonRow extends PureComponent<Props> {
                 <DetailRow>
                     <div>{passage}</div>
                     <div>
-                        {format(new Date(sermon.preachedAt), "Do MMM yyyy")}
+                        {format(new Date(sermon.preachedAt), "do MMM yyyy")}
                     </div>
                 </DetailRow>
                 {sermon.speakers.length > 0 && (
