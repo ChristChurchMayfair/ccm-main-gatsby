@@ -11,6 +11,7 @@ import MountAfter from "../components/mount-after"
 import Section from "../components/section"
 import SectionText from "../components/section-text"
 import Hero from "../components/hero"
+import LondonLivingPromo from "../components/london-living-promo"
 
 const IndexPageQuery = graphql`
     query Homepage {

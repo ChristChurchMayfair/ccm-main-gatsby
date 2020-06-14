@@ -29,7 +29,7 @@ interface SectionProps extends HTMLProps<HTMLDivElement> {
 const Section: FC<SectionProps> = ({
     intro = false,
     wider = false,
-    colorScheme: colorTheme,
+    colorScheme,
     mobileImageTextSwap = false,
     infoPanel = false,
     infoPanelImage,
@@ -45,8 +45,8 @@ const Section: FC<SectionProps> = ({
         className={classnames(className, styles.section, {
             [styles["section--intro"]]: intro,
             [styles["section--wider-intro"]]: intro && wider,
-            [styles["section--dark"]]: colorTheme === "dark",
-            [styles["section--light"]]: colorTheme === "light",
+            [styles["section--dark"]]: colorScheme === "dark",
+            [styles["section--light"]]: colorScheme === "light",
             [styles["section--info-panel"]]: infoPanel,
             [styles["section--image-left"]]: imagePosition === "left",
             [styles["section--image-right"]]: imagePosition === "right",

@@ -98,7 +98,7 @@
         width: var(--play-icon-size);
         height: auto;
         color: blue;
-        fill: currentColor;        
+        fill: currentColor;
     }
 }
 
@@ -106,8 +106,9 @@
     display: none;
     grid-template-columns: auto 40px;
     grid-template-rows: auto auto;
-    grid-template-areas: "title close "
-    "video video";
+    grid-template-areas:
+        "title close "
+        "video video";
     width: 100%;
     height: auto;
     column-gap: var(--general-padding);
@@ -133,10 +134,8 @@
             }
         }
     }
-    
 }
 
 .playerVisible {
     display: grid;
 }
-

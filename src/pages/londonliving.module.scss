@@ -28,6 +28,24 @@ $break: 968px;
     }
 }
 
+.followupOptions {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: var(--general-padding);
+    margin-bottom: calc(var(--general-padding) * 2);
+
+    @media only screen and (max-width: $break) {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-family: "Klinic Slab";
+        text-transform: none;
+        font-weight: 300;
+    }
+}
+
 section.london-living a {
     color: var(--highlight-color);
 }
@@ -53,12 +71,15 @@ section.london-living a {
 
     .header {
         grid-area: header;
+        svg {
+            width: 100%;
+        }
     }
 
     .blurb {
         grid-area: blurb;
     }
-    
+
     .links {
         grid-area: links;
         display: grid;
@@ -115,6 +136,7 @@ section.london-living a {
         "episodes episodes episodes episodes episodes episodes episodes episodes episodes episodes episodes episodes ";
     h1 {
         grid-area: header;
+        margin-bottom: -0.2em;
     }
 
     .blurb {
@@ -139,40 +161,55 @@ section.london-living a {
     }
 }
 
-.episodes {
+.seasons {
     grid-area: episodes;
+
+    .season {
+        .episodes {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: var(--general-padding);
+            row-gap: var(--general-padding);
+
+            @media only screen and (max-width: $break) {
+                grid-template-columns: 1fr;
+                row-gap: calc(var(--general-padding) * 2);
+            }
+        }
+
+        h3 {
+            font-family: "Klinic Slab";
+            text-transform: none;
+            font-weight: 400;
+            font-size: 1.7em;
+        }
+    }
 }
 
 .episode {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: calc(var(--general-padding) / 2);
-    grid-template-rows: auto auto 410px;
+    grid-template-columns: 1fr;
+    grid-gap: var(--general-padding);
+    grid-template-rows: 100px 400px 150px 50px;
     grid-template-areas:
-        "header header header header header header header header header header header header"
-        "blurb blurb blurb blurb blurb blurb blurb blurb blurb . . . "
-        "image image image image media media media media media media media media "
-        "image image image image media media media media media media media media ";
-    border-width: 2px;
-    border-bottom-width: 2px;
-    border-bottom-color: var(--light-color);
-    border-bottom-style: solid;
+        "header"
+        "image"
+        "blurb"
+        "media";
     padding-bottom: var(--general-padding);
-
-    &:nth-of-type(1) {
-        border-width: 2px;
-        border-top-width: 2px;
-        border-top-color: var(--light-color);
-        border-top-style: solid;
-    }
 
     @media only screen and (max-width: $break) {
         grid-template-columns: 1fr;
+        grid-template-rows: 100px auto 400px 100px;
         grid-template-areas:
             "header"
             "blurb"
             "image"
             "media";
+
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: var(--light-color);
     }
 
     h2 {
@@ -184,37 +221,62 @@ section.london-living a {
         text-transform: none;
         margin-bottom: 0;
     }
+}
 
-    .blurb {
-        grid-area: blurb;
-        p {
-            margin-block-end: 0px;
-        }
+.blurb {
+    grid-area: blurb;
+    p {
+        margin-block-end: 0px;
     }
+}
 
-    .media {
-        grid-area: media;
-        display: grid;
-        grid-template-rows: auto;
-        grid-row-gap: var(--general-padding);
+.image {
+    grid-area: image;
+    img {
+        width: 100%;
+    }
+}
 
-        .audio {
-            audio {
-                width: 100%;
-            }
-        }
+.media {
+    grid-area: media;
+    display: grid;
+    grid-template-rows: auto;
+    grid-row-gap: var(--general-padding);
 
-        .video {
+    .audio {
+        audio {
             width: 100%;
         }
     }
 
-    .image {
-        grid-area: image;
-        overflow: hidden;
-
-        img {
-            width: 100%;
-        }
+    .video {
+        width: 100%;
+        display: hidden;
     }
+}
+
+.bigVideoContent {
+    grid-area: content;
+    h1,
+    h2 {
+        font-family: "Klinic Slab";
+        text-transform: none;
+        font-weight: 400;
+    }
+
+    .bigPlayer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.bigVideoContainer {
+    position: relative;
+    padding-bottom: 56.25%; /*16:9*/
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
 }
