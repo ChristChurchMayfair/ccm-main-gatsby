@@ -137,8 +137,21 @@ You can contact the Information Commissioners Office on 0303 123 1113 or via ema
 
 ## <a name="cookies"></a> Use of Cookies
 
-A cookie consists of information sent by a web server to a web browser, and stored by the browser. The information is then sent back to the server each time the browser requests a page from the server. This enables the web server to identify and track the web browser.
+A cookie is a small text file sent by a web server to a web browser, and stored by the browser. The file is then sent back to the server each time the browser requests a page from the server. This enables the web server to identify and track the web browser.
 
-We use Google Analytics to analyse the use of this website. Google Analytics generates statistical and other information about website use by means of cookies, which are stored on users’ computers. The information generated relating to our website is used to create reports about the use of the website. Google will store this information. Google’s privacy policy is available at: <http://www.google.com/privacypolicy.html>.
+We use cookies to analyse how you use our website, for example, which pages you visit, how long you spend on each page and which links you click on. This helps us to understand how people are using our website so that we can make it better.
 
-Most browsers allow you to reject all cookies, whilst some browsers allow you to reject just third party cookies. For example, in Internet Explorer you can refuse all cookies by clicking “Tools”, “Internet Options”, “Privacy”, and selecting “Block all cookies” using the sliding selector. Blocking all cookies will, however, have a negative impact upon the usability of many websites.
+We use Google Analytics for analysing how people use our website. Google Analytics generates statistical and other information about how our website is being used, and then uses this to create reports. Google will store this information. Google’s privacy policy is available at: <http://www.google.com/privacypolicy.html>.
+
+Most browsers allow you to reject all cookies, whilst some browsers allow you to reject just third party cookies. Blocking all cookies will, however, have a negative impact upon the usability of many websites. You can find out how to do this for your browser using the following links:
+
+-   [Chrome](https://support.google.com/chrome/answer/95647)
+-   [Edge](https://support.microsoft.com/en-gb/help/4027947/microsoft-edge-delete-cookies)
+-   [Firefox](https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer#w_cookie-settings)
+-   [Safari (iOS)](https://support.apple.com/en-gb/HT201265)
+-   [Safari (macOS)](https://support.apple.com/en-gb/guide/safari/sfri11471/mac)
+-   [Opera](https://help.opera.com/en/latest/web-preferences/#cookies)
+-   [Samsung Internet](https://www.samsung.com/uk/support/mobile-devices/what-are-cookies-and-how-do-i-enable-or-disable-them-on-my-samsung-galaxy-device/)
+-   [Internet Explorer](https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies)
+
+You can change your cookie settings for this website at any time at: <https://christchurchmayfair.org/cookies>.

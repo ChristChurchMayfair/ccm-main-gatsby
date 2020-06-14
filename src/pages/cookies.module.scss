@@ -1,0 +1,26 @@
+.settingsContainer {
+    grid-area: content;
+
+    display: grid;
+    grid-row-gap: var(--general-padding);
+    grid-column-gap: var(--general-padding);
+    grid-template-areas:
+        "intro intro intro intro intro intro intro intro"
+        "switch switchLabel switchLabel switchLabel switchLabel switchLabel switchLabel switchLabel";
+
+    @media screen and (max-width: 650px) {
+        grid-column-gap: var(--general-padding) / 2;
+    }
+}
+
+.settingsIntroText {
+    grid-area: intro;
+}
+
+.switch {
+    grid-area: switch;
+}
+
+.switchLabel {
+    grid-area: switchLabel;
+}

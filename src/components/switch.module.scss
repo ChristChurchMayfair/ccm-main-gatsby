@@ -1,0 +1,70 @@
+$switch-width: 80px;
+$switch-height: var(--button-height);
+$inner-width: 50px;
+$unchecked-colour: #813030;
+$unchecked-colour-accent: #a32121;
+$checked-colour: #308130;
+$checked-colour-accent: #21a321;
+
+.switch {
+    display: inline-block;
+    position: relative;
+    width: $switch-width;
+    height: $switch-height;
+    background-color: var(--mid-gray);
+    border: 2px solid $unchecked-colour-accent;
+    border-radius: calc(#{$switch-height} / 2);
+    transition: border-color var(--menu-transition-time);
+
+    &--checked {
+        border-color: $checked-colour-accent;
+
+        .toggle {
+            background-color: $checked-colour;
+            left: calc(100% - (#{$inner-width} / 2));
+        }
+    }
+
+    &--disabled {
+        opacity: 0.2;
+    }
+}
+
+.toggle {
+    position: absolute;
+    height: $switch-height;
+    width: $inner-width;
+    background-color: $unchecked-colour;
+    border-radius: calc(#{$switch-height} / 2);
+    top: 50%;
+    left: $inner-width / 2;
+    transform: translate(-50%, -50%);
+    transition: left var(--menu-transition-time),
+        background-color var(--menu-transition-time);
+
+    > div {
+        vertical-align: middle;
+        font-size: var(--base-font-size);
+        line-height: $switch-height;
+        font-family: var(--heading-font);
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--light-colour);
+        font-weight: 400;
+    }
+}
+
+.input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $switch-width;
+    height: $switch-height;
+    margin: 0;
+    appearance: none;
+    cursor: pointer;
+
+    &:disabled {
+        cursor: default;
+    }
+}
