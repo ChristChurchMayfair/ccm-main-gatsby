@@ -137,7 +137,7 @@ You can contact the Information Commissioners Office on 0303 123 1113 or via ema
 
 ## <a name="cookies"></a> Use of Cookies
 
-A cookie is a small text file sent by a web server to a web browser, and stored by the browser. The file is then sent back to the server each time the browser requests a page from the server. This enables the web server to identify and track the web browser.
+A cookie is a small piece of information sent by a web server to a web browser, and stored by the browser. The information is then sent back to the server each time the browser requests a page from the server. This enables the web server to identify and track the web browser.
 
 We use cookies to analyse how you use our website, for example, which pages you visit, how long you spend on each page and which links you click on. This helps us to understand how people are using our website so that we can make it better.
 
