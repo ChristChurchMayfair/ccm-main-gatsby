@@ -77,8 +77,8 @@ Your personal data will be treated as strictly confidential. It will only be sha
 -   The appropriate bodies of the Church of England including the other data controllers;
 -   Our agents, servants and contractors. For example, we may ask a commercial provider to maintain our database software e.g. ChurchSuite;
 -   Other clergy or lay persons nominated or licensed by the bishops of the Diocese of London to support the mission of the Church in our parish. For example, our clergy are supported by our area dean and archdeacon, who may provide confidential mentoring and pastoral support. Assistant or temporary ministers, including curates, deacons, licensed lay ministers, commissioned lay ministers or persons with Bishop’s Permissions may participate in our mission in support of our regular clergy;
--   Other persons or organisations operating within the Diocese of London including, where relevant, the London Diocesan Board for Schools and Subsidiary Bodies
-    On occasion, other churches with which we are carrying out joint events or activities.
+-   Other persons or organisations operating within the Diocese of London including, where relevant, the London Diocesan Board for Schools and Subsidiary Bodies;
+-   On occasion, other churches with which we are carrying out joint events or activities.
 
 ## How long do we keep your personal data?
 
@@ -91,28 +91,34 @@ You have the following rights with respect to your personal data:
 When exercising any of the rights listed below, in order to process your request, we may need to verify your identity for your security. In such cases we will need you to respond with proof of your identity before you can exercise these rights.
 
 1. The right to access personal data we hold on you
+
     - At any point you can contact us to request the personal data we hold on you as well as why we have that personal data, who has access to the information and where we obtained the personal data from. Once we have received your request we will endeavour to respond within one month.
     - There are no fees or charges for the first request but additional requests for the same personal data may be subject to an administrative fee.
 
-2) The right to correct and update the personal data we hold on you
+2. The right to correct and update the personal data we hold on you
+
     - If the personal data we hold on you is out of date, incomplete or incorrect, you can inform us and your personal data will be updated.
 
 3. The right to have your personal data erased
+
     - If you feel that we should no longer be using your personal data or that we are illegally using your personal data, you can request that we erase the personal data we hold.
     - When we receive your request we will confirm whether the data has been deleted or the reason why it cannot be deleted (for example because we need it for our legitimate interests or regulatory purpose(s)).
 
-4) The right to object to processing of your personal data
+4. The right to object to processing of your personal data
+
     - You have the right to request that we stop processing your personal data. Upon receiving the request we will contact you and let you know if we are able to comply or if we have legitimate grounds to continue to process your personal data. Even after you exercise your right to object, we may continue to hold your personal data to comply with your other rights or to bring or defend legal claims.
 
 5. The right to data portability
+
     - You have the right to request that we transfer some of your personal data to another controller in certain circumstances. We will comply with your request, where it is feasible to do so, within one month of receiving your request.
 
-6) The right to withdraw your consent to the processing at any time for any processing of personal data to which consent was sought.
+6. The right to withdraw your consent to the processing at any time for any processing of personal data to which consent was sought.
+
     - You can withdraw your consent easily by telephone, email, or by post (see Contact Details below).
 
 7. The right to object to the processing of personal data where applicable.
 
-8) The right to lodge a complaint with the Information Commissioner’s Office.
+8. The right to lodge a complaint with the Information Commissioner’s Office.
 
 ## Transfer of Data Abroad
 
