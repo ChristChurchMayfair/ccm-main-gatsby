@@ -1,10 +1,9 @@
 $switch-width: 80px;
 $switch-height: var(--button-height);
 $inner-width: 50px;
-$unchecked-colour: #813030;
-$unchecked-colour-accent: #a32121;
-$checked-colour: #308130;
-$checked-colour-accent: #21a321;
+$unchecked-colour: red;
+$checked-colour: #21a321;
+$switch-border-radius: 5px;
 
 .switch {
     display: inline-block;
@@ -12,12 +11,12 @@ $checked-colour-accent: #21a321;
     width: $switch-width;
     height: $switch-height;
     background-color: var(--mid-gray);
-    border: 2px solid $unchecked-colour-accent;
-    border-radius: calc(#{$switch-height} / 2);
+    border: 2px solid $unchecked-colour;
+    border-radius: $switch-border-radius;
     transition: border-color var(--menu-transition-time);
 
     &--checked {
-        border-color: $checked-colour-accent;
+        border-color: $checked-colour;
 
         .toggle {
             background-color: $checked-colour;
@@ -35,7 +34,6 @@ $checked-colour-accent: #21a321;
     height: $switch-height;
     width: $inner-width;
     background-color: $unchecked-colour;
-    border-radius: calc(#{$switch-height} / 2);
     top: 50%;
     left: $inner-width / 2;
     transform: translate(-50%, -50%);
@@ -44,10 +42,8 @@ $checked-colour-accent: #21a321;
 
     > div {
         vertical-align: middle;
-        font-size: var(--base-font-size);
+        font-size: 14pt;
         line-height: $switch-height;
-        font-family: var(--heading-font);
-        text-transform: uppercase;
         text-align: center;
         color: var(--light-colour);
         font-weight: 400;

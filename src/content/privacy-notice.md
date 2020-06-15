@@ -154,4 +154,4 @@ Most browsers allow you to reject all cookies, whilst some browsers allow you to
 -   [Samsung Internet](https://www.samsung.com/uk/support/mobile-devices/what-are-cookies-and-how-do-i-enable-or-disable-them-on-my-samsung-galaxy-device/)
 -   [Internet Explorer](https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies)
 
-You can change your cookie settings for this website at any time at: <https://christchurchmayfair.org/cookies>.
+You can change your cookie settings for this website at any time [here](/cookies).
