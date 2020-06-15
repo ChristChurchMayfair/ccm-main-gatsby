@@ -18,9 +18,10 @@ This Privacy Notice describes the way that we, Christ Church Mayfair (“CCM”)
 
 The Church of England is made up of a number of different organisations and office-holders who work together to deliver the Church’s mission in each community. The Church Council of CCM works together with:
 
-the incumbent of the parish (that is, our Senior Minister);
-the bishops of the Diocese of London; and
-the London Diocesan Fund, which is responsible for the financial and administrative arrangements for the Diocese of London.
+-   the incumbent of the parish (that is, our Senior Minister);
+-   the bishops of the Diocese of London; and
+-   the London Diocesan Fund, which is responsible for the financial and administrative arrangements for the Diocese of London.
+
 As the Church is made up of all of these persons and organisations working together, we may need to share personal data we hold with them so that they can carry out their responsibilities to the Church and our community such as the names and addresses on our electoral roll.
 
 The legal entity governing our church is The Bible Talks Trust (charity number 1092036) but we are transitioning to Christ Church Mayfair Charitable Company (charity number 1152061) shortly. The legal entity is accountable for the finances of the church, our Safeguarding and other legal matters.
@@ -73,17 +74,17 @@ Where your information is used other than in accordance with one of these legal 
 
 Your personal data will be treated as strictly confidential. It will only be shared with third parties where it is necessary for the performance of our tasks where we are legally required to share your personal data, where we share your personal data to protect CCM or another individual, or where you first give us your prior consent. It is likely that we will need to share your personal data with some or all of the following (but only where necessary):
 
-The appropriate bodies of the Church of England including the other data controllers;
-Our agents, servants and contractors. For example, we may ask a commercial provider to maintain our database software e.g. ChurchSuite;
-Other clergy or lay persons nominated or licensed by the bishops of the Diocese of London to support the mission of the Church in our parish. For example, our clergy are supported by our area dean and archdeacon, who may provide confidential mentoring and pastoral support. Assistant or temporary ministers, including curates, deacons, licensed lay ministers, commissioned lay ministers or persons with Bishop’s Permissions may participate in our mission in support of our regular clergy;
-Other persons or organisations operating within the Diocese of London including, where relevant, the London Diocesan Board for Schools and Subsidiary Bodies
-On occasion, other churches with which we are carrying out joint events or activities.
+-   The appropriate bodies of the Church of England including the other data controllers;
+-   Our agents, servants and contractors. For example, we may ask a commercial provider to maintain our database software e.g. ChurchSuite;
+-   Other clergy or lay persons nominated or licensed by the bishops of the Diocese of London to support the mission of the Church in our parish. For example, our clergy are supported by our area dean and archdeacon, who may provide confidential mentoring and pastoral support. Assistant or temporary ministers, including curates, deacons, licensed lay ministers, commissioned lay ministers or persons with Bishop’s Permissions may participate in our mission in support of our regular clergy;
+-   Other persons or organisations operating within the Diocese of London including, where relevant, the London Diocesan Board for Schools and Subsidiary Bodies
+    On occasion, other churches with which we are carrying out joint events or activities.
 
 ## How long do we keep your personal data?
 
 We will retain some records according to certain regulatory and statutory responsibilities. We may keep some other records for an extended period of time. For example, it is current best practice to keep financial records for a minimum period of 7 years after the date of the transaction to support HMRC audits. In general, we will endeavour to keep personal data only for as long as we need it. This means that we may delete it when it is no longer needed.
 
-Your rights and your personal data
+## Your rights and your personal data
 
 You have the following rights with respect to your personal data:
 
@@ -129,9 +130,9 @@ We keep this Privacy Notice under regular review and we will place any updates o
 
 Please contact us if you have any questions about this Privacy Notice or the information we hold about you or to exercise all relevant rights, queries or complaints at:
 
-The Data Controller, Christ Church Mayfair, Down Street, London, W1J 7AN
+> The Data Controller, Christ Church Mayfair, Down Street, London, W1J 7AN
 
-Email: <mailto:info@christchurchmayfair.org>
+> Email: <mailto:info@christchurchmayfair.org>
 
 You can contact the Information Commissioners Office on 0303 123 1113 or via email <https://ico.org.uk/global/contact-us/email/> or at the Information Commissioner's Office, Wycliffe House, Water Lane, Wilmslow, Cheshire SK9 5AF.
 
