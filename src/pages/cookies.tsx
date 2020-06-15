@@ -71,8 +71,8 @@ const Cookies: React.FC<{}> = () => {
                                     mayUseCookies ? "accepted" : "declined"
                                 )
                             }
-                            checkedText="on"
-                            uncheckedText="off"
+                            checkedText="On"
+                            uncheckedText="Off"
                         />
                     </div>
                     <div className={styles.switchLabel}>
