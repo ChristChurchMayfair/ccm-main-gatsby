@@ -1,0 +1,66 @@
+$switch-width: 80px;
+$switch-height: var(--button-height);
+$inner-width: 50px;
+$unchecked-colour: red;
+$checked-colour: #21a321;
+$switch-border-radius: 5px;
+
+.switch {
+    display: inline-block;
+    position: relative;
+    width: $switch-width;
+    height: $switch-height;
+    background-color: var(--mid-gray);
+    border: 2px solid $unchecked-colour;
+    border-radius: $switch-border-radius;
+    transition: border-color var(--menu-transition-time);
+
+    &--checked {
+        border-color: $checked-colour;
+
+        .toggle {
+            background-color: $checked-colour;
+            left: calc(100% - (#{$inner-width} / 2));
+        }
+    }
+
+    &--disabled {
+        opacity: 0.2;
+    }
+}
+
+.toggle {
+    position: absolute;
+    height: $switch-height;
+    width: $inner-width;
+    background-color: $unchecked-colour;
+    top: 50%;
+    left: $inner-width / 2;
+    transform: translate(-50%, -50%);
+    transition: left var(--menu-transition-time),
+        background-color var(--menu-transition-time);
+
+    > div {
+        vertical-align: middle;
+        font-size: 14pt;
+        line-height: $switch-height;
+        text-align: center;
+        color: var(--light-colour);
+        font-weight: 400;
+    }
+}
+
+.input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $switch-width;
+    height: $switch-height;
+    margin: 0;
+    appearance: none;
+    cursor: pointer;
+
+    &:disabled {
+        cursor: default;
+    }
+}

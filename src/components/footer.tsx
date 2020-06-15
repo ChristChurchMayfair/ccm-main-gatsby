@@ -12,6 +12,7 @@ const links: Array<{ path: string; title: string }> = [
     { path: "/our-beliefs", title: "Our Beliefs" },
     { path: "/talks", title: "Talks" },
     { path: "/privacy-notice", title: "Privacy Notice" },
+    { path: "/cookies", title: "Cookies" },
     { path: "/music", title: "Music" },
     { path: "/families", title: "Families" },
     { path: "/safeguarding", title: "Safeguarding" },
