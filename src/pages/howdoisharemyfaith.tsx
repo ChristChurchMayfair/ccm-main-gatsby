@@ -1,14 +1,14 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import Styles from "../components/lockdownoutreach.module.scss"
+import Styles from "../components/howdoisharemyfaith.module.scss"
 import Bio from "../components/bio"
 import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
 import SectionText from "../components/section-text"
 import YouTubeGallery from "../components/youtube/youtube-gallery"
 
-const MusicPage: React.FC<{}> = () => {
+const HowDoIShareMyFaithPage: React.FC<{}> = () => {
     const data = useStaticQuery<GatsbyTypes.LockdownOutreachQuery>(graphql`
         query LockdownOutreach {
             evangelists: allSanityPerson(
@@ -39,10 +39,13 @@ const MusicPage: React.FC<{}> = () => {
             ) {
                 html
                 frontmatter {
-                    videos {
-                        id
+                    sections {
                         title
-                        description
+                        videos {
+                            id
+                            title
+                            description
+                        }
                     }
                 }
             }
@@ -68,9 +71,13 @@ const MusicPage: React.FC<{}> = () => {
             ) {
                 html
                 frontmatter {
-                    videos {
-                        id
+                    sections {
                         title
+                        videos {
+                            id
+                            title
+                            description
+                        }
                     }
                 }
             }
@@ -110,14 +117,14 @@ const MusicPage: React.FC<{}> = () => {
             </Section>
             <Section intro className={"intro"}>
                 <a
-                    // id="find-us-button"
+                    id="resources-button"
                     className="button index-top-section-btn"
                     href="#resources"
                 >
                     Resources
                 </a>
                 <a
-                    // id="services-button"
+                    id="stories-button"
                     className="button index-top-section-btn"
                     href="#stories"
                 >
@@ -133,7 +140,7 @@ const MusicPage: React.FC<{}> = () => {
                 />
             </Section>
             <Section>
-                <YouTubeGallery videoIds={data.videos?.frontmatter?.videos} />
+                <YouTubeGallery videoSections={data.videos?.frontmatter?.sections ?? []} />
             </Section>
 
             <Section id={"resources"}>
@@ -150,8 +157,8 @@ const MusicPage: React.FC<{}> = () => {
                     }}
                 />
             </Section>
-            <Section >
-                <YouTubeGallery videoIds={data.stories?.frontmatter?.videos} />
+            <Section>
+                <YouTubeGallery videoSections={data.stories?.frontmatter?.sections ?? []} />
             </Section>
 
             <Bio
@@ -165,4 +172,4 @@ const MusicPage: React.FC<{}> = () => {
     )
 }
 
-export default MusicPage
+export default HowDoIShareMyFaithPage
