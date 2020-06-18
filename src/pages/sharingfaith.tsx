@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import Styles from "../components/howdoisharemyfaith.module.scss"
+import Styles from "../components/sharingfaith.module.scss"
 import Bio from "../components/bio"
 import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
@@ -10,9 +10,9 @@ import YouTubeGallery, {
     VideoSection,
 } from "../components/youtube/youtube-gallery"
 
-const HowDoIShareMyFaithPage: React.FC<{}> = () => {
-    const data = useStaticQuery<GatsbyTypes.HowDoIShareMyFaithQuery>(graphql`
-        query HowDoIShareMyFaith {
+const SharingFaithPage: React.FC<{}> = () => {
+    const data = useStaticQuery<GatsbyTypes.SharingFaithQuery>(graphql`
+        query SharingFaith {
             evangelists: allSanityPerson(
                 filter: {
                     roles: {
@@ -25,7 +25,7 @@ const HowDoIShareMyFaithPage: React.FC<{}> = () => {
                 }
             }
             intro: markdownRemark(
-                fileAbsolutePath: { regex: "/howdoisharemyfaith/intro.md$/" }
+                fileAbsolutePath: { regex: "/sharingfaith/intro.md$/" }
             ) {
                 html
                 fields {
@@ -37,7 +37,7 @@ const HowDoIShareMyFaithPage: React.FC<{}> = () => {
                 }
             }
             videos: markdownRemark(
-                fileAbsolutePath: { regex: "/howdoisharemyfaith/videos.md$/" }
+                fileAbsolutePath: { regex: "/sharingfaith/videos.md$/" }
             ) {
                 html
                 frontmatter {
@@ -54,7 +54,7 @@ const HowDoIShareMyFaithPage: React.FC<{}> = () => {
             resources: allMarkdownRemark(
                 filter: {
                     fileAbsolutePath: {
-                        regex: "/.*howdoisharemyfaith/resources/.*.md/"
+                        regex: "/.*sharingfaith/resources/.*.md/"
                     }
                 }
             ) {
@@ -69,7 +69,7 @@ const HowDoIShareMyFaithPage: React.FC<{}> = () => {
                 }
             }
             stories: markdownRemark(
-                fileAbsolutePath: { regex: "/howdoisharemyfaith/stories.md$/" }
+                fileAbsolutePath: { regex: "/sharingfaith/stories.md$/" }
             ) {
                 html
                 frontmatter {
@@ -182,4 +182,4 @@ const HowDoIShareMyFaithPage: React.FC<{}> = () => {
     )
 }
 
-export default HowDoIShareMyFaithPage
+export default SharingFaithPage
