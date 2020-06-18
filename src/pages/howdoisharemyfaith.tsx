@@ -165,7 +165,9 @@ const HowDoIShareMyFaithPage: React.FC<{}> = () => {
             </Section>
             <Section>
                 <YouTubeGallery
-                    videoSections={data.stories!.frontmatter!.sections! as VideoSection[]}
+                    videoSections={
+                        data.stories!.frontmatter!.sections! as VideoSection[]
+                    }
                 />
             </Section>
 
