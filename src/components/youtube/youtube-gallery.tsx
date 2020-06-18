@@ -12,7 +12,7 @@ interface VideoInfo {
     description?: string
 }
 
-interface VideoSection {
+export interface VideoSection {
     title: string
     videos: VideoInfo[]
 }
@@ -37,7 +37,8 @@ const YouTubeGallery: React.FC<Props> = ({ videoSections }) => {
                     <div
                         key={videoSection.title}
                         className={classNames(styles.gallerySection, {
-                            [styles.gallerySectionVisible]: showPlayer === false,
+                            [styles.gallerySectionVisible]:
+                                showPlayer === false,
                         })}
                     >
                         <h2>{videoSection.title}</h2>
