@@ -5,9 +5,6 @@ headerColour: dark
 path: /deaconsfund/info
 template: basic
 ---
-
-**THIS IS A DRAFT - PLEASE DO NOT SHARE THIS LINK YET**
-
 ## Why do we need a fund?
 Many members of Christ Church Mayfair are blessed financially, and share these blessings with others through giving to ministry and charity, in London and elsewhere. At the same time, some members of the church family experience hardship. We should be distinctive in dealing with these situations.
 
