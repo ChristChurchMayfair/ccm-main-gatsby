@@ -5,9 +5,6 @@ showInFooter: false
 headerColour: dark
 template: basic
 ---
-
-**THIS IS A DRAFT - PLEASE DO NOT SHARE THIS LINK YET**
-
 The Deacon’s Fund exists to care for financial needs of members of the church family experiencing hardship.
 
 You can find out how the fund works and what it does [here](/deaconsfund/info).
