@@ -12,7 +12,11 @@ import YouTubeGallery, {
 import { Form, FormState } from "../components/form/form"
 import { FormSectionStart } from "../components/form/fields/form-section-start"
 import BasicTextField from "../components/form/fields/basic-text-field"
-import { IndexableFormData, convertFormDateToGoogleFormUrl, GoogleFormConfig } from "../components/form/google-form-submit"
+import {
+    IndexableFormData,
+    convertFormDateToGoogleFormUrl,
+    GoogleFormConfig,
+} from "../components/form/google-form-submit"
 import CheckBoxField from "../components/form/fields/checkbox-field"
 
 const devevelopmentEnvironmentWarning = (
@@ -143,9 +147,9 @@ const WelcomePage: React.FC<{}> = () => {
         }
     `)
 
-const [contactFormState, setContactFormState] = useState<FormState | null>(
-    null
-)
+    const [contactFormState, setContactFormState] = useState<FormState | null>(
+        null
+    )
 
     return (
         <Layout headerColour="dark" title={"Welcome"} description={undefined}>
