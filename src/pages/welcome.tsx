@@ -200,12 +200,12 @@ const WelcomePage: React.FC<{}> = () => {
                     options={[
                         {
                             id: "morning",
-                            label: "Morning - 10.00 AM",
+                            label: "Morning - 10.15 AM",
                             defaultValue: false,
                         },
                         {
                             id: "evening",
-                            label: "Evening - 6.15 PM",
+                            label: "Evening - 6.00 PM",
                             defaultValue: false,
                         },
                     ]}
