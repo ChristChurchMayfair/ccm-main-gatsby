@@ -31,34 +31,14 @@ const devevelopmentEnvironmentWarning = (
     </div>
 )
 
-type GiftFormData = {
-    givenName: string
-    familyName: string
-    streetAddress: string
-    extraAddressLine: string | null
-    townCity: string
-    postCode: string
-    telephoneNumber: string | null
-    emailAddress: string | null
-    giftAmountInGBP: number
-    giftType: "Standing Order" | "One Off" | "Give as you earn"
-    regularGiftFrequency: string | null
-    regularGiftRequencyOther: string
-    regularGiftCommencementDate: Date | null
-    thisGiftIsEligibleForGiftAid: boolean
-    allFutureGiftsAreEligibleForGiftAid: boolean
-    retrospectivelyReclaimGiftAid: boolean
-    retrospectiveGiftAidClaimStartDate: Date | null
-}
-
 const allConfig: { [configName: string]: GoogleFormConfig } = {
     development: {
-        formId: "asdfasdfasdfasdf", //This is the test form!
+        formId: "1FAIpQLSeWH3Ykx4wd_2VqXKuZIFQ_621u8T8zPrix8VdIkWSnWYQESQ", //This is the test form!
         fieldNameToEntryId: {
-            givenName: 123123123,
-            emailAddress: 123123123,
-            morning: 123123123,
-            evening: 123123123,
+            fullName: 930889699,
+            emailAddress: 1863592346,
+            morning: 1011494470,
+            evening: 1435050375,
         },
         otherEnabledFields: {},
         warning: devevelopmentEnvironmentWarning,
@@ -66,12 +46,12 @@ const allConfig: { [configName: string]: GoogleFormConfig } = {
             "There was an error submitting the form. Please try again and if the problem persists please contact us via email.",
     },
     production: {
-        formId: "asdfasdfasdf",
+        formId: "1FAIpQLSdjUjKxByZWdRkLQv3tbsfzQ2PidXuEzMNfHrp8BiCjMctAHw",
         fieldNameToEntryId: {
-            givenName: 123123123,
-            emailAddress: 123123123,
-            morning: 123123123,
-            evening: 123123123,
+            fullName: 1930537097,
+            emailAddress: 1284288054,
+            morning: 1501517289,
+            evening: 1960000090,
         },
         otherEnabledFields: {},
         warning: null,
@@ -174,6 +154,14 @@ const WelcomePage: React.FC<{}> = () => {
                 />
             </Section>
 
+            {googleFormSubmissionConfig?.warning !== undefined ? (
+                <Section id="notes">
+                    <article style={{ backgroundColor: "red", color: "white" }}>
+                        {googleFormSubmissionConfig.warning}
+                    </article>
+                </Section>
+            ) : null}
+
             <Form
                 genericSubmissionErrorMessage={
                     googleFormSubmissionConfig.genericSubmissionError
@@ -182,13 +170,13 @@ const WelcomePage: React.FC<{}> = () => {
                 stateChangeCallback={setContactFormState}
             >
                 <BasicTextField
-                    name="givenName"
+                    name="fullName"
                     label="Full Name"
                     autoComplete="name"
                     validation={{ required: "Provide your name." }}
                 />
                 <BasicTextField
-                    name="email"
+                    name="emailAddress"
                     label="Email Address"
                     autoComplete="email"
                     validation={{ required: "Provide an email address." }}
