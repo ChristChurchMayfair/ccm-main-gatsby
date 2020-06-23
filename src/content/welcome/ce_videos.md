@@ -1,8 +1,6 @@
 ---
 sections:
   - videos:
-    - title: What is Christianity?
-      id: qjQLAay1HqM
     - title: Good News
       id: NP3m1c13vj0
     - title: Identity
@@ -24,5 +22,5 @@ sections:
     - title: Come & Die
       id: CwkTaK9mk40
 ---
-## Christianity Explored Videos
-Would you like to hear more about Jesus and his teaching? These videos are a great way to learn more about the fundamental beliefs of Christianity.
+## What is Christianity?
+Would you like to know more about Jesus and his teaching? This video provides a good introduction and below you can find a number of other videos which cover the fundamental beliefs of Christianity.

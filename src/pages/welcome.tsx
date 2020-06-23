@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import Styles from "../components/sharingfaith.module.scss"
 import Bio from "../components/bio"
 import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
@@ -10,7 +9,6 @@ import YouTubeGallery, {
     VideoSection,
 } from "../components/youtube/youtube-gallery"
 import { Form, FormState } from "../components/form/form"
-import { FormSectionStart } from "../components/form/fields/form-section-start"
 import BasicTextField from "../components/form/fields/basic-text-field"
 import {
     IndexableFormData,
@@ -18,6 +16,9 @@ import {
     GoogleFormConfig,
 } from "../components/form/google-form-submit"
 import CheckBoxField from "../components/form/fields/checkbox-field"
+import styles from "../components/welcome.module.scss"
+import YouTube from "react-youtube"
+import { FormSectionStart } from "../components/form/fields/form-section-start"
 
 const devevelopmentEnvironmentWarning = (
     <div>
@@ -146,14 +147,6 @@ const WelcomePage: React.FC<{}> = () => {
                 />
             </Section>
 
-            <Section>
-                <article
-                    dangerouslySetInnerHTML={{
-                        __html: data.contactForm?.html ?? "Missing content",
-                    }}
-                />
-            </Section>
-
             {googleFormSubmissionConfig?.warning !== undefined ? (
                 <Section id="notes">
                     <article style={{ backgroundColor: "red", color: "white" }}>
@@ -169,6 +162,13 @@ const WelcomePage: React.FC<{}> = () => {
                 doSubmit={sendToGoogleFormsApi}
                 stateChangeCallback={setContactFormState}
             >
+                <FormSectionStart
+                    name={"Get In Touch"}
+                    level={1}
+                    description={
+                        "If you are looking into Christianity or have questions about Christ Church Mayfair we'd love to help you. Fill out this form and we will get in touch with you."
+                    }
+                />
                 <BasicTextField
                     name="fullName"
                     label="Full Name"
@@ -185,15 +185,16 @@ const WelcomePage: React.FC<{}> = () => {
                     name="serviceAttended"
                     label="Which Service Did You Attend?"
                     contextualHelp={"Please select all that apply."}
+                    itemsPerLine={2}
                     options={[
                         {
                             id: "morning",
-                            label: "Morning - 10.15 AM",
+                            label: "10.15 AM",
                             defaultValue: false,
                         },
                         {
                             id: "evening",
-                            label: "Evening - 6.00 PM",
+                            label: "6.00 PM",
                             defaultValue: false,
                         },
                     ]}
@@ -208,6 +209,16 @@ const WelcomePage: React.FC<{}> = () => {
                             "Missing content",
                     }}
                 />
+            </Section>
+            <Section>
+                <div className={styles.bigVideoContent}>
+                    <YouTube
+                        containerClassName={styles.bigVideoContainer}
+                        className={styles.bigPlayer}
+                        opts={{ playerVars: { autoplay: 0 } }}
+                        videoId={"qjQLAay1HqM"}
+                    />
+                </div>
             </Section>
             <Section>
                 <YouTubeGallery
