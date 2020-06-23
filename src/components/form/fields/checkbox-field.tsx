@@ -71,9 +71,7 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
             contextualHelp={prependRequired(validation, contextualHelp)}
             error={errors[name]?.message}
         >
-            <div className={choiceStyles}>
-                {inputDivs}
-            </div>
+            <div className={choiceStyles}>{inputDivs}</div>
         </Field>
     )
 }
