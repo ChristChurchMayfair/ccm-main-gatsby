@@ -22,5 +22,4 @@ sections:
     - title: Come & Die
       id: CwkTaK9mk40
 ---
-## What is Christianity?
-Would you like to know more about Jesus and his teaching? This video provides a good introduction and below you can find a number of other videos which cover the fundamental beliefs of Christianity.
+## Explore The Christian Faith

@@ -42,7 +42,7 @@ export type FormState =
 interface FormProps<DataType> {
     genericSubmissionErrorMessage: string
     doSubmit: (data: DataType) => Promise<void>
-    stateChangeCallback: (state: FormState) => void
+    stateChangeCallback?: (state: FormState) => void
 }
 
 export type FormType<DataType> = PropsWithChildren<FormProps<DataType>>
@@ -59,7 +59,9 @@ export const Form = <DataType,>({
     >()
 
     useEffect(() => {
-        stateChangeCallback(formState)
+        if (stateChangeCallback != null) {
+            stateChangeCallback(formState)
+        }
     }, [formState, stateChangeCallback])
 
     const fieldsWithFormWiringInjected = React.Children.map(

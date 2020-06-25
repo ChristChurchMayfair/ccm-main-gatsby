@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Bio from "../components/bio"
@@ -8,7 +8,7 @@ import SectionText from "../components/section-text"
 import YouTubeGallery, {
     VideoSection,
 } from "../components/youtube/youtube-gallery"
-import { Form, FormState } from "../components/form/form"
+import { Form } from "../components/form/form"
 import BasicTextField from "../components/form/fields/basic-text-field"
 import {
     IndexableFormData,
@@ -105,6 +105,14 @@ const WelcomePage: React.FC<{}> = () => {
                     }
                 }
             }
+            bigVideo: markdownRemark(
+                fileAbsolutePath: { regex: "/welcome/big_video.md$/" }
+            ) {
+                html
+                frontmatter {
+                    videoId
+                }
+            }
             contactForm: markdownRemark(
                 fileAbsolutePath: { regex: "/welcome/contactform.md$/" }
             ) {
@@ -128,10 +136,6 @@ const WelcomePage: React.FC<{}> = () => {
         }
     `)
 
-    const [contactFormState, setContactFormState] = useState<FormState | null>(
-        null
-    )
-
     return (
         <Layout headerColour="dark" title={"Welcome"} description={undefined}>
             <HeaderUnderlay />
@@ -147,8 +151,24 @@ const WelcomePage: React.FC<{}> = () => {
                 />
             </Section>
 
-            {googleFormSubmissionConfig?.warning !== undefined ? (
-                <Section id="notes">
+            <Section>
+                <div className={styles.bigVideoContent}>
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: data.bigVideo!.html!,
+                        }}
+                    />
+                    <YouTube
+                        containerClassName={styles.bigVideoContainer}
+                        className={styles.bigPlayer}
+                        opts={{ playerVars: { autoplay: 0 } }}
+                        videoId={data.bigVideo?.frontmatter.videoId}
+                    />
+                </div>
+            </Section>
+
+            {googleFormSubmissionConfig?.warning != null ? (
+                <Section id="developmentwarning">
                     <article style={{ backgroundColor: "red", color: "white" }}>
                         {googleFormSubmissionConfig.warning}
                     </article>
@@ -160,7 +180,6 @@ const WelcomePage: React.FC<{}> = () => {
                     googleFormSubmissionConfig.genericSubmissionError
                 }
                 doSubmit={sendToGoogleFormsApi}
-                stateChangeCallback={setContactFormState}
             >
                 <FormSectionStart
                     name={"Get In Touch"}
@@ -210,16 +229,7 @@ const WelcomePage: React.FC<{}> = () => {
                     }}
                 />
             </Section>
-            <Section>
-                <div className={styles.bigVideoContent}>
-                    <YouTube
-                        containerClassName={styles.bigVideoContainer}
-                        className={styles.bigPlayer}
-                        opts={{ playerVars: { autoplay: 0 } }}
-                        videoId={"qjQLAay1HqM"}
-                    />
-                </div>
-            </Section>
+
             <Section>
                 <YouTubeGallery
                     videoSections={
