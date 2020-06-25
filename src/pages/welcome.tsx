@@ -162,7 +162,7 @@ const WelcomePage: React.FC<{}> = () => {
                         containerClassName={styles.bigVideoContainer}
                         className={styles.bigPlayer}
                         opts={{ playerVars: { autoplay: 0 } }}
-                        videoId={data.bigVideo?.frontmatter.videoId}
+                        videoId={data.bigVideo!.frontmatter!.videoId}
                     />
                 </div>
             </Section>
