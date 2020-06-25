@@ -113,13 +113,8 @@ const WelcomePage: React.FC<{}> = () => {
                     videoId
                 }
             }
-            contactForm: markdownRemark(
-                fileAbsolutePath: { regex: "/welcome/contactform.md$/" }
-            ) {
-                html
-            }
-            christianityExploredVideos: markdownRemark(
-                fileAbsolutePath: { regex: "/welcome/ce_videos.md$/" }
+            videos: markdownRemark(
+                fileAbsolutePath: { regex: "/welcome/videos.md$/" }
             ) {
                 html
                 frontmatter {
@@ -224,7 +219,7 @@ const WelcomePage: React.FC<{}> = () => {
                 <article
                     dangerouslySetInnerHTML={{
                         __html:
-                            data.christianityExploredVideos?.html ??
+                            data.videos?.html ??
                             "Missing content",
                     }}
                 />
@@ -233,7 +228,7 @@ const WelcomePage: React.FC<{}> = () => {
             <Section>
                 <YouTubeGallery
                     videoSections={
-                        data.christianityExploredVideos!.frontmatter!
+                        data.videos!.frontmatter!
                             .sections as VideoSection[]
                     }
                 />
