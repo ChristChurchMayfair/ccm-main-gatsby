@@ -3,7 +3,7 @@ name: Regarding Coronavirus
 status: live
 eventType: important-notice
 order: 3
-lastUpdated: 15:30 28 Jun 2020
+lastUpdated: 15:30 26 Jun 2020
 features:
     - title: Blog
       description: |
