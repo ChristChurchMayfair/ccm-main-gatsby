@@ -16,6 +16,7 @@ export type CheckBoxOption = {
 type CheckBoxFieldProps = CommonField &
     ReactHookFormWiring & {
         options: CheckBoxOption[]
+        itemsPerLine?: number
     }
 
 const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
@@ -28,6 +29,7 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
     register,
     watch,
     showWhen,
+    itemsPerLine,
 }) => {
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
@@ -57,6 +59,11 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
         )
     })
 
+    let choiceStyles = formStyles.formItemMultipleChoiceChoices
+    if (itemsPerLine != null && itemsPerLine === 2) {
+        choiceStyles = formStyles.formItemMultipleChoiceChoicesTwoPerRow
+    }
+
     return (
         <Field
             key={name}
@@ -64,9 +71,7 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
             contextualHelp={prependRequired(validation, contextualHelp)}
             error={errors[name]?.message}
         >
-            <div className={formStyles.formItemMultipleChoiceChoices}>
-                {inputDivs}
-            </div>
+            <div className={choiceStyles}>{inputDivs}</div>
         </Field>
     )
 }
