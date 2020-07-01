@@ -218,9 +218,7 @@ const WelcomePage: React.FC<{}> = () => {
             <Section>
                 <article
                     dangerouslySetInnerHTML={{
-                        __html:
-                            data.videos?.html ??
-                            "Missing content",
+                        __html: data.videos?.html ?? "Missing content",
                     }}
                 />
             </Section>
@@ -228,8 +226,7 @@ const WelcomePage: React.FC<{}> = () => {
             <Section>
                 <YouTubeGallery
                     videoSections={
-                        data.videos!.frontmatter!
-                            .sections as VideoSection[]
+                        data.videos!.frontmatter!.sections as VideoSection[]
                     }
                 />
             </Section>
