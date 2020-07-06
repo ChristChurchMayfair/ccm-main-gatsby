@@ -39,46 +39,46 @@ const Services = () => {
         }
     `)
     return (
-        <Section id="services" className={styles.services} colorScheme="dark">
-            <h1 className={styles.heading}>Our Sunday Services</h1>
-            {[data.am, data.pm].map(service => {
-                if (service == null) {
-                    throw new Error("Impossible")
-                }
+        <Section id="services" colorScheme="dark">
+            <div className={styles.servicesSection}>
+                <h1 className={styles.heading}>Our Sunday Services</h1>
+                <div className={styles.serviceNotes}>
+                    <p>adsfasdfasdfasdf asdf asdf asdf asdfasdf</p>
+                </div>
+                <div className={styles.services}>
+                    {[data.am, data.pm].map(service => {
+                        if (service == null) {
+                            throw new Error("Impossible")
+                        }
 
-                return (
-                    <div key={service.id} className="service">
-                        <div
-                            className="photo centre"
-                            style={{ position: "relative" }}
-                        >
-                            <Img
-                                style={{
-                                    position: "absolute",
-                                    top: 0,
-                                    left: 0,
-                                    right: 0,
-                                    bottom: 0,
-                                }}
-                                fluid={
-                                    service.frontmatter!.mainImage!
-                                        .childImageSharp!.fluid
-                                }
-                            />
-                        </div>
-                        <div className="title">
-                            {service.frontmatter!.title}
-                        </div>
-                        <div className="time">{service.frontmatter!.time}</div>
-                        <div
-                            className="info"
-                            dangerouslySetInnerHTML={{
-                                __html: service.html!,
-                            }}
-                        />
-                    </div>
-                )
-            })}
+                        return (
+                            <div key={service.id} className={styles.service}>
+                                <div className={styles.image}>
+                                    <Img
+                                        fluid={
+                                            service.frontmatter!.mainImage!
+                                                .childImageSharp!.fluid
+                                        }
+                                    />
+                                </div>
+                                <div className={styles.title}>
+                                    {service.frontmatter!.title}
+                                </div>
+                                <div className={styles.time}>
+                                    {service.frontmatter!.time}
+                                </div>
+                                <div className={styles.streamLinks}></div>
+                                <div
+                                    className={styles.info}
+                                    dangerouslySetInnerHTML={{
+                                        __html: service.html!,
+                                    }}
+                                />
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
         </Section>
     )
 }
