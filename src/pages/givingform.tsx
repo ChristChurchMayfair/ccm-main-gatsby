@@ -79,8 +79,6 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
             },
         },
         warning: devevelopmentEnvironmentWarning,
-        genericSubmissionError:
-            "There was an error submitting the form. Please try again and if the problem persists contact the technical help as listed in the Notes section at the bottom of the page.",
     },
     production: {
         formId: "1FAIpQLSeED6ffZVCYFG5amGWUtTGWkr8EI-rbPO2i_f-z0Ur6XvTNTw",
@@ -109,8 +107,6 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
             },
         },
         warning: null,
-        genericSubmissionError:
-            "There was an error submitting the form. Please try again and if the problem persists contact the technical help as listed in the Notes section at the bottom of the page.",
     },
 }
 
@@ -212,7 +208,7 @@ const GivingFormPage: React.FC = () => {
 
             <Form
                 genericSubmissionErrorMessage={
-                    googleFormSubmissionConfig.genericSubmissionError
+                    "There was an error submitting the form. Please try again and if the problem persists contact the technical help as listed in the Notes section at the bottom of the page."
                 }
                 doSubmit={sendToGoogleFormsApi}
                 stateChangeCallback={setGivingFormState}

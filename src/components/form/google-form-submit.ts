@@ -17,7 +17,6 @@ export type GoogleFormConfig = {
     fieldNameToEntryId: { [fieldName: string]: number }
     otherEnabledFields: { [fieldName: string]: OtherFieldConfig }
     warning: ReactElement | null
-    genericSubmissionError: string
 }
 
 export function convertFormDateToGoogleFormUrl<
