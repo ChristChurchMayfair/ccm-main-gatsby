@@ -12,6 +12,7 @@ const FindOutMore: FC<FindOutMoreProps> = ({
     ...elementProps
 }) => (
     <Section
+        colorScheme="light"
         className={classnames(className, styles.findOutMore)}
         {...elementProps}
     >

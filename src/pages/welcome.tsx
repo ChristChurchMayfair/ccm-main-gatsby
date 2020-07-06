@@ -133,9 +133,14 @@ const WelcomePage: React.FC<{}> = () => {
 
     return (
         <Layout headerColour="dark" title={"Welcome"} description={undefined}>
-            <HeaderUnderlay />
+            <HeaderUnderlay colorScheme="light" />
 
-            <Section intro dark wider className="intro wider dark">
+            <Section
+                intro
+                colorScheme="dark"
+                wider
+                className="intro wider dark"
+            >
                 <SectionText
                     intro
                     dark
@@ -146,7 +151,7 @@ const WelcomePage: React.FC<{}> = () => {
                 />
             </Section>
 
-            <Section>
+            <Section colorScheme="light">
                 <div className={styles.bigVideoContent}>
                     <div
                         dangerouslySetInnerHTML={{
@@ -163,7 +168,7 @@ const WelcomePage: React.FC<{}> = () => {
             </Section>
 
             {googleFormSubmissionConfig?.warning != null ? (
-                <Section id="developmentwarning">
+                <Section id="developmentwarning" colorScheme="light">
                     <article style={{ backgroundColor: "red", color: "white" }}>
                         {googleFormSubmissionConfig.warning}
                     </article>
@@ -215,7 +220,7 @@ const WelcomePage: React.FC<{}> = () => {
                 />
             </Form>
 
-            <Section>
+            <Section colorScheme="light">
                 <article
                     dangerouslySetInnerHTML={{
                         __html: data.videos?.html ?? "Missing content",
@@ -223,7 +228,7 @@ const WelcomePage: React.FC<{}> = () => {
                 />
             </Section>
 
-            <Section>
+            <Section colorScheme="light">
                 <YouTubeGallery
                     videoSections={
                         data.videos!.frontmatter!.sections as VideoSection[]

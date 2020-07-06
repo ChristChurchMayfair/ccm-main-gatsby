@@ -1,14 +1,23 @@
 import React, { FC, HTMLProps } from "react"
 
-import Section from "./section"
+import Section, { colorScheme } from "./section"
 
 import styles from "./header-underlay.module.scss"
 import classNames from "classnames"
 
-interface HeaderUnderlayProps extends HTMLProps<HTMLDivElement> {}
+interface HeaderUnderlayProps extends HTMLProps<HTMLDivElement> {
+    colorScheme: colorScheme
+}
 
-const HeaderUnderlay: FC<HeaderUnderlayProps> = ({ children, className }) => (
-    <Section className={classNames(className, styles.headerUnderlay)}>
+const HeaderUnderlay: FC<HeaderUnderlayProps> = ({
+    children,
+    className,
+    colorScheme,
+}) => (
+    <Section
+        className={classNames(className, styles.headerUnderlay)}
+        colorScheme={colorScheme}
+    >
         {children}
     </Section>
 )

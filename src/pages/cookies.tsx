@@ -44,8 +44,8 @@ const Cookies: React.FC<{}> = () => {
                 data.mainContent!.frontmatter!.headerColour as HeaderColour
             }
         >
-            <HeaderUnderlay />
-            <Section intro dark wider>
+            <HeaderUnderlay colorScheme="light" />
+            <Section intro colorScheme={"dark"} wider>
                 <SectionText intro dark>
                     <div
                         dangerouslySetInnerHTML={{
@@ -54,7 +54,7 @@ const Cookies: React.FC<{}> = () => {
                     />
                 </SectionText>
             </Section>
-            <Section>
+            <Section colorScheme="light">
                 <div className={styles.settingsContainer}>
                     <div
                         className={styles.settingsIntroText}

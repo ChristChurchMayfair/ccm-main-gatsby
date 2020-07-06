@@ -147,7 +147,7 @@ const IndexPage = () => {
                 </div>
             </Hero>
 
-            <Section intro>
+            <Section intro colorScheme="light">
                 <SectionText
                     intro
                     dangerouslySetInnerHTML={{
@@ -193,6 +193,7 @@ const IndexPage = () => {
                         objectPosition="center right"
                     />
                 }
+                colorScheme="light"
                 imagePosition="right"
                 imageBackgroundPosition="right"
             >

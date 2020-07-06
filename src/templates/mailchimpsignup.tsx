@@ -26,8 +26,8 @@ export const query = graphql`
 const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
     return (
         <Layout title={data.mainInfo!.frontmatter!.title} headerColour="dark">
-            <HeaderUnderlay />
-            <Section>
+            <HeaderUnderlay colorScheme="light" />
+            <Section colorScheme="light">
                 <article>
                     <div
                         dangerouslySetInnerHTML={{

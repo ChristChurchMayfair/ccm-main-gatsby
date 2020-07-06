@@ -151,7 +151,7 @@ export const Form = <DataType,>({
     )
 
     return (
-        <Section>
+        <Section colorScheme="light">
             <article>
                 {formState === "badconfig" ? badlyConfiguredForm : null}
                 {formState === "submitted" ? submitted : form}

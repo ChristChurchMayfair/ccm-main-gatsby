@@ -56,8 +56,8 @@ const Staff = () => {
 
     return (
         <Layout title={data.mainInfo?.frontmatter?.title} headerColour="dark">
-            <HeaderUnderlay />
-            <Section intro wider dark>
+            <HeaderUnderlay colorScheme="light" />
+            <Section intro wider colorScheme="dark">
                 <SectionText
                     intro
                     dangerouslySetInnerHTML={{
@@ -65,7 +65,7 @@ const Staff = () => {
                     }}
                 />
             </Section>
-            <Section>
+            <Section colorScheme="light">
                 <div className={styles.staffMembersContainer}>
                     {staffMembers.map(staffMember => (
                         <StaffMember key={staffMember.id} {...staffMember} />

@@ -6,8 +6,8 @@ import Section from "../components/section"
 
 const NotFoundPage = () => (
     <Layout title="Page Not Found" description={undefined} headerColour="dark">
-        <HeaderUnderlay />
-        <Section>
+        <HeaderUnderlay colorScheme="light" />
+        <Section colorScheme="light">
             <article>
                 <h1>Error: Page not found</h1>
                 <p>

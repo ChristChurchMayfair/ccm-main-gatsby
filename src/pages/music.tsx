@@ -170,7 +170,7 @@ const MusicPage: React.FC<{}> = () => {
                 overlayCaption={data.mainContent!.frontmatter!.overlayCaption}
                 singleImageFluid={fluid}
             />
-            <Section intro wider>
+            <Section intro wider colorScheme="light">
                 <SectionText
                     intro
                     dangerouslySetInnerHTML={{
@@ -198,7 +198,7 @@ const MusicPage: React.FC<{}> = () => {
                 }
                 imagePosition="right"
                 imageBackgroundPosition="right"
-                dark
+                colorScheme="dark"
             >
                 <SectionText infoPanel dark>
                     <h1>{data.extraContent!.frontmatter!.title}</h1>
@@ -210,7 +210,7 @@ const MusicPage: React.FC<{}> = () => {
                 </SectionText>
             </Section>
 
-            <Section>
+            <Section colorScheme="light">
                 <div className={styles.musicReleasesContainer}>
                     <h1>Releases</h1>
                     <div className={styles.musicReleases}>{releases}</div>
@@ -218,7 +218,7 @@ const MusicPage: React.FC<{}> = () => {
             </Section>
 
             <div className={styles.resourcesContainer}>
-                <Section className={styles.resources}>
+                <Section className={styles.resources} colorScheme="light">
                     <h1 className={styles.resourcesTitle}>
                         {data.resources!.frontmatter!.title}
                     </h1>

@@ -24,7 +24,11 @@ const ImportantNotice: FC<ImportantNoticeProps> = ({
     features = [],
 }) => (
     <div className={styles.importantNoticeContainer}>
-        <Section className={styles.importantNotice} fullBleed>
+        <Section
+            className={styles.importantNotice}
+            fullBleed
+            colorScheme="light"
+        >
             <div className={styles.content}>
                 <h1 className={styles.title}>{noticeTitle}</h1>
                 <SectionText fullBleed className={styles.text}>

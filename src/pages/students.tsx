@@ -80,7 +80,7 @@ const Students: React.FC<{}> = () => {
                 overlayCaption={data.mainContent!.frontmatter!.overlayCaption}
                 singleImageFluid={fluid}
             />
-            <Section intro wider>
+            <Section intro wider colorScheme="light">
                 <SectionText
                     intro
                     dangerouslySetInnerHTML={{
@@ -108,7 +108,7 @@ const Students: React.FC<{}> = () => {
                 }
                 imagePosition="right"
                 imageBackgroundPosition="right"
-                dark
+                colorScheme="dark"
             >
                 <SectionText infoPanel dark>
                     <h1>{data.extraContent!.frontmatter!.title}</h1>

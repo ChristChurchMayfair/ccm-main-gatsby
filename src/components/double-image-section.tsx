@@ -27,7 +27,7 @@ const DoubleImageSection: FC<DoubleImageSectionProps> = ({
                 [styles["doubleImageSection--right"]]:
                     imagesPosition === "right",
             })}
-            dark={dark}
+            colorScheme={dark ? "dark" : "light"}
         >
             <div className={styles.topImage}>{topImage}</div>
             <div className={styles.bottomImage}>{bottomImage}</div>
