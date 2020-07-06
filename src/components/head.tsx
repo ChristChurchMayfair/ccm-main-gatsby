@@ -3,13 +3,18 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 import HandInTheAir from "../content/assets/images/desktop/hand_in_the_air.jpg"
+import {
+    OpenGraphMetaData,
+    generateOpenGraphMetaTags,
+    MetaTag,
+} from "./open-graph"
 
 interface HeadProps {
     title: string | undefined
     description: string | undefined
-    meta?: Array<{ name: string; content: string }>
+    openGraphData?: OpenGraphMetaData
 }
-const Head: React.FC<HeadProps> = ({ title, description, meta = [] }) => {
+const Head: React.FC<HeadProps> = ({ title, description, openGraphData }) => {
     const { site } = useStaticQuery<GatsbyTypes.HeadQuery>(
         graphql`
             query Head {
@@ -34,24 +39,31 @@ const Head: React.FC<HeadProps> = ({ title, description, meta = [] }) => {
     const metadata = site!.siteMetadata!
     const metaDescription = description ?? metadata.description!
 
-    const helmetMeta = [
-        ...meta,
+    const defaultOpenGraphData: OpenGraphMetaData = {
+        title: title ?? metadata.title ?? "Missing Title",
+        type: "website",
+        siteName: metadata.title!,
+        url: metadata.url!,
+        description: metaDescription,
+        images: [
+            {
+                imageUrl: `${metadata.url}${HandInTheAir}`,
+                imageAlternativeText: "Christ Church Mayfair",
+            },
+        ],
+        email: metadata.email,
+        phoneNumber: metadata.officePhoneNumber,
+    }
 
+    const openGraphMetaTags = generateOpenGraphMetaTags(
+        openGraphData ?? defaultOpenGraphData
+    )
+
+    let helmetMeta: MetaTag[] = [
         // Basic HTML tags, SEO
         { name: `description`, content: metaDescription },
         { name: `url`, content: metadata.url! },
         { name: `robots`, content: metadata.robots! },
-
-        // OpenGraph tags
-        { property: `og:title`, content: title },
-        { property: "og:site_name", content: metadata.title! },
-        { property: `og:description`, content: metaDescription },
-        { property: `og:type`, content: `website` },
-        { property: `og:url`, content: metadata.url! },
-        { property: `og:image`, content: HandInTheAir },
-        { property: `og:image:alt`, content: `Christ Church Mayfair` },
-        { property: `og:email`, content: metadata.email! },
-        { property: `og:phone_number`, content: metadata.officePhoneNumber! },
 
         // Theme colour
         { name: `theme-color`, content: `#ffffff` },
@@ -62,6 +74,8 @@ const Head: React.FC<HeadProps> = ({ title, description, meta = [] }) => {
             content: `black-translucent`,
         },
     ]
+
+    helmetMeta = helmetMeta.concat(openGraphMetaTags)
 
     const pageTitle =
         title != null ? `${title} - ${metadata.title!}` : metadata.title!

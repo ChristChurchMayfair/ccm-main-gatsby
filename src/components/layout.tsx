@@ -13,12 +13,13 @@ import Footer from "./footer"
 import CookieNotice from "./cookie-notice"
 import "../assets/css/global.scss"
 import "../assets/css/style.css"
+import { OpenGraphMetaData } from "./open-graph"
 
 interface Props {
     children: React.ReactNode
     title: string | undefined
     description?: string | undefined
-    meta?: Array<{ name: string; content: string }>
+    openGraphData?: OpenGraphMetaData
     headerColour?: HeaderColour
 }
 const Layout: React.FC<Props> = ({
@@ -26,11 +27,15 @@ const Layout: React.FC<Props> = ({
     children,
     title,
     description,
-    meta,
+    openGraphData,
 }) => {
     return (
         <>
-            <Head title={title} description={description} meta={meta} />
+            <Head
+                title={title}
+                description={description}
+                openGraphData={openGraphData}
+            />
             <Header headerColour={headerColour} />
             <main>{children}</main>
             <Footer />
