@@ -16,7 +16,6 @@ test("generates the correct url with string values", () => {
         },
         otherEnabledFields: {},
         warning: null,
-        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
@@ -37,7 +36,6 @@ test("generates the correct url with number values", () => {
         },
         otherEnabledFields: {},
         warning: null,
-        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
@@ -58,7 +56,6 @@ test("generates the correct url with date values", () => {
         },
         otherEnabledFields: {},
         warning: null,
-        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
@@ -79,7 +76,6 @@ test("generates the correct url with boolean values", () => {
         },
         otherEnabledFields: {},
         warning: null,
-        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
@@ -102,7 +98,6 @@ test("generates the correct url with string values, omitting nulls", () => {
         },
         otherEnabledFields: {},
         warning: null,
-        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
@@ -130,7 +125,6 @@ test("generates the correct url for data where other field is configured", () =>
             },
         },
         warning: null,
-        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
@@ -157,7 +151,6 @@ test("generates the correct url for data where other field is configured but not
             },
         },
         warning: null,
-        genericSubmissionError: "",
     }
 
     const url = convertFormDateToGoogleFormUrl(formData, config)
