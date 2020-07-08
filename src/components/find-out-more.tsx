@@ -12,12 +12,14 @@ const FindOutMore: FC<FindOutMoreProps> = ({
     ...elementProps
 }) => (
     <Section
-        colorScheme="light"
-        className={classnames(className, styles.findOutMore)}
+        colorScheme={"light"}
+        className={classnames(className)}
         {...elementProps}
     >
-        <h1 className={styles.heading}>Find out more</h1>
-        {children}
+        <div className={styles.findOutMore}>
+            <h1 className={styles.heading}>Find out more</h1>
+            {children}
+        </div>
     </Section>
 )
 
