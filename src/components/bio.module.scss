@@ -60,16 +60,10 @@
 .photo {
     grid-area: photo;
     object-fit: contain;
-    height: 200px;
     overflow: hidden;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 100%;
     background-position-y: top;
-
-    img {
-        height: 100%;
-    }
 }
 
 .photo {

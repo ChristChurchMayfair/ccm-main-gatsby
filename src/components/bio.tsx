@@ -37,21 +37,11 @@ const Bio: React.FC<Props> = ({
                         }
                         return (
                             <div className={styles.person} key={person.name}>
-                                <div
-                                    className={styles.photo}
-                                    style={{ position: "relative" }}
-                                >
+                                <div className={styles.photo}>
                                     <Img
-                                        style={{
-                                            position: "absolute",
-                                            top: 0,
-                                            left: 0,
-                                            bottom: 0,
-                                            right: 0,
-                                        }}
                                         fluid={person.headshot!.asset!.fluid}
                                         objectFit="contain"
-                                        objectPosition="left center"
+                                        objectPosition="left top"
                                     />
                                 </div>
                                 <div className={styles.info}>
@@ -66,13 +56,6 @@ const Bio: React.FC<Props> = ({
                                             {person.email}
                                         </a>
                                     </div>
-                                    {/* {person.phone != null && (
-                            <div className="phone">
-                                <a href={`tel:${person.phone}`}>
-                                    {person.phone}
-                                </a>
-                            </div>
-                        )} */}
                                 </div>
                             </div>
                         )
