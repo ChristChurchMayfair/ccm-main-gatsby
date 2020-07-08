@@ -5,8 +5,8 @@ import Img from "./img"
 import { sortedWithPriority } from "../utils"
 
 import styles from "./bio.module.scss"
-import FindOutMore from "./find-out-more"
 import FindOutMoreText from "./find-out-more-text"
+import Section from "./section"
 
 interface Props {
     people: ReadonlyArray<GatsbyTypes.StaffProfileFragment>
@@ -26,8 +26,9 @@ const Bio: React.FC<Props> = ({
     )
 
     return (
-        <div className={styles.bioContainer}>
-            <FindOutMore className={styles.bio}>
+        <Section colorScheme="light">
+            <div className={styles.bio}>
+                <h1 className={styles.heading}>Find out more</h1>
                 <FindOutMoreText innerHTML={descriptionHtml} />
                 <div className={styles.people}>
                     {people.map(person => {
@@ -77,8 +78,8 @@ const Bio: React.FC<Props> = ({
                         )
                     })}
                 </div>
-            </FindOutMore>
-        </div>
+            </div>
+        </Section>
     )
 }
 
