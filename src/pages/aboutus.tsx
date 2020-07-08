@@ -53,7 +53,7 @@ const AboutUs: React.FC<{}> = () => {
     const data = useStaticQuery<GatsbyTypes.AboutUsPageQuery>(AboutUsPageQuery)
     return (
         <Layout title="About us" headerColour="dark">
-            <HeaderUnderlay />
+            <HeaderUnderlay colorScheme="light" />
             {data.aboutUsSections.nodes.map(section => (
                 <Fragment key={section.id}>
                     <Section
@@ -75,7 +75,11 @@ const AboutUs: React.FC<{}> = () => {
                                 }
                             />
                         }
-                        dark={section.frontmatter!.dark}
+                        colorScheme={
+                            section.frontmatter?.dark === true
+                                ? "dark"
+                                : "light"
+                        }
                         fullBleed={section.frontmatter!.fullBleed}
                         noImageOnMobile={section.frontmatter!.noImageOnMobile}
                         imagePosition={

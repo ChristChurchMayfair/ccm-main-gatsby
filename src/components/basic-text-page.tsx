@@ -9,8 +9,8 @@ type BasicTextProps = {
 
 const BasicText: React.FC<BasicTextProps> = props => (
     <>
-        <HeaderUnderlay />
-        <Section>
+        <HeaderUnderlay colorScheme="light" />
+        <Section colorScheme="light">
             <article
                 dangerouslySetInnerHTML={{
                     __html: props.html ?? "Missing content",

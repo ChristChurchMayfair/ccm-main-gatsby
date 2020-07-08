@@ -118,8 +118,11 @@ const LondonLivingPage: React.FC<{}> = () => {
             title={data.mainContent!.frontmatter!.title}
             description={undefined}
         >
-            <HeaderUnderlay className={styles.londonLiving} />
-            <Section className={styles.londonLiving}>
+            <HeaderUnderlay
+                className={styles.londonLiving}
+                colorScheme="custom"
+            />
+            <Section colorScheme="custom" className={styles.londonLiving}>
                 <div className={styles.content}>
                     <div className={styles.intro}>
                         <div className={styles.header}>

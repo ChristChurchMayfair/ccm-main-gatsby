@@ -17,7 +17,7 @@ const Hero: React.FC<HeroProps> = ({
     children,
 }) => (
     <div className={styles.heroContainer}>
-        <Section id={sectionId} className={styles.hero}>
+        <Section id={sectionId} colorScheme="custom" className={styles.hero}>
             <div className={styles.carouselOverlay}>
                 <h1 className={styles.overlayCaption}>{overlayCaption}</h1>
             </div>

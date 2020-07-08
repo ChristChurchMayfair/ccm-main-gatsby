@@ -182,7 +182,7 @@ const Families: React.FC<{}> = () => {
                 }
                 imagePosition="right"
                 imageBackgroundPosition="right"
-                dark
+                colorScheme="dark"
                 mobileImageTextSwap
             >
                 <SectionText infoPanel dark>
@@ -221,6 +221,7 @@ const Families: React.FC<{}> = () => {
                         objectPosition="center top"
                     />
                 }
+                colorScheme="light"
                 fullBleed
                 noImageOnMobile
                 style={{

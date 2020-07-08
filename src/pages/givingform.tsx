@@ -186,8 +186,13 @@ const GivingFormPage: React.FC = () => {
 
     return (
         <Layout title="Giving Form" headerColour={"dark"}>
-            <HeaderUnderlay />
-            <Section intro wider dark className="intro wider dark">
+            <HeaderUnderlay colorScheme="light" />
+            <Section
+                intro
+                wider
+                colorScheme="dark"
+                className="intro wider dark"
+            >
                 <SectionText
                     intro
                     dark
@@ -199,7 +204,7 @@ const GivingFormPage: React.FC = () => {
             </Section>
 
             {googleFormSubmissionConfig?.warning !== undefined ? (
-                <Section id="notes">
+                <Section id="notes" colorScheme="light">
                     <article style={{ backgroundColor: "red", color: "white" }}>
                         {googleFormSubmissionConfig.warning}
                     </article>
@@ -370,7 +375,7 @@ const GivingFormPage: React.FC = () => {
                 />
             </Form>
             {givingFormState !== "submitted" ? (
-                <Section id="notes">
+                <Section id="notes" colorScheme="light">
                     <article
                         dangerouslySetInnerHTML={{
                             __html: data.notes?.html ?? "No Content!",

@@ -34,7 +34,7 @@ const FindUs = () => {
 
     return (
         <div className={styles.findUsContainer}>
-            <Section id="find-us" className={styles.findUs}>
+            <Section id="find-us" className={styles.findUs} colorScheme="dark">
                 <h1 className={styles.title}>Find Us</h1>
                 <div className={styles.location}>
                     <MapPin className={styles.pin} viewBox="0 0 100 100" />

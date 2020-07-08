@@ -51,7 +51,7 @@ const TalksPage = () => {
                 overlayCaption={meta.overlayCaption}
             />
             <div className={styles.talksContainer}>
-                <Section intro dark className={styles.talks}>
+                <Section intro colorScheme="dark" className={styles.talks}>
                     <SectionText
                         intro
                         dark
@@ -106,7 +106,7 @@ const TalksPage = () => {
                         />
                     </a>
                 </Section>
-                <Section className={styles.talksReactApp}>
+                <Section className={styles.talksReactApp} colorScheme="light">
                     <noscript>
                         You need to enable JavaScript to run this app.
                     </noscript>

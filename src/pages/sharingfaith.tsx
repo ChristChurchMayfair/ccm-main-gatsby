@@ -105,9 +105,14 @@ const SharingFaithPage: React.FC<{}> = () => {
             title={"How Do I Share My Faith?"}
             description={undefined}
         >
-            <HeaderUnderlay />
+            <HeaderUnderlay colorScheme="light" />
 
-            <Section intro dark wider className="intro wider dark">
+            <Section
+                intro
+                colorScheme="dark"
+                wider
+                className="intro wider dark"
+            >
                 <SectionText
                     intro
                     dark
@@ -117,7 +122,7 @@ const SharingFaithPage: React.FC<{}> = () => {
                     }}
                 />
             </Section>
-            <Section intro className={"intro"}>
+            <Section intro className={"intro"} colorScheme="light">
                 <a
                     id="resources-button"
                     className="button index-top-section-btn"
@@ -134,14 +139,14 @@ const SharingFaithPage: React.FC<{}> = () => {
                 </a>
             </Section>
 
-            <Section>
+            <Section colorScheme="light">
                 <article
                     dangerouslySetInnerHTML={{
                         __html: data.videos?.html ?? "Missing content",
                     }}
                 />
             </Section>
-            <Section>
+            <Section colorScheme="light">
                 <YouTubeGallery
                     videoSections={
                         data.videos!.frontmatter!.sections as VideoSection[]
@@ -149,21 +154,21 @@ const SharingFaithPage: React.FC<{}> = () => {
                 />
             </Section>
 
-            <Section id={"resources"}>
+            <Section id={"resources"} colorScheme="light">
                 <div className={Styles.resourcesContainer}>
                     <h1>Resources</h1>
                     <div className={Styles.resources}>{resources}</div>
                 </div>
             </Section>
 
-            <Section id={"stories"}>
+            <Section id={"stories"} colorScheme="light">
                 <article
                     dangerouslySetInnerHTML={{
                         __html: data.stories?.html ?? "Missing content",
                     }}
                 />
             </Section>
-            <Section>
+            <Section colorScheme="light">
                 <YouTubeGallery
                     videoSections={
                         data.stories!.frontmatter!.sections! as VideoSection[]

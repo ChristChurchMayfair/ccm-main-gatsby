@@ -75,7 +75,7 @@ const Families: React.FC<{}> = () => {
                 singleImageFluid={littleLambsImageFluid}
             />
 
-            <Section intro wider>
+            <Section intro wider colorScheme="light">
                 <SectionText
                     intro
                     dangerouslySetInnerHTML={{

@@ -11,10 +11,12 @@ type SectionImageBackgroundPosition =
     | "top-centre"
     | "bottom-centre"
 
+export type colorScheme = "dark" | "light" | "custom"
+
 interface SectionProps extends HTMLProps<HTMLDivElement> {
     intro?: boolean
     wider?: boolean
-    dark?: boolean
+    colorScheme: colorScheme
     mobileImageTextSwap?: boolean
     infoPanel?: boolean
     infoPanelImage?: ReactNode
@@ -27,7 +29,7 @@ interface SectionProps extends HTMLProps<HTMLDivElement> {
 const Section: FC<SectionProps> = ({
     intro = false,
     wider = false,
-    dark = false,
+    colorScheme: colorTheme,
     mobileImageTextSwap = false,
     infoPanel = false,
     infoPanelImage,
@@ -43,7 +45,8 @@ const Section: FC<SectionProps> = ({
         className={classnames(className, styles.section, {
             [styles["section--intro"]]: intro,
             [styles["section--wider-intro"]]: intro && wider,
-            [styles["section--dark"]]: dark,
+            [styles["section--dark"]]: colorTheme === "dark",
+            [styles["section--light"]]: colorTheme === "light",
             [styles["section--info-panel"]]: infoPanel,
             [styles["section--image-left"]]: imagePosition === "left",
             [styles["section--image-right"]]: imagePosition === "right",

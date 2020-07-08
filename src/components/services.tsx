@@ -39,7 +39,7 @@ const Services = () => {
         }
     `)
     return (
-        <Section id="services" className={styles.services}>
+        <Section id="services" className={styles.services} colorScheme="dark">
             <h1 className={styles.heading}>Our Sunday Services</h1>
             {[data.am, data.pm].map(service => {
                 if (service == null) {
