@@ -159,7 +159,7 @@ const LondonLivingPage: React.FC<{}> = () => {
     const customOpenGraphData: OpenGraphMetaData = {
         title: data.mainContent!.frontmatter!.title!,
         description: data.mainContent!.frontmatter!.openGraphData!.description!,
-        url: data.site!.siteMetadata!.url! + "/londonliving",
+        url: `${data.site!.siteMetadata!.url!}/londonliving`,
         type: "website",
         images: [
             {
