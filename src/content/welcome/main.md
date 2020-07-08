@@ -1,5 +1,5 @@
 ---
-findOutMoreText: If you want to find out more about Christianity or Christ Church Mayfair then Nick or Chris would love to hear from you.
+findOutMoreText: If you want to find out more about Christianity or Christ Church Mayfair then Nick would love to hear from you.
 ---
 
 Welcome to Christ Church Mayfair online. We're glad you were able to join one of our streamed services.
