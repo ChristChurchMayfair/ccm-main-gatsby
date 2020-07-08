@@ -1,0 +1,62 @@
+@import "../mixins/button";
+
+.londonLivingPromo {
+    --background-color: rgb(30, 30, 30);
+    --light-color: #faf8df;
+    --highlight-color: #dda443;
+    background-color: var(--background-color);
+    color: var(--light-color);
+    background-size: cover;
+    background-image: url("../content/londonliving/images/LL-banner-bg.jpg");
+    background-position-y: top;
+
+    > div {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "header header header header header header header header . . . ."
+            "text text text text text text text text . . . ."
+            "buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons";
+        grid-column-gap: var(--general-padding);
+
+        @media only screen and (max-width: 968px) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "header"
+                "text"
+                "buttons";
+        }
+    }
+}
+
+.header {
+    grid-area: header;
+    margin-bottom: var(--general-padding);
+}
+
+.text {
+    width: 100%;
+    grid-area: text;
+    margin-bottom: var(--general-padding);
+}
+
+.buttons {
+    grid-area: buttons;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: var(--general-padding);
+    }
+}
+
+.button {
+    @include button;
+    grid-area: auto;
+    margin-top: 0;
+    background-color: var(--highlight-color);
+    color: var(--background-color);
+}

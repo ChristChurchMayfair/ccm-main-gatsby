@@ -9,4 +9,4 @@ mobileImage: /assets/images/mobile/LLbannerbg.jpg
 findOutMoreText: Learn more
 findOutMoreLink: /londonliving
 ---
-Find out about our new series of podcasts looking at how Christianity speaks into uncertainty.
+Listen to the latest series of our podcast looking at how Christianity speaks hope into uncertainty.
