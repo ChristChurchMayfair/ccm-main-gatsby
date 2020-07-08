@@ -172,7 +172,9 @@ const WelcomePage: React.FC<{}> = () => {
             ) : null}
 
             <Form
-                genericSubmissionErrorMessage={"There was an error submitting the form. Please try again and if the problem persists please contact us via email."}
+                genericSubmissionErrorMessage={
+                    "There was an error submitting the form. Please try again and if the problem persists please contact us via email."
+                }
                 doSubmit={sendToGoogleFormsApi}
             >
                 <FormSectionStart
