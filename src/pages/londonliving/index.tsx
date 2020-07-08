@@ -98,7 +98,7 @@ const LondonLivingPage: React.FC<{}> = () => {
                             audioUrl
                             image {
                                 childImageSharp {
-                                    fluid(maxWidth: 200) {
+                                    fluid(maxWidth: 1000) {
                                         # This needs to be increased when we have higher res images
                                         ...GatsbyImageSharpFluid_noBase64
                                     }
