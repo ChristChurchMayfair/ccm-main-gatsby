@@ -38,6 +38,7 @@
 .location {
     grid-area: address;
     background-color: var(--light-colour);
+    color: var(--dark-colour);
     display: block;
     padding: var(--general-padding);
     margin-bottom: var(--general-padding);
