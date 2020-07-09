@@ -2,7 +2,7 @@
 title: London:Living
 openGraphData:
   image:
-    url: https://s3-eu-west-1.amazonaws.com/media.christchurchmayfair.org/londonliving/LLpodcastartwork_small.jpg
+    url: https://s3-eu-west-1.amazonaws.com/media.christchurchmayfair.org/londonliving/LL_podcastartwork2.jpg
     width: 1500
     height: 1500
     alt: A motion blurred picture of a red London bus with a lone figure visible through the windows.
