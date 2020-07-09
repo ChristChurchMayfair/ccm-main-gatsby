@@ -171,6 +171,8 @@ const IndexPage = () => {
                 </a>
             </Section>
 
+            <LondonLivingPromo />
+
             <Covid19 />
 
             <Services />
