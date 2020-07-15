@@ -1,3 +1,5 @@
+@import "../mixins/button";
+
 .servicesSection {
     grid-area: content;
     height: auto;
@@ -39,33 +41,47 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: var(--general-padding);
+    @media only screen and (max-width: 968px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .service {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto minmax(10px, 400px);
+    grid-template-columns: 1f;
+    grid-template-rows: auto auto auto auto minmax(10px, 400px);
     grid-template-areas:
-        "image"
+        "image "
         "title"
         "time"
+        "streamlinks"
         "info";
 
     @media only screen and (max-width: 968px) {
-        grid-template-rows: auto auto auto auto;
+        row-gap: var(--general-padding);
+        grid-template-rows: auto auto auto 250px auto;
         grid-template-areas:
-            "title"
-            "time"
-            "image"
-            "info";
+            "title "
+            "time "
+            "streamlinks "
+            "image "
+            "info ";
+
+        border-bottom-color: var(--light-colour);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        margin-bottom: var(--general-padding);
     }
+
+
 }
 
 .title {
     grid-area: title;
-    font-size: 1.5em;
+    font-size: 1.7em;
+    font-weight: 400;
     color: var(--light-colour);
-    margin-bottom: 0.1em;
+    margin-bottom: 0.3em;
     line-height: 1.1;
     padding: 30px 0px 0px 0px;
     letter-spacing: 0.02em;
@@ -85,7 +101,33 @@
 }
 
 .streamLinks {
-    
+    grid-area: streamlinks;
+
+    a {
+        @include button;
+        background-color: var(--light-colour);
+        color: #c4302b;
+        width: 100%;
+        margin-top: var(--general-padding);
+        margin-bottom: var(--general-padding);
+        cursor: pointer;
+        width: 100%;
+    }
+}
+
+.onlineOnlyBadge {
+    grid-area: type;
+    //background-color: #C0544A;
+    color: #C0544A;
+    text-transform: uppercase;
+    font-weight: 400;
+    // color: var(--light-colour);
+    display:inline-block;
+    padding-left: 5px;
+    //padding-right: 5px;
+    border-radius: 3px;
+    align-self: end;
+    justify-self: right;
 }
 
 .photo {

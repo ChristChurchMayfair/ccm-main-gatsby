@@ -12,6 +12,10 @@ const Services = () => {
             frontmatter {
                 title
                 time
+                onlineOnly
+                streamLinks {
+                    youtube
+                }
                 mainImage {
                     childImageSharp {
                         fluid(
@@ -42,18 +46,25 @@ const Services = () => {
         <Section id="services" colorScheme="dark">
             <div className={styles.servicesSection}>
                 <h1 className={styles.heading}>Our Sunday Services</h1>
-                <div className={styles.serviceNotes}>
-                    <p>adsfasdfasdfasdf asdf asdf asdf asdfasdf</p>
-                </div>
+                <div className={styles.serviceNotes}></div>
                 <div className={styles.services}>
                     {[data.am, data.pm].map(service => {
                         if (service == null) {
                             throw new Error("Impossible")
                         }
 
+                        let serviceType = null
+                        if (service.frontmatter?.onlineOnly === true) {
+                            serviceType = (
+                                <div className={styles.onlineOnlyBadge}>
+                                    Online Only
+                                </div>
+                            )
+                        }
+
                         return (
                             <div key={service.id} className={styles.service}>
-                                <div className={styles.image}>
+                                <div className={styles.photo}>
                                     <Img
                                         fluid={
                                             service.frontmatter!.mainImage!
@@ -66,8 +77,11 @@ const Services = () => {
                                 </div>
                                 <div className={styles.time}>
                                     {service.frontmatter!.time}
+                                    {service.frontmatter?.onlineOnly ? " (online only)" : ""}
                                 </div>
-                                <div className={styles.streamLinks}></div>
+                                <div className={styles.streamLinks}>
+                                    <a href={service.frontmatter!.streamLinks!.youtube}>Watch online</a>
+                                </div>
                                 <div
                                     className={styles.info}
                                     dangerouslySetInnerHTML={{
