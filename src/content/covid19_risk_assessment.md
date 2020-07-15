@@ -8,38 +8,45 @@ template: basic
 
 # COVID-19 Policy & Risk Assessment
 
-*Version 1:1*
+_Version 1:1_
 
 Date of implementation: 14 July 2020
 
 ## 1. Purpose
-1.1 This policy is written to serve the church family, visitors and staff of Christ Church Mayfair for services and midweek bible study meetings in the building. 
+
+1.1 This policy is written to serve the church family, visitors and staff of Christ Church Mayfair for services and midweek bible study meetings in the building.
 
 1.2 This policy will be reviewed:
 a) as our activities change e.g. when we re-start morning services;
 b) every month or more frequently if the Covid-10 situation changes and/or government/Church of England guidance varies in a way that would impact our meetings.
 
-## 2. Principles 
+## 2. Principles
+
 We believe that the Bible teaches it is important for believers to meet together as a body wherever possible.
 
 We will aim to create an environment that makes it easy for people to adhere to government guidance and to reduce the risk of people catching or spreading Covid-19 as far as we are able.
 Staff and elders will lead by example.
 
 We will expect people to adhere to the principles and will encourage people to do so where possible.
-We are committed to following the latest government and Church of England guidance which can be found online at https://www.churchofengland.org/more/media-centre/coronavirus-covid-19-guidance-churches  and https://www.gov.uk/government/publications/covid-19-guidance-for-the-safe-use-of-placesof-worship-from-4-july/covid-19-guidance-for-the-safe-use-of-places-of-worship-from-4-july 
+We are committed to following the latest government and Church of England guidance which can be found online:
+
+- [Church of England Guidance](https://www.churchofengland.org/more/media-centre/coronavirus-covid-19-guidance-churches)
+- [Government Guidance](https://www.gov.uk/government/publications/covid-19-guidance-for-the-safe-use-of-places-of-worship-from-4-july/covid-19-guidance-for-the-safe-use-of-places-of-worship-from-4-july)
 
 ## 3. CCM Church Context
+
 The context of this policy and risk assessment is within a plan to have a) an evening service from 19th July for those over the age of 11 and those with babes in arms only while livestreaming to those at home and not able to attend; b) a midweek meeting on Wednesday evenings for those over the age of 14 with a bible talk and discussion while livestreaming to those at home and not able to attend. With the experience gleaned from a few weeks of running evening services, this risk assessment will be modified to allow for additional services, including for the morning congregation.
 
-The numbers of COVID-19 cases in London have dropped considerably praise God and we are keen to implement current government recommendations to reduce the risk of spread as much as possible. We are also seeking to  be prepared for future eventualities.
+The numbers of COVID-19 cases in London have dropped considerably praise God and we are keen to implement current government recommendations to reduce the risk of spread as much as possible. We are also seeking to be prepared for future eventualities.
 
 As the majority of the church family are under the age of 50, gathering together (in a safe manner) will not be a cause of great concern for many but we are concerned to protect as far as possible those who are more vulnerable and to welcome all ages safely to our building. CCM also has a duty of care to its staff and interns.
 
-For those who are concerned or who have to self-isolate/shield at home, as well as the number excluded by the restrictions the amount of physical space permits, live streaming will continue in order to be as inclusive as possible. 
+For those who are concerned or who have to self-isolate/shield at home, as well as the number excluded by the restrictions the amount of physical space permits, live streaming will continue in order to be as inclusive as possible.
 
-The church family were asked in a survey between 1st and 6th July for their opinion about church services restarting and in what format. We received 183 responses (from both individuals and households) and their thoughts and concerns have been taken into account. 
+The church family were asked in a survey between 1st and 6th July for their opinion about church services restarting and in what format. We received 183 responses (from both individuals and households) and their thoughts and concerns have been taken into account.
 
 ## 4. Background
+
 COVID-19 (also known as SARS-CoV-19) is a new type of coronavirus which was originally identified in Wuhan, China.  Coronaviruses are a family of viruses which cause a range of illnesses; these include the common cold and severe acute respiratory syndrome (SARS).  The virus can be spread by direct droplet spread produced by coughing and sneezing but also by touching something contaminated with the virus (e.g. objects or surfaces) and then touching their face, nose or mouth.
 
 The symptoms of COVID-19 include fever, coughing and difficulty breathing, but some patients may have serious complications including pneumonia and renal failure. Many individuals do not display symptoms but may be infectious. Those who are older or with underlying medical problems are at higher risk of the serious manifestations.
@@ -338,23 +345,25 @@ The symptoms of COVID-19 include fever, coughing and difficulty breathing, but s
 </tbody>
 </table>
 
+## 6. Capacity
 
-## 6.  Capacity
-Asking for sign-ups will allow us to determine the maximum number who can attend  for any event
+Asking for sign-ups will allow us to determine the maximum number who can attend for any event
+
 Chairs will be laid out at safe social distance for those wearing face coverings, that is a minimum of 1m between households
+
 See Appendix 1
 
 ## 7. Communications
-### 7.1
-The church family will be reminded when invitations to midweek meetings and Sunday services (and weddings) are issued that those  who are  vulnerable, shielding or self-isolating should remain at home and that those showing symptoms or self-isolating should not attend. 
-### 7.2
-The record of those signing up for each midweek bible study and Sunday service will be retained on ChurchSuite with additional names/contacts e.g newcomers retained by the church office for 21 days following GDPR although we will not compel people to give their names and contacts. For weddings the bride and groom will be asked to submit a list of the names of attendees in advance of the wedding which will be retained for 21 days (and which will allow the seat layout to be configured). If anyone submits their name for attendance, it will be assumed they attended, even if they pull out at the last minute. These lists will be made available to the government Track & Trace programme if necessary. 
 
-### 7.3
-If the church becomes aware of an individual who attended the service who has confirmed coronavirus, or who is likely to have coronavirus, advice will be sought from the local PHE Health Protection Team.
+7.1 The church family will be reminded when invitations to midweek meetings and Sunday services (and weddings) are issued that those who are vulnerable, shielding or self-isolating should remain at home and that those showing symptoms or self-isolating should not attend.
+
+7.2 The record of those signing up for each midweek bible study and Sunday service will be retained on ChurchSuite with additional names/contacts e.g newcomers retained by the church office for 21 days following GDPR although we will not compel people to give their names and contacts. For weddings the bride and groom will be asked to submit a list of the names of attendees in advance of the wedding which will be retained for 21 days (and which will allow the seat layout to be configured). If anyone submits their name for attendance, it will be assumed they attended, even if they pull out at the last minute. These lists will be made available to the government Track & Trace programme if necessary.
+
+7.3 If the church becomes aware of an individual who attended the service who has confirmed coronavirus, or who is likely to have coronavirus, advice will be sought from the local PHE Health Protection Team.
 
 ## 8. Governance
-This has been drawn up by Sharon Walsh in consultation with the Elders and other members of CCM. 
+
+This has been drawn up by Sharon Walsh in consultation with the Elders and other members of CCM.
 Date of review/approval
 
 <table>
@@ -384,23 +393,25 @@ Date of review/approval
 </tbody>
 </table>
 
-
 # Appendices
 
-## Appendix 1 - Maximum capacity
+## Appendix 1 - Maximum Capacity
 
-Asking for sign-ups will allow us to determine the maximum who can attend  for any event
-one or two seats with 2m gap in all directions approx. 48 people. This number will increase if households/social bubbles of 4 or more are in the building (however there aren’t very many such families in the evening congregation) one or two seats with 1m gap in all directions (with face coverings or other mitigation) approx. 90 people. This number will increase if households/social bubbles of 4 or more are in the building 
+Asking for sign-ups will allow us to determine the maximum who can attend for any event:
 
-For weddings the maximum allowed by government guidelines is 30 including officiant but excluding verger/intern provided by church.
+-   one or two seats with 2m gap in all directions approx. 48 people. This number will increase if households/social bubbles of 4 or more are in the building (however there aren’t very many such families in the evening congregation)
+-   one or two seats with 1m gap in all directions (with face coverings or other mitigation) approx. 90 people. This number will increase if households/social bubbles of 4 or more are in the building
+-   For weddings the maximum allowed by government guidelines is 30 including officiant but excluding verger/intern provided by church.
 
-## Appendix 2 - Safe Recording process
+## Appendix 2 - Safe Recording Process
 
-Cleaning headset mics:
+### Cleaning headset mics
+
 One headset will be supplied per preacher, it should be labelled and only touched by the preacher & recorder
 Recorder wipes all down with alcohol wipes before and after the recording
 
-For each recording:
+### For each recording
+
 1. Recorder puts batteries in beltpack, screws specific headset into beltpack
 2. Recorder checks signal is being received into the sound desk from the headset, and that the signal is going into the recording software
 3. Recorder wipes down all externals of headset & beltpack and leaves on a clean table
@@ -413,12 +424,14 @@ For each recording:
 10. Recorder puts headset in sealed ziplock bag that has preacher’s name on a label
 11. Recorder wipes down table that had headset/beltpack on it
 
-Lectern mic:
+### Lectern mic
+
 1. If the lectern mic needs to be used, the process is the same as the headsets in regards to wiping down the lectern stand, the microphone spine etc.
 2. The outside cover of the mic (windshield) is to be replaced after each use.
 3. Any used windshields are to be put in a ziplock bag and labelled clearly as needing to be washed
 
 ## Appendix 3 - Cleaning Checklist
+
 The infection risk from coronavirus (COVID-19) following contamination of the environment decreases over time. It is not yet clear at what point there is no risk. However, studies of other viruses in the same family suggest that, in most circumstances, the risk is likely to be reduced significantly after 72 hours.
 
 <table>
@@ -491,19 +504,20 @@ The infection risk from coronavirus (COVID-19) following contamination of the en
 </tbody>
 </table>
 
-*bleach solution 200ml to 5l water.
+\*bleach solution 200ml to 5l water.
 
-*NB Available information suggests that unless they have been soiled soft furnishings do not need to be cleaned other than as part of your usual cleaning processes, which may include vacuuming with a soft brush attachment (CofE church cleaning guidance from June 2020)*
+_NB Available information suggests that unless they have been soiled soft furnishings do not need to be cleaned other than as part of your usual cleaning processes, which may include vacuuming with a soft brush attachment (CofE church cleaning guidance from June 2020)_
 
 ### Cleaning/labelling supplies
 
-- There are wipes in the office/kitchen. Alternatively use alcohol-based sanitising gel on blue paper towel to wipe surfaces down. There is additional blue paper towel and individual paper towels in the basement.
-- Use labels from the office to put on the ziplock bags. Please bring a pen from home to use on the labels - do not use one of the church pens
-- Use disposable gloves from the kitchen. Let Sharon know if supplies are running low of this or other stock e.g. ziplock bags
-
+-   There are wipes in the office/kitchen. Alternatively use alcohol-based sanitising gel on blue paper towel to wipe surfaces down. There is additional blue paper towel and individual paper towels in the basement.
+-   Use labels from the office to put on the ziplock bags. Please bring a pen from home to use on the labels - do not use one of the church pens
+-   Use disposable gloves from the kitchen. Let Sharon know if supplies are running low of this or other stock e.g. ziplock bags
 
 ## Appendix 4 - Coronavirus Emergency Action Plan
+
 Should someone attending the church display symptoms of Coronavirus the following steps will be taken:
+
 1. The person will be asked to leave as soon as possible, return home and seek guidance from NHS111 as to self-isolation and testing.
 2. Anyone known to have been in close contact with the case advised to wash their hands as soon as possible
 3. Any surfaces likely to have been contaminated cleaned in line with cleaning guidance.
