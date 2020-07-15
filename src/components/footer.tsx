@@ -8,7 +8,7 @@ import SocialMediaIcon from "./social-media-icon"
 
 const links: Array<{ path: string; title: string }> = [
     { path: "/littlelambs", title: "Little Lambs" },
-    { path: "/covid19", title: "Covid-19" },
+    { path: "/covid19", title: "Covid-19 Letter" },
     { path: "/our-beliefs", title: "Our Beliefs" },
     { path: "/talks", title: "Talks" },
     { path: "/privacy-notice", title: "Privacy Notice" },
@@ -20,6 +20,7 @@ const links: Array<{ path: string; title: string }> = [
     { path: "/aboutus", title: "About Us" },
     { path: "/accessibility", title: "Accessibility" },
     { path: "/staff", title: "Staff" },
+    { path: "/covid19-policy-and-risk-assessment", title: "Covid-19 Policy" },
 ]
 
 const Footer = () => {
