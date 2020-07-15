@@ -14,42 +14,33 @@ Date of implementation: 14 July 2020
 
 ## 1. Purpose
 
-1.1 This policy is written to serve the church family, visitors and staff of Christ Church Mayfair for services and midweek bible study meetings in the building.
+1. This policy is written to serve the church family, visitors and staff of Christ Church Mayfair for services and midweek bible study meetings in the building.
 
-1.2 This policy will be reviewed:
+2. This policy will be reviewed:
 a) as our activities change e.g. when we re-start morning services;
 b) every month or more frequently if the Covid-10 situation changes and/or government/Church of England guidance varies in a way that would impact our meetings.
 
 ## 2. Principles
 
-We believe that the Bible teaches it is important for believers to meet together as a body wherever possible.
-
-We will aim to create an environment that makes it easy for people to adhere to government guidance and to reduce the risk of people catching or spreading Covid-19 as far as we are able.
-Staff and elders will lead by example.
-
-We will expect people to adhere to the principles and will encourage people to do so where possible.
-We are committed to following the latest government and Church of England guidance which can be found online:
-
-- [Church of England Guidance](https://www.churchofengland.org/more/media-centre/coronavirus-covid-19-guidance-churches)
-- [Government Guidance](https://www.gov.uk/government/publications/covid-19-guidance-for-the-safe-use-of-places-of-worship-from-4-july/covid-19-guidance-for-the-safe-use-of-places-of-worship-from-4-july)
+1. We believe that the Bible teaches it is important for believers to meet together as a body wherever possible.
+2. We will aim to create an environment that makes it easy for people to adhere to government guidance and to reduce the risk of people catching or spreading Covid-19 as far as we are able.
+3. Staff and elders will lead by example.
+4. We will expect people to adhere to the principles and will encourage people to do so where possible.
+5. We are committed to following the latest government and Church of England guidance which can be found online: [Church of England Guidance](https://www.churchofengland.org/more/media-centre/coronavirus-covid-19-guidance-churches) and [Government Guidance](https://www.gov.uk/government/publications/covid-19-guidance-for-the-safe-use-of-places-of-worship-from-4-july/covid-19-guidance-for-the-safe-use-of-places-of-worship-from-4-july)
 
 ## 3. CCM Church Context
 
-The context of this policy and risk assessment is within a plan to have a) an evening service from 19th July for those over the age of 11 and those with babes in arms only while livestreaming to those at home and not able to attend; b) a midweek meeting on Wednesday evenings for those over the age of 14 with a bible talk and discussion while livestreaming to those at home and not able to attend. With the experience gleaned from a few weeks of running evening services, this risk assessment will be modified to allow for additional services, including for the morning congregation.
-
-The numbers of COVID-19 cases in London have dropped considerably praise God and we are keen to implement current government recommendations to reduce the risk of spread as much as possible. We are also seeking to be prepared for future eventualities.
-
-As the majority of the church family are under the age of 50, gathering together (in a safe manner) will not be a cause of great concern for many but we are concerned to protect as far as possible those who are more vulnerable and to welcome all ages safely to our building. CCM also has a duty of care to its staff and interns.
-
-For those who are concerned or who have to self-isolate/shield at home, as well as the number excluded by the restrictions the amount of physical space permits, live streaming will continue in order to be as inclusive as possible.
+1. The context of this policy and risk assessment is within a plan to have a) an evening service from 19th July for those over the age of 11 and those with babes in arms only while livestreaming to those at home and not able to attend; b) a midweek meeting on Wednesday evenings for those over the age of 14 with a bible talk and discussion while livestreaming to those at home and not able to attend. With the experience gleaned from a few weeks of running evening services, this risk assessment will be modified to allow for additional services, including for the morning congregation.
+2. The numbers of COVID-19 cases in London have dropped considerably praise God and we are keen to implement current government recommendations to reduce the risk of spread as much as possible. We are also seeking to be prepared for future eventualities.
+3. As the majority of the church family are under the age of 50, gathering together (in a safe manner) will not be a cause of great concern for many but we are concerned to protect as far as possible those who are more vulnerable and to welcome all ages safely to our building. CCM also has a duty of care to its staff and interns.
+4. For those who are concerned or who have to self-isolate/shield at home, as well as the number excluded by the restrictions the amount of physical space permits, live streaming will continue in order to be as inclusive as possible.
 
 The church family were asked in a survey between 1st and 6th July for their opinion about church services restarting and in what format. We received 183 responses (from both individuals and households) and their thoughts and concerns have been taken into account.
 
 ## 4. Background
 
-COVID-19 (also known as SARS-CoV-19) is a new type of coronavirus which was originally identified in Wuhan, China.  Coronaviruses are a family of viruses which cause a range of illnesses; these include the common cold and severe acute respiratory syndrome (SARS).  The virus can be spread by direct droplet spread produced by coughing and sneezing but also by touching something contaminated with the virus (e.g. objects or surfaces) and then touching their face, nose or mouth.
-
-The symptoms of COVID-19 include fever, coughing and difficulty breathing, but some patients may have serious complications including pneumonia and renal failure. Many individuals do not display symptoms but may be infectious. Those who are older or with underlying medical problems are at higher risk of the serious manifestations.
+1. COVID-19 (also known as SARS-CoV-19) is a new type of coronavirus which was originally identified in Wuhan, China.  Coronaviruses are a family of viruses which cause a range of illnesses; these include the common cold and severe acute respiratory syndrome (SARS).  The virus can be spread by direct droplet spread produced by coughing and sneezing but also by touching something contaminated with the virus (e.g. objects or surfaces) and then touching their face, nose or mouth.
+2. The symptoms of COVID-19 include fever, coughing and difficulty breathing, but some patients may have serious complications including pneumonia and renal failure. Many individuals do not display symptoms but may be infectious. Those who are older or with underlying medical problems are at higher risk of the serious manifestations.
 
 ## 5. Risks and Mitigation
 
@@ -355,11 +346,11 @@ See Appendix 1
 
 ## 7. Communications
 
-7.1 The church family will be reminded when invitations to midweek meetings and Sunday services (and weddings) are issued that those who are vulnerable, shielding or self-isolating should remain at home and that those showing symptoms or self-isolating should not attend.
+1. The church family will be reminded when invitations to midweek meetings and Sunday services (and weddings) are issued that those who are vulnerable, shielding or self-isolating should remain at home and that those showing symptoms or self-isolating should not attend.
 
-7.2 The record of those signing up for each midweek bible study and Sunday service will be retained on ChurchSuite with additional names/contacts e.g newcomers retained by the church office for 21 days following GDPR although we will not compel people to give their names and contacts. For weddings the bride and groom will be asked to submit a list of the names of attendees in advance of the wedding which will be retained for 21 days (and which will allow the seat layout to be configured). If anyone submits their name for attendance, it will be assumed they attended, even if they pull out at the last minute. These lists will be made available to the government Track & Trace programme if necessary.
+2. The record of those signing up for each midweek bible study and Sunday service will be retained on ChurchSuite with additional names/contacts e.g newcomers retained by the church office for 21 days following GDPR although we will not compel people to give their names and contacts. For weddings the bride and groom will be asked to submit a list of the names of attendees in advance of the wedding which will be retained for 21 days (and which will allow the seat layout to be configured). If anyone submits their name for attendance, it will be assumed they attended, even if they pull out at the last minute. These lists will be made available to the government Track & Trace programme if necessary.
 
-7.3 If the church becomes aware of an individual who attended the service who has confirmed coronavirus, or who is likely to have coronavirus, advice will be sought from the local PHE Health Protection Team.
+3. If the church becomes aware of an individual who attended the service who has confirmed coronavirus, or who is likely to have coronavirus, advice will be sought from the local PHE Health Protection Team.
 
 ## 8. Governance
 
