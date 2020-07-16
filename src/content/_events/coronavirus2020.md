@@ -21,8 +21,8 @@ In the light of Government advice, all Church meetings will now be online.
 
 Our two Sunday services will be streamed each week:
 
-**10:15am** [YouTube](https://youtu.be/80p7-j6_5wA)
+**10:15am** [YouTube](https://youtu.be/Su3vQK6Sihw)
 
-**6:00pm** [YouTube](https://youtu.be/d5t94H0OE0E)
+**6:00pm** [YouTube](https://youtu.be/ILlCoWRHxgY)
 
 Midweek groups will be contacted by their leaders.
