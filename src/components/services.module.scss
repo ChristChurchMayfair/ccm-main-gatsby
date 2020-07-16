@@ -112,6 +112,10 @@
         margin-bottom: var(--general-padding);
         cursor: pointer;
         width: 100%;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
