@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Section from "./section"
-import SectionText from "./section-text"
 import styles from "./post-lockdown-notice.module.scss"
 
 const PostLockDownNotice = () => {

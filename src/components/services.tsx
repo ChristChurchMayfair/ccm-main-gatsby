@@ -55,11 +55,7 @@ const Services = () => {
 
                         let serviceType = null
                         if (service.frontmatter?.onlineOnly === true) {
-                            serviceType = (
-                                <div className={styles.onlineOnlyBadge}>
-                                    Online Only
-                                </div>
-                            )
+                            serviceType = <span> (online only)</span>
                         }
 
                         return (
@@ -77,10 +73,17 @@ const Services = () => {
                                 </div>
                                 <div className={styles.time}>
                                     {service.frontmatter!.time}
-                                    {service.frontmatter?.onlineOnly ? " (online only)" : ""}
+                                    {serviceType}
                                 </div>
                                 <div className={styles.streamLinks}>
-                                    <a href={service.frontmatter!.streamLinks!.youtube}>Watch online</a>
+                                    <a
+                                        href={
+                                            service.frontmatter!.streamLinks!
+                                                .youtube
+                                        }
+                                    >
+                                        Watch online
+                                    </a>
                                 </div>
                                 <div
                                     className={styles.info}
