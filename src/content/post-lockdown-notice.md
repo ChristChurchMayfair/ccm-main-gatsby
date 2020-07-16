@@ -1,6 +1,6 @@
 ---
 ---
-## We're Gathering Again...
+## We're Gathering Again!
 
 Our 6.00pm service is meeting and in the coming weeks we will restart our 10.15am service.
 

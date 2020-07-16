@@ -81,6 +81,8 @@ const Services = () => {
                                             service.frontmatter!.streamLinks!
                                                 .youtube
                                         }
+                                        target={"_blank"}
+                                        rel={"noopener noreferrer"}
                                     >
                                         Watch online
                                     </a>
