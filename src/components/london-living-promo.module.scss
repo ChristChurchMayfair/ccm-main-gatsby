@@ -19,6 +19,8 @@
             "text text text text text text text text . . . ."
             "buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons";
         grid-column-gap: var(--general-padding);
+        margin-top: calc(var(--general-padding) * 2);
+        margin-bottom: calc(var(--general-padding) * 2);
 
         @media only screen and (max-width: 968px) {
             grid-template-columns: 1fr;
