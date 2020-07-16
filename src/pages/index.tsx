@@ -43,11 +43,7 @@ const IndexPageQuery = graphql`
             }
         }
         administrators: allSanityPerson(
-            filter: {
-                roles: {
-                    elemMatch: { slug: { current: { eq: "administrator" } } }
-                }
-            }
+            filter: { name: { eq: "Sharon Walsh" } }
         ) {
             nodes {
                 name
