@@ -8,7 +8,6 @@ import SocialMediaIcon from "./social-media-icon"
 
 const links: Array<{ path: string; title: string }> = [
     { path: "/littlelambs", title: "Little Lambs" },
-    { path: "/covid19", title: "Covid-19 Letter" },
     { path: "/our-beliefs", title: "Our Beliefs" },
     { path: "/talks", title: "Talks" },
     { path: "/privacy-notice", title: "Privacy Notice" },

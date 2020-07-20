@@ -1,17 +1,25 @@
-.services {
+@import "../mixins/button";
+
+.servicesSection {
+    grid-area: content;
     height: auto;
+    grid-template-columns: 1f;
     grid-template-areas:
-        ". title title title title title title title title title title title title ."
-        ". left left left left left left right right right right right right .";
+        "title"
+        "notes"
+        "services";
     grid-auto-rows: auto auto;
-    background-color: var(--dark-colour);
 
     @media only screen and (max-width: 968px) {
         grid-template-areas:
-            ". title title title title ."
-            ". left left left left ."
-            ". right right right right .";
+            "title"
+            "notes"
+            "services";
     }
+}
+
+.serviceNotes {
+    grid-area: notes;
 }
 
 .heading {
@@ -25,5 +33,110 @@
 
     @media only screen and (max-width: 968px) {
         padding: 20px 0px 5px 0px;
+    }
+}
+
+.services {
+    grid-area: services;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--general-padding);
+    @media only screen and (max-width: 968px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service {
+    display: grid;
+    grid-template-columns: 1f;
+    grid-template-rows: auto auto auto auto minmax(10px, 400px);
+    grid-template-areas:
+        "image "
+        "title"
+        "time"
+        "streamlinks"
+        "info";
+
+    @media only screen and (max-width: 968px) {
+        row-gap: var(--general-padding);
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+            "title "
+            "time "
+            "streamlinks "
+            "image "
+            "info ";
+
+        border-bottom-color: var(--light-colour);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        margin-bottom: var(--general-padding);
+    }
+
+
+}
+
+.title {
+    grid-area: title;
+    font-size: 1.7em;
+    font-weight: 400;
+    color: var(--light-colour);
+    margin-bottom: 0.3em;
+    line-height: 1.1;
+    padding: 30px 0px 0px 0px;
+    letter-spacing: 0.02em;
+
+    @media only screen and (max-width: 968px) {
+        padding: 10px 0px 0px 0px;
+    }
+}
+
+.time {
+    grid-area: time;
+    color: var(--light-colour);
+    font-size: 1.2em;
+    margin-top: 0.1em;
+    margin-bottom: 0.2em;
+    line-height: 1em;
+}
+
+.streamLinks {
+    grid-area: streamlinks;
+
+    a {
+        @include button;
+        background-color: var(--light-colour);
+        color: #c4302b;
+        width: 100%;
+        margin-top: var(--general-padding);
+        margin-bottom: var(--general-padding);
+        cursor: pointer;
+        width: 100%;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.photo {
+    grid-area: image;
+
+    @media only screen and (max-width: 968px) {
+        margin-top: 10px;
+    }
+}
+
+.info {
+    grid-area: info;
+    padding: 20px 0px 0px 0px;
+    margin: 0px 30px 0px 0px;
+    font-size: 0.9em;
+    color: var(--light-colour);
+    font-weight: 200;
+    letter-spacing: 0.02em;
+
+    @media only screen and (max-width: 968px) {
+        margin: 0px;
     }
 }

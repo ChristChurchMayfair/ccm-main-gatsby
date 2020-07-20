@@ -6,12 +6,12 @@ import Bio from "../components/bio"
 import FindUs from "../components/find-us"
 import Img from "../components/img"
 import Services from "../components/services"
-import Covid19 from "../components/covid-19"
 import MountAfter from "../components/mount-after"
 import Section from "../components/section"
 import SectionText from "../components/section-text"
 import Hero from "../components/hero"
 import LondonLivingPromo from "../components/london-living-promo"
+import PostLockDownNotice from "../components/post-lockdown-notice"
 
 const IndexPageQuery = graphql`
     query Homepage {
@@ -43,11 +43,7 @@ const IndexPageQuery = graphql`
             }
         }
         administrators: allSanityPerson(
-            filter: {
-                roles: {
-                    elemMatch: { slug: { current: { eq: "administrator" } } }
-                }
-            }
+            filter: { name: { eq: "Sharon Walsh" } }
         ) {
             nodes {
                 name
@@ -173,7 +169,7 @@ const IndexPage = () => {
 
             <LondonLivingPromo />
 
-            <Covid19 />
+            <PostLockDownNotice />
 
             <Services />
 
