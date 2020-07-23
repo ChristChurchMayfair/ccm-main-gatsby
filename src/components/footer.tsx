@@ -20,6 +20,7 @@ const links: Array<{ path: string; title: string }> = [
     { path: "/accessibility", title: "Accessibility" },
     { path: "/staff", title: "Staff" },
     { path: "/covid19-policy-and-risk-assessment", title: "Covid-19 Policy" },
+    { path: "/givingform", title: "Giving Form" },
 ]
 
 const Footer = () => {
