@@ -1,3 +1,9 @@
+.postLockDown {
+    border-top-style: solid;
+    border-top-color: var(--dark-colour);
+    border-top-width: 1px;
+}
+
 .postLockdownContent {
     h1, h2, h3 {
         font-family: "Klinic Slab";
@@ -6,5 +12,4 @@
         line-height: 1.3em;
     }
     grid-area: content;
-
 }

@@ -16,7 +16,7 @@ const PostLockDownNotice = () => {
         }
     `)
     return (
-        <Section colorScheme="light">
+        <Section colorScheme="light" className={styles.postLockDown}>
             <div
                 className={styles.postLockdownContent}
                 dangerouslySetInnerHTML={{ __html: postLockDown!.html! }}

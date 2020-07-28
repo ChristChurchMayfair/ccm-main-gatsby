@@ -167,11 +167,11 @@ const IndexPage = () => {
                 </a>
             </Section>
 
-            <LondonLivingPromo />
-
             <PostLockDownNotice />
 
             <Services />
+
+            <LondonLivingPromo />
 
             <Section
                 id="midweek"
