@@ -3,7 +3,7 @@ title: Morning
 time: "10.15am"
 mainImage: ../assets/images/desktop/CCM_morning_church_lunch.jpg
 streamLinks:
-    youtube: https://youtu.be/EUXuq9_1nqU
+    youtube: https://youtu.be/drs2dtNO0LI
 onlineOnly: true
 ---
 Normal mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
