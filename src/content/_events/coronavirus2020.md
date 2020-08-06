@@ -3,7 +3,7 @@ name: Regarding Coronavirus
 status: live
 eventType: important-notice
 order: 3
-lastUpdated: 08:30 11 July 2020
+lastUpdated: 10:00 06 August 2020
 features:
     - title: Blog
       description: |
@@ -21,8 +21,8 @@ In the light of Government advice, all Church meetings will now be online.
 
 Our two Sunday services will be streamed each week:
 
-**10:15am** [YouTube](https://youtu.be/Su3vQK6Sihw)
+**10:15am** [YouTube](https://youtu.be/MfGNqwtJiXU)
 
-**6:00pm** [YouTube](https://youtu.be/ILlCoWRHxgY)
+**6:00pm** [YouTube](https://youtu.be/FUtXTrSe5Hg)
 
 Midweek groups will be contacted by their leaders.
