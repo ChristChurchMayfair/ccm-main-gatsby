@@ -33,8 +33,8 @@ seasons:
       blurb: Phil shares his experiences following the sudden death of his brother in a military accident.
       image: ./images/LL-phil.png
       audioUrl: https://s3-eu-west-1.amazonaws.com/media.christchurchmayfair.org/londonliving/PhilAllcock_v3.1.mp3
-    # - title: "Mental Health & Resilience: PJ"
-    #   blurb: PJ, a digital marketing consultant and business owner, speaks about finding security through his battles with depression.
-    #   image: ./images/LL-pj.png
-    #   audioUrl: https://s3-eu-west-1.amazonaws.com/media.christchurchmayfair.org/londonliving/Jesse-10mins_v2.mp3
+    - title: "Racism & Injustice: Vera"
+      blurb: In this extended episode Vera shares her experience of racism and injustice.
+      image: ./images/LL-vera.jpg
+      audioUrl: https://s3-eu-west-1.amazonaws.com/media.christchurchmayfair.org/londonliving/VeraOsei_v3.mp3
 ---
