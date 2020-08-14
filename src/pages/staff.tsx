@@ -40,7 +40,6 @@ const Staff = () => {
         "Scott Furey",
         "Nick Ashton",
         "Sharon Walsh",
-        "Ali Davies",
         "Ben Slee",
         "Ellie Page",
         "James Kight",
