@@ -3,7 +3,7 @@ title: Evening
 time: "6.00pm"
 mainImage: ../assets/images/desktop/hand_in_the_air.jpg
 streamLinks:
-    youtube: https://youtu.be/DSw2OWYpFN0
+    youtube: https://youtu.be/hXXD5UAnYJQ
 onlineOnly: false
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
