@@ -1,10 +1,31 @@
 ---
-title: Evening
+title: Evenings
 time: "6.00pm"
 mainImage: ../assets/images/desktop/hand_in_the_air.jpg
 streamLinks:
     youtube: https://youtu.be/DSw2OWYpFN0
 onlineOnly: false
+schedule:
+  - time: 2020-08-16T18:00:00+01:00
+    description: online & in person
+    link: https://youtu.be/drs2dtNO0LI
+  - time: 2020-08-23T18:00:00+01:00
+    description: online & in person
+    link: https://youtu.be/drs2dtNO0LI
+  - time: 2020-08-30T18:00:00+01:00
+    description: online & in person
+    link: https://youtu.be/drs2dtNO0LI
+  - time: 2020-09-06T17:00:00+01:00
+    description: early session
+    link: https://youtu.be/drs2dtNO0LI
+  - time: 2020-09-06T18:30:00+01:00
+    description: late session
+  - time: 2020-09-13T10:30:00+01:00
+    description: No Kids
+  - time: 2020-09-20T10:30:00+01:00
+    description: Limited Sunday School (Week C)
+  - time: 2020-09-27T10:30:00+01:00
+    description: Limited Sunday School (Week D)
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
