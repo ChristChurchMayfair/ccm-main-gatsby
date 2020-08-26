@@ -1,0 +1,51 @@
+import { getNextServiceTimes } from "./service-times"
+
+test("getNextServices_canFindNextServices", () => {
+    // Given
+    const serviceTimes = [
+        // Sunday (aka tomorrow)
+        new Date("2020-08-16T10:00:00"),
+        new Date("2020-08-16T11:00:00"),
+        // Sunday next week
+        new Date("2020-08-23T11:00:00"),
+    ]
+    const saturdayBeforeServices = new Date("2020-08-15T09:00:00")
+
+    // When
+    const nextServiceTimes = getNextServiceTimes(
+        serviceTimes,
+        saturdayBeforeServices
+    )
+
+    // Then
+    expect(nextServiceTimes).toHaveLength(2)
+    expect(nextServiceTimes).toContainEqual(new Date("2020-08-16T10:00:00"))
+    expect(nextServiceTimes).toContainEqual(new Date("2020-08-16T11:00:00"))
+    expect(nextServiceTimes).not.toContainEqual(new Date("2020-08-23T11:00:00"))
+})
+
+test("getNextServices_doesNotReturnServicesInThePast", () => {
+    // Given
+    const serviceTimes = [
+        // Last sunday
+        new Date("2020-08-09T10:00:00"),
+        // Next Sunday
+        new Date("2020-08-16T10:00:00"),
+        new Date("2020-08-16T11:00:00"),
+        // Sunday after
+        new Date("2020-08-23T11:00:00"),
+    ]
+    const monday = new Date("2020-08-10T09:00:00")
+
+    // When
+    const nextServiceTimes = getNextServiceTimes(serviceTimes, monday)
+
+    // Then
+    expect(nextServiceTimes).not.toContainEqual(new Date("2020-08-09T10:00:00"))
+
+    expect(nextServiceTimes).toHaveLength(2)
+    expect(nextServiceTimes).toContainEqual(new Date("2020-08-16T10:00:00"))
+    expect(nextServiceTimes).toContainEqual(new Date("2020-08-16T11:00:00"))
+
+    expect(nextServiceTimes).not.toContainEqual(new Date("2020-08-23T11:00:00"))
+})

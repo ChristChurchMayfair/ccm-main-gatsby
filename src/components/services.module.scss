@@ -40,7 +40,7 @@
     grid-area: services;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: var(--general-padding);
+    column-gap: calc(var(--general-padding) * 2);
     @media only screen and (max-width: 968px) {
         grid-template-columns: 1fr;
     }
@@ -51,21 +51,21 @@
     grid-template-columns: 1f;
     grid-template-rows: auto auto auto auto minmax(10px, 400px);
     grid-template-areas:
-        "image "
+        "image"
         "title"
-        "time"
-        "streamlinks"
+        "dateSpecifier"
+        "times"
         "info";
 
     @media only screen and (max-width: 968px) {
         row-gap: var(--general-padding);
         grid-template-rows: auto auto auto auto auto;
         grid-template-areas:
-            "title "
-            "time "
-            "streamlinks "
-            "image "
-            "info ";
+            "title"
+            "dateSpecifier"
+            "times"
+            "image"
+            "info";
 
         border-bottom-color: var(--light-colour);
         border-bottom-style: solid;
@@ -91,8 +91,27 @@
     }
 }
 
-.time {
-    grid-area: time;
+.dateSpecifier {
+    grid-area: dateSpecifier;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.sessions {
+    grid-area: times;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--general-padding);
+}
+
+.session {
+    // display: grid;
+    grid-template-rows: 50px 50px 50px;
+    grid-template-areas: "sessionTime"
+    "sessionDecsription"
+    "sessionLink";
+    row-gap: 2px;
+
     color: var(--light-colour);
     font-size: 1.2em;
     margin-top: 0.1em;
@@ -100,23 +119,41 @@
     line-height: 1em;
 }
 
-.streamLinks {
-    grid-area: streamlinks;
+.sessionTime {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
 
-    a {
-        @include button;
-        background-color: var(--light-colour);
-        color: #c4302b;
-        width: 100%;
-        margin-top: var(--general-padding);
-        margin-bottom: var(--general-padding);
-        cursor: pointer;
-        width: 100%;
+.sessionDescription {
+    font-style: italic;
+    margin-bottom: 20px;
+}
 
-        &:hover {
-            text-decoration: underline;
-        }
+a.streamlink {
+    @include button;
+    background-color: var(--light-colour);
+    color: #c4302b;
+    width: 100%;
+    cursor: pointer;
+    width: 100%;
+
+    &:hover {
+        text-decoration: underline;
     }
+}
+
+div.streamlink {
+    @include button;
+    // background-color: var(--light-colour);
+    // color: #c4302b;
+    width: 100%;
+    // cursor: pointer;
+    width: 100%;
+    border-color: rgba(255,255,255,0.2);
+    border-style: dotted;
+    border-width: 1px;
+    font-style: italic;
+    overflow: hidden;
 }
 
 .photo {

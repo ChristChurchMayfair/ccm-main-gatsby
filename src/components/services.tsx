@@ -1,9 +1,10 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "./img"
 
 import styles from "./services.module.scss"
 import Section from "./section"
+import Service, { Session } from "./service"
+import { parseISO } from "date-fns"
 
 const Services = () => {
     const data = useStaticQuery<GatsbyTypes.ServicesQuery>(graphql`
@@ -11,10 +12,11 @@ const Services = () => {
             id
             frontmatter {
                 title
-                time
-                onlineOnly
-                streamLinks {
-                    youtube
+                normalTime
+                schedule {
+                    time
+                    description
+                    link
                 }
                 mainImage {
                     childImageSharp {
@@ -53,47 +55,28 @@ const Services = () => {
                             throw new Error("Impossible")
                         }
 
-                        let serviceType = null
-                        if (service.frontmatter?.onlineOnly === true) {
-                            serviceType = <span> (online only)</span>
-                        }
+                        const schedule: Session[] =
+                            service.frontmatter?.schedule?.map(s => {
+                                return {
+                                    dateTime: parseISO(s!.time!),
+                                    description: s!.description!,
+                                    link: s!.link,
+                                }
+                            }) ?? []
 
                         return (
-                            <div key={service.id} className={styles.service}>
-                                <div className={styles.photo}>
-                                    <Img
-                                        fluid={
-                                            service.frontmatter!.mainImage!
-                                                .childImageSharp!.fluid
-                                        }
-                                    />
-                                </div>
-                                <div className={styles.title}>
-                                    {service.frontmatter!.title}
-                                </div>
-                                <div className={styles.time}>
-                                    {service.frontmatter!.time}
-                                    {serviceType}
-                                </div>
-                                <div className={styles.streamLinks}>
-                                    <a
-                                        href={
-                                            service.frontmatter!.streamLinks!
-                                                .youtube
-                                        }
-                                        target={"_blank"}
-                                        rel={"noopener noreferrer"}
-                                    >
-                                        Watch online
-                                    </a>
-                                </div>
-                                <div
-                                    className={styles.info}
-                                    dangerouslySetInnerHTML={{
-                                        __html: service.html!,
-                                    }}
-                                />
-                            </div>
+                            <Service
+                                key={service.id}
+                                id={service.id}
+                                name={service.frontmatter?.title!}
+                                image={
+                                    service.frontmatter?.mainImage
+                                        ?.childImageSharp?.fluid!
+                                }
+                                htmlDescription={service.html!}
+                                schedule={schedule}
+                                normalTime={service.frontmatter?.normalTime!}
+                            ></Service>
                         )
                     })}
                 </div>
