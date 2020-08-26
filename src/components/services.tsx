@@ -12,11 +12,7 @@ const Services = () => {
             id
             frontmatter {
                 title
-                time
-                onlineOnly
-                streamLinks {
-                    youtube
-                }
+                normalTime
                 schedule {
                     time
                     description
@@ -77,12 +73,9 @@ const Services = () => {
                                     service.frontmatter?.mainImage
                                         ?.childImageSharp?.fluid!
                                 }
-                                streamlink={
-                                    service.frontmatter?.streamLinks?.youtube!
-                                }
                                 htmlDescription={service.html!}
                                 schedule={schedule}
-                                normalTime={service.frontmatter?.time!}
+                                normalTime={service.frontmatter?.normalTime!}
                             ></Service>
                         )
                     })}

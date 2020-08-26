@@ -1,23 +1,20 @@
 ---
 title: Mornings
-time: "10.15am"
+normalTime: "10.15am"
 mainImage: ../assets/images/desktop/CCM_morning_church_lunch.jpg
-streamLinks:
-    youtube: https://youtu.be/drs2dtNO0LI
-onlineOnly: true
 schedule:
   - time: 2020-08-16T10:15:00+01:00
     description: online only
-    link: https://youtu.be/drs2dtNO0LI
+    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
   - time: 2020-08-23T10:15:00+01:00
     description: online only
-    link: https://youtu.be/drs2dtNO0LI
+    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
   - time: 2020-08-30T10:15:00+01:00
     description: online only
-    link: https://youtu.be/drs2dtNO0LI
+    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
   - time: 2020-09-06T09:30:00+01:00
     description: all ages
-    link: https://youtu.be/drs2dtNO0LI
+    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
   - time: 2020-09-06T11:00:00+01:00
     description: all ages
   - time: 2020-09-13T10:30:00+01:00

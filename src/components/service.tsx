@@ -4,6 +4,7 @@ import styles from "./services.module.scss"
 import Img, { FluidObject } from "./img"
 import { getNextServiceTimes } from "./servicetimes/service-times"
 import { format } from "date-fns"
+import { parseISO } from "date-fns/esm"
 
 export type Session = {
     dateTime: Date
@@ -15,7 +16,6 @@ type ServiceProps = {
     id: string
     name: string
     image: FluidObject
-    streamlink: string
     htmlDescription: string
     schedule: Session[]
     normalTime: string
@@ -43,6 +43,7 @@ const Service: FC<ServiceProps> = ({
         const nextServiceTimes = getNextServiceTimes(
             schedule.map((service: Session) => service.dateTime),
             new Date()
+            // parseISO("2020-08-30T18:00:00+01:00") # Use this for testing
         )
 
         if (nextServiceTimes.length > 0) {

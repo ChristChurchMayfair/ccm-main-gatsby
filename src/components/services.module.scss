@@ -149,8 +149,8 @@ div.streamlink {
     width: 100%;
     // cursor: pointer;
     width: 100%;
-    border-color: var(--light-colour);
-    border-style: solid;
+    border-color: rgba(255,255,255,0.2);
+    border-style: dotted;
     border-width: 1px;
     font-style: italic;
     overflow: hidden;
