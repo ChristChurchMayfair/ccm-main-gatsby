@@ -11,7 +11,7 @@ schedule:
     link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
   - time: 2020-08-30T18:00:00+01:00
     description: online & in person
-    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
+    link: https://youtu.be/_hptGY5GLbo
   - time: 2020-09-06T17:00:00+01:00
     description: early session
     link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
