@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+:root {
+    --students-color:  rgb(252, 52, 4);
+    --students-light-color: white;
+}
+
+.studentPromo {
+    background-color: var(--students-color);
+    color: var(--students-light-color);
+    padding-top: calc(var(--general-padding) * 5);
+    padding-bottom: calc(var(--general-padding) * 5);
+    
+    
+    background-image: url(./student-promo-background-rotated.png);
+    background-position-y: calc(50% + 275px);
+    background-position-x: calc(50% - 75px);
+    background-size: 3500px;
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: 968px) {
+        background-position-y: -350px;
+        background-position-x: calc(50% + 80px);
+        background-size: 2000px;
+    }
+}
+
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title info";
+    column-gap: var(--general-padding);
+
+    @media screen and (max-width: 968px) {
+        grid-template-columns: 1fr;
+        grid-template-areas: "title"
+        "info";
+        row-gap: var(--general-padding);
+    }
+}
+
+a.button {
+    --button-background-color: var(--students-color);
+    --button-foreground-color: var(--students-light-color);
+    font-family: "poppins";
+    font-size: 0.8em;
+    display: inline-block;
+    padding-left: 40px;
+    padding-right:40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-color: var(--button-foreground-color);
+    border-width: 2px;
+    border-style: solid;
+    color: var(--button-foreground-color);
+    // background-color: var(--button-background-color);
+    cursor: pointer;
+
+    &:hover {
+        color: var(--button-background-color);
+        background-color: var(--button-foreground-color);
+        text-decoration: none;
+    }
+}
+
+.title {
+    grid-area: title;
+
+    h1 {
+        margin-top: calc(var(--general-padding) * 1);
+        font-family: "poppins";
+        font-weight: 500;
+        text-transform: none;
+        font-size: 2.3em;
+        display: inline-block;
+        background-color: white;
+        color: var(--students-color);
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        transform: rotate(-10deg);
+        
+        @media screen and (max-width: 968px) {
+            margin-bottom: calc(var(--general-padding) * 3);
+            font-size: 1.5em;
+        }
+    }
+}
+
+.info {
+    grid-area: info;
+}
+
+.copy {
+    margin-bottom: var(--general-padding);
+    @media screen and (max-width: 968px) {
+        margin-bottom: calc(var(--general-padding) * 3);
+    }
+}
