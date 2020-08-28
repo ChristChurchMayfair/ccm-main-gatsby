@@ -11,7 +11,7 @@ schedule:
     link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
   - time: 2020-08-30T10:15:00+01:00
     description: online only
-    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
+    link: https://youtu.be/18y2m1yLAmo
   - time: 2020-09-06T09:30:00+01:00
     description: All-Ages
   - time: 2020-09-06T11:00:00+01:00
