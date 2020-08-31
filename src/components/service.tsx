@@ -4,7 +4,6 @@ import styles from "./services.module.scss"
 import Img, { FluidObject } from "./img"
 import { getNextServiceTimes } from "./servicetimes/service-times"
 import { format } from "date-fns"
-import { parseISO } from "date-fns/esm"
 
 export type Session = {
     dateTime: Date

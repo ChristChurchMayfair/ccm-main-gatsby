@@ -56,11 +56,11 @@ const Services = () => {
                         }
 
                         const schedule: Session[] =
-                            service.frontmatter?.schedule?.map(s => {
+                            service.frontmatter?.schedule?.map((s: any) => {
                                 return {
-                                    dateTime: parseISO(s!.time!),
-                                    description: s!.description!,
-                                    link: s!.link,
+                                    dateTime: parseISO(s.time!),
+                                    description: s.description!,
+                                    link: s.link,
                                 }
                             }) ?? []
 
