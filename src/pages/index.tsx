@@ -168,9 +168,9 @@ const IndexPage = () => {
                 </a>
             </Section>
 
-            <StudentPromo />
-
             <PostLockDownNotice />
+
+            <StudentPromo />
 
             <Services />
 
