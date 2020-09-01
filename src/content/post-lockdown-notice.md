@@ -2,10 +2,8 @@
 ---
 ## We're Gathering Again!
 
-Our 6.00pm service is meeting in person again and in the coming weeks we'll resume the 10.15am service.
+We're delighted to say we've resumed our morning and evening services and we've added extra services so that more people can join us. 
 
-You're welcome to join us in person but for those who can't we are still live streaming our services online. Service times and stream links are below and important updates will be posted here.
+You're welcome to join us in person, especially if you're new - just email the church office.  For our regular church family, please await email invitations.
 
-<!-- If you're new or looking to join us, just email [info@christchurchmayfair.org](mailto:info@christchurchmayfair.org) to reserve a space at any of our services. -->
-
-_For our regular church family, please await email invitations._
+For those who can't join us, we are still live streaming two services. Service times and stream links are below and important updates will be posted here.
