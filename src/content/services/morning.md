@@ -16,7 +16,7 @@ schedule:
     description: All-Ages
   - time: 2020-09-06T11:00:00+01:00
     description: All-Ages
-    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw    
+    link: https://youtu.be/nc_P9pXfTxI    
   - time: 2020-09-13T10:30:00+01:00
     description: No Kids
   - time: 2020-09-20T10:30:00+01:00
