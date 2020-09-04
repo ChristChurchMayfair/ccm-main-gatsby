@@ -8,7 +8,7 @@ schedule:
     link: https://youtu.be/_hptGY5GLbo
   - time: 2020-09-06T17:00:00+01:00
     description: early session
-    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
+    link: https://youtu.be/uO9TVSlbbMM
   - time: 2020-09-06T18:30:00+01:00
     description: late session
   - time: 2020-09-13T17:00:00+01:00
