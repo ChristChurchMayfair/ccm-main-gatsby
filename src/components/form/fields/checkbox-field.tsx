@@ -37,6 +37,16 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
         return null
     }
 
+    let checkboxButtonClasses: string[] = []
+    let choiceStyles = formStyles.formItemMultipleChoiceChoices
+    if (itemsPerLine != null && itemsPerLine === 2) {
+        choiceStyles = formStyles.formItemMultipleChoiceChoicesTwoPerRow
+    }
+    if (itemsPerLine != null && itemsPerLine === 3) {
+        choiceStyles = formStyles.formItemMultipleChoiceChoicesThreePerRow
+        checkboxButtonClasses = [formStyles.smallCheckboxOption]
+    }
+
     const inputDivs = options.map(option => {
         return (
             <div key={option.id}>
@@ -45,6 +55,7 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
                     name={option.id}
                     id={option.id}
                     ref={register(validation)}
+                    className={classNames(checkboxButtonClasses)}
                 />
                 <label
                     htmlFor={option.id}
@@ -58,11 +69,6 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
             </div>
         )
     })
-
-    let choiceStyles = formStyles.formItemMultipleChoiceChoices
-    if (itemsPerLine != null && itemsPerLine === 2) {
-        choiceStyles = formStyles.formItemMultipleChoiceChoicesTwoPerRow
-    }
 
     return (
         <Field

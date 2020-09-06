@@ -1,24 +1,18 @@
-import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Layout from "../components/layout"
-import Bio from "../components/bio"
-import Section from "../components/section"
-import HeaderUnderlay from "../components/header-underlay"
-import SectionText from "../components/section-text"
-import YouTubeGallery, {
-    VideoSection,
-} from "../components/youtube/youtube-gallery"
-import { Form } from "../components/form/form"
+import React from "react"
 import BasicTextField from "../components/form/fields/basic-text-field"
+import CheckBoxField from "../components/form/fields/checkbox-field"
+import { FormInformationSection } from "../components/form/fields/form-section-start"
+import { Form } from "../components/form/form"
 import {
-    IndexableFormData,
     convertFormDateToGoogleFormUrl,
     GoogleFormConfig,
+    IndexableFormData,
 } from "../components/form/google-form-submit"
-import CheckBoxField from "../components/form/fields/checkbox-field"
-import styles from "../components/welcome.module.scss"
-import YouTube from "react-youtube"
-import { FormInformationSection } from "../components/form/fields/form-section-start"
+import HeaderUnderlay from "../components/header-underlay"
+import Layout from "../components/layout"
+import Section from "../components/section"
+import SectionText from "../components/section-text"
 
 const devevelopmentEnvironmentWarning = (
     <div>
@@ -75,51 +69,17 @@ async function sendToGoogleFormsApi(formData: IndexableFormData) {
     })
 }
 
-const WelcomePage: React.FC<{}> = () => {
-    const data = useStaticQuery<GatsbyTypes.WelcomeQuery>(graphql`
-        query Welcome {
-            evangelists: allSanityPerson(
-                filter: {
-                    roles: {
-                        elemMatch: { slug: { current: { eq: "evangelist" } } }
-                    }
-                }
-            ) {
-                nodes {
-                    ...StaffProfile
-                }
-            }
+const ContactCard: React.FC<{}> = () => {
+    const data = useStaticQuery<GatsbyTypes.ContactCardQuery>(graphql`
+        query ContactCard {
             intro: markdownRemark(
-                fileAbsolutePath: { regex: "/welcome/main.md$/" }
+                fileAbsolutePath: { regex: "/contact_card.md$/" }
             ) {
                 html
                 fields {
                     frontmattermd {
                         findOutMoreText {
                             html
-                        }
-                    }
-                }
-            }
-            bigVideo: markdownRemark(
-                fileAbsolutePath: { regex: "/welcome/big_video.md$/" }
-            ) {
-                html
-                frontmatter {
-                    videoId
-                }
-            }
-            videos: markdownRemark(
-                fileAbsolutePath: { regex: "/welcome/videos.md$/" }
-            ) {
-                html
-                frontmatter {
-                    sections {
-                        title
-                        videos {
-                            id
-                            title
-                            description
                         }
                     }
                 }
@@ -147,22 +107,6 @@ const WelcomePage: React.FC<{}> = () => {
                 />
             </Section>
 
-            <Section colorScheme="light">
-                <div className={styles.bigVideoContent}>
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: data.bigVideo!.html!,
-                        }}
-                    />
-                    <YouTube
-                        containerClassName={styles.bigVideoContainer}
-                        className={styles.bigPlayer}
-                        opts={{ playerVars: { autoplay: 0 } }}
-                        videoId={data.bigVideo!.frontmatter!.videoId}
-                    />
-                </div>
-            </Section>
-
             {googleFormSubmissionConfig?.warning != null ? (
                 <Section id="developmentwarning" colorScheme="light">
                     <article style={{ backgroundColor: "red", color: "white" }}>
@@ -177,12 +121,6 @@ const WelcomePage: React.FC<{}> = () => {
                 }
                 doSubmit={sendToGoogleFormsApi}
             >
-                <FormInformationSection>
-                    <h2>Get In Touch</h2>
-                    If you are looking into Christianity or have questions about
-                    Christ Church Mayfair we&apos;d love to help you. Fill out
-                    this form and we will get in touch with you.
-                </FormInformationSection>
                 <BasicTextField
                     name="fullName"
                     label="Full Name"
@@ -193,7 +131,41 @@ const WelcomePage: React.FC<{}> = () => {
                     name="emailAddress"
                     label="Email Address"
                     autoComplete="email"
-                    validation={{ required: "Provide an email address." }}
+                    contextualHelp={
+                        "Provide at least an email address or phone number."
+                    }
+                />
+                <BasicTextField
+                    name="phoneNumber"
+                    label="Phone Number"
+                    autoComplete="tel"
+                />
+                <CheckBoxField
+                    name="contactPreference"
+                    label="Contact preference"
+                    itemsPerLine={3}
+                    contextualHelp={"Let us know how best to contact you."}
+                    validation={{
+                        required:
+                            "Please tell us how you'd prefer to be contacted.",
+                    }}
+                    options={[
+                        {
+                            id: "emailIsOk",
+                            label: "Email",
+                            defaultValue: false,
+                        },
+                        {
+                            id: "phoneIsOk",
+                            label: "Phone",
+                            defaultValue: false,
+                        },
+                        {
+                            id: "textMessageIsOk",
+                            label: "Text",
+                            defaultValue: false,
+                        },
+                    ]}
                 />
                 <CheckBoxField
                     name="serviceAttended"
@@ -203,43 +175,66 @@ const WelcomePage: React.FC<{}> = () => {
                     options={[
                         {
                             id: "morning",
-                            label: "10.15 AM",
+                            label: "Morning",
                             defaultValue: false,
                         },
                         {
                             id: "evening",
-                            label: "6.00 PM",
+                            label: "Evening",
                             defaultValue: false,
                         },
                     ]}
                 />
+                <CheckBoxField
+                    name="tellMeAbout"
+                    label="What would you like to know more about?"
+                    contextualHelp={"Please select all that apply."}
+                    options={[
+                        {
+                            id: "exploringChristianity",
+                            label: "Exploring Christianity",
+                            defaultValue: false,
+                        },
+                        {
+                            id: "newcomerGroups",
+                            label: "Newcomer Groups",
+                            defaultValue: false,
+                        },
+                        {
+                            id: "studentGroups",
+                            label: "Student Groups",
+                            defaultValue: false,
+                        },
+                        {
+                            id: "ccmNewsAndEvents",
+                            label: "CCM News & Events",
+                            defaultValue: false,
+                        },
+                    ]}
+                />
+
+                <FormInformationSection>
+                    <h3>What we do with your information</h3>
+                    <em>
+                        We will endeavour to your details safe and use your
+                        information in accordance with our{" "}
+                        <a href="/privacy-notice">Privacy Notice</a>. If at any
+                        time you wish to stop recieving communications from us,
+                        or want to withdraw or chance your consents, please
+                        contact us at{" "}
+                        <a href="mailto:info@christchurchmayfair.org">
+                            info@christchurchmayfair.org
+                        </a>{" "}
+                        or{" "}
+                        <a href="tel:+44%20(0)%20207%20629%205885">
+                            +44 (0) 207 629 5885
+                        </a>
+                        .
+                    </em>
+                </FormInformationSection>
             </Form>
-
-            <Section colorScheme="light">
-                <article
-                    dangerouslySetInnerHTML={{
-                        __html: data.videos?.html ?? "Missing content",
-                    }}
-                />
-            </Section>
-
-            <Section colorScheme="light">
-                <YouTubeGallery
-                    videoSections={
-                        data.videos!.frontmatter!.sections as VideoSection[]
-                    }
-                />
-            </Section>
-
-            <Bio
-                people={data.evangelists.nodes}
-                peoplePrecedenceByEmail={["nick@christchurchmayfair.org"]}
-                descriptionHtml={
-                    data.intro!.fields!.frontmattermd!.findOutMoreText!.html!
-                }
-            />
         </Layout>
     )
 }
 
-export default WelcomePage
+export default ContactCard

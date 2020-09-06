@@ -40,6 +40,14 @@
     column-gap: var(--general-padding);
 }
 
+.formItemMultipleChoiceChoicesThreePerRow {
+    display: grid;
+    grid-area: choices;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: var(--general-padding);
+    column-gap: var(--general-padding);
+}
+
 .accountDetails {
     display: grid;
     grid-column-gap: var(--general-padding);
@@ -120,6 +128,11 @@ select {
     height: calc(var(--button-height) + 18px);
     cursor: pointer;
     background-repeat: no-repeat;
+}
+
+.form input[type="checkbox"].smallCheckboxOption + label{
+    padding-left: 40px;
+    text-align: left;
 }
 
 .form input[type="radio"] + label {
