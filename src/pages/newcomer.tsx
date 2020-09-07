@@ -25,19 +25,7 @@ const devevelopmentEnvironmentWarning = (
         </em>
     </div>
 )
-//https://docs.google.com/forms/d/e/1FAIpQLSegUzndIutQ9EigxT9d4chyQnq9g39tXwQottslXZqrgWsLFw/viewform?usp=pp_url
-//&entry.1084317887=Tom
-//&entry.1010894531=emaol
-//&entry.1068111817=tele
-//&entry.796689154=emailconsent
-//&entry.1241833160=phone+consnt
-//&entry.1217356119=text+consent
-//&entry.1242537248=morning
-//&entry.1253556287=evening
-//&entry.24080750=exploring
-//&entry.1772238522=newcomver
-//&entry.1449088883=sutdent
-//&entry.441404971=news
+
 const allConfig: { [configName: string]: GoogleFormConfig } = {
     development: {
         formId: "1FAIpQLSegUzndIutQ9EigxT9d4chyQnq9g39tXwQottslXZqrgWsLFw", //This is the test form!
@@ -98,19 +86,12 @@ async function sendToGoogleFormsApi(formData: IndexableFormData) {
 }
 
 const ContactCard: React.FC<{}> = () => {
-    const data = useStaticQuery<GatsbyTypes.ContactCardQuery>(graphql`
-        query ContactCard {
+    const data = useStaticQuery<GatsbyTypes.NewcomerQuery>(graphql`
+        query Newcomer {
             intro: markdownRemark(
-                fileAbsolutePath: { regex: "/contact_card.md$/" }
+                fileAbsolutePath: { regex: "/newcomer.md$/" }
             ) {
                 html
-                fields {
-                    frontmattermd {
-                        findOutMoreText {
-                            html
-                        }
-                    }
-                }
             }
         }
     `)
