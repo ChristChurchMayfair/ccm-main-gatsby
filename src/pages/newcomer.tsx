@@ -41,7 +41,7 @@ const allConfig: { [configName: string]: GoogleFormConfig } = {
             interestedInExploringChristianity: 24080750,
             interestedInNewcomerGroups: 1772238522,
             interestedInStudentGroups: 1449088883,
-            interestedInCCMNewsAndEvents: 441404971
+            interestedInCCMNewsAndEvents: 441404971,
         },
         otherEnabledFields: {},
         warning: devevelopmentEnvironmentWarning,
@@ -60,7 +60,7 @@ const allConfig: { [configName: string]: GoogleFormConfig } = {
             interestedInExploringChristianity: 24080750,
             interestedInNewcomerGroups: 1772238522,
             interestedInStudentGroups: 1449088883,
-            interestedInCCMNewsAndEvents: 441404971
+            interestedInCCMNewsAndEvents: 441404971,
         },
         otherEnabledFields: {},
         warning: null,
