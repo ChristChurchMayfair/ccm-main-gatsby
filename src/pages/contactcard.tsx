@@ -25,26 +25,54 @@ const devevelopmentEnvironmentWarning = (
         </em>
     </div>
 )
-
+//https://docs.google.com/forms/d/e/1FAIpQLSegUzndIutQ9EigxT9d4chyQnq9g39tXwQottslXZqrgWsLFw/viewform?usp=pp_url
+//&entry.1084317887=Tom
+//&entry.1010894531=emaol
+//&entry.1068111817=tele
+//&entry.796689154=emailconsent
+//&entry.1241833160=phone+consnt
+//&entry.1217356119=text+consent
+//&entry.1242537248=morning
+//&entry.1253556287=evening
+//&entry.24080750=exploring
+//&entry.1772238522=newcomver
+//&entry.1449088883=sutdent
+//&entry.441404971=news
 const allConfig: { [configName: string]: GoogleFormConfig } = {
     development: {
-        formId: "1FAIpQLSeWH3Ykx4wd_2VqXKuZIFQ_621u8T8zPrix8VdIkWSnWYQESQ", //This is the test form!
+        formId: "1FAIpQLSegUzndIutQ9EigxT9d4chyQnq9g39tXwQottslXZqrgWsLFw", //This is the test form!
         fieldNameToEntryId: {
-            fullName: 930889699,
-            emailAddress: 1863592346,
-            morning: 1011494470,
-            evening: 1435050375,
+            fullName: 1084317887,
+            emailAddress: 1010894531,
+            telephoneNumber: 1068111817,
+            emailConsent: 796689154,
+            telephoneConsent: 1241833160,
+            textMessageConsent: 1217356119,
+            attendedMorning: 1242537248,
+            attendedEvening: 1253556287,
+            interestedInExploringChristianity: 24080750,
+            interestedInNewcomerGroups: 1772238522,
+            interestedInStudentGroups: 1449088883,
+            interestedInCCMNewsAndEvents: 441404971
         },
         otherEnabledFields: {},
         warning: devevelopmentEnvironmentWarning,
     },
     production: {
-        formId: "1FAIpQLSdjUjKxByZWdRkLQv3tbsfzQ2PidXuEzMNfHrp8BiCjMctAHw",
+        formId: "1FAIpQLSdqsyIWIY7B9iUwrnzhl8BwYzsoTFsEpzO5xq_-PFlugGlYkQ",
         fieldNameToEntryId: {
-            fullName: 1930537097,
-            emailAddress: 1284288054,
-            morning: 1501517289,
-            evening: 1960000090,
+            fullName: 1084317887,
+            emailAddress: 1010894531,
+            telephoneNumber: 1068111817,
+            emailConsent: 796689154,
+            telephoneConsent: 1241833160,
+            textMessageConsent: 1217356119,
+            attendedMorning: 1242537248,
+            attendedEvening: 1253556287,
+            interestedInExploringChristianity: 24080750,
+            interestedInNewcomerGroups: 1772238522,
+            interestedInStudentGroups: 1449088883,
+            interestedInCCMNewsAndEvents: 441404971
         },
         otherEnabledFields: {},
         warning: null,
@@ -136,7 +164,7 @@ const ContactCard: React.FC<{}> = () => {
                     }
                 />
                 <BasicTextField
-                    name="phoneNumber"
+                    name="telephoneNumber"
                     label="Phone Number"
                     autoComplete="tel"
                 />
@@ -151,17 +179,17 @@ const ContactCard: React.FC<{}> = () => {
                     }}
                     options={[
                         {
-                            id: "emailIsOk",
+                            id: "emailConsent",
                             label: "Email",
                             defaultValue: false,
                         },
                         {
-                            id: "phoneIsOk",
+                            id: "telephoneConsent",
                             label: "Phone",
                             defaultValue: false,
                         },
                         {
-                            id: "textMessageIsOk",
+                            id: "textMessageConsent",
                             label: "Text",
                             defaultValue: false,
                         },
@@ -174,12 +202,12 @@ const ContactCard: React.FC<{}> = () => {
                     itemsPerLine={2}
                     options={[
                         {
-                            id: "morning",
+                            id: "attendedMorning",
                             label: "Morning",
                             defaultValue: false,
                         },
                         {
-                            id: "evening",
+                            id: "attendedEvening",
                             label: "Evening",
                             defaultValue: false,
                         },
@@ -191,22 +219,22 @@ const ContactCard: React.FC<{}> = () => {
                     contextualHelp={"Please select all that apply."}
                     options={[
                         {
-                            id: "exploringChristianity",
+                            id: "interestedInExploringChristianity",
                             label: "Exploring Christianity",
                             defaultValue: false,
                         },
                         {
-                            id: "newcomerGroups",
+                            id: "interestedInNewcomerGroups",
                             label: "Newcomer Groups",
                             defaultValue: false,
                         },
                         {
-                            id: "studentGroups",
+                            id: "interestedInStudentGroups",
                             label: "Student Groups",
                             defaultValue: false,
                         },
                         {
-                            id: "ccmNewsAndEvents",
+                            id: "interestedInCCMNewsAndEvents",
                             label: "CCM News & Events",
                             defaultValue: false,
                         },
