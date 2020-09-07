@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Layout from "../components/layout"
 import { Form, FormState } from "../components/form/form"
-import { FormSectionStart } from "../components/form/fields/form-section-start"
+import { FormInformationSection } from "../components/form/fields/form-section-start"
 import BasicTextField from "../components/form/fields/basic-text-field"
 import RadioButtonField from "../components/form/fields/radio-button-field"
 import DropDownField from "../components/form/fields/drop-down-field"
@@ -218,15 +218,14 @@ const GivingFormPage: React.FC = () => {
                 doSubmit={sendToGoogleFormsApi}
                 stateChangeCallback={setGivingFormState}
             >
-                <FormSectionStart
-                    name={"Information About You"}
-                    level={1}
-                    description={
-                        "We need this information to help us claim gift aid for your donations."
-                    }
-                />
-
-                <FormSectionStart name={"Name"} level={2} />
+                <FormInformationSection>
+                    <h2>Information About You</h2>
+                    We need this information to help us claim gift aid for your
+                    donations.
+                </FormInformationSection>
+                <FormInformationSection>
+                    <h3>Name</h3>
+                </FormInformationSection>
                 <BasicTextField
                     name="givenName"
                     label="Given Name"
@@ -239,8 +238,9 @@ const GivingFormPage: React.FC = () => {
                     autoComplete="family-name"
                     validation={{ required: "Provide your family name." }}
                 />
-
-                <FormSectionStart name={"Home Address"} level={2} />
+                <FormInformationSection>
+                    <h3>Home Address</h3>
+                </FormInformationSection>
                 <BasicTextField
                     name="streetAddress"
                     label="Street Address"
@@ -266,13 +266,11 @@ const GivingFormPage: React.FC = () => {
                     validation={{ required: "Provide a post code." }}
                 />
 
-                <FormSectionStart
-                    name={"Contact Information"}
-                    level={2}
-                    description={
-                        "In case we need to contact you with a query, please provide either an email address or telephone number."
-                    }
-                />
+                <FormInformationSection>
+                    <h3>Contact Information</h3>
+                    In case we need to contact you with a query, please provide
+                    either an email address or telephone number.
+                </FormInformationSection>
                 <BasicTextField
                     name="telephoneNumber"
                     label="Telephone Number"
@@ -284,11 +282,10 @@ const GivingFormPage: React.FC = () => {
                     autoComplete={"email"}
                 />
 
-                <FormSectionStart
-                    name={"Your Gift"}
-                    level={1}
-                    description={"Tell us about your gift."}
-                />
+                <FormInformationSection>
+                    <h2>Your Gift</h2>
+                    Tell us about your gift.
+                </FormInformationSection>
                 <BasicTextField
                     name="giftAmountInGBP"
                     label="Gift Amount"
@@ -329,21 +326,23 @@ const GivingFormPage: React.FC = () => {
                     label="Regular Gift Commences From"
                     showWhen={showGiftFrequencyAndStartDate}
                 />
-                <FormSectionStart
-                    name={"Gift Aid"}
-                    level={1}
-                    description={
-                        "If you are a UK taxpayer and eligible to Gift Aid your donation, please complete the declaration below. This will increase your gift by 25p for every £1 given at no extra cost to you or us. Thank you."
-                    }
-                />
-                <FormSectionStart
-                    name={"Your Declariation"}
-                    level={2}
-                    italics={true}
-                    description={
-                        "I am a UK taxpayer and understand that if I pay less Income Tax and/or Capital Gains Tax than the amount of Gift Aid claimed on all my donations in that tax year it is my responsibility to pay any difference."
-                    }
-                />
+                <FormInformationSection>
+                    <h2>Gift Aid</h2>
+                    If you are a UK taxpayer and eligible to Gift Aid your
+                    donation, please complete the declaration below. This will
+                    increase your gift by 25p for every £1 given at no extra
+                    cost to you or us. Thank you.
+                </FormInformationSection>
+                <FormInformationSection>
+                    <h3>Your Declaration</h3>&ldquo;
+                    <em>
+                        I am a UK taxpayer and understand that if I pay less
+                        Income Tax and/or Capital Gains Tax than the amount of
+                        Gift Aid claimed on all my donations in that tax year it
+                        is my responsibility to pay any difference.
+                    </em>
+                    &rdquo;
+                </FormInformationSection>
                 <CheckBoxField
                     name="giftAidDeclarations"
                     label="On Which Gift Can We Claim Gift Aid?"

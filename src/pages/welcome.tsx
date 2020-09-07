@@ -18,7 +18,7 @@ import {
 import CheckBoxField from "../components/form/fields/checkbox-field"
 import styles from "../components/welcome.module.scss"
 import YouTube from "react-youtube"
-import { FormSectionStart } from "../components/form/fields/form-section-start"
+import { FormInformationSection } from "../components/form/fields/form-section-start"
 
 const devevelopmentEnvironmentWarning = (
     <div>
@@ -177,13 +177,12 @@ const WelcomePage: React.FC<{}> = () => {
                 }
                 doSubmit={sendToGoogleFormsApi}
             >
-                <FormSectionStart
-                    name={"Get In Touch"}
-                    level={1}
-                    description={
-                        "If you are looking into Christianity or have questions about Christ Church Mayfair we'd love to help you. Fill out this form and we will get in touch with you."
-                    }
-                />
+                <FormInformationSection>
+                    <h2>Get In Touch</h2>
+                    If you are looking into Christianity or have questions about
+                    Christ Church Mayfair we&apos;d love to help you. Fill out
+                    this form and we will get in touch with you.
+                </FormInformationSection>
                 <BasicTextField
                     name="fullName"
                     label="Full Name"
