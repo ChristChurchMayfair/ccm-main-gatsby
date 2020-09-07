@@ -7,25 +7,25 @@ schedule:
     description: online & in person
     link: https://youtu.be/_hptGY5GLbo
   - time: 2020-09-06T17:00:00+01:00
-    description: early session
+    description: First Session
     link: https://youtu.be/uO9TVSlbbMM
   - time: 2020-09-06T18:30:00+01:00
-    description: late session
+    description: Second Session
   - time: 2020-09-13T17:00:00+01:00
-    description: early session
+    description: First Session
     link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
   - time: 2020-09-13T18:30:00+01:00
-    description: late session 
+    description: Second Session 
   - time: 2020-09-20T17:00:00+01:00
-    description: early session
+    description: First Session
     link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
   - time: 2020-09-20T18:30:00+01:00
-    description: late session
+    description: Second Session
   - time: 2020-09-27T17:00:00+01:00
-    description: early session
+    description: First Session
     link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
   - time: 2020-09-27T18:30:00+01:00
-    description: late session
+    description: Second Session
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
