@@ -141,7 +141,7 @@ const ContactCard: React.FC<{}> = () => {
                     label="Email Address"
                     autoComplete="email"
                     contextualHelp={
-                        "Provide at least an email address or phone number."
+                        "Provide either an email address or a phone number."
                     }
                 />
                 <BasicTextField
@@ -154,10 +154,6 @@ const ContactCard: React.FC<{}> = () => {
                     label="Contact preference"
                     itemsPerLine={3}
                     contextualHelp={"Let us know how best to contact you."}
-                    validation={{
-                        required:
-                            "Please tell us how you'd prefer to be contacted.",
-                    }}
                     options={[
                         {
                             id: "emailConsent",
