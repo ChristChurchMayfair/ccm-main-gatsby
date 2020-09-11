@@ -19,6 +19,7 @@ schedule:
     link: https://youtu.be/nc_P9pXfTxI    
   - time: 2020-09-13T10:30:00+01:00
     description: No Sunday School
+    link: https://youtu.be/sltH6nKRbZA
   - time: 2020-09-20T10:30:00+01:00
     description: ½ Sunday School (Week C)
   - time: 2020-09-27T10:30:00+01:00
