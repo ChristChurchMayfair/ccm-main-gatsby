@@ -22,8 +22,10 @@ schedule:
     link: https://youtu.be/sltH6nKRbZA
   - time: 2020-09-20T10:30:00+01:00
     description: ½ Sunday School (Week C)
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
   - time: 2020-09-27T10:30:00+01:00
     description: ½ Sunday School (Week D)
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
 ---
 Normal mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
 
