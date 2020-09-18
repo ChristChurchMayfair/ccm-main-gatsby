@@ -22,7 +22,7 @@ schedule:
     link: https://youtu.be/sltH6nKRbZA
   - time: 2020-09-20T10:30:00+01:00
     description: ½ Sunday School (Week C)
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    link: https://youtu.be/-f8ywiK6dOA
   - time: 2020-09-27T10:30:00+01:00
     description: ½ Sunday School (Week D)
     link: https://www.youtube.com/c/ChristChurchMayfairLive
