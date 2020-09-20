@@ -1,0 +1,21 @@
+@import "../../mixins/button";
+
+.whatIsChristianity {
+    grid-area: content;
+}
+
+.whatIsChristianityIntroButtonContainer {
+    .whatIsChristianityIntroButton {
+        @include button;
+
+        padding-left: var(--general-padding);
+        padding-right: var(--general-padding);
+        color: var(--dark-colour);
+        background-color: var(--light-colour);
+        display: inline-block;
+    }
+}
+
+.christianityExplored {
+    grid-area: content;
+}
