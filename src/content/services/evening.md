@@ -23,7 +23,7 @@ schedule:
     description: Second Session
   - time: 2020-09-27T17:00:00+01:00
     description: First Session
-    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
+    link: https://youtu.be/HyWEsNN9Yu0
   - time: 2020-09-27T18:30:00+01:00
     description: Second Session
 ---
