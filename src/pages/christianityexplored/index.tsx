@@ -7,6 +7,7 @@ import SectionText from "../../components/section-text"
 import BigVideo from "../../components/big-video"
 
 import styles from "./christianityexplored.module.scss"
+import LargeNavigationButtons from "../../components/large-navigation-buttons"
 
 const ChristianityExploredPage: FC = () => (
     <Layout headerColour="dark" title="Christianity Explored">
@@ -14,13 +15,27 @@ const ChristianityExploredPage: FC = () => (
         <Section colorScheme="dark" intro wider>
             <SectionText intro className={styles.introText}>
                 <h1>Christianity Explored</h1>
-                <p>Starting 12th October 2020</p>
-                <BigVideo youTubeVideoId="U8Ez57BMBHU" />
+                <p>
+                    Chrisitanity Explored is a course which considers at the big
+                    questions of life by looking at the heart of the Christian
+                    faith
+                </p>
             </SectionText>
         </Section>
         <Section colorScheme="light">
             <div className={styles.information}>
-                <h2>What is Christianity Explored?</h2>
+                <BigVideo youTubeVideoId="U8Ez57BMBHU" />
+                <LargeNavigationButtons
+                    buttonRow={[
+                        {
+                            key: "more",
+                            text: "I'd like to know more!",
+                            route: "/christianityexplored/howdoesitwork",
+                            colourScheme: "dark",
+                        },
+                    ]}
+                />
+                {/*  <h2>What is Christianity Explored?</h2>
                 <p>
                     Christianity Explored gives you time and space to consider
                     who Jesus is, what he taught and why it matters. The course
@@ -62,23 +77,9 @@ const ChristianityExploredPage: FC = () => (
                         nick@christchurchmayfair.org
                     </a>
                     . He&apos;d love to help with any questions you may have!
-                </p>
-                {/* TODO: signup form */}
+                </p>*/}
             </div>
         </Section>
-        <Section colorScheme="dark">
-            <div className={styles.videos}>
-                <h1>Videos</h1>
-                <p>
-                    We will be watching a short video about a particular topic
-                    during each of the sessions of the course. These will
-                    provide a great introduction to how the Christian faith
-                    approaches each of these topics.
-                </p>
-                <p>TODO: add videos</p>
-            </div>
-        </Section>
-        <p>TODO: add Nick's profile</p>
     </Layout>
 )
 

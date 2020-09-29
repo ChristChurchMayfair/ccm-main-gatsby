@@ -1,0 +1,58 @@
+.row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: var(--general-padding);
+    margin: 0;
+}
+
+.navButton {
+    display: table-cell;
+    background-color: var(--dark-colour);
+    text-align: center;
+    padding: var(--general-padding);
+    color: var(--light-colour);
+    font-weight: 700;
+
+    &--light {
+        color: var(--dark-colour);
+        background-color: var(--mid-gray);
+
+        > div .icon {
+            fill: var(--dark-colour);
+        }
+    }
+
+    @media only screen and (max-width: 968px) {
+        display: table-row;
+    }
+
+    > div {
+        display: inline-flex;
+        width: 100%;
+        vertical-align: middle;
+
+        @media only screen and (max-width: 968px) {
+            padding: var(--general-padding);
+        }
+    }
+
+    .icon {
+        height: 3em;
+        fill: var(--light-colour);
+        display: inline-block;
+        vertical-align: middle;
+        margin: auto 0;
+
+        @media only screen and (max-width: 968px) {
+            height: 2.2em;
+        }
+    }
+
+    p {
+        display: inline-block;
+        margin: auto;
+        flex: 1;
+        height: 100%;
+    }
+}

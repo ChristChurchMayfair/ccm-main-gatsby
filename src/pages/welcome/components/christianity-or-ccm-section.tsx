@@ -1,57 +1,33 @@
 import React, { FC } from "react"
 
-import Img, { FluidObject } from "../../../components/img"
 import Section from "../../../components/section"
+import BibleIcon from "../../../assets/icons/bible.inline.svg"
+import PeopleIcon from "../../../assets/icons/people.inline.svg"
 
 import styles from "../welcome.module.scss"
-import { graphql, Link } from "gatsby"
+import LargeNavigationButtons from "../../../components/large-navigation-buttons"
 
-export const fragments = graphql`
-    fragment ChristianityOrCCMSection on MarkdownRemark {
-        frontmatter {
-            christianityImage {
-                childImageSharp {
-                    fluid(maxWidth: 500) {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-            ccmImage {
-                childImageSharp {
-                    fluid(maxWidth: 500) {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-        }
-    }
-`
-
-interface ChristianityOrCCMSectionProps {
-    christianityImage: FluidObject
-    ccmImage: FluidObject
-}
-
-const ChristianityOrCCMSection: FC<ChristianityOrCCMSectionProps> = ({
-    christianityImage,
-    ccmImage,
-}) => (
-    <Section colorScheme="light" infoPanel>
+const ChristianityOrCCMSection: FC = () => (
+    <Section colorScheme="light">
         <div className={styles.christianityOrCCMContainer}>
-            <div>
-                <Link to="/christianfaith">
-                    <Img fluid={christianityImage} />
-                </Link>
-                <Link to="/christianfaith">
-                    Tell me more about the Christian faith
-                </Link>
-            </div>
-            <div>
-                <a href="#about-ccm">
-                    <Img fluid={ccmImage} />
-                </a>
-                <a href="#about-ccm">Tell me more about the church</a>
-            </div>
+            <LargeNavigationButtons
+                buttonRow={[
+                    {
+                        key: "faith",
+                        text: "Tell me more about the christian faith",
+                        route: "/welcome/christianity",
+                        icon: BibleIcon,
+                        colourScheme: "light",
+                    },
+                    {
+                        key: "church",
+                        text: "Tell me more about the church",
+                        route: "/welcome/church",
+                        icon: PeopleIcon,
+                        colourScheme: "dark",
+                    },
+                ]}
+            />
         </div>
     </Section>
 )
