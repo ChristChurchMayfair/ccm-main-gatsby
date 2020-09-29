@@ -14,7 +14,7 @@ const ChristianityOrCCMSection: FC = () => (
                 buttonRow={[
                     {
                         key: "faith",
-                        text: "Tell me more about the christian faith",
+                        text: "Tell me more about the Christian faith",
                         route: "/welcome/christianity",
                         icon: BibleIcon,
                         colourScheme: "light",
