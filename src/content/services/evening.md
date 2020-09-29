@@ -3,12 +3,6 @@ title: Evenings
 normalTime: "6.00pm"
 mainImage: ../assets/images/desktop/hand_in_the_air.jpg
 schedule:
-  - time: 2020-08-30T18:00:00+01:00
-    description: online & in person
-    link: https://youtu.be/_hptGY5GLbo
-  - time: 2020-09-06T17:00:00+01:00
-    description: First Session
-    link: https://youtu.be/uO9TVSlbbMM
   - time: 2020-09-06T18:30:00+01:00
     description: Second Session
   - time: 2020-09-13T17:00:00+01:00
@@ -26,6 +20,36 @@ schedule:
     link: https://youtu.be/HyWEsNN9Yu0
   - time: 2020-09-27T18:30:00+01:00
     description: Second Session
+  - time: 2020-10-04T16:30:00+01:00
+    description: First Session
+  - time: 2020-10-04T18:00:00+01:00
+    description: Second Session
+    link: https://youtu.be/HyWEsNN9Yu0
+  - time: 2020-10-04T19:30:00+01:00
+    description: Recorded content
+  - time: 2020-10-11T16:30:00+01:00
+    description: First Session
+  - time: 2020-10-11T18:00:00+01:00
+    description: Second Session
+    link: https://youtu.be/HyWEsNN9Yu0
+  - time: 2020-10-11T19:30:00+01:00
+    description: Recorded content
+  - time: 2020-10-18T16:30:00+01:00
+    description: First Session
+  - time: 2020-10-18T18:00:00+01:00
+    description: Second Session
+    link: https://youtu.be/HyWEsNN9Yu0
+  - time: 2020-10-18T19:30:00+01:00
+    description: Recorded content
+  - time: 2020-10-25T16:30:00+01:00
+    description: First Session
+  - time: 2020-10-25T18:00:00+01:00
+    description: Second Session
+    link: https://youtu.be/HyWEsNN9Yu0
+  - time: 2020-10-25T19:30:00+01:00
+    description: Recorded content
+ 
+ 
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
