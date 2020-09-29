@@ -3,15 +3,6 @@ title: Mornings
 normalTime: "10.15am"
 mainImage: ../assets/images/desktop/CCM_morning_church_lunch.jpg
 schedule:
-  - time: 2020-08-16T10:15:00+01:00
-    description: Online Only
-    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
-  - time: 2020-08-23T10:15:00+01:00
-    description: Online Only
-    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
-  - time: 2020-08-30T10:15:00+01:00
-    description: Online Only
-    link: https://youtu.be/18y2m1yLAmo
   - time: 2020-09-06T09:30:00+01:00
     description: All-Ages
   - time: 2020-09-06T11:00:00+01:00
@@ -24,6 +15,26 @@ schedule:
     description: ½ Sunday School (Week C)
     link: https://youtu.be/-f8ywiK6dOA
   - time: 2020-09-27T10:30:00+01:00
+    description: ½ Sunday School (Week D)
+    link: https://youtu.be/1gesGPthMT4
+  - time: 2020-10-04T09:30:00+01:00
+    description: All-Ages
+  - time: 2020-10-04T11:00:00+01:00
+    description: All-Ages
+    link: https://youtu.be/nc_P9pXfTxI    
+  - time: 2020-10-11T09:30:00+01:00
+    description: No Sunday School
+  - time: 2020-10-11T11:00:00+01:00
+    description: No Sunday School
+    link: https://youtu.be/sltH6nKRbZA
+  - time: 2020-10-18T09:30:00+01:00
+    description: ½ Sunday School (Week C)
+  - time: 2020-10-18T11:00:00+01:00
+    description: ½ Sunday School (Week C)
+    link: https://youtu.be/-f8ywiK6dOA  
+  - time: 2020-10-25T09:30+01:00
+    description: ½ Sunday School (Week D)
+  - time: 2020-10-25T11:00+01:00
     description: ½ Sunday School (Week D)
     link: https://youtu.be/1gesGPthMT4
 ---
