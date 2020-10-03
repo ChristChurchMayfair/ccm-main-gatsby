@@ -3,9 +3,12 @@ import React, { FC } from "react"
 import Section from "../../../components/section"
 import BibleIcon from "../../../assets/icons/bible.inline.svg"
 import PeopleIcon from "../../../assets/icons/people.inline.svg"
+import LargeNavigationButtons from "../../../components/large-navigation-buttons"
 
 import styles from "../welcome.module.scss"
-import LargeNavigationButtons from "../../../components/large-navigation-buttons"
+
+import CongregationRaisedHandsImage from "./congregation-raised-hands.png"
+import UncoverImage from "./uncover.png"
 
 const ChristianityOrCCMSection: FC = () => (
     <Section colorScheme="light">
@@ -16,15 +19,15 @@ const ChristianityOrCCMSection: FC = () => (
                         key: "faith",
                         text: "Tell me more about the Christian faith",
                         route: "/welcome/christianity",
-                        icon: BibleIcon,
                         colourScheme: "light",
+                        image: UncoverImage,
                     },
                     {
                         key: "church",
                         text: "Tell me more about the church",
                         route: "/welcome/church",
-                        icon: PeopleIcon,
                         colourScheme: "dark",
+                        image: CongregationRaisedHandsImage,
                     },
                 ]}
             />

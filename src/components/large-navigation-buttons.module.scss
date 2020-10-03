@@ -6,11 +6,14 @@
     margin: 0;
 }
 
+.image {
+    width: 100%;
+}
+
 .navButton {
     display: table-cell;
     background-color: var(--dark-colour);
     text-align: center;
-    padding: var(--general-padding);
     color: var(--light-colour);
     font-weight: 700;
 
@@ -31,10 +34,6 @@
         display: inline-flex;
         width: 100%;
         vertical-align: middle;
-
-        @media only screen and (max-width: 968px) {
-            padding: var(--general-padding);
-        }
     }
 
     .icon {
@@ -42,6 +41,7 @@
         fill: var(--light-colour);
         display: inline-block;
         vertical-align: middle;
+        padding: var(--general-padding);
         margin: auto 0;
 
         @media only screen and (max-width: 968px) {
@@ -51,8 +51,15 @@
 
     p {
         display: inline-block;
+        padding: var(--general-padding);
         margin: auto;
         flex: 1;
         height: 100%;
+    }
+
+    &--with-image {
+        p {
+            padding: calc(var(--general-padding) / 2) var(--general-padding);
+        }
     }
 }

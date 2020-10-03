@@ -9,7 +9,9 @@ interface ButtonConfig {
     text: string
     route: string
     icon?: ElementType
+    image?: string
     colourScheme: "light" | "dark"
+    onClick?: () => void
 }
 
 interface LargeNavigationButtonsProps {
@@ -21,7 +23,8 @@ const LargeNavigationButtons: FC<LargeNavigationButtonsProps> = ({
 }) => (
     <div className={styles.row}>
         {buttonRow.map(button => {
-            const Icon = button.icon ? button.icon : Fragment
+            // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
+            const Icon = button.icon ?? Fragment
             return (
                 <Link
                     key={button.key}
@@ -29,8 +32,19 @@ const LargeNavigationButtons: FC<LargeNavigationButtonsProps> = ({
                     className={classnames(styles.navButton, {
                         [styles["navButton--light"]]:
                             button.colourScheme === "light",
+                        [styles["navButton--with-image"]]: Boolean(
+                            button.image
+                        ),
                     })}
+                    onClick={button.onClick}
                 >
+                    {Boolean(button.image) && (
+                        <img
+                            src={button.image}
+                            alt={button.text}
+                            className={styles.image}
+                        />
+                    )}
                     <div>
                         {Boolean(button.icon) && (
                             <Icon className={styles.icon} />
