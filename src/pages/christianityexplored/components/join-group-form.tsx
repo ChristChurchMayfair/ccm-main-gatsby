@@ -13,10 +13,9 @@ const devevelopmentEnvironmentWarning = (
     <div>
         <em>
             Warning - this form currently submits to a Google Spreadsheet owned
-            by{" "}
-            <a href="mailto:tom.duckering@gmail.com">tom.duckering@gmail.com</a>{" "}
-            and is only for test purposes. Please do not submit any data that
-            you do not wish him to see!
+            by <a href="mailto:mauriceyap@hotmail.co.uk">Maurice Yap</a> and is
+            only for test purposes. Please do not submit any data that you do
+            not wish him to see!
         </em>
     </div>
 )
