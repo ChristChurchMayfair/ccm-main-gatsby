@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 
 import Layout from "../../components/layout"
@@ -8,9 +8,6 @@ import HeaderUnderlay from "../../components/header-underlay"
 import SectionText from "../../components/section-text"
 
 import ChristianityOrCCMSection from "./components/christianity-or-ccm-section"
-
-import styles from "./welcome.module.scss"
-import WelcomeForm from "../../components/welcome-form"
 
 const WelcomePage: React.FC<{}> = () => {
     const data = useStaticQuery<GatsbyTypes.WelcomeQuery>(graphql`

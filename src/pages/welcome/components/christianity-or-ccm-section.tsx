@@ -1,8 +1,6 @@
 import React, { FC } from "react"
 
 import Section from "../../../components/section"
-import BibleIcon from "../../../assets/icons/bible.inline.svg"
-import PeopleIcon from "../../../assets/icons/people.inline.svg"
 import LargeNavigationButtons from "../../../components/large-navigation-buttons"
 
 import styles from "../welcome.module.scss"
