@@ -20,22 +20,22 @@ schedule:
   - time: 2020-10-04T09:30:00+01:00
     description: All-Ages
   - time: 2020-10-04T11:00:00+01:00
-    description: All-Ages
+    description: An all age service online and in person.
     link: https://youtu.be/Zf9G5Zyrd-I
   - time: 2020-10-11T09:30:00+01:00
-    description: Sunday School
+    description: In person only with Sunday School
   - time: 2020-10-11T11:00:00+01:00
-    description: Sunday School
+    description: In person and online with Sunday School
     link: https://youtu.be/sltH6nKRbZA
   - time: 2020-10-18T09:30:00+01:00
-    description: Sunday School 
+    description: In person only with Sunday School 
   - time: 2020-10-18T11:00:00+01:00
-    description: Sunday School 
+    description: In person and online with Sunday School 
     link: https://youtu.be/-f8ywiK6dOA  
   - time: 2020-10-25T09:30+01:00
-    description: Sunday School 
+    description: In person only with Sunday School 
   - time: 2020-10-25T11:00+01:00
-    description: Sunday School 
+    description: In person and online with Sunday School 
     link: https://youtu.be/1gesGPthMT4
 ---
 Normal mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.

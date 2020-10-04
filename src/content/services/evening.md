@@ -4,50 +4,50 @@ normalTime: "6.00pm"
 mainImage: ../assets/images/desktop/hand_in_the_air.jpg
 schedule:
   - time: 2020-09-06T18:30:00+01:00
-    description: Second Session
+    description: Live service, in person only.
   - time: 2020-09-13T17:00:00+01:00
-    description: First Session
+    description: Live service, in person only.
     link: https://youtu.be/e-bdW2BKMF4
   - time: 2020-09-13T18:30:00+01:00
-    description: Second Session 
+    description: Live service, in person only. 
   - time: 2020-09-20T17:00:00+01:00
-    description: First Session
+    description: Live service, in person only.
     link: https://youtu.be/iCXe_YSjyWU
   - time: 2020-09-20T18:30:00+01:00
-    description: Second Session
+    description: Live service, in person only.
   - time: 2020-09-27T17:00:00+01:00
-    description: First Session
+    description: Live service, in person only.
     link: https://youtu.be/HyWEsNN9Yu0
   - time: 2020-09-27T18:30:00+01:00
-    description: Second Session
+    description: Live service, in person only.
   - time: 2020-10-04T16:30:00+01:00
-    description: First Session
+    description: Live service, in person only.
   - time: 2020-10-04T18:00:00+01:00
-    description: Second Session
+    description: In person and online.
     link: https://youtu.be/HyWEsNN9Yu0
   - time: 2020-10-04T19:30:00+01:00
-    description: Recorded content
+    description: In person only with some recorded content.
   - time: 2020-10-11T16:30:00+01:00
-    description: First Session
+    description: Live service, in person only.
   - time: 2020-10-11T18:00:00+01:00
-    description: Second Session
+    description: Live service, in person only.
     link: https://youtu.be/XAV_qVzIEls
   - time: 2020-10-11T19:30:00+01:00
-    description: Recorded content
+    description: In person only with some recorded content.
   - time: 2020-10-18T16:30:00+01:00
-    description: First Session
+    description: Live service, in person only.
   - time: 2020-10-18T18:00:00+01:00
-    description: Second Session
+    description: Live service, in person only.
     link: https://youtu.be/HyWEsNN9Yu0
   - time: 2020-10-18T19:30:00+01:00
-    description: Recorded content
+    description: In person only with some recorded content.
   - time: 2020-10-25T16:30:00+01:00
-    description: First Session
+    description: Live service, in person only.
   - time: 2020-10-25T18:00:00+01:00
-    description: Second Session
+    description: Live service, in person only.
     link: https://youtu.be/HyWEsNN9Yu0
   - time: 2020-10-25T19:30:00+01:00
-    description: Recorded content
+    description: In person only with some recorded content.
  
  
 ---

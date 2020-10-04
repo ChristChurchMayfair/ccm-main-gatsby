@@ -100,43 +100,54 @@
 .sessions {
     grid-area: times;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: var(--general-padding);
+    grid-template-columns: 1fr 1fr 1fr;
+    // column-gap: var(--general-padding);
+    column-gap: 15px;
 }
 
 .session {
-    // display: grid;
-    grid-template-rows: 50px 50px 50px;
+    display: grid;
+    grid-template-rows: 50px 100px 50px;
     grid-template-areas: "sessionTime"
-    "sessionDecsription"
+    "sessionDescription"
     "sessionLink";
     row-gap: 2px;
 
     color: var(--light-colour);
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 0.1em;
     margin-bottom: 0.2em;
     line-height: 1em;
+
+    @media only screen and (max-width: 968px) {
+        grid-template-rows: 50px 110px 50px;
+        font-size: 0.9em;
+    }
 }
 
 .sessionTime {
+    grid-area: sessionTime;
     font-size: 1.3em;
     margin-bottom: 10px;
 }
 
 .sessionDescription {
+    grid-area: sessionDescription;
     font-style: italic;
     margin-bottom: 20px;
 }
 
 a.streamlink {
+    grid-area: sessionLink;
     @include button;
     background-color: var(--light-colour);
     color: #c4302b;
     width: 100%;
     cursor: pointer;
     width: 100%;
-
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: fade;
     &:hover {
         text-decoration: underline;
     }
