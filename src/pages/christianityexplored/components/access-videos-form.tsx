@@ -77,7 +77,7 @@ const AccessVideosForm: FC = () => (
                 <p>
                     We have permission to make the videos available on an
                     individual basis. Just give us your name and email address
-                    and we will send a link over.
+                    and we will send over a link.
                 </p>
             </FormInformationSection>
             <BasicTextField
