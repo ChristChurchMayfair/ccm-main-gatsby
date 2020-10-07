@@ -32,10 +32,10 @@ const allConfig: { [configName: string]: GoogleFormConfig } = {
         warning: devevelopmentEnvironmentWarning,
     },
     production: {
-        formId: "1FAIpQLSdugEq0d811olCdfKLcK4wpfE12CAvb0qCQPnck_bj_xHDI2g", // TODO: use production form
+        formId: "1FAIpQLSeND3XcKJpj1dlUrN2gSGiZQsRKcdiAZdCvl1wIrQFtk98CmA",
         fieldNameToEntryId: {
-            name: 939027200,
-            emailAddress: 1489726579,
+            name: 1522964104,
+            emailAddress: 1472852784,
         },
         otherEnabledFields: {},
         warning: null,

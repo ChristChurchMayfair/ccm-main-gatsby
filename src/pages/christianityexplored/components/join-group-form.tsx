@@ -1,6 +1,7 @@
 import React, { FC } from "react"
 
 import BasicTextField from "../../../components/form/fields/basic-text-field"
+import { FormInformationSection } from "../../../components/form/fields/form-section-start"
 import { Form } from "../../../components/form/form"
 import {
     convertFormDateToGoogleFormUrl,
@@ -31,10 +32,10 @@ const allConfig: { [configName: string]: GoogleFormConfig } = {
         warning: devevelopmentEnvironmentWarning,
     },
     production: {
-        formId: "1FAIpQLSdugEq0d811olCdfKLcK4wpfE12CAvb0qCQPnck_bj_xHDI2g",
+        formId: "1FAIpQLSf9eUD0Q7eNnLzSzCc1JRpm-9i8_TF6jlVgv2r56WZQ32m0Og",
         fieldNameToEntryId: {
-            name: 939027200,
-            emailAddress: 1489726579,
+            name: 1318235249,
+            emailAddress: 746350462,
         },
         otherEnabledFields: {},
         warning: null,
@@ -72,6 +73,13 @@ const JoinGroupForm: FC = () => (
             genericSubmissionErrorMessage="There was an error submitting the form. Please try again and if the problem persists contact the technical help as listed in the Notes section at the bottom of the page."
             doSubmit={sendToGoogleFormsApi}
         >
+            <FormInformationSection>
+                <p>
+                    Thanks for your interest. If you can give us your name and
+                    email address we will be in touch with more information
+                    about joining a group.
+                </p>
+            </FormInformationSection>
             <BasicTextField
                 name="name"
                 label="Your name"
