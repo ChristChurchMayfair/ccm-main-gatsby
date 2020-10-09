@@ -8,7 +8,6 @@ import Section from "./section"
 import { Form } from "./form/form"
 import { FormInformationSection } from "./form/fields/form-section-start"
 import BasicTextField from "./form/fields/basic-text-field"
-import CheckBoxField from "./form/fields/checkbox-field"
 
 const devevelopmentEnvironmentWarning = (
     <div>
@@ -96,24 +95,7 @@ const WelcomeForm: FC = () => (
                 autoComplete="email"
                 validation={{ required: "Provide an email address." }}
             />
-            <CheckBoxField
-                name="serviceAttended"
-                label="Which Service Did You Attend?"
-                contextualHelp={"Please select all that apply."}
-                itemsPerLine={2}
-                options={[
-                    {
-                        id: "morning",
-                        label: "10:15 AM",
-                        defaultValue: false,
-                    },
-                    {
-                        id: "evening",
-                        label: "6.00 PM",
-                        defaultValue: false,
-                    },
-                ]}
-            />
+            <BasicTextField name="morning" label="Your question" />
         </Form>
     </>
 )
