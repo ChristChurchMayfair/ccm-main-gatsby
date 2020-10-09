@@ -31,7 +31,7 @@ schedule:
     description: Live service, in person only.
   - time: 2020-10-11T18:00:00+01:00
     description: Live service, in person and online.
-    link: https://youtu.be/XAV_qVzIEls
+    link: https://youtu.be/fqKiT06DgoU
   - time: 2020-10-11T19:30:00+01:00
     description: In person only with some recorded content.
   - time: 2020-10-18T16:30:00+01:00
