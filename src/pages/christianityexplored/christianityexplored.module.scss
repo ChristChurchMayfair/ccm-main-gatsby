@@ -1,0 +1,16 @@
+.introText {
+    > h1 {
+        @media screen and (min-width: 968px) {
+            // So that the title can fit on one line
+            font-size: 3.8em;
+        }
+    }
+}
+
+.information {
+    grid-area: content;
+}
+
+.videos {
+    grid-area: content;
+}

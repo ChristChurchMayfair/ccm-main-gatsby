@@ -20,10 +20,10 @@
     }
 }
 
-.bigVideoContainer {
-    position: relative;
-    padding-bottom: 56.25%; /*16:9*/
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+.christianityOrCCMContainer {
+    grid-area: content;
+}
+
+.aboutCCM {
+    grid-area: content;
 }

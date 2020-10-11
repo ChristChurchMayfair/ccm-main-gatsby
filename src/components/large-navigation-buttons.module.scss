@@ -1,0 +1,65 @@
+.row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: var(--general-padding);
+    margin: 0;
+}
+
+.image {
+    width: 100%;
+}
+
+.navButton {
+    display: table-cell;
+    background-color: var(--dark-colour);
+    text-align: center;
+    color: var(--light-colour);
+    font-weight: 700;
+
+    &--light {
+        color: var(--dark-colour);
+        background-color: var(--mid-gray);
+
+        > div .icon {
+            fill: var(--dark-colour);
+        }
+    }
+
+    @media only screen and (max-width: 968px) {
+        display: table-row;
+    }
+
+    > div {
+        display: inline-flex;
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .icon {
+        height: 3em;
+        fill: var(--light-colour);
+        display: inline-block;
+        vertical-align: middle;
+        padding: var(--general-padding);
+        margin: auto 0;
+
+        @media only screen and (max-width: 968px) {
+            height: 2.2em;
+        }
+    }
+
+    p {
+        display: inline-block;
+        padding: var(--general-padding);
+        margin: auto;
+        flex: 1;
+        height: 100%;
+    }
+
+    &--with-image {
+        p {
+            padding: calc(var(--general-padding) / 2) var(--general-padding);
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import "../../mixins/button";
+
+.title {
+    font-size: 3em;
+
+    @media only screen and (max-width: 968px) {
+        font-size: 2.5em;
+    }
+}
+
+.whatIsChristianity {
+    grid-area: content;
+}
+
+.whatIsChristianityIntroButtonContainer {
+    .whatIsChristianityIntroButton {
+        @include button;
+
+        padding-left: var(--general-padding);
+        padding-right: var(--general-padding);
+        color: var(--dark-colour);
+        background-color: var(--light-colour);
+        display: inline-block;
+    }
+}
+
+.christianityExplored {
+    grid-area: content;
+}
