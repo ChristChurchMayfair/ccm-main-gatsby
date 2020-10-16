@@ -31,7 +31,7 @@ schedule:
     description: In person only with Sunday School 
   - time: 2020-10-18T11:00:00+01:00
     description: In person and online with Sunday School 
-    link: https://youtu.be/-f8ywiK6dOA  
+    link: https://youtu.be/HLV9LKC63zY
   - time: 2020-10-25T09:30+01:00
     description: In person only with Sunday School 
   - time: 2020-10-25T11:00+01:00
