@@ -36,7 +36,7 @@ schedule:
     description: In person only with Sunday School 
   - time: 2020-10-25T11:00+00:00
     description: In person and online with Sunday School 
-    link: https://youtu.be/1gesGPthMT4
+    link: https://youtu.be/kjj0j2GT1P8
 ---
 Normal mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
 
