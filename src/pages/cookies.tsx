@@ -30,12 +30,19 @@ const CookiesPageQuery = graphql`
             }
             html
         }
+        site {
+            siteMetadata {
+                googleAnalyticsTrackingID
+            }
+        }
     }
 `
 
 const Cookies: React.FC<{}> = () => {
     const data = useStaticQuery<GatsbyTypes.CookiesPageQuery>(CookiesPageQuery)
-    const [consentCookie, setConsentCookie] = useConsentCookie()
+    const [consentCookie, setConsentCookie] = useConsentCookie(
+        data.site?.siteMetadata?.googleAnalyticsTrackingID!
+    )
 
     return (
         <Layout
