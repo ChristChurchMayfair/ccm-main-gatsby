@@ -52,7 +52,7 @@ schedule:
     description: Live service, in person only.
   - time: 2020-11-01T18:00:00+00:00
     description: Live service, in person and online.
-    link: https://youtu.be/OghGHVJUSZY
+    link: https://youtu.be/HDjeSrqaaMo
   - time: 2020-11-01T19:30:00+00:00
     description: In person only with some recorded content.
   - time: 2020-11-08T16:30:00+00:00
