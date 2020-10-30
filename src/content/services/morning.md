@@ -41,7 +41,7 @@ schedule:
     description: An all age service in person only.
   - time: 2020-11-01T11:00:00+00:00
     description: An all age service online and in person.
-    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
+    link: https://youtu.be/mmXdYBPSQdg
   - time: 2020-11-08T09:30+00:00
     description: In person only with Sunday School 
   - time: 2020-11-08T11:00+00:00
