@@ -28,7 +28,7 @@ The PCC of Christ Church adopts the Safeguarding Policy Statement of the Church 
 
 ## Our Safeguarding Policy
 
-You can see the [Safeguarding Policy Statement here](/downloads/CCMSafeguardingPolicy.pdf).
+You can see the [Safeguarding Policy Statement here](/downloads/CCMSafeguardingPolicy2020.pdf).
 
 ## Contacts
 
