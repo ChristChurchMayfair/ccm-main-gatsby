@@ -1,0 +1,18 @@
+.covidNotice {
+    border-top-style: solid;
+    border-top-color: var(--dark-colour);
+    border-top-width: 1px;
+}
+
+.covidNoticeContent {
+    h1,
+    h2,
+    h3 {
+        font-family: "Klinic Slab";
+        text-transform: none;
+        font-weight: 400;
+        line-height: 1.3em;
+        color: red;
+    }
+    grid-area: content;
+}
