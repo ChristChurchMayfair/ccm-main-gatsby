@@ -55,35 +55,18 @@ schedule:
     link: https://youtu.be/HDjeSrqaaMo
   - time: 2020-11-01T19:30:00+00:00
     description: In person only with some recorded content.
-  - time: 2020-11-08T16:30:00+00:00
-    description: Live service, in person only.
-  - time: 2020-11-08T18:00:00+00:00
-    description: Live service, in person and online.
+  - time: 2020-11-08T18:30:00+00:00
+    description: Online only.
     link: https://youtu.be/OghGHVJUSZY
-  - time: 2020-11-08T19:30:00+00:00
-    description: In person only with some recorded content.
-  - time: 2020-11-15T16:30:00+00:00
-    description: Live service, in person only.
-  - time: 2020-11-15T18:00:00+00:00
-    description: Live service, in person and online.
+  - time: 2020-11-15T18:30:00+00:00
+    description: Online only.
     link: https://youtu.be/OghGHVJUSZY
-  - time: 2020-11-15T19:30:00+00:00
-    description: In person only with some recorded content.
-  - time: 2020-11-22T16:30:00+00:00
-    description: Live service, in person only.
-  - time: 2020-11-22T18:00:00+00:00
-    description: Live service, in person and online.
+  - time: 2020-11-22T18:30:00+00:00
+    description: Online only.
     link: https://youtu.be/OghGHVJUSZY
-  - time: 2020-11-22T19:30:00+00:00
-    description: In person only with some recorded content.
-  - time: 2020-11-29T16:30:00+00:00
-    description: Live service, in person only.
-  - time: 2020-11-29T18:00:00+00:00
-    description: Live service, in person and online.
+  - time: 2020-11-29T18:30:00+00:00
+    description: Online only.
     link: https://youtu.be/OghGHVJUSZY
-  - time: 2020-11-29T19:30:00+00:00
-    description: In person only with some recorded content.
- 
  
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.

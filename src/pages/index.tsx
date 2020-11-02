@@ -11,8 +11,8 @@ import Section from "../components/section"
 import SectionText from "../components/section-text"
 import Hero from "../components/hero"
 import LondonLivingPromo from "../components/london-living-promo"
-import PostLockDownNotice from "../components/post-lockdown-notice"
 import StudentPromo from "../components/student-promo"
+import CovidNotice from "../components/covid-notice"
 
 const IndexPageQuery = graphql`
     query Homepage {
@@ -168,7 +168,7 @@ const IndexPage = () => {
                 </a>
             </Section>
 
-            <PostLockDownNotice />
+            <CovidNotice />
 
             <StudentPromo />
 
