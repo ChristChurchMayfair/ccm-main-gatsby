@@ -13,8 +13,6 @@ Daily Bible Thought
 
 With the re-introduction of the national lockdown CCM are re-introducing our Daily Bible Thought email for anyone who'd appreciate it.
 
-You can either follow the link in the email to a video version or just read the email at your own pace.
-
 Signing Up
 -------------------
 
