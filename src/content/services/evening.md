@@ -55,16 +55,16 @@ schedule:
     link: https://youtu.be/HDjeSrqaaMo
   - time: 2020-11-01T19:30:00+00:00
     description: In person only with some recorded content.
-  - time: 2020-11-08T18:30:00+00:00
+  - time: 2020-11-08T18:00:00+00:00
     description: Online only.
     link: https://youtu.be/OghGHVJUSZY
-  - time: 2020-11-15T18:30:00+00:00
+  - time: 2020-11-15T18:00:00+00:00
     description: Online only.
     link: https://youtu.be/OghGHVJUSZY
-  - time: 2020-11-22T18:30:00+00:00
+  - time: 2020-11-22T18:00:00+00:00
     description: Online only.
     link: https://youtu.be/OghGHVJUSZY
-  - time: 2020-11-29T18:30:00+00:00
+  - time: 2020-11-29T18:00:00+00:00
     description: Online only.
     link: https://youtu.be/OghGHVJUSZY
  
