@@ -57,7 +57,7 @@ schedule:
     description: In person only with some recorded content.
   - time: 2020-11-08T18:00:00+00:00
     description: Online only.
-    link: https://youtu.be/OghGHVJUSZY
+    link: https://youtu.be/pkjO1lFLK4E
   - time: 2020-11-15T18:00:00+00:00
     description: Online only.
     link: https://youtu.be/OghGHVJUSZY
