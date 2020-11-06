@@ -44,7 +44,7 @@ schedule:
     link: https://youtu.be/mmXdYBPSQdg
   - time: 2020-11-08T10:30:00+00:00
     description: Online only.
-    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
+    link: https://youtu.be/gJZwKxDKrfA
   - time: 2020-11-15T10:30:00+00:00
     description: Online only.
     link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
