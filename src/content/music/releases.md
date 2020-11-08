@@ -1,5 +1,11 @@
 ---
 releases:
+  - title: We Will Fear The Lord
+    type: Single
+    date: 2020-04-04 09:00:00
+    coverImage: ../assets/images/coverimages/WeWillFearTheLord_CoverFINAL.jpg
+    appleMusicLink: https://music.apple.com/us/album/we-will-fear-the-lord-single/1533067547
+    spotifyLink: https://open.spotify.com/album/0PRcbbfueQhjXfKbNihAzs
   - title: Come Thou Long Expected Jesus
     type: Single
     date: 2017-12-20 09:00:00

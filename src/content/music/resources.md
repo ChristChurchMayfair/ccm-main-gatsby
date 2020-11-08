@@ -1,6 +1,10 @@
 ---
 title: Resources
 resources:
+- title: We Will Fear The Lord
+  files:
+  - name: Lead Sheet (B♭)
+    url: /music_resources/We Will Fear The Lord - Lead Sheet.pdf
 - title: Creator God
   files:
   - name: Lead Sheet (D)
