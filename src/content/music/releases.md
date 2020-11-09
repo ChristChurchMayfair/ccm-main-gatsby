@@ -1,5 +1,11 @@
 ---
 releases:
+  - title: The First Noel (Live)
+    type: Single
+    date: 2020-11-06 09:00:00
+    coverImage: ../assets/images/coverimages/First Noel artwork-05.jpg
+    appleMusicLink: https://music.apple.com/us/album/the-first-noel-live-single/1539192349
+    spotifyLink: https://open.spotify.com/album/0QyIlq5N2nsZhEexrWG958
   - title: We Will Fear The Lord
     type: Single
     date: 2020-04-04 09:00:00
@@ -11,13 +17,13 @@ releases:
     date: 2017-12-20 09:00:00
     coverImage: ../assets/images/coverimages/come_thou_long-expected_jesus-single.jpg
     appleMusicLink: https://geo.itunes.apple.com/gb/album/come-thou-long-expected-jesus-single/1324242328?mt=1&app=music
-    spotifyLink: https://open.spotify.com/album/3jrCRnUhZaCkGiLKy0B4ZB?si=HvSqZiTvQZ2VUXpykI1iGw
+    spotifyLink: https://open.spotify.com/album/3jrCRnUhZaCkGiLKy0B4ZB
   - title: Making All Things New
     type: EP
     date: 2018-04-01 09:00:00
     coverImage: ../assets/images/coverimages/making_all_things_new-ep.jpg
     appleMusicLink: https://geo.itunes.apple.com/gb/album/making-all-things-new-ep/1371800434?mt=1&app=music
-    spotifyLink: https://open.spotify.com/album/4olb3HGunyczTvNXT9ZDZt?si=y38gdEvMTp-dfDZhTIBsbQ
+    spotifyLink: https://open.spotify.com/album/4olb3HGunyczTvNXT9ZDZt
   - title: The Glory and The Crown
     type: EP
     date: 2015-01-01 09:00:00
