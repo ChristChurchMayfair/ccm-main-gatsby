@@ -60,13 +60,13 @@ schedule:
     link: https://youtu.be/pkjO1lFLK4E
   - time: 2020-11-15T18:00:00+00:00
     description: Online only.
-    link: https://youtu.be/OghGHVJUSZY
+    link: https://youtu.be/HqeroEbl0Xc
   - time: 2020-11-22T18:00:00+00:00
     description: Online only.
-    link: https://youtu.be/OghGHVJUSZY
+    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
   - time: 2020-11-29T18:00:00+00:00
     description: Online only.
-    link: https://youtu.be/OghGHVJUSZY
+    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
  
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
