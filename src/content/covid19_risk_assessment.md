@@ -463,7 +463,7 @@ Date of review/approval
 Asking for sign-ups will allow us to determine the maximum who can attend for any event:
 
 -   majority of rows of seats at 2m distance and leaving 2 empty chairs between households + seats in transept laid out with individual/pairs of seats at 2m all around means a capacity of approx. 80 
--   For weddings the maximum allowed by government guidelines is 30 including officiant but excluding verger/intern provided by church.
+-   For weddings the maximum allowed by government guidelines is 15 including officiant but excluding verger/intern provided by church.
 
 ## Appendix 2 - Safe Recording Process
 
