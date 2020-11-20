@@ -50,7 +50,7 @@ schedule:
     link: https://youtu.be/JOhbJLY8NCc
   - time: 2020-11-22T10:30:00+00:00
     description: Online only. 
-    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
+    link: https://youtu.be/6WcEB6xBBXU
   - time: 2020-11-29T10:30:00+00:00
     description: Online only.
     link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
