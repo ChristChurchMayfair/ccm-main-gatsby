@@ -53,7 +53,13 @@ schedule:
     link: https://youtu.be/6WcEB6xBBXU
   - time: 2020-11-29T10:30:00+00:00
     description: Online only.
-    link: https://www.youtube.com/channel/UC_64p-NNiMF5DXoxhHE1Cgw
+    link: https://youtu.be/IPSRNL76DPg
+  - time: 2020-12-06T09:30:00+01:00
+    description: In person only with Sunday School
+  - time: 2020-12-06T11:00:00+01:00
+    description: In person and online with Sunday School
+    link: https://youtu.be/IPSRNL76DPg
+    
 ---
 Normal mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
 
