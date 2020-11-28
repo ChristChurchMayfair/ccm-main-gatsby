@@ -13,6 +13,7 @@ import Hero from "../components/hero"
 import LondonLivingPromo from "../components/london-living-promo"
 import StudentPromo from "../components/student-promo"
 import CovidNotice from "../components/covid-notice"
+import Christmas2020 from "../components/christmas2020"
 
 const IndexPageQuery = graphql`
     query Homepage {
@@ -167,6 +168,8 @@ const IndexPage = () => {
                     Sunday Services
                 </a>
             </Section>
+
+            <Christmas2020 />
 
             <CovidNotice />
 
