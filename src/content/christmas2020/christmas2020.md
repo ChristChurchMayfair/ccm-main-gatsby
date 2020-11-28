@@ -3,13 +3,6 @@ name: Christmas
 title: Christmas at Christ Church Mayfair
 events:
 
-  - title: Fake
-    description: A contemporary take on classic Christmas carols.
-    datetime: "2020-11-28T23:30:00Z"
-    streamLink: https://youtube.com/blah
-    streamed: True
-    inPerson: True
-
   - title: Contemporary Carols
     description: A contemporary take on classic Christmas carols.
     datetime: "2020-12-13T16:30:00Z"
