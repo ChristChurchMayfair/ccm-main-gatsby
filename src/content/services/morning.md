@@ -54,9 +54,9 @@ schedule:
   - time: 2020-11-29T10:30:00+00:00
     description: Online only.
     link: https://youtu.be/IPSRNL76DPg
-  - time: 2020-12-06T09:30:00+01:00
+  - time: 2020-12-06T09:30:00+00:00
     description: In person only with Sunday School
-  - time: 2020-12-06T11:00:00+01:00
+  - time: 2020-12-06T11:00:00+00:00
     description: In person and online with Sunday School
     link: https://youtu.be/IPSRNL76DPg
     
