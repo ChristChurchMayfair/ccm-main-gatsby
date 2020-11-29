@@ -149,7 +149,7 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 30px 30px;
         grid-template-areas: "eventname eventname eventname eventtype eventtype streamlink"
-        "day date date time . streamlink";
+        "day date date time time streamlink";
         margin-bottom: calc(var(--general-padding) * 1.5);
         column-gap: 5px;
         row-gap: 0px;
