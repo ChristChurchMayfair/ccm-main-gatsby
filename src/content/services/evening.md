@@ -67,12 +67,12 @@ schedule:
   - time: 2020-11-29T18:00:00+00:00
     description: Online only.
     link: https://youtu.be/3YPInFD0SZ4
-  - time: 2020-12-06T16:30:00+01:00
+  - time: 2020-12-06T16:30:00+00:00
     description: Live service, in person only.
-  - time: 2020-12-06T18:00:00+01:00
+  - time: 2020-12-06T18:00:00+00:00
     description: Live service, in person and online.
     link: https://youtu.be/S1T85z8oqrM
-  - time: 2020-12-06T19:30:00+01:00
+  - time: 2020-12-06T19:30:00+00:00
     description: In person only with some recorded content.
  
 ---
