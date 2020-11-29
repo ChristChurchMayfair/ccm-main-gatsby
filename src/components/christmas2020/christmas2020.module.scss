@@ -132,7 +132,6 @@
     font-size: 1.3em;
 
     em {
-        // text-decoration: underline;
         font-style: normal;
         color: var(--christmas2020-highlight-color);
     }
@@ -149,7 +148,7 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 30px 30px;
         grid-template-areas: "eventname eventname eventname eventtype eventtype streamlink"
-        "day date date time time streamlink";
+        "daydatetime daydatetime daydatetime daydatetime daydatetime streamlink";
         margin-bottom: calc(var(--general-padding) * 1.5);
         column-gap: 5px;
         row-gap: 0px;
@@ -190,12 +189,20 @@
         display:none;
         grid-area: day;
         @media only screen and (max-width: 968px) {
-            display:inline-block;
+            // display:inline-block;
         }
     }
 
     .shortdate {
         grid-area: date;
+        display:none;
+        @media only screen and (max-width: 968px) {
+            // display:inline-block;
+        }
+    }
+
+    .shortdaydatetime {
+        grid-area: daydatetime;
         display:none;
         @media only screen and (max-width: 968px) {
             display:inline-block;
@@ -205,6 +212,9 @@
 
     .time {
         grid-area: time;
+        @media only screen and (max-width: 968px) {
+            display: none;
+        }
     }
 
     .eventname {
