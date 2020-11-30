@@ -173,8 +173,6 @@ const IndexPage = () => {
 
             <CovidNotice />
 
-            <StudentPromo />
-
             <Services />
 
             <LondonLivingPromo />
