@@ -70,4 +70,4 @@ events:
 ---
 Join us *in person* and online to celebrate news of *light and hope* this Christmas.
 
-Check back here for livestream links and to book guest places at in person events please [email](peter.balsdon@christchurchmayfair.org).
+Check back here for livestream links and to book guest places at in person events please [email](mailto:peter.balsdon@christchurchmayfair.org).
