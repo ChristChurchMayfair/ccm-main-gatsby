@@ -108,7 +108,10 @@ const Event: FC<Event> = ({
             <span className={styles.time}>
                 {format(datetime, "h.mma").toLowerCase()}
             </span>
-            <span className={styles.shortdaydatetime}>{format(datetime, "cccc - do LLL - ")}{format(datetime, "h.mma").toLowerCase()}</span>
+            <span className={styles.shortdaydatetime}>
+                {format(datetime, "cccc - do LLL - ")}
+                {format(datetime, "h.mma").toLowerCase()}
+            </span>
             <span className={styles.eventname}>{title}</span>
             {stream_link}
             <span className={styles.eventtype}>{service_type}</span>
