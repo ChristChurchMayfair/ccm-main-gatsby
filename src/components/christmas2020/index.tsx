@@ -49,6 +49,7 @@ const Christmas2020 = () => {
 
     return (
         <Section
+            id="christmas"
             colorScheme="custom"
             className={styles.christmas2020}
             full-bleed
