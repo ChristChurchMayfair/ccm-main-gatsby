@@ -25,6 +25,11 @@ event_groups:
       streamLink: https://youtube.com/blah
       streamed: True
       inPerson: True
+    - datetime: "2020-12-13T19:30:00Z"
+      description: Pre-recorded music with a live talk.
+      streamLink: https://youtube.com/blah
+      streamed: True
+      inPerson: True
 
   - title: Contemporary Carols
     events:
