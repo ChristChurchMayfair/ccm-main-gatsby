@@ -1,12 +1,10 @@
-import { Styles } from "*.module.scss"
 import classNames from "classnames"
 import { format, isAfter, sub, add, isWithinInterval } from "date-fns"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import React from "react"
 import { FC } from "react"
 
-type Event = {
-    title: string
+export type Event = {
     description?: string
     streamLink?: string
     datetime: Date
@@ -50,8 +48,8 @@ export const eventSortFunction: (
     return sortFunction
 }
 
-const Event: FC<Event> = ({
-    title,
+const EventListing: FC<Event> = ({
+    description,
     datetime,
     streamLink,
     streamed,
@@ -80,7 +78,7 @@ const Event: FC<Event> = ({
         )
     }
 
-    let service_type = "Online & In Person"
+    let service_type = "Online & in person"
     if (
         streamed !== undefined &&
         streamed &&
@@ -94,29 +92,20 @@ const Event: FC<Event> = ({
         streamed !== undefined &&
         !streamed
     ) {
-        service_type = "In Person only"
+        service_type = "In person only"
     }
 
     return (
         <div className={styles.event} key={format(datetime, "t")}>
-            <span className={styles.day}>{format(datetime, "cccc")}</span>
-            <span className={styles.shortday}>{format(datetime, "ccc")}</span>
-            <span className={styles.date}>{format(datetime, "do LLLL")}</span>
-            <span className={styles.shortdate}>
-                {format(datetime, "do LLL")}
+            <span className={styles.eventtime}>
+                {format(datetime, "h:mma").toLowerCase()}
             </span>
-            <span className={styles.time}>
-                {format(datetime, "h.mma").toLowerCase()}
-            </span>
-            <span className={styles.shortdaydatetime}>
-                {format(datetime, "cccc - do LLL - ")}
-                {format(datetime, "h.mma").toLowerCase()}
-            </span>
-            <span className={styles.eventname}>{title}</span>
             {stream_link}
-            <span className={styles.eventtype}>{service_type}</span>
+            <span className={styles.eventtype}>
+                {service_type}. {description}
+            </span>
         </div>
     )
 }
 
-export default Event
+export default EventListing

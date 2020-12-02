@@ -1,4 +1,3 @@
-import { Styles } from "*.module.scss"
 import React, { useState } from "react"
 import { FC } from "react"
 

@@ -1,10 +1,15 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styles from "./christmas2020.module.scss"
-import { parseISO, format } from "date-fns"
+import { parseISO } from "date-fns"
 import Section from "../section"
-import Event, { eventSortFunction, hasEventPassedFilter } from "./event"
 import PartiallyDisclosedList from "./partially-disclosed-list"
+import hash from "object-hash"
+import EventGroupListing, {
+    EventGroup,
+    eventGroupSortFunction,
+    hasEventGroupPassedFilter,
+} from "./eventgroup"
 
 const Christmas2020 = () => {
     const data = useStaticQuery<GatsbyTypes.Christmas2020Query>(graphql`
@@ -15,36 +20,54 @@ const Christmas2020 = () => {
                 html
                 frontmatter {
                     title
-                    events {
+                    event_groups {
                         title
                         description
-                        streamLink
-                        datetime
-                        streamed
-                        inPerson
+                        events {
+                            description
+                            streamLink
+                            datetime
+                            streamed
+                            inPerson
+                        }
                     }
                 }
             }
         }
     `)
+    const event_group_objects = data
+        .christmas!.frontmatter!.event_groups!.map(
+            (unstructured_event_group: any) => {
+                console.log(unstructured_event_group.title)
+                const events = unstructured_event_group.events.map(
+                    (unstructured_event: any) => {
+                        return {
+                            title: unstructured_event.title,
+                            datetime: parseISO(unstructured_event.datetime),
+                            description: unstructured_event.description,
+                            streamed: unstructured_event.streamed,
+                            inPerson: unstructured_event.inPerson,
+                            styles: styles,
+                        }
+                    }
+                )
 
-    const event_objects = data
-        .christmas!.frontmatter!.events!.map((unstructured_event: any) => {
-            return {
-                title: unstructured_event.title,
-                streamLink: unstructured_event.streamLink,
-                styles: styles,
-                datetime: parseISO(unstructured_event.datetime),
-                inPerson: unstructured_event.inPerson,
-                streamed: unstructured_event.streamed,
-                key: unstructured_event.datetime,
+                return {
+                    title: unstructured_event_group.title,
+                    description: unstructured_event_group.description,
+                    events: events,
+                    styles: styles,
+                }
             }
-        })
-        .sort(eventSortFunction(true))
-        .filter(hasEventPassedFilter(new Date(), { hours: 2 }))
+        )
+        .sort(eventGroupSortFunction(true))
+        .filter(hasEventGroupPassedFilter(new Date(), { hours: 2 }))
 
-    const events = event_objects.map((event: Event) => (
-        <Event key={format(event.datetime, "t")} {...event}></Event>
+    const event_groups = event_group_objects.map((event_group: EventGroup) => (
+        <EventGroupListing
+            key={hash(event_group)}
+            {...event_group}
+        ></EventGroupListing>
     ))
 
     return (
@@ -62,13 +85,13 @@ const Christmas2020 = () => {
                     className={styles.blurb}
                     dangerouslySetInnerHTML={{ __html: data.christmas!.html! }}
                 />
-                <div className={styles.events}>
+                <div className={styles.eventgroups}>
                     <PartiallyDisclosedList
-                        numberOfItemsToShowByDefault={5}
+                        numberOfItemsToShowByDefault={3}
                         styles={styles}
                         itemTypeName="Events"
                     >
-                        {events}
+                        {event_groups}
                     </PartiallyDisclosedList>
                 </div>
             </div>
