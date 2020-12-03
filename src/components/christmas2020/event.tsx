@@ -78,21 +78,21 @@ const EventListing: FC<Event> = ({
         )
     }
 
-    let service_type = "Online & in person"
+    let service_type = "In person & online"
     if (
         streamed !== undefined &&
         streamed &&
         inPerson != undefined &&
         !inPerson
     ) {
-        service_type = "Online only"
+        service_type = "Online"
     } else if (
         inPerson != undefined &&
         inPerson &&
         streamed !== undefined &&
         !streamed
     ) {
-        service_type = "In person only"
+        service_type = "In person"
     }
 
     return (

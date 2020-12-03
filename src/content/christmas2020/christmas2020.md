@@ -9,8 +9,7 @@ event_groups:
     - datetime: "2020-12-13T09:30:00Z"
       streamed: False
       inPerson: True
-    - title: Advent Carols
-      datetime: "2020-12-13T11:00:00Z"
+    - datetime: "2020-12-13T11:00:00Z"
       streamLink: https://youtube.com/blah
       streamed: True
       inPerson: True
@@ -22,24 +21,21 @@ event_groups:
       streamed: False
       inPerson: True
     - datetime: "2020-12-13T18:00:00Z"
-      description: A pre-recorded service with music and a talk.
+      description: This is a pre-recorded broadcast.
       streamLink: https://youtube.com/blah
       streamed: True
       inPerson: False
     - datetime: "2020-12-13T18:00:00Z"
-      description: Live music and a live talk
-      streamLink: https://youtube.com/blah
       streamed: False
       inPerson: True
     - datetime: "2020-12-13T19:30:00Z"
-      description: Pre-recorded music with a live talk.
-      streamLink: https://youtube.com/blah
+      description: Includes pre-recorded music with a live talk.
       streamed: False
       inPerson: True
 
   - title: Contemporary Carols
     events:
-    - description: Pre-recorded music with a live talk.
+    - description: Includes pre-recorded music with a live talk.
       datetime: "2020-12-16T19:30:00Z"
       streamLink: https://youtube.com/blah
       streamed: True
@@ -87,7 +83,7 @@ event_groups:
       datetime: "2020-12-25T10:30:00Z"
       streamed: False
       inPerson: True
-    - description: A pre-recorded Christmas day service
+    - description: This is a pre-recorded broadcast.
       datetime: "2020-12-25T10:30:00Z"
       streamLink: https://youtube.com/blah
       streamed: True
@@ -95,4 +91,4 @@ event_groups:
 ---
 Join us *in person* and online to celebrate news of *light and hope* this Christmas.
 
-For livestreams and broadcasts check back here for YouTube links. For in person services, since space is limited, please book guest places via [email](mailto:peter.balsdon@christchurchmayfair.org).
+For online broadcasts check back here for YouTube links. For in person services, since space is limited, please book guest places via [email](mailto:peter.balsdon@christchurchmayfair.org).
