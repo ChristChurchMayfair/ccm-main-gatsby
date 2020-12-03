@@ -34,6 +34,7 @@ event_groups:
       inPerson: True
 
   - title: Contemporary Carols
+    description: A contemporary take on classic Christmas carols.
     events:
     - description: Includes pre-recorded music with a live talk.
       datetime: "2020-12-16T19:30:00Z"
@@ -88,4 +89,4 @@ event_groups:
 ---
 Join us *in person* and online to celebrate news of *light and hope* this Christmas.
 
-For online broadcasts check back here for YouTube links. For in person services, since space is limited, please book guest places via [email](mailto:peter.balsdon@christchurchmayfair.org).
+For online broadcasts check back here for YouTube links. For in person services, since space is limited, please book places via [email](mailto:peter.balsdon@christchurchmayfair.org).
