@@ -10,7 +10,7 @@ event_groups:
       streamed: False
       inPerson: True
     - datetime: "2020-12-13T11:00:00Z"
-      streamLink: https://youtube.com/blah
+      streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
       streamed: True
       inPerson: True
   
@@ -22,7 +22,7 @@ event_groups:
       inPerson: True
     - datetime: "2020-12-13T18:00:00Z"
       description: This is a pre-recorded broadcast.
-      streamLink: https://youtube.com/blah
+      streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
       streamed: True
       inPerson: False
     - datetime: "2020-12-13T18:00:00Z"
@@ -37,7 +37,7 @@ event_groups:
     events:
     - description: Includes pre-recorded music with a live talk.
       datetime: "2020-12-16T19:30:00Z"
-      streamLink: https://youtube.com/blah
+      streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
       streamed: True
       inPerson: True
 
@@ -52,11 +52,10 @@ event_groups:
     description: Carols and a talk for listeners of all ages.
     events:
     - datetime: "2020-12-20T09:30:00Z"
-      streamLink: https://youtube.com/blah
       streamed: False
       inPerson: True
     - datetime: "2020-12-20T11:00:00Z"
-      streamLink: https://youtube.com/blah
+      streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
       streamed: True
       inPerson: True
 
@@ -64,15 +63,13 @@ event_groups:
     description: Traditional carols and Christmas talk.
     events:
     - datetime: "2020-12-20T16:30:00Z"
-      streamLink: https://youtube.com/blah
       streamed: False
       inPerson: True
     - datetime: "2020-12-20T18:00:00Z"
-      streamLink: https://youtube.com/blah
+      streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
       streamed: True
       inPerson: True
     - datetime: "2020-12-20T19:30:00Z"
-      streamLink: https://youtube.com/blah
       streamed: False
       inPerson: True
 
@@ -85,7 +82,7 @@ event_groups:
       inPerson: True
     - description: This is a pre-recorded broadcast.
       datetime: "2020-12-25T10:30:00Z"
-      streamLink: https://youtube.com/blah
+      streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
       streamed: True
       inPerson: False
 ---
