@@ -89,4 +89,5 @@ event_groups:
 ---
 Join us *in person* and online to celebrate news of *light and hope* this Christmas.
 
-For online broadcasts check back here for YouTube links. For in person services, since space is limited, please book places via [email](mailto:peter.balsdon@christchurchmayfair.org).
+For online broadcasts check back here for YouTube links. 
+For in person services, since space is limited, you will need to book. If you don't normally get our ticket information, please book places via [email](mailto:peter.balsdon@christchurchmayfair.org).
