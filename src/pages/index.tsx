@@ -15,6 +15,29 @@ import Christmas2020 from "../components/christmas2020"
 
 const IndexPageQuery = graphql`
     query Homepage {
+        site {
+            siteMetadata {
+                title
+                description
+                url
+                robots
+                email
+                officePhoneNumber
+                podcast {
+                    title
+                    url
+                }
+            }
+        }
+        xmasPromoImage: file(
+            absolutePath: { regex: "/christmas2020/invite-image.png$/" }
+        ) {
+            childImageSharp {
+                fixed(width: 1200) {
+                    src
+                }
+            }
+        }
         mainInfo: markdownRemark(
             fileAbsolutePath: { regex: "/homepage.md$/" }
         ) {
@@ -93,7 +116,28 @@ const IndexPage = () => {
     }, [carouselImages.length])
 
     return (
-        <Layout title={undefined} headerColour="light">
+        <Layout
+            title={undefined}
+            headerColour="light"
+            // Delete this after Christmas
+            openGraphData={{
+                title: data.site!.siteMetadata!.title!,
+                type: "website",
+                siteName: data.site!.siteMetadata!.title!,
+                url: data.site!.siteMetadata!.url!,
+                description: data.site!.siteMetadata!.description!,
+                images: [
+                    {
+                        imageUrl: data.xmasPromoImage!.childImageSharp!.fixed!
+                            .src,
+                        imageAlternativeText:
+                            "Christmas at Christ Church Mayfair",
+                    },
+                ],
+                email: data.site!.siteMetadata!.email!,
+                phoneNumber: data.site!.siteMetadata!.officePhoneNumber!,
+            }}
+        >
             <Hero
                 sectionId="home-hero"
                 overlayCaption={data.mainInfo!.frontmatter!.overlayCaption}
