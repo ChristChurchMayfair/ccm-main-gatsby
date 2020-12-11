@@ -10,7 +10,7 @@ event_groups:
       streamed: False
       inPerson: True
     - datetime: "2020-12-13T11:00:00Z"
-      streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
+      streamLink: https://youtu.be/p66JXIccFOg
       streamed: True
       inPerson: True
   
@@ -22,7 +22,7 @@ event_groups:
       inPerson: True
     - datetime: "2020-12-13T18:00:00Z"
       description: This is a pre-recorded broadcast.
-      streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
+      streamLink: https://youtu.be/CnT_9PpWx1Y
       streamed: True
       inPerson: False
     - datetime: "2020-12-13T18:00:00Z"
