@@ -39,7 +39,7 @@ event_groups:
     - description: Includes pre-recorded music with a live talk.
       datetime: "2020-12-16T19:30:00Z"
       streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
-      streamed: True
+      streamed: False
       inPerson: True
 
   - title: Traditional Carols
