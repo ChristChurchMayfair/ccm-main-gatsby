@@ -22,7 +22,7 @@ event_groups:
       inPerson: True
     - datetime: "2020-12-13T18:00:00Z"
       description: This is a pre-recorded broadcast.
-      streamLink: https://youtu.be/CnT_9PpWx1Y
+      streamLink: https://youtu.be/1RmUK8CD01Y
       streamed: True
       inPerson: False
     - datetime: "2020-12-13T18:00:00Z"

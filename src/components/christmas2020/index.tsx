@@ -47,6 +47,7 @@ const Christmas2020 = () => {
                             description: unstructured_event.description,
                             streamed: unstructured_event.streamed,
                             inPerson: unstructured_event.inPerson,
+                            streamLink: unstructured_event.streamLink,
                             styles: styles,
                         }
                     }
