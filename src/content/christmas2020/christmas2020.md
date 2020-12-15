@@ -38,7 +38,6 @@ event_groups:
     events:
     - description: Includes pre-recorded music with a live talk.
       datetime: "2020-12-16T19:30:00Z"
-      streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
       streamed: False
       inPerson: True
 
