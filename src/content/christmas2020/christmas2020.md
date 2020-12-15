@@ -42,7 +42,7 @@ event_groups:
       streamed: False
       inPerson: True
 
-  - title: Traditional Carols
+  - title: Carols by Candlelight
     description: Choir, candles and atmosphere aplenty.
     events:
     - datetime: "2020-12-17T19:30:00Z"
@@ -60,8 +60,8 @@ event_groups:
       streamed: True
       inPerson: True
 
-  - title: Traditional Carols
-    description: Traditional carols and Christmas talk.
+  - title: Carols by Candlelight
+    description: Choir, candles and atmosphere aplenty.
     events:
     - datetime: "2020-12-20T16:30:00Z"
       streamed: False
