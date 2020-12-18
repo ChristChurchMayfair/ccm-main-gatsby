@@ -55,7 +55,7 @@ event_groups:
       streamed: False
       inPerson: True
     - datetime: "2020-12-20T11:00:00Z"
-      streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
+      streamLink: https://youtu.be/Pot87xeLIqg
       streamed: True
       inPerson: True
 
@@ -66,7 +66,7 @@ event_groups:
       streamed: False
       inPerson: True
     - datetime: "2020-12-20T18:00:00Z"
-      streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
+      streamLink: https://youtu.be/MDgKh8bBH4c
       streamed: True
       inPerson: True
     - datetime: "2020-12-20T19:30:00Z"
