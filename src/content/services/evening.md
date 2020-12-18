@@ -74,7 +74,24 @@ schedule:
     link: https://youtu.be/4cDWlr123gE
   - time: 2020-12-06T19:30:00+00:00
     description: In person only with some recorded content.
- 
+  - time: 2020-12-20T16:30:00+00:00
+    description: In person only
+  - time: 2020-12-20T18:00:00+00:00
+    description: In person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2020-12-20T19:30:00+00:00
+    description: In person only
+  - time: 2020-12-27T18:00:00+00:00
+    description: In person only
+  - time: 2020-12-27T18:00:00+00:00
+    description: Broadcast service
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    
+  - time: 2021-01-03T16:30:00+00:00
+    description: In person only
+  - time: 2021-01-03T18:00:00+00:00
+    description: In person and online
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
