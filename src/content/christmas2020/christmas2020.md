@@ -54,6 +54,7 @@ event_groups:
     - datetime: "2020-12-20T09:30:00Z"
       streamed: False
       inPerson: True
+      cancelled: True
     - datetime: "2020-12-20T11:00:00Z"
       streamLink: https://youtu.be/Pot87xeLIqg
       streamed: True
@@ -72,6 +73,7 @@ event_groups:
     - datetime: "2020-12-20T19:30:00Z"
       streamed: False
       inPerson: True
+      cancelled: True
 
   - title: Christmas Day
     description: Christmas Day services for all the family.
@@ -90,3 +92,5 @@ Join us *in person* and online to celebrate news of *light and hope* this Christ
 
 For online broadcasts check back here for YouTube links. 
 For in person services, since space is limited, you will need to book. If you don't normally get our ticket information, please book places via [email](mailto:peter.balsdon@christchurchmayfair.org).
+
+*Note: Please check below for recent cancellations in the light of London's Tier 4 status.*

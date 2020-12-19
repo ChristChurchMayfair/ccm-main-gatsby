@@ -29,6 +29,7 @@ const Christmas2020 = () => {
                             datetime
                             streamed
                             inPerson
+                            cancelled
                         }
                     }
                 }
@@ -38,7 +39,6 @@ const Christmas2020 = () => {
     const event_group_objects = data
         .christmas!.frontmatter!.event_groups!.map(
             (unstructured_event_group: any) => {
-                console.log(unstructured_event_group.title)
                 const events = unstructured_event_group.events.map(
                     (unstructured_event: any) => {
                         return {
@@ -48,6 +48,7 @@ const Christmas2020 = () => {
                             streamed: unstructured_event.streamed,
                             inPerson: unstructured_event.inPerson,
                             streamLink: unstructured_event.streamLink,
+                            cancelled: unstructured_event.cancelled,
                             styles: styles,
                         }
                     }

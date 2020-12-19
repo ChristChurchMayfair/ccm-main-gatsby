@@ -5,6 +5,7 @@
     --christmas2020-light-color: #6092a0;
     --christmas2020-highlight-color: #a3bcc3;
     --christmas2020-highlight-2-color: #d5ad82;
+    --cancelled-color: rgb(146, 44, 44);
 }
 
 .christmas2020 {
@@ -200,6 +201,10 @@
         grid-area: eventtype;
         font-size: 0.8em;
         line-height: 2em;
+
+        &.cancelled {
+            color: var(--cancelled-color);
+        }
     }
 
     .eventtime {

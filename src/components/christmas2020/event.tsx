@@ -10,6 +10,7 @@ export type Event = {
     datetime: Date
     streamed?: boolean
     inPerson?: boolean
+    cancelled?: boolean
     styles: any
     ordinal?: number
 }
@@ -54,6 +55,7 @@ const EventListing: FC<Event> = ({
     streamLink,
     streamed,
     inPerson,
+    cancelled,
     styles,
 }) => {
     let stream_link = <span className={styles.streamlink}></span>
@@ -65,7 +67,12 @@ const EventListing: FC<Event> = ({
         event_starts_soon = true
     }
 
-    if (streamed !== undefined && streamed && event_starts_soon) {
+    if (
+        streamed !== undefined &&
+        streamed &&
+        event_starts_soon &&
+        cancelled !== true
+    ) {
         stream_link = (
             <OutboundLink
                 className={classNames(styles.streamlink, {
@@ -79,20 +86,24 @@ const EventListing: FC<Event> = ({
     }
 
     let service_type = "In person & online"
-    if (
-        streamed !== undefined &&
-        streamed &&
-        inPerson != undefined &&
-        !inPerson
-    ) {
-        service_type = "Online"
-    } else if (
-        inPerson != undefined &&
-        inPerson &&
-        streamed !== undefined &&
-        !streamed
-    ) {
-        service_type = "In person"
+    if (cancelled == null || !cancelled) {
+        if (
+            streamed !== undefined &&
+            streamed &&
+            inPerson != undefined &&
+            !inPerson
+        ) {
+            service_type = "Online"
+        } else if (
+            inPerson != undefined &&
+            inPerson &&
+            streamed !== undefined &&
+            !streamed
+        ) {
+            service_type = "In person"
+        }
+    } else {
+        service_type = "CANCELLED"
     }
 
     return (
@@ -101,7 +112,11 @@ const EventListing: FC<Event> = ({
                 {format(datetime, "h:mma").toLowerCase()}
             </span>
             {stream_link}
-            <span className={styles.eventtype}>
+            <span
+                className={classNames(styles.eventtype, {
+                    [styles.cancelled]: cancelled,
+                })}
+            >
                 {service_type}. {description}
             </span>
         </div>

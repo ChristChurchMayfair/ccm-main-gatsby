@@ -61,7 +61,7 @@ schedule:
     link: https://youtu.be/lx053zgRSCU
 
   - time: 2020-12-20T09:30:00+00:00
-    description: In person only
+    description: CANCELLED
   - time: 2020-12-20T11:00:00+00:00
     description: In person and online
     link: https://youtu.be/Pot87xeLIqg

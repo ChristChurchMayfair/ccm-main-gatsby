@@ -80,7 +80,8 @@ schedule:
     description: In person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
   - time: 2020-12-20T19:30:00+00:00
-    description: In person only
+    description: CANCELLED
+
   - time: 2020-12-27T18:00:00+00:00
     description: In person only
   - time: 2020-12-27T18:00:00+00:00
