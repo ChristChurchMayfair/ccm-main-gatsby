@@ -84,9 +84,6 @@ schedule:
 
   - time: 2020-12-27T18:00:00+00:00
     description: In person only
-  - time: 2020-12-27T18:00:00+00:00
-    description: Broadcast service
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
     
   - time: 2021-01-03T16:30:00+00:00
     description: In person only
