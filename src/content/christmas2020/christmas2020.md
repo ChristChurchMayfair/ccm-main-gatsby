@@ -78,8 +78,8 @@ event_groups:
   - title: Christmas Day
     description: Christmas Day services for all the family.
     events:
-    - description: An informal service in the church.
-      datetime: "2020-12-25T10:30:00Z"
+    - description: All-age Christmas Day celebration
+      datetime: "2020-12-25T10:00:00Z"
       streamed: False
       inPerson: True
     - description: This is a pre-recorded broadcast.
@@ -87,6 +87,10 @@ event_groups:
       streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
       streamed: True
       inPerson: False
+    - description: Christmas Day service (no Sunday School)
+      datetime: "2020-12-25T11:15:00Z"
+      streamed: False
+      inPerson: True
 ---
 Join us *in person* and online to celebrate news of *light and hope* this Christmas.
 
