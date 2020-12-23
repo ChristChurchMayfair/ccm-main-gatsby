@@ -84,6 +84,7 @@ schedule:
 
   - time: 2020-12-27T18:00:00+00:00
     description: In person only
+    link: https://www.youtube.com/watch?v=c3HET5DKI74
     
   - time: 2021-01-03T16:30:00+00:00
     description: In person only
