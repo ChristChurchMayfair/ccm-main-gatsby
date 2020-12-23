@@ -67,7 +67,7 @@ schedule:
     link: https://youtu.be/Pot87xeLIqg
 
   - time: 2020-12-27T10:30:00+00:00
-    description: In person only (no Sunday School)
+    description: In person and online (no Sunday School)
     link: https://www.youtube.com/watch?v=JL2ParhXzpw
 
   - time: 2021-01-03T10:30:00+00:00
