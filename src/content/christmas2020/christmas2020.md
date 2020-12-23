@@ -84,7 +84,7 @@ event_groups:
       inPerson: True
     - description: This is a pre-recorded broadcast.
       datetime: "2020-12-25T10:30:00Z"
-      streamLink: https://www.youtube.com/c/ChristChurchMayfairLive
+      streamLink: https://www.youtube.com/watch?v=e_0_g5WdhII
       streamed: True
       inPerson: False
     - description: Christmas Day service (no Sunday School)
