@@ -24,10 +24,6 @@ const useConsentCookie = (
     const disableGoogleAnalyticsKey = `ga-disable-${googleAnalyticsTrackingID}`
 
     useEffect(() => {
-        //Disable the tracking by default
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        ;(window as any)[disableGoogleAnalyticsKey] = true
-
         const cookie: ConsentCookieValue = Cookies.get(
             COOKIE_CONSENT_KEY
         ) as ConsentCookieValue

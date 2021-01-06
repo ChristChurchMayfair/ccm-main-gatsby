@@ -140,6 +140,7 @@ export const plugins: GatsbyConfig["plugins"] = [
           // The property ID; the tracking code won't be generated without it
           trackingId: siteMetadata.googleAnalyticsTrackingID,
           respectDNT: true,
+          head: true,
         },
       },
     // this (optional) plugin enables Progressive Web App + Offline functionality
