@@ -17,6 +17,10 @@ type CheckBoxFieldProps = CommonField &
     ReactHookFormWiring & {
         options: CheckBoxOption[]
         itemsPerLine?: number
+        allowOther?: boolean
+        otherOptionName?: string
+        otherInputIdSuffix?: string
+        otherInputLabel?: string
     }
 
 const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
@@ -30,11 +34,27 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
     watch,
     showWhen,
     itemsPerLine,
+    allowOther,
+    otherOptionName,
+    otherInputIdSuffix,
+    otherInputLabel,
 }) => {
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
     if (shouldDisplayThisField === false) {
         return null
+    }
+
+    const OtherOptionIdAndValue = name + "Other"
+    let optionsToRender: CheckBoxOption[] = []
+    optionsToRender = optionsToRender.concat(options)
+
+    if (allowOther === true) {
+        optionsToRender.push({
+            id: OtherOptionIdAndValue,
+            label: otherOptionName ?? "Other",
+            defaultValue: false,
+        })
     }
 
     let checkboxButtonClasses: string[] = []
@@ -47,7 +67,7 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
         checkboxButtonClasses = [formStyles.smallCheckboxOption]
     }
 
-    const inputDivs = options.map(option => {
+    const inputDivs = optionsToRender.map(option => {
         return (
             <div key={option.id}>
                 <input
@@ -70,15 +90,46 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
         )
     })
 
-    return (
+    const showOtherInput: boolean =
+        allowOther === true && watch(OtherOptionIdAndValue) === true
+
+    const otherInputIdAndName = name + (otherInputIdSuffix ?? "OtherInput")
+
+    const otherInput = showOtherInput ? (
         <Field
-            key={name}
-            labelText={label}
-            contextualHelp={prependRequired(validation, contextualHelp)}
-            error={errors[name]?.message}
+            labelText={otherInputLabel}
+            labelFor={otherInputIdAndName}
+            contextualHelp="Required."
+            error={errors[otherInputIdAndName]?.message}
         >
-            <div className={choiceStyles}>{inputDivs}</div>
+            <input
+                type="text"
+                className={formStyles.formItemInput}
+                placeholder={otherInputLabel}
+                name={otherInputIdAndName}
+                id={otherInputIdAndName}
+                ref={register({
+                    required:
+                        "When 'Other' is selected you must enter your own value",
+                })}
+            />
         </Field>
+    ) : (
+        <></>
+    )
+
+    return (
+        <>
+            <Field
+                key={name}
+                labelText={label}
+                contextualHelp={prependRequired(validation, contextualHelp)}
+                error={errors[name]?.message}
+            >
+                <div className={choiceStyles}>{inputDivs}</div>
+            </Field>
+            {otherInput}
+        </>
     )
 }
 
