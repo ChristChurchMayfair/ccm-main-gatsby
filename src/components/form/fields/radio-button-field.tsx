@@ -9,10 +9,15 @@ import { shouldShowField } from "../conditional-visibility"
 type RadioOption = {
     id: string
     name: string
+    checked?: boolean
 }
 
 type Radio = {
     options: RadioOption[]
+    allowOther?: boolean
+    otherOptionName?: string
+    otherInputIdSuffix?: string
+    otherInputLabel?: string
 }
 
 type RadioButtonFieldProps = Radio & CommonField & ReactHookFormWiring
@@ -27,6 +32,10 @@ const RadioButtonField: React.FC<RadioButtonFieldProps> = ({
     watch,
     showWhen,
     validation,
+    allowOther,
+    otherOptionName,
+    otherInputIdSuffix,
+    otherInputLabel,
 }) => {
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
@@ -34,7 +43,18 @@ const RadioButtonField: React.FC<RadioButtonFieldProps> = ({
         return null
     }
 
-    const inputDivs = options.map(option => {
+    const OtherOptionIdAndValue = "other" + name
+    let optionsToRender: RadioOption[] = []
+    optionsToRender = optionsToRender.concat(options)
+
+    if (allowOther === true) {
+        optionsToRender.push({
+            id: OtherOptionIdAndValue,
+            name: otherOptionName ?? "Other",
+        })
+    }
+
+    const inputDivs = optionsToRender.map(option => {
         return (
             <div key={option.id}>
                 <input
@@ -45,6 +65,7 @@ const RadioButtonField: React.FC<RadioButtonFieldProps> = ({
                     ref={register({
                         required: true,
                     })}
+                    defaultChecked={option.checked ?? false}
                 />
                 <label
                     htmlFor={option.id}
@@ -59,17 +80,48 @@ const RadioButtonField: React.FC<RadioButtonFieldProps> = ({
         )
     })
 
-    return (
+    const showOtherInput =
+        allowOther === true && watch(name) === otherOptionName
+
+    const otherInputIdAndName = name + (otherInputIdSuffix ?? "Other")
+
+    const otherInput = showOtherInput ? (
         <Field
-            key={name}
-            labelText={label}
-            contextualHelp={prependRequired(validation, contextualHelp)}
-            error={errors[name]?.message}
+            labelText={otherInputLabel}
+            labelFor={otherInputIdAndName}
+            contextualHelp="Required."
+            error={errors[otherInputIdAndName]?.message}
         >
-            <div className={formStyles.formItemMultipleChoiceChoices}>
-                {inputDivs}
-            </div>
+            <input
+                type="text"
+                className={formStyles.formItemInput}
+                placeholder={otherInputLabel}
+                name={otherInputIdAndName}
+                id={otherInputIdAndName}
+                ref={register({
+                    required:
+                        "When 'Other' is selected you must enter your own value",
+                })}
+            />
         </Field>
+    ) : (
+        <></>
+    )
+
+    return (
+        <>
+            <Field
+                key={name}
+                labelText={label}
+                contextualHelp={prependRequired(validation, contextualHelp)}
+                error={errors[name]?.message}
+            >
+                <div className={formStyles.formItemMultipleChoiceChoices}>
+                    {inputDivs}
+                </div>
+            </Field>
+            {otherInput}
+        </>
     )
 }
 

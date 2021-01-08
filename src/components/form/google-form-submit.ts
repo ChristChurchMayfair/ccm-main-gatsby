@@ -8,7 +8,7 @@ export type IndexableFormData = Record<
 >
 
 type OtherFieldConfig = {
-    otherValue: string
+    otherValue: any
     otherField: string
 }
 
@@ -36,7 +36,6 @@ export function convertFormDateToGoogleFormUrl<
             let value = formData[fieldName]
             const param =
                 "entry." + config.fieldNameToEntryId[fieldName].toString()
-
             // If this field is configured to allow someone to select "Other"
             if (config.otherEnabledFields[fieldName] !== undefined) {
                 const otherConfig = config.otherEnabledFields[fieldName]
@@ -57,7 +56,6 @@ export function convertFormDateToGoogleFormUrl<
             }
             return { ...acc, [param]: stringValue }
         }, {} as Record<string, string | null>)
-
     options["submit"] = "SUBMIT"
 
     const baseUrl = "https://docs.google.com/forms/d/e/"
