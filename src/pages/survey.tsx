@@ -332,8 +332,8 @@ const SurveyPage: React.FC = () => {
                     contextualHelp={"Select one."}
                     options={[
                         { id: "inPerson", name: "In Person" },
-                        { id: "liveStreamed", name: "Watched Live Stream" },
-                        { id: "catchUp", name: "Watched Afterwards" },
+                        { id: "liveStreamed", name: "Online - Live" },
+                        { id: "catchUp", name: "Online - Afterwards" },
                     ]}
                 />
                 <RadioButtonField
@@ -383,7 +383,7 @@ const SurveyPage: React.FC = () => {
                     options={[
                         {
                             id: "foundItOnTheInternet",
-                            name: "Found it on the internet",
+                            name: "Found via the internet",
                         },
                         {
                             id: "recommendedByAFriend",
