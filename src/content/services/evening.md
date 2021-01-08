@@ -92,16 +92,16 @@ schedule:
     description: In person and online.
     link: https://youtu.be/qmRBDtlEZ7c
   - time: 2021-01-10T18:00:00+00:00
-    description: In person and online.
+    description: Online only.
     link: https://youtu.be/fAlHzb5ip5Y
   - time: 2021-01-17T18:00:00+00:00
-    description: In person and online.
+    description: Online only.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
   - time: 2021-01-24T18:00:00+00:00
-    description: In person and online.
+    description: Online only.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
   - time: 2021-01-31T18:00:00+00:00
-    description: In person and online.
+    description: Online only.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
     
 ---
