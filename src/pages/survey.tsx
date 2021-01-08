@@ -388,7 +388,7 @@ const SurveyPage: React.FC = () => {
                     options={[
                         {
                             id: "foundItOnTheInternet",
-                            name: "Found it on the internet",
+                            name: "Found via the internet",
                         },
                         {
                             id: "recommendedByAFriend",
