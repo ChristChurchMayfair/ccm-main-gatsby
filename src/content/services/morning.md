@@ -80,7 +80,7 @@ schedule:
     
   - time: 2021-01-17T10:30:00+00:00
     description: Online only.
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    link: https://youtu.be/zUVKtFiy2-E
     
   - time: 2021-01-24T10:30:00+00:00
     description: Online only.
