@@ -99,7 +99,7 @@ schedule:
     link: https://youtu.be/sAOjh2EmIoc
   - time: 2021-01-24T18:00:00+00:00
     description: Online only.
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    link: https://youtu.be/lTeGCvZNhQA
   - time: 2021-01-31T18:00:00+00:00
     description: Online only.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
