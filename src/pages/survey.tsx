@@ -243,6 +243,7 @@ const SurveyPage: React.FC = () => {
                     name="ageBracket"
                     label="Indicate your age bracket"
                     contextualHelp={"Select one."}
+                    validation={{required: "This is a required field"}}
                     options={[
                         { id: "underTwelve", name: "Under 12" },
                         { id: "twelveToSeventeen", name: "12 to 17" },
@@ -266,6 +267,7 @@ const SurveyPage: React.FC = () => {
                     name="areYouAStudent"
                     label="Are you a student?"
                     contextualHelp={"Select one."}
+                    validation={{required: "This is a required field"}}
                     options={[
                         { id: "student", name: "Student" },
                         {
@@ -279,6 +281,7 @@ const SurveyPage: React.FC = () => {
                     name="gender"
                     label="Gender"
                     contextualHelp={"Select one."}
+                    validation={{required: "This is a required field"}}
                     options={[
                         { id: "male", name: "Male" },
                         { id: "female", name: "Female" },
@@ -292,6 +295,7 @@ const SurveyPage: React.FC = () => {
                     name="yourFirstLanguage"
                     label="Please tell us your first language"
                     contextualHelp={"Select one."}
+                    validation={{required: "This is a required field"}}
                     options={[
                         { id: "english", name: "English", checked: true },
                     ]}
@@ -303,6 +307,7 @@ const SurveyPage: React.FC = () => {
                     name="yourLocation"
                     label="Please tell us where you live"
                     contextualHelp={"City and/or Country."}
+                    validation={{required: "This is a required field"}}
                     options={[
                         {
                             id: "london",
@@ -325,6 +330,7 @@ const SurveyPage: React.FC = () => {
                     name="serviceAttended"
                     label="Which service time are you attending now?"
                     contextualHelp={"Select one."}
+                    validation={{required: "This is a required field"}}
                     options={[
                         { id: "morning", name: "Morning (AM)" },
                         { id: "evening", name: "Evening (PM)" },
@@ -345,6 +351,7 @@ const SurveyPage: React.FC = () => {
                     name="alsoWatchedMorningService"
                     label="Did you also attend this morning's service?"
                     contextualHelp={"Select one."}
+                    validation={{required: "This is a required field"}}
                     options={[
                         { id: "yesInPerson", name: "Yes - In Person" },
                         { id: "yesLiveStreamed", name: "Yes - Live Streamed" },
@@ -356,6 +363,7 @@ const SurveyPage: React.FC = () => {
                     name="regularOrVisitor"
                     label="Are you a regular attender or just visiting?"
                     contextualHelp={"Select one."}
+                    validation={{required: "This is a required field"}}
                     options={[
                         { id: "regular", name: "Regular" },
                         { id: "visitor", name: "Visitor" },
@@ -365,6 +373,7 @@ const SurveyPage: React.FC = () => {
                     name="howLongHaveYouBeenAttending"
                     label="How long have you been attending Christ Church Mayfair?"
                     contextualHelp={"Select one."}
+                    validation={{required: "This is a required field"}}
                     showWhen={showRegularAttenderQuestions}
                     options={[
                         { id: "lessThanAYear", name: "Less than a year" },
@@ -382,6 +391,7 @@ const SurveyPage: React.FC = () => {
                     name="howDidYouFindThisService"
                     label="How did you discover Christ Church Mayfair?"
                     contextualHelp={"Optional."}
+                    validation={{required: "This is a required field"}}
                     allowOther={true}
                     otherInputLabel="Another Way"
                     otherOptionName="Another Way"
@@ -410,6 +420,7 @@ const SurveyPage: React.FC = () => {
                     contextualHelp={
                         "Select one. DG includes DG central, Student DG, DG Daytime, DG@Home"
                     }
+                    validation={{required: "This is a required field"}}
                     options={[
                         {
                             id: "dg",
