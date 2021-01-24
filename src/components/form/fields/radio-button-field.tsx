@@ -62,9 +62,7 @@ const RadioButtonField: React.FC<RadioButtonFieldProps> = ({
                     id={option.id}
                     value={option.name}
                     name={name}
-                    ref={register({
-                        required: true,
-                    })}
+                    ref={register(validation)}
                     defaultChecked={option.checked ?? false}
                 />
                 <label
