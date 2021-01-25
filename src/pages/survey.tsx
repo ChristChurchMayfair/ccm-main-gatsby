@@ -240,16 +240,29 @@ const SurveyPage: React.FC = () => {
                     <h2>Information About You</h2>
                 </FormInformationSection>
                 <RadioButtonField
-                    name="ageBracket"
-                    label="Indicate your age bracket"
+                    name="regularOrVisitor"
+                    label="Are you a regular member of Christ Church Mayfair or just visiting today?"
                     contextualHelp={"Select one."}
                     validation={{ required: "This is a required field" }}
                     options={[
-                        { id: "underTwelve", name: "Under 12" },
-                        { id: "twelveToSeventeen", name: "12 to 17" },
+                        { id: "regular", name: "Regular" },
+                        { id: "visitor", name: "Visitor" },
+                    ]}
+                />
+                <RadioButtonField
+                    name="ageBracket"
+                    label="Please indicate your age bracket"
+                    contextualHelp={"Select one."}
+                    validation={{ required: "This is a required field" }}
+                    showWhen={showRegularAttenderQuestions}
+                    options={[
                         {
-                            id: "eighteenToThirty",
-                            name: "18 to 30",
+                            id: "eighteenToThirtyStudent",
+                            name: "18 to 30 - Student",
+                        },
+                        {
+                            id: "eighteenToThirtyNonStudent",
+                            name: "18 to 30 - Non-Student",
                         },
                         {
                             id: "thirtyOneToFourty",
@@ -260,10 +273,10 @@ const SurveyPage: React.FC = () => {
                             name: "41 to 55",
                         },
                         { id: "fiftySixAndOlder", name: "56 and over" },
-                        { id: "preferNotToSayAge", name: "Prefer not to say" },
+                        {/*{ id: "preferNotToSayAge", name: "Prefer not to say" },*/}
                     ]}
                 />
-                <RadioButtonField
+                {/*<RadioButtonField
                     name="areYouAStudent"
                     label="Are you a student?"
                     contextualHelp={"Select one."}
@@ -276,10 +289,10 @@ const SurveyPage: React.FC = () => {
                             checked: true,
                         },
                     ]}
-                />
+                />*/}
                 <RadioButtonField
                     name="gender"
-                    label="Gender"
+                    label="Please indicate your gender"
                     contextualHelp={"Select one."}
                     validation={{ required: "This is a required field" }}
                     options={[
@@ -305,7 +318,7 @@ const SurveyPage: React.FC = () => {
                 />
                 <RadioButtonField
                     name="yourLocation"
-                    label="Please tell us where you live"
+                    label="Please tell us where you're watching from today"
                     contextualHelp={"City and/or Country."}
                     validation={{ required: "This is a required field" }}
                     options={[
@@ -328,12 +341,12 @@ const SurveyPage: React.FC = () => {
                 </FormInformationSection>
                 <RadioButtonField
                     name="serviceAttended"
-                    label="Which service time are you attending now?"
+                    label="Which service have you just attended?"
                     contextualHelp={"Select one."}
                     validation={{ required: "This is a required field" }}
                     options={[
-                        { id: "morning", name: "Morning (AM)" },
-                        { id: "evening", name: "Evening (PM)" },
+                        { id: "morning", name: "Morning (10.30 AM)" },
+                        { id: "evening", name: "Evening (6.00 PM)" },
                     ]}
                 />
                 <RadioButtonField
@@ -349,25 +362,15 @@ const SurveyPage: React.FC = () => {
                 />
                 <RadioButtonField
                     name="alsoWatchedMorningService"
-                    label="Did you also attend this morning's service?"
+                    label="Did you also attend the 10.30 am service at CCM?"
                     contextualHelp={"Select one."}
                     validation={{ required: "This is a required field" }}
                     options={[
                         { id: "yesInPerson", name: "Yes - In Person" },
-                        { id: "yesLiveStreamed", name: "Yes - Live Streamed" },
+                        { id: "yesLiveStreamed", name: "Yes - Online" },
                         { id: "no", name: "No" },
                     ]}
                     showWhen={showQuestionsForEveningService}
-                />
-                <RadioButtonField
-                    name="regularOrVisitor"
-                    label="Are you a regular attender or just visiting?"
-                    contextualHelp={"Select one."}
-                    validation={{ required: "This is a required field" }}
-                    options={[
-                        { id: "regular", name: "Regular" },
-                        { id: "visitor", name: "Visitor" },
-                    ]}
                 />
                 <RadioButtonField
                     name="howLongHaveYouBeenAttending"
@@ -412,9 +415,13 @@ const SurveyPage: React.FC = () => {
                             id: "recommendedByMyCU",
                             name: "CU Recommendation",
                         },
+                        {
+                            id: "HereFromTheStart",
+                            name: "Here From The Start!",
+                        },
                     ]}
                 />
-                <CheckBoxField
+                {/* <CheckBoxField
                     name="otherCCMEvents"
                     label="Have you attended other CCM events in the past week?"
                     contextualHelp={
@@ -441,7 +448,7 @@ const SurveyPage: React.FC = () => {
                     allowOther={true}
                     otherInputLabel="Event Name"
                     otherOptionName="Other CCM Event"
-                />
+                /> */}
             </Form>
             {surveyFormState !== "submitted" ? (
                 <Section id="notes" colorScheme="light">
