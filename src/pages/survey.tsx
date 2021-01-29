@@ -197,9 +197,9 @@ const SurveyPage: React.FC = () => {
     const showQuestionsForEveningService: ValueEqual = {
         type: "valueEqualTo",
         otherFieldName: "serviceAttended",
-        hasValueEqualTo: "Evening (PM)",
+        hasValueEqualTo: "Evening (6.00 PM)",
     }
-
+    
     const showOldTimerMessage: ValueEqual = {
         type: "valueEqualTo",
         otherFieldName: "howLongHaveYouBeenAttending",
@@ -240,6 +240,11 @@ const SurveyPage: React.FC = () => {
                 doSubmit={sendToGoogleFormsApi}
                 stateChangeCallback={setSurveyFormState}
             >
+                <FormInformationSection>
+                <p>Please complete this form if you are aged 18+ and attended one of our services today either in person or online. It should take you only a minute or two. For under 18s, please could a parent answer the questions below on their behalf.</p>
+                <p>Please fill in one form for each person watching, and for each service you attend.</p>
+                <p>This survey is anonymous, please do not share any personal information which could be used to identify you.</p>
+                </FormInformationSection>
                 <FormInformationSection>
                     <h2>Information About You</h2>
                 </FormInformationSection>
@@ -323,26 +328,6 @@ const SurveyPage: React.FC = () => {
                     otherInputLabel="Language"
                     otherOptionName="Other Language"
                 />
-                <RadioButtonField
-                    name="yourLocation"
-                    label="Please tell us where you're watching from today"
-                    contextualHelp={"City and/or Country."}
-                    validation={{ required: "This is a required field" }}
-                    options={[
-                        {
-                            id: "london",
-                            name: "London, United Kingdom",
-                            checked: true,
-                        },
-                        {
-                            id: "ratherNotSay",
-                            name: "I'd rather not say",
-                        },
-                    ]}
-                    allowOther={true}
-                    otherInputLabel="Location"
-                    otherOptionName="Other city/region"
-                />
                 <FormInformationSection>
                     <h2>Your Attendance Today</h2>
                 </FormInformationSection>
@@ -368,6 +353,26 @@ const SurveyPage: React.FC = () => {
                     ]}
                 />
                 <RadioButtonField
+                    name="yourLocation"
+                    label="Please tell us where you're watching from today"
+                    contextualHelp={"City and/or Region."}
+                    validation={{ required: "This is a required field" }}
+                    options={[
+                        {
+                            id: "london",
+                            name: "London",
+                            checked: true,
+                        },
+                        {
+                            id: "ratherNotSay",
+                            name: "I'd rather not say",
+                        },
+                    ]}
+                    allowOther={true}
+                    otherInputLabel="LocationLabel"
+                    otherOptionName="Other City/Region"
+                />
+                <RadioButtonField
                     name="alsoWatchedMorningService"
                     label="Did you also attend the 10.30 am service at CCM?"
                     contextualHelp={"Select one."}
@@ -390,7 +395,8 @@ const SurveyPage: React.FC = () => {
                         { id: "oneToThreeYears", name: "1 to 3 years" },
                         { id: "fourToSixYears", name: "4 to 6 years" },
                         { id: "sevenToNineYears", name: "7 to 9 years" },
-                        { id: "tenToNineteen", name: "10 to 19 years" },
+                        { id: "tenToFourteen", name: "10 to 14 years" },
+                        { id: "fifteenToNineteen", name: "15 to 19 years" },
                         { id: "twentyYearsOrMore", name: "20 years or more" },
                     ]}
                 />
