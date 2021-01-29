@@ -241,9 +241,9 @@ const SurveyPage: React.FC = () => {
                 stateChangeCallback={setSurveyFormState}
             >
                 <FormInformationSection>
-                <p>Please complete this form if you are aged 18+ and attended one of our services today either in person or online. It should take you only a minute or two. For under 18s, please could a parent answer the questions below on their behalf.</p>
-                <p>Please fill in one form for each person watching, and for each service you attend.</p>
-                <p>This survey is anonymous, please do not share any personal information which could be used to identify you.</p>
+                    <p>Please complete this form if you are aged 18+ and attended one of our services today either in person or online. It should take you only a minute or two. For under 18s, please could a parent answer the questions below on their behalf.</p>
+                    <p>Please fill in one form for each person watching, and for each service you attend.</p>
+                    <p>This survey is anonymous, please do not share any personal information which could be used to identify you.</p>
                 </FormInformationSection>
                 <FormInformationSection>
                     <h2>Information About You</h2>
@@ -369,7 +369,7 @@ const SurveyPage: React.FC = () => {
                         },
                     ]}
                     allowOther={true}
-                    otherInputLabel="LocationLabel"
+                    otherInputLabel="Location"
                     otherOptionName="Other City/Region"
                 />
                 <RadioButtonField
