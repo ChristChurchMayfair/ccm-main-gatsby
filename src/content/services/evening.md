@@ -102,7 +102,7 @@ schedule:
     link: https://youtu.be/lTeGCvZNhQA
   - time: 2021-01-31T18:00:00+00:00
     description: Online only.
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    link: https://youtu.be/OLqQWd-rM0g
     
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
