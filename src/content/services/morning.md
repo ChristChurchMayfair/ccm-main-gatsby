@@ -88,7 +88,7 @@ schedule:
     
   - time: 2021-01-31T10:30:00+00:00
     description: Online only.
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    link: https://youtu.be/Ko2ZBBw1uWo
     
 ---
 Normal mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
