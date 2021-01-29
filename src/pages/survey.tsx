@@ -121,6 +121,10 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
             otherCCMEventsOther: 537688540,
         },
         otherEnabledFields: {
+            gender: {
+                otherValue: "Other",
+                otherField: "genderOther",
+            },
             yourLocation: {
                 otherValue: "Other Location",
                 otherField: "yourLocationOther",
@@ -303,6 +307,9 @@ const SurveyPage: React.FC = () => {
                             name: "Prefer not to say",
                         },
                     ]}
+                    allowOther={true}
+                    otherInputLabel="Other"
+                    otherOptionName="Other"
                 />
                 <RadioButtonField
                     name="yourFirstLanguage"
@@ -334,7 +341,7 @@ const SurveyPage: React.FC = () => {
                     ]}
                     allowOther={true}
                     otherInputLabel="Location"
-                    otherOptionName="Other Location"
+                    otherOptionName="Other city/region"
                 />
                 <FormInformationSection>
                     <h2>Your Attendance Today</h2>
