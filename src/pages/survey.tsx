@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import { Form, FormState } from "../components/form/form"
 import { FormInformationSection } from "../components/form/fields/form-section-start"
 import RadioButtonField from "../components/form/fields/radio-button-field"
-import CheckBoxField from "../components/form/fields/checkbox-field"
 import {
     convertFormDateToGoogleFormUrl,
     GoogleFormConfig as GoogleFormSubmissionConfig,
@@ -14,6 +13,8 @@ import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
 import { ValueEqual } from "../components/form/conditional-visibility"
 import SectionText from "../components/section-text"
+import BasicTextField from "../components/form/fields/basic-text-field"
+import NumberField from "../components/form/fields/number-field"
 
 const devevelopmentEnvironmentWarning = (
     <div>
@@ -121,6 +122,10 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
             otherCCMEventsOther: 537688540,
         },
         otherEnabledFields: {
+            gender: {
+                otherValue: "Other",
+                otherField: "genderOther",
+            },
             yourLocation: {
                 otherValue: "Other Location",
                 otherField: "yourLocationOther",
@@ -193,7 +198,7 @@ const SurveyPage: React.FC = () => {
     const showQuestionsForEveningService: ValueEqual = {
         type: "valueEqualTo",
         otherFieldName: "serviceAttended",
-        hasValueEqualTo: "Evening (PM)",
+        hasValueEqualTo: "Evening (6.00 pm)",
     }
 
     const showOldTimerMessage: ValueEqual = {
@@ -240,16 +245,29 @@ const SurveyPage: React.FC = () => {
                     <h2>Information About You</h2>
                 </FormInformationSection>
                 <RadioButtonField
-                    name="ageBracket"
-                    label="Indicate your age bracket"
+                    name="regularOrVisitor"
+                    label="Are you a regular member of Christ Church Mayfair or just visiting today?"
                     contextualHelp={"Select one."}
                     validation={{ required: "This is a required field" }}
                     options={[
-                        { id: "underTwelve", name: "Under 12" },
-                        { id: "twelveToSeventeen", name: "12 to 17" },
+                        { id: "regular", name: "Regular" },
+                        { id: "visitor", name: "Visitor" },
+                    ]}
+                />
+                <RadioButtonField
+                    name="ageBracket"
+                    label="Please indicate your age bracket"
+                    contextualHelp={"Select one."}
+                    validation={{ required: "This is a required field" }}
+                    showWhen={showRegularAttenderQuestions}
+                    options={[
                         {
-                            id: "eighteenToThirty",
-                            name: "18 to 30",
+                            id: "eighteenToThirtyStudent",
+                            name: "18 to 30 - Student",
+                        },
+                        {
+                            id: "eighteenToThirtyNonStudent",
+                            name: "18 to 30 - Non-Student",
                         },
                         {
                             id: "thirtyOneToFourty",
@@ -260,26 +278,11 @@ const SurveyPage: React.FC = () => {
                             name: "41 to 55",
                         },
                         { id: "fiftySixAndOlder", name: "56 and over" },
-                        { id: "preferNotToSayAge", name: "Prefer not to say" },
-                    ]}
-                />
-                <RadioButtonField
-                    name="areYouAStudent"
-                    label="Are you a student?"
-                    contextualHelp={"Select one."}
-                    validation={{ required: "This is a required field" }}
-                    options={[
-                        { id: "student", name: "Student" },
-                        {
-                            id: "notAStudent",
-                            name: "Non-Student",
-                            checked: true,
-                        },
                     ]}
                 />
                 <RadioButtonField
                     name="gender"
-                    label="Gender"
+                    label="Please indicate your gender"
                     contextualHelp={"Select one."}
                     validation={{ required: "This is a required field" }}
                     options={[
@@ -290,7 +293,18 @@ const SurveyPage: React.FC = () => {
                             name: "Prefer not to say",
                         },
                     ]}
+                    allowOther={true}
+                    otherInputLabel="Other"
+                    otherOptionName="Other"
                 />
+                <BasicTextField
+                    name="childrensAges"
+                    label="If you have children under 18, please write the ages of those who would normally attend church"
+                    contextualHelp={
+                        "Please only one parent or guardian fill this in. Comma separated ages."
+                    }
+                    placeholder={"3, 7, 14"}
+                ></BasicTextField>
                 <RadioButtonField
                     name="yourFirstLanguage"
                     label="Please tell us your first language"
@@ -303,37 +317,17 @@ const SurveyPage: React.FC = () => {
                     otherInputLabel="Language"
                     otherOptionName="Other Language"
                 />
-                <RadioButtonField
-                    name="yourLocation"
-                    label="Please tell us where you live"
-                    contextualHelp={"City and/or Country."}
-                    validation={{ required: "This is a required field" }}
-                    options={[
-                        {
-                            id: "london",
-                            name: "London, United Kingdom",
-                            checked: true,
-                        },
-                        {
-                            id: "ratherNotSay",
-                            name: "I'd rather not say",
-                        },
-                    ]}
-                    allowOther={true}
-                    otherInputLabel="Location"
-                    otherOptionName="Other Location"
-                />
                 <FormInformationSection>
                     <h2>Your Attendance Today</h2>
                 </FormInformationSection>
                 <RadioButtonField
                     name="serviceAttended"
-                    label="Which service time are you attending now?"
+                    label="Which service have you just attended?"
                     contextualHelp={"Select one."}
                     validation={{ required: "This is a required field" }}
                     options={[
-                        { id: "morning", name: "Morning (AM)" },
-                        { id: "evening", name: "Evening (PM)" },
+                        { id: "morning", name: "Morning (10.30 am)" },
+                        { id: "evening", name: "Evening (6.00 pm)" },
                     ]}
                 />
                 <RadioButtonField
@@ -348,26 +342,43 @@ const SurveyPage: React.FC = () => {
                     ]}
                 />
                 <RadioButtonField
+                    name="yourLocation"
+                    label="Please tell us where you're watching from today"
+                    contextualHelp={"City and/or Region."}
+                    validation={{ required: "This is a required field" }}
+                    options={[
+                        {
+                            id: "london",
+                            name: "London",
+                            checked: true,
+                        },
+                        {
+                            id: "ratherNotSay",
+                            name: "I'd rather not say",
+                        },
+                    ]}
+                    allowOther={true}
+                    otherInputLabel="Location"
+                    otherOptionName="Other City/Region"
+                />
+                <NumberField
+                    name="groupSize"
+                    label="How many adults in your household watched the service together today?"
+                    contextualHelp={"Select one."}
+                    validation={{ required: "This is a required field" }}
+                    min={1}
+                />
+                <RadioButtonField
                     name="alsoWatchedMorningService"
-                    label="Did you also attend this morning's service?"
+                    label="Did you also attend the 10.30 am service at CCM?"
                     contextualHelp={"Select one."}
                     validation={{ required: "This is a required field" }}
                     options={[
                         { id: "yesInPerson", name: "Yes - In Person" },
-                        { id: "yesLiveStreamed", name: "Yes - Live Streamed" },
+                        { id: "yesLiveStreamed", name: "Yes - Online" },
                         { id: "no", name: "No" },
                     ]}
                     showWhen={showQuestionsForEveningService}
-                />
-                <RadioButtonField
-                    name="regularOrVisitor"
-                    label="Are you a regular attender or just visiting?"
-                    contextualHelp={"Select one."}
-                    validation={{ required: "This is a required field" }}
-                    options={[
-                        { id: "regular", name: "Regular" },
-                        { id: "visitor", name: "Visitor" },
-                    ]}
                 />
                 <RadioButtonField
                     name="howLongHaveYouBeenAttending"
@@ -380,7 +391,8 @@ const SurveyPage: React.FC = () => {
                         { id: "oneToThreeYears", name: "1 to 3 years" },
                         { id: "fourToSixYears", name: "4 to 6 years" },
                         { id: "sevenToNineYears", name: "7 to 9 years" },
-                        { id: "tenToNineteen", name: "10 to 19 years" },
+                        { id: "tenToFourteen", name: "10 to 14 years" },
+                        { id: "fifteenToNineteen", name: "15 to 19 years" },
                         { id: "twentyYearsOrMore", name: "20 years or more" },
                     ]}
                 />
@@ -412,35 +424,11 @@ const SurveyPage: React.FC = () => {
                             id: "recommendedByMyCU",
                             name: "CU Recommendation",
                         },
-                    ]}
-                />
-                <CheckBoxField
-                    name="otherCCMEvents"
-                    label="Have you attended other CCM events in the past week?"
-                    contextualHelp={
-                        "Select one. DG includes DG central, Student DG, DG Daytime, DG@Home"
-                    }
-                    validation={{ required: "This is a required field" }}
-                    options={[
                         {
-                            id: "dg",
-                            label: "DG (Discipleship Group)",
-                            defaultValue: false,
-                        },
-                        {
-                            id: "PTS",
-                            label: "PTS (Prepared To Serve)",
-                            defaultValue: false,
-                        },
-                        {
-                            id: "honestQuestions",
-                            label: "Honest Questions",
-                            defaultValue: false,
+                            id: "HereFromTheStart",
+                            name: "Here From The Start!",
                         },
                     ]}
-                    allowOther={true}
-                    otherInputLabel="Event Name"
-                    otherOptionName="Other CCM Event"
                 />
             </Form>
             {surveyFormState !== "submitted" ? (

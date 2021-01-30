@@ -89,6 +89,7 @@ select, .dateInput {
 }
 
 .form input[type="text"],
+.form input[type="number"],
 .form input[type="email"],
 .form input[type="date"],
 .form input[type="radio"] + label,
@@ -109,6 +110,18 @@ select {
     -webkit-appearance: none;
     border-radius: 0px;
 }
+
+// /* Chrome, Safari, Edge, Opera */
+// .form input::-webkit-outer-spin-button,
+// .form input::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+// /* Firefox */
+// .form input[type=number] {
+//   -moz-appearance: textfield;
+// }
 
 .form input[type="menulist-button"] {
     border: 1px solid var(--mid-gray);
