@@ -9,7 +9,11 @@ interface BasicPageProps {
 }
 
 const BasicPage: React.FC<BasicPageProps> = ({ data }) => (
-    <Layout title={data.mainInfo!.frontmatter!.title} headerColour="dark" robotsMetaData={data.mainInfo!.frontmatter!.robotsMetaData}>
+    <Layout
+        title={data.mainInfo!.frontmatter!.title}
+        headerColour="dark"
+        robotsMetaData={data.mainInfo!.frontmatter!.robotsMetaData}
+    >
         <BasicText html={data.mainInfo!.html} />
     </Layout>
 )

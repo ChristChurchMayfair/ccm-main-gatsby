@@ -5,7 +5,6 @@ export const siteMetadata: GatsbyConfig["siteMetadata"] = {
     url: "https://christchurchmayfair.org",
     description:
         "We are a dynamic Central London church family committed to making disciples for Jesus Christ.",
-    robots: "index,follow",
     robotsMetaData: {
         allowFollowLinksOnThisPage: true,
         allowIndexing: true,

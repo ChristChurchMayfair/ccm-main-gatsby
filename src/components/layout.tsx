@@ -30,7 +30,7 @@ const Layout: React.FC<Props> = ({
     title,
     description,
     openGraphData,
-    robotsMetaData
+    robotsMetaData,
 }) => {
     return (
         <>

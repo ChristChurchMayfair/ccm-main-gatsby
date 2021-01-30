@@ -16,7 +16,12 @@ interface HeadProps {
     openGraphData?: OpenGraphMetaData
     robotsMetaData?: RobotsMetaData
 }
-const Head: React.FC<HeadProps> = ({ title, description, openGraphData, robotsMetaData}) => {
+const Head: React.FC<HeadProps> = ({
+    title,
+    description,
+    openGraphData,
+    robotsMetaData,
+}) => {
     const { site } = useStaticQuery<GatsbyTypes.HeadQuery>(
         graphql`
             query Head {
@@ -48,7 +53,7 @@ const Head: React.FC<HeadProps> = ({ title, description, openGraphData, robotsMe
     const metadata = site!.siteMetadata!
     const metaDescription = description ?? metadata.description!
 
-    const defaultRobotsMetaData: RobotsMetaData = metadata.robotsMetaData
+    const defaultRobotsMetaData: RobotsMetaData = metadata.robotsMetaData!
 
     const defaultOpenGraphData: OpenGraphMetaData = {
         title: title ?? metadata.title ?? "Missing Title",
@@ -70,7 +75,9 @@ const Head: React.FC<HeadProps> = ({ title, description, openGraphData, robotsMe
         openGraphData ?? defaultOpenGraphData
     )
 
-    const robotsMetaTag = generateRobotsMetaTag(robotsMetaData ?? defaultRobotsMetaData)
+    const robotsMetaTag = generateRobotsMetaTag(
+        robotsMetaData ?? defaultRobotsMetaData
+    )
 
     let helmetMeta: MetaTag[] = [
         // Basic HTML tags, SEO

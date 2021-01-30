@@ -39,7 +39,7 @@ test("returns robots meta tag with following permitted", () => {
 
 test("returns robots meta tag with indexing permitted", () => {
     const inputRobotsMetaData: RobotsMetaData = {
-        allowIndexing: true
+        allowIndexing: true,
     }
 
     const metaTag = generateRobotsMetaTag(inputRobotsMetaData)
@@ -52,7 +52,7 @@ test("returns robots meta tag with indexing permitted", () => {
 
 test("returns robots meta tag with image indexing permitted", () => {
     const inputRobotsMetaData: RobotsMetaData = {
-        allowImageIndexing: true
+        allowImageIndexing: true,
     }
 
     const metaTag = generateRobotsMetaTag(inputRobotsMetaData)
@@ -65,7 +65,7 @@ test("returns robots meta tag with image indexing permitted", () => {
 
 test("returns robots meta tag with snippeting permitted", () => {
     const inputRobotsMetaData: RobotsMetaData = {
-        allowPageSnippets: true
+        allowPageSnippets: true,
     }
 
     const metaTag = generateRobotsMetaTag(inputRobotsMetaData)
@@ -82,7 +82,7 @@ test("returns robots meta tag with all permitted", () => {
         allowImageIndexing: true,
         allowIndexing: true,
         allowCaching: true,
-        allowFollowLinksOnThisPage: true
+        allowFollowLinksOnThisPage: true,
     }
 
     const metaTag = generateRobotsMetaTag(inputRobotsMetaData)

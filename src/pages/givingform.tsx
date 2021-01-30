@@ -186,7 +186,11 @@ const GivingFormPage: React.FC = () => {
     }
 
     return (
-        <Layout title="Giving Form" headerColour={"dark"} robotsMetaData={HiddenPageRobotsMetaData}>
+        <Layout
+            title="Giving Form"
+            headerColour={"dark"}
+            robotsMetaData={HiddenPageRobotsMetaData}
+        >
             <HeaderUnderlay colorScheme="light" />
             <Section
                 intro
