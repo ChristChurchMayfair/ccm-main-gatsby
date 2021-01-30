@@ -6,6 +6,13 @@ export const siteMetadata: GatsbyConfig["siteMetadata"] = {
     description:
         "We are a dynamic Central London church family committed to making disciples for Jesus Christ.",
     robots: "index,follow",
+    robotsMetaData: {
+        allowFollowLinksOnThisPage: true,
+        allowIndexing: true,
+        allowImageIndexing: true,
+        allowCaching: true,
+        allowPageSnippets: true,
+    },
 
     googleAnalyticsTrackingID: "UA-39016872-2",
 
@@ -133,7 +140,6 @@ export const plugins: GatsbyConfig["plugins"] = [
         },
     },
     "gatsby-plugin-catch-links",
-
     {
         resolve: `gatsby-plugin-google-analytics`,
         options: {
