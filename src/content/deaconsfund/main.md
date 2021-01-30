@@ -4,6 +4,12 @@ path: /deaconsfund
 showInFooter: false
 headerColour: dark
 template: basic
+robotsMetaData:
+    allowFollowLinksOnThisPage: false
+    allowIndexing: false
+    allowCaching: false
+    allowPageSnippets: false
+    allowImageIndexing: false
 ---
 The Deacon’s Fund exists to care for financial needs of members of the church family experiencing hardship.
 
