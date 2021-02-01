@@ -19,7 +19,6 @@ const IndexPageQuery = graphql`
                 title
                 description
                 url
-                robots
                 email
                 officePhoneNumber
                 podcast {

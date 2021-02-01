@@ -9,7 +9,11 @@ interface BasicPageProps {
 }
 
 const BasicPage: React.FC<BasicPageProps> = ({ data }) => (
-    <Layout title={data.mainInfo!.frontmatter!.title} headerColour="dark">
+    <Layout
+        title={data.mainInfo!.frontmatter!.title}
+        headerColour="dark"
+        robotsMetaData={data.mainInfo!.frontmatter!.robotsMetaData}
+    >
         <BasicText html={data.mainInfo!.html} />
     </Layout>
 )
@@ -20,6 +24,13 @@ export const query = graphql`
             html
             frontmatter {
                 title
+                robotsMetaData {
+                    allowFollowLinksOnThisPage
+                    allowIndexing
+                    allowImageIndexing
+                    allowCaching
+                    allowPageSnippets
+                }
             }
         }
     }
