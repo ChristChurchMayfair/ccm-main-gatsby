@@ -44,6 +44,20 @@ const devevelopmentEnvironmentWarning = (
 //&entry.127480616=attended+HG
 //&entry.537688540=Extra+event
 
+//https://docs.google.com/forms/d/e/1FAIpQLSfn5BMopACCRB6uyq1tt4ToasAEW-4kTO8-JTxIWjKS-TIqOw/viewform?usp=pp_url
+//&entry.550250439=Age
+//&entry.604740151=Gender
+//&entry.1139405390=Location
+//&entry.763676208=Language
+//&entry.2011835526=Service+attended
+//&entry.910814374=attendance+mode
+//&entry.1010576021=morning+also
+//&entry.1138595067=regular
+//&entry.644735760=time+at+CCM
+//&entry.876585463=discovery
+//&entry.761026779=adult+count
+//&entry.993331213=ages+of+children
+
 //https://docs.google.com/forms/d/e/1FAIpQLSdxYowdnoXoos2GTvDbHgvdDPEDGN8hJiV5eXhZNZ-fmnYikw/viewform?usp=pp_url
 //&entry.550250439=Age+Bracket
 //&entry.604740151=Gender
@@ -79,7 +93,8 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
             regularOrVisitor: 1138595067,
             howLongHaveYouBeenAttending: 644735760,
             howDidYouFindThisService: 876585463,
-            otherCCMEventsOther: 537688540,
+            groupSize: 761026779,
+            childrensAges: 993331213,
         },
         otherEnabledFields: {
             yourLocation: {
@@ -94,15 +109,11 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
                 otherValue: "Other Language",
                 otherField: "yourFirstLanguageOther",
             },
-            otherCCMEventsOther: {
-                otherValue: true,
-                otherField: "otherCCMEventsOtherInput",
-            },
         },
         warning: devevelopmentEnvironmentWarning,
     },
     production: {
-        formId: "1FAIpQLSdxYowdnoXoos2GTvDbHgvdDPEDGN8hJiV5eXhZNZ-fmnYikw",
+        formId: "1FAIpQLSe4TWN-Ni5yjMAZ5qNFSSbhV1AGOH8hPxAqnJE_fN-586vr4A",
         fieldNameToEntryId: {
             ageBracket: 550250439,
             gender: 604740151,
@@ -118,7 +129,8 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
             regularOrVisitor: 1138595067,
             howLongHaveYouBeenAttending: 644735760,
             howDidYouFindThisService: 876585463,
-            otherCCMEventsOther: 537688540,
+            groupSize: 761026779,
+            childrensAges: 993331213,
         },
         otherEnabledFields: {
             gender: {
@@ -136,10 +148,6 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
             yourFirstLanguage: {
                 otherValue: "Other Language",
                 otherField: "yourFirstLanguageOther",
-            },
-            otherCCMEventsOther: {
-                otherValue: true,
-                otherField: "otherCCMEventsOtherInput",
             },
         },
         warning: null,
