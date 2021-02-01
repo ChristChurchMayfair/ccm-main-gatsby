@@ -12,7 +12,7 @@ import {
 import { useStaticQuery, graphql } from "gatsby"
 import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
-import { ValueEqual } from "../components/form/conditional-visibility"
+import { ValueEqual, ValueIn } from "../components/form/conditional-visibility"
 import SectionText from "../components/section-text"
 
 const devevelopmentEnvironmentWarning = (
@@ -206,6 +206,12 @@ const SurveyPage: React.FC = () => {
         hasValueEqualTo: "20 years or more",
     }
 
+    const watchingOnline: ValueIn = {
+        type: "valueInList",
+        otherFieldName: "liveOrCatchUp",
+        values: ["Online - Live", "Online - Afterwards"],
+    }
+
     return (
         <Layout title="2021 Congregational Survey" headerColour={"dark"}>
             <HeaderUnderlay colorScheme="light" />
@@ -268,7 +274,6 @@ const SurveyPage: React.FC = () => {
                     name="ageBracket"
                     label="Please indicate your age bracket"
                     contextualHelp={"Select one."}
-                    validation={{ required: "This is a required field" }}
                     showWhen={showRegularAttenderQuestions}
                     options={[
                         {
@@ -309,7 +314,6 @@ const SurveyPage: React.FC = () => {
                     name="gender"
                     label="Please indicate your gender"
                     contextualHelp={"Select one."}
-                    validation={{ required: "This is a required field" }}
                     options={[
                         { id: "male", name: "Male" },
                         { id: "female", name: "Female" },
@@ -326,7 +330,6 @@ const SurveyPage: React.FC = () => {
                     name="yourFirstLanguage"
                     label="Please tell us your first language"
                     contextualHelp={"Select one."}
-                    validation={{ required: "This is a required field" }}
                     options={[
                         { id: "english", name: "English", checked: true },
                     ]}
@@ -362,12 +365,10 @@ const SurveyPage: React.FC = () => {
                     name="yourLocation"
                     label="Please tell us where you're watching from today"
                     contextualHelp={"City and/or Region."}
-                    validation={{ required: "This is a required field" }}
                     options={[
                         {
                             id: "london",
                             name: "London",
-                            checked: true,
                         },
                         {
                             id: "ratherNotSay",
@@ -377,12 +378,12 @@ const SurveyPage: React.FC = () => {
                     allowOther={true}
                     otherInputLabel="Location"
                     otherOptionName="Other City/Region"
+                    showWhen={watchingOnline}
                 />
                 <RadioButtonField
                     name="alsoWatchedMorningService"
                     label="Did you also attend the 10.30 am service at CCM?"
                     contextualHelp={"Select one."}
-                    validation={{ required: "This is a required field" }}
                     options={[
                         { id: "yesInPerson", name: "Yes - In Person" },
                         { id: "yesLiveStreamed", name: "Yes - Online" },
@@ -394,7 +395,6 @@ const SurveyPage: React.FC = () => {
                     name="howLongHaveYouBeenAttending"
                     label="How long have you been attending Christ Church Mayfair?"
                     contextualHelp={"Select one."}
-                    validation={{ required: "This is a required field" }}
                     showWhen={showRegularAttenderQuestions}
                     options={[
                         { id: "lessThanAYear", name: "Less than a year" },
@@ -413,7 +413,6 @@ const SurveyPage: React.FC = () => {
                     name="howDidYouFindThisService"
                     label="How did you discover Christ Church Mayfair?"
                     contextualHelp={"Optional."}
-                    validation={{ required: "This is a required field" }}
                     allowOther={true}
                     otherInputLabel="Another Way"
                     otherOptionName="Another Way"

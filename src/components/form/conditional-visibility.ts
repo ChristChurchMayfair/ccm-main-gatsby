@@ -12,7 +12,22 @@ export type ValueIn = {
     values: any[]
 }
 
-export type VisibilityCondition = ValueEqual | ValueIn | undefined
+export type AnyTrue = {
+    type: "anyTrue"
+    conditions: VisibilityCondition[]
+}
+
+export type AllTrue = {
+    type: "allTrue"
+    conditions: VisibilityCondition[]
+}
+
+export type VisibilityCondition =
+    | ValueEqual
+    | ValueIn
+    | AnyTrue
+    | AllTrue
+    | undefined
 
 export function shouldShowField(
     showWhen: VisibilityCondition,
@@ -29,6 +44,22 @@ export function shouldShowField(
         }
         case "valueInList": {
             return showWhen.values.includes(watch(showWhen.otherFieldName))
+        }
+        case "anyTrue": {
+            for (const condition of showWhen.conditions) {
+                if (shouldShowField(condition, watch)) {
+                    return true
+                }
+            }
+            return false
+        }
+        case "allTrue": {
+            for (const condition of showWhen.conditions) {
+                if (!shouldShowField(condition, watch)) {
+                    return false
+                }
+            }
+            return true
         }
     }
 }
