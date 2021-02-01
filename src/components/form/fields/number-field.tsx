@@ -28,7 +28,7 @@ const NumberField: React.FC<NumberFieldProps> = ({
     watch,
     max,
     min,
-    step
+    step,
 }) => {
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
