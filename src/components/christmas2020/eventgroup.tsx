@@ -67,8 +67,6 @@ const EventGroupListing: FC<EventGroup> = ({
         .sort(eventSortFunction(true))
         .filter(hasEventPassedFilter(new Date(), { hours: 2 }))
 
-    console.log(event_objects)
-
     const events_items = event_objects.map((event: Event) => (
         <EventListing
             key={format(event.datetime, "t")}
