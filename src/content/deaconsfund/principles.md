@@ -4,6 +4,12 @@ showInFooter: false
 headerColour: dark
 path: /deaconsfund/principles
 template: basic
+robotsMetaData:
+    allowFollowLinksOnThisPage: false
+    allowIndexing: false
+    allowCaching: false
+    allowPageSnippets: false
+    allowImageIndexing: false
 ---
 
 *The CCM Deacons Fund was set up to care for the immediate needs of church family members. Here, in a paper from 2014 (but still timely!), vicar Matt Fuller sets out the theology behind the fund, and some principles that the Deacons aim to apply in our work.*

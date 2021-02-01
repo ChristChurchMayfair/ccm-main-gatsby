@@ -8,13 +8,20 @@ import {
     generateOpenGraphMetaTags,
     MetaTag,
 } from "./open-graph"
+import { generateRobotsMetaTag, RobotsMetaData } from "./robots"
 
 interface HeadProps {
     title: string | undefined
     description: string | undefined
     openGraphData?: OpenGraphMetaData
+    robotsMetaData?: RobotsMetaData
 }
-const Head: React.FC<HeadProps> = ({ title, description, openGraphData }) => {
+const Head: React.FC<HeadProps> = ({
+    title,
+    description,
+    openGraphData,
+    robotsMetaData,
+}) => {
     const { site } = useStaticQuery<GatsbyTypes.HeadQuery>(
         graphql`
             query Head {
@@ -23,7 +30,13 @@ const Head: React.FC<HeadProps> = ({ title, description, openGraphData }) => {
                         title
                         description
                         url
-                        robots
+                        robotsMetaData {
+                            allowFollowLinksOnThisPage
+                            allowIndexing
+                            allowImageIndexing
+                            allowCaching
+                            allowPageSnippets
+                        }
                         email
                         officePhoneNumber
                         podcast {
@@ -38,6 +51,8 @@ const Head: React.FC<HeadProps> = ({ title, description, openGraphData }) => {
 
     const metadata = site!.siteMetadata!
     const metaDescription = description ?? metadata.description!
+
+    const defaultRobotsMetaData: RobotsMetaData = metadata.robotsMetaData!
 
     const defaultOpenGraphData: OpenGraphMetaData = {
         title: title ?? metadata.title ?? "Missing Title",
@@ -59,11 +74,15 @@ const Head: React.FC<HeadProps> = ({ title, description, openGraphData }) => {
         openGraphData ?? defaultOpenGraphData
     )
 
+    const robotsMetaTag = generateRobotsMetaTag(
+        robotsMetaData ?? defaultRobotsMetaData
+    )
+
     let helmetMeta: MetaTag[] = [
         // Basic HTML tags, SEO
         { name: `description`, content: metaDescription },
         { name: `url`, content: metadata.url! },
-        { name: `robots`, content: metadata.robots! },
+        robotsMetaTag,
 
         // Theme colour
         { name: `theme-color`, content: `#ffffff` },

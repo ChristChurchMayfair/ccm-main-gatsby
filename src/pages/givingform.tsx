@@ -18,6 +18,7 @@ import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
 import { ValueIn, ValueEqual } from "../components/form/conditional-visibility"
 import SectionText from "../components/section-text"
+import { HiddenPageRobotsMetaData } from "../components/robots"
 
 const devevelopmentEnvironmentWarning = (
     <div>
@@ -185,7 +186,11 @@ const GivingFormPage: React.FC = () => {
     }
 
     return (
-        <Layout title="Giving Form" headerColour={"dark"}>
+        <Layout
+            title="Giving Form"
+            headerColour={"dark"}
+            robotsMetaData={HiddenPageRobotsMetaData}
+        >
             <HeaderUnderlay colorScheme="light" />
             <Section
                 intro

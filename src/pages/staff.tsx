@@ -44,7 +44,6 @@ const Staff = () => {
         "Ellie Page",
         "James Kight",
         "Liz Hayden",
-        "Sarah Farrar-Bell",
     ]
 
     const staffMembers = sortedWithPriority(

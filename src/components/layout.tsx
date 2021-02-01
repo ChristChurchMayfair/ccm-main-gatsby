@@ -14,6 +14,7 @@ import CookieNotice from "./cookie-notice"
 import "../assets/css/global.scss"
 import "../assets/css/style.css"
 import { OpenGraphMetaData } from "./open-graph"
+import { RobotsMetaData } from "./robots"
 
 interface Props {
     children: React.ReactNode
@@ -21,6 +22,7 @@ interface Props {
     description?: string | undefined
     openGraphData?: OpenGraphMetaData
     headerColour?: HeaderColour
+    robotsMetaData?: RobotsMetaData
 }
 const Layout: React.FC<Props> = ({
     headerColour,
@@ -28,6 +30,7 @@ const Layout: React.FC<Props> = ({
     title,
     description,
     openGraphData,
+    robotsMetaData,
 }) => {
     return (
         <>
@@ -35,6 +38,7 @@ const Layout: React.FC<Props> = ({
                 title={title}
                 description={description}
                 openGraphData={openGraphData}
+                robotsMetaData={robotsMetaData}
             />
             <Header headerColour={headerColour} />
             <main>{children}</main>
