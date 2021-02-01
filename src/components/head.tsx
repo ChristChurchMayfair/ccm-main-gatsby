@@ -30,7 +30,6 @@ const Head: React.FC<HeadProps> = ({
                         title
                         description
                         url
-                        robots
                         robotsMetaData {
                             allowFollowLinksOnThisPage
                             allowIndexing

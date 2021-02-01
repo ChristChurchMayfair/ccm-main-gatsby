@@ -29,7 +29,6 @@ const LondonLivingPage: React.FC<{}> = () => {
                     title
                     description
                     url
-                    robots
                     email
                     officePhoneNumber
                     podcast {
