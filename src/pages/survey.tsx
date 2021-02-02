@@ -388,6 +388,14 @@ const SurveyPage: React.FC = () => {
                     otherOptionName="Other City/Region"
                     showWhen={watchingOnline}
                 />
+                <NumberField
+                    name="groupSize"
+                    label="How many adults in your household watched the service together today?"
+                    contextualHelp={"Please write a number. If it was just you, please write 1."}
+                    placeholder={"Number of adults."}
+                    min={1}
+                    showWhen={watchingOnline}
+                />
                 <RadioButtonField
                     name="alsoWatchedMorningService"
                     label="Did you also attend the 10.30 am service at CCM?"
