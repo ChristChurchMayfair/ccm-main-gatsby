@@ -375,7 +375,7 @@ const SurveyPage: React.FC = () => {
                     name="groupSize"
                     label="How many adults in your household watched the service together today?"
                     contextualHelp={"Please write a number. If it was just you, please write 1."}
-                    placeholder={"Number of adults."}
+                    placeholder={"Number of adults"}
                     min={1}
                     showWhen={watchingOnline}
                 />
