@@ -5,7 +5,7 @@ headerColour: dark
 Congregation Survey
 =============
 
-Thank you for taking the time to fill in CCM's annual survey. It provides us with helpful stats to help us serve the practical needs of the church family. 
+Thank you for taking the time to fill in this short annual survey for CCM. It provides us with helpful stats to help us serve the practical needs of the church family. 
 
 Please only complete this form if **you are aged 18+** and **you attended one of our services today** either in person or online.
 
