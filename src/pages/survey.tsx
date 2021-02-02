@@ -133,10 +133,6 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
             childrensAges: 993331213,
         },
         otherEnabledFields: {
-            gender: {
-                otherValue: "Other",
-                otherField: "genderOther",
-            },
             yourLocation: {
                 otherValue: "Other Location",
                 otherField: "yourLocationOther",
@@ -330,10 +326,15 @@ const SurveyPage: React.FC = () => {
                             name: "Prefer not to say",
                         },
                     ]}
-                    allowOther={true}
-                    otherInputLabel="Other"
-                    otherOptionName="Other"
                 />
+                <BasicTextField
+                    name="childrensAges"
+                    label="If you have children under 18, please write the ages of those who would normally attend church"
+                    contextualHelp={
+                        "Please only one parent or guardian fill this in. Comma separated ages."
+                    }
+                    placeholder={"e.g. 3, 7, 14"}
+                ></BasicTextField>
                 <RadioButtonField
                     name="yourFirstLanguage"
                     label="Please tell us your first language"
@@ -391,7 +392,9 @@ const SurveyPage: React.FC = () => {
                 <NumberField
                     name="groupSize"
                     label="How many adults in your household watched the service together today?"
-                    contextualHelp={"Please write a number. If it was just you, please write 1."}
+                    contextualHelp={
+                        "Please write a number. If it was just you, please write 1."
+                    }
                     placeholder={"Number of adults"}
                     min={1}
                     showWhen={watchingOnline}
