@@ -28,7 +28,7 @@ schedule:
     link: https://youtu.be/OLqQWd-rM0g
   - time: 2021-02-07T18:00:00+00:00
     description: In person and online.
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    link: https://youtu.be/HDJOvd5RgL4
   - time: 2021-02-14T18:00:00+00:00
     description: In person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
