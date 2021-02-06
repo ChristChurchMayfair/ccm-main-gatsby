@@ -314,9 +314,7 @@ const SurveyPage: React.FC = () => {
                     name="yourFirstLanguage"
                     label="Please tell us your first language"
                     contextualHelp={"Select one."}
-                    options={[
-                        { id: "english", name: "English", checked: true },
-                    ]}
+                    options={[{ id: "english", name: "English" }]}
                     allowOther={true}
                     otherInputLabel="Language"
                     otherOptionName="Other Language"
