@@ -99,7 +99,7 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
         },
         otherEnabledFields: {
             yourLocation: {
-                otherValue: "Other Location",
+                otherValue: "Other City/Region",
                 otherField: "yourLocationOther",
             },
             howDidYouFindThisService: {
@@ -135,7 +135,7 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
         },
         otherEnabledFields: {
             yourLocation: {
-                otherValue: "Other Location",
+                otherValue: "Other City/Region",
                 otherField: "yourLocationOther",
             },
             howDidYouFindThisService: {
