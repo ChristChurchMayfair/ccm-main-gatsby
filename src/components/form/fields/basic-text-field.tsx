@@ -38,7 +38,7 @@ const BasicTextField: React.FC<BasicTextFieldProps> = ({
             error={errors[name]?.message}
         >
             <input
-                type="text"
+                type={"text"}
                 name={name}
                 id={name}
                 className={classNames(formStyles.formItemInput)}

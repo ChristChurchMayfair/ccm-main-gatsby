@@ -252,24 +252,6 @@ const SurveyPage: React.FC = () => {
                 stateChangeCallback={setSurveyFormState}
             >
                 <FormInformationSection>
-                    <p>
-                        Please complete this form if you are aged 18+ and
-                        attended one of our services today either in person or
-                        online. It should take you only a minute or two. For
-                        under 18s, please could a parent answer the questions
-                        below on their behalf.
-                    </p>
-                    <p>
-                        Please fill in one form for each person watching, and
-                        for each service you attend.
-                    </p>
-                    <p>
-                        This survey is anonymous, please do not share any
-                        personal information which could be used to identify
-                        you.
-                    </p>
-                </FormInformationSection>
-                <FormInformationSection>
                     <h2>Information About You</h2>
                 </FormInformationSection>
                 <RadioButtonField
@@ -305,23 +287,8 @@ const SurveyPage: React.FC = () => {
                             name: "41 to 55",
                         },
                         { id: "fiftySixAndOlder", name: "56 and over" },
-                        //{ id: "preferNotToSayAge", name: "Prefer not to say" },
                     ]}
                 />
-                {/*<RadioButtonField
-                    name="areYouAStudent"
-                    label="Are you a student?"
-                    contextualHelp={"Select one."}
-                    validation={{ required: "This is a required field" }}
-                    options={[
-                        { id: "student", name: "Student" },
-                        {
-                            id: "notAStudent",
-                            name: "Non-Student",
-                            checked: true,
-                        },
-                    ]}
-                />*/}
                 <RadioButtonField
                     name="gender"
                     label="Please indicate your gender"
@@ -466,34 +433,6 @@ const SurveyPage: React.FC = () => {
                         },
                     ]}
                 />
-                {/* <CheckBoxField
-                    name="otherCCMEvents"
-                    label="Have you attended other CCM events in the past week?"
-                    contextualHelp={
-                        "Select one. DG includes DG central, Student DG, DG Daytime, DG@Home"
-                    }
-                    validation={{ required: "This is a required field" }}
-                    options={[
-                        {
-                            id: "dg",
-                            label: "DG (Discipleship Group)",
-                            defaultValue: false,
-                        },
-                        {
-                            id: "PTS",
-                            label: "PTS (Prepared To Serve)",
-                            defaultValue: false,
-                        },
-                        {
-                            id: "honestQuestions",
-                            label: "Honest Questions",
-                            defaultValue: false,
-                        },
-                    ]}
-                    allowOther={true}
-                    otherInputLabel="Event Name"
-                    otherOptionName="Other CCM Event"
-                /> */}
             </Form>
             {surveyFormState !== "submitted" ? (
                 <Section id="notes" colorScheme="light">
