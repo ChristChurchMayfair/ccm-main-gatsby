@@ -3,7 +3,6 @@ import Layout from "../components/layout"
 import { Form, FormState } from "../components/form/form"
 import { FormInformationSection } from "../components/form/fields/form-section-start"
 import RadioButtonField from "../components/form/fields/radio-button-field"
-import CheckBoxField from "../components/form/fields/checkbox-field"
 import {
     convertFormDateToGoogleFormUrl,
     GoogleFormConfig as GoogleFormSubmissionConfig,
@@ -14,6 +13,8 @@ import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
 import { ValueEqual, ValueIn } from "../components/form/conditional-visibility"
 import SectionText from "../components/section-text"
+import BasicTextField from "../components/form/fields/basic-text-field"
+import NumberField from "../components/form/fields/number-field"
 
 const devevelopmentEnvironmentWarning = (
     <div>
@@ -252,13 +253,20 @@ const SurveyPage: React.FC = () => {
             >
                 <FormInformationSection>
                     <p>
-                        Please complete this form if you are aged 18+ and attended one of our services today either in person or online. It should take you only a minute or two. For under 18s, please could a parent answer the questions below on their behalf.
+                        Please complete this form if you are aged 18+ and
+                        attended one of our services today either in person or
+                        online. It should take you only a minute or two. For
+                        under 18s, please could a parent answer the questions
+                        below on their behalf.
                     </p>
                     <p>
-                        Please fill in one form for each person watching, and for each service you attend.
+                        Please fill in one form for each person watching, and
+                        for each service you attend.
                     </p>
                     <p>
-                        This survey is anonymous, please do not share any personal information which could be used to identify you.
+                        This survey is anonymous, please do not share any
+                        personal information which could be used to identify
+                        you.
                     </p>
                 </FormInformationSection>
                 <FormInformationSection>
