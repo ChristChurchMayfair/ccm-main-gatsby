@@ -210,7 +210,7 @@ const IndexPage = () => {
                 </a>
             </Section>
 
-            <CovidNotice/>
+            <CovidNotice />
 
             <Services />
 

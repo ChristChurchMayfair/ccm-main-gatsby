@@ -6,13 +6,16 @@ import { ReactHookFormWiring, CommonField } from "../form-config.types"
 import { prependRequired } from "../form"
 import { shouldShowField } from "../conditional-visibility"
 
-type BasicTextFieldProps = CommonField &
+type NumberFieldProps = CommonField &
     ReactHookFormWiring & {
         placeholder?: string
         autoComplete?: string
+        max?: number
+        min?: number
+        step?: number
     }
 
-const BasicTextField: React.FC<BasicTextFieldProps> = ({
+const NumberField: React.FC<NumberFieldProps> = ({
     label,
     name,
     contextualHelp,
@@ -23,6 +26,9 @@ const BasicTextField: React.FC<BasicTextFieldProps> = ({
     autoComplete,
     showWhen,
     watch,
+    max,
+    min,
+    step,
 }) => {
     const shouldDisplayThisField = shouldShowField(showWhen, watch)
 
@@ -38,16 +44,19 @@ const BasicTextField: React.FC<BasicTextFieldProps> = ({
             error={errors[name]?.message}
         >
             <input
-                type={"text"}
+                type={"number"}
                 name={name}
                 id={name}
                 className={classNames(formStyles.formItemInput)}
                 placeholder={placeholder ?? label}
                 ref={register(validation)}
                 autoComplete={autoComplete ?? "off"}
+                max={max}
+                min={min}
+                step={step}
             />
         </Field>
     )
 }
 
-export default BasicTextField
+export default NumberField
