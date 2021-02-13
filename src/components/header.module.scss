@@ -9,13 +9,16 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: calc(var(--header-height) + 50px);
+    height: calc(var(--header-height) + var(--general-padding));
 
     padding-top: var(--header-vertical-padding);
-    padding-bottom: var(--header-vertical-padding);
 
     align-content: start;
     display: grid;
+}
+
+.blurbackground {
+    backdrop-filter: blur(10px);
 }
 
 @mixin headerLight {
@@ -23,6 +26,8 @@
         var(--header-background-colour),
         rgba(0, 0, 0, 0)
     );
+
+    // backdrop-filter: blur(10px);
 
     .menuContent {
         a.current,

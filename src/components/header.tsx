@@ -14,8 +14,9 @@ export type HeaderColour = "light" | "dark" | "black"
 
 interface HeaderProps {
     headerColour: HeaderColour | undefined
+    blurBackground?: boolean
 }
-const Header: React.FC<HeaderProps> = ({ headerColour }) => {
+const Header: React.FC<HeaderProps> = ({ headerColour, blurBackground }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     useEffect(() => {
         const handler = () => {
@@ -28,6 +29,8 @@ const Header: React.FC<HeaderProps> = ({ headerColour }) => {
             window.removeEventListener("resize", handler)
         }
     })
+
+    console.log(blurBackground)
 
     // TODO: add .current class to menuContent <a> it link is for current page
 
@@ -67,6 +70,7 @@ const Header: React.FC<HeaderProps> = ({ headerColour }) => {
                     [styles["mobileHeader--light"]]: headerColour === "light",
                     [styles["mobileHeader--dark"]]: headerColour === "dark",
                     [styles["mobileHeader--black"]]: headerColour === "black",
+                    [styles["blurbackground"]]: blurBackground === true
                 })}
             >
                 <Link className={styles.mobileHeaderLogo} to="/">
@@ -88,6 +92,7 @@ const Header: React.FC<HeaderProps> = ({ headerColour }) => {
                     [styles["desktopHeader--light"]]: headerColour === "light",
                     [styles["desktopHeader--dark"]]: headerColour === "dark",
                     [styles["desktopHeader--black"]]: headerColour === "black",
+                    [styles["blurbackground"]]: blurBackground === true
                 })}
             >
                 <Link className={styles.desktopHeaderLogo} to="/">

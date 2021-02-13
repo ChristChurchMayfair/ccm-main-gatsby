@@ -1,0 +1,65 @@
+.missionpartners {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: calc(var(--general-padding) * 2);
+
+    @media screen and (max-width: 968px) {
+        grid-row-gap: var(--general-padding);
+    }
+}
+
+.missionpartners > .div {
+    grid-area: content;
+}
+
+.map {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "content";
+    padding-top: 0;
+    background-color: lightblue;
+
+    padding-top: 70px;
+    @media screen and (max-width: 650px) {
+        padding-top: 80px;
+    }
+}
+
+.map > div {
+    margin-bottom: -200px;
+    @media screen and (max-width: 650px) {
+        margin-bottom: -50px;
+    }
+}
+
+.map svg {
+    // pointer-events: none;
+    fill: var(--dark-colour);
+
+    .graticule {
+        stroke: var(--highlight-colour);
+    }
+
+    .highlight {
+        fill: var(--highlight-colour);
+    }
+
+    .mapmarkerlabel {
+        fill: var(--highlight-colour);
+    }
+
+    .mapmarker {
+        fill: var(--dark-colour);
+        stroke: var(--light-colour);
+        stroke-width: 1px;
+
+        @media screen and (max-width: 650px) {
+            display: none;
+        }
+
+        &:hover {
+            fill: pink;
+        }
+    }
+}

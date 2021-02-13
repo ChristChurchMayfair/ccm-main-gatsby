@@ -22,10 +22,12 @@ interface Props {
     description?: string | undefined
     openGraphData?: OpenGraphMetaData
     headerColour?: HeaderColour
+    blurHeaderBackground?: boolean
     robotsMetaData?: RobotsMetaData
 }
 const Layout: React.FC<Props> = ({
     headerColour,
+    blurHeaderBackground,
     children,
     title,
     description,
@@ -40,7 +42,7 @@ const Layout: React.FC<Props> = ({
                 openGraphData={openGraphData}
                 robotsMetaData={robotsMetaData}
             />
-            <Header headerColour={headerColour} />
+            <Header headerColour={headerColour} blurBackground={blurHeaderBackground}/>
             <main>{children}</main>
             <Footer />
             <CookieNotice />
