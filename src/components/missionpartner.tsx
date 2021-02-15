@@ -5,12 +5,13 @@ import Img, { FluidObject } from "./img"
 
 type MissionPartnerProps = {
     name: string
+    title: string
     id: string
     html: string
     image: FluidObject
 }
 
-const MissionPartner: FC<MissionPartnerProps> = ({ name, html, image, id }) => (
+const MissionPartner: FC<MissionPartnerProps> = ({ name, title, html, image, id }) => (
     <div className={styles.missionpartner} id={id}>
         <div className={styles.photo} style={{ position: "relative" }}>
             <Img
@@ -26,6 +27,7 @@ const MissionPartner: FC<MissionPartnerProps> = ({ name, html, image, id }) => (
         </div>
         <div className={styles.info}>
             <div className={styles.name}>{name}</div>
+            <div className={styles.title}>{title}</div>
             <div
                 className={styles.bio}
                 dangerouslySetInnerHTML={{ __html: html }}

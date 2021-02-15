@@ -20,6 +20,7 @@ const MissionPartnersQuery = graphql`
         frontmatter {
             name
             country
+            title
             email
             pin_location {
                 lat
@@ -59,7 +60,7 @@ const MissionPartners = () => {
 
     console.log(data)
 
-    const continents_to_hide = ["Antarctica"]
+    const continents_to_hide = [""] //Antarctica
 
     console.log(missionPartners)
     const countries_to_highlight = missionPartners.map(
@@ -95,12 +96,12 @@ const MissionPartners = () => {
                 <SectionText intro>Blah</SectionText>
             </Section> */}
             <Section colorScheme={"light"} className={styles.map}>
-                <div>
+                <div className={styles.mapcontent}>
                     <ComposableMap
                         projection="geoMercator"
                         width={650}
                         height={400}
-                        projectionConfig={{ scale: 100, center: [0, 0] }}
+                        projectionConfig={{ scale: 100, center: [0, 0], rotate: [0,0,0]}}
                     >
                         {/* <Sphere stroke="#DDD" strokeWidth={1} fill={"transparent"} id={"adsF"}/> */}
                         <Geographies geography={geoUrl}>
@@ -154,6 +155,7 @@ const MissionPartners = () => {
                             </a>
                         ))}
                     </ComposableMap>
+                    <div className={styles.maptitle}>Mission Partners</div>
                 </div>
             </Section>
             <Section colorScheme="light">
@@ -164,6 +166,7 @@ const MissionPartners = () => {
                                 key={missionPartner.id}
                                 id={nameToId(missionPartner.frontmatter!.name!)}
                                 name={missionPartner.frontmatter!.name!}
+                                title={missionPartner.frontmatter!.title!}
                                 html={missionPartner.html!}
                                 image={
                                     missionPartner.frontmatter!.image!

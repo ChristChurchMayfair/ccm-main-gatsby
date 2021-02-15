@@ -9,8 +9,35 @@
     }
 }
 
-.missionpartners > .div {
+.mapcontent {
     grid-area: content;
+    position: relative;
+}
+
+.maptitle {
+    position: absolute;
+    // bottom: 200px;
+    bottom: calc(12vw + var(--general-padding));
+    width: 25vw;
+    left: calc(50% - 12.5vw);
+    padding-left: var(--general-padding);
+    padding-right: var(--general-padding);
+    width: auto;
+    margin: 0 auto;
+    font-size: 3vw;
+    backdrop-filter: blur(10px);
+    display: block;
+    // background: blue;
+    text-align: center;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+
+    @media screen and (max-width: 600px) {
+        font-size:1em;
+        width: 50vw;
+        left: calc(50% - 25vw);
+    }
 }
 
 .map {
@@ -19,6 +46,7 @@
     grid-template-areas: "content";
     padding-top: 0;
     background-color: lightblue;
+    // max-height: 900px;
 
     padding-top: 70px;
     @media screen and (max-width: 650px) {
@@ -27,10 +55,11 @@
 }
 
 .map > div {
-    margin-bottom: -200px;
-    @media screen and (max-width: 650px) {
-        margin-bottom: -50px;
-    }
+    // margin-bottom: -200px;
+    margin-bottom: -12vw;
+    // @media screen and (max-width: 650px) {
+    //     margin-bottom: -50px;
+    // }
 }
 
 .map svg {
