@@ -1,10 +1,8 @@
 import React, { useState } from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import HeaderUnderlay from "../components/header-underlay"
 import Section from "../components/section"
-import SectionText from "../components/section-text"
 
 import styles from "./missionpartners.module.scss"
 import {
@@ -12,14 +10,9 @@ import {
     Geographies,
     Geography,
     Marker,
-    MarkerProps,
-    Point,
-    Sphere,
-    ZoomableGroup,
 } from "react-simple-maps"
 import classNames from "classnames"
 import MissionPartner from "../components/missionpartner"
-import ReactTooltip from "react-tooltip"
 
 const MissionPartnersQuery = graphql`
     fragment MissionPartner on MarkdownRemark {
@@ -62,7 +55,7 @@ const MissionPartners = () => {
         MissionPartnersQuery
     )
 
-    const missionPartners = data.missionPartners!.nodes!
+    const missionPartners = data.missionPartners.nodes
 
     console.log(data)
 
@@ -137,8 +130,12 @@ const MissionPartners = () => {
                                     })
                             }
                         </Geographies>
-                        {markers.map(marker => (
-                            <a  xlinkHref={"#" + marker.linkId}>
+                        {markers.map((marker: any) => (
+                            <a
+                                // xlinkHref={`#${marker.linkId}`}
+                                href={`#${marker.linkId}`}
+                                key={marker.linkId}
+                            >
                                 <Marker
                                     key={marker.markerInfo.name}
                                     coordinates={marker.markerInfo.coordinates}
@@ -147,9 +144,6 @@ const MissionPartners = () => {
                                     }}
                                     onMouseLeave={() => {
                                         setHoverContent("")
-                                    }}
-                                    onClick={() => {
-                                        document.getElementById(marker.linkId).scrollIntoView();
                                     }}
                                 >
                                     <circle
@@ -164,7 +158,7 @@ const MissionPartners = () => {
             </Section>
             <Section colorScheme="light">
                 <div className={styles.missionpartners}>
-                    {data.missionPartners!.nodes!.map(missionPartner => {
+                    {missionPartners.map(missionPartner => {
                         return (
                             <MissionPartner
                                 key={missionPartner.id}

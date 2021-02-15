@@ -4,18 +4,13 @@ import styles from "./missionpartner.module.scss"
 import Img, { FluidObject } from "./img"
 
 type MissionPartnerProps = {
-    name: string,
+    name: string
     id: string
-    html: string,
+    html: string
     image: FluidObject
 }
 
-const MissionPartner: FC<MissionPartnerProps> = ({
-    name,
-    html,
-    image,
-    id
-}) => (
+const MissionPartner: FC<MissionPartnerProps> = ({ name, html, image, id }) => (
     <div className={styles.missionpartner} id={id}>
         <div className={styles.photo} style={{ position: "relative" }}>
             <Img
@@ -33,7 +28,7 @@ const MissionPartner: FC<MissionPartnerProps> = ({
             <div className={styles.name}>{name}</div>
             <div
                 className={styles.bio}
-                dangerouslySetInnerHTML={{ __html: html! }}
+                dangerouslySetInnerHTML={{ __html: html }}
             />
         </div>
     </div>

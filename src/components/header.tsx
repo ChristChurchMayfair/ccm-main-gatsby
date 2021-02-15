@@ -70,7 +70,7 @@ const Header: React.FC<HeaderProps> = ({ headerColour, blurBackground }) => {
                     [styles["mobileHeader--light"]]: headerColour === "light",
                     [styles["mobileHeader--dark"]]: headerColour === "dark",
                     [styles["mobileHeader--black"]]: headerColour === "black",
-                    [styles["blurbackground"]]: blurBackground === true
+                    [styles["blurbackground"]]: blurBackground === true,
                 })}
             >
                 <Link className={styles.mobileHeaderLogo} to="/">
@@ -92,7 +92,7 @@ const Header: React.FC<HeaderProps> = ({ headerColour, blurBackground }) => {
                     [styles["desktopHeader--light"]]: headerColour === "light",
                     [styles["desktopHeader--dark"]]: headerColour === "dark",
                     [styles["desktopHeader--black"]]: headerColour === "black",
-                    [styles["blurbackground"]]: blurBackground === true
+                    [styles["blurbackground"]]: blurBackground === true,
                 })}
             >
                 <Link className={styles.desktopHeaderLogo} to="/">

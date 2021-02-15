@@ -42,7 +42,10 @@ const Layout: React.FC<Props> = ({
                 openGraphData={openGraphData}
                 robotsMetaData={robotsMetaData}
             />
-            <Header headerColour={headerColour} blurBackground={blurHeaderBackground}/>
+            <Header
+                headerColour={headerColour}
+                blurBackground={blurHeaderBackground}
+            />
             <main>{children}</main>
             <Footer />
             <CookieNotice />
