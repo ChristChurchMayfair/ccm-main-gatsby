@@ -10,33 +10,48 @@ type MissionPartnerProps = {
     id: string
     html: string
     image: FluidObject
-    imageOrientation?: "landscape" | "portrait"
+    imageOrientation?: string
 }
 
-const MissionPartner: FC<MissionPartnerProps> = ({ name, title, html, image, id, imageOrientation }) => {
+const MissionPartner: FC<MissionPartnerProps> = ({
+    name,
+    title,
+    html,
+    image,
+    id,
+    imageOrientation,
+}) => {
     console.log(imageOrientation)
-    return <div className={classNames(styles.missionpartner, {[styles["missionpartner--landscape"]]: imageOrientation === "landscape"})} id={id}>
-        <div className={styles.photo} style={{ position: "relative" }}>
-            <Img
-                style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    bottom: 0,
-                    right: 0,
-                }}
-                fluid={image}
-            />
+    return (
+        <div
+            className={classNames(styles.missionpartner, {
+                [styles["missionpartner--landscape"]]:
+                    imageOrientation === "landscape",
+            })}
+            id={id}
+        >
+            <div className={styles.photo} style={{ position: "relative" }}>
+                <Img
+                    style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        bottom: 0,
+                        right: 0,
+                    }}
+                    fluid={image}
+                />
+            </div>
+            <div className={styles.info}>
+                <div className={styles.name}>{name}</div>
+                <div className={styles.title}>{title}</div>
+                <div
+                    className={styles.bio}
+                    dangerouslySetInnerHTML={{ __html: html }}
+                />
+            </div>
         </div>
-        <div className={styles.info}>
-            <div className={styles.name}>{name}</div>
-            <div className={styles.title}>{title}</div>
-            <div
-                className={styles.bio}
-                dangerouslySetInnerHTML={{ __html: html }}
-            />
-        </div>
-    </div>
+    )
 }
 
 export default MissionPartner

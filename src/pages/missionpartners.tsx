@@ -41,7 +41,11 @@ const MissionPartnersQuery = graphql`
     }
     query MissionPartners {
         missionPartners: allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "/missionpartners\/.*.missionpartner.md/" } }
+            filter: {
+                fileAbsolutePath: {
+                    regex: "/missionpartners/.*.missionpartner.md/"
+                }
+            }
         ) {
             nodes {
                 ...MissionPartner
@@ -171,13 +175,12 @@ const MissionPartners = () => {
                             </a>
                         ))}
                     </ComposableMap>
-                    <div className={styles.maptitle}>{data.mainInfo!.frontmatter!.title!}</div>
+                    <div className={styles.maptitle}>
+                        {data.mainInfo!.frontmatter!.title!}
+                    </div>
                 </div>
             </Section>
-            <Section
-                wider
-                colorScheme={"dark"}
-            >
+            <Section wider colorScheme={"dark"}>
                 <SectionText
                     intro
                     dark
@@ -197,7 +200,9 @@ const MissionPartners = () => {
                                 name={missionPartner.frontmatter!.name!}
                                 title={missionPartner.frontmatter!.title!}
                                 html={missionPartner.html!}
-                                imageOrientation={missionPartner.frontmatter!.imageOrientation!}
+                                imageOrientation={
+                                    missionPartner.frontmatter?.imageOrientation
+                                }
                                 image={
                                     missionPartner.frontmatter!.image!
                                         .childImageSharp!.fluid!
