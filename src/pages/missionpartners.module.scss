@@ -16,9 +16,10 @@
 
 .maptitle {
     position: absolute;
-    // bottom: 200px;
+    color: var(--light-colour);
     bottom: calc(12vw + var(--general-padding));
     width: 25vw;
+    // left: calc(50% - 12.5vw);
     left: calc(50% - 12.5vw);
     padding-left: var(--general-padding);
     padding-right: var(--general-padding);
@@ -28,10 +29,10 @@
     font-weight: 400;
     backdrop-filter: blur(10px);
     display: block;
-    // background: blue;
+    background: var(--dark-colour);
     text-align: center;
     border-width: 1px;
-    border-color: black;
+    border-color: var(--dark-colour);
     border-style: solid;
 
     @media screen and (max-width: 600px) {
