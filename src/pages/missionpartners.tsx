@@ -13,6 +13,7 @@ import {
 } from "react-simple-maps"
 import classNames from "classnames"
 import MissionPartner from "../components/missionpartner"
+import { HiddenPageRobotsMetaData } from "../components/robots"
 
 const MissionPartnersQuery = graphql`
     fragment MissionPartner on MarkdownRemark {
@@ -90,6 +91,7 @@ const MissionPartners = () => {
             title={"Mission Partners"}
             headerColour="light"
             blurHeaderBackground={true}
+            robotsMetaData={HiddenPageRobotsMetaData}
         >
             {/* <HeaderUnderlay colorScheme="dark" /> */}
             {/* <Section intro wider colorScheme="dark">
@@ -101,7 +103,11 @@ const MissionPartners = () => {
                         projection="geoMercator"
                         width={650}
                         height={400}
-                        projectionConfig={{ scale: 100, center: [0, 0], rotate: [0,0,0]}}
+                        projectionConfig={{
+                            scale: 100,
+                            center: [0, 0],
+                            rotate: [0, 0, 0],
+                        }}
                     >
                         {/* <Sphere stroke="#DDD" strokeWidth={1} fill={"transparent"} id={"adsF"}/> */}
                         <Geographies geography={geoUrl}>
