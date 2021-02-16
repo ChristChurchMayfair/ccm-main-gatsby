@@ -7,6 +7,7 @@ pin_location:
     lon: 50.8503
     lat: 4.3517
 image: ./Oranges.png
+imageOrientation: landscape
 ---
 * Praise God that covid has brought opportunities to reach unbelievers online, and for the church’s growth in commitment to prayer and studying the Bible.
 * Pray for Woluwe church to be committed to loving, serving and encouraging each other post-lockdown.

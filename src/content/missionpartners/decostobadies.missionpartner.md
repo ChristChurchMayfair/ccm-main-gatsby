@@ -8,6 +8,7 @@ pin_location:
     lon: -43.5320
     lat: 171.6306
 image: ./Costas.png
+imageOrientation: landscape
 ---
 * Pray that God would continue to raise up workers for the harvest field in New Zealand.
 * Pray that God would lay on people's hearts the desire to start a new church in a local UPA, and that some people would sign up for this.

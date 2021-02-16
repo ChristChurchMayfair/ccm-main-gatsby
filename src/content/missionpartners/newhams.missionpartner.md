@@ -7,6 +7,7 @@ pin_location:
     lon: 51.5074
     lat: -0.1278
 image: ./Newhams.png
+imageOrientation: landscape
 ---
 * Praise God for the amazing gospel opportunity of Becontree, where everyone has a front door, and a rain shelter (archway)!
 * Pray for the team going out for doorstep conversations, that these and the follow up cards might sow gospel truth.

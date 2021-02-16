@@ -7,6 +7,7 @@ pin_location:
     lon: 51.5074
     lat: -0.1278
 image: ./StGeorges.png
+imageOrientation: landscape
 ---
 * Give thanks for the appointment of a new pastor, Simon Berry.
 * Pray that under Simon's ministry, the gospel would grow deeply in us, and widely in our community.

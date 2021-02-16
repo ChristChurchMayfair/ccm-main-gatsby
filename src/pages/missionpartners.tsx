@@ -14,6 +14,7 @@ import {
 import classNames from "classnames"
 import MissionPartner from "../components/missionpartner"
 import { HiddenPageRobotsMetaData } from "../components/robots"
+import SectionText from "../components/section-text"
 
 const MissionPartnersQuery = graphql`
     fragment MissionPartner on MarkdownRemark {
@@ -29,20 +30,29 @@ const MissionPartnersQuery = graphql`
             }
             image {
                 childImageSharp {
-                    fluid(maxWidth: 400) {
+                    fluid(maxWidth: 900) {
                         ...GatsbyImageSharpFluid
                     }
                 }
             }
+            imageOrientation
         }
         html
     }
     query MissionPartners {
         missionPartners: allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "/missionpartners.*/" } }
+            filter: { fileAbsolutePath: { regex: "/missionpartners\/.*.missionpartner.md/" } }
         ) {
             nodes {
                 ...MissionPartner
+            }
+        }
+        mainInfo: markdownRemark(
+            fileAbsolutePath: { regex: "/missionpartners/main.md$/" }
+        ) {
+            html
+            frontmatter {
+                title
             }
         }
     }
@@ -161,8 +171,21 @@ const MissionPartners = () => {
                             </a>
                         ))}
                     </ComposableMap>
-                    <div className={styles.maptitle}>Mission Partners</div>
+                    <div className={styles.maptitle}>{data.mainInfo!.frontmatter!.title!}</div>
                 </div>
+            </Section>
+            <Section
+                wider
+                colorScheme={"dark"}
+            >
+                <SectionText
+                    intro
+                    dark
+                    className="text"
+                    dangerouslySetInnerHTML={{
+                        __html: data.mainInfo?.html ?? "No Content!",
+                    }}
+                />
             </Section>
             <Section colorScheme="light">
                 <div className={styles.missionpartners}>
@@ -174,6 +197,7 @@ const MissionPartners = () => {
                                 name={missionPartner.frontmatter!.name!}
                                 title={missionPartner.frontmatter!.title!}
                                 html={missionPartner.html!}
+                                imageOrientation={missionPartner.frontmatter!.imageOrientation!}
                                 image={
                                     missionPartner.frontmatter!.image!
                                         .childImageSharp!.fluid!

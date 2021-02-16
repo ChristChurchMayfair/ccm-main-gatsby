@@ -2,6 +2,7 @@ import React, { FC } from "react"
 
 import styles from "./missionpartner.module.scss"
 import Img, { FluidObject } from "./img"
+import classNames from "classnames"
 
 type MissionPartnerProps = {
     name: string
@@ -9,10 +10,12 @@ type MissionPartnerProps = {
     id: string
     html: string
     image: FluidObject
+    imageOrientation?: "landscape" | "portrait"
 }
 
-const MissionPartner: FC<MissionPartnerProps> = ({ name, title, html, image, id }) => (
-    <div className={styles.missionpartner} id={id}>
+const MissionPartner: FC<MissionPartnerProps> = ({ name, title, html, image, id, imageOrientation }) => {
+    console.log(imageOrientation)
+    return <div className={classNames(styles.missionpartner, {[styles["missionpartner--landscape"]]: imageOrientation === "landscape"})} id={id}>
         <div className={styles.photo} style={{ position: "relative" }}>
             <Img
                 style={{
@@ -34,6 +37,6 @@ const MissionPartner: FC<MissionPartnerProps> = ({ name, title, html, image, id 
             />
         </div>
     </div>
-)
+}
 
 export default MissionPartner
