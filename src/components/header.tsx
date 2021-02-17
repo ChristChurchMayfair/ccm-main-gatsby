@@ -30,8 +30,6 @@ const Header: React.FC<HeaderProps> = ({ headerColour, blurBackground }) => {
         }
     })
 
-    console.log(blurBackground)
-
     // TODO: add .current class to menuContent <a> it link is for current page
 
     return (
