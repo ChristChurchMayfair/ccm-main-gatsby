@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -91,8 +91,6 @@ const MissionPartners = () => {
         },
     }))
 
-    const [hoverContent, setHoverContent] = useState("")
-
     const geoUrl =
         "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json"
 
@@ -156,12 +154,6 @@ const MissionPartners = () => {
                                 <Marker
                                     key={marker.markerInfo.name}
                                     coordinates={marker.markerInfo.coordinates}
-                                    onMouseEnter={() => {
-                                        setHoverContent(marker.markerInfo.name)
-                                    }}
-                                    onMouseLeave={() => {
-                                        setHoverContent("")
-                                    }}
                                 >
                                     <circle
                                         className={styles.mapmarker}
