@@ -73,15 +73,11 @@ const MissionPartners = () => {
 
     const missionPartners = data.missionPartners.nodes
 
-    console.log(data)
+    const continents_to_hide = ["Antarctica"]
 
-    const continents_to_hide = [""] //Antarctica
-
-    console.log(missionPartners)
     const countries_to_highlight = missionPartners.map(
         mp => mp.frontmatter?.country
     )
-    console.log(countries_to_highlight)
 
     const markers: any = missionPartners.map(mp => ({
         linkId: nameToId(mp.frontmatter!.name!),

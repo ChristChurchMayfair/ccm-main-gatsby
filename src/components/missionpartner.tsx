@@ -21,7 +21,6 @@ const MissionPartner: FC<MissionPartnerProps> = ({
     id,
     imageOrientation,
 }) => {
-    console.log(imageOrientation)
     return (
         <div
             className={classNames(styles.missionpartner, {
