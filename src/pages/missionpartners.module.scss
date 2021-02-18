@@ -19,8 +19,7 @@
     color: var(--light-colour);
     bottom: calc(12vw + var(--general-padding));
     width: 25vw;
-    // left: calc(50% - 12.5vw);
-    left: calc(50% - 12.5vw);
+    left: calc(50% - 12.5vw - calc(var(--general-padding) / 2));
     padding-left: var(--general-padding);
     padding-right: var(--general-padding);
     width: auto;
@@ -37,8 +36,9 @@
 
     @media screen and (max-width: 600px) {
         font-size:1em;
-        width: 50vw;
-        left: calc(50% - 25vw);
+        width: 60vw;
+        left: calc(50% - 30vw - var(--general-padding));
+        bottom: calc(3vw + var(--general-padding));
     }
 }
 
@@ -48,24 +48,22 @@
     grid-template-areas: "content";
     padding-top: 0;
     background-color: lightblue;
-    // max-height: 900px;
 
     padding-top: 70px;
     @media screen and (max-width: 650px) {
         padding-top: 80px;
+        padding-bottom: 40px;
     }
 }
 
 .map > div {
-    // margin-bottom: -200px;
     margin-bottom: -12vw;
-    // @media screen and (max-width: 650px) {
-    //     margin-bottom: -50px;
-    // }
+    @media screen and (max-width: 650px) {
+        // margin-bottom: -20vw;
+    }
 }
 
 .map svg {
-    // pointer-events: none;
     fill: var(--dark-colour);
 
     .graticule {
