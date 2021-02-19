@@ -6,7 +6,7 @@ email: email
 title: Discipling the Next Generation, Rwanda
 pin_location:
     lon: -1.9441
-    lat: 32.0619
+    lat: 30.0619
 image: ./Duff.png
 ---
 * Pray that we would be faithful to God's word as we write different resources to help in the discipleship of Rwandan children. 

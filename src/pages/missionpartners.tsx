@@ -146,21 +146,17 @@ const MissionPartners = () => {
                             }
                         </Geographies>
                         {markers.map((marker: any) => (
-                            <a
-                                // xlinkHref={`#${marker.linkId}`}
-                                href={`#${marker.linkId}`}
-                                key={marker.linkId}
+                            // <a
+                            //     href={`#${marker.linkId}`}
+                            //     key={marker.linkId}
+                            // >
+                            <Marker
+                                key={marker.markerInfo.name}
+                                coordinates={marker.markerInfo.coordinates}
                             >
-                                <Marker
-                                    key={marker.markerInfo.name}
-                                    coordinates={marker.markerInfo.coordinates}
-                                >
-                                    <circle
-                                        className={styles.mapmarker}
-                                        r={3}
-                                    />
-                                </Marker>
-                            </a>
+                                <circle className={styles.mapmarker} r={3} />
+                            </Marker>
+                            // </a>
                         ))}
                     </ComposableMap>
                     <div className={styles.maptitle}>

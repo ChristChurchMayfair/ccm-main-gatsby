@@ -6,7 +6,7 @@ email: email
 title: Word Increase Ministry (formerly ‘Preach The Word’), Rwanda
 pin_location:
     lon: -1.9441
-    lat: 28.0619
+    lat: 30.0619
 image: ./Asnath.png
 imageOrientation: landscape
 ---
