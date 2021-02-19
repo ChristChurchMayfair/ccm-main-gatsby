@@ -1,0 +1,94 @@
+.missionpartners {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: calc(var(--general-padding) * 2);
+
+    @media screen and (max-width: 968px) {
+        grid-row-gap: var(--general-padding);
+    }
+}
+
+.mapcontent {
+    grid-area: content;
+    position: relative;
+}
+
+.maptitle {
+    position: absolute;
+    color: var(--light-colour);
+    bottom: calc(12vw + var(--general-padding));
+    width: 25vw;
+    left: calc(50% - 12.5vw - calc(var(--general-padding) / 2));
+    padding-left: var(--general-padding);
+    padding-right: var(--general-padding);
+    width: auto;
+    margin: 0 auto;
+    font-size: 3vw;
+    font-weight: 400;
+    backdrop-filter: blur(10px);
+    display: block;
+    background: var(--dark-colour);
+    text-align: center;
+    border-width: 1px;
+    border-color: var(--dark-colour);
+    border-style: solid;
+
+    @media screen and (max-width: 600px) {
+        font-size:1em;
+        width: 60vw;
+        left: calc(50% - 30vw - var(--general-padding));
+        bottom: calc(3vw + var(--general-padding));
+    }
+}
+
+.map {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "content";
+    padding-top: 0;
+    background-color: lightblue;
+
+    padding-top: 70px;
+    @media screen and (max-width: 650px) {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+}
+
+.map > div {
+    margin-bottom: -12vw;
+    @media screen and (max-width: 650px) {
+        // margin-bottom: -20vw;
+    }
+}
+
+.map svg {
+    fill: var(--dark-colour);
+
+    .graticule {
+        stroke: var(--highlight-colour);
+    }
+
+    .highlight {
+        fill: var(--highlight-colour);
+    }
+
+    .mapmarkerlabel {
+        fill: var(--highlight-colour);
+    }
+
+    .mapmarker {
+        fill: var(--dark-colour);
+        stroke: var(--light-colour);
+        stroke-width: 1px;
+
+        @media screen and (max-width: 650px) {
+            display: none;
+        }
+
+        // &:hover {
+        //     fill: pink;
+        // }
+    }
+}
