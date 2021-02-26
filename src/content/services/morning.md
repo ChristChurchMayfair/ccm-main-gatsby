@@ -27,7 +27,7 @@ schedule:
     link: https://youtu.be/O2Txc5f4cXY
   - time: 2021-02-28T10:30:00+00:00
     description: In person and online. (No Sunday School)
-    link: https://www.youtube.com/c/ChristChurchMayfairLive  
+    link:  https://youtu.be/tvIVhL3_5Q4
   - time: 2021-03-07T10:30:00+00:00
     description: In person and online. (No Sunday School)
     link: https://www.youtube.com/c/ChristChurchMayfairLive  
