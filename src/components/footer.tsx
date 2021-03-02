@@ -21,6 +21,7 @@ const links: Array<{ path: string; title: string }> = [
     { path: "/staff", title: "Staff" },
     { path: "/covid19-policy-and-risk-assessment", title: "Covid-19 Policy" },
     { path: "/givingform", title: "Giving Form" },
+    { path: "/complaints", title: "Complaints" },
 ]
 
 const Footer = () => {
@@ -100,7 +101,7 @@ const Footer = () => {
                         {title}
                     </Link>
                 ))}
-                <a href="http://blog.christchurchmayfair.org">Blog</a>
+                <Link to="http://blog.christchurchmayfair.org">Blog</Link>
             </div>
             <div className={styles.smallprint}>
                 {smallPrint.map(line => (
