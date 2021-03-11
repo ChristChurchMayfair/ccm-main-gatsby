@@ -248,7 +248,7 @@ const Families: React.FC<{}> = () => {
 
             <Bio
                 people={data.littleLambsWorker.nodes}
-                peoplePrecedenceByEmail={["sarah@christchurchmayfair.org"]}
+                peoplePrecedenceByEmail={["james@christchurchmayfair.org"]}
                 descriptionHtml={
                     data.littleLambs!.fields!.frontmattermd!.findOutMoreText!
                         .html!
