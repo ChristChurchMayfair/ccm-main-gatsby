@@ -21,7 +21,7 @@ schedule:
     link: https://youtu.be/KRcFG24cXLw 
   - time: 2021-03-14T10:30:00+00:00
     description: All-age service, in person and online.   
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    link: https://youtu.be/CMUe7dXA9k0
   - time: 2021-03-21T10:30:00+00:00
     description: In person and online. (No Sunday School)   
     link: https://www.youtube.com/c/ChristChurchMayfairLive
