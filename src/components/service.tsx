@@ -4,6 +4,7 @@ import styles from "./services.module.scss"
 import Img, { FluidObject } from "./img"
 import { getNextServiceTimes } from "./servicetimes/service-times"
 import { format } from "date-fns"
+import classNames from "classnames"
 
 export type Session = {
     dateTime: Date
@@ -97,7 +98,15 @@ const Service: FC<ServiceProps> = ({
             </div>
             <div className={styles.title}>{name}</div>
             <div className={styles.dateSpecifier}>{dateSpecifier}</div>
-            <div className={styles.sessions}>{sessions}</div>
+            <div
+                className={classNames(styles.sessions, {
+                    [styles["sessions--one"]]: sessions.length == 1,
+                    [styles["sessions--two"]]: sessions.length % 2 == 0,
+                    [styles["sessions--three"]]: sessions.length == 3,
+                })}
+            >
+                {sessions}
+            </div>
             <div
                 className={styles.info}
                 dangerouslySetInnerHTML={{
