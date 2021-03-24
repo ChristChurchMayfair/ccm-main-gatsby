@@ -25,7 +25,7 @@ schedule:
   - time: 2021-03-21T10:30:00+00:00
     description: In person and online. (No Sunday School)   
     link: https://youtu.be/ZSKke3qGm6A
-  - time: 2021-03-28T10:30:00+00:00
+  - time: 2021-03-28T10:30:00+01:00
     description: In person and online. (No Sunday School)   
     link: https://www.youtube.com/c/ChristChurchMayfairLive
 ---
