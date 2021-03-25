@@ -34,6 +34,28 @@ schedule:
   - time: 2021-03-28T18:00:00+01:00
     description: Live service, in person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
+    
+  - time: 2021-04-04T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  
+  - time: 2021-04-11T16:30:00+01:00
+    description: Live service, in person only.
+  - time: 2021-04-11T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  
+  - time: 2021-04-18T16:30:00+01:00
+    description: Live service, in person only.
+  - time: 2021-04-18T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  
+  - time: 2021-04-25T16:30:00+01:00
+    description: Live service, in person only.
+  - time: 2021-04-25T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
