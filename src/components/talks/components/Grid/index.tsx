@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import { MEDIA_QUERIES } from "../../constants/styles"
 
 const Main = styled.div`
     font-size: 1rem;
@@ -11,8 +10,6 @@ const Main = styled.div`
 const List = styled.div`
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-row-gap: 1.5em;
-    grid-column-gap: 1.5em;
 `
 
 const Item = styled.div``

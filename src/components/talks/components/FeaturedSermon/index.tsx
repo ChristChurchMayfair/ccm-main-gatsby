@@ -3,7 +3,6 @@ import styled from "styled-components"
 import format from "date-fns/format"
 
 import type { Sermon, Series } from "../../types"
-import placeholderImage from "../../images/placeholderImage"
 import Card from "../Card"
 
 const Text = styled.div`
