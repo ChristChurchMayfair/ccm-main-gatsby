@@ -12,7 +12,7 @@ const Main = styled.div`
 const DetailsContainer = styled.div`
     flex-grow: 1;
     flex-shrink: 0;
-    padding: 0.7em 0.5em;
+    padding: 0.9em 0.5em;
     border-bottom: 1px solid ${COLOURS.lightGrey};
 `
 
