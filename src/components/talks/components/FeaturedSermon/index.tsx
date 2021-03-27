@@ -35,7 +35,7 @@ class FeaturedSermon extends PureComponent<Props> {
                 renderDetails={() => (
                     <Fragment>
                         <SermonName>{sermon.name}</SermonName>
-                        <Secondary>{passage != null ? passage : sermon.name}</Secondary>
+                        <Secondary>{passage != null && passage != "" ? passage : sermon.name}</Secondary>
                         <Secondary>{format(date, "dddd D MMM yyyy")}</Secondary>
                     </Fragment>
                 )}
