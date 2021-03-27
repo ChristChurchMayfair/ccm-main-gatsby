@@ -4,19 +4,12 @@ import styled from "styled-components"
 import type { Series, Sermon } from "../../types"
 import SermonRow from "./SermonRow"
 import { MEDIA_QUERIES, COLOURS } from "../../constants/styles"
-import placeholderImage from "../../images/placeholderImage"
 
 const PADDING_VERTICAL = "0.5em"
 
 const Main = styled.div`
     display: flex;
     flex-flow: column nowrap;
-`
-
-const SeriesImage = styled.img`
-    width: 100%;
-    height: auto;
-    align-self: center;
 `
 
 const List = styled.ul`
@@ -41,10 +34,6 @@ const HPadding = styled.div`
     @media ${MEDIA_QUERIES.mobile} {
         padding: 0 0.8em;
     }
-`
-
-const ImagePadding = styled(HPadding)`
-    text-align: center;
 `
 
 const SeriesTitleContainer = styled.div`
@@ -90,9 +79,6 @@ const SeriesDetail = ({ series, shouldHighlightSermon }: Props) => {
     })
     return (
         <Main>
-            <ImagePadding>
-                <SeriesImage src={series.image3x2Url ?? placeholderImage} />
-            </ImagePadding>
             <HPadding>
                 <SeriesTitleContainer>
                     <SeriesTitle>{series.name}</SeriesTitle>

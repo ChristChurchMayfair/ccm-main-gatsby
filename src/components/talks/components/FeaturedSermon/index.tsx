@@ -32,11 +32,10 @@ class FeaturedSermon extends PureComponent<Props> {
         const passage = sermon.passage
         return (
             <Card
-                imageUrl={series.image3x2Url ?? placeholderImage}
                 renderDetails={() => (
                     <Fragment>
                         <SermonName>{sermon.name}</SermonName>
-                        {passage != null && <Secondary>{passage}</Secondary>}
+                        <Secondary>{passage != null ? passage : sermon.name}</Secondary>
                         <Secondary>{format(date, "dddd D MMM yyyy")}</Secondary>
                     </Fragment>
                 )}

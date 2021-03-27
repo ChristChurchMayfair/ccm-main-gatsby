@@ -13,12 +13,6 @@ const List = styled.div`
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 1.5em;
     grid-column-gap: 1.5em;
-    @media ${MEDIA_QUERIES.tablet} {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    @media ${MEDIA_QUERIES.desktop} {
-        grid-template-columns: repeat(3, 1fr);
-    }
 `
 
 const Item = styled.div``
