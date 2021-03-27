@@ -5,7 +5,7 @@ import type { Series } from "../../types"
 import Card from "../Card"
 
 const Title = styled.div`
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: bold;
 `
 

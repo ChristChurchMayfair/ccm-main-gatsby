@@ -14,7 +14,7 @@ interface State {
 
 const Main = styled.label<{ isFocused: boolean }>`
     cursor: text;
-    padding: 0.3em 0.5em;
+    padding: 0.1em 0.3em;
     border: 3px solid ${COLOURS.lightGrey};
     transition: border-color 0.2s, width 0.2s;
     display: block;
@@ -24,7 +24,7 @@ const Main = styled.label<{ isFocused: boolean }>`
 `
 
 const TextInput = styled.input`
-    font-size: 0.8em;
+    font-size: 0.6em;
     font-family: inherit;
     outline: none;
     border: none;
