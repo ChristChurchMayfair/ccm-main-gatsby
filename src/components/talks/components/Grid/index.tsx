@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-
 const Main = styled.div`
     font-size: 1rem;
     line-height: normal;

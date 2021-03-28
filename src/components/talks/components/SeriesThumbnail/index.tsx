@@ -25,7 +25,11 @@ class SeriesThumbnail extends PureComponent<Props> {
                 renderDetails={() => (
                     <Fragment>
                         <Title>{series.name}</Title>
-                        <Subtitle>{series.subtitle != null && series.subtitle != "" ? series.subtitle : series.name}</Subtitle>
+                        <Subtitle>
+                            {series.subtitle != null && series.subtitle != ""
+                                ? series.subtitle
+                                : series.name}
+                        </Subtitle>
                     </Fragment>
                 )}
             />
