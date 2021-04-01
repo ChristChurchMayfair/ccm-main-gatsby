@@ -12,6 +12,6 @@ You can also watch online with the following links.
 
   * [Good Friday 10am](https://youtu.be/ydHnMEBcp0I) *Join us as we reflect on the cross together.*
   * [Easter Sunday 10am](https://youtu.be/oR49gaJNBPg) *Join us for a family friendly Easter celebration.*
-  * [Easter Sunday 6pm](https://www.youtube.com/c/ChristChurchMayfairLive) *Join us for an evening celebration.*
+  * [Easter Sunday 6pm](https://youtu.be/loODDrPRkuc) *Join us for an evening celebration.*
 
 Updated: *31st March 2021*
