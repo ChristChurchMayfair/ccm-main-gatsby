@@ -15,9 +15,7 @@ class SeriesList extends PureComponent<Props> {
             <Grid
                 items={serieses}
                 keyExtractor={series => series.id}
-                renderItem={series => (
-                    <SeriesListItem series={series} />
-                )}
+                renderItem={series => <SeriesListItem series={series} />}
             />
         )
     }

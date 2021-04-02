@@ -59,9 +59,7 @@ export default class SeriesListItem extends PureComponent<Props> {
         return (
             <List>
                 {sortedSermons.map(sermon => (
-                    <ListItem
-                        key={sermon.id}
-                    >
+                    <ListItem key={sermon.id}>
                         <Link
                             href={sermon.url}
                             target="_blank"
