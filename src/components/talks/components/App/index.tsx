@@ -37,7 +37,7 @@ export const filterSermon = (sermon: Sermon, filterText: string): boolean => {
     const trimmedFilter = filterText.trim()
     const words = trimmedFilter.split(" ").filter(w => w.length > 0)
 
-    return words.some(word => {
+    return words.every(word => {
         const nameMatches = stringsMatch(sermon.name, word)
         const speakerNameMatches = sermon.speakers.some(speaker =>
             stringsMatch(speaker.name, word)
@@ -74,7 +74,7 @@ export const filterSeries = (series: Series, filterText: string): boolean => {
     return words.every(word => {
         const seriesNameMatches = stringsMatch(series.name, word)
         const seriesSubtitleMatches = stringsMatch(series.subtitle, word)
-        const hasASermonMatch = series.sermons.some(sermon =>
+        const hasASermonMatch = series.sermons.every(sermon =>
             filterSermon(sermon, word)
         )
         return seriesNameMatches || seriesSubtitleMatches || hasASermonMatch
