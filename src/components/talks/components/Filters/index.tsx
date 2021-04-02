@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 
 import FilterTextInput from "../FilterTextInput"
@@ -8,27 +8,21 @@ const Main = styled.div`
     padding: 0 0 1.5rem;
 `
 
-const FilterComponent = styled.div``
-
 interface Props {
     filterText: string
     modifyFilter: (text: string) => void
 }
 
-class Filters extends Component<Props> {
-    render() {
-        return (
-            <Main>
-                <FilterComponent>
-                    <FilterTextInput
-                        value={this.props.filterText}
-                        onChange={this.props.modifyFilter}
-                        placeholder="Search"
-                    />
-                </FilterComponent>
-            </Main>
-        )
-    }
+const Filters: React.FC<Props> = ({ filterText, modifyFilter }) => {
+    return (
+        <Main>
+            <FilterTextInput
+                value={filterText}
+                onChange={modifyFilter}
+                placeholder="Search"
+            />
+        </Main>
+    )
 }
 
 export default Filters

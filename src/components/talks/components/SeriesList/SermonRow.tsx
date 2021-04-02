@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react"
+import React from "react"
 import styled from "styled-components"
 import format from "date-fns/format"
 
@@ -26,27 +26,24 @@ interface Props {
     seriesName: string
 }
 
-export default class SermonRow extends PureComponent<Props> {
-    render() {
-        const { sermon, seriesName } = this.props
-        return (
-            <Main>
-                <MainTitleRow>
-                    <div>{sermon.name}</div>
-                </MainTitleRow>
+const SermonRow: React.FC<Props> = ({ sermon, seriesName }) => {
+    return (
+        <Main>
+            <MainTitleRow>
+                <div>{sermon.name}</div>
+            </MainTitleRow>
+            <DetailRow>
+                <div>{sermon.passage}</div>
+                <div>{format(new Date(sermon.preachedAt), "do MMM yyyy")}</div>
+            </DetailRow>
+            {sermon.speakers.length > 0 && (
                 <DetailRow>
-                    <div>{sermon.passage}</div>
-                    <div>
-                        {format(new Date(sermon.preachedAt), "do MMM yyyy")}
-                    </div>
+                    <div>{sermon.speakers.map(s => s.name).join(", ")}</div>
+                    <div>{seriesName}</div>
                 </DetailRow>
-                {sermon.speakers.length > 0 && (
-                    <DetailRow>
-                        <div>{sermon.speakers.map(s => s.name).join(", ")}</div>
-                        <div>{seriesName}</div>
-                    </DetailRow>
-                )}
-            </Main>
-        )
-    }
+            )}
+        </Main>
+    )
 }
+
+export default SermonRow

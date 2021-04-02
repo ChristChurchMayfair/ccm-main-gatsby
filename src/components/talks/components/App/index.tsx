@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 import Spinner from "react-spinkit"
 import format from "date-fns/format"
@@ -9,10 +9,6 @@ import Filters from "../Filters"
 import type { Series, Sermon } from "../../types"
 
 interface Props {}
-
-interface State {
-    talksFilter: string
-}
 
 const SpinnerContainer = styled.div`
     width: 100%;
@@ -81,49 +77,38 @@ export const filterSeries = (series: Series, filterText: string): boolean => {
     })
 }
 
-class App extends Component<Props, State> {
-    state = {
-        talksFilter: "",
-    }
+const App: React.FC<Props> = () => {
+    const [talksFilter, setTalksFilter] = React.useState("")
 
-    modifyFilter = (newFilter: string) => {
-        this.setState({
-            talksFilter: newFilter,
-        })
-    }
-
-    render() {
-        const { talksFilter } = this.state
-        return (
-            <WithSeriesesFromSanity>
-                {({ loading, error, serieses }) => {
-                    if (loading || error != null) {
-                        return (
-                            <SpinnerContainer>
-                                <Unrotate>
-                                    <Spinner name="folding-cube" />
-                                </Unrotate>
-                            </SpinnerContainer>
-                        )
-                    }
+    return (
+        <WithSeriesesFromSanity>
+            {({ loading, error, serieses }) => {
+                if (loading || error != null) {
                     return (
-                        <div>
-                            <h1>All Talks</h1>
-                            <Filters
-                                filterText={talksFilter}
-                                modifyFilter={this.modifyFilter}
-                            />
-                            <SeriesList
-                                serieses={serieses.filter(series =>
-                                    filterSeries(series, talksFilter)
-                                )}
-                            />
-                        </div>
+                        <SpinnerContainer>
+                            <Unrotate>
+                                <Spinner name="folding-cube" />
+                            </Unrotate>
+                        </SpinnerContainer>
                     )
-                }}
-            </WithSeriesesFromSanity>
-        )
-    }
+                }
+                return (
+                    <div>
+                        <h1>All Talks</h1>
+                        <Filters
+                            filterText={talksFilter}
+                            modifyFilter={setTalksFilter}
+                        />
+                        <SeriesList
+                            serieses={serieses.filter(series =>
+                                filterSeries(series, talksFilter)
+                            )}
+                        />
+                    </div>
+                )
+            }}
+        </WithSeriesesFromSanity>
+    )
 }
 
 export default App

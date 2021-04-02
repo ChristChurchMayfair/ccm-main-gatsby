@@ -1,7 +1,7 @@
-import React, { PureComponent } from "react"
+import React from "react"
 import styled from "styled-components"
 
-import type { Series, Sermon } from "../../types"
+import type { Series } from "../../types"
 import SermonRow from "./SermonRow"
 import { MEDIA_QUERIES, COLOURS } from "../../constants/styles"
 
@@ -46,35 +46,33 @@ interface Props {
     series: Series
 }
 
-export default class SeriesListItem extends PureComponent<Props> {
-    render() {
-        const { series } = this.props
-        const sortedSermons = [...series.sermons]
-        sortedSermons.sort((a, b) => {
-            return (
-                new Date(b.preachedAt).getTime() -
-                new Date(a.preachedAt).getTime()
-            )
-        })
+const SeriesListItem: React.FC<Props> = ({ series }) => {
+    const sortedSermons = [...series.sermons]
+    sortedSermons.sort((a, b) => {
         return (
-            <List>
-                {sortedSermons.map(sermon => (
-                    <ListItem key={sermon.id}>
-                        <Link
-                            href={sermon.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <HPadding>
-                                <SermonRow
-                                    sermon={sermon}
-                                    seriesName={series.name}
-                                />
-                            </HPadding>
-                        </Link>
-                    </ListItem>
-                ))}
-            </List>
+            new Date(b.preachedAt).getTime() - new Date(a.preachedAt).getTime()
         )
-    }
+    })
+    return (
+        <List>
+            {sortedSermons.map(sermon => (
+                <ListItem key={sermon.id}>
+                    <Link
+                        href={sermon.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <HPadding>
+                            <SermonRow
+                                sermon={sermon}
+                                seriesName={series.name}
+                            />
+                        </HPadding>
+                    </Link>
+                </ListItem>
+            ))}
+        </List>
+    )
 }
+
+export default SeriesListItem

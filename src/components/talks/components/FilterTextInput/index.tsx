@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 import { COLOURS } from "../../constants/styles"
 
@@ -6,10 +6,6 @@ interface Props {
     onChange: (value: string) => void
     placeholder: string
     value: string
-}
-
-interface State {
-    isFocused: boolean
 }
 
 const Main = styled.label<{ isFocused: boolean }>`
@@ -31,33 +27,25 @@ const TextInput = styled.input`
     width: 100%;
 `
 
-class FilterTextInput extends Component<Props, State> {
-    state = { isFocused: false }
+const FilterTextInput: React.FC<Props> = ({ onChange, placeholder, value }) => {
+    const [isFocused, setIsFocused] = React.useState(false)
 
-    onFocus = () => this.setState({ isFocused: true })
-
-    onBlur = () => this.setState({ isFocused: false })
-
-    render() {
-        const { onChange, placeholder, value } = this.props
-        const { isFocused } = this.state
-        return (
-            <Main isFocused={isFocused}>
-                <TextInput
-                    value={value}
-                    type="text"
-                    onChange={event => {
-                        //$FlowFixMe
-                        const newFilterValue: string = event.target.value
-                        onChange(newFilterValue)
-                    }}
-                    placeholder={placeholder}
-                    onFocus={this.onFocus}
-                    onBlur={this.onBlur}
-                />
-            </Main>
-        )
-    }
+    return (
+        <Main isFocused={isFocused}>
+            <TextInput
+                value={value}
+                type="text"
+                onChange={event => {
+                    //$FlowFixMe
+                    const newFilterValue: string = event.target.value
+                    onChange(newFilterValue)
+                }}
+                placeholder={placeholder}
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+            />
+        </Main>
+    )
 }
 
 export default FilterTextInput
