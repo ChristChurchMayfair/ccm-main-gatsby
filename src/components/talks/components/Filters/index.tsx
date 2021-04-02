@@ -9,16 +9,14 @@ const Main = styled.div`
 `
 
 interface Props {
-    filterText: string
-    modifyFilter: (text: string) => void
+    setTalksFilter: (text: string) => void
 }
 
-const Filters: React.FC<Props> = ({ filterText, modifyFilter }) => {
+const Filters: React.FC<Props> = ({ setTalksFilter }) => {
     return (
         <Main>
             <FilterTextInput
-                value={filterText}
-                onChange={modifyFilter}
+                setTalksFilter={setTalksFilter}
                 placeholder="Search"
             />
         </Main>

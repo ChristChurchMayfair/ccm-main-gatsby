@@ -95,10 +95,7 @@ const App: React.FC<Props> = () => {
                 return (
                     <div>
                         <h1>All Talks</h1>
-                        <Filters
-                            filterText={talksFilter}
-                            modifyFilter={setTalksFilter}
-                        />
+                        <Filters setTalksFilter={setTalksFilter} />
                         <SeriesList
                             serieses={serieses.filter(series =>
                                 filterSeries(series, talksFilter)

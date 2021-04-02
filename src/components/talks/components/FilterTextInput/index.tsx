@@ -3,9 +3,8 @@ import styled from "styled-components"
 import { COLOURS } from "../../constants/styles"
 
 interface Props {
-    onChange: (value: string) => void
+    setTalksFilter: (value: string) => void
     placeholder: string
-    value: string
 }
 
 const Main = styled.label<{ isFocused: boolean }>`
@@ -27,18 +26,24 @@ const TextInput = styled.input`
     width: 100%;
 `
 
-const FilterTextInput: React.FC<Props> = ({ onChange, placeholder, value }) => {
+const FilterTextInput: React.FC<Props> = ({ setTalksFilter, placeholder }) => {
     const [isFocused, setIsFocused] = React.useState(false)
+    const [filterValue, setFilterValue] = React.useState("")
 
     return (
         <Main isFocused={isFocused}>
             <TextInput
-                value={value}
+                value={filterValue}
                 type="text"
                 onChange={event => {
                     //$FlowFixMe
                     const newFilterValue: string = event.target.value
-                    onChange(newFilterValue)
+                    setFilterValue(newFilterValue)
+                }}
+                onKeyPress={event => {
+                    if (event.key == "Enter") {
+                        setTalksFilter(filterValue)
+                    }
                 }}
                 placeholder={placeholder}
                 onFocus={() => setIsFocused(true)}
