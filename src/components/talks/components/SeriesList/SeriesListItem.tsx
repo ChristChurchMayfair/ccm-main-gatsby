@@ -13,11 +13,8 @@ const List = styled.ul`
     padding: 0;
 `
 
-const ListItem = styled.li<{ shouldHighlight: boolean }>`
+const ListItem = styled.li`
     border-bottom: 1px solid ${COLOURS.lightGrey};
-    background-color: ${props => {
-        return props.shouldHighlight ? COLOURS.sermonHighlight : null
-    }};
 `
 
 const HPadding = styled.div`
@@ -47,12 +44,11 @@ const Link = styled.a.attrs(() => ({
 
 interface Props {
     series: Series
-    shouldHighlightSermon: (sermon: Sermon) => boolean
 }
 
 export default class SeriesListItem extends PureComponent<Props> {
     render() {
-        const { series, shouldHighlightSermon } = this.props
+        const { series } = this.props
         const sortedSermons = [...series.sermons]
         sortedSermons.sort((a, b) => {
             return (
@@ -65,7 +61,6 @@ export default class SeriesListItem extends PureComponent<Props> {
                 {sortedSermons.map(sermon => (
                     <ListItem
                         key={sermon.id}
-                        shouldHighlight={shouldHighlightSermon(sermon)}
                     >
                         <Link
                             href={sermon.url}

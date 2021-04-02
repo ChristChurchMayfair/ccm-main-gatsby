@@ -117,9 +117,6 @@ class App extends Component<Props, State> {
                                 serieses={serieses.filter(series =>
                                     filterSeries(series, talksFilter)
                                 )}
-                                shouldHighlightSermon={sermon => {
-                                    return filterSermon(sermon, talksFilter)
-                                }}
                             />
                         </div>
                     )
