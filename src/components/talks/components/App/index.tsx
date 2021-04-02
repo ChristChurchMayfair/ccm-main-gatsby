@@ -11,7 +11,6 @@ import type { Series, Sermon } from "../../types"
 interface Props {}
 
 interface State {
-    selectedSeriesId: string | null
     talksFilter: string
 }
 
@@ -84,14 +83,7 @@ export const filterSeries = (series: Series, filterText: string): boolean => {
 
 class App extends Component<Props, State> {
     state = {
-        selectedSeriesId: null,
         talksFilter: "",
-    }
-
-    selectSeries = (seriesId: string) => {
-        this.setState({
-            selectedSeriesId: seriesId,
-        })
     }
 
     modifyFilter = (newFilter: string) => {
