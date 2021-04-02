@@ -5,8 +5,6 @@ import format from "date-fns/format"
 
 import SeriesList from "../SeriesList"
 import WithSeriesesFromSanity from "../WithSerieses"
-import Modal from "../Modal"
-import SeriesDetail from "../SeriesDetail"
 import Filters from "../Filters"
 import type { Series, Sermon } from "../../types"
 
@@ -103,7 +101,7 @@ class App extends Component<Props, State> {
     }
 
     render() {
-        const { selectedSeriesId, talksFilter } = this.state
+        const { talksFilter } = this.state
         return (
             <WithSeriesesFromSanity>
                 {({ loading, error, serieses }) => {
@@ -116,12 +114,9 @@ class App extends Component<Props, State> {
                             </SpinnerContainer>
                         )
                     }
-                    const selectedSeries = serieses.find(
-                        s => s.id === selectedSeriesId
-                    )
                     return (
                         <div>
-                            <h1>Latest Talks</h1>
+                            <h1>All Talks</h1>
                             <Filters
                                 filterText={talksFilter}
                                 modifyFilter={this.modifyFilter}
@@ -130,32 +125,10 @@ class App extends Component<Props, State> {
                                 serieses={serieses.filter(series =>
                                     filterSeries(series, talksFilter)
                                 )}
-                                onSelectSeries={this.selectSeries}
+                                shouldHighlightSermon={sermon => {
+                                    return filterSermon(sermon, talksFilter)
+                                }}
                             />
-                            {
-                                <Modal
-                                    isOpen={selectedSeries != null}
-                                    onClose={() => {
-                                        this.setState({
-                                            selectedSeriesId: null,
-                                        })
-                                    }}
-                                >
-                                    {selectedSeries != null && (
-                                        <div>
-                                            <SeriesDetail
-                                                series={selectedSeries}
-                                                shouldHighlightSermon={sermon => {
-                                                    return filterSermon(
-                                                        sermon,
-                                                        talksFilter
-                                                    )
-                                                }}
-                                            />
-                                        </div>
-                                    )}
-                                </Modal>
-                            }
                         </div>
                     )
                 }}

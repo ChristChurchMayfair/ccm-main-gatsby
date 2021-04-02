@@ -13,22 +13,29 @@ const DetailRow = styled.div`
     flex-flow row nowrap;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.7em;
+    font-size: 1.1em;
+`
+
+const MainTitleRow = styled.div`
+    font-weight: bold;
+    font-size: 1.2em;
 `
 
 interface Props {
     sermon: Sermon
+    seriesName: string
 }
 
 export default class SermonRow extends PureComponent<Props> {
     render() {
-        const { sermon } = this.props
-        const passage = sermon.passage
+        const { sermon, seriesName } = this.props
         return (
             <Main>
-                <div>{sermon.name}</div>
+                <MainTitleRow>
+                    <div>{sermon.name}</div>
+                </MainTitleRow>
                 <DetailRow>
-                    <div>{passage}</div>
+                    <div>{sermon.passage}</div>
                     <div>
                         {format(new Date(sermon.preachedAt), "do MMM yyyy")}
                     </div>
@@ -36,6 +43,7 @@ export default class SermonRow extends PureComponent<Props> {
                 {sermon.speakers.length > 0 && (
                     <DetailRow>
                         <div>{sermon.speakers.map(s => s.name).join(", ")}</div>
+                        <div>{seriesName}</div>
                     </DetailRow>
                 )}
             </Main>
