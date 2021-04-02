@@ -70,7 +70,7 @@ export const filterSeries = (series: Series, filterText: string): boolean => {
     return words.every(word => {
         const seriesNameMatches = stringsMatch(series.name, word)
         const seriesSubtitleMatches = stringsMatch(series.subtitle, word)
-        const hasASermonMatch = series.sermons.every(sermon =>
+        const hasASermonMatch = series.sermons.some(sermon =>
             filterSermon(sermon, word)
         )
         return seriesNameMatches || seriesSubtitleMatches || hasASermonMatch
