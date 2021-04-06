@@ -34,7 +34,7 @@ schedule:
     link: https://youtu.be/oR49gaJNBPg
   - time: 2021-04-04T11:30:00+01:00
     description: Live service, in person only (No Sunday School)
-  - time: 2021-04-11T10:00:00+01:00
+  - time: 2021-04-11T10:30:00+01:00
     description: In person and online. (No Sunday School)
     link: https://www.youtube.com/c/ChristChurchMayfairLive
 ---
