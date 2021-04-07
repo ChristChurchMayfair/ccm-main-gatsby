@@ -37,6 +37,16 @@ schedule:
   - time: 2021-04-11T10:30:00+01:00
     description: In person and online. (No Sunday School)
     link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-04-18T10:30:00+01:00
+    description: In person and online. Limited Sunday School (Week C)
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-04-25T10:30:00+01:00
+    description: In person and online. Limited Sunday School (Week D)
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    
+    
+    
+    
 ---
 Normal mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
 
