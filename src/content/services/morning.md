@@ -38,10 +38,10 @@ schedule:
     description: In person and online. (No Sunday School)
     link: https://youtu.be/OYeU0dtpXdc
   - time: 2021-04-18T10:30:00+01:00
-    description: In person and online. Limited Sunday School (Week C)
+    description: In person and online. Limited Sunday School (Week A)
     link: https://youtu.be/NwbrDstx7Nk
   - time: 2021-04-25T10:30:00+01:00
-    description: In person and online. Limited Sunday School (Week D)
+    description: In person and online. Limited Sunday School (Week B)
     link: https://www.youtube.com/c/ChristChurchMayfairLive
     
     
