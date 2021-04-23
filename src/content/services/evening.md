@@ -13,47 +13,40 @@ schedule:
   - time: 2021-01-31T18:00:00+00:00
     description: Online only.
     link: https://youtu.be/OLqQWd-rM0g
-  - time: 2021-03-07T18:00:00+00:00
-    description: In person and online.
-    link: https://youtu.be/MB39iq-7LAo
-  
-  - time: 2021-03-14T16:30:00+00:00
-    description: Live service, in person only.
-  - time: 2021-03-14T18:00:00+00:00
-    description: Live service, in person and online.
-    link: https://youtu.be/EtFhlO8Rt6M
-  
-  - time: 2021-03-21T16:30:00+00:00
-    description: Live service, in person only.
-  - time: 2021-03-21T18:00:00+00:00
-    description: Live service, in person and online.
-    link: https://youtu.be/nXF7nWhXoOU
-  
-  - time: 2021-03-28T16:30:00+01:00
-    description: Live service, in person only.
-  - time: 2021-03-28T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/dTK1oDRuODM
     
   - time: 2021-04-04T18:00:00+01:00
     description: Live service, in person and online.
     link: https://youtu.be/loODDrPRkuc
   
-  - time: 2021-04-11T16:30:00+01:00
-    description: Live service, in person only.
-  - time: 2021-04-11T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/vkNv07UG2xg
-  
-  - time: 2021-04-18T16:30:00+01:00
-    description: Live service, in person only.
-  - time: 2021-04-18T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/CGI9URoCDTc
-  
   - time: 2021-04-25T16:30:00+01:00
     description: Live service, in person only.
   - time: 2021-04-25T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    
+  - time: 2021-05-02T16:30:00+01:00
+    description: Live service, in person only.
+  - time: 2021-05-02T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-05-09T16:30:00+01:00
+    description: Live service, in person only.
+  - time: 2021-05-09T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-05-16T16:30:00+01:00
+    description: Live service, in person only.
+  - time: 2021-05-16T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-05-23T16:30:00+01:00
+    description: Live service, in person only.
+  - time: 2021-05-23T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-05-30T16:30:00+01:00
+    description: Live service, in person only.
+  - time: 2021-05-30T18:00:00+01:00
     description: Live service, in person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
 ---
