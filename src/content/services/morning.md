@@ -19,32 +19,19 @@ schedule:
   - time: 2021-03-07T10:30:00+00:00
     description: In person and online. (No Sunday School)
     link: https://youtu.be/KRcFG24cXLw 
-  - time: 2021-03-14T10:30:00+00:00
-    description: All-age service, in person and online.   
-    link: https://youtu.be/CMUe7dXA9k0
-  - time: 2021-03-21T10:30:00+00:00
-    description: In person and online. (No Sunday School)   
-    link: https://youtu.be/ZSKke3qGm6A
-  - time: 2021-03-28T10:30:00+01:00
-    description: In person and online. (No Sunday School)   
-    link: https://youtu.be/KmSpM4sjJ6s
-    
-  - time: 2021-04-04T10:00:00+01:00
-    description: All-age service, in person and online.
-    link: https://youtu.be/oR49gaJNBPg
-  - time: 2021-04-04T11:30:00+01:00
-    description: Live service, in person only (No Sunday School)
-  - time: 2021-04-11T10:30:00+01:00
-    description: In person and online. (No Sunday School)
-    link: https://youtu.be/OYeU0dtpXdc
-  - time: 2021-04-18T10:30:00+01:00
-    description: In person and online. Limited Sunday School (Week A)
-    link: https://youtu.be/NwbrDstx7Nk
+
   - time: 2021-04-25T10:30:00+01:00
     description: In person and online. Limited Sunday School (Week B)
     link: https://www.youtube.com/c/ChristChurchMayfairLive
-    
-    
+  - time: 2021-05-02T10:30:00+01:00
+    description: In person and online. Limited Sunday School (Week A)
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-05-09T10:30:00+01:00
+    description: In person and online. Limited Sunday School (Week B)
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-05-16T10:30:00+01:00
+    description: In person and online. Limited Sunday School (Week A)
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
     
     
 ---
