@@ -22,7 +22,7 @@ schedule:
 
   - time: 2021-04-25T10:30:00+01:00
     description: In person and online. Limited Sunday School (Week B)
-    link: https://youtu.be/a1C_uydthAI
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
   - time: 2021-05-02T10:30:00+01:00
     description: In person and online. Limited Sunday School (Week A)
     link: https://www.youtube.com/c/ChristChurchMayfairLive
