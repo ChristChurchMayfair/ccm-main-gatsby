@@ -22,7 +22,6 @@ schedule:
     description: Live service, in person only.
   - time: 2021-04-25T18:00:00+01:00
     description: Live service, in person and online.
-    link: https://youtu.be/QtYboTfGvwM
     
   - time: 2021-05-02T16:30:00+01:00
     description: Live service, in person only.
