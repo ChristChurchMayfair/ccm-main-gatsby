@@ -14,6 +14,7 @@ const DetailRow = styled.div`
     justify-content: space-between;
     align-items: center;
     font-size: 1.1em;
+    column-gap: 1.0rem;
 `
 
 const MainTitleRow = styled.div`
