@@ -19,7 +19,6 @@ const links: Array<{ path: string; title: string }> = [
     { path: "/aboutus", title: "About Us" },
     { path: "/accessibility", title: "Accessibility" },
     { path: "/staff", title: "Staff" },
-    { path: "/covid19-policy-and-risk-assessment", title: "Covid-19 Policy" },
     { path: "/givingform", title: "Giving Form" },
     { path: "/complaints", title: "Complaints" },
 ]
