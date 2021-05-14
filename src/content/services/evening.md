@@ -37,7 +37,7 @@ schedule:
     description: Live service, in person only.
   - time: 2021-05-16T18:00:00+01:00
     description: Live service, in person and online.
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    link: https://youtu.be/PZxlZuaVVyU
   - time: 2021-05-23T16:30:00+01:00
     description: Live service, in person only.
   - time: 2021-05-23T18:00:00+01:00
