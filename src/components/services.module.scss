@@ -124,7 +124,7 @@
     //grid-template-areas: "sessionTime"
     //"sessionDescription"
     //"sessionLink";
-    grid-template-rows: 50px 50px;
+    grid-template-rows: 40px 30px;
     grid-template-areas: "sessionTime"
     "sessionDescription";
     row-gap: 2px;
@@ -137,7 +137,7 @@
 
     @media only screen and (max-width: 968px) {
         //grid-template-rows: 50px 110px 50px;
-        grid-template-rows: 50px 60px;
+        grid-template-rows: 40px 40px;
         font-size: 0.9em;
     }
 }
