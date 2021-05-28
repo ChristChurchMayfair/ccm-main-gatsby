@@ -85,7 +85,6 @@ const Service: FC<ServiceProps> = ({
                     <div className={styles.sessionDescription}>
                         {service?.description}
                     </div>
-                    {streamlink}
                 </div>
             )
         })
