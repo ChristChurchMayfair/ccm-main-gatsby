@@ -59,7 +59,7 @@ const Service: FC<ServiceProps> = ({
 
         sessions = nextServices.map(service => {
             let streamlink = (
-                <div className={styles.streamlink}>In Person Only</div>
+                <div className={styles.streamlink}>Join Us In Person</div>
             )
             if (service?.link != undefined) {
                 streamlink = (
@@ -69,7 +69,7 @@ const Service: FC<ServiceProps> = ({
                         target={"_blank"}
                         rel={"noopener noreferrer"}
                     >
-                        Watch online
+                        Join Us In Person
                     </a>
                 )
             }
