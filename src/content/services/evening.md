@@ -43,11 +43,6 @@ schedule:
   - time: 2021-05-23T18:00:00+01:00
     description: Live service, in person and online.
     link: https://youtu.be/UHQ3ifClekY
-  - time: 2021-05-30T16:30:00+01:00
-    description: Live service, in person only.
-  - time: 2021-05-30T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/KrU7m_U9Bj4
   
   - time: 2021-06-02T16:30:00+01:00
     description: Live service
