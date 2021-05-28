@@ -35,9 +35,9 @@ schedule:
   - time: 2021-05-23T10:30:00+01:00
     description: In person and online with Sunday School.
     link: https://youtu.be/RKXQ2gRDgak   
-  - time: 2021-05-30T10:30:00+01:00
-    description: In person and online with Sunday School.
-    link: https://youtu.be/wRO6EDMGCns
+
+  - time: 2021-06-02T10:30:00+01:00
+    description: In person with Sunday School.
 ---
 Normal mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
 
