@@ -36,7 +36,7 @@ schedule:
     description: In person and online with Sunday School.
     link: https://youtu.be/RKXQ2gRDgak   
 
-  - time: 2021-06-02T10:30:00+01:00
+  - time: 2021-06-06T10:30:00+01:00
     description: Live service with Sunday School.
     link: mailto:info@christchurchmayfair.org?subject=Booking%20tickets%20for%20Sunday
 ---
