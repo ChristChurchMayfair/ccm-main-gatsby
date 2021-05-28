@@ -136,7 +136,8 @@
     line-height: 1em;
 
     @media only screen and (max-width: 968px) {
-        grid-template-rows: 50px 110px 50px;
+        //grid-template-rows: 50px 110px 50px;
+        grid-template-rows: 50px 60px;
         font-size: 0.9em;
     }
 }
