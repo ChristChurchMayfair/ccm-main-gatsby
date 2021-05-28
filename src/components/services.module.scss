@@ -120,10 +120,9 @@
 
 .session {
     display: grid;
-    grid-template-rows: 50px 50px 50px;
+    grid-template-rows: 50px 50px;
     grid-template-areas: "sessionTime"
-    "sessionDescription"
-    "sessionLink";
+    "sessionDescription";
     row-gap: 2px;
 
     color: var(--light-colour);
