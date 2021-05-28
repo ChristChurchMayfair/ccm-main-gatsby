@@ -38,7 +38,6 @@ schedule:
 
   - time: 2021-06-06T10:30:00+01:00
     description: Live service with Sunday School.
-    link: mailto:info@christchurchmayfair.org?subject=Booking%20tickets%20for%20Sunday
 ---
 Normal mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
 
