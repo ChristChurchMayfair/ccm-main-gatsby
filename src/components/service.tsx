@@ -59,7 +59,7 @@ const Service: FC<ServiceProps> = ({
 
         sessions = nextServices.map(service => {
             let streamlink = (
-                <!--<div className={styles.streamlink}>Join Us In Person</div>-->
+                <div className={styles.streamlink}>Join Us In Person</div>
             )
             if (service?.link != undefined) {
                 streamlink = (
@@ -85,7 +85,6 @@ const Service: FC<ServiceProps> = ({
                     <div className={styles.sessionDescription}>
                         {service?.description}
                     </div>
-                    {streamlink}
                 </div>
             )
         })
