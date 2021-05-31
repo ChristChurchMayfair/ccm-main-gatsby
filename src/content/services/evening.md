@@ -43,11 +43,9 @@ schedule:
   - time: 2021-05-23T18:00:00+01:00
     description: Live service, in person and online.
     link: https://youtu.be/UHQ3ifClekY
-  - time: 2021-05-30T16:30:00+01:00
-    description: Live service, in person only.
-  - time: 2021-05-30T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/KrU7m_U9Bj4
+  
+  - time: 2021-06-06T16:30:00+01:00
+  - time: 2021-06-06T18:00:00+01:00
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
