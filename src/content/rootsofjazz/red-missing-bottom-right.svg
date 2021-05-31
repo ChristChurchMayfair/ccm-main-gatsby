@@ -1,0 +1,17 @@
+
+<svg width="202px" height="202px" viewBox="0 0 202 202" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,106 L0,0 L106,0 L212,0 L212,106 L106,106 L106,212 L0,212 L0,106 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Red-Cut-Out" transform="translate(-5.000000, -7.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <circle id="Oval-2" stroke="#EE2930" stroke-width="28" mask="url(#mask-2)" cx="106" cy="108" r="87"></circle>
+        </g>
+    </g>
+</svg>
