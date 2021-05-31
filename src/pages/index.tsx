@@ -211,11 +211,11 @@ const IndexPage = () => {
                 </a>
             </Section>
 
+            <RootsOfJazzPromo />
+
             <CovidNotice />
 
             <Services />
-
-            <RootsOfJazzPromo />
 
             <LondonLivingPromo />
 
