@@ -1,0 +1,166 @@
+@import "../mixins/button";
+
+.rootsOfJazzPromo {
+    --background-color: rgb(225, 210, 185);
+    --light-color: #faf8df;
+    --highlight-color: #dda443;
+    --text-color: rgb(40, 50, 70);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    background-image: url("../content/rootsofjazz/orange-top-right-small.svg"),
+        url("../content/rootsofjazz/blue-top.svg"),
+        url("../content/rootsofjazz/red-missing-bottom-right.svg"),
+        url("../content/rootsofjazz/blue-whole.svg"),
+        url("../content/rootsofjazz/orange-bottom-right.svg"),
+        url("../content/rootsofjazz/red-missing-top-left-smaller.svg"),
+        url("../content/rootsofjazz/blue-whole.svg"),
+        url("../content/rootsofjazz/blue-bottom.svg"),
+        url("../content/rootsofjazz/blue-left.svg"),
+        url("../content/rootsofjazz/orange-top-right.svg");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position-y: 20px, 20px, 40px, 85px, 450px, 560px, 525px, 650px, 500px, 535px;
+    background-position-x: calc(50% - 475px), calc(50% - 405px), calc(50% - 0px),
+        calc(50% + 53px), calc(50% - 175px), calc(50% - 395px), calc(50% - 395px), calc(50% - 185px),calc(50% - 25px), calc(50% + 60px);
+    background-size: 100px, 105px, 200px, 105px, 125px, 158px, 105px, 105px, 50px, 125px;
+    height: 700px;
+
+    @media only screen and (max-width: 968px) {
+        background-position-y: 20px, 
+        20px, 
+        40px, 
+        85px, 
+        450px, 
+        560px, 
+        525px, 
+        650px, 
+        500px, 
+        535px;
+        background-position-x: calc(50% - 475px), 
+        calc(50% - 405px), 
+        calc(50% + 275px),
+        calc(50% + 53px + 275px), 
+        calc(50% - 175px + 275px), 
+        calc(50% - 395px + 275px), 
+        calc(50% - 395px + 275px), 
+        calc(50% - 185px + 275px),
+        calc(50% - 25px + 300px), 
+        calc(50% + 60px + 300px);
+        background-size: 100px, 
+        105px, 
+        200px, 
+        105px, 
+        125px, 
+        158px, 
+        105px, 
+        105px, 
+        50px, 
+        125px;
+    }
+
+    .header {
+        display: block;
+        font-family: "strawfordblack";
+        text-transform: none;
+        position: relative;
+        width: 600px;
+        height: 400px;
+        font-size: 5em;
+
+        @media only screen and (max-width: 968px) {
+            font-size: 4em;
+        }
+
+        .the {
+            display: block;
+            position: absolute;
+            left: 0px;
+        }
+        .roots {
+            display: block;
+            position: absolute;
+            top: 0.6em;
+            left: 5px;
+        }
+
+        .of {
+            display: block;
+            position: absolute;
+            top: 1.2em;
+            left: 1.8em;
+        }
+
+        .jazz {
+            display: block;
+            position: absolute;
+            top: 1.8em;
+            left: 1.4em;
+        }
+    }
+
+    > div {
+        grid-area: content;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "header header header header header header header header . . . ."
+            "text text text text text text text text . . . ."
+            "buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons buttons";
+        grid-column-gap: var(--general-padding);
+        margin-top: calc(var(--general-padding) * 2);
+        margin-bottom: calc(var(--general-padding) * 2);
+
+        @media only screen and (max-width: 968px) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "header"
+                "text"
+                "buttons";
+        }
+    }
+}
+
+.header {
+    grid-area: header;
+    margin-bottom: var(--general-padding);
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    left: calc(50%);
+    top: 200px;
+    
+    width: calc(50%);
+    margin-bottom: var(--general-padding);
+    @media only screen and (max-width: 968px) {
+        left: 0px;
+        top: 290px;
+        width: calc(100%);
+    }
+}
+
+.buttons {
+    position: absolute;
+    width: 100%;
+    top: 330px;
+    left: calc(50%);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: var(--general-padding);
+        top: 425px;
+        left: 0px;
+    }
+}
+
+.button {
+    @include button;
+    grid-area: auto;
+    margin-top: 0;
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
