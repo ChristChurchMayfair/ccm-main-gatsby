@@ -9,4 +9,4 @@ mobileImage: /assets/images/mobile/LLbannerbg.jpg
 findOutMoreText: Learn more
 findOutMoreLink: /londonliving
 ---
-Join us on the **1st July** for an evening of live music exploring the intertwining stories of the roots of Jazz music and the Christian faith. 
+Join us on the **1st July** for an evening of live music exploring the intertwining stories Jazz and the Christian faith. 

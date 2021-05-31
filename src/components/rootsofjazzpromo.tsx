@@ -35,7 +35,7 @@ const RootsOfJazzPromo = () => {
                     }}
                 />
                 <div className={styles.buttons}>
-                    <a className={styles.button}>Tickets</a>
+                    <a className={styles.button}>Tickets On Sale Soon</a>
                 </div>
             </div>
         </Section>
