@@ -35,7 +35,12 @@ const RootsOfJazzPromo = () => {
                     }}
                 />
                 <div className={styles.buttons}>
-                    <a className={styles.button} href="https://ccmayfair.churchsuite.co.uk/events/ybe0nr2r">Buy Tickets</a>
+                    <a
+                        className={styles.button}
+                        href="https://ccmayfair.churchsuite.co.uk/events/ybe0nr2r"
+                    >
+                        Buy Tickets
+                    </a>
                 </div>
             </div>
         </Section>
