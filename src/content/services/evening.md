@@ -46,6 +46,15 @@ schedule:
   
   - time: 2021-06-06T16:30:00+01:00
   - time: 2021-06-06T18:00:00+01:00
+
+  - time: 2021-06-13T16:30:00+01:00
+  - time: 2021-06-13T18:00:00+01:00
+
+  - time: 2021-06-20T16:30:00+01:00
+  - time: 2021-06-20T18:00:00+01:00
+
+  - time: 2021-06-27T16:30:00+01:00
+  - time: 2021-06-27T18:00:00+01:00
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
