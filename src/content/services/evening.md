@@ -57,7 +57,9 @@ schedule:
   - time: 2021-06-27T18:00:00+01:00
 
   - time: 2021-07-04T16:30:00+01:00
+    link: https://ccmayfair.churchsuite.co.uk/events/flhnpdbt?tickets=OS64
   - time: 2021-07-04T18:00:00+01:00
+    link: https://ccmayfair.churchsuite.co.uk/events/knhxd6bh?tickets=l6Ex
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
