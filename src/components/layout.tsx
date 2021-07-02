@@ -24,6 +24,7 @@ interface Props {
     headerColour?: HeaderColour
     blurHeaderBackground?: boolean
     robotsMetaData?: RobotsMetaData
+    showFooter?: boolean
 }
 const Layout: React.FC<Props> = ({
     headerColour,
@@ -33,7 +34,16 @@ const Layout: React.FC<Props> = ({
     description,
     openGraphData,
     robotsMetaData,
+    showFooter,
 }) => {
+    let footer = <></>
+    if (
+        showFooter === null ||
+        showFooter === undefined ||
+        showFooter === true
+    ) {
+        footer = <Footer />
+    }
     return (
         <>
             <Head
@@ -47,7 +57,7 @@ const Layout: React.FC<Props> = ({
                 blurBackground={blurHeaderBackground}
             />
             <main>{children}</main>
-            <Footer />
+            {footer}
             <CookieNotice />
         </>
     )
