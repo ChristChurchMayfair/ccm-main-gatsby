@@ -12,7 +12,6 @@ import SectionText from "../components/section-text"
 import Hero from "../components/hero"
 import LondonLivingPromo from "../components/london-living-promo"
 import CovidNotice from "../components/covid-notice"
-import RootsOfJazzPromo from "../components/rootsofjazzpromo"
 
 const IndexPageQuery = graphql`
     query Homepage {
@@ -189,8 +188,6 @@ const IndexPage = () => {
                     Sunday Services
                 </a>
             </Section>
-
-            <RootsOfJazzPromo />
 
             <CovidNotice />
 
