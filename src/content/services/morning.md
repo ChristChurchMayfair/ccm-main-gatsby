@@ -47,6 +47,9 @@ schedule:
   - time: 2021-07-04T10:30:00+01:00
     description: Service with Sunday School.
     link: https://ccmayfair.churchsuite.co.uk/events/ozmlag5c?tickets=IsItVCj4
+  - time: 2021-07-04T10:30:00+01:00
+    description: Service with Sunday School.
+    link: https://ccmayfair.churchsuite.co.uk/events/tgfrc10o?tickets=08hwVdPc
 ---
 Normal mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
 
