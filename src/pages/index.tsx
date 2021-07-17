@@ -115,28 +115,7 @@ const IndexPage = () => {
     }, [carouselImages.length])
 
     return (
-        <Layout
-            title={undefined}
-            headerColour="light"
-            // Delete this after Christmas
-            openGraphData={{
-                title: data.site!.siteMetadata!.title!,
-                type: "website",
-                siteName: data.site!.siteMetadata!.title!,
-                url: data.site!.siteMetadata!.url!,
-                description: data.site!.siteMetadata!.description!,
-                images: [
-                    {
-                        imageUrl: data.xmasPromoImage!.childImageSharp!.fixed!
-                            .src,
-                        imageAlternativeText:
-                            "Christmas at Christ Church Mayfair",
-                    },
-                ],
-                email: data.site!.siteMetadata!.email!,
-                phoneNumber: data.site!.siteMetadata!.officePhoneNumber!,
-            }}
-        >
+        <Layout title={undefined} headerColour="light">
             <Hero
                 sectionId="home-hero"
                 overlayCaption={data.mainInfo!.frontmatter!.overlayCaption}

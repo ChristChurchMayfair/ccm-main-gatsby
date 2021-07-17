@@ -13,6 +13,7 @@ const BasicPage: React.FC<BasicPageProps> = ({ data }) => (
         title={data.mainInfo!.frontmatter!.title}
         headerColour="dark"
         robotsMetaData={data.mainInfo!.frontmatter!.robotsMetaData}
+        showFooter={data.mainInfo?.frontmatter?.showFooter ?? true}
     >
         <BasicText html={data.mainInfo!.html} />
     </Layout>
@@ -31,6 +32,7 @@ export const query = graphql`
                     allowCaching
                     allowPageSnippets
                 }
+                showFooter
             }
         }
     }

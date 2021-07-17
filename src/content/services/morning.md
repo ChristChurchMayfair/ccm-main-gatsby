@@ -19,21 +19,40 @@ schedule:
   - time: 2021-03-07T10:30:00+00:00
     description: In person and online. (No Sunday School)
     link: https://youtu.be/KRcFG24cXLw 
-  - time: 2021-03-14T10:30:00+00:00
-    description: All-age service, in person and online.   
-    link: https://youtu.be/CMUe7dXA9k0
-  - time: 2021-03-21T10:30:00+00:00
-    description: In person and online. (No Sunday School)   
-    link: https://youtu.be/ZSKke3qGm6A
-  - time: 2021-03-28T10:30:00+01:00
-    description: In person and online. (No Sunday School)   
-    link: https://youtu.be/KmSpM4sjJ6s
-    
-  - time: 2021-04-04T10:00:00+01:00
-    description: All-age service, in person and online.
+
+  - time: 2021-04-25T10:30:00+01:00
+    description: In person and online. Limited Sunday School (Week B)
     link: https://www.youtube.com/c/ChristChurchMayfairLive
-  - time: 2021-04-04T11:30:00+01:00
-    description: Live service, in person only (No Sunday School)
+  - time: 2021-05-02T10:30:00+01:00
+    description: In person and online. Limited Sunday School (Week A)
+    link: https://youtu.be/3aBaB-EZPHA
+  - time: 2021-05-09T10:30:00+01:00
+    description: In person and online. Limited Sunday School (Week B)
+    link: https://youtu.be/VcYbGrzQIGc
+  - time: 2021-05-16T10:30:00+01:00
+    description: In person and online. Limited Sunday School (Week A)
+    link: https://youtu.be/M04rapTuc4M  
+  - time: 2021-05-23T10:30:00+01:00
+    description: In person and online with Sunday School.
+    link: https://youtu.be/RKXQ2gRDgak   
+
+  - time: 2021-06-06T10:30:00+01:00
+    description: Service with Sunday School.
+  - time: 2021-06-13T10:30:00+01:00
+    description: Service with Sunday School.
+  - time: 2021-06-20T10:30:00+01:00
+    description: Service with Sunday School.
+  - time: 2021-06-27T10:30:00+01:00
+    description: Service with Sunday School.
+  - time: 2021-07-04T10:30:00+01:00
+    description: Service with Sunday School.
+    link: https://ccmayfair.churchsuite.co.uk/events/ozmlag5c?tickets=IsItVCj4
+  - time: 2021-07-11T10:30:00+01:00
+    description: Service with Sunday School.
+    link: https://ccmayfair.churchsuite.co.uk/events/tgfrc10o?tickets=08hwVdPc
+  - time: 2021-07-18T10:30:00+01:00
+    description: Service with Sunday School.
+    link: https://ccmayfair.churchsuite.co.uk/events/kmatba0h?tickets=MK4CBFSc
 ---
 Normal mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
 
