@@ -1,21 +1,14 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 import Spinner from "react-spinkit"
 import format from "date-fns/format"
 
 import SeriesList from "../SeriesList"
 import WithSeriesesFromSanity from "../WithSerieses"
-import Modal from "../Modal"
-import SeriesDetail from "../SeriesDetail"
 import Filters from "../Filters"
 import type { Series, Sermon } from "../../types"
 
 interface Props {}
-
-interface State {
-    selectedSeriesId: string | null
-    talksFilter: string
-}
 
 const SpinnerContainer = styled.div`
     width: 100%;
@@ -40,7 +33,7 @@ export const filterSermon = (sermon: Sermon, filterText: string): boolean => {
     const trimmedFilter = filterText.trim()
     const words = trimmedFilter.split(" ").filter(w => w.length > 0)
 
-    return words.some(word => {
+    return words.every(word => {
         const nameMatches = stringsMatch(sermon.name, word)
         const speakerNameMatches = sermon.speakers.some(speaker =>
             stringsMatch(speaker.name, word)
@@ -84,84 +77,35 @@ export const filterSeries = (series: Series, filterText: string): boolean => {
     })
 }
 
-class App extends Component<Props, State> {
-    state = {
-        selectedSeriesId: null,
-        talksFilter: "",
-    }
+const App: React.FC<Props> = () => {
+    const [talksFilter, setTalksFilter] = React.useState("")
 
-    selectSeries = (seriesId: string) => {
-        this.setState({
-            selectedSeriesId: seriesId,
-        })
-    }
-
-    modifyFilter = (newFilter: string) => {
-        this.setState({
-            talksFilter: newFilter,
-        })
-    }
-
-    render() {
-        const { selectedSeriesId, talksFilter } = this.state
-        return (
-            <WithSeriesesFromSanity>
-                {({ loading, error, serieses }) => {
-                    if (loading || error != null) {
-                        return (
-                            <SpinnerContainer>
-                                <Unrotate>
-                                    <Spinner name="folding-cube" />
-                                </Unrotate>
-                            </SpinnerContainer>
-                        )
-                    }
-                    const selectedSeries = serieses.find(
-                        s => s.id === selectedSeriesId
-                    )
+    return (
+        <WithSeriesesFromSanity>
+            {({ loading, error, serieses }) => {
+                if (loading || error != null) {
                     return (
-                        <div>
-                            <h1>Latest Talks</h1>
-                            <Filters
-                                filterText={talksFilter}
-                                modifyFilter={this.modifyFilter}
-                            />
-                            <SeriesList
-                                serieses={serieses.filter(series =>
-                                    filterSeries(series, talksFilter)
-                                )}
-                                onSelectSeries={this.selectSeries}
-                            />
-                            {
-                                <Modal
-                                    isOpen={selectedSeries != null}
-                                    onClose={() => {
-                                        this.setState({
-                                            selectedSeriesId: null,
-                                        })
-                                    }}
-                                >
-                                    {selectedSeries != null && (
-                                        <div>
-                                            <SeriesDetail
-                                                series={selectedSeries}
-                                                shouldHighlightSermon={sermon => {
-                                                    return filterSermon(
-                                                        sermon,
-                                                        talksFilter
-                                                    )
-                                                }}
-                                            />
-                                        </div>
-                                    )}
-                                </Modal>
-                            }
-                        </div>
+                        <SpinnerContainer>
+                            <Unrotate>
+                                <Spinner name="folding-cube" />
+                            </Unrotate>
+                        </SpinnerContainer>
                     )
-                }}
-            </WithSeriesesFromSanity>
-        )
-    }
+                }
+                return (
+                    <div>
+                        <h1>All Talks</h1>
+                        <Filters setTalksFilter={setTalksFilter} />
+                        <SeriesList
+                            serieses={serieses.filter(series =>
+                                filterSeries(series, talksFilter)
+                            )}
+                        />
+                    </div>
+                )
+            }}
+        </WithSeriesesFromSanity>
+    )
 }
 
 export default App

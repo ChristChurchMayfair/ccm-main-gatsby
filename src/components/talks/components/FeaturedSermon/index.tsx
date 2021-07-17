@@ -3,7 +3,6 @@ import styled from "styled-components"
 import format from "date-fns/format"
 
 import type { Sermon, Series } from "../../types"
-import placeholderImage from "../../images/placeholderImage"
 import Card from "../Card"
 
 const Text = styled.div`
@@ -32,11 +31,14 @@ class FeaturedSermon extends PureComponent<Props> {
         const passage = sermon.passage
         return (
             <Card
-                imageUrl={series.image3x2Url ?? placeholderImage}
                 renderDetails={() => (
                     <Fragment>
                         <SermonName>{sermon.name}</SermonName>
-                        {passage != null && <Secondary>{passage}</Secondary>}
+                        <Secondary>
+                            {passage != null && passage != ""
+                                ? passage
+                                : sermon.name}
+                        </Secondary>
                         <Secondary>{format(date, "dddd D MMM yyyy")}</Secondary>
                     </Fragment>
                 )}
