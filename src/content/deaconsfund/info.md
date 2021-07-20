@@ -36,7 +36,7 @@ Support will be decided case-by-case, and will be accompanied by detailed financ
 
 The current deacons are: 
 * Jal Quinn & Adrian Valeriano (10.15 service) 
-* Susie Dye & Jo Hext  (6pm service)
+* Susie Dye & Jo Duckering  (6pm service)
 
 We are all volunteers and members of the church congregations. 
 
