@@ -2,73 +2,30 @@
 title: Evenings
 normalTime: "6.00pm"
 mainImage: ../assets/images/desktop/hand_in_the_air.jpg
-schedule:
-  - time: 2020-12-06T16:30:00+00:00
-    description: Live service, in person only.
-  - time: 2020-12-06T18:00:00+00:00
-    description: Live service, in person and online.
-    link: https://youtu.be/4cDWlr123gE
-  - time: 2020-12-06T19:30:00+00:00
-    description: In person only with some recorded content.
-  - time: 2021-01-31T18:00:00+00:00
-    description: Online only.
-    link: https://youtu.be/OLqQWd-rM0g
-    
-  - time: 2021-04-04T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/loODDrPRkuc
-  
-  - time: 2021-04-25T16:30:00+01:00
-    description: Live service, in person only.
-  - time: 2021-04-25T18:00:00+01:00
-    description: Live service, in person and online.
-    
-  - time: 2021-05-02T16:30:00+01:00
-    description: Live service, in person only.
-  - time: 2021-05-02T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/WHkl6b1SXNg
-  - time: 2021-05-09T16:30:00+01:00
-    description: Live service, in person only.
-  - time: 2021-05-09T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/3Wx5GkkWVPk
-  - time: 2021-05-16T16:30:00+01:00
-    description: Live service, in person only.
-  - time: 2021-05-16T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/PZxlZuaVVyU
-  - time: 2021-05-23T16:30:00+01:00
-    description: Live service, in person only.
-  - time: 2021-05-23T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/UHQ3ifClekY
-  
-  - time: 2021-06-06T16:30:00+01:00
-  - time: 2021-06-06T18:00:00+01:00
-
-  - time: 2021-06-13T16:30:00+01:00
-  - time: 2021-06-13T18:00:00+01:00
-
-  - time: 2021-06-20T16:30:00+01:00
-  - time: 2021-06-20T18:00:00+01:00
-
-  - time: 2021-06-27T16:30:00+01:00
-  - time: 2021-06-27T18:00:00+01:00
-
-  - time: 2021-07-04T16:30:00+01:00
-    link: https://ccmayfair.churchsuite.co.uk/events/flhnpdbt?tickets=OS64
-  - time: 2021-07-04T18:00:00+01:00
-    link: https://ccmayfair.churchsuite.co.uk/events/knhxd6bh?tickets=l6Ex
-  - time: 2021-07-11T16:30:00+01:00
-    link: https://ccmayfair.churchsuite.co.uk/events/jheclwgg?tickets=S0lf
-  - time: 2021-07-11T18:00:00+01:00
-    link: https://ccmayfair.churchsuite.co.uk/events/vy1e0rrs?tickets=IJOy
-    
+schedule:  
   - time: 2021-07-18T16:30:00+01:00
     link: https://ccmayfair.churchsuite.co.uk/events/9cl8o5ck?tickets=lIfN
   - time: 2021-07-18T18:00:00+01:00
     link: https://ccmayfair.churchsuite.co.uk/events/nkbinboq?tickets=1PJP
+ 
+  - time: 2021-07-25T18:00:00+00:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-08-01T18:00:00+00:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-08-08T18:00:00+00:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-08-15T18:00:00+00:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-08-22T18:00:00+00:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-08-29T18:00:00+00:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
