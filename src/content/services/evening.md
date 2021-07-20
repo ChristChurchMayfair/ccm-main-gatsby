@@ -8,22 +8,22 @@ schedule:
   - time: 2021-07-18T18:00:00+01:00
     link: https://ccmayfair.churchsuite.co.uk/events/nkbinboq?tickets=1PJP
  
-  - time: 2021-07-25T18:00:00+00:00
+  - time: 2021-07-25T18:00:00+01:00
     description: Live service, in person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
-  - time: 2021-08-01T18:00:00+00:00
+  - time: 2021-08-01T18:00:00+01:00
     description: Live service, in person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
-  - time: 2021-08-08T18:00:00+00:00
+  - time: 2021-08-08T18:00:00+01:00
     description: Live service, in person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
-  - time: 2021-08-15T18:00:00+00:00
+  - time: 2021-08-15T18:00:00+01:00
     description: Live service, in person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
-  - time: 2021-08-22T18:00:00+00:00
+  - time: 2021-08-22T18:00:00+01:00
     description: Live service, in person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
-  - time: 2021-08-29T18:00:00+00:00
+  - time: 2021-08-29T18:00:00+01:00
     description: Live service, in person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
 ---
