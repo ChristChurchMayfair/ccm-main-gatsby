@@ -8,8 +8,11 @@ template: basic
 Attending Church in Person
 ==============================
 
-In light of most lockdown restrictions ending and the guidance that has been issued by the Church of England and others, 
-we are delighted to meet more fully in person, but are still choosing to retain some measures to keep us safe.
+We are delighted to be able to continue meeting in person, including being able to sing in Church!
+
+In light of guidance that has been issued by the Church of England and others, we will retain some measures to help keep us safe.
+
+Please read below to see what to expect when we gather together on Sundays.
 
 Our great longing is that the whole church family will be able to come back to gather physically, and will feel safe doing so. 
 
