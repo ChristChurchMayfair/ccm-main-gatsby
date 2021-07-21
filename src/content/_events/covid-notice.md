@@ -8,7 +8,7 @@ We're delighted to offer our Sunday services both in-person and online! You can 
 
 You now don't need to book in advance for coming in person, just turn up at your preferred time and we'd love to welcome you.
 
-We have retained some measures to limit the spread of coronavirus [which you can see here.](/attendinginperson)
+We have retained some measures to limit the spread of coronavirus [which you can see here.](/attending-in-person)
 
 Any important updates will be posted here.
 
