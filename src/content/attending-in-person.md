@@ -24,12 +24,13 @@ We strongly encourage you to keep using the hand sanitizer provided at the entra
 Face Coverings and Singing
 ----------------
 
-We rejoice we can sing again! 
-The government states that it "expects and recommends" people wear face coverings in crowded and enclosed settings to protect themselves and others. 
-Given the size of the building and the fact that we will not be facing one another, we will not require you to wear face masks during the service 
-(though you may do so if you would like), but ask that you ***please wear a face covering when singing.***
+We rejoice we can sing again!
 
-Out of consideration to others at a time when the number of cases is rising, we would also ask you to ***please wear a face covering when moving around the building.***
+The government states that it "expects and recommends" people wear face coverings in crowded, enclosed settings to protect themselves and others. 
+Because our building is large and we will not be facing one another, we won't require you to wear a face covering during the service,
+but we do ask that you ***please wear a face covering when singing.***
+
+Out of consideration to others at a time when the number of cases is rising, we also ask that you ***please wear a face covering when moving around the building.***
 
 Spacing
 ----------------
@@ -40,7 +41,7 @@ Extra Precautions Area
 
 We will set out seating in the transept (on the right near the entrance doors) with additional spacing for those who want it. 
 
-We also ask that everyone who sits in that area wear a face covering throughout the service. 
+We ask that everyone who sits in this area wears a face covering throughout the service. 
 
 Loos
 ----------------
