@@ -27,7 +27,7 @@ Face Coverings and Singing
 We rejoice we can sing again! 
 The government states that it "expects and recommends" people wear face coverings in crowded and enclosed settings to protect themselves and others. 
 Given the size of the building and the fact that we will not be facing one another, we will not require you to wear face masks during the service 
-(though you may do so if you would like), but ask that you ***please use a face covering when singing.***
+(though you may do so if you would like), but ask that you ***please wear a face covering when singing.***
 
 Out of consideration to others at a time when the number of cases is rising, we would also ask you to ***please wear a face covering when moving around the building.***
 
