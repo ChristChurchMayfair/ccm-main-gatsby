@@ -56,6 +56,11 @@ Covid Symptoms
 
 If you have any covid symptoms, please don't come to church and follow the relevant NHS advice.
 
+Sunday School
+----------------
+
+During *morning* services we will continue offering children’s groups. To avoid excess people in the building, we’ll drop children at these groups just before the service and collect them shortly after it finishes. If you’re visiting and would like more information, please get in touch with [the office](mailto:info@christchurchmayfair.org).
+
 More Information
 ----------------
 
@@ -64,4 +69,4 @@ Please do join us in continuing to pray that CCM is a safe place for everyone to
 Please get in touch with [the office](mailto:info@christchurchmayfair.org) if you have any questions or concerns about this.
 
 
-Updated: *21st July 2021*
+Updated: *2nd August 2021*
