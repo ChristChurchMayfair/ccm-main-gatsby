@@ -14,7 +14,7 @@ schedule:
     link: https://youtu.be/g_iQNTZXAEY
   - time: 2021-08-15T10:30:00+01:00
     description: In person and online with Sunday School.
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    link: https://youtu.be/Gg67QDUvYag
   - time: 2021-08-22T10:30:00+01:00
     description: In person and online with Sunday School.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
