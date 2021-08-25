@@ -3,27 +3,13 @@ title: Evenings
 normalTime: "6.00pm"
 mainImage: ../assets/images/desktop/hand_in_the_air.jpg
 schedule:  
-  - time: 2021-07-18T16:30:00+01:00
-    link: https://ccmayfair.churchsuite.co.uk/events/9cl8o5ck?tickets=lIfN
-  - time: 2021-07-18T18:00:00+01:00
-    link: https://ccmayfair.churchsuite.co.uk/events/nkbinboq?tickets=1PJP
- 
-  - time: 2021-07-25T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/rthl83TyP_Y
-  - time: 2021-08-01T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/VhhTOHqaEiQ
-  - time: 2021-08-08T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/ib7VBg7Smwg
-  - time: 2021-08-15T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/iVU4XPQUHUQ
   - time: 2021-08-22T18:00:00+01:00
     description: Live service, in person and online.
     link: https://youtu.be/vKVYmM1NZGE
   - time: 2021-08-29T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-00-05T18:00:00+01:00
     description: Live service, in person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
 ---
