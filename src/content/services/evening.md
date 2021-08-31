@@ -9,7 +9,7 @@ schedule:
   - time: 2021-08-29T18:00:00+01:00
     description: Live service, in person and online.
     link: https://youtu.be/oTs5V7hCQNc
-  - time: 2021-00-05T18:00:00+01:00
+  - time: 2021-09-05T18:00:00+01:00
     description: Live service, in person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
 ---
