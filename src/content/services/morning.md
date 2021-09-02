@@ -3,13 +3,16 @@ title: Mornings
 normalTime: "10.15am"
 mainImage: ../assets/images/desktop/CCM_morning_church_lunch.jpg
 schedule:
-  - time: 2021-08-22T10:30:00+01:00
-    description: In person and online with Sunday School.
-    link: https://youtu.be/jUbTm-D5rFo
-  - time: 2021-08-29T10:30:00+01:00
-    description: In person and online with Sunday School.
-    link: https://youtu.be/yV7pJ0z5fEg
   - time: 2021-09-05T10:30:00+01:00
+    description: In person and online with Sunday School.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-09-12T10:30:00+01:00
+    description: In person and online with Sunday School.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-09-19T10:30:00+01:00
+    description: In person and online with Sunday School.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-09-26T10:30:00+01:00
     description: In person and online with Sunday School.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
 ---
