@@ -19,8 +19,7 @@ Our great longing is that the whole church family will be able to come back to g
 Check-in
 ----------------
 
-You will no longer need to book before coming to church. 
-We will, however, ask you either to scan the NHS track and trace QR code when you arrive or to scan a CCM QR code to give us your details. 
+You will no longer need to book before coming to church. We will, however, ask you either to scan the NHS track and trace QR code when you arrive or to scan a CCM QR code to give us your details. 
 
 We strongly encourage you to keep using the hand sanitiser provided at the entrance.
 
@@ -32,8 +31,6 @@ We rejoice that we can sing again!
 The government states that it *"expects and recommends"* people wear face coverings in crowded, enclosed settings to protect themselves and others. 
 Since our building is large and we will not be facing one another, we won't require you to wear a face covering during the service,
 but we do ask that you ***please wear a face covering when singing.***
-
-Out of consideration to others at a time when the number of cases is rising, we also ask that you ***please wear a face covering when moving around the building.***
 
 Spacing
 ----------------
@@ -69,4 +66,4 @@ Please do join us in continuing to pray that CCM is a safe place for everyone to
 Please get in touch with [the office](mailto:info@christchurchmayfair.org) if you have any questions or concerns about this.
 
 
-Updated: *2nd August 2021*
+Updated: *2nd September 2021*
