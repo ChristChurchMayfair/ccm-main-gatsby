@@ -3,13 +3,16 @@ title: Evenings
 normalTime: "6.00pm"
 mainImage: ../assets/images/desktop/hand_in_the_air.jpg
 schedule:  
-  - time: 2021-08-22T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/vKVYmM1NZGE
-  - time: 2021-08-29T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/oTs5V7hCQNc
   - time: 2021-09-05T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-09-12T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-09-19T18:00:00+01:00
+    description: Live service, in person and online.
+    link: https://www.youtube.com/c/ChristChurchMayfairLive
+  - time: 2021-09-26T18:00:00+01:00
     description: Live service, in person and online.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
 ---
