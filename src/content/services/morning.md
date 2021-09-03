@@ -5,7 +5,7 @@ mainImage: ../assets/images/desktop/CCM_morning_church_lunch.jpg
 schedule:
   - time: 2021-09-05T10:30:00+01:00
     description: In person and online with Sunday School.
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    link: https://youtu.be/0w-YSOaXxP8
   - time: 2021-09-12T10:30:00+01:00
     description: In person and online with Sunday School.
     link: https://www.youtube.com/c/ChristChurchMayfairLive
