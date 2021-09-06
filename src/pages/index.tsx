@@ -189,9 +189,9 @@ const IndexPage = () => {
                     Sunday Services
                 </a>
             </Section>
-           
+
             <CovidNotice />
-            
+
             <StudentPromo />
 
             <Services />
