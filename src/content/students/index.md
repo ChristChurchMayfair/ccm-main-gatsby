@@ -11,9 +11,9 @@ overlayCaption: Students at CCM
 findOutMoreText: |2-
   Are you moving to London to study, or looking for a new church to call home?
 
-  Get in touch with Scott, Ellie or Liz. They would love to answer your questions and welcome you at a Sunday service or midweek group.
+  Get in touch with Scott or Ellie. They would love to answer your questions and welcome you at a Sunday service or midweek group.
 
-  Our Facebook page also has more info on what's going on for Students at CCM.
+  Check out our [Instagram](https://www.instagram.com/ccm_students/) for more info on what Students are up to at CCM.
 ---
 
 Welcome to the student work at CCM! Our church is home to students from universities and colleges all over London and we would love for you to join us.
