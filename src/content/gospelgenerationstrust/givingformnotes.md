@@ -9,17 +9,17 @@
 Our account details for BACS transfers or Standing Orders are:
 
 * Transaction Reference: **Your Name** - *required for tracking purposes.*
-* Bank: **CAF Bank Limited**
-* Account Number: **00099436**
-* Sort Code: **40-52-40**
+* Bank: **National Westminster (NatWest) Bank Plc**
+* Account Number: **51293919**
+* Sort Code: **50-41-01**
 
 ### Getting Help
 
-If you require any help regarding your giving, particularly if you require more information as a US taxpayer in the UK, please contact the [Treasurer](mailto:treasurer@christchurchmayfair.org)
+If you require any help regarding your giving, particularly if you require more information as a US taxpayer in the UK, please contact the [Treasurer](mailto:info@gospelgentrust.org)
 
 ### Changes or Cancellations
 
-Please notify the [Treasurer](mailto:treasurer@christchurchmayfair.org) if you:
+Please notify the [Treasurer](mailto:info@gospelgentrust.org) if you:
 1. Want to cancel this declaration
 * Change your name or home address
 * No longer pay sufficient tax on your income and/or capital gains.*
@@ -28,7 +28,7 @@ Please notify the [Treasurer](mailto:treasurer@christchurchmayfair.org) if you:
 
 ### Security
 
-This information is sent to CCM's GSuite (an online service provided by Google), protected in transit by TLS encryption, and stored in a private, access controlled spreadsheet.
+This information is sent to The Gospel Generation Trust's GSuite (an online service provided by Google), protected in transit by TLS encryption, and stored in a private, access controlled spreadsheet.
 
 ### Privacy
 

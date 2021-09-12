@@ -59,7 +59,7 @@ const GospelGenerationsTrustHeader: React.FC<HeaderProps> = ({
                     <Link to="/gospelgenerationstrust/givingform">
                         Giving Form
                     </Link>
-                    <Link to="/gospelgenerationstrust/mailinglist">
+                    <Link to="/gospelgenerationstrust/mailinglistsignup">
                         Mailing List
                     </Link>
                 </div>
@@ -106,7 +106,7 @@ const GospelGenerationsTrustHeader: React.FC<HeaderProps> = ({
                     <Link to="/gospelgenerationstrust/givingform">
                         Giving Form
                     </Link>
-                    <Link to="/gospelgenerationstrust/mailinglist">
+                    <Link to="/gospelgenerationstrust/mailinglistsignup">
                         Mailing List
                     </Link>
                 </div>

@@ -172,14 +172,14 @@ async function sendToGoogleFormsApi(formData: IndexableFormData) {
     })
 }
 
-const GospelGenerationsTrustGivingFormPage: React.FC = () => {
+const GospelGenerationsMailingListSignupPage: React.FC = () => {
     const data = useStaticQuery<
         GatsbyTypes.GospelGenerationsTrustGivingFormQuery
     >(graphql`
-        query GospelGenerationsTrustGivingForm {
+        query GospelGenerationsTrustMailingListSignup {
             mainInfo: markdownRemark(
                 fileAbsolutePath: {
-                    regex: "/gospelgenerationstrust/givingform.md$/"
+                    regex: "/gospelgenerationstrust/mailinglistsignup.md$/"
                 }
             ) {
                 html
@@ -236,7 +236,7 @@ const GospelGenerationsTrustGivingFormPage: React.FC = () => {
 
     return (
         <GospelGenerationsTrustLayout
-            title="Giving Form"
+            title="Mailing List Sign Up"
             headerColour={"dark"}
             robotsMetaData={HiddenPageRobotsMetaData}
         >
@@ -275,172 +275,16 @@ const GospelGenerationsTrustGivingFormPage: React.FC = () => {
                 doSubmit={sendToGoogleFormsApi}
                 stateChangeCallback={setGivingFormState}
             >
-                <FormInformationSection>
-                    <h2>Information About You</h2>
-                    We need this information to help us claim gift aid for your
-                    donations.
-                </FormInformationSection>
-                <FormInformationSection>
-                    <h3>Name</h3>
-                </FormInformationSection>
-                <BasicTextField
-                    name="givenName"
-                    label="Given Name"
-                    autoComplete="given-name"
-                    validation={{ required: "Provide your given name." }}
-                />
-                <BasicTextField
-                    name="familyName"
-                    label="Family Name"
-                    autoComplete="family-name"
-                    validation={{ required: "Provide your family name." }}
-                />
-                <FormInformationSection>
-                    <h3>Home Address</h3>
-                </FormInformationSection>
-                <BasicTextField
-                    name="streetAddress"
-                    label="Street Address"
-                    autoComplete="street-address"
-                    validation={{ required: "Provide a street address." }}
-                />
-                <BasicTextField
-                    name="extraAddressLine"
-                    label="Extra Address Line"
-                    autoComplete="address-line1"
-                    validation={{ required: false }}
-                />
-                <BasicTextField
-                    name="townCity"
-                    label="Town or City"
-                    autoComplete="address-level1"
-                    validation={{ required: "Provide a town or city." }}
-                />
-                <BasicTextField
-                    name="postCode"
-                    label="Post Code"
-                    autoComplete="postal-code"
-                    validation={{ required: "Provide a post code." }}
-                />
-
-                <FormInformationSection>
-                    <h3>Contact Information</h3>
-                    In case we need to contact you with a query, please provide
-                    either an email address or telephone number.
-                </FormInformationSection>
-                <BasicTextField
-                    name="telephoneNumber"
-                    label="Telephone Number"
-                    autoComplete={"tel"}
-                />
                 <BasicTextField
                     name="emailAddress"
                     label="Email Address"
                     autoComplete={"email"}
                 />
-
-                <FormInformationSection>
-                    <h2>Your Gift</h2>
-                    Tell us about your gift.
-                </FormInformationSection>
-                <BasicTextField
-                    name="giftAmountInGBP"
-                    label="Gift Amount"
-                    contextualHelp="In GBP. Find our bank account details in the Notes section below this form."
-                    validation={giftAmountValidation}
-                />
-                <RadioButtonField
-                    name="giftType"
-                    label="Gift Type"
-                    contextualHelp={"Select one."}
-                    options={[
-                        { id: "oneoff", name: "One-Off" },
-                        { id: "standingOrder", name: "Standing Order" },
-                        { id: "gaye", name: "Give-As-You-Earn (GAYE)" },
-                    ]}
-                    validation={{ required: "Please select a gift type" }}
-                />
-                <DropDownField
-                    name="regularGiftFrequency"
-                    label="Gift Frequency"
-                    choices={[
-                        { id: "weekly", label: "Weekly" },
-                        { id: "monthly", label: "Monthly" },
-                        { id: "quarterly", label: "Quarterly" },
-                        { id: "annually", label: "Annually" },
-                    ]}
-                    allowOther={true}
-                    otherInputLabel="Other Gift Frequency"
-                    otherOptionLabel="Other Frequency"
-                    validation={{
-                        required:
-                            "Please select a regular gift frequency or enter your own",
-                    }}
-                    showWhen={showGiftFrequencyAndStartDate}
-                />
-                <DateField
-                    name="regularGiftCommencementDate"
-                    label="Regular Gift Commences From"
-                    showWhen={showGiftFrequencyAndStartDate}
-                />
-                <FormInformationSection>
-                    <h2>Gift Aid</h2>
-                    If you are a UK taxpayer and eligible to Gift Aid your
-                    donation, please complete the declaration below. This will
-                    increase your gift by 25p for every £1 given at no extra
-                    cost to you or us. Thank you.
-                </FormInformationSection>
-                <FormInformationSection>
-                    <h3>Your Declaration</h3>&ldquo;
-                    <em>
-                        I am a UK taxpayer and understand that if I pay less
-                        Income Tax and/or Capital Gains Tax than the amount of
-                        Gift Aid claimed on all my donations in that tax year it
-                        is my responsibility to pay any difference.
-                    </em>
-                    &rdquo;
-                </FormInformationSection>
-                <CheckBoxField
-                    name="giftAidDeclarations"
-                    label="On Which Gift Can We Claim Gift Aid?"
-                    contextualHelp={"Please select all that apply."}
-                    options={[
-                        {
-                            id: "thisGiftIsEligibleForGiftAid",
-                            label: "Claim Gift Aid On This Gift",
-                            defaultValue: false,
-                        },
-                        {
-                            id: "allFutureGiftsAreEligibleForGiftAid",
-                            label: "Claim Gift Aid On Future Gifts",
-                            defaultValue: false,
-                        },
-                        {
-                            id: "retrospectivelyReclaimGiftAid",
-                            label: "Claim Gift Aid On Previous Gifts",
-                            defaultValue: false,
-                        },
-                    ]}
-                />
-                <DateField
-                    name="retrospectiveGiftAidClaimStartDate"
-                    label="Claim Gift Aid Back Until"
-                    maxDate={new Date()}
-                    validation={{ required: "Please select a date." }}
-                    showWhen={showRetroSpectiveGiftAidClaimDate}
-                />
             </Form>
-            {givingFormState !== "submitted" ? (
-                <Section id="notes" colorScheme="light">
-                    <article
-                        dangerouslySetInnerHTML={{
-                            __html: data.notes?.html ?? "No Content!",
-                        }}
-                    />
-                </Section>
-            ) : null}
+            {/* {givingFormState !== "submitted" ? (
+            ) : null} */}
         </GospelGenerationsTrustLayout>
     )
 }
 
-export default GospelGenerationsTrustGivingFormPage
+export default GospelGenerationsMailingListSignupPage
