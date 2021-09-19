@@ -3,6 +3,9 @@ name: Regarding Coronavirus
 status: live
 lastUpdated: 12:30 02 September 2021
 ---
+## Online services 19th September
+With regret, due to internet issues, the morning service on 19th September cannot be watched online. We will endeavour to make this service available on YouTube at a later date. Apologies for any inconvenience.
+
 ## In-Person Services
 We're delighted to offer our Sunday services both in-person and online! You can see our [service times and stream links](/#services) below.
 
@@ -12,4 +15,4 @@ We are retaining some measures to limit the spread of coronavirus. Please read [
 
 Any important updates will be posted here.
 
-Updated: *2nd September 2021*
+Updated: *19th September 2021*
