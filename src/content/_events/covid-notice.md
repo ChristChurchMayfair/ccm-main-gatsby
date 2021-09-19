@@ -3,7 +3,7 @@ name: Regarding Coronavirus
 status: live
 lastUpdated: 12:30 02 September 2021
 ---
-## Online services 19th September
+## Online Services 19th September
 With regret, due to internet issues, the morning service on 19th September cannot be watched online. We will endeavour to make this service available on YouTube at a later date. Apologies for any inconvenience.
 
 ## In-Person Services
