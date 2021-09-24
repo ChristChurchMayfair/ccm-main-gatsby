@@ -13,7 +13,7 @@ schedule:
     description: In person with Sunday School. No Livestream.
   - time: 2021-09-26T10:30:00+01:00
     description: In person and online with Sunday School.
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    link: https://youtu.be/oZexgrnYzIA
 ---
 Normal mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
 
