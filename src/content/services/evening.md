@@ -14,7 +14,7 @@ schedule:
     link: https://youtu.be/JtmCaeT2HgA
   - time: 2021-09-26T18:00:00+01:00
     description: Live service, in person and online.
-    link: https://www.youtube.com/c/ChristChurchMayfairLive
+    link: https://youtu.be/H079Pj964mA
 ---
 Typical evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
