@@ -5,6 +5,11 @@
     grid-template-areas: "photo info";
     column-gap: var(--general-padding);
     margin-bottom: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        grid-template-columns: 1fr 1fr;
+        height: 350px;
+     }
 }
 
 .photo {
@@ -37,4 +42,5 @@
 
 .bio {
     grid-area: bio;
+    overflow:hidden;
 }

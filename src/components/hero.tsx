@@ -18,9 +18,14 @@ const Hero: React.FC<HeroProps> = ({
 }) => (
     <div className={styles.heroContainer}>
         <Section id={sectionId} colorScheme="custom" className={styles.hero}>
+            <div className={styles.childrenContainer}>
+                <div className={styles.children}>{children}</div>
+            </div>
+
             <div className={styles.carouselOverlay}>
                 <h1 className={styles.overlayCaption}>{overlayCaption}</h1>
             </div>
+
             {singleImageFluid !== undefined && (
                 <Img
                     style={{
@@ -37,7 +42,6 @@ const Hero: React.FC<HeroProps> = ({
                     objectPosition="center top"
                 />
             )}
-            {children}
         </Section>
     </div>
 )

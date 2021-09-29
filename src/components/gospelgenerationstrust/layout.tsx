@@ -9,13 +9,11 @@ import React from "react"
 
 import Head from "../head"
 import { HeaderColour } from "../header"
-import Footer from "../footer"
 import CookieNotice from "../cookie-notice"
-// import "../../assets/css/global.scss"
-// import "../../assets/css/style.css"
 import { OpenGraphMetaData } from "../open-graph"
 import { RobotsMetaData } from "../robots"
 import GospelGenerationsTrustHeader from "./header"
+import GospelGenerationsTrustFooter from "./footer"
 
 interface Props {
     children: React.ReactNode
@@ -38,7 +36,7 @@ const GospelGenerationsTrustLayout: React.FC<Props> = ({
     return (
         <>
             <Head
-                title={title}
+                title={`Gospel Generations Trust - ${title}`}
                 description={description}
                 openGraphData={openGraphData}
                 robotsMetaData={robotsMetaData}
@@ -48,6 +46,7 @@ const GospelGenerationsTrustLayout: React.FC<Props> = ({
                 blurBackground={blurHeaderBackground}
             />
             <main>{children}</main>
+            <GospelGenerationsTrustFooter email={"info@gospelgentrust.org"} />
             <CookieNotice />
         </>
     )

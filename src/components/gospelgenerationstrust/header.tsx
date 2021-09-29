@@ -35,6 +35,15 @@ const GospelGenerationsTrustHeader: React.FC<HeaderProps> = ({
 
     // TODO: add .current class to menuContent <a> it link is for current page
 
+    const menuContent = (
+        <div className={styles.menuContent}>
+            <Link to="/gospelgenerationstrust/">About</Link>
+            <Link to="/gospelgenerationstrust/alumni">Testimonies</Link>
+            <Link to="/gospelgenerationstrust/mailinglistsignup">Pray</Link>
+            <Link to="/gospelgenerationstrust/givingform">Giving</Link>
+        </div>
+    )
+
     return (
         <>
             <nav
@@ -43,7 +52,10 @@ const GospelGenerationsTrustHeader: React.FC<HeaderProps> = ({
                     [styles["navBar--hidden"]]: !isMenuOpen,
                 })}
             >
-                <Link className={styles.navBarLogo} to="/">
+                <Link
+                    className={styles.navBarLogo}
+                    to="/gospelgenerationstrust"
+                >
                     <GospelGenerationsTrustLogoFull />
                 </Link>
                 <a
@@ -55,14 +67,7 @@ const GospelGenerationsTrustHeader: React.FC<HeaderProps> = ({
                 >
                     <CloseMenuButton />
                 </a>
-                <div className={styles.menuContent}>
-                    <Link to="/gospelgenerationstrust/givingform">
-                        Giving Form
-                    </Link>
-                    <Link to="/gospelgenerationstrust/mailinglistsignup">
-                        Mailing List
-                    </Link>
-                </div>
+                {menuContent}
             </nav>
 
             <header
@@ -74,7 +79,10 @@ const GospelGenerationsTrustHeader: React.FC<HeaderProps> = ({
                     [styles["blurbackground"]]: blurBackground === true,
                 })}
             >
-                <Link className={styles.mobileHeaderLogo} to="/">
+                <Link
+                    className={styles.mobileHeaderLogo}
+                    to="/gospelgenerationstrust"
+                >
                     <GospelGenerationsTrustLogoFull />
                 </Link>
                 <a
@@ -102,14 +110,7 @@ const GospelGenerationsTrustHeader: React.FC<HeaderProps> = ({
                 >
                     <GospelGenerationsTrustLogoFull />
                 </Link>
-                <div className={styles.menuContent}>
-                    <Link to="/gospelgenerationstrust/givingform">
-                        Giving Form
-                    </Link>
-                    <Link to="/gospelgenerationstrust/mailinglistsignup">
-                        Mailing List
-                    </Link>
-                </div>
+                {menuContent}
             </header>
         </>
     )

@@ -6,7 +6,7 @@ import HeaderUnderlay from "../../components/header-underlay"
 import Section from "../../components/section"
 import Alum from "../../components/gospelgenerationstrust/alum"
 import Hero from "../../components/hero"
-import Img from "../../components/img"
+import classNames from "classnames"
 
 const GospelGenerationsTrustPageQuery = graphql`
     query GospelGenerationsTrustPage {
@@ -30,6 +30,11 @@ const GospelGenerationsTrustPageQuery = graphql`
             fileAbsolutePath: {
                 regex: "/gospelgenerationstrust/howcanyouhelp.md$/"
             }
+        ) {
+            html
+        }
+        contact: markdownRemark(
+            fileAbsolutePath: { regex: "/gospelgenerationstrust/contact.md$/" }
         ) {
             html
         }
@@ -65,28 +70,26 @@ const AboutUs: React.FC<{}> = () => {
         GospelGenerationsTrustPageQuery
     )
     const alums = data.alums.nodes
-    console.log(alums)
+    const randomAlum = alums[Math.floor(Math.random() * alums.length)]
     return (
-        <GospelGenerationsTrustLayout title="About us" headerColour="dark">
+        <GospelGenerationsTrustLayout title="Home" headerColour="dark">
             <HeaderUnderlay colorScheme="light" />
-            <Hero sectionId={"asdf"}>
-                <Img
-                    style={{
-                        position: "absolute",
-                        top: -100,
-                        left: 0,
-                        bottom: 0,
-                        right: 0,
-                    }}
-                    loading="eager"
-                    fadeIn={false}
-                    fluid={
-                        data.introduction!.frontmatter!.image!.childImageSharp!
-                            .fluid
-                    }
-                    objectFit="cover"
-                    objectPosition="center top"
-                />
+            <Hero
+                sectionId={"asdf"}
+                singleImageFluid={
+                    data.introduction!.frontmatter!.image!.childImageSharp!
+                        .fluid
+                }
+            >
+                <div className={styles.heroPullQuote}>
+                    <p>
+                        Then he said to his disciples, &ldquo;The harvest is
+                        plentiful but the workers are few. Ask the LORD of the
+                        harvest, therefore, to send out workers into his harvest
+                        field.&rdquo;
+                    </p>
+                    <p>Matthew 9:37-38</p>
+                </div>
             </Hero>
             <Section colorScheme={"light"}>
                 <div
@@ -96,26 +99,30 @@ const AboutUs: React.FC<{}> = () => {
                     }}
                 />
             </Section>
-            <Section colorScheme="light">
-                <div className={styles.pullquote}>
-                    Over 20 years we have trained over 75 men and women in
-                    faithful gospel ministry.
+            <Section colorScheme={"light"}>
+                <div className={styles.alums}>
+                    <Alum
+                        key={randomAlum.frontmatter!.name}
+                        name={randomAlum.frontmatter!.name!}
+                        years={randomAlum.frontmatter!.years!}
+                        role={randomAlum.frontmatter!.role!}
+                        html={randomAlum.html!}
+                        image={
+                            randomAlum.frontmatter!.image!.childImageSharp!
+                                .fluid!
+                        }
+                    ></Alum>
                 </div>
             </Section>
-            <Section colorScheme="light">
-                <div className={styles.alums}>
-                    {alums.map((alum: any) => (
-                        <Alum
-                            key={alum.frontmatter!.name!}
-                            name={alum.frontmatter!.name!}
-                            years={alum.frontmatter!.years!}
-                            role={alum.frontmatter!.role!}
-                            html={alum.html!}
-                            image={
-                                alum.frontmatter!.image!.childImageSharp!.fluid!
-                            }
-                        ></Alum>
-                    ))}
+            <Section colorScheme={"light"}>
+                <div className={styles.moreStoriesButton}>
+                    <a
+                        id="stories-button"
+                        className={classNames("button", styles.storiesButton)}
+                        href="/gospelgenerationstrust/alumni"
+                    >
+                        Read More Testimonies
+                    </a>
                 </div>
             </Section>
             <Section colorScheme={"light"}>
@@ -123,6 +130,32 @@ const AboutUs: React.FC<{}> = () => {
                     className={styles.introduction}
                     dangerouslySetInnerHTML={{
                         __html: data.howcanyouhelp!.html!,
+                    }}
+                />
+            </Section>
+            <Section colorScheme={"light"}>
+                <div className={styles.supportButtons}>
+                    <a
+                        id="pray-button"
+                        className="button"
+                        href="/gospelgenerationstrust/mailinglistsignup"
+                    >
+                        Pray
+                    </a>
+                    <a
+                        id="give-button"
+                        className="button"
+                        href="/gospelgenerationstrust/givingform"
+                    >
+                        Give
+                    </a>
+                </div>
+            </Section>
+            <Section colorScheme={"light"}>
+                <div
+                    className={styles.introduction}
+                    dangerouslySetInnerHTML={{
+                        __html: data.contact!.html!,
                     }}
                 />
             </Section>

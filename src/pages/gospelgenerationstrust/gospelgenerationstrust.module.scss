@@ -12,8 +12,24 @@ h1, h2, h3 {
     }
 }
 
+.herooverlay {
+    background-color: red;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    display: grid;
+    height: 100%;
+    width: 100%;
+}
+
 .introduction {
     grid-area: content;
+}
+
+.heroPullQuote {
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 1.2em;
 }
 
 .pullquote {
@@ -27,8 +43,41 @@ h1, h2, h3 {
     border-left-width: 7px;
     border-left-style: solid;
     padding-left: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        font-size: 1.5em;
+     }
 }
 
 .alums {
     grid-area: content;
+}
+
+.moreStoriesButton {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: ". button .";
+    column-gap: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+       grid-template-columns: 1fr;
+       grid-template-areas: "button";
+    }
+}
+
+.storiesButton {
+    grid-area: button;
+}
+
+.supportButtons {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--general-padding);
+    row-gap: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        grid-template-columns: 1fr;
+     }
 }

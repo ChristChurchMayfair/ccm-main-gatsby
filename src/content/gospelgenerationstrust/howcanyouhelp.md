@@ -1,3 +1,3 @@
-> You then, my son, be strong in the grace that is in Christ Jesus. And the things you have heard me say in the presence of many witnesses entrust to reliable people who will also be qualified to teach others 
-> 
-> 2 Timothy 2:1-2 (NIV)
+## Partner with us
+
+The most desperate need of our world is the training and deployment of workers to proclaim the Gospel that saves people from hell for heaven for eternity. We are therefore asking you to consider supporting the Gospel Generations Trust so that we can continue to equip and send more young men and women into Gospel ministry.

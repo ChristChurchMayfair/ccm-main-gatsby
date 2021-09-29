@@ -22,7 +22,7 @@ import {
 } from "../../components/form/conditional-visibility"
 import SectionText from "../../components/section-text"
 import { HiddenPageRobotsMetaData } from "../../components/robots"
-import GospelGenerationsTrustHeaderStyles from "./gospelgenerationstrust.module.scss"
+import Hero from "../../components/hero"
 
 const devevelopmentEnvironmentWarning = (
     <div>
@@ -55,45 +55,6 @@ type GiftFormData = {
     retrospectivelyReclaimGiftAid: boolean
     retrospectiveGiftAidClaimStartDate: Date | null
 }
-//https://docs.google.com/forms/d/e/
-//1FAIpQLScvDqpDt9t9p1IWnaM3YyfUBq-mx0zRzyJYOmrsiZ1OEWDhsA
-//viewform?usp=pp_url
-//2119115224=name
-//492615466=surname
-//25928183=street
-//146141917=extra+address
-//1416274792=town
-//677224156=postcode
-//586409705=tele
-//1335853443=email
-//1152276734=giftamount
-//448702037=gift+type
-//1726603538=regular+freq
-//99685333=regular+commencement+date
-//1730771203=thesis+gift+aidable
-//1993506998=future+gifts+are+giftaiable
-//437826188=retrospecgicely+claim
-//628085262=retrospectively+claim+from
-
-//https://docs.google.com/forms/d/e/
-//1FAIpQLSdKD7Xw1MM4obW7FeVqGQssDPI2dqaoNR20Tz_GCK-ZH64phw
-//viewform?usp=pp_url
-//2119115224=asdf
-//492615466=asdf
-//25928183=asdf
-//146141917=asdf
-//1416274792=asdf
-//677224156=asdf
-//586409705=asdf
-//1335853443=asdf
-//1152276734=asdf
-//448702037=asdf
-//1726603538=asdf
-//99685333=asdf
-//1730771203=asdf
-//1993506998=asdf
-//437826188=sad
-//628085262=asdf
 
 const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
     development: {
@@ -125,7 +86,7 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
         warning: devevelopmentEnvironmentWarning,
     },
     production: {
-        formId: "1FAIpQLSdKD7Xw1MM4obW7FeVqGQssDPI2dqaoNR20Tz_GCK-ZH64phw",
+        formId: "1FAIpQLSe1dpacAGEYESvD1GOQQ8oMGVmUsHdQwsXk5OLY78eqt56mCA",
         fieldNameToEntryId: {
             givenName: 2119115224,
             familyName: 492615466,
@@ -186,6 +147,13 @@ const GospelGenerationsTrustGivingFormPage: React.FC = () => {
                 frontmatter {
                     title
                     headerColour
+                    image {
+                        childImageSharp {
+                            fluid(maxWidth: 1000) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
                 }
             }
             notes: markdownRemark(
@@ -201,6 +169,8 @@ const GospelGenerationsTrustGivingFormPage: React.FC = () => {
     const [givingFormState, setGivingFormState] = useState<FormState | null>(
         null
     )
+
+    const title = "Giving"
 
     const showGiftFrequencyAndStartDate: ValueIn = {
         type: "valueInList",
@@ -236,19 +206,33 @@ const GospelGenerationsTrustGivingFormPage: React.FC = () => {
 
     return (
         <GospelGenerationsTrustLayout
-            title="Giving Form"
+            title={title}
             headerColour={"dark"}
             robotsMetaData={HiddenPageRobotsMetaData}
         >
             <HeaderUnderlay colorScheme="light" />
-            <Section
-                intro
-                wider
-                colorScheme="custom"
-                // className="intro wider dark"
-                className={
-                    GospelGenerationsTrustHeaderStyles.givingFormIntroduction
+            <Hero
+                sectionId={"asdf"}
+                singleImageFluid={
+                    data.mainInfo!.frontmatter!.image!.childImageSharp!.fluid
                 }
+            >
+                {/* <div className={GospelGenerationsTrustHeaderStyles.heroPullQuote}>
+                    <p>
+                        Then he said to his disciples, "The harvest is plentiful
+                        but the workers are few. Ask the LORD of the harvest,
+                        therefore, to send out workers into his harvest field."
+                    </p>
+                    <p>Matthew 9:37-38</p>
+                </div> */}
+                <h1>{title}</h1>
+            </Hero>
+            <Section
+                colorScheme="light"
+                // // className="intro wider dark"
+                // className={
+                //     GospelGenerationsTrustHeaderStyles.givingFormIntroduction
+                // }
             >
                 <SectionText
                     intro
@@ -276,6 +260,7 @@ const GospelGenerationsTrustGivingFormPage: React.FC = () => {
                 stateChangeCallback={setGivingFormState}
             >
                 <FormInformationSection>
+                    <h1>Giving Form</h1>
                     <h2>Information About You</h2>
                     We need this information to help us claim gift aid for your
                     donations.
