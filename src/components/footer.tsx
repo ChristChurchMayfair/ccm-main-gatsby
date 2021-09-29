@@ -22,6 +22,7 @@ const links: Array<{ path: string; title: string }> = [
     { path: "/covid19-policy-and-risk-assessment", title: "Covid-19 Policy" },
     { path: "/givingform", title: "Giving Form" },
     { path: "/complaints", title: "Complaints" },
+    { path: "/gospelgenerationstrust", title: "Gospel Generations Trust" },
 ]
 
 const Footer = () => {

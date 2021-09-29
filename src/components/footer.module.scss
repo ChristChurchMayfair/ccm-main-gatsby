@@ -91,7 +91,7 @@
 .allLinks {
     grid-area: links;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: var(--general-padding);
     grid-auto-rows: 1.2em;
     font-size: 1.3em;

@@ -36,6 +36,7 @@
 
     svg {
         fill: var(--light-colour);
+        stroke: var(--light-colour);
     }
 }
 
@@ -49,6 +50,7 @@
 
     svg {
         fill: var(--dark-colour);
+        stroke: var(--dark-colour);
     }
 }
 
@@ -62,6 +64,7 @@
 
     svg {
         fill: black;
+        stroke: black;
     }
 }
 
