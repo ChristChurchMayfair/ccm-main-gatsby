@@ -48,7 +48,7 @@ const Services = () => {
         <Section id="services" colorScheme="dark">
             <div className={styles.servicesSection}>
                 <h1 className={styles.heading}>Our Sunday Services</h1>
-                 <div className={styles.serviceNotes}>
+                <div className={styles.serviceNotes}>
                     Our services have mostly returned to normal. 
                     We ask that you still bring a mask to use when singing, 
                     and we are still keeping an area with extra space.
