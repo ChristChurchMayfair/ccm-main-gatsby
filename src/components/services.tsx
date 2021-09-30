@@ -48,7 +48,6 @@ const Services = () => {
         <Section id="services" colorScheme="dark">
             <div className={styles.servicesSection}>
                 <h1 className={styles.heading}>Our Sunday Services</h1>
-                <div className={styles.serviceNotes}></div>
                 <div className={styles.services}>
                     {[data.am, data.pm].map(service => {
                         if (service == null) {
@@ -79,6 +78,11 @@ const Services = () => {
                             ></Service>
                         )
                     })}
+                </div>
+                <div className={styles.serviceNotes}>
+                    Our services have mostly returned to normal. 
+                    We ask that you still bring a mask to use when singing, 
+                    and we are keeping an area with extra space for anyone who would like that.
                 </div>
             </div>
         </Section>
