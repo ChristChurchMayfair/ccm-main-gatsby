@@ -48,7 +48,11 @@ const Services = () => {
         <Section id="services" colorScheme="dark">
             <div className={styles.servicesSection}>
                 <h1 className={styles.heading}>Our Sunday Services</h1>
-                <div className={styles.serviceNotes}></div>
+                <div className={styles.serviceNotes}>
+                    Our services have now mostly returned to normal. We ask that
+                    you please wear a mask when singing, and we are still
+                    keeping an area of the church with a bit more space.
+                </div>
                 <div className={styles.services}>
                     {[data.am, data.pm].map(service => {
                         if (service == null) {
