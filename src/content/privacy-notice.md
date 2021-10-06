@@ -82,7 +82,7 @@ We may also process personal data if it is necessary for the performance of a co
 
 Religious organisations are also permitted to process information about your religious beliefs to administer membership or contact details.
 
-Where your information is used other than in accordance with one of these legal bases, we will usually obtain your consent to that use unless there Is another substantial public interest that we can rely on to use your personal data.
+Where your information is used other than in accordance with one of these legal bases, we will usually obtain your consent to that use unless there is another substantial public interest that we can rely on to use your personal data.
 
 ## Sharing your personal data
 
