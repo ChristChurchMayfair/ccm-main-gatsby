@@ -142,7 +142,7 @@ If we wish to use your personal data for a new purpose, not covered by this Noti
 
 ## Changes to this notice
 
-We keep this Privacy Notice under regular review and we will place any updates on our website <https://christchurchmayfair.org/privacy-notice/>. If we make a significant change, we will notify you. This Notice was last updated on 4th October 2021.
+We keep this Privacy Notice under regular review and we will place any updates on our website <https://christchurchmayfair.org/privacy-notice/>. If we make a significant change, we will notify you. This Notice was last updated on 6th October 2021.
 
 ## <a name="cookies"></a> Use of Cookies
 
