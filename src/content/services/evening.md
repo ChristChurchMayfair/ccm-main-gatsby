@@ -3,12 +3,9 @@ title: Evenings
 normalTime: "6.00pm"
 mainImage: ../assets/images/desktop/hand_in_the_air.jpg
 schedule:  
-  - time: 2021-10-03T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/Xx3b959jWvc
   - time: 2021-10-10T18:00:00+01:00
     description: Live service, in person and online.
-    link: https://youtube.com/c/christchurchmayfairlive    
+    link: https://youtu.be/pLRDf8MpeE8    
   - time: 2021-10-17T18:00:00+01:00
     description: Live service, in person and online.
     link: https://youtube.com/c/christchurchmayfairlive    
