@@ -2,13 +2,10 @@
 title: Evenings
 normalTime: "6.00pm"
 mainImage: ../assets/images/desktop/hand_in_the_air.jpg
-schedule:         
-  - time: 2021-10-24T18:00:00+01:00
-    description: Live service, in person and online.
-    link: https://youtu.be/GYFaaYcUFOY    
+schedule:             
   - time: 2021-10-31T18:00:00+00:00
     description: Live service, in person and online.
-    link: https://youtube.com/c/christchurchmayfairlive
+    link: https://youtu.be/-H0TcqkRZGU
 ---
 Evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
