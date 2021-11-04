@@ -1,16 +1,16 @@
 import { format } from "date-fns"
 import React from "react"
 import { FC } from "react"
-import EventListing, {
-    Event,
+import GroupedEventListing, {
+    GroupedEvent,
     eventSortFunction,
     hasEventPassedFilter,
-} from "./event"
+} from "./groupedevent"
 
 export type EventGroup = {
     title: string
     description: string
-    events: Event[]
+    events: GroupedEvent[]
     styles: any
 }
 
@@ -67,11 +67,11 @@ const EventGroupListing: FC<EventGroup> = ({
         .sort(eventSortFunction(true))
         .filter(hasEventPassedFilter(new Date(), { hours: 2 }))
 
-    const events_items = event_objects.map((event: Event) => (
-        <EventListing
+    const events_items = event_objects.map((event: GroupedEvent) => (
+        <GroupedEventListing
             key={format(event.datetime, "t")}
             {...event}
-        ></EventListing>
+        ></GroupedEventListing>
     ))
 
     let common_date = "DATE"

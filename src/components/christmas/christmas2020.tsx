@@ -9,7 +9,7 @@ import EventGroupListing, {
     EventGroup,
     eventGroupSortFunction,
     hasEventGroupPassedFilter,
-} from "./eventgroup"
+} from "./groupedevents/eventgroup"
 
 const Christmas2020 = () => {
     const data = useStaticQuery<GatsbyTypes.Christmas2020Query>(graphql`
