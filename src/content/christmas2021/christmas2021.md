@@ -4,7 +4,7 @@ title: Christmas at Christ Church Mayfair
 events:
 - title: Contemporary Carols
   description: A contemporary take on classic Christmas carols.
-  datetime: "2021-12-12T18:30:00Z"
+  datetime: "2021-12-12T18:00:00Z"
 - title: Contemporary Carols
   description: The Christmas carols you know and love with a contemporary sound.
   datetime: "2021-12-15T19:30:00Z"
@@ -24,4 +24,4 @@ events:
   description: All ages join together to celebrate the birth of Jesus.
   datetime: "2021-12-25T10:30:00Z"
 ---
-*Mince pies and mulled wine are served after all our carol services. Service last just over an hour.*
+*Mince pies and mulled wine are served after all our carol services. Services last just over an hour.*
