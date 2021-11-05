@@ -6,7 +6,7 @@ schedule:
   - time: 2021-10-31T10:30:00+00:00
     description: In person and online with Sunday School.
     link: https://youtu.be/l7igDFW_xhA
-  - time: 2021-11-7T10:30:00+00:00
+  - time: 2021-11-07T10:30:00+00:00
     description: In person and online with Sunday School.
     link: https://youtu.be/l7igDFW_xhA
   - time: 2021-11-14T10:30:00+00:00
