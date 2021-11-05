@@ -24,4 +24,4 @@ events:
   description: All ages join together to celebrate the birth of Jesus.
   datetime: "2021-12-25T10:30:00Z"
 ---
-*Mince pies and milled wine are served after all our carol services. Service last just over an hour.*
+*Mince pies and mulled wine are served after all our carol services. Service last just over an hour.*
