@@ -4,7 +4,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 import React from "react"
 import { FC } from "react"
 
-export type Event = {
+export type GroupedEvent = {
     description?: string
     streamLink?: string
     datetime: Date
@@ -18,9 +18,12 @@ export type Event = {
 export const hasEventPassedFilter: (
     datetime: Date,
     margin: Duration
-) => (event: Event) => boolean = function (datetime: Date, margin: Duration) {
-    const filterFunction: (event: Event) => boolean = function (
-        event: Event
+) => (event: GroupedEvent) => boolean = function (
+    datetime: Date,
+    margin: Duration
+) {
+    const filterFunction: (event: GroupedEvent) => boolean = function (
+        event: GroupedEvent
     ): boolean {
         const threshold_sub_margin = sub(datetime, margin)
         return isAfter(event.datetime, threshold_sub_margin)
@@ -30,12 +33,15 @@ export const hasEventPassedFilter: (
 
 export const eventSortFunction: (
     descending: boolean
-) => (event: Event, otherEvent: Event) => number = function (
+) => (event: GroupedEvent, otherEvent: GroupedEvent) => number = function (
     descending: boolean
 ) {
-    const sortFunction: (event: Event, otherEvent: Event) => number = function (
-        event: Event,
-        otherEvent: Event
+    const sortFunction: (
+        event: GroupedEvent,
+        otherEvent: GroupedEvent
+    ) => number = function (
+        event: GroupedEvent,
+        otherEvent: GroupedEvent
     ): number {
         let adjustment = 1
         if (!descending) {
@@ -49,7 +55,7 @@ export const eventSortFunction: (
     return sortFunction
 }
 
-const EventListing: FC<Event> = ({
+const GroupedEventListing: FC<GroupedEvent> = ({
     description,
     datetime,
     streamLink,
@@ -123,4 +129,4 @@ const EventListing: FC<Event> = ({
     )
 }
 
-export default EventListing
+export default GroupedEventListing
