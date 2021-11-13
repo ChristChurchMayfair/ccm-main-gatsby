@@ -3,12 +3,9 @@ title: Mornings
 normalTime: "10.30am"
 mainImage: ../assets/images/desktop/CCM_morning_church_lunch.jpg
 schedule:
-  - time: 2021-11-07T10:30:00+00:00
-    description: In person and online with Sunday School.
-    link: https://youtu.be/GQotfXhkksw
   - time: 2021-11-14T10:30:00+00:00
     description: In person and online with Sunday School.
-    link: https://youtu.be/l7igDFW_xhA
+    link: https://youtu.be/sxCXC-Yc7DA
   - time: 2021-11-21T10:30:00+00:00
     description: In person and online with Sunday School.
     link: https://youtu.be/l7igDFW_xhA
