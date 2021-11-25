@@ -30,7 +30,7 @@ Guide dogs, hearing dogs and assistance dogs are welcome at any of our meetings.
 Assistance for the Hard of Hearing
 ----------------------------------
 
-An infrared hearing support system is available, with both neck loop receivers for use with a hearing aid and stethoset receivers. Please ask the sound desk operator for assistance before the service.
+An infrared hearing support system is available, with both neck loop receivers for use with a hearing aid and stethoset receivers. Please ask someone on the welcome team for assistance before the service.
 
 More Information
 ----------------
