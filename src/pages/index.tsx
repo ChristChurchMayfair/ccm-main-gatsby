@@ -204,10 +204,6 @@ const IndexPage = () => {
 
             <Services />
 
-            <StudentPromo />
-
-            <LondonLivingPromo />
-
             <Section
                 id="midweek"
                 infoPanel
