@@ -13,6 +13,7 @@ import Hero from "../components/hero"
 import LondonLivingPromo from "../components/london-living-promo"
 import StudentPromo from "../components/student-promo"
 import Christmas2021 from "../components/christmas/christmas2021"
+import ImportantNotice from "../components/important-notice"
 
 const IndexPageQuery = graphql`
     query Homepage {
@@ -191,6 +192,15 @@ const IndexPage = () => {
             </Section>
 
             <Christmas2021 />
+
+            <ImportantNotice
+                title={"No Evening Service - Sunday 26th December"}
+            >
+                <p>
+                    Please note: there will be no evening service on Sunday 26th
+                    December. The morning service will run as usual at 10:30 AM.
+                </p>
+            </ImportantNotice>
 
             <Services />
 
