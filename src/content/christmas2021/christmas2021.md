@@ -16,10 +16,7 @@ events:
   datetime: "2021-12-19T10:30:00Z"
 - title: Carols by Candlelight
   description: Get ready for Christmas with traditional readings, the CCM choir and brass band.
-  datetime: "2021-12-19T17:00:00Z"
-- title: Carols by Candlelight
-  description: Get ready for Christmas with traditional readings, the CCM choir and brass band.
-  datetime: "2021-12-19T19:00:00Z"
+  datetime: "2021-12-19T18:00:00Z"
 - title: Christmas Day Service
   description: All ages join together to celebrate the birth of Jesus.
   datetime: "2021-12-25T10:30:00Z"
