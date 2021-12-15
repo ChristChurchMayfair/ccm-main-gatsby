@@ -5,12 +5,6 @@ events:
 - title: Contemporary Carols
   description: A contemporary take on classic Christmas carols.
   datetime: "2021-12-12T18:00:00Z"
-- title: Contemporary Carols
-  description: The Christmas carols you know and love with a contemporary sound.
-  datetime: "2021-12-15T19:30:00Z"
-- title: Carols by Candlelight
-  description: A great Christmas tradition. Choir, candles and more.
-  datetime: "2021-12-16T19:30:00Z"
 - title: Family Carols with nativity
   description: Nativity play, brass band and a talk for listeners of all ages.
   datetime: "2021-12-19T10:30:00Z"

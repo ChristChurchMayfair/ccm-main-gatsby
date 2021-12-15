@@ -191,6 +191,19 @@ const IndexPage = () => {
                 </a>
             </Section>
 
+            <ImportantNotice
+                title={"Midweek Carol Services Cancelled"}
+                variant="Critical"
+            >
+                <p>
+                    It is with much regret that have cancelled our midweek carol
+                    services (
+                    <strong>Wednesday 15th &amp; Thursday 16th</strong>). We aim
+                    to run Sunday services (19th) and the Christmas Day service.
+                    Please check here for updates.
+                </p>
+            </ImportantNotice>
+
             <Christmas2021 />
 
             <ImportantNotice
