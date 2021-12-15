@@ -196,8 +196,8 @@ const IndexPage = () => {
                 variant="Critical"
             >
                 <p>
-                    It is with much regret that have cancelled our midweek carol
-                    services (
+                    It is with much regret that we have cancelled our midweek
+                    carol services (
                     <strong>Wednesday 15th &amp; Thursday 16th</strong>). We aim
                     to run Sunday services (19th) and the Christmas Day service.
                     Please check here for updates.
