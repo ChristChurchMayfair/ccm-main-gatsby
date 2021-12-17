@@ -193,12 +193,10 @@ const IndexPage = () => {
 
             <Christmas2021 />
 
-            <ImportantNotice
-                title={"No Evening Service - Sunday 26th December"}
-            >
+            <ImportantNotice title={"No Services - Sunday 26th December"}>
                 <p>
-                    Please note: there will be no evening service on Sunday 26th
-                    December. The morning service will run as usual at 10:30 AM.
+                    Please note: there will be no services on Sunday 26th
+                    December.
                 </p>
             </ImportantNotice>
 
