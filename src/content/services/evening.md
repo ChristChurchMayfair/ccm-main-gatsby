@@ -6,6 +6,9 @@ schedule:
   - time: 2021-12-19T18:00:00+00:00
     description: Live service, in person and online.
     link: https://youtu.be/mHMUHIT7JSM
+  - time: 2022-01-02T18:00:00+00:00
+    description: Live service, in person and online.
+    link: https://youtu.be/mHMUHIT7JSM
 ---
 Evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
