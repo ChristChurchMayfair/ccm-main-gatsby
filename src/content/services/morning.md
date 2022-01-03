@@ -6,6 +6,18 @@ schedule:
   - time: 2022-01-02T10:30:00+00:00
     description: In person and online with Sunday School.
     link: https://youtu.be/Fvqew4vBlrw
+  - time: 2022-01-09T10:30:00+00:00
+    description: In person and online with Sunday School.
+    link: https://youtu.be/Fvqew4vBlrw
+  - time: 2022-01-16T10:30:00+00:00
+    description: In person and online with Sunday School.
+    link: https://youtu.be/Fvqew4vBlrw
+  - time: 2022-01-23T10:30:00+00:00
+    description: In person and online with Sunday School.
+    link: https://youtu.be/Fvqew4vBlrw
+  - time: 2022-01-30T10:30:00+00:00
+    description: In person and online with Sunday School.
+    link: https://youtu.be/Fvqew4vBlrw
 ---
 Mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
 
