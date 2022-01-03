@@ -191,15 +191,6 @@ const IndexPage = () => {
                 </a>
             </Section>
 
-            <Christmas2021 />
-
-            <ImportantNotice title={"No Services - Sunday 26th December"}>
-                <p>
-                    Please note: there will be no services on Sunday 26th
-                    December.
-                </p>
-            </ImportantNotice>
-
             <Services />
 
             <Section
