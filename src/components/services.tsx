@@ -42,18 +42,18 @@ const Services = () => {
             ) {
                 ...Service
             }
+            notice: markdownRemark(
+                fileAbsolutePath: { regex: "/services/notice.md$/" }
+            ) {
+                html
+            }
         }
     `)
     return (
         <Section id="services" colorScheme="dark">
             <div className={styles.servicesSection}>
                 <h1 className={styles.heading}>Our Sunday Services</h1>
-                <div className={styles.serviceNotes}>
-                    Our services have now mostly returned to normal. We are
-                    encouraging everyone to wear a mask when singing, and we
-                    still have an area of the church with masking at all times
-                    and chairs spaced further out. If you have any questions
-                    about our services, get in touch with the church office.
+                <div className={styles.serviceNotes} dangerouslySetInnerHTML={{__html: data.notice!.html!}}>
                 </div>
                 <div className={styles.services}>
                     {[data.am, data.pm].map(service => {
