@@ -53,8 +53,10 @@ const Services = () => {
         <Section id="services" colorScheme="dark">
             <div className={styles.servicesSection}>
                 <h1 className={styles.heading}>Our Sunday Services</h1>
-                <div className={styles.serviceNotes} dangerouslySetInnerHTML={{__html: data.notice!.html!}}>
-                </div>
+                <div
+                    className={styles.serviceNotes}
+                    dangerouslySetInnerHTML={{ __html: data.notice!.html! }}
+                ></div>
                 <div className={styles.services}>
                     {[data.am, data.pm].map(service => {
                         if (service == null) {
