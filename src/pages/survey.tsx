@@ -384,7 +384,10 @@ const SurveyPage: React.FC = () => {
                         { id: "sevenToNineYears", name: "7 to 9 years" },
                         { id: "tenToFourteen", name: "10 to 14 years" },
                         { id: "fifteenToTwenty", name: "15 to 20 years" },
-                        { id: "twentyOneYearsOrMore", name: "21 years or more" },
+                        {
+                            id: "twentyOneYearsOrMore",
+                            name: "21 years or more",
+                        },
                     ]}
                 />
                 <FormInformationSection showWhen={showOldTimerMessage}>
