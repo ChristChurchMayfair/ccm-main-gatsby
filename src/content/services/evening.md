@@ -3,12 +3,9 @@ title: Evenings
 normalTime: "6.00pm"
 mainImage: ../assets/images/desktop/hand_in_the_air.jpg
 schedule:             
-  - time: 2022-01-23T18:00:00+00:00
-    description: Live service, in person and online.
-    link: https://youtu.be/mVUDc9f0iYo
   - time: 2022-01-30T18:00:00+00:00
     description: Live service, in person and online.
-    link: https://youtu.be/SaXlFl1b13s
+    link: https://youtu.be/oGErmMRng5M
 ---
 Evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
