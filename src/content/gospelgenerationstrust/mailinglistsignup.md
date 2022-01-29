@@ -1,6 +1,16 @@
 ---
-title: GGT Giving Form
-headerColour: dark
+template: mailchimpsignup
+path: /gospelgenerationstrust/mailinglistsignup
+title: "Mailing List Signup"
+showInFooter: false
+showInMenu: false
+signupPlaceholder: Your email address
+askForFirstName: true
+askForLastName: true
+askForEmailPermission: true
+permissionCaption: I'm happy to be contact by email by the Gospel Generations Trust.
+action: "https://christchurchmayfair.us1.list-manage.com/subscribe/post?u=6e842127de73c1830b47cf41c&amp;id=795f694f99"
+hiddenValue: "b_6e842127de73c1830b47cf41c_795f694f99"
 ---
 Mailing List
 =============

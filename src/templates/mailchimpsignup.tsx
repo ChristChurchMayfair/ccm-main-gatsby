@@ -18,12 +18,76 @@ export const query = graphql`
                 hiddenValue
                 action
                 signupPlaceholder
+                askForFirstName
+                askForLastName
+                askForEmailPermission
+                permissionCaption
             }
         }
     }
 `
 
 const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
+    var firstNameField = <></>
+    if (data.mainInfo!.frontmatter!.askForFirstName) {
+        firstNameField = (
+            <>
+                <input
+                    type="text"
+                    defaultValue=""
+                    name="FNAME"
+                    className="firstname"
+                    id="mce-FNAME"
+                    placeholder={"First name"}
+                    required={true}
+                />
+                <br></br>
+            </>
+        )
+    }
+
+    var lastNameField = <></>
+    if (data.mainInfo!.frontmatter!.askForLastName) {
+        lastNameField = (
+            <>
+                <input
+                    type="text"
+                    defaultValue=""
+                    name="LNAME"
+                    className="lastname"
+                    id="mce-LNAME"
+                    placeholder={"Last name"}
+                    required={true}
+                />
+                <br></br>
+            </>
+        )
+    }
+
+    var emailPermissionField = <></>
+    if (data.mainInfo!.frontmatter!.askForEmailPermission) {
+        emailPermissionField = (
+            <>
+                <fieldset
+                    className="mc_fieldset gdprRequired mc-field-group"
+                    name="interestgroup_field"
+                >
+                    <label className="checkbox subfield" htmlFor="gdpr_44254">
+                        <input
+                            type="checkbox"
+                            id="gdpr_44254"
+                            name="gdpr[44254]"
+                            value="Y"
+                            className="checkbox"
+                        />
+                        <span>{data.mainInfo?.frontmatter?.permissionCaption}</span>{" "}
+                    </label>
+                </fieldset>
+                <br></br>
+            </>
+        )
+    }
+
     return (
         <Layout title={data.mainInfo!.frontmatter!.title} headerColour="dark">
             <HeaderUnderlay colorScheme="light" />
@@ -45,6 +109,8 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                             noValidate={false}
                         >
                             <div id="mc_embed_signup_scroll">
+                                {firstNameField}
+                                {lastNameField}
                                 <input
                                     type="email"
                                     defaultValue=""
@@ -74,6 +140,7 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                                         defaultValue=""
                                     />
                                 </div>
+                                {emailPermissionField}
                                 <input
                                     type="submit"
                                     value="Subscribe"
