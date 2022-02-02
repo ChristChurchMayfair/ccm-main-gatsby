@@ -3,7 +3,7 @@ title: Mornings
 normalTime: "10.30am"
 mainImage: ../assets/images/desktop/CCM_morning_church_lunch.jpg
 schedule:
-  - time: 2022-01-30T10:30:00+00:00
+  - time: 2022-02-06T10:30:00+00:00
     description: In person and online with Sunday School.
     link: https://youtu.be/xQNVYZy6iug
 ---
