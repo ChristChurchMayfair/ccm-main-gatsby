@@ -3,12 +3,9 @@ title: Evenings
 normalTime: "6.00pm"
 mainImage: ../assets/images/desktop/hand_in_the_air.jpg
 schedule:             
-  - time: 2022-02-13T18:00:00+00:00
-    description: Live service, in person and online.
-    link: https://youtu.be/8mCYAboBuDI
   - time: 2022-02-20T18:00:00+00:00
     description: Live service, in person and online.
-    link: https://youtu.be/8mCYAboBuDI
+    link: https://youtu.be/gG_hp0BpUdg
   - time: 2022-02-27T18:00:00+00:00
     description: Live service, in person and online.
     link: https://youtu.be/8mCYAboBuDI
