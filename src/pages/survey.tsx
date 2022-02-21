@@ -114,7 +114,7 @@ const allConfig: { [configName: string]: GoogleFormSubmissionConfig } = {
         warning: devevelopmentEnvironmentWarning,
     },
     production: {
-        formId: "1FAIpQLSe4TWN-Ni5yjMAZ5qNFSSbhV1AGOH8hPxAqnJE_fN-586vr4A",
+        formId: "1FAIpQLSesuFhFd1Io7gTXuc3ROK96IOEW0-wz53Fsa4YCuvDXGDiPzw",
         fieldNameToEntryId: {
             ageBracket: 550250439,
             gender: 604740151,
@@ -218,7 +218,7 @@ const SurveyPage: React.FC = () => {
     }
 
     return (
-        <Layout title="2021 Congregational Survey" headerColour={"dark"}>
+        <Layout title="2022 Congregational Survey" headerColour={"dark"}>
             <HeaderUnderlay colorScheme="light" />
             <Section
                 intro
@@ -333,17 +333,6 @@ const SurveyPage: React.FC = () => {
                     ]}
                 />
                 <RadioButtonField
-                    name="liveOrCatchUp"
-                    label="How did you attend today?"
-                    contextualHelp={"Select one."}
-                    validation={{ required: "This is a required field" }}
-                    options={[
-                        { id: "inPerson", name: "In Person" },
-                        { id: "liveStreamed", name: "Online - Live" },
-                        { id: "catchUp", name: "Online - Afterwards" },
-                    ]}
-                />
-                <RadioButtonField
                     name="yourLocation"
                     label="Please tell us where you're watching from today"
                     contextualHelp={"City and/or Region."}
@@ -394,8 +383,11 @@ const SurveyPage: React.FC = () => {
                         { id: "fourToSixYears", name: "4 to 6 years" },
                         { id: "sevenToNineYears", name: "7 to 9 years" },
                         { id: "tenToFourteen", name: "10 to 14 years" },
-                        { id: "fifteenToNineteen", name: "15 to 19 years" },
-                        { id: "twentyYearsOrMore", name: "20 years or more" },
+                        { id: "fifteenToTwenty", name: "15 to 20 years" },
+                        {
+                            id: "twentyOneYearsOrMore",
+                            name: "21 years or more",
+                        },
                     ]}
                 />
                 <FormInformationSection showWhen={showOldTimerMessage}>

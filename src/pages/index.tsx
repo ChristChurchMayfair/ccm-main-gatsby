@@ -11,7 +11,9 @@ import Section from "../components/section"
 import SectionText from "../components/section-text"
 import Hero from "../components/hero"
 import LondonLivingPromo from "../components/london-living-promo"
-import CovidNotice from "../components/covid-notice"
+import StudentPromo from "../components/student-promo"
+import Christmas2021 from "../components/christmas/christmas2021"
+import ImportantNotice from "../components/important-notice"
 
 const IndexPageQuery = graphql`
     query Homepage {
@@ -115,28 +117,7 @@ const IndexPage = () => {
     }, [carouselImages.length])
 
     return (
-        <Layout
-            title={undefined}
-            headerColour="light"
-            // Delete this after Christmas
-            openGraphData={{
-                title: data.site!.siteMetadata!.title!,
-                type: "website",
-                siteName: data.site!.siteMetadata!.title!,
-                url: data.site!.siteMetadata!.url!,
-                description: data.site!.siteMetadata!.description!,
-                images: [
-                    {
-                        imageUrl: data.xmasPromoImage!.childImageSharp!.fixed!
-                            .src,
-                        imageAlternativeText:
-                            "Christmas at Christ Church Mayfair",
-                    },
-                ],
-                email: data.site!.siteMetadata!.email!,
-                phoneNumber: data.site!.siteMetadata!.officePhoneNumber!,
-            }}
-        >
+        <Layout title={undefined} headerColour="light">
             <Hero
                 sectionId="home-hero"
                 overlayCaption={data.mainInfo!.frontmatter!.overlayCaption}
@@ -210,11 +191,7 @@ const IndexPage = () => {
                 </a>
             </Section>
 
-            <CovidNotice />
-
             <Services />
-
-            <LondonLivingPromo />
 
             <Section
                 id="midweek"

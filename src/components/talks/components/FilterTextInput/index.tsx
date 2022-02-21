@@ -1,20 +1,15 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 import { COLOURS } from "../../constants/styles"
 
 interface Props {
-    onChange: (value: string) => void
+    setTalksFilter: (value: string) => void
     placeholder: string
-    value: string
-}
-
-interface State {
-    isFocused: boolean
 }
 
 const Main = styled.label<{ isFocused: boolean }>`
     cursor: text;
-    padding: 0.3em 0.5em;
+    padding: 0.1em 0.3em;
     border: 3px solid ${COLOURS.lightGrey};
     transition: border-color 0.2s, width 0.2s;
     display: block;
@@ -24,40 +19,38 @@ const Main = styled.label<{ isFocused: boolean }>`
 `
 
 const TextInput = styled.input`
-    font-size: 0.8em;
+    font-size: 0.6em;
     font-family: inherit;
     outline: none;
     border: none;
     width: 100%;
 `
 
-class FilterTextInput extends Component<Props, State> {
-    state = { isFocused: false }
+const FilterTextInput: React.FC<Props> = ({ setTalksFilter, placeholder }) => {
+    const [isFocused, setIsFocused] = React.useState(false)
+    const [filterValue, setFilterValue] = React.useState("")
 
-    onFocus = () => this.setState({ isFocused: true })
-
-    onBlur = () => this.setState({ isFocused: false })
-
-    render() {
-        const { onChange, placeholder, value } = this.props
-        const { isFocused } = this.state
-        return (
-            <Main isFocused={isFocused}>
-                <TextInput
-                    value={value}
-                    type="text"
-                    onChange={event => {
-                        //$FlowFixMe
-                        const newFilterValue: string = event.target.value
-                        onChange(newFilterValue)
-                    }}
-                    placeholder={placeholder}
-                    onFocus={this.onFocus}
-                    onBlur={this.onBlur}
-                />
-            </Main>
-        )
-    }
+    return (
+        <Main isFocused={isFocused}>
+            <TextInput
+                value={filterValue}
+                type="text"
+                onChange={event => {
+                    //$FlowFixMe
+                    const newFilterValue: string = event.target.value
+                    setFilterValue(newFilterValue)
+                }}
+                onKeyPress={event => {
+                    if (event.key == "Enter") {
+                        setTalksFilter(filterValue)
+                    }
+                }}
+                placeholder={placeholder}
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+            />
+        </Main>
+    )
 }
 
 export default FilterTextInput

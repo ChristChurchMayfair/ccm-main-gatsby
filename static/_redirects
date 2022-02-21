@@ -12,20 +12,24 @@
 
 #Live Stream Links
 
-/ServiceSheetAM                             https://drive.google.com/file/d/1AxI8VYD1my-pa-1pZoAxzG0DOpP-6r7d/view?usp=sharing
-/ServiceSheetPM                             https://drive.google.com/file/d/178fOiO7XITs5ym-gGrem-PN-X-pKgjPy/view?usp=sharing
-/GoodFridayServiecSheet                     https://drive.google.com/file/d/1t0Bc3XKYK2UDC8IgsIkXGKSKIRWM2XsF/view?usp=sharing
+/ServiceSheetAM                             https://drive.google.com/file/d/1ayk9UIq5J-FP2pJV-nSLCID7FaVFcrwm/view?usp=sharing
+/ServiceSheetPM                             https://drive.google.com/file/d/1ZiM913AMEWxg_Zs3dYKlgGIBB7EW_PQZ/view?usp=sharing
 
-/NewcomerForm                               https://forms.gle/uMDnnTcWniQdYfh99
+#/NewcomerForm                               https://forms.gle/uMDnnTcWniQdYfh99
 
 /mission                                    /missionpartners
 
 /financeupdate                              https://drive.google.com/file/d/18vLzbhhwFD8-6shDBQOvkor6kSre3_-z/view?usp=sharing
 
+/sing                                       /songs/amazing_grace
+
+## Gospel Generation Trust Redirects
 /ggt                                        /gospelgenerationstrust
-/cgt                                        /gospelgenerationstrust
+
 # This is because there is a typo on the flier
+/cgt                                        /gospelgenerationstrust
 /cgt/giftaid                                /gospelgenerationstrust/givingform
+
 
 # OLD LINKS
 

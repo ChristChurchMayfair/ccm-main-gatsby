@@ -8,4 +8,4 @@ Whatever our stage of life, we believe it's good to meet together in smaller gro
 
 Many of us work centrally so it makes sense for some to meet in the church building. Some of our church family live close to one another so host both daytime and evening small groups in homes around London.
 
-If you work in and around W1, do join us at [Midweek in Mayfair](http://midweekinmayfair.org), a lunchtime meeting on Tuesdays. We want to explain the good news about Jesus Christ, to connect our faith with our work and to encourage one another as we do this.
+If you work in and around W1, do join us at [Midweek in Mayfair](http://midweekinmayfair.org), a lunchtime meeting on Wednesdays. We want to explain the good news about Jesus Christ, to connect our faith with our work and to encourage one another as we do this.

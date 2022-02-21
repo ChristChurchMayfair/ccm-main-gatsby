@@ -8,16 +8,17 @@ Our account details for BACS transfers or Standing Orders are:
 
 * Transaction Reference: **Your Name** - *required for tracking purposes.*
 * Bank: **CAF Bank Limited**
+* Account Name: **Christ Church Mayfair**
 * Account Number: **00099436**
 * Sort Code: **40-52-40**
 
 ### Getting Help
 
-If you require any help regarding your giving, particularly if you require more information as a US taxpayer in the UK, please contact the [Treasurer](mailto:treasurer@christchurchmayfair.org)
+If you require any help regarding your giving, particularly if you require more information as a US taxpayer in the UK, please contact the [Giving Secretary](mailto:treasurer@christchurchmayfair.org)
 
 ### Changes or Cancellations
 
-Please notify the [Treasurer](mailto:treasurer@christchurchmayfair.org) if you:
+Please notify the [Giving Secretary](mailto:treasurer@christchurchmayfair.org) if you:
 1. Want to cancel this declaration
 * Change your name or home address
 * No longer pay sufficient tax on your income and/or capital gains.*
@@ -38,4 +39,4 @@ Your giving data is only shared with the Finance Team & book-keeper and not with
 
 ### Technical Help
 
-If you have any technical problems with this form please contact: [Tom Duckering](tom@christchurchmayfair.org).
+If you have any technical problems with this form please contact: [Tom Duckering](mailto:tom@christchurchmayfair.org).

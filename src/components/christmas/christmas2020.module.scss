@@ -1,0 +1,353 @@
+@import "../../mixins/button";
+
+:root {
+    --christmas2020-color: #001819;
+    --christmas2020-light-color: #6092a0;
+    --christmas2020-highlight-color: #a3bcc3;
+    --christmas2020-highlight-2-color: #d5ad82;
+    --cancelled-color: rgb(146, 44, 44);
+}
+
+.christmas2020 {
+    background-color: var(--christmas2020-color);
+    color: var(--christmas2020-light-color);
+    padding-top: calc(var(--general-padding) * 5);
+    padding-bottom: calc(var(--general-padding) * 5);
+
+    background-image: url("../../content/christmas2020/Asset 22.svg"),
+        url("../../content/christmas2020/Asset 28 rot45.svg");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+
+    // Mobile
+    @media only screen and (max-width: 968px) {
+        background-position-y: -100px, -50px;
+        background-position-x: calc(50% + 225px), calc(50% - 490px);
+        background-size: 300px, 0;
+    }
+
+    @media only screen and (min-width: 968px) {
+        background-position-y: -450px, -50px;
+        background-position-x: calc(50% + 600px), calc(50% - 490px);
+        background-size: 900px, 400px;
+    }
+
+    // wide
+    @media only screen and (min-width: 1200px) {
+        background-position-y: -450px, -50px;
+        background-position-x: calc(100% + 450px), calc(50% - 490px);
+    }
+
+    .form {
+        grid-area: form;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 2fr 3fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "info info info"
+            "field field button";
+    }
+
+    .field {
+        grid-area: field;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        input {
+            width: 300px;
+        }
+    }
+
+    .submit {
+        grid-area: button;
+        width: auto;
+        display: block;
+
+        input {
+            background-color: var(--christmas2020-light-color);
+            color: var(--christmas2020-color);
+            // width: 150px;
+            width: 100%;
+            // display: block;
+            font-weight: 500;
+        }
+    }
+
+    .form input[type="text"],
+    .form input[type="email"],
+    .form input[type="date"],
+    .form input[type="radio"] + label,
+    .form input[type="checkbox"] + label,
+    select {
+        border-color: var(--dark-gray);
+        border-width: 1px;
+        border-style: solid;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        line-height: var(--button-height);
+        font-weight: 300;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        border-radius: 0px;
+    }
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title ." "blurb blurb" "events events" "form form";
+    row-gap: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        grid-template-columns: 5fr 1fr;
+        // grid-template-areas: "title" "blurb" "events" "form";
+    }
+}
+
+.title {
+    grid-area: title;
+    font-family: "argesta_displayregular";
+    color: var(--christmas2020-highlight-color);
+    font-size: 3em;
+    line-height: 1em;
+
+    @media only screen and (max-width: 968px) {
+        font-size: 2em;
+    }
+
+    @media only screen and (max-width: 320px) {
+        font-size: 1.6em;
+    }
+}
+
+.eventgroups {
+    grid-area: events;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.blurb {
+    grid-area: blurb;
+    font-size: 1.3em;
+
+    em {
+        font-style: normal;
+        color: var(--christmas2020-highlight-color);
+    }
+}
+
+.eventgroup {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "title"
+        "date"
+        "description"
+        "events";
+    margin-bottom: var(--general-padding);
+}
+
+.eventgrouptitle {
+    grid-area: title;
+    color: var(--christmas2020-highlight-2-color);
+    font-variant: small-caps;
+    font-size: 1.4em;
+}
+
+.eventgroupdate {
+    grid-area: date;
+}
+
+.eventgroupdescription {
+    grid-area: description;
+    color: var(--christmas2020-highlight-color);
+}
+
+.eventgroupevents {
+    grid-area: events;
+}
+
+.event {
+    display: grid;
+    grid-template-columns: 100px auto 200px;
+    grid-template-areas: "time eventtype streamlink";
+
+    @media only screen and (max-width: 968px) {
+                grid-template-columns: 80px 1fr 110px;
+                grid-template-rows: auto;
+                grid-template-areas: "time eventtype streamlink";
+                // margin-bottom: calc(var(--general-padding) * 1.5);
+        //         column-gap: 5px;
+        //         row-gap: 0px;
+                font-size: 0.9em;
+    }
+
+    span {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+    }
+
+    .eventtype {
+        grid-area: eventtype;
+        font-size: 0.8em;
+        line-height: 2em;
+
+        &.cancelled {
+            color: var(--cancelled-color);
+        }
+    }
+
+    .eventtime {
+        grid-area: time;
+        color: var(--christmas2020-highlight-color);
+    }
+
+    .eventdescription {
+        grid-area: description;
+        font-size: 0.8em;
+        line-height: 2em;
+    }
+    a {
+        @include button;
+        background-color: var(--christmas2020-highlight-color);
+        color: var(--christmas2020-color);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .streamlink {
+        grid-area: streamlink;
+    }
+}
+
+// .event {
+//     display: grid;
+//     grid-template-columns: 200px 150px 110px 140px 80px 150px;
+//     grid-template-areas: "eventname eventtype day date time streamlink";
+//     margin-bottom: calc(var(--general-padding) * 0.5);
+//     column-gap: calc(var(--general-padding) * 0.5);
+
+//     @media only screen and (max-width: 968px) {
+//         grid-template-columns: 160px 1fr 100px;
+//         grid-template-rows: 30px 30px;
+//         grid-template-areas: "eventname eventtype streamlink"
+//         "daydatetime daydatetime streamlink";
+//         margin-bottom: calc(var(--general-padding) * 1.5);
+//         column-gap: 5px;
+//         row-gap: 0px;
+//         font-size: 0.9em;
+//     }
+
+//     @media only screen and (max-width: 968px) {
+//         font-size: 0.8em;
+//         grid-template-columns: 160px 1fr 50px;
+//     }
+
+//     @media only screen and (max-width: 320px) {
+//         font-size: 0.7em;
+//         grid-template-columns: 130px 1fr 50px;
+//     }
+
+//     span {
+//         padding-top: 8px;
+//         padding-bottom: 8px;
+//         white-space: nowrap;
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+//     }
+
+//     .day {
+//         grid-area: day;
+//         @media only screen and (max-width: 968px) {
+//             display:none;
+//         }
+//     }
+
+//     .date {
+//         grid-area: date;
+//         @media only screen and (max-width: 968px) {
+//             display:none;
+//         }
+//     }
+
+//     .shortday {
+//         display:none;
+//         grid-area: day;
+//         @media only screen and (max-width: 968px) {
+//             // display:inline-block;
+//         }
+//     }
+
+//     .shortdate {
+//         grid-area: date;
+//         display:none;
+//         @media only screen and (max-width: 968px) {
+//             // display:inline-block;
+//         }
+//     }
+
+//     .shortdaydatetime {
+//         grid-area: daydatetime;
+//         display:none;
+//         @media only screen and (max-width: 968px) {
+//             display:inline-block;
+//         }
+//     }
+
+//     .time {
+//         grid-area: time;
+//         @media only screen and (max-width: 968px) {
+//             display: none;
+//         }
+//     }
+
+//     .eventname {
+//         grid-area: eventname;
+//         // font-weight: 500;
+//         color: var(--christmas2020-highlight-color);
+//     }
+
+//     a {
+//         @include button;
+//         background-color: var(--christmas2020-highlight-color);
+//         color: var(--christmas2020-color);
+
+//         &:hover {
+//             text-decoration: underline;
+//         }
+//     }
+
+//     .streamlink {
+//         grid-area: streamlink;
+//     }
+
+//     .eventtype {
+//         grid-area: eventtype;
+//         font-size: 0.8em;
+//         line-height: 2em;
+//     }
+// }
+
+a.showMoreButton {
+    @include button;
+    background-color: var(--christmas2020-highlight-color);
+    color: var(--christmas2020-color);
+    width: 200px;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

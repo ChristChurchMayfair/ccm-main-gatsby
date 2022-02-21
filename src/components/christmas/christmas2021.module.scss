@@ -1,0 +1,141 @@
+@import "../../mixins/button";
+
+:root {
+    --christmas2021-color: #27152c;
+    --christmas2021-light-color: #fcc87c;
+    --christmas2021-highlight-color: white;
+    // --christmas2021-highlight-2-color: #d5ad82;
+    // --cancelled-color: rgb(146, 44, 44);
+}
+
+@font-face {
+    font-family: "Abygaer";
+    src: url("../../assets/fonts/abygaer/Abygaer-Regular.eot");
+    src: url("../../assets/fonts/abygaer/Abygaer-Regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("../../assets/fonts/abygaer/Abygaer-Regular.woff2") format("woff2"),
+        url("../../assets/fonts/abygaer/Abygaer-Regular.woff") format("woff"),
+        url("../../assets/fonts/abygaer/Abygaer-Regular.ttf") format("truetype"),
+        url("../../assets/fonts/abygaer/Abygaer-Regular.svg#Normal")
+            format("svg");
+}
+
+.christmas2021 {
+    background-color: var(--christmas2021-color);
+    color: var(--christmas2021-light-color);
+    padding-top: calc(var(--general-padding) * 2);
+
+    background-image: url("../../content/christmas2021/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    grid-area: content;
+    // display: grid;
+    // grid-template-rows: auto auto auto;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-areas: "title title" "blurb blurb" "events events";
+    row-gap: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        grid-template-columns: 5fr 1fr;
+    }
+}
+
+.year {
+    padding-top: calc(var(--general-padding) / 2);
+    padding-bottom: var(--general-padding);
+    font-family: "Abygaer";
+    font-size: 1.3em;
+    letter-spacing: 0.2em;
+    text-align: center;
+
+    @media only screen and (max-width: 968px) {
+        font-size: 1.1em;
+    }
+}
+
+.title {
+    @media only screen and (max-width: 968px) {
+        font-size: 2em;
+    }
+
+    @media only screen and (max-width: 320px) {
+        font-size: 1.6em;
+    }
+}
+
+.blurb {
+    grid-area: blurb;
+    font-size: 1em;
+    color: var(--christmas2021-highlight-color);
+    font-weight: 100;
+}
+
+.events {
+    grid-area: events;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: var(--general-padding);
+    column-gap: var(--general-padding);
+    row-gap: calc(var(--general-padding) / 2);
+
+    @media only screen and (max-width: 700px) {
+        grid-template-columns: 1fr;
+        row-gap: calc(var(--general-padding) * 2);
+    }
+}
+
+.event {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 65px;
+    row-gap: 5px;
+
+    @media only screen and (max-width: 968px) {
+        grid-template-rows: auto auto auto;
+    }
+
+    .eventtime {
+        font-family: "Abygaer";
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 0.8em;
+        color: var(--christmas2020-highlight-color);
+
+        @media only screen and (max-width: 968px) {
+            font-size: 0.7em;
+        }
+
+        // @media only screen and (max-width: 375px) {
+        //     font-size: 0.65em;
+        // }
+
+        // @media only screen and (max-width: 320px) {
+        //     font-size: 0.55em;
+        // }
+    }
+
+    .eventtitle {
+        color: var(--christmas2021-highlight-color);
+        font-weight: 300;
+    }
+
+    .eventdescription {
+        color: var(--christmas2021-highlight-color);
+        font-size: 0.8em;
+        font-weight: 100;
+    }
+}
+
+.button {
+    @include button;
+    background-color: var(--christmas2021-light-color);
+    color: var(--christmas2021-color);
+    width: 200px;
+
+    @media only screen and (max-width: 968px) {
+        width: auto;
+    }
+}

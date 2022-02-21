@@ -42,13 +42,21 @@ const Services = () => {
             ) {
                 ...Service
             }
+            notice: markdownRemark(
+                fileAbsolutePath: { regex: "/services/notice.md$/" }
+            ) {
+                html
+            }
         }
     `)
     return (
         <Section id="services" colorScheme="dark">
             <div className={styles.servicesSection}>
                 <h1 className={styles.heading}>Our Sunday Services</h1>
-                <div className={styles.serviceNotes}></div>
+                <div
+                    className={styles.serviceNotes}
+                    dangerouslySetInnerHTML={{ __html: data.notice!.html! }}
+                ></div>
                 <div className={styles.services}>
                     {[data.am, data.pm].map(service => {
                         if (service == null) {

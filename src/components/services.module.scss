@@ -20,6 +20,10 @@
 
 .serviceNotes {
     grid-area: notes;
+    padding-bottom: 30px;
+    @media only screen and (max-width: 968px) {
+        padding-bottom: 10px;
+    }
 }
 
 .heading {
@@ -120,7 +124,8 @@
 
 .session {
     display: grid;
-    grid-template-rows: 50px 100px 50px;
+    //grid-template-rows: 50px 100px 50px;
+    grid-template-rows: 40px 40px 50px;
     grid-template-areas: "sessionTime"
     "sessionDescription"
     "sessionLink";
@@ -133,7 +138,8 @@
     line-height: 1em;
 
     @media only screen and (max-width: 968px) {
-        grid-template-rows: 50px 110px 50px;
+        //grid-template-rows: 50px 110px 50px;
+        grid-template-rows: 40px 50px 50px;
         font-size: 0.9em;
     }
 }

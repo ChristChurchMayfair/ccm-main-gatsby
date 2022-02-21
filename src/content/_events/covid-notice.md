@@ -1,13 +1,15 @@
 ---
 name: Regarding Coronavirus
 status: live
-lastUpdated: 17:00 06 April 2021
+lastUpdated: 12:30 02 September 2021
 ---
-## In-person Services
-We're delighted to offer Sunday services both in-person and online. [Service times and stream links](/#services) are below.
+## In-Person Services
+We're delighted to offer our Sunday services both in-person and online! You can see our [service times and stream links](/#services) below.
 
-Space is limited to enable social distancing. If you're new and would like to join us in-person, please email the [church office](mailto:info@christchurchmayfair.org) to book a place. For our regular church family, please await email invitations.
+You don't need to book in advance to come in person, just turn up at your preferred time and we'd love to welcome you.
+
+We are retaining some measures to limit the spread of coronavirus. Please read [this short explanation](/attending-in-person) before you come along.
 
 Any important updates will be posted here.
 
-Updated: *6th April 2021*
+Updated: *19th September 2021*

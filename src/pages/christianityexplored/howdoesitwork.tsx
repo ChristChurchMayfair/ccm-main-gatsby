@@ -46,6 +46,10 @@ const HowDoesItWorkPage: FC = () => {
                         as little as they wish.
                     </p>
                     <p>
+                        Our next course will be running over Zoom on Monday
+                        evenings from 7-8pm, starting on 4th October.
+                    </p>
+                    <p>
                         The course is designed to be experienced as a part of
                         these groups, but we can make the videos available to
                         watch on your own, just click the button below.

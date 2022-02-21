@@ -1,4 +1,6 @@
+import classNames from "classnames"
 import React, { FC } from "react"
+import { propTypes } from "react-spinkit"
 
 import styles from "./important-notice.module.scss"
 import Section from "./section"
@@ -15,6 +17,7 @@ interface ImportantNoticeProps {
     title: string
     lastUpdated?: string
     features?: Feature[]
+    variant?: "Critical"
 }
 
 const ImportantNotice: FC<ImportantNoticeProps> = ({
@@ -22,6 +25,7 @@ const ImportantNotice: FC<ImportantNoticeProps> = ({
     title: noticeTitle,
     lastUpdated,
     features = [],
+    variant = "Normal",
 }) => (
     <div className={styles.importantNoticeContainer}>
         <Section
@@ -30,7 +34,14 @@ const ImportantNotice: FC<ImportantNoticeProps> = ({
             colorScheme="light"
         >
             <div className={styles.content}>
-                <h1 className={styles.title}>{noticeTitle}</h1>
+                <h1
+                    className={classNames({
+                        [styles.title]: true,
+                        [styles.critical]: variant === "Critical",
+                    })}
+                >
+                    {noticeTitle}
+                </h1>
                 <SectionText fullBleed className={styles.text}>
                     {children}
                     {lastUpdated !== undefined && (
