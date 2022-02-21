@@ -1,0 +1,1 @@
+If you have any questions about the Gospel Generations Trust, please contact the Trustees at: [info@gospelgentrust.org](mailto:info@gospelgentrust.org)

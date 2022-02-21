@@ -2,6 +2,7 @@
     display: inline-block;
     position: relative;
     transition: transform 0.1s;
+    text-align: left;
 
     svg {
         height: var(--logo-height);

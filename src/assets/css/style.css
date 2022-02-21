@@ -166,7 +166,9 @@ button,
     }
 }
 
-input.email {
+input.email,
+input.firstname,
+input.lastname {
     border-color: var(--dark-gray);
     border-width: 1px;
     border-style: solid;
@@ -178,6 +180,14 @@ input.email {
     box-sizing: content-box;
     line-height: var(--button-height);
     margin-bottom: 1em;
+}
+
+input.checkbox {
+    margin-right: var(--general-padding);
+}
+
+fieldset {
+    border: none;
 }
 
 @media only screen and (max-width: 968px) {

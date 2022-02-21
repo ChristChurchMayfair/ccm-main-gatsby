@@ -97,7 +97,7 @@ const Head: React.FC<HeadProps> = ({
     helmetMeta = helmetMeta.concat(openGraphMetaTags)
 
     const pageTitle =
-        title != null ? `${title} - ${metadata.title!}` : metadata.title!
+        title != null ? `${metadata.title!} - ${title}` : metadata.title!
 
     return (
         <Helmet

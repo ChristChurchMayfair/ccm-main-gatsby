@@ -23,6 +23,14 @@
 
 /sing                                       /songs/amazing_grace
 
+## Gospel Generation Trust Redirects
+/ggt                                        /gospelgenerationstrust
+
+# This is because there is a typo on the flier
+/cgt                                        /gospelgenerationstrust
+/cgt/giftaid                                /gospelgenerationstrust/givingform
+
+
 # OLD LINKS
 
 /who-we-are/                                /aboutus/

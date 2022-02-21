@@ -56,6 +56,38 @@ export const createPages: GatsbyNode["createPages"] = async ({
         })
     }
 
+    const ggtBasicPagesResult = await graphql(`
+    {
+        allMarkdownRemark(
+            filter: { frontmatter: { template: { eq: "ggt_basic" } } }
+        ) {
+            nodes {
+                id
+                frontmatter {
+                    path
+                    title
+                }
+            }
+        }
+    }
+`)
+// Handle errors
+if (ggtBasicPagesResult.errors != null) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+}
+
+// @ts-ignore
+for (const page of ggtBasicPagesResult.data.allMarkdownRemark.nodes) {
+    createPage({
+        path: page.frontmatter.path,
+        component: path.resolve("src/templates/ggt_basic.tsx"),
+        context: {
+            id: page.id,
+        },
+    })
+}
+
     // @ts-ignore
     const mailchimpSignUpPages = await graphql(`
         {
@@ -83,6 +115,41 @@ export const createPages: GatsbyNode["createPages"] = async ({
         createPage({
             path: page.frontmatter.path,
             component: path.resolve("src/templates/mailchimpsignup.tsx"),
+            context: {
+                id: page.id,
+            },
+        })
+    }
+
+    // @ts-ignore
+    const ggtMailchimpSignUpPages = await graphql(`
+        {
+            allMarkdownRemark(
+                filter: {
+                    frontmatter: { template: { eq: "ggt_mailchimpsignup" } }
+                }
+            ) {
+                nodes {
+                    id
+                    frontmatter {
+                        path
+                        title
+                    }
+                }
+            }
+        }
+    `)
+    // Handle errors
+    if (ggtMailchimpSignUpPages.errors != null) {
+        reporter.panicOnBuild(`Error while running GraphQL query.`)
+        return
+    }
+
+    // @ts-ignore
+    for (const page of ggtMailchimpSignUpPages.data.allMarkdownRemark.nodes) {
+        createPage({
+            path: page.frontmatter.path,
+            component: path.resolve("src/templates/ggt_mailchimpsignup.tsx"),
             context: {
                 id: page.id,
             },

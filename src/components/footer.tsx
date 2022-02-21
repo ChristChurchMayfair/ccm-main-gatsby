@@ -21,6 +21,7 @@ const links: Array<{ path: string; title: string }> = [
     { path: "/staff", title: "Staff" },
     { path: "/givingform", title: "Giving Form" },
     { path: "/complaints", title: "Complaints" },
+    { path: "/gospelgenerationstrust", title: "Gospel Generations Trust" },
 ]
 
 const Footer = () => {

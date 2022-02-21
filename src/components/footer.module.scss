@@ -91,7 +91,28 @@
 .allLinks {
     grid-area: links;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: var(--general-padding);
+    grid-auto-rows: 1.2em;
+    font-size: 1.3em;
+    grid-row-gap: 10px;
+    margin-left: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        border-right-width: 0px;
+        border-right-style: none;
+        padding-bottom: var(--general-padding);
+        margin-bottom: var(--general-padding);
+        border-bottom: 1px solid var(--dark-gray);
+        margin-left: 0;
+        font-size: 1em;
+    }
+}
+
+.allLinksOneColumn {
+    grid-area: links;
+    display: grid;
+    grid-template-columns: 1fr;
     grid-column-gap: var(--general-padding);
     grid-auto-rows: 1.2em;
     font-size: 1.3em;
