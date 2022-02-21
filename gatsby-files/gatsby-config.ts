@@ -49,6 +49,15 @@ export const siteMetadata: GatsbyConfig["siteMetadata"] = {
         title: "Christ Church Mayfair - Podcast",
         url: "https://rss.christchurchmayfair.org",
     },
+    gospelGenerationsTrust: {
+        footer: {
+            smallprint: [
+                "The Gospel Generations Trust is a grant making charity.",
+                "We are registered with the charity commission and our charity number is 1186529",
+                "This website is © Copyright The Gospel Generations Trust 2022. All Rights Reserved.",
+            ],
+        },
+    },
 }
 
 export const plugins: GatsbyConfig["plugins"] = [
@@ -142,12 +151,12 @@ export const plugins: GatsbyConfig["plugins"] = [
     {
         resolve: `gatsby-plugin-google-analytics`,
         options: {
-          // The property ID; the tracking code won't be generated without it
-          trackingId: siteMetadata.googleAnalyticsTrackingID,
-          respectDNT: true,
-          head: true,
+            // The property ID; the tracking code won't be generated without it
+            trackingId: siteMetadata.googleAnalyticsTrackingID,
+            respectDNT: true,
+            head: true,
         },
-      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -119,7 +119,7 @@ const AboutUs: React.FC<{}> = () => {
                     <a
                         id="stories-button"
                         className={classNames("button", styles.storiesButton)}
-                        href="/gospelgenerationstrust/alumni"
+                        href="/gospelgenerationstrust/testimonies"
                     >
                         Read More Testimonies
                     </a>

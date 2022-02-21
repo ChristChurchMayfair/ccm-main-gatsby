@@ -1,25 +1,14 @@
 ---
 ---
-# TO BE CONFIRMED
-
 ## Notes
-
-### Our Bank Details
-
-Our account details for BACS transfers or Standing Orders are:
-
-* Transaction Reference: **Your Name** - *required for tracking purposes.*
-* Bank: **National Westminster (NatWest) Bank Plc**
-* Account Number: **51293919**
-* Sort Code: **50-41-01**
 
 ### Getting Help
 
-If you require any help regarding your giving, particularly if you require more information as a US taxpayer in the UK, please contact the [Treasurer](mailto:info@gospelgentrust.org)
+If you require any help regarding your giving, particularly if you require more information as a US taxpayer in the UK, please [contact us](mailto:info@gospelgentrust.org)
 
 ### Changes or Cancellations
 
-Please notify the [Treasurer](mailto:info@gospelgentrust.org) if you:
+Please [notify us](mailto:info@gospelgentrust.org) if you:
 1. Want to cancel this declaration
 * Change your name or home address
 * No longer pay sufficient tax on your income and/or capital gains.*
@@ -32,12 +21,12 @@ This information is sent to The Gospel Generation Trust's GSuite (an online serv
 
 ### Privacy
 
-We will keep your details safe and never share them with anyone else unless required by statutory bodies such as HMRC. You can find more in our [Privacy Notice](/privacy-notice).
+We will keep your details safe and never share them with anyone else unless required by statutory bodies such as HMRC. You can find more in our [Privacy Notice](/gospelgenerationstrust/privacy).
 
 ### Confidentiality
 
-Your giving data is only shared with the Finance Team & book-keeper and not with any of CCM's pastoral staff or leadership.
+Your giving data is only shared with the The Gospel Generations Trust Trustees.
 
 ### Technical Help
 
-If you have any technical problems with this form please contact: [Tom Duckering](tom@christchurchmayfair.org).
+If you have any technical problems with this form please [contact us](mailto:info@gospelgentrust.org).

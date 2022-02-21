@@ -1,16 +1,16 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
 import HeaderUnderlay from "../components/header-underlay"
 import Section from "../components/section"
+import GospelGenerationsTrustLayout from "../components/gospelgenerationstrust/layout"
 
 interface Props {
-    data: GatsbyTypes.MailchimpSignUpPageQuery
+    data: GatsbyTypes.GGTMailchimpSignUpPageQuery
 }
 
 export const query = graphql`
-    query MailchimpSignUpPage($id: String!) {
+    query GGTMailchimpSignUpPage($id: String!) {
         mainInfo: markdownRemark(id: { eq: $id }) {
             html
             frontmatter {
@@ -18,14 +18,21 @@ export const query = graphql`
                 hiddenValue
                 action
                 signupPlaceholder
+                askForFirstName
+                askForLastName
+                askForEmailPermission
+                permissionCaption
             }
         }
     }
 `
 
-const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
+const GGTMailchimpSignUpPage: React.FC<Props> = ({ data }) => {
     return (
-        <Layout title={data.mainInfo!.frontmatter!.title} headerColour="dark">
+        <GospelGenerationsTrustLayout
+            title={data.mainInfo!.frontmatter!.title}
+            headerColour="dark"
+        >
             <HeaderUnderlay colorScheme="light" />
             <Section colorScheme="light">
                 <article>
@@ -45,6 +52,26 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                             noValidate={false}
                         >
                             <div id="mc_embed_signup_scroll">
+                                <input
+                                    type="text"
+                                    defaultValue=""
+                                    name="FNAME"
+                                    className="firstname"
+                                    id="mce-FNAME"
+                                    placeholder={"First name"}
+                                    required={true}
+                                />
+                                <br></br>
+                                <input
+                                    type="text"
+                                    defaultValue=""
+                                    name="LNAME"
+                                    className="lastname"
+                                    id="mce-LNAME"
+                                    placeholder={"Last name"}
+                                    required={true}
+                                />
+                                <br></br>
                                 <input
                                     type="email"
                                     defaultValue=""
@@ -74,6 +101,30 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                                         defaultValue=""
                                     />
                                 </div>
+                                <fieldset
+                                    className="mc_fieldset gdprRequired mc-field-group"
+                                    name="interestgroup_field"
+                                >
+                                    <label
+                                        className="checkbox subfield"
+                                        htmlFor="gdpr_44254"
+                                    >
+                                        <input
+                                            type="checkbox"
+                                            id="gdpr_44254"
+                                            name="gdpr[44254]"
+                                            value="Y"
+                                            className="checkbox"
+                                        />
+                                        <span>
+                                            {
+                                                data.mainInfo?.frontmatter
+                                                    ?.permissionCaption
+                                            }
+                                        </span>{" "}
+                                    </label>
+                                </fieldset>
+                                <br></br>
                                 <input
                                     type="submit"
                                     value="Subscribe"
@@ -86,8 +137,8 @@ const MailchimpSignUpPage: React.FC<Props> = ({ data }) => {
                     </div>
                 </article>
             </Section>
-        </Layout>
+        </GospelGenerationsTrustLayout>
     )
 }
 
-export default MailchimpSignUpPage
+export default GGTMailchimpSignUpPage

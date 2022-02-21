@@ -16,9 +16,9 @@ Note: *Initially the Gospel Generations Trust will prioritise supporting ministr
 1. Use the following account information to give via a BACS transfer or standing order:
 
    * Transaction Reference: **Your Name** - *required for tracking purposes.*
-   * Bank: **Some Bank Name**
-   * Account Number: **00000000**
-   * Sort Code: **00-00-00**
+   * Bank: **National Westminster (NatWest) Bank Plc**
+   * Account Number: **51293919**
+   * Sort Code: **50-41-01**
 
 2. Complete the giving form below.
 

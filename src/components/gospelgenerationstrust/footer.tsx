@@ -6,7 +6,13 @@ import GospelGenerationsTrustLogoFull from "../../content/assets/images/gospelge
 import styles from "../footer.module.scss"
 
 const links: Array<{ path: string; title: string }> = [
-    { path: "/privacy-notice", title: "Privacy Notice" },
+    { path: "/gospelgenerationstrust/alumni", title: "Testimonies" },
+    {
+        path: "/gospelgenerationstrust/mailinglistsignup",
+        title: "Prayer Email Signup",
+    },
+    { path: "/gospelgenerationstrust/givingform", title: "Giving Form" },
+    { path: "/gospelgenerationstrust/privacy", title: "Privacy Notice" },
     { path: "/cookies", title: "Cookies" },
     { path: "/", title: "Christ Church Mayfair" },
 ]
@@ -26,8 +32,10 @@ const GospelGenerationsTrustFooter = (props: Props) => {
                         churchAddress
                         churchMapsLink
                         officePhoneNumber
-                        footer {
-                            smallprint
+                        gospelGenerationsTrust {
+                            footer {
+                                smallprint
+                            }
                         }
                         socialMediaAccounts {
                             instagram
@@ -43,7 +51,7 @@ const GospelGenerationsTrustFooter = (props: Props) => {
 
     const metadata = site!.siteMetadata
     const email = props.email ?? metadata!.email!
-    const smallPrint = metadata!.footer!.smallprint!
+    const smallPrint = metadata!.gospelGenerationsTrust!.footer!.smallprint!
     const addressLines = metadata!.churchAddress!
     return (
         <footer className={styles.footer}>

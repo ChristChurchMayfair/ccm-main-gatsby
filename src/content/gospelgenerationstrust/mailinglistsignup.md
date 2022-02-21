@@ -1,5 +1,5 @@
 ---
-template: mailchimpsignup
+template: ggt_mailchimpsignup
 path: /gospelgenerationstrust/mailinglistsignup
 title: "Mailing List Signup"
 showInFooter: false

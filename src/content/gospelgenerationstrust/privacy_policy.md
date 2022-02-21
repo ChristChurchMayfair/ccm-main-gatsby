@@ -3,7 +3,7 @@ title: Privacy Notice
 path: /gospelgenerationstrust/privacy
 showInFooter: true
 headerColour: dark
-template: basic
+template: ggt_basic
 ---
 # Gospel Generations Trust - Privacy Policy
 

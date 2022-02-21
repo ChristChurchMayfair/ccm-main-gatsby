@@ -166,7 +166,9 @@ button,
     }
 }
 
-input.email, input.firstname, input.lastname {
+input.email,
+input.firstname,
+input.lastname {
     border-color: var(--dark-gray);
     border-width: 1px;
     border-style: solid;
