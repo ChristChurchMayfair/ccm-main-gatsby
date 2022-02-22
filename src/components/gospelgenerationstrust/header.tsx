@@ -38,7 +38,7 @@ const GospelGenerationsTrustHeader: React.FC<HeaderProps> = ({
     const menuContent = (
         <div className={styles.menuContent}>
             <Link to="/gospelgenerationstrust/">About</Link>
-            <Link to="/gospelgenerationstrust/testimonies">Testimonies</Link>
+            <Link to="/gospelgenerationstrust/stories">Stories</Link>
             <Link to="/gospelgenerationstrust/mailinglistsignup">Pray</Link>
             <Link to="/gospelgenerationstrust/givingform">Giving</Link>
         </div>

@@ -8,7 +8,7 @@ template: ggt_basic
 # Gospel Generations Trust - Privacy Policy
 
 * Version: 1.0
-* Date approved by Trustees: 15/2/2021
+* Date approved by Trustees: 21/2/2022
 
 ### Our contact details
 * Name: Gospel Generations Trust Trustees

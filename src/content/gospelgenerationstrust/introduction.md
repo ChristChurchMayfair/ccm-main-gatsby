@@ -1,7 +1,9 @@
 ---
 image: ./GGTHero.jpg
 ---
-The **Gospel Generations Trust** provides financial support for young people on the **Christ Church Mayfair Ministry Internship Scheme**.
+> Then he said to his disciples, "The harvest is plentiful but the workers are few. Ask the LORD of the harvest, therefore, to send out workers into his harvest field."
+                    
+> Matthew 9:37-38
 
 Since the church's founding in 2001, dozens of young men and women completed the scheme. Ministry interns typically spend one to two years working alongside church staff, gaining valuable experience serving in all kinds of Gospel ministries.
 

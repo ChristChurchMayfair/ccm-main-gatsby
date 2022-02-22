@@ -6,7 +6,7 @@ import GospelGenerationsTrustLogoFull from "../../content/assets/images/gospelge
 import styles from "../footer.module.scss"
 
 const links: Array<{ path: string; title: string }> = [
-    { path: "/gospelgenerationstrust/alumni", title: "Testimonies" },
+    { path: "/gospelgenerationstrust/stories", title: "Stories" },
     {
         path: "/gospelgenerationstrust/mailinglistsignup",
         title: "Prayer Email Signup",

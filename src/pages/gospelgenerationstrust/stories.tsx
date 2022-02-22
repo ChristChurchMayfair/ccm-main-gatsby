@@ -11,7 +11,7 @@ import SectionText from "../../components/section-text"
 const GospelGenerationsTrustAlumniPageQuery = graphql`
     query GospelGenerationsTrustAlumniPage {
         introduction: markdownRemark(
-            fileAbsolutePath: { regex: "/gospelgenerationstrust/alumni.md$/" }
+            fileAbsolutePath: { regex: "/gospelgenerationstrust/stories.md$/" }
         ) {
             frontmatter {
                 image {
@@ -27,7 +27,7 @@ const GospelGenerationsTrustAlumniPageQuery = graphql`
         alums: allMarkdownRemark(
             filter: {
                 fileAbsolutePath: {
-                    regex: "/gospelgenerationstrust/alums/.*.md$/"
+                    regex: "/gospelgenerationstrust/stories/.*.md$/"
                 }
             }
         ) {
@@ -56,7 +56,7 @@ const AboutUs: React.FC<{}> = () => {
         GatsbyTypes.GospelGenerationsTrustAlumniPageQuery
     >(GospelGenerationsTrustAlumniPageQuery)
     const alums = data.alums.nodes
-    const title = "Testimonies"
+    const title = "Stories"
     return (
         <GospelGenerationsTrustLayout title={title} headerColour="dark">
             <HeaderUnderlay colorScheme="light" />

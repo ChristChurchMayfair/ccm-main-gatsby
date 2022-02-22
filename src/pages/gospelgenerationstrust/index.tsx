@@ -41,7 +41,7 @@ const GospelGenerationsTrustPageQuery = graphql`
         alums: allMarkdownRemark(
             filter: {
                 fileAbsolutePath: {
-                    regex: "/gospelgenerationstrust/alums/.*.md$/"
+                    regex: "/gospelgenerationstrust/stories/.*.md$/"
                 }
             }
         ) {
@@ -83,12 +83,10 @@ const AboutUs: React.FC<{}> = () => {
             >
                 <div className={styles.heroPullQuote}>
                     <p>
-                        Then he said to his disciples, &ldquo;The harvest is
-                        plentiful but the workers are few. Ask the LORD of the
-                        harvest, therefore, to send out workers into his harvest
-                        field.&rdquo;
+                        The Gospel Generations Trust provides financial support
+                        for young people on the Christ Church Mayfair Ministry
+                        Internship Scheme.
                     </p>
-                    <p>Matthew 9:37-38</p>
                 </div>
             </Hero>
             <Section colorScheme={"light"}>
@@ -119,9 +117,9 @@ const AboutUs: React.FC<{}> = () => {
                     <a
                         id="stories-button"
                         className={classNames("button", styles.storiesButton)}
-                        href="/gospelgenerationstrust/testimonies"
+                        href="/gospelgenerationstrust/stories"
                     >
-                        Read More Testimonies
+                        Read More Stories
                     </a>
                 </div>
             </Section>
