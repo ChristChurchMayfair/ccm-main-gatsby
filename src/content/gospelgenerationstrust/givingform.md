@@ -15,6 +15,7 @@ Note: *Initially the Gospel Generations Trust will prioritise supporting ministr
 
 1. Use the following account information to give via a BACS transfer or standing order:
 
+   * Our Account Name: **The Gospel Generations Trust**
    * Transaction Reference: **Your Name** - *required for tracking purposes.*
    * Bank: **National Westminster (NatWest) Bank Plc**
    * Account Number: **51293919**
