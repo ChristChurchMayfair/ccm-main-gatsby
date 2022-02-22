@@ -23,6 +23,7 @@ The Gospel Generations Trust is a Charity which has the objectives of;
 * Applicants: Individuals who have applied to the Charity for funding.
 * Donors: Individuals who give funding to the Trust
 * Supporters: Those who have asked to receive regular or one-off information about the Charity activities (whether or not they have given money).
+* Trustees: Those appointed as ‘Gospel Generations Trust Trustees.
 
 ## Your personal data – what is it?
 “Personal data” is any information about a living individual which allows them to be identified from that data (for example a name, photographs, videos, email address, or address). Identification can be by the information alone or in conjunction with any other information. The processing of personal data is governed by the Data Protection Act 2018, the General Data Protection Regulation 2016/679 (the “GDPR”) and other legislation relating to personal data and rights such as the Human Rights Act 1998.
