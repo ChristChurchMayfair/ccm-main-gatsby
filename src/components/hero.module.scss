@@ -98,13 +98,14 @@
 .children {
     justify-self: left;
     align-self: baseline;
+    grid-area: text;
     color: var(--light-colour);
     text-align: left;
+    // line-height: 1em;
     margin-bottom: calc(30px - var(--general-padding));
-    height: var(--hero-height);
+    // text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
 
     @media only screen and (max-width: 968px) {
         line-height: 0.9em;
     }
-
 }
