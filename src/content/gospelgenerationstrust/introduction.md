@@ -5,7 +5,7 @@ image: ./GGTHero.jpg
                     
 > Matthew 9:37-38
 
-Since the church's founding in 2001, dozens of young men and women completed the scheme. Ministry interns typically spend one to two years working alongside church staff, gaining valuable experience serving in all kinds of Gospel ministries.
+Since the church's founding in 2001, dozens of young men and women have completed the scheme. Ministry interns typically spend one to two years working alongside church staff, gaining valuable experience serving in all kinds of Gospel ministries.
 
 Ministry interns are a great practical blessing to the church, but the primary aim of the scheme is to train them to serve the Lord elsewhere in the future. During their internship they will:
 
