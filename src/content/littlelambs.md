@@ -9,8 +9,6 @@ overlayCaption: Little Lambs
 findOutMoreText: |-2
   If you want to find out more about Little Lambs James would love to hear from you.
 ---
-**Note: due to the continuing Coronavirus pandemic Little Lambs will not be meeting until further notice.**
-
 Little Lambs is our midweek haven for preschool children and their caregivers.
 
 The group runs from 10.00-11.30 every Thursday morning during term time and meets in the CCM church building. We provide a safe environment for your children, with time to play, to sing together and share in story telling each week. We also want to look after parents and caregivers and offer the friendship, community and all important coffee and cake we know you need!
