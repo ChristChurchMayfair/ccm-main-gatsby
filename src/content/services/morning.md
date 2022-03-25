@@ -3,12 +3,12 @@ title: Mornings
 normalTime: "10.30am"
 mainImage: ../assets/images/desktop/CCM_morning_church_lunch.jpg
 schedule:
-  - time: 2022-03-20T10:30:00+00:00
-    description: In person and online with Sunday School.
-    link: https://youtu.be/zhwUrFhRHzU
   - time: 2022-03-27T10:30:00+00:00
     description: In person and online with Sunday School.
-    link: https://youtu.be/zhwUrFhRHzU
+    link: https://youtu.be/HeXyI-fGvTE
+  - time: 2022-04-03T10:30:00+00:00
+    description: In person and online with Sunday School.
+    link: https://youtu.be/HeXyI-fGvTE
 ---
 Mornings at CCM are an informal, family friendly time with Bible teaching for everyone, with both traditional and contemporary worship. We enjoy time all together as a church family and then our children gather in age-specific groups to learn about Jesus for themselves.
 
