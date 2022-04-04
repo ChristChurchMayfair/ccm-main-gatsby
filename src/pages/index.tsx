@@ -14,6 +14,7 @@ import LondonLivingPromo from "../components/london-living-promo"
 import StudentPromo from "../components/student-promo"
 import Christmas2021 from "../components/christmas/christmas2021"
 import ImportantNotice from "../components/important-notice"
+import SpecialService from "../components/special-service"
 
 const IndexPageQuery = graphql`
     query Homepage {
@@ -190,6 +191,16 @@ const IndexPage = () => {
                     Sunday Services
                 </a>
             </Section>
+
+            <SpecialService
+                title={"Good Friday"}
+                time={"Friday 15th April - 10.30 am"}
+                link={"https://www.youtube.com/c/ChristChurchMayfairLive"}
+            >
+                Join us on Friday morning for a reflective service with readings
+                and short meditations on Jesus' crucifixion. Separate activities
+                for children &amp; creche provided.
+            </SpecialService>
 
             <Services />
 

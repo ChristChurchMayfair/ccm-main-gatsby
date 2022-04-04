@@ -1,0 +1,67 @@
+@import "../mixins/button";
+
+.specialService {
+    grid-template-areas:
+        ". text text text text text text text text text text text text ."
+        ". . . . . button button button button . . . . .";
+    padding-top: var(--general-padding);
+    padding-bottom: var(--general-padding);
+    background-color: var(--light-colour);
+    color: var(--dark-colour);
+    text-align: center;
+    border-top-color: var(--dark-colour);
+    border-top-style: solid;
+    border-top-width: 1px;
+
+    @media only screen and (max-width: 968px) {
+        grid-template-areas:
+            ". text text text text ."
+            ".  button button button button .";
+
+        font-size: 0.9em;
+    }
+}
+
+.content {
+    grid-area: text;
+
+    @media only screen and (max-width: 968px) {
+        p {
+            margin-top: 1.5em;
+        }
+    }
+}
+
+.text {
+    margin-top: var(--general-padding);
+    margin-bottom: var(--general-padding);
+    @media only screen and (max-width: 968px) {
+        margin-top: calc(var(--general-padding) * 2);
+        margin-bottom: calc(var(--general-padding) * 2);
+    }
+}
+
+.title {
+    font-size: 2em;
+    line-height: 1.5em;
+    letter-spacing: 0.2em;
+    margin-bottom: var(--general-padding);
+    margin-top: var(--general-padding);
+
+    @media only screen and (max-width: 968px) {
+        font-size: 2.5em;
+        // margin-top: calc(var(--general-padding) * 0);
+    }
+}
+
+.time {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+.specialServiceButton {
+    grid-area: button;
+    @media only screen and (max-width: 968px) {
+        margin-bottom: var(--general-padding);
+    }
+}
