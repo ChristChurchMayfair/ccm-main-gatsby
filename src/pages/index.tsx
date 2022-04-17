@@ -192,16 +192,6 @@ const IndexPage = () => {
                 </a>
             </Section>
 
-            <SpecialService
-                title={"Good Friday"}
-                time={"Friday 15th April - 10.30 am"}
-                link={"https://www.youtube.com/c/ChristChurchMayfairLive"}
-            >
-                Join us on Friday morning for a reflective service with readings
-                and short meditations on Jesus' crucifixion. Separate activities
-                for children &amp; creche provided.
-            </SpecialService>
-
             <Services />
 
             <Section
