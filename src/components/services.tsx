@@ -18,6 +18,8 @@ const Services = () => {
                     description
                     link
                 }
+                description
+                streamLink
                 mainImage {
                     childImageSharp {
                         fluid(
@@ -84,6 +86,8 @@ const Services = () => {
                                 htmlDescription={service.html!}
                                 schedule={schedule}
                                 normalTime={service.frontmatter?.normalTime!}
+                                streamLink={service.frontmatter?.streamLink}
+                                description={service.frontmatter?.description}
                             ></Service>
                         )
                     })}

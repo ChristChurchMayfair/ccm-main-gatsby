@@ -19,6 +19,8 @@ type ServiceProps = {
     htmlDescription: string
     schedule: Session[]
     normalTime: string
+    streamLink: string
+    description: string
 }
 
 const Service: FC<ServiceProps> = ({
@@ -28,35 +30,46 @@ const Service: FC<ServiceProps> = ({
     htmlDescription,
     schedule,
     normalTime,
+    description,
+    streamLink
 }) => {
     let sessions = [
         <div key="onlysession" className={styles.session}>
             <div className={styles.sessionTime}>{normalTime}</div>
-            <div className={styles.sessionDescription}>regular service</div>
-            <div className={styles.streamlink}>in person only</div>
+            <div className={styles.sessionDescription}>{description}</div>
+            <a
+                        className={styles.streamlink}
+                        href={streamLink}
+                        target={"_blank"}
+                        rel={"noopener noreferrer"}
+                    >
+                        Watch online
+                    </a>
         </div>,
     ]
 
     let dateSpecifier = ""
 
-    if (schedule.length > 0) {
-        const nextServiceTimes = getNextServiceTimes(
-            schedule.map((service: Session) => service.dateTime),
-            new Date()
-            // parseISO("2020-08-30T18:00:00+01:00") # Use this for testing
+    const nextServiceTimes = getNextServiceTimes(
+        schedule.map((service: Session) => service.dateTime),
+        new Date()
+        // parseISO("2020-08-30T18:00:00+01:00") # Use this for testing
+    )
+
+    if (nextServiceTimes.length > 0) {
+        dateSpecifier =
+            "Timings for " + format(nextServiceTimes[0], "do MMMM y")
+    }
+
+    const nextServices = nextServiceTimes.map(serviceTime =>
+        schedule.find(
+            service => service.dateTime.getTime() === serviceTime.getTime()
         )
+    )
 
-        if (nextServiceTimes.length > 0) {
-            dateSpecifier =
-                "Timings for " + format(nextServiceTimes[0], "do MMMM y")
-        }
+    console.log(nextServices)
 
-        const nextServices = nextServiceTimes.map(serviceTime =>
-            schedule.find(
-                service => service.dateTime.getTime() === serviceTime.getTime()
-            )
-        )
-
+    if (nextServices.length !== 0) {
         sessions = nextServices.map(service => {
             let streamlink = (
                 <div className={styles.streamlink}>In Person Only</div>
