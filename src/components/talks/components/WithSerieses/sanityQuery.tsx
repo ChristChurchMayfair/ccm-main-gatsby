@@ -15,7 +15,7 @@ interface SanityQueryResult<T> {
 const useSanityQuery = <T extends {}>(query: string): SanityQueryResult<T> => {
     const [data, setData] = useState<T | null>(null)
     const [loading, setLoading] = useState(true)
-    const [error, setError] = useState(null)
+    const [error, setError] = useState<Error | null>(null)
 
     useEffect(() => {
         let mounted = true
@@ -27,9 +27,11 @@ const useSanityQuery = <T extends {}>(query: string): SanityQueryResult<T> => {
                     setLoading(false)
                 }
             } catch (e) {
-                if (mounted) {
-                    setError(e)
-                    setLoading(false)
+                if (e instanceof Error) {
+                    if (mounted) {
+                        setError(e)
+                        setLoading(false)
+                    }
                 }
             }
         })()
