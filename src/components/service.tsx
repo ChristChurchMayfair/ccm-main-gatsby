@@ -31,20 +31,20 @@ const Service: FC<ServiceProps> = ({
     schedule,
     normalTime,
     description,
-    streamLink
+    streamLink,
 }) => {
     let sessions = [
         <div key="onlysession" className={styles.session}>
             <div className={styles.sessionTime}>{normalTime}</div>
             <div className={styles.sessionDescription}>{description}</div>
             <a
-                        className={styles.streamlink}
-                        href={streamLink}
-                        target={"_blank"}
-                        rel={"noopener noreferrer"}
-                    >
-                        Watch online
-                    </a>
+                className={styles.streamlink}
+                href={streamLink}
+                target={"_blank"}
+                rel={"noopener noreferrer"}
+            >
+                Watch online
+            </a>
         </div>,
     ]
 
