@@ -7,10 +7,13 @@ import Section from "./section"
 const RootsOfJazzPromo = () => {
     const data = useStaticQuery<GatsbyTypes.RootsOfJazzPromoQuery>(graphql`
         query RootsOfJazzPromo {
-            londonLiving: markdownRemark(
+            rootsOfJazz: markdownRemark(
                 fileAbsolutePath: { regex: "/_events/rootsofjazz.md$/" }
             ) {
                 html
+                frontmatter {
+                    ticketsLink
+                }
             }
         }
     `)
@@ -31,13 +34,13 @@ const RootsOfJazzPromo = () => {
                 <div
                     className={styles.text}
                     dangerouslySetInnerHTML={{
-                        __html: data.londonLiving!.html!,
+                        __html: data.rootsOfJazz!.html!,
                     }}
                 />
                 <div className={styles.buttons}>
                     <a
                         className={styles.button}
-                        href="https://ccmayfair.churchsuite.co.uk/events/ybe0nr2r"
+                        href={data.rootsOfJazz?.frontmatter?.ticketsLink}
                     >
                         Buy Tickets
                     </a>

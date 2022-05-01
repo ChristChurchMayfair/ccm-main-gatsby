@@ -34,6 +34,7 @@
     "react-simple-maps": "^2.3.0",
     "react-spinkit": "^3.0.0",
     "react-youtube": "^7.11.2",
+    "sass": "^1.51.0",
     "styled-components": "^5.1.0"
   },
   "devDependencies": {

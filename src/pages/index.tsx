@@ -10,11 +10,8 @@ import MountAfter from "../components/mount-after"
 import Section from "../components/section"
 import SectionText from "../components/section-text"
 import Hero from "../components/hero"
-import LondonLivingPromo from "../components/london-living-promo"
-import StudentPromo from "../components/student-promo"
-import Christmas2021 from "../components/christmas/christmas2021"
-import ImportantNotice from "../components/important-notice"
-import SpecialService from "../components/special-service"
+import RootsOfJazzPromo from "../components/rootsofjazzpromo"
+import HopeInTheDarkness from "../components/hopeinthedarkness"
 
 const IndexPageQuery = graphql`
     query Homepage {
@@ -191,6 +188,10 @@ const IndexPage = () => {
                     Sunday Services
                 </a>
             </Section>
+
+            <RootsOfJazzPromo />
+
+            <HopeInTheDarkness />
 
             <Services />
 

@@ -1,0 +1,164 @@
+@import "../mixins/button";
+
+.hopeInTheDarknessPromo {
+    --background-color: rgba(46, 46, 47, 1);
+    --light-color: rgba(226, 196, 63, 1);
+    --highlight-color: rgba(254, 247, 217, 1);
+    --alt-color: rgba(97, 159, 174, 1);
+    --button-colour: red;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    background-image: url("../content/hopeinthedarkness/Asset9.svg");
+    background-repeat: no-repeat;
+    background-position-y: 275px;
+    background-position-x: calc(50% - 60px);
+    background-size: 800px;
+    height: 1000px;
+    @media only screen and (max-width: 968px) {
+        padding-top: calc(var(--general-padding) * 3);
+        background-image: none;
+        height: auto;
+    }
+
+    .content {
+        grid-area: content;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "title title title title title title info info info info info info";
+        grid-column-gap: var(--general-padding);
+        margin-bottom: calc(var(--general-padding) * 2);
+
+        @media only screen and (max-width: 968px) {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "title"
+                "info";
+            grid-template-rows: auto auto;
+            row-gap: var(--general-padding);
+        }
+    }
+
+    .title {
+        grid-area: title;
+        margin-bottom: var(--general-padding);
+        display: block;
+        font-family: "archiabold";
+        color: var(--light-color);
+        font-size: 5em;
+        line-height: 0.83em;
+
+        @media only screen and (max-width: 968px) {
+            font-size: 3em;
+        }
+        .market {
+            letter-spacing: 3.2px;
+            @media only screen and (max-width: 968px) {
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+.info {
+    grid-area: info;
+    display: grid;
+    margin-top: calc(var(--general-padding) * 1.5);
+    grid-template-rows: 110px 350px 240px auto;
+    grid-template-areas:
+        "details"
+        "cuisines"
+        "blurb"
+        "buttons";
+    color: var(--light-color);
+
+    @media only screen and (max-width: 968px) {
+        grid-template-areas:
+        "blurb"
+        "details"
+        "buttons";
+        grid-template-rows: auto auto auto auto;
+        row-gap: var(--general-padding);
+    }
+}
+
+.blurb {
+    grid-area: blurb;
+    font-size: 1.2em;
+
+    @media only screen and (max-width: 968px) {
+        left: 0px;
+        top: 290px;
+        width: calc(100%);
+    }
+
+    strong,
+    em {
+        color: var(--alt-color);
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    @media only screen and (max-width: 968px) {
+        p {
+            line-height: 1.2em;
+            margin-bottom: var(--general-padding);
+        }
+    }
+}
+
+.cuisines {
+    grid-area: cuisines;
+    ul {
+        font-family: "archiabold";
+        list-style-type: none;
+        padding-left: 0;
+    }
+    @media only screen and (max-width: 968px) {
+        display: none;
+    }
+}
+
+.details {
+    font-family: "archiabold";
+    grid-area: details;
+    font-size: 1.1em;
+    font-weight: 400;
+    @media only screen and (max-width: 968px) {
+        font-size:  1em;
+    }
+}
+
+.time {
+    color: red;
+}
+
+.date {
+    color: var(--highlight-color);
+}
+
+.cost {
+    color: var(--alt-color);
+}
+
+.buttons {
+    grid-area: buttons;
+
+    @media only screen and (max-width: 968px) {
+
+    }
+}
+
+.button {
+    @include button;
+    grid-area: auto;
+    margin-top: 0;
+    width: 200px;
+    background-color: var(--light-color);
+    color: var(--background-color);
+    @media only screen and (max-width: 968px) {
+        width: 100%;
+    }
+}
