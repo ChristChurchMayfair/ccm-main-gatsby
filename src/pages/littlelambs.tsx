@@ -54,7 +54,7 @@ const LittleLambsPageQuery = graphql`
     }
 `
 
-const Families: React.FC<{}> = () => {
+const Families: React.FC = () => {
     const data = useStaticQuery<GatsbyTypes.LittleLambsPageQuery>(
         LittleLambsPageQuery
     )

@@ -62,6 +62,7 @@ const Head: React.FC<HeadProps> = ({
         description: metaDescription,
         images: [
             {
+                // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
                 imageUrl: `${metadata.url}${HandInTheAir}`,
                 imageAlternativeText: "Christ Church Mayfair",
             },

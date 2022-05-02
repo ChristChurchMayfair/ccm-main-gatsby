@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import Field from "../field"
 import React from "react"
 import classNames from "classnames"
@@ -43,6 +48,7 @@ const BasicTextField: React.FC<BasicTextFieldProps> = ({
                 id={name}
                 className={classNames(formStyles.formItemInput)}
                 placeholder={placeholder ?? label}
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-call
                 ref={register(validation)}
                 autoComplete={autoComplete ?? "off"}
             />

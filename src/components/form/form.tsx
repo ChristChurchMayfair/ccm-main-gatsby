@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { ReactElement, useState, PropsWithChildren, useEffect } from "react"
 import React from "react"
 import Field from "./field"
@@ -54,6 +59,7 @@ export const Form = <DataType,>({
     children,
 }: PropsWithChildren<FormProps<DataType>>) => {
     const [formState, setFormState] = useState<FormState>("filling")
+    // eslint-disable-next-line @typescript-eslint/unbound-method
     const { register, handleSubmit, watch, errors, control } = useForm<
         DataType
     >()
@@ -89,6 +95,7 @@ export const Form = <DataType,>({
     const form = (
         <div className={formStyles.form}>
             <form
+                // eslint-disable-next-line @typescript-eslint/no-misused-promises
                 onSubmit={handleSubmit(submitHandler)}
                 method="post"
                 className="validate"

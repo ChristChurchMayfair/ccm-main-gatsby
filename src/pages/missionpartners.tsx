@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -66,6 +71,15 @@ function nameToId(name: string): string {
     return name.replace(" ", "")
 }
 
+type Marker = {
+    linkId: string
+    markerInfo: {
+        markerOffset: number
+        name: string
+        coordinates: [number, number]
+    }
+}
+
 const MissionPartners = () => {
     const data = useStaticQuery<GatsbyTypes.MissionPartnersQuery>(
         MissionPartnersQuery
@@ -79,14 +93,14 @@ const MissionPartners = () => {
         mp => mp.frontmatter?.country
     )
 
-    const markers: any = missionPartners.map(mp => ({
+    const markers: Marker[] = missionPartners.map(mp => ({
         linkId: nameToId(mp.frontmatter!.name!),
         markerInfo: {
             markerOffset: -15,
-            name: mp.frontmatter!.name!,
+            name: mp.frontmatter!.name as string,
             coordinates: [
-                mp.frontmatter?.pin_location!.lat!,
-                mp.frontmatter?.pin_location!.lon!,
+                mp.frontmatter?.pin_location!.lat as number,
+                mp.frontmatter?.pin_location!.lon as number,
             ],
         },
     }))
@@ -145,7 +159,7 @@ const MissionPartners = () => {
                                     })
                             }
                         </Geographies>
-                        {markers.map((marker: any) => (
+                        {markers.map((marker: Marker) => (
                             // <a
                             //     href={`#${marker.linkId}`}
                             //     key={marker.linkId}

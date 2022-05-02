@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { ReactHookFormWiring, CommonField } from "../form-config.types"
 import Field from "../field"
 import React from "react"
@@ -74,6 +79,7 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
                     type="checkbox"
                     name={option.id}
                     id={option.id}
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
                     ref={register(validation)}
                     className={classNames(checkboxButtonClasses)}
                 />
@@ -91,6 +97,7 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
     })
 
     const showOtherInput: boolean =
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         allowOther === true && watch(OtherOptionIdAndValue) === true
 
     const otherInputIdAndName = name + (otherInputIdSuffix ?? "OtherInput")
@@ -108,6 +115,7 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = ({
                 placeholder={otherInputLabel}
                 name={otherInputIdAndName}
                 id={otherInputIdAndName}
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-call
                 ref={register({
                     required:
                         "When 'Other' is selected you must enter your own value",

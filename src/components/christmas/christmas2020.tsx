@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styles from "./christmas2020.module.scss"
@@ -39,6 +44,7 @@ const Christmas2020 = () => {
     const event_group_objects = data
         .christmas!.frontmatter!.event_groups!.map(
             (unstructured_event_group: any) => {
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-call
                 const events = unstructured_event_group.events.map(
                     (unstructured_event: any) => {
                         return {

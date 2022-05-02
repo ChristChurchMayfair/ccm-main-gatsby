@@ -36,7 +36,7 @@ const GospelGenerationsTrustLayout: React.FC<Props> = ({
     return (
         <>
             <Head
-                title={`Gospel Generations Trust - ${title}`}
+                title={`Gospel Generations Trust - ${title!}`}
                 description={description}
                 openGraphData={openGraphData}
                 robotsMetaData={robotsMetaData}

@@ -85,7 +85,7 @@ async function sendToGoogleFormsApi(formData: IndexableFormData) {
     })
 }
 
-const ContactCard: React.FC<{}> = () => {
+const ContactCard: React.FC = () => {
     const data = useStaticQuery<GatsbyTypes.NewcomerQuery>(graphql`
         query Newcomer {
             intro: markdownRemark(

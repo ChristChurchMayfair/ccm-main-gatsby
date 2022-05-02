@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
@@ -15,13 +20,7 @@ import Bio from "../../components/bio"
 import Section from "../../components/section"
 import { OpenGraphMetaData } from "../../components/open-graph"
 
-type PodcastServiceLink = {
-    name: string
-    link: string
-    type: "ApplePodcasts" | "Spotify"
-}
-
-const LondonLivingPage: React.FC<{}> = () => {
+const LondonLivingPage: React.FC = () => {
     const data = useStaticQuery<GatsbyTypes.LondonLivingQuery>(graphql`
         query LondonLiving {
             site {
@@ -111,6 +110,7 @@ const LondonLivingPage: React.FC<{}> = () => {
     `)
 
     const episodes = data.podcast!.frontmatter!.seasons!.map((season: any) => {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         const episodes = season.episodes.map((episode: any) => (
             <PodcastEpisode
                 key={episode.audioUrl}

@@ -14,6 +14,7 @@ const LazyLoadCss: React.FC<Props> = ({ url }) => {
                 rel="preload"
                 href={url}
                 as="style"
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
                 onload="this.onload=null;this.rel='stylesheet'" // eslint-disable-line react/no-unknown-property
             />

@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import classnames from "classnames"
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
@@ -14,7 +19,7 @@ import SectionText from "../components/section-text"
 
 import styles from "./music.module.scss"
 
-const MusicPage: React.FC<{}> = () => {
+const MusicPage: React.FC = () => {
     const data = useStaticQuery<GatsbyTypes.MusicQuery>(graphql`
         query Music {
             musicians: allSanityPerson(

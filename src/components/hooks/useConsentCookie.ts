@@ -38,10 +38,12 @@ const useConsentCookie = (
 
         if (cookie === "accepted") {
             // Enable Google Analytics
-            ;(window as any)[disableGoogleAnalyticsKey] = false // eslint-disable-line @typescript-eslint/no-explicit-any
+            // eslint-disable-next-line
+            ;(window as any)[disableGoogleAnalyticsKey] = false
         } else {
             // Disable Google Analytics
-            ;(window as any)[disableGoogleAnalyticsKey] = true // eslint-disable-line @typescript-eslint/no-explicit-any
+            // eslint-disable-next-line
+            ;(window as any)[disableGoogleAnalyticsKey] = true
         }
     }
 

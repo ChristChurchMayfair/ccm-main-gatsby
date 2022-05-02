@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { ReactHookFormWiring, CommonField } from "../form-config.types"
 import Field from "../field"
 import React from "react"
@@ -62,6 +67,7 @@ const RadioButtonField: React.FC<RadioButtonFieldProps> = ({
                     id={option.id}
                     value={option.name}
                     name={name}
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
                     ref={register(validation)}
                     defaultChecked={option.checked ?? false}
                 />
@@ -79,6 +85,7 @@ const RadioButtonField: React.FC<RadioButtonFieldProps> = ({
     })
 
     const showOtherInput =
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         allowOther === true && watch(name) === otherOptionName
 
     const otherInputIdAndName = name + (otherInputIdSuffix ?? "Other")
@@ -96,6 +103,7 @@ const RadioButtonField: React.FC<RadioButtonFieldProps> = ({
                 placeholder={otherInputLabel}
                 name={otherInputIdAndName}
                 id={otherInputIdAndName}
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-call
                 ref={register({
                     required:
                         "When 'Other' is selected you must enter your own value",

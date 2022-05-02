@@ -49,7 +49,7 @@ const AboutUsPageQuery = graphql`
     }
 `
 
-const AboutUs: React.FC<{}> = () => {
+const AboutUs: React.FC = () => {
     const data = useStaticQuery<GatsbyTypes.AboutUsPageQuery>(AboutUsPageQuery)
     return (
         <Layout title="About us" headerColour="dark">

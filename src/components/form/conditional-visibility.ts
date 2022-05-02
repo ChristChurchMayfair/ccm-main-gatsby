@@ -40,9 +40,11 @@ export function shouldShowField(
 
     switch (showWhen.type) {
         case "valueEqualTo": {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-call
             return watch(showWhen.otherFieldName) === showWhen.hasValueEqualTo
         }
         case "valueInList": {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-call
             return showWhen.values.includes(watch(showWhen.otherFieldName))
         }
         case "anyTrue": {

@@ -22,9 +22,6 @@ module.exports = {
         "@typescript-eslint/no-inferrable-types": 0,
         "@typescript-eslint/strict-boolean-expressions": [
             2,
-            {
-                ignoreRhs: true,
-            },
         ],
         "@typescript-eslint/switch-exhaustiveness-check": 2,
         "@typescript-eslint/restrict-plus-operands": 2,

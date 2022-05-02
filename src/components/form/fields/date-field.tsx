@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import Field from "../field"
 import React from "react"
 import classNames from "classnames"
@@ -7,6 +12,7 @@ import { prependRequired } from "../form"
 import { Controller } from "react-hook-form"
 import DatePicker from "react-datepicker"
 import { shouldShowField } from "../conditional-visibility"
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import datepickerCssUrl from "!file-loader!react-datepicker/dist/react-datepicker.min.css"
 import LazyLoadCss from "../../../components/lazy-load-css"
@@ -52,6 +58,7 @@ const DateField: React.FC<DateFieldProps> = ({
                     dateFormat="yyyy-MM-dd"
                     maxDate={maxDate} // Can't select beyond today
                     valueName="selected" // DateSelect value's name is selected
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
                     onChange={([selected]) => selected}
                     name={name}
                     id={name}

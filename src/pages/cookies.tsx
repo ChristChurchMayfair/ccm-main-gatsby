@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 
@@ -38,10 +43,10 @@ const CookiesPageQuery = graphql`
     }
 `
 
-const Cookies: React.FC<{}> = () => {
+const Cookies: React.FC = () => {
     const data = useStaticQuery<GatsbyTypes.CookiesPageQuery>(CookiesPageQuery)
     const [consentCookie, setConsentCookie] = useConsentCookie(
-        data.site?.siteMetadata?.googleAnalyticsTrackingID!
+        data.site?.siteMetadata?.googleAnalyticsTrackingID as string
     )
 
     return (

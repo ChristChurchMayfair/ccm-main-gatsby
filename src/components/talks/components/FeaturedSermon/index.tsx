@@ -25,7 +25,7 @@ interface Props {
 
 class FeaturedSermon extends PureComponent<Props> {
     render() {
-        const { sermon, series } = this.props
+        const { sermon } = this.props
 
         const date = new Date(sermon.preachedAt)
         const passage = sermon.passage

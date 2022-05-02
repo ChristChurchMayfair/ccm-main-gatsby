@@ -19,7 +19,11 @@ interface Props<T> {
     renderItem: (item: T) => React.ReactNode
 }
 
-const Grid = <T extends {}>({ items, keyExtractor, renderItem }: Props<T>) => (
+const Grid = <T extends object>({
+    items,
+    keyExtractor,
+    renderItem,
+}: Props<T>) => (
     <Main>
         <List>
             {items.map(item => (

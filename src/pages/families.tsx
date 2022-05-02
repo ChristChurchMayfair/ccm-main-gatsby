@@ -124,7 +124,7 @@ const FamiliesPageQuery = graphql`
     }
 `
 
-const Families: React.FC<{}> = () => {
+const Families: React.FC = () => {
     const data = useStaticQuery<GatsbyTypes.FamiliesPageQuery>(
         FamiliesPageQuery
     )

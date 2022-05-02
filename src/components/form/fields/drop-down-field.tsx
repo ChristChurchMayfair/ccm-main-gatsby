@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { ReactHookFormWiring, CommonField } from "../form-config.types"
 import { prependRequired } from "../form"
 import Field from "../field"
@@ -61,6 +66,7 @@ const DropDownField: React.FC<DropDownFieldProps> = ({
     })
 
     const showOtherInput =
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         allowOther === true && watch(name) === OtherOptionIdAndValue
 
     const otherInputIdAndName = name + (otherInputIdSuffix ?? "Other")
@@ -78,6 +84,7 @@ const DropDownField: React.FC<DropDownFieldProps> = ({
                 placeholder={otherInputLabel}
                 name={otherInputIdAndName}
                 id={otherInputIdAndName}
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-call
                 ref={register({
                     required:
                         "When 'Other' is selected you must enter your own value",
@@ -99,6 +106,7 @@ const DropDownField: React.FC<DropDownFieldProps> = ({
                     className={formStyles.formItemInput}
                     name={name}
                     id={name}
+                    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
                     ref={register(validation)}
                 >
                     {options}

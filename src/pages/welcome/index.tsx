@@ -8,6 +8,7 @@ import SectionText from "../../components/section-text"
 
 import ChristianityOrCCMSection from "./components/christianity-or-ccm-section"
 
+// eslint-disable-next-line @typescript-eslint/ban-types
 const WelcomePage: React.FC<{}> = () => {
     const data = useStaticQuery<GatsbyTypes.WelcomeQuery>(graphql`
         query Welcome {

@@ -62,6 +62,7 @@ const StudentsPageQuery = graphql`
     }
 `
 
+// eslint-disable-next-line @typescript-eslint/ban-types
 const Students: React.FC<{}> = () => {
     const data = useStaticQuery<GatsbyTypes.StudentsPageQuery>(
         StudentsPageQuery

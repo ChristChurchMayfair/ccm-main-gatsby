@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { FC } from "react"
 import React from "react"
 import styles from "./services.module.scss"
@@ -67,8 +72,6 @@ const Service: FC<ServiceProps> = ({
         )
     )
 
-    console.log(nextServices)
-
     if (nextServices.length !== 0) {
         sessions = nextServices.map(service => {
             let streamlink = (
@@ -93,7 +96,7 @@ const Service: FC<ServiceProps> = ({
                     className={styles.session}
                 >
                     <div className={styles.sessionTime}>
-                        {format(service?.dateTime!, "h.mm aaaa")}
+                        {format(service?.dateTime as Date, "h.mm aaaa")}
                     </div>
                     <div className={styles.sessionDescription}>
                         {service?.description}

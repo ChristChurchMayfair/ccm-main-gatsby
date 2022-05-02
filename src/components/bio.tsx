@@ -1,3 +1,8 @@
+/* These will go away when we upgrade to Gatsby >v3 
+see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from "react"
 import { graphql } from "gatsby"
 
@@ -52,7 +57,11 @@ const Bio: React.FC<Props> = ({
                                         {person.jobTitle}
                                     </div>
                                     <div className={styles.email}>
-                                        <a href={`mailto:${person.email}`}>
+                                        <a
+                                            href={`mailto:${
+                                                person.email as string
+                                            }`}
+                                        >
                                             {person.email}
                                         </a>
                                     </div>
