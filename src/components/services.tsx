@@ -1,8 +1,3 @@
-/* These will go away when we upgrade to Gatsby >v3 
-see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -10,7 +5,6 @@ import styles from "./services.module.scss"
 import Section from "./section"
 import Service, { Session } from "./service"
 import { parseISO } from "date-fns"
-import { FluidObject } from "./img"
 
 const Services = () => {
     const data = useStaticQuery<GatsbyTypes.ServicesQuery>(graphql`
@@ -72,6 +66,7 @@ const Services = () => {
                         }
 
                         const schedule: Session[] =
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
                             service.frontmatter?.schedule?.map((s: any) => {
                                 return {
                                     dateTime: parseISO(s.time!),
@@ -84,10 +79,10 @@ const Services = () => {
                             <Service
                                 key={service.id}
                                 id={service.id}
-                                name={service.frontmatter?.title as string}
+                                name={service.frontmatter!.title!}
                                 image={
-                                    service.frontmatter?.mainImage
-                                        ?.childImageSharp?.fluid as FluidObject
+                                    service.frontmatter!.mainImage!
+                                        .childImageSharp!.fluid!
                                 }
                                 htmlDescription={service.html!}
                                 schedule={schedule}

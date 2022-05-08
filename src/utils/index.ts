@@ -5,7 +5,7 @@
  * sortedWithPriority([0, 1, 2], n => n, [1]) returns [1, 0, 2]
  *
  */
-export const sortedWithPriority = <T, K>(
+export const sortedWithPriority = <T, K extends string | number>(
     array: ReadonlyArray<T>,
     keyExtractor: (_: T) => K,
     priorities: ReadonlyArray<K>
@@ -16,7 +16,6 @@ export const sortedWithPriority = <T, K>(
     for (const key of priorities) {
         const index = copy.findIndex(item => keyExtractor(item) === key)
         if (index === -1) {
-            // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
             throw new Error(`Could not find index of key '${key}'`)
         }
         // Remove our prioritised items from the array

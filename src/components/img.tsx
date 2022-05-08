@@ -14,7 +14,6 @@ import {
 export type FluidObject = GatsbyFluidObject | GatsbyTypes.SanityImageFluid
 export type FixedObject = GatsbyFixedObject | GatsbyTypes.SanityImageFixed
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 export interface ImageProps extends GatsbyImageWithIEPolyfillProps {
     fluid?: FluidObject
@@ -23,7 +22,6 @@ export interface ImageProps extends GatsbyImageWithIEPolyfillProps {
 
 const Img: React.FC<ImageProps> = props => {
     return (
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         <GatsbyImg {...props} />
     )

@@ -54,13 +54,13 @@ class SermonList extends Component<Props> {
                     }
                 })}
                 keyExtractor={({ sermon }) => sermon.id}
-                renderItem={({ sermon, series }) => (
+                renderItem={({ sermon }) => (
                     <Link
                         href={sermon.url}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <FeaturedSermon sermon={sermon} series={series} />
+                        <FeaturedSermon sermon={sermon} />
                     </Link>
                 )}
             />

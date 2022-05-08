@@ -2,7 +2,7 @@ import React, { Fragment, PureComponent } from "react"
 import styled from "styled-components"
 import format from "date-fns/format"
 
-import type { Sermon, Series } from "../../types"
+import type { Sermon } from "../../types"
 import Card from "../Card"
 
 const Text = styled.div`
@@ -20,7 +20,6 @@ const Secondary = styled(Text)`
 
 interface Props {
     sermon: Sermon
-    series: Series
 }
 
 class FeaturedSermon extends PureComponent<Props> {

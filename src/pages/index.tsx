@@ -135,8 +135,7 @@ const IndexPage = () => {
                                     right: 0,
                                 }}
                                 fluid={image.mainImage!.childImageSharp!.fluid}
-                                // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-                                objectPosition={`center ${image.position}`}
+                                objectPosition={`center ${image.position!}`}
                                 fadeIn={false}
                                 loading="eager"
                             />

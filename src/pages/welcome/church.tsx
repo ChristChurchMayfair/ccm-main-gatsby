@@ -1,8 +1,3 @@
-/* These will go away when we upgrade to Gatsby >v3 
-see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from "react"
 
 import Layout from "../../components/layout"
@@ -14,8 +9,7 @@ import styles from "./welcome.module.scss"
 import WelcomeForm from "../../components/welcome-form"
 import { Link } from "gatsby"
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-const ChurchPage: React.FC<{}> = () => (
+const ChurchPage: React.FC = () => (
     <Layout headerColour="dark" title="Welcome" description={undefined}>
         <HeaderUnderlay colorScheme="light" />
         <Section colorScheme="dark" id="about-ccm">

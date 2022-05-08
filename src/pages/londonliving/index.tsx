@@ -1,8 +1,3 @@
-/* These will go away when we upgrade to Gatsby >v3 
-see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
@@ -109,29 +104,28 @@ const LondonLivingPage: React.FC = () => {
         }
     `)
 
-    const episodes = data.podcast!.frontmatter!.seasons!.map((season: any) => {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-        const episodes = season.episodes.map((episode: any) => (
+    const episodes = data.podcast!.frontmatter!.seasons!.map(season => {
+        const episodes = season!.episodes!.map(episode => (
             <PodcastEpisode
-                key={episode.audioUrl}
-                title={episode.title}
-                blurb={episode.blurb}
-                audioUrl={episode.audioUrl}
-                image={episode.image.childImageSharp.fluid}
+                key={episode!.audioUrl}
+                title={episode!.title!}
+                blurb={episode!.blurb!}
+                audioUrl={episode!.audioUrl!}
+                image={episode!.image!.childImageSharp!.fluid!}
             />
         ))
         return (
-            <div className={styles.season} key={season.title}>
-                <h3>Season {season.title}</h3>
+            <div className={styles.season} key={season!.title}>
+                <h3>Season {season!.title}</h3>
                 <div className={styles.episodes}>{episodes}</div>
             </div>
         )
     })
 
-    const links = (data.podcast?.frontmatter?.links ?? []).map((link: any) => {
+    const links = (data.podcast?.frontmatter?.links ?? []).map(link => {
         let badge = <></>
 
-        switch (link.type) {
+        switch (link!.type!) {
             case "ApplePodcasts": {
                 badge = <ApplePodcastBadge />
                 break
@@ -144,9 +138,9 @@ const LondonLivingPage: React.FC = () => {
 
         return (
             <a
-                key={link.link}
+                key={link!.link}
                 className={styles.linkBadge}
-                href={link.link}
+                href={link!.link}
                 target="_blank"
                 rel="noopener noreferrer"
             >

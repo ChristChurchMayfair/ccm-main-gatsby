@@ -38,12 +38,12 @@ const useConsentCookie = (
 
         if (cookie === "accepted") {
             // Enable Google Analytics
-            // eslint-disable-next-line
-            ;(window as any)[disableGoogleAnalyticsKey] = false
+            // eslint-disable-next-line @typescript-eslint/no-extra-semi
+            ;(window as any)[disableGoogleAnalyticsKey] = false // eslint-disable-line @typescript-eslint/no-explicit-any
         } else {
             // Disable Google Analytics
-            // eslint-disable-next-line
-            ;(window as any)[disableGoogleAnalyticsKey] = true
+            // eslint-disable-next-line @typescript-eslint/no-extra-semi
+            ;(window as any)[disableGoogleAnalyticsKey] = true // eslint-disable-line @typescript-eslint/no-explicit-any
         }
     }
 
