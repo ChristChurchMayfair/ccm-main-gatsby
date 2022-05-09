@@ -1,8 +1,3 @@
-/* These will go away when we upgrade to Gatsby >v3 
-see: https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#css-modules-are-imported-as-es-modules */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-argument */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styles from "./gospelgenerationstrust.module.scss"
@@ -86,6 +81,7 @@ const AboutUs: React.FC = () => {
             </Section>
             <Section colorScheme="light">
                 <div className={styles.alums}>
+                    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                     {alums.map((alum: any) => (
                         <Alum
                             key={alum.frontmatter!.name!}

@@ -8,6 +8,7 @@ export type IndexableFormData = Record<
 >
 
 type OtherFieldConfig = {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     otherValue: any
     otherField: string
 }

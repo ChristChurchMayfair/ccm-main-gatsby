@@ -11,7 +11,6 @@ const sortSerieses = (serieses: Array<Series>): Array<Series> => {
         const mostRecentSermonDate = Math.max(...sermonDates)
         return [series.id, mostRecentSermonDate]
     })
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     mostRecentSermonDates.sort((a, b) => b[1] - a[1])
     return mostRecentSermonDates.flatMap(
@@ -54,7 +53,6 @@ export default class WithSeriesesFromSanity extends Component<Props> {
     render() {
         const { children } = this.props
         return (
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore no idea what's going on here
             <SanityQuery<Array<Series>> query={SANITY_SERIES_QUERY}>
                 {({ loading, error, data }) => {

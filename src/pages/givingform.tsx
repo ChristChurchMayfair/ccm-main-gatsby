@@ -32,6 +32,7 @@ const devevelopmentEnvironmentWarning = (
     </div>
 )
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 type GiftFormData = {
     givenName: string
     familyName: string
