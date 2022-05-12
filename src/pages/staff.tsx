@@ -7,7 +7,7 @@ import HeaderUnderlay from "../components/header-underlay"
 import Section from "../components/section"
 import SectionText from "../components/section-text"
 
-import styles from "./staff.module.scss"
+import * as styles from "./staff.module.scss"
 import StaffMember from "../components/staff-member"
 
 const StaffPageQuery = graphql`

@@ -1,6 +1,6 @@
 import React from "react"
 
-import styles from "./field.module.scss"
+import * as styles from "./field.module.scss"
 import classNames from "classnames"
 
 interface Props {

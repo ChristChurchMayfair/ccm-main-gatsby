@@ -1,6 +1,6 @@
 import React from "react"
 
-import styles from "../../londonliving.module.scss"
+import * as styles from "../../londonliving.module.scss"
 import Img, { FluidObject } from "../../../components/img"
 
 export type Season = {

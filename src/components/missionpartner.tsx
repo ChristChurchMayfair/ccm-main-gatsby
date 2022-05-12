@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 
-import styles from "./missionpartner.module.scss"
+import * as styles from "./missionpartner.module.scss"
 import Img, { FluidObject } from "./img"
 import classNames from "classnames"
 

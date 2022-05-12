@@ -1,7 +1,7 @@
 import classNames from "classnames"
 import React, { FC } from "react"
 
-import styles from "./important-notice.module.scss"
+import * as styles from "./important-notice.module.scss"
 import Section from "./section"
 import SectionText from "./section-text"
 

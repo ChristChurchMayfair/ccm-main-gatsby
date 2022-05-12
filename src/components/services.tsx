@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import styles from "./services.module.scss"
+import * as styles from "./services.module.scss"
 import Section from "./section"
 import Service, { Session } from "./service"
 import { parseISO } from "date-fns"

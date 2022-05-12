@@ -5,7 +5,7 @@ import Section from "../../components/section"
 import HeaderUnderlay from "../../components/header-underlay"
 import SectionText from "../../components/section-text"
 
-import styles from "./welcome.module.scss"
+import * as styles from "./welcome.module.scss"
 import WelcomeForm from "../../components/welcome-form"
 import { Link } from "gatsby"
 

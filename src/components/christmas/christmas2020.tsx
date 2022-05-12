@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import styles from "./christmas2020.module.scss"
+import * as styles from "./christmas2020.module.scss"
 import { parseISO } from "date-fns"
 import Section from "../section"
 import PartiallyDisclosedList from "./partially-disclosed-list"

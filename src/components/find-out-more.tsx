@@ -1,6 +1,6 @@
 import React, { FC, HTMLProps } from "react"
 
-import styles from "./find-out-more.module.scss"
+import * as styles from "./find-out-more.module.scss"
 import Section from "./section"
 
 interface FindOutMoreProps extends HTMLProps<HTMLDivElement> {}

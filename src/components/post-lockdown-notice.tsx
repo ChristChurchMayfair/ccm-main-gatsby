@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Section from "./section"
-import styles from "./post-lockdown-notice.module.scss"
+import * as styles from "./post-lockdown-notice.module.scss"
 
 const PostLockDownNotice = () => {
     const { postLockDown } = useStaticQuery<

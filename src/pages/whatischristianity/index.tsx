@@ -5,7 +5,7 @@ import HeaderUnderlay from "../../components/header-underlay"
 import Section from "../../components/section"
 import SectionText from "../../components/section-text"
 
-import styles from "./whatischristianity.module.scss"
+import * as styles from "./whatischristianity.module.scss"
 import BigVideo from "../../components/big-video"
 import LargeNavigationButtons from "../../components/large-navigation-buttons"
 import AskQuestionsForm from "../christianityexplored/components/ask-questions-form"

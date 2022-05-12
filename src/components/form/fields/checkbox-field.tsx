@@ -2,7 +2,7 @@ import { ReactHookFormWiring, CommonField } from "../form-config.types"
 import Field from "../field"
 import React from "react"
 import classNames from "classnames"
-import formStyles from "../form.module.scss"
+import * as formStyles from "../form.module.scss"
 import { prependRequired } from "../form"
 import { shouldShowField, VisibilityCondition } from "../conditional-visibility"
 

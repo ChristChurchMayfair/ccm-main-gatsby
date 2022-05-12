@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import styles from "./london-living-promo.module.scss"
+import * as styles from "./london-living-promo.module.scss"
 import LondonLivingLogo from "../content/londonliving/LL_logo.inline.svg"
 import Section from "./section"
 

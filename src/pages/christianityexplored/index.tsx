@@ -6,7 +6,7 @@ import Section from "../../components/section"
 import SectionText from "../../components/section-text"
 import BigVideo from "../../components/big-video"
 
-import styles from "./christianityexplored.module.scss"
+import * as styles from "./christianityexplored.module.scss"
 import LargeNavigationButtons from "../../components/large-navigation-buttons"
 
 const ChristianityExploredPage: FC = () => (

@@ -1,7 +1,7 @@
 import classNames from "classnames"
 import React, { FC } from "react"
 
-import styles from "./special-service.module.scss"
+import * as styles from "./special-service.module.scss"
 import Section from "./section"
 
 interface SpecialServiceProps {

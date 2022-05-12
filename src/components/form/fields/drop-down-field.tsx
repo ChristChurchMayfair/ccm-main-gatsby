@@ -2,7 +2,7 @@ import { ReactHookFormWiring, CommonField } from "../form-config.types"
 import { prependRequired } from "../form"
 import Field from "../field"
 import React from "react"
-import formStyles from "../form.module.scss"
+import * as formStyles from "../form.module.scss"
 import { shouldShowField } from "../conditional-visibility"
 
 type DropDownChoice = {

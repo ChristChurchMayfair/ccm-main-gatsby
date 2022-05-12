@@ -1,6 +1,6 @@
 import { FC } from "react"
 import React from "react"
-import styles from "./services.module.scss"
+import * as styles from "./services.module.scss"
 import Img, { FluidObject } from "./img"
 import { getNextServiceTimes } from "./servicetimes/service-times"
 import { format } from "date-fns"

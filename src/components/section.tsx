@@ -1,7 +1,7 @@
 import classnames from "classnames"
 import React, { FC, HTMLProps, ReactNode } from "react"
 
-import styles from "./section.module.scss"
+import * as styles from "./section.module.scss"
 
 export type SectionImagePosition = "left" | "right"
 type SectionImageBackgroundPosition =

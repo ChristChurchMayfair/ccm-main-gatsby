@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Section from "../components/section"
 
-import styles from "./missionpartners.module.scss"
+import * as styles from "./missionpartners.module.scss"
 import {
     ComposableMap,
     Geographies,

@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import styles from "./christmas2021.module.scss"
+import * as styles from "./christmas2021.module.scss"
 import Section from "../section"
 import ChristmasTitle from "../../content/christmas2021/christmaswordmark.inline.svg"
 import { EventListing, hasSingleEventPassedFilter, SingleEvent } from "./event"

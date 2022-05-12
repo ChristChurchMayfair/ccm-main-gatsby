@@ -6,7 +6,7 @@ import ApplePodcastBadge from "../../content/londonliving/badges/US_UK_Apple_Pod
 
 import LondonLivingLogo from "../../content/londonliving/LL_logo.inline.svg"
 
-import styles from "../londonliving.module.scss"
+import * as styles from "../londonliving.module.scss"
 import Layout from "../../components/layout"
 import HeaderUnderlay from "../../components/header-underlay"
 import PodcastEpisode from "./_components/podcast-episode"

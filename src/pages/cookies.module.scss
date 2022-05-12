@@ -6,7 +6,7 @@
     grid-column-gap: var(--general-padding);
     grid-template-areas:
         "intro intro intro intro intro intro intro intro"
-        "switch switchLabel switchLabel switchLabel switchLabel switchLabel switchLabel switchLabel";
+        "switchCls switchLabel switchLabel switchLabel switchLabel switchLabel switchLabel switchLabel";
 
     @media screen and (max-width: 650px) {
         grid-column-gap: var(--general-padding) / 2;
@@ -18,8 +18,8 @@
     grid-area: intro;
 }
 
-.switch {
-    grid-area: switch;
+.switchCls {
+    grid-area: switchCls;
 }
 
 .switchLabel {
