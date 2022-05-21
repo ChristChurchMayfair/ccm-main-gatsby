@@ -38,7 +38,7 @@ const HowDoesItWorkPage: FC = () => {
             <Section colorScheme="light">
                 <SectionText className={styles.information}>
                     <p>
-                        The course runs over 7 weeks. Each session consists of a
+                        The course runs over 4 weeks. Each session consists of a
                         talk followed by time to discuss, and ask questions
                         about what you have heard in an informal, friendly and
                         open environment. All questions are welcome, and people
@@ -46,8 +46,9 @@ const HowDoesItWorkPage: FC = () => {
                         as little as they wish.
                     </p>
                     <p>
-                        Our next course will be running over Zoom on Monday
-                        evenings from 7-8pm, starting on 4th October.
+                        Our next course is running on Wednesday 8th, 15th, 22nd,
+                        29th June from 7.30-8.45pm at Christ Church Mayfair,
+                        Down Street, London, W1J 7AN.
                     </p>
                     <p>
                         The course is designed to be experienced as a part of
@@ -67,18 +68,6 @@ const HowDoesItWorkPage: FC = () => {
                                         : "light",
                                 onClick: () =>
                                     setActiveDynamicSubPage("JOIN GROUP"),
-                            },
-                            {
-                                key: "videos",
-                                text: "I'd like access to the videos",
-                                route:
-                                    "christianityexplored/howdoesitwork/#more",
-                                colourScheme:
-                                    activeDynamicSubPage === "ACCESS VIDEOS"
-                                        ? "dark"
-                                        : "light",
-                                onClick: () =>
-                                    setActiveDynamicSubPage("ACCESS VIDEOS"),
                             },
                             {
                                 key: "videos",
