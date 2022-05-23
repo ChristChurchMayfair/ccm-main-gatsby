@@ -189,10 +189,6 @@ const IndexPage = () => {
                 </a>
             </Section>
 
-            <RootsOfJazzPromo />
-
-            <HopeInTheDarkness />
-
             <Services />
 
             <Section
