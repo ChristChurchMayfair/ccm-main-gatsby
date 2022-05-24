@@ -1,5 +1,5 @@
 ---
-name: Jean Ngirimana (Duff)
+name: Duff and Kenta Ngirimana
 ministry: Ministry
 country: RWA
 email: email
@@ -9,6 +9,6 @@ pin_location:
     lat: 30.0619
 image: ./Duff.png
 ---
-* Pray that we would be faithful to God's word as we write different resources to help in the discipleship of Rwandan children. 
-* Pray that as we write, the DNG team would grow in our understanding and our love for God's. Pray also that through these materials, many parents and children would know and love Jesus even more.
-* Pray for DNG 2021 apprentices – that they will be well equipped to teach the Bible faithfully to children in their local churches.
+* We are both doing theological studies in order to serve the Rwandan people more effectively. Please pray that God would use our studies to equip us for children's work in Rwanda or whatever else he has for us in the future.
+* Pray for DNG staff, that we would continue to grow in our capacity and skills to train and produce resources which are much needed in Rwanda for the discipleship of children.
+* Pray that through our work, more churches and Christians parents in Rwanda would be able to see the urgency and the importance of the discipleship of children.

@@ -10,6 +10,6 @@ pin_location:
 image: ./Costas.png
 imageOrientation: landscape
 ---
-* Pray that God would continue to raise up workers for the harvest field in New Zealand.
-* Pray that God would lay on people's hearts the desire to start a new church in a local UPA, and that some people would sign up for this.
-* Pray that the children (Victoria, Charlie and Freddie) would follow the Lord and serve him.
+* Pray God would keep us all committed to the body of Christ, and he would strengthen us together.
+* Pray for the people who have left our church, along with one of the pastors, to revitalise a local church. Pray that God would bless their endeavours, and this would be effective in reaching the local area for Christ.
+* Pray for James as he leads the Diocese's church planting strategy under God for the next 5 years - pray for God's help and wisdom, and that he would enable us to reach corners of the country where there is no bible church currently.

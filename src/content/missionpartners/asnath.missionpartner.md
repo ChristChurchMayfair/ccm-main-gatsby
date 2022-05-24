@@ -10,7 +10,8 @@ pin_location:
 image: ./Asnath.png
 imageOrientation: landscape
 ---
-This year we are beginning level 2 of WIM training that focuses on equipping students for practical word ministry. Please pray:
-* That our students would be well equipped to reach out to others with the Gospel.
-* For God to provide everything needed for the running of this training.
-* For WIM students and staff to grow in Christ's likeness.
+* Pray that students would see for themselves the Gospel truths found in the Bible and be shaped by them.
+* Pray for students who graduated from the class 2020/2021 to keep connected to one another for mutual support in word ministry.
+* Pray that the students would be well equipped to reach out to others with the Gospel. 
+* For God to provide everything needed for the running of this training. 
+* For WIM students and staff to grow in Christlikeness.

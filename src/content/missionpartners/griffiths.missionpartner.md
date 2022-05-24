@@ -8,6 +8,6 @@ pin_location:
 image: ./Griffiths.png
 imageOrientation: landscape
 ---
-* Pray for more Brazilians to respond to God’s call to serve cross-culturally in East Asia to reach the unreached for Jesus
-* Pray for further partnerships to be established between OMF and other like-minded mission agencies in Latin America to facilitate the sending of more missionaries to East Asia
-* May the Lord continue to raise up more Spanish speakers to serve in Latin America to help mobilize missionaries from across the continent to serve with OMF in East Asia
+* Pray for more Brazilians to respond to God’s call to serve cross-culturally in East Asia to reach the unreached for Jesus.
+* Pray for further partnerships to be established between OMF and other likeminded mission agencies in Latin America to facilitate the sending of more missionaries to East Asia. 
+* Pray that the Lord would continue to raise up more Spanish speakers to serve in Latin America to help mobilize missionaries from across the continent to serve with OMF in East Asia.

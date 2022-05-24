@@ -9,7 +9,7 @@ pin_location:
 image: ./Oranges.png
 imageOrientation: landscape
 ---
-* Praise God that covid has brought opportunities to reach unbelievers online, and for the church’s growth in commitment to prayer and studying the Bible.
-* Pray for Woluwe church to be committed to loving, serving and encouraging each other post-lockdown.
-* Pray that God would provide the funding needed to allow Woluwe to purchase a new church building.
-* Pray that the church plant in Louvain la Neuve would continue to grow and reach students despite a challenging context.
+* Pray that as a church we would be growing in our love for the Lord, the lost and for each other.
+* We remain without our own church building. Give thanks for the ways we’ve seen the Lord provide in the past and for wisdom as we continue to look for a solution. 
+* Pray for the evening service launching in Spring 2022. Pray this will provide opportunities for us to grow in love and in number. 
+* Pray for us and our four teenage children, that our hearts will be gripped by the grace and glory of the Lord Jesus Christ in all we do.
