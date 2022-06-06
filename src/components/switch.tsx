@@ -1,7 +1,7 @@
 import classnames from "classnames"
 import React from "react"
 
-import styles from "./switch.module.scss"
+import * as styles from "./switch.module.scss"
 
 interface SwitchProps {
     onChange: (value: boolean) => void
@@ -18,7 +18,7 @@ const Switch: React.FC<SwitchProps> = ({
     uncheckedText,
 }) => (
     <div
-        className={classnames(styles.switch, {
+        className={classnames(styles.switchCls, {
             [styles["switch--checked"]]: checked,
             [styles["switch--disabled"]]: disabled,
         })}

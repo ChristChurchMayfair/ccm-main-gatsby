@@ -5,7 +5,7 @@ import { InView } from "react-intersection-observer"
 import MapPin from "../assets/icons/mappin.inline.svg"
 import Roundel from "../assets/icons/roundel2.inline.svg"
 
-import styles from "./find-us.module.scss"
+import * as styles from "./find-us.module.scss"
 import Section from "./section"
 
 const LATITUDE = 51.505263

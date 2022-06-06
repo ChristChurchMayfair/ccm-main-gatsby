@@ -6,7 +6,7 @@ import Section from "../../components/section"
 import MagnifyingGlassIcon from "../../assets/icons/magnifying-glass.inline.svg"
 import QuestionMarkIcon from "../../assets/icons/question-mark.inline.svg"
 
-import styles from "./welcome.module.scss"
+import * as styles from "./welcome.module.scss"
 import LargeNavigationButtons from "../../components/large-navigation-buttons"
 
 const ChristianityPage: FC = () => (

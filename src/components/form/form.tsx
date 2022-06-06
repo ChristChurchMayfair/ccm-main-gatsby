@@ -3,7 +3,7 @@ import React from "react"
 import Field from "./field"
 import { useForm } from "react-hook-form"
 
-import formStyles from "./form.module.scss"
+import * as formStyles from "./form.module.scss"
 import classNames from "classnames"
 import { ValidationOptions } from "react-hook-form"
 import Section from "../section"

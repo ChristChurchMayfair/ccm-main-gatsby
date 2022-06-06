@@ -3,7 +3,7 @@ import React, { FC } from "react"
 import Section from "../../../components/section"
 import LargeNavigationButtons from "../../../components/large-navigation-buttons"
 
-import styles from "../welcome.module.scss"
+import * as styles from "../welcome.module.scss"
 
 import CongregationRaisedHandsImage from "./congregation-raised-hands.png"
 import UncoverImage from "./uncover.png"

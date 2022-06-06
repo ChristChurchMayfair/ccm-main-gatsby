@@ -1,7 +1,7 @@
 import classnames from "classnames"
 import React, { FC, ReactNode } from "react"
 
-import styles from "./double-image-section.module.scss"
+import * as styles from "./double-image-section.module.scss"
 import Section from "./section"
 
 type ImagesPosition = "left" | "right"

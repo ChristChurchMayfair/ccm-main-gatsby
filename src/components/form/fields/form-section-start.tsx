@@ -1,7 +1,7 @@
 import React from "react"
 import { shouldShowField, VisibilityCondition } from "../conditional-visibility"
 import { ReactHookFormWiring } from "../form-config.types"
-import formStyles from "../form.module.scss"
+import * as formStyles from "../form.module.scss"
 
 type Props = {
     showWhen?: VisibilityCondition

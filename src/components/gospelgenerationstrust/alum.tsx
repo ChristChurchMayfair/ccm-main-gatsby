@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 
-import styles from "./alum.module.scss"
+import * as styles from "./alum.module.scss"
 import Img, { FluidObject } from "../img"
 
 type AlumProps = {

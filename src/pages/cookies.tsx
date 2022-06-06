@@ -9,7 +9,7 @@ import Section from "../components/section"
 import SectionText from "../components/section-text"
 import Switch from "../components/switch"
 
-import styles from "./cookies.module.scss"
+import * as styles from "./cookies.module.scss"
 
 const CookiesPageQuery = graphql`
     query CookiesPage {
@@ -69,7 +69,7 @@ const Cookies: React.FC = () => {
                             __html: data.settingsContent!.html!,
                         }}
                     />
-                    <div className={styles.switch}>
+                    <div className={styles.switchCls}>
                         <Switch
                             checked={consentCookie === "accepted"}
                             disabled={consentCookie === undefined}

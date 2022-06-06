@@ -2,7 +2,7 @@ import React from "react"
 
 import HeaderUnderlay from "./header-underlay"
 import Section from "./section"
-import styles from "./basic-text-page.module.scss"
+import * as styles from "./basic-text-page.module.scss"
 
 type BasicTextProps = {
     html?: string

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 import GospelGenerationsTrustLogoFull from "../../content/assets/images/gospelgenerationstrust-logo.inline.svg"
 
-import styles from "../footer.module.scss"
+import * as styles from "../footer.module.scss"
 
 const links: Array<{ path: string; title: string }> = [
     { path: "/gospelgenerationstrust/stories", title: "Stories" },

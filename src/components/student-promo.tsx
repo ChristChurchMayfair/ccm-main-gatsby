@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import styles from "./student-promo.module.scss"
+import * as styles from "./student-promo.module.scss"
 import Section from "./section"
 
 const StudentPromo = () => {

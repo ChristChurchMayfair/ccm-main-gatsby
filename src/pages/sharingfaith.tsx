@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import Styles from "../components/sharingfaith.module.scss"
+import * as styles from "../components/sharingfaith.module.scss"
 import Bio from "../components/bio"
 import Section from "../components/section"
 import HeaderUnderlay from "../components/header-underlay"
@@ -88,7 +88,7 @@ const SharingFaithPage: React.FC = () => {
 
     const resources = data.resources.edges.map(resource => {
         return (
-            <div key={resource.node.id} className={Styles.resource}>
+            <div key={resource.node.id} className={styles.resource}>
                 <h2>{resource.node.frontmatter!.title}</h2>
                 <div
                     dangerouslySetInnerHTML={{
@@ -155,9 +155,9 @@ const SharingFaithPage: React.FC = () => {
             </Section>
 
             <Section id={"resources"} colorScheme="light">
-                <div className={Styles.resourcesContainer}>
+                <div className={styles.resourcesContainer}>
                     <h1>Resources</h1>
-                    <div className={Styles.resources}>{resources}</div>
+                    <div className={styles.resources}>{resources}</div>
                 </div>
             </Section>
 

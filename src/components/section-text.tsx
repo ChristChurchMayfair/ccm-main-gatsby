@@ -1,7 +1,7 @@
 import classnames from "classnames"
 import React, { FC, HTMLProps } from "react"
 
-import styles from "./section-text.module.scss"
+import * as styles from "./section-text.module.scss"
 
 interface SectionTextProps extends HTMLProps<HTMLDivElement> {
     intro?: boolean

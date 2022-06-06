@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 
 import CcmLogo from "../content/assets/images/ccm-logo-full.inline.svg"
 
-import styles from "./footer.module.scss"
+import * as styles from "./footer.module.scss"
 import SocialMediaIcon from "./social-media-icon"
 
 const links: Array<{ path: string; title: string }> = [

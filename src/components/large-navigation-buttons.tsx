@@ -1,7 +1,7 @@
 import classnames from "classnames"
 import React, { FC, ElementType, Fragment } from "react"
 
-import styles from "./large-navigation-buttons.module.scss"
+import * as styles from "./large-navigation-buttons.module.scss"
 import { Link } from "gatsby"
 
 interface ButtonConfig {

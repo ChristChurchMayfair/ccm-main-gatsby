@@ -2,7 +2,7 @@ import classnames from "classnames"
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 
-import styles from "./cookie-notice.module.scss"
+import * as styles from "./cookie-notice.module.scss"
 import useConsentCookie from "./hooks/useConsentCookie"
 
 const CookieNotice = () => {

@@ -1,7 +1,7 @@
 import { graphql } from "gatsby"
 import React, { FC } from "react"
 
-import styles from "./staff-member.module.scss"
+import * as styles from "./staff-member.module.scss"
 import Img from "./img"
 
 export const fragments = graphql`

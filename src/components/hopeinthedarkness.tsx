@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import styles from "./hopeinthedarkness.module.scss"
+import * as styles from "./hopeinthedarkness.module.scss"
 import Section from "./section"
 
 const HopeInTheDarkness = () => {

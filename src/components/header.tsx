@@ -6,7 +6,7 @@ import CcmLogoFull from "../content/assets/images/ccm-logo-full.inline.svg"
 import CloseMenuButton from "../content/assets/images/close-menu-button.inline.svg"
 import Hamburger from "../content/assets/images/hamburger.inline.svg"
 
-import styles from "./header.module.scss"
+import * as styles from "./header.module.scss"
 
 const MAX_WIDTH_MOBILE_HEADER = 968
 

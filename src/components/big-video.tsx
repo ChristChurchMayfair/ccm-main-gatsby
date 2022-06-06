@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import YouTube from "react-youtube"
 
-import styles from "./big-video.module.scss"
+import * as styles from "./big-video.module.scss"
 
 interface BigVideoProps {
     youTubeVideoId: string

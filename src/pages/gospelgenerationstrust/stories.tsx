@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styles from "./gospelgenerationstrust.module.scss"
+import * as styles from "./gospelgenerationstrust.module.scss"
 import GospelGenerationsTrustLayout from "../../components/gospelgenerationstrust/layout"
 import HeaderUnderlay from "../../components/header-underlay"
 import Section from "../../components/section"

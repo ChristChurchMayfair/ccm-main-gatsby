@@ -11,7 +11,7 @@ import AppleAppStoreBadge from "../assets/badges/Download_on_the_App_Store_Badge
 import GooglePlayStoreBadge from "../assets/badges/google_play_en_badge_web_generic.png"
 import GooglePodcastBadge from "../assets/badges/google_podcasts_badge@2x.png"
 
-import styles from "./talks.module.scss"
+import * as styles from "./talks.module.scss"
 import Section from "../components/section"
 import SectionText from "../components/section-text"
 import { HeaderColour } from "../components/header"

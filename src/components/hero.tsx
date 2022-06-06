@@ -1,7 +1,7 @@
 import React from "react"
 
 import Img, { FluidObject } from "./img"
-import styles from "./hero.module.scss"
+import * as styles from "./hero.module.scss"
 import Section from "./section"
 
 interface HeroProps {

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Section from "./section"
-import styles from "./covid-notice.module.scss"
+import * as styles from "./covid-notice.module.scss"
 
 const CovidNotice = () => {
     const { covid } = useStaticQuery<GatsbyTypes.CovidQuery>(graphql`

@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Img from "./img"
 import { sortedWithPriority } from "../utils"
 
-import styles from "./bio.module.scss"
+import * as styles from "./bio.module.scss"
 import FindOutMoreText from "./find-out-more-text"
 import Section from "./section"
 

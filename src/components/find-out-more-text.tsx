@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 
-import styles from "./find-out-more-text.module.scss"
+import * as styles from "./find-out-more-text.module.scss"
 
 interface FindOutMoreTextProps {
     innerHTML: string

@@ -12,7 +12,7 @@ import AppleMusicBadge from "../assets/badges/music-lrg.inline.svg"
 import Section from "../components/section"
 import SectionText from "../components/section-text"
 
-import styles from "./music.module.scss"
+import * as styles from "./music.module.scss"
 
 const MusicPage: React.FC = () => {
     const data = useStaticQuery<GatsbyTypes.MusicQuery>(graphql`

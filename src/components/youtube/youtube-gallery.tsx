@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 
-import styles from "./youtube-gallery.module.scss"
+import * as styles from "./youtube-gallery.module.scss"
 import classNames from "classnames"
 import YouTube from "react-youtube"
 import CloseIcon from "../../content/assets/images/close-menu-button.inline.svg"
