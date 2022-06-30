@@ -36,7 +36,7 @@ If you would like more information or have any concerns please speak to a member
 
 -   **Safeguarding Officer** - [Sharon Walsh](mailto:sharon@christchurchmayfair.org)
 -   **Children's Champion** - [James Kight](mailto:james@christchurchmayfair.org)
--   **Churchwardens** - [Marc Doring & Dave Dye](mailto:churchwardens@christchurchmayfair.org).
+-   **Churchwardens** - [Marc Doring & Carrie Dow](mailto:churchwardens@christchurchmayfair.org).
 
 # Other Helpful Contact Information
 
