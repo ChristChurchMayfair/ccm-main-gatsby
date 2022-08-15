@@ -123,7 +123,6 @@ const Students: React.FC = () => {
                 people={data.studentWorkers.nodes}
                 peoplePrecedenceByEmail={[
                     "scott@christchurchmayfair.org",
-                    "ellie.page@christchurchmayfair.org",
                 ]}
                 descriptionHtml={
                     data.mainContent!.fields!.frontmattermd!.findOutMoreText!
