@@ -121,9 +121,7 @@ const Students: React.FC = () => {
             </Section>
             <Bio
                 people={data.studentWorkers.nodes}
-                peoplePrecedenceByEmail={[
-                    "scott@christchurchmayfair.org",
-                ]}
+                peoplePrecedenceByEmail={["scott@christchurchmayfair.org"]}
                 descriptionHtml={
                     data.mainContent!.fields!.frontmattermd!.findOutMoreText!
                         .html!
