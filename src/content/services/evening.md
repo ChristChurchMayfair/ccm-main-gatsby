@@ -7,7 +7,7 @@ streamLink: https://youtu.be/kVYHgg8wMck
 schedule:          
   - time: 2000-04-17T18:00:00+01:00
     description: Dummy service - leave this in
-    link: https://youtu.be/sXcNN19TGbA
+    link: https://youtu.be/DS3f7N5Oy9g
 ---
 Evenings at CCM are a vibrant mix of Bible teaching and lively, contemporary worship. We’re home to all kinds of people from across London, including many young professionals and students.
 
