@@ -7,6 +7,7 @@ import Hero from "../components/hero"
 import Bio from "../components/bio"
 import Section from "../components/section"
 import SectionText from "../components/section-text"
+import YouTube from "react-youtube"
 
 const StudentsPageQuery = graphql`
     query StudentsPage {
@@ -87,6 +88,19 @@ const Students: React.FC = () => {
                         __html: data.mainContent!.html!,
                     }}
                 />
+            </Section>
+            <Section colorScheme={"light"}>
+                <article>
+                    <iframe
+                        width={"100%"}
+                        height={600}
+                        src="https://www.youtube-nocookie.com/embed/luXr819mdkk"
+                        title="CCM Students Promo Video 2022"
+                        frameBorder={"0"}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                </article>
             </Section>
             <Section
                 infoPanel
