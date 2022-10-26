@@ -98,9 +98,13 @@
 .children {
     justify-self: left;
     align-self: baseline;
-    grid-area: text;
+    // grid-area: text;
     color: var(--light-colour);
     text-align: left;
+    position:relative;
+    height:var(--hero-height);
+    width: 100vw;
+    top: 0;
     // line-height: 1em;
     margin-bottom: calc(30px - var(--general-padding));
     // text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
