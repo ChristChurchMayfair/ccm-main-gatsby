@@ -41,7 +41,7 @@
 .contact {
     grid-area: contact;
     display: grid;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas:
         "logo"
         "address"
@@ -83,9 +83,44 @@
     }
 }
 
+.churchofengland {
+    // grid-area: social-media;
+
+    display: inline-block;
+    margin-right: var(--general-padding);
+
+    svg {
+        height: 1.6em;
+        width: 1.6em;
+        fill: var(--dark-gray);
+        transition: 0.2s;
+
+        @media only screen and (max-width: 968px) {
+            height: 1.2em;
+            width: 1.2em;
+        }
+
+        &:hover {
+            fill: var(--dark-colour);
+            transition: 0.2s;
+        }
+    }
+}
+
 .smallprint {
     grid-area: smallprint;
     align-self: end;
+
+    svg {
+        width: 32px;
+        height: 32px;
+        fill: var(--dark-gray);
+
+        &:hover {
+            fill: var(--dark-colour);
+            transition: 0.2s;
+        }
+    }
 }
 
 .allLinks {

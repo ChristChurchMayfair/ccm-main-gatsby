@@ -2,6 +2,7 @@ import React, { Fragment } from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 import CcmLogo from "../content/assets/images/ccm-logo-full.inline.svg"
+import ChurchOfEnglandLogo from "../content/assets/images/churchofenglandlogo.inline.svg"
 
 import styles from "./footer.module.scss"
 import SocialMediaIcon from "./social-media-icon"
@@ -76,6 +77,15 @@ const Footer = () => {
                     {email}
                 </a>
                 <div className={styles.socialMedia}>
+                <div className={styles.churchofengland}>
+                        <a
+                            href="https://www.churchofengland.org"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <ChurchOfEnglandLogo />
+                        </a>
+                    </div>
                     <SocialMediaIcon
                         platform="twitter"
                         username={
@@ -94,6 +104,7 @@ const Footer = () => {
                             site!.siteMetadata!.socialMediaAccounts!.spotify!
                         }
                     />
+                   
                 </div>
             </div>
             <div className={styles.allLinks}>
