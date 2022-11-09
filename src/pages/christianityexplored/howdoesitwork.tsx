@@ -46,9 +46,9 @@ const HowDoesItWorkPage: FC = () => {
                         as little as they wish.
                     </p>
                     <p>
-                        Our next course is running on Wednesday 8th, 15th, 22nd,
-                        29th June from 7.30-8.45pm at Christ Church Mayfair,
-                        Down Street, London, W1J 7AN.
+                        Our next course is running on Wednesday 9th, 16th and
+                        23rd November from 7.30 until 8.45pm at Christ Church
+                        Mayfair, Down Street, London, W1J 7AN.
                     </p>
                     <p>
                         The course is designed to be experienced as a part of
