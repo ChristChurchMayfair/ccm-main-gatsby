@@ -20,7 +20,7 @@ $switch-border-radius: 5px;
 
         .toggle {
             background-color: $checked-colour;
-            left: calc(100% - (#{$inner-width} / 2));
+            left: calc(100% - calc($inner-width / 2));
         }
     }
 
@@ -35,7 +35,7 @@ $switch-border-radius: 5px;
     width: $inner-width;
     background-color: $unchecked-colour;
     top: 50%;
-    left: $inner-width / 2;
+    left: calc($inner-width / 2);
     transform: translate(-50%, -50%);
     transition: left var(--menu-transition-time),
         background-color var(--menu-transition-time);
