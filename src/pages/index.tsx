@@ -10,6 +10,7 @@ import MountAfter from "../components/mount-after"
 import Section from "../components/section"
 import SectionText from "../components/section-text"
 import Hero from "../components/hero"
+import Christmas2022 from "../components/christmas/christmas2022"
 
 const IndexPageQuery = graphql`
     query Homepage {
@@ -186,6 +187,8 @@ const IndexPage = () => {
                     Sunday Services
                 </a>
             </Section>
+
+            <Christmas2022 />
 
             <Services />
 
