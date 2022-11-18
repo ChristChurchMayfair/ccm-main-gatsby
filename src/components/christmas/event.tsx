@@ -1,6 +1,6 @@
 import { format, isAfter, sub } from "date-fns"
 import React from "react"
-import styles from "./christmas2021.module.scss"
+import styles from "./christmas2022.module.scss"
 
 export type SingleEvent = {
     title: string

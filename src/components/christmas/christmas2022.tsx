@@ -1,16 +1,16 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import styles from "./christmas2021.module.scss"
+import styles from "./christmas2022.module.scss"
 import Section from "../section"
-import ChristmasTitle from "../../content/christmas2021/christmaswordmark.inline.svg"
+import ChristmasTitle from "../../content/christmas2022/christmaswordmark.inline.svg"
 import { EventListing, hasSingleEventPassedFilter, SingleEvent } from "./event"
 import { parseISO } from "date-fns"
 
-const Christmas2021 = () => {
+const Christmas2022 = () => {
     const data = useStaticQuery<GatsbyTypes.Christmas2021Query>(graphql`
         query Christmas2021 {
             christmas: markdownRemark(
-                fileAbsolutePath: { regex: "/christmas2021/christmas2021.md$/" }
+                fileAbsolutePath: { regex: "/christmas2022/christmas2022.md$/" }
             ) {
                 html
                 frontmatter {
@@ -45,7 +45,7 @@ const Christmas2021 = () => {
                 <div className={styles.title}>
                     <ChristmasTitle />
                 </div>
-                <div className={styles.year}>2021</div>
+                <div className={styles.year}>2022</div>
                 <div className={styles.events}>
                     {upcomingEvents.map(event => (
                         <EventListing
@@ -70,4 +70,4 @@ const Christmas2021 = () => {
     )
 }
 
-export default Christmas2021
+export default Christmas2022
