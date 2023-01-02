@@ -64,7 +64,7 @@ const IndexPageQuery = graphql`
             }
         }
         administrators: allSanityPerson(
-            filter: { name: { eq: "Sharon Walsh" } }
+            filter: { name: { eq: "Alizée Currell" } }
         ) {
             nodes {
                 name

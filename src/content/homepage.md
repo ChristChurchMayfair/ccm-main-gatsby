@@ -12,7 +12,7 @@ carouselImages:
 overlayCaption: welcome to ccm
 headerColour: light
 findOutMoreText: |-2
-  If you want to find out more, come along and meet us on a Sunday or get in touch with Sharon.
+  If you want to find out more, come along and meet us on a Sunday or get in touch with Alizée.
 
   She'd love to hear from you and answer any questions you might have.
 ---
