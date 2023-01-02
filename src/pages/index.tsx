@@ -188,8 +188,6 @@ const IndexPage = () => {
                 </a>
             </Section>
 
-            <Christmas2022 />
-
             <Services />
 
             <Section
