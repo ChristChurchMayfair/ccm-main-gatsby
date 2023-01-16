@@ -34,7 +34,7 @@ You can see the [Safeguarding Policy Statement here](/downloads/CCMSafeguardingP
 
 If you would like more information or have any concerns please speak to a member of staff or contact any of these people:
 
--   **Safeguarding Officer** - [Sharon Walsh](mailto:sharon@christchurchmayfair.org)
+-   **Safeguarding Officer** - [Caiti Woodroofe](mailto:safeguarding@christchurchmayfair.org)
 -   **Children's Champion** - [James Kight](mailto:james@christchurchmayfair.org)
 -   **Churchwardens** - [Marc Doring & Carrie Dow](mailto:churchwardens@christchurchmayfair.org).
 
