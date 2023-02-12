@@ -10,7 +10,7 @@ secondIntroImage: ./assets/images/desktop/small_child_and_parents_park_cropped.j
 overlayCaption: Families at CCM
 headerColour: light
 findOutMoreText: |2-
-  If you want to find out more about the children's and youth work at CCM, please get in touch with James.
+  If you want to find out more about the children's and youth work at CCM, please get in touch with James. If it would be helpful, please do get in touch with him about any SEND requirements. We would love to give every child the best possible welcome.
 ---
 
 We really encourage our children to get to know Jesus for themselves.
