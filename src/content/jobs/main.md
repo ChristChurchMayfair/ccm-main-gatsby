@@ -15,7 +15,7 @@ Read the job description [here](/downloads/CCM_22_Head_of_Operations.pdf)
 
 Salary: £45-55k p.a. (depending on experience) and generous pension.
 
-Applications: Please send a CV and cover letter to [sharon@christchurchmayfair.org](mailto:sharon@christchurchmayfair.org)
+Applications: Please send a CV and cover letter to [info@christchurchmayfair.org](mailto:info@christchurchmayfair.org)
 
 Closing Date: 31 October 2022.
 

@@ -574,7 +574,7 @@ _NB Available information suggests that unless they have been soiled soft furnis
 
 -   There are wipes in the office/kitchen. Alternatively use alcohol-based sanitising gel on blue paper towel to wipe surfaces down. There is additional blue paper towel and individual paper towels in the basement.
 -   Use labels from the office to put on the ziplock bags. Please bring a pen from home to use on the labels - do not use one of the church pens
--   Use disposable gloves from the kitchen. Let Sharon know if supplies are running low of this or other stock e.g. ziplock bags
+-   Use disposable gloves from the kitchen. Let the church office know if supplies are running low of this or other stock e.g. ziplock bags
 
 ## Appendix 4 - Coronavirus Emergency Action Plan
 

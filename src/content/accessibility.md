@@ -35,4 +35,4 @@ An infrared hearing support system is available, with both neck loop receivers f
 More Information
 ----------------
 
-If you have any questions about accessibility at CCM or have particular needs when visiting us, please get in touch with [Sharon](mailto:sharon@christchurchmayfair.org).
+If you have any questions about accessibility at CCM or have particular needs when visiting us, please get in touch with the [church office](mailto:info@christchurchmayfair.org).
