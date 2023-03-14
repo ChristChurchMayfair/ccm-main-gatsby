@@ -7,16 +7,27 @@ template: basic
 ---
 This page lists any job openings we have at Christ Church Mayfair.
 
-## Head of Operations 
+## Operations Manager
 
-We are looking for an energetic, committed and innovative self-starter to join our leadership team at an exciting time for our church. We need someone to proactively and creatively contribute to the planning and execution of projects and activities to deliver our strategy, and by doing so help us establish the organisational culture, structure and support to enable the church to grow and develop further under God. 
+We are looking for someone to join the existing Operations team, under the Director of Operations and Development.
+ 
+This is a full time post starting summer 2023. Salary from £30k upwards depending on experience.  
+ 
+The candidate will have experience in some of the following:
+ 
+- Administration
+- Finance
+- Project management
+- Calendar management
+- Property management
+ 
+For a job description and application form contact: Dave Wakefield (current
+Operations Manager), Christ Church Mayfair, Down Street, London, W1J 7AN.
 
-Read the job description [here](/downloads/CCM_22_Head_of_Operations.pdf)
+Tel: 020 7629 5885.
 
-Salary: £45-55k p.a. (depending on experience) and generous pension.
+Email: [dave.wakefield@christchurchmayfair.org](mailto:dave.wakefield@christchurchmayfair.org)
 
-Applications: Please send a CV and cover letter to [info@christchurchmayfair.org](mailto:info@christchurchmayfair.org)
-
-Closing Date: 31 October 2022.
+Closing date for applications: 23rd April 2023
 
 *All appointments are made following the safer recruitment process recommended by the Diocese of London and the successful candidate will be asked to sign our statement of faith (on our website).*
