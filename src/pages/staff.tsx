@@ -37,7 +37,7 @@ const Staff = () => {
     const staffNamesOrder = [
         "Matt Fuller",
         "Phil Allcock",
-        "Scott Furey",
+        "Sam Stephenson",
         "Ben Slee",
         "James Kight",
         "Liz Hayden",
