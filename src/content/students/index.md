@@ -11,7 +11,7 @@ overlayCaption: Students at CCM
 findOutMoreText: |2-
   Are you moving to London to study, or looking for a new church to call home?
 
-  Get in touch with Scott. He would love to answer your questions and welcome you at a Sunday service or midweek group.
+  Get in touch with Sam. He would love to answer your questions and welcome you at a Sunday service or midweek group.
 
   Check out our [Instagram](https://www.instagram.com/ccm_students/) for more info on what Students are up to at CCM.
 ---
